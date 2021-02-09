@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>{{ .Site.Title }}</title>
     {{ with resources.Get "scss/styles.scss" | resources.ToCSS | resources.Minify }}
       <style type="text/CSS">{{ .Content | safeCSS }}</style>
