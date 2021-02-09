@@ -1,0 +1,34 @@
+{{ define "main" }}
+    <div class="container">
+      <h1 class="title">{{.Title}}</h1>
+      {{ with resources.Get "images/avatar.jpg" }}
+        <img class="avatar" src="{{ .RelPermalink }}" width="200" height="200" />
+      {{ end }}
+      <div class="content">
+        {{.Content}}
+      </div>
+      <ul class="social_list">
+        <li>
+          <a href="https://letterboxd.com/frankshowalter">
+            {{ with resources.Get "svg/icon_letterboxd.svg" }}
+              {{ .Content | safeHTML }}
+            {{ end }}
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/fshowalter">
+            {{ with resources.Get "svg/icon_github.svg" }}
+              {{ .Content | safeHTML }}
+            {{ end }}
+          </a>
+        </li>
+        <li>
+          <a href="https://www.goodreads.com/frank-showalter">
+            {{ with resources.Get "svg/icon_goodreads.svg" }}
+              {{ .Content | safeHTML }}
+            {{ end }}
+          </a>
+        </li>
+      </ul>
+    </div>
+{{ end }}

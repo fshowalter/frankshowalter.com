@@ -1,0 +1,6 @@
+baseURL = "https://www.frankshowalter.com/"
+languageCode = "en-us"
+title = "Frank Showalter"
+
+[markup.goldmark.renderer]
+unsafe= true
