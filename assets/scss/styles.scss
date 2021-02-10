@@ -33,11 +33,15 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 8rem;
+  padding-bottom: calc(75vh - 700px);
 }
 
 .avatar {
   border-radius: 50%;
+  max-height: 200px;
+  max-width: 200px;
+  width: 33%;
+  height: 33%;
 }
 
 .content {
