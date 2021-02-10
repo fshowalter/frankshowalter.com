@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "http://movielog.frankshowalter.com/*"
+  to = "https://www.franksmovielog.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://movielog.frankshowalter.com/*"
+  to = "https://www.franksmovielog.com/:splat"
+  status = 301
+  force = true
