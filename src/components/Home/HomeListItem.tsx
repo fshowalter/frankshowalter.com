@@ -35,6 +35,7 @@ export function HomeListItem({
         className="z-10 inline-block text-accent decoration-2 underline-offset-4 before:absolute before:inset-x-0 before:top-0 before:aspect-cover before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0"
         href={`${siteUrl}/reviews/${value.slug}/`}
         rel="canonical"
+        aria-label={value.title}
       >
         <HomeImage
           decoding="async"
