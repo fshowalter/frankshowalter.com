@@ -1,0 +1,52 @@
+name: format & lint
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  format-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: setup node
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: setup npm
+        run: |
+          ./npm_use.sh &&
+          npm --version &&
+          npm list -g --depth 0
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: knip
+        run: npm run knip
+
+      - name: prettier
+        run: npm run format:fix
+
+      - name: type-check
+        run: npm run check
+
+      - name: eslint
+        run: npm run lint:fix
+
+      - name: stylelint
+        run: npm run stylelint:fix
+
+      - name: cspell
+        run: npm run lint:spelling:fix
+
+      - name: print diff
+        run: git diff
+
+      - uses: stefanzweifel/git-auto-commit-action@e348103e9026cc0eee72ae06630dbe30c8bf7a79 # v5
+        with:
+          commit_message: "refactor: apply lint autofix"
