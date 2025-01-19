@@ -5,15 +5,11 @@ import { Footer } from "./Footer";
 export function Layout({
   children,
   className,
-  hasBackdrop = true,
-  hideLogo = false,
   ...rest
 }: {
   [x: string]: unknown;
   children: React.ReactNode;
   className?: string;
-  hasBackdrop?: boolean;
-  hideLogo?: boolean;
 }): JSX.Element {
   return (
     <div>
@@ -24,7 +20,7 @@ export function Layout({
         Skip to content
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
-        <main className="grow" id="content" {...rest}>
+        <main className={`grow ${className}`} id="content" {...rest}>
           {children}
         </main>
         <Footer />

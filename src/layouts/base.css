@@ -14,6 +14,7 @@
   --bg-group: #f7f5f3;
   --bg-inverse: rgb(0 0 0 / 75%);
   --bg-progress: #14bd41;
+  --bg-hover: #f7f5f3;
   --bg-stripe: #f7f5f3;
   --bg-subtle: #fafafa;
   --bg-unreviewed: #fefefe;
@@ -45,7 +46,7 @@
     --bg-default-rgb: 50, 47, 47;
     --bg-default: #322f2f;
     --bg-footer: #252525;
-    --bg-group: #292929;
+    --bg-group: #3c393a;
     --bg-inverse: #322f2f;
     --bg-progress: #379634;
     --bg-stripe: #3c393a;

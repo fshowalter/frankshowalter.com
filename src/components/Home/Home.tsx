@@ -1,8 +1,10 @@
 import type { JSX } from "react";
+import type React from "react";
 
 import { SolidBackdrop } from "~/components/Backdrop";
 import { Layout } from "~/components/Layout";
 import { SubHeading } from "~/components/SubHeading";
+
 import { HomeListItem, type HomeListItemValue } from "./HomeListItem";
 
 export type Props = {
@@ -27,45 +29,55 @@ export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
             .
           </>
         }
-        title="I am Frank."
+        title="Frank Showalter"
         titleStyle="text-default text-4xl desktop:text-7xl"
       />
-      <nav className="mx-auto pb-20 max-w-screen-max bg-subtle tablet:px-container">
+      <nav className="mx-auto w-full max-w-[888px] bg-subtle pb-20 tablet:px-container desktop:max-w-screen-max">
         <SubHeading as="h2" className="px-container tablet:px-0">
           Latest{" "}
           <a className="text-accent" href="https://www.franksmovielog.com">
             Movie Reviews
           </a>
         </SubHeading>
-        <ol className="flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%] tablet:gap-x-[3%] tablet:px-0 desktop:justify-between desktop:gap-x-[2%]">
+        <HomeList>
           {movielogUpdates.map((value, index) => {
             return (
               <HomeListItem
                 eagerLoadCoverImage={index === 0}
                 key={value.slug}
+                siteUrl="https://www.franksmovielog.com"
                 value={value}
               />
             );
           })}
-        </ol>
+        </HomeList>
         <SubHeading as="h2" className="px-container tablet:px-0">
           Latest{" "}
           <a className="text-accent" href="https://www.franksbooklog.com">
             Book Reviews
           </a>
         </SubHeading>
-        <ol className="flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%] tablet:gap-x-[3%] tablet:px-0 desktop:justify-between desktop:gap-x-[2%]">
+        <HomeList>
           {booklogUpdates.map((value, index) => {
             return (
               <HomeListItem
                 eagerLoadCoverImage={index === 0}
                 key={value.slug}
+                siteUrl="https://www.franksbooklog.com"
                 value={value}
               />
             );
           })}
-        </ol>
+        </HomeList>
       </nav>
     </Layout>
+  );
+}
+
+function HomeList({ children }: { children: React.ReactNode }): JSX.Element {
+  return (
+    <ol className="flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%] tablet:gap-x-[3%] tablet:px-0 desktop:justify-between desktop:gap-x-[2%]">
+      {children}
+    </ol>
   );
 }

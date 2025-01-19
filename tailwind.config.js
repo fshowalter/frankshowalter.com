@@ -11,6 +11,7 @@ export default {
       default: "var(--bg-default)",
       footer: "var(--bg-footer)",
       group: "var(--bg-group)",
+      hover: "var(--bg-hover)",
       inverse: "var(--bg-inverse)",
       stripe: "var(--bg-stripe)",
       subtle: "var(--bg-subtle)",
@@ -40,6 +41,7 @@ export default {
       boxShadow: {
         all: "0 0 0 1px var(--border-default)",
         bottom: "0px 1px var(--border-default)",
+        hover: "0 0 1px 1px var(--border-default)",
       },
       fontFamily: {
         sans: "var(--font-sans)",

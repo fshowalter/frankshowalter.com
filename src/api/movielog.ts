@@ -1,8 +1,8 @@
+import type { z } from "zod";
+
 import { promises as fs } from "node:fs";
-import { z } from "zod";
 
 import { UpdateSchema } from "./updateSchema";
-
 import { getContentPath } from "./utils/getContentPath";
 
 const movielogJsonFile = getContentPath("data", "movielog.json");

@@ -1,9 +1,6 @@
 import path from "node:path";
 
-export function getContentPath(
-  kind: "data" | "pages" | "readings" | "reviews",
-  subPath?: string,
-) {
+export function getContentPath(kind: "assets" | "data", subPath?: string) {
   if (subPath) {
     return path.join(process.cwd(), "content", kind, subPath);
   }
