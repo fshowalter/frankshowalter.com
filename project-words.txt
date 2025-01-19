@@ -1,24 +1,12 @@
 # Project Words - DO NOT TOUCH - This is updated through CI
 booklog
 Booklog
-bordercolor
-borderopacity
-deskcolor
-docname
 frankshowalter
 fshowalter
-inkscape
 movielog
 Movielog
-namedview
-pagecheckerboard
-pagecolor
-pageopacity
 playform
 popout
 Showalter
-showgrid
-showpageshadow
-sodipodi
 unreviewed
 wdth
