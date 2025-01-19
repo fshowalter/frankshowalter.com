@@ -1,20 +1,31 @@
-import { recentBookReviews } from "~/api/bookReviews";
+import { booklogUpdates } from "~/api/booklog";
 import type { Props } from "./Home";
-import { getFluidCoverImageProps } from "~/api/covers";
-import { CoverImageConfig } from "./BookReviewListItem";
+import { getFluidImageProps } from "~/api/images";
+import { ImageConfig } from "./HomeListItem";
+import { movielogUpdates } from "~/api/movielog";
 
 export async function getProps(): Promise<Props> {
-  const bookReviews = await recentBookReviews();
+  const booklogItems = await booklogUpdates();
+  const movielogItems = await movielogUpdates();
 
   return {
-    bookReviews: await Promise.all(
-      bookReviews.map(async (review) => {
+    movielogUpdates: await Promise.all(
+      movielogItems.map(async (item) => {
         return {
-          ...review,
-          coverImageProps: await getFluidCoverImageProps(
-            review.slug,
-            CoverImageConfig
+          ...item,
+          imageProps: await getFluidImageProps(
+            "poster",
+            item.slug,
+            ImageConfig
           ),
+        };
+      })
+    ),
+    booklogUpdates: await Promise.all(
+      booklogItems.map(async (item) => {
+        return {
+          ...item,
+          imageProps: await getFluidImageProps("cover", item.slug, ImageConfig),
         };
       })
     ),

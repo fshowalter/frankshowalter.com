@@ -1,62 +1,32 @@
 [
   {
-    "title": "Ghost Story",
-    "date": "2024-12-01",
+    "title": "Ghost Story by Peter Straub",
     "slug": "ghost-story-by-peter-straub",
-    "yearPublished": "1979",
-    "kind": "Novel",
-    "authorNames": ["Peter Straub"],
-    "stars": 4,
-    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+    "stars": 4
   },
   {
-    "title": "Goth",
-    "date": "2024-11-08",
+    "title": "Goth by Lol Tolhurst",
     "slug": "goth-by-lol-tolhurst",
-    "yearPublished": "2023",
-    "kind": "Nonfiction",
-    "authorNames": ["Lol Tolhurst"],
-    "stars": 3,
-    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+    "stars": 3
   },
   {
-    "title": "Recessional",
-    "date": "2024-08-25",
+    "title": "Recessional by David Mamet",
     "slug": "recessional-by-david-mamet",
-    "yearPublished": "2022",
-    "kind": "Nonfiction",
-    "authorNames": ["David Mamet"],
-    "stars": 2,
-    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+    "stars": 2
   },
   {
-    "title": "Fast Forward",
-    "date": "2024-07-01",
+    "title": "Fast Forward by Stephen Morris",
     "slug": "fast-forward-by-stephen-morris",
-    "yearPublished": "2020",
-    "kind": "Nonfiction",
-    "authorNames": ["Stephen Morris"],
-    "stars": 4.5,
-    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+    "stars": 4.5
   },
   {
-    "title": "Gothic",
-    "date": "2024-06-30",
+    "title": "Gothic by Philip Fracassi",
     "slug": "gothic-by-philip-fracassi",
-    "yearPublished": "2023",
-    "kind": "Novel",
-    "authorNames": ["Philip Fracasi"],
-    "stars": 4,
-    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+    "stars": 4
   },
   {
-    "title": "Record Play Pause",
-    "date": "2023-11-11",
+    "title": "Record Play Pause by Stephen Morris",
     "slug": "record-play-pause-by-stephen-morris",
-    "yearPublished": "2019",
-    "kind": "Nonfiction",
-    "authorNames": ["Stephen Morris"],
-    "stars": 5,
-    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+    "stars": 5
   }
 ]

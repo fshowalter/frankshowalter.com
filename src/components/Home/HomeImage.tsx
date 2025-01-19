@@ -1,16 +1,16 @@
 import React, { type JSX } from "react";
 
-import type { CoverImageProps } from "~/api/covers";
+import type { ImageProps } from "~/api/images";
 
 type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
   decoding: "async" | "auto" | "sync";
   height: number;
-  imageProps: CoverImageProps | undefined;
+  imageProps: ImageProps | undefined;
   loading: "eager" | "lazy";
   width: number;
 };
 
-export function Cover({
+export function HomeImage({
   decoding = "async",
   imageProps,
   loading = "lazy",
