@@ -17,23 +17,25 @@ const UpdateSchema = z.object({
 });
 
 const UpdatesArraySchema = z.array(UpdateSchema);
+
 type MediaSource = {
+  baseUrl: string; // Added baseUrl for resolving relative paths
   imagesDir: string;
   jsonPath: string;
   type: "book" | "movie";
   url: string;
 };
 
-type Update = z.infer<typeof UpdateSchema>;
-
 const SOURCES: MediaSource[] = [
   {
+    baseUrl: "https://www.franksmovielog.com",
     imagesDir: "./content/assets/posters",
     jsonPath: "./content/data/movielog.json",
     type: "movie",
     url: "https://www.franksmovielog.com/updates.json",
   },
   {
+    baseUrl: "https://www.franksbooklog.com",
     imagesDir: "./content/assets/covers",
     jsonPath: "./content/data/booklog.json",
     type: "book",
@@ -44,17 +46,20 @@ const SOURCES: MediaSource[] = [
 async function downloadFile(
   url: string,
   outputPath: string,
-  options: DownloadOptions = { overwrite: false, skipExisting: true },
+  options: DownloadOptions,
 ): Promise<{ message: string; skipped: boolean; success: boolean }> {
-  try {
-    // Ensure output directory exists
-    const outputDir = path.dirname(outputPath);
+  const { overwrite, skipExisting } = {
+    overwrite: false,
+    skipExisting: true,
+    ...options,
+  };
 
+  try {
     // Check if file already exists
     const exists = await fileExists(outputPath);
 
     if (exists) {
-      if (options.skipExisting) {
+      if (skipExisting) {
         return {
           message: `File already exists at ${outputPath} - skipped download`,
           skipped: true,
@@ -62,7 +67,7 @@ async function downloadFile(
         };
       }
 
-      if (!options.overwrite) {
+      if (!overwrite) {
         throw new Error(
           `File already exists at ${outputPath} and overwrite is disabled`,
         );
@@ -76,11 +81,27 @@ async function downloadFile(
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    // Get the file content as an ArrayBuffer
-    const fileContent = await response.arrayBuffer();
+    let content: Buffer;
+    const isJson = outputPath.endsWith(".json");
 
-    // Convert ArrayBuffer to Buffer and write to disk
-    await writeFile(outputPath, Buffer.from(fileContent));
+    if (isJson) {
+      // For JSON files, get as text, parse, and pretty print
+      const text = await response.text();
+      try {
+        const json = JSON.parse(text) as unknown[];
+        content = Buffer.from(JSON.stringify(json, undefined, 2));
+      } catch {
+        // If JSON parsing fails, treat as regular file
+        content = Buffer.from(text);
+      }
+    } else {
+      // For non-JSON files, get as ArrayBuffer
+      const fileContent = await response.arrayBuffer();
+      content = Buffer.from(fileContent);
+    }
+
+    // Write the processed content to disk
+    await writeFile(outputPath, content);
 
     return {
       message: `File successfully downloaded to: ${outputPath}`,
@@ -111,6 +132,7 @@ async function downloadUpdates(source: MediaSource): Promise<void> {
 
   const result = await downloadFile(source.url, source.jsonPath, {
     overwrite: true,
+    skipExisting: false,
   });
 
   if (!result.success) {
@@ -160,28 +182,28 @@ async function main(): Promise<void> {
       "Failed to process updates:",
       error instanceof Error ? error.message : "Unknown error",
     );
-    process.exit(1);
+    process.exit(1); // eslint-disable-line unicorn/no-process-exit
   }
 }
 
 async function processMediaUpdates(source: MediaSource): Promise<void> {
   try {
-    // Read and parse the JSON file
-    const jsonData = await readFile(source.jsonPath, "utf-8");
-    const rawUpdates = JSON.parse(jsonData);
-
-    // Validate the data against our schema
+    const jsonData = await readFile(source.jsonPath, "utf8");
+    const rawUpdates = JSON.parse(jsonData) as unknown[];
     const updates = UpdatesArraySchema.parse(rawUpdates);
 
     console.log(`Processing ${updates.length} ${source.type} updates`);
 
-    // Process each update
     for (const update of updates) {
-      const outputPath = path.join(source.imagesDir, update.slug);
+      const outputPath = path.join(source.imagesDir, `${update.slug}.png`);
+
+      // Resolve the image URL using the base URL
+      const fullImageUrl = resolveUrl(source.baseUrl, update.image);
 
       console.log(`Downloading ${source.type} image for: ${update.title}`);
+      console.log(`URL: ${fullImageUrl}`);
 
-      const result = await downloadFile(update.image, outputPath, {
+      const result = await downloadFile(fullImageUrl, outputPath, {
         skipExisting: true,
       });
 
@@ -213,6 +235,25 @@ async function processMediaUpdates(source: MediaSource): Promise<void> {
       );
     }
     throw error;
+  }
+}
+
+function resolveUrl(baseUrl: string, relativePath: string): string {
+  // Remove leading slash if present to avoid double slashes
+  const cleanPath = relativePath.startsWith("/")
+    ? relativePath.slice(1)
+    : relativePath;
+
+  // Handle if the relative path is already a full URL
+  try {
+    new URL(relativePath);
+    return relativePath; // Return as-is if it's already a valid URL
+  } catch {
+    // If it's not a valid URL, join it with the base URL
+    const baseUrlTrimmed = baseUrl.endsWith("/")
+      ? baseUrl.slice(0, -1)
+      : baseUrl;
+    return `${baseUrlTrimmed}/${cleanPath}`;
   }
 }
 

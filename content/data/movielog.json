@@ -1,38 +1,44 @@
 [
   {
-    "title": "Night of the Demons (1988)",
+    "date": "2025-01-14T00:00:00.000Z",
+    "image": "/_astro/night-of-the-demons-1988.CEoHxlhh_Z24FqGw.png",
     "slug": "night-of-the-demons-1988",
-    "date": "2025-01-14",
-    "stars": 2.5
+    "stars": 2.5,
+    "title": "Night of the Demons (1988)"
   },
   {
-    "title": "The Return of the Musketeers (1989)",
+    "date": "2025-01-11T00:00:00.000Z",
+    "image": "/_astro/the-return-of-the-musketeers-1989.baj7OjM3_nF1y7.png",
     "slug": "the-return-of-the-musketeers-1989",
-    "date": "2025-01-11",
-    "stars": 2
+    "stars": 2,
+    "title": "The Return of the Musketeers (1989)"
   },
   {
-    "title": "Def by Temptation (1990)",
+    "date": "2025-01-11T00:00:00.000Z",
+    "image": "/_astro/def-by-temptation-1990.BLRYdDYO_ZhRTLa.png",
     "slug": "def-by-temptation-1990",
-    "date": "2025-01-11",
-    "stars": 2.5
+    "stars": 2.5,
+    "title": "Def by Temptation (1990)"
   },
   {
-    "title": "The Brigand of Kandahar (1965)",
+    "date": "2025-01-10T00:00:00.000Z",
+    "image": "/_astro/the-brigand-of-kandahar-1965.Dkra2koQ_Z2jAjEb.png",
     "slug": "the-brigand-of-kandahar-1965",
-    "date": "2025-01-10",
-    "stars": 1.5
+    "stars": 1.5,
+    "title": "The Brigand of Kandahar (1965)"
   },
   {
-    "title": "Leprechaun 6: Back 2 Tha Hood (2003)",
+    "date": "2025-01-10T00:00:00.000Z",
+    "image": "/_astro/leprechaun-6-back-2-tha-hood-2003.D_LLTEdI_Z25ESeu.png",
     "slug": "leprechaun-6-back-2-tha-hood-2003",
-    "date": "2025-01-10",
-    "stars": 2
+    "stars": 2,
+    "title": "Leprechaun 6: Back 2 Tha Hood (2003)"
   },
   {
-    "title": "Crimes of the Future (2022)",
+    "date": "2025-01-09T00:00:00.000Z",
+    "image": "/_astro/crimes-of-the-future-2022.DP7CIqDh_Z273bVQ.png",
     "slug": "crimes-of-the-future-2022",
-    "date": "2025-01-09",
-    "stars": 3.5
+    "stars": 3.5,
+    "title": "Crimes of the Future (2022)"
   }
 ]
