@@ -7,7 +7,7 @@ import { getContentPath } from "./utils/getContentPath";
 
 const booklogJsonFile = getContentPath("data", "booklog.json");
 
-export type BooklogUpdate = z.infer<typeof UpdateSchema>;
+type BooklogUpdate = z.infer<typeof UpdateSchema>;
 
 export async function booklogUpdates(): Promise<BooklogUpdate[]> {
   return parseBooklogJson();

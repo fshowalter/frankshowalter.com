@@ -7,7 +7,7 @@ import { getContentPath } from "./utils/getContentPath";
 
 const movielogJsonFile = getContentPath("data", "movielog.json");
 
-export type MovielogUpdate = z.infer<typeof UpdateSchema>;
+type MovielogUpdate = z.infer<typeof UpdateSchema>;
 
 export async function movielogUpdates(): Promise<MovielogUpdate[]> {
   return parseMovielogJson();

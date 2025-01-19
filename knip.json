@@ -2,5 +2,6 @@
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "entry": ["src/pages/**/*.astro"],
   "project": ["**/*", "!src/**/__mocks__/**"],
-  "ignoreDependencies": ["@prettier/plugin-xml", "babel-plugin-react-compiler"]
+  "ignoreDependencies": ["babel-plugin-react-compiler"],
+  "ignore": ["updateData.ts"]
 }
