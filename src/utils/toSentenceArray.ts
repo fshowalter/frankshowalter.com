@@ -20,7 +20,7 @@ export function toSentenceArray<T extends JSX.Element | string>(
     return [...words, ...lastWords] as T[];
   }
 
-  const wordsWithCommas: (string | JSX.Element)[] = [];
+  const wordsWithCommas: (JSX.Element | string)[] = [];
 
   for (const word of words) {
     wordsWithCommas.push(word, ", ");

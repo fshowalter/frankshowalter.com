@@ -58,7 +58,7 @@ export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
           </a>
         </SubHeading>
         <HomeList>
-          {booklogUpdates.map((value, index) => {
+          {booklogUpdates.map((value) => {
             return (
               <HomeListItem
                 eagerLoadCoverImage={false}
