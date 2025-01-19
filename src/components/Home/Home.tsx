@@ -43,7 +43,7 @@ export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
           {movielogUpdates.map((value, index) => {
             return (
               <HomeListItem
-                eagerLoadCoverImage={index === 0}
+                eagerLoadCoverImage={index < 2}
                 key={value.slug}
                 siteUrl="https://www.franksmovielog.com"
                 value={value}
@@ -61,7 +61,7 @@ export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
           {booklogUpdates.map((value, index) => {
             return (
               <HomeListItem
-                eagerLoadCoverImage={index === 0}
+                eagerLoadCoverImage={false}
                 key={value.slug}
                 siteUrl="https://www.franksbooklog.com"
                 value={value}
