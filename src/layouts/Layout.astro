@@ -37,10 +37,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     <meta charset="utf-8" />
     <meta content="width=device-width" name="viewport" />
     {canonical && <link href={canonicalUrl} rel="canonical" />}
-    <link href="/favicon.ico" rel="icon" sizes="48x48" />
     <link href="/favicon.svg" rel="icon" sizes="any" type="image/svg+xml" />
-    <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
-    <link href="/site.webmanifest" rel="manifest" />
     <link href="/sitemap-index.xml" rel="sitemap" />
     <meta content={meta.description} name="description" />
     <slot name="meta-theme-color">
@@ -55,12 +52,6 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
         name="theme-color"
       />
     </slot>
-    <link
-      href={new URL("feed.xml", import.meta.env.SITE)}
-      rel="alternate"
-      title={siteMeta.title}
-      type="application/rss+xml"
-    />
     {
       openGraph && (
         <>
@@ -78,4 +69,3 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     <slot />
   </body>
 </html>
-
