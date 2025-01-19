@@ -1,7 +1,0 @@
-baseURL = "https://www.frankshowalter.com/"
-languageCode = "en-us"
-title = "Frank Showalter"
-disableKinds = ["taxonomy", "term"]
-
-[markup.goldmark.renderer]
-unsafe= true

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Ghost Story by Peter Straub",
+    "slug": "ghost-story-by-peter-straub",
+    "date": "2024-12-01",
+    "stars": 4
+  },
+  {
+    "title": "Goth by Lol Tolhurst",
+    "slug": "goth-by-lol-tolhurst",
+    "date": "2024-11-08",
+    "stars": 3
+  },
+  {
+    "title": "Recessional by David Mamet",
+    "slug": "recessional-by-david-mamet",
+    "date": "2024-08-25",
+    "stars": 2
+  },
+  {
+    "title": "Fast Forward by Stephen Morris",
+    "slug": "fast-forward-by-stephen-morris",
+    "date": "2024-07-01",
+    "stars": 4.5
+  },
+  {
+    "title": "Gothic by Philip Fracassi",
+    "slug": "gothic-by-philip-fracassi",
+    "date": "2024-06-30",
+    "stars": 4
+  },
+  {
+    "title": "Record Play Pause by Stephen Morris",
+    "slug": "record-play-pause-by-stephen-morris",
+    "date": "2023-11-11",
+    "stars": 5
+  }
+]

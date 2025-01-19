@@ -1,0 +1,7 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": ["src/pages/**/*.astro"],
+  "project": ["**/*", "!src/**/__mocks__/**"],
+  "ignoreDependencies": ["babel-plugin-react-compiler"],
+  "ignore": ["updateData.ts"]
+}

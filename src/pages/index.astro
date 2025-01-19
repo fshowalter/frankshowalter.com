@@ -1,0 +1,19 @@
+---
+import { getProps } from "~/components/Home/getProps";
+import { Home } from "~/components/Home/Home";
+import Layout from "~/layouts/Layout.astro";
+
+const props = await getProps();
+---
+
+<Layout
+  canonical={true}
+  meta={{
+    description:
+      "Landing page for Frank Showalter, movie and book critic, and all-around swell guy.",
+  }}
+  openGraph={{ description: "Frank Showalter", type: "website" }}
+  title="Frank Showalter"
+>
+  <Home {...props} />
+</Layout>
