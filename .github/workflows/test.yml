@@ -1,0 +1,30 @@
+name: test
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: setup node
+        uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: setup npm
+        run: |
+          ./npm_use.sh &&
+          npm --version &&
+          npm list -g --depth 0
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: vitest
+        run: npm test
