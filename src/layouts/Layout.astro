@@ -1,0 +1,81 @@
+---
+import "./base.css";
+
+type Meta = {
+  description: string;
+};
+
+type OpenGraph = {
+  description: string;
+  type: "article" | "website";
+};
+
+type Props = {
+  canonical: boolean;
+  meta: Meta;
+  openGraph: false | OpenGraph;
+  title: string;
+};
+
+const siteMeta = {
+  author: "Frank Showalter",
+  title: "Frank Showalter",
+};
+
+const { canonical, meta, openGraph, title } = Astro.props;
+
+const pageTitle = title.startsWith(siteMeta.title)
+  ? title
+  : `${title} - ${siteMeta.title}`;
+
+const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathname}`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width" name="viewport" />
+    {canonical && <link href={canonicalUrl} rel="canonical" />}
+    <link href="/favicon.ico" rel="icon" sizes="48x48" />
+    <link href="/favicon.svg" rel="icon" sizes="any" type="image/svg+xml" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="/site.webmanifest" rel="manifest" />
+    <link href="/sitemap-index.xml" rel="sitemap" />
+    <meta content={meta.description} name="description" />
+    <slot name="meta-theme-color">
+      <meta
+        content="#f2f0e8"
+        media="(prefers-color-scheme: light)"
+        name="theme-color"
+      />
+      <meta
+        content="#484745"
+        media="(prefers-color-scheme: dark)"
+        name="theme-color"
+      />
+    </slot>
+    <link
+      href={new URL("feed.xml", import.meta.env.SITE)}
+      rel="alternate"
+      title={siteMeta.title}
+      type="application/rss+xml"
+    />
+    {
+      openGraph && (
+        <>
+          <meta content={`${canonicalUrl}og.jpg`} property="og:image" />
+          <meta content={`${canonicalUrl}`} property="og:url" />
+          <meta content={title} property="og:title" />
+          <meta content={openGraph.description} property="og:description" />
+          <meta content={openGraph.type} property="og:type" />
+        </>
+      )
+    }
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+

@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Ghost Story",
+    "date": "2024-12-01",
+    "slug": "ghost-story-by-peter-straub",
+    "yearPublished": "1979",
+    "kind": "Novel",
+    "authorNames": ["Peter Straub"],
+    "stars": 4,
+    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+  },
+  {
+    "title": "Goth",
+    "date": "2024-11-08",
+    "slug": "goth-by-lol-tolhurst",
+    "yearPublished": "2023",
+    "kind": "Nonfiction",
+    "authorNames": ["Lol Tolhurst"],
+    "stars": 3,
+    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+  },
+  {
+    "title": "Recessional",
+    "date": "2024-08-25",
+    "slug": "recessional-by-david-mamet",
+    "yearPublished": "2022",
+    "kind": "Nonfiction",
+    "authorNames": ["David Mamet"],
+    "stars": 2,
+    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+  },
+  {
+    "title": "Fast Forward",
+    "date": "2024-07-01",
+    "slug": "fast-forward-by-stephen-morris",
+    "yearPublished": "2020",
+    "kind": "Nonfiction",
+    "authorNames": ["Stephen Morris"],
+    "stars": 4.5,
+    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+  },
+  {
+    "title": "Gothic",
+    "date": "2024-06-30",
+    "slug": "gothic-by-philip-fracassi",
+    "yearPublished": "2023",
+    "kind": "Novel",
+    "authorNames": ["Philip Fracasi"],
+    "stars": 4,
+    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+  },
+  {
+    "title": "Record Play Pause",
+    "date": "2023-11-11",
+    "slug": "record-play-pause-by-stephen-morris",
+    "yearPublished": "2019",
+    "kind": "Nonfiction",
+    "authorNames": ["Stephen Morris"],
+    "stars": 5,
+    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_ZmUBGo.avif"
+  }
+]
