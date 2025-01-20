@@ -30,7 +30,7 @@ export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
           </>
         }
         title="Frank Showalter"
-        titleStyle="text-default text-4xl desktop:text-7xl"
+        titleStyle="text-2.5xl tablet:text-5xl font-bold uppercase tracking-widest desktop:text-7xl font-sans"
       />
       <nav className="mx-auto w-full max-w-[888px] bg-subtle pb-20 tablet:px-container desktop:max-w-screen-max">
         <SubHeading as="h2" className="px-container tablet:px-0">

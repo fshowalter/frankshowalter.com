@@ -16,9 +16,7 @@ export function SolidBackdrop({
 }
 
 function Deck({ value }: { value?: React.ReactNode }) {
-  return (
-    <p className={`mt-1 text-base desktop:my-4 desktop:text-xl`}>{value}</p>
-  );
+  return <p className={`mt-1 text-lg desktop:my-4 desktop:text-xl`}>{value}</p>;
 }
 
 function Title({ className, value }: { className?: string; value: string }) {
