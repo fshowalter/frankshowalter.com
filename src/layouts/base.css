@@ -29,7 +29,7 @@
     --fg-default: rgb(255 255 255 / 75%);
     --fg-inverse: #e6e6e6;
     --fg-subtle: rgb(255 255 255 / 60%);
-    --image-filter: brightness(0.8) contrast(1.2);
+    --image-filter: brightness(0.8) contrast(1);
   }
 }
 
