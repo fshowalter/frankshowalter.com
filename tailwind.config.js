@@ -29,6 +29,9 @@ export default {
         sans: "var(--font-sans)",
         serif: "var(--font-serif)",
       },
+      fontSize: {
+        "2.5xl": "1.625rem",
+      },
       maxWidth: {
         unset: "unset",
       },
