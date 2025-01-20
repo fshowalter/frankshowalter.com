@@ -33,7 +33,7 @@ export function HomeListItem({
     <li className="relative flex w-[48%] max-w-[248px] flex-col items-center has-[a:hover]:bg-default has-[a:hover]:shadow-hover min-[600px]:w-[30.66666667%] tablet:w-[31.33333333%] desktop:w-[14.16666667%]">
       <a
         aria-label={value.title}
-        className="z-10 inline-block text-accent decoration-2 underline-offset-4 before:absolute before:inset-x-0 before:top-0 before:aspect-cover before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0"
+        className="inline-block text-accent decoration-2 underline-offset-4 before:absolute before:inset-x-0 before:top-0 before:z-10 before:aspect-cover before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0"
         href={`${siteUrl}/reviews/${value.slug}/`}
         rel="canonical"
       >
