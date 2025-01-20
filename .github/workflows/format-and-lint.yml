@@ -30,23 +30,16 @@ jobs:
         run: npm run knip
 
       - name: prettier
-        run: npm run format:fix
+        run: npm run format
 
       - name: type-check
         run: npm run check
 
       - name: eslint
-        run: npm run lint:fix
+        run: npm run lint
 
       - name: stylelint
-        run: npm run stylelint:fix
+        run: npm run stylelint
 
       - name: cspell
-        run: npm run lint:spelling:fix
-
-      - name: print diff
-        run: git diff
-
-      - uses: stefanzweifel/git-auto-commit-action@e348103e9026cc0eee72ae06630dbe30c8bf7a79 # v5
-        with:
-          commit_message: "refactor: apply lint autofix"
+        run: npm run lint:spelling
