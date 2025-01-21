@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-01-16T00:00:00.000Z",
+    "image": "/_astro/den-of-thieves-2018.DyBkW5Mi_jabao.png",
+    "slug": "den-of-thieves-2018",
+    "stars": 3.5,
+    "title": "Den of Thieves (2018)"
+  },
+  {
     "date": "2025-01-14T00:00:00.000Z",
     "image": "/_astro/challenge-the-devil-1963.Ci052FFS_1sK1xD.png",
     "slug": "challenge-the-devil-1963",
@@ -33,12 +40,5 @@
     "slug": "the-brigand-of-kandahar-1965",
     "stars": 1.5,
     "title": "The Brigand of Kandahar (1965)"
-  },
-  {
-    "date": "2025-01-10T00:00:00.000Z",
-    "image": "/_astro/leprechaun-6-back-2-tha-hood-2003.D_LLTEdI_Z25ESeu.png",
-    "slug": "leprechaun-6-back-2-tha-hood-2003",
-    "stars": 2,
-    "title": "Leprechaun 6: Back 2 Tha Hood (2003)"
   }
 ]
