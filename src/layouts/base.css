@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --bg-canvas: #f2f0e8;
+  --bg-canvas: #f4eedf;
   --bg-default: #fff;
-  --bg-footer: #504b43;
+  --bg-footer: #2c3638;
   --bg-subtle: #fafafa;
   --border-default: #e9e7e0;
   --container-padding: 8%;
