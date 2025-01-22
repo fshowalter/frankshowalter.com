@@ -6,7 +6,7 @@ import type { ImageProps } from "~/api/images";
 import { Grade } from "./Grade";
 import { SubHeading } from "./SubHeading";
 
-export type Props = {
+type Props = {
   booklogUpdates: ListItemValue[];
   movielogUpdates: ListItemValue[];
 };
@@ -18,7 +18,7 @@ export const ImageConfig = {
   width: 248,
 };
 
-export type ListItemValue = {
+type ListItemValue = {
   date: Date;
   imageProps: ImageProps;
   slug: string;
