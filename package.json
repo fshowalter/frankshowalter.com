@@ -22,7 +22,7 @@
     "test:update": "vitest -u run src",
     "test:watch": "vitest src",
     "test": "vitest run src",
-    "updateData": "node --experimental-strip-types updateData.ts"
+    "update:data": "node --experimental-strip-types updateData.ts"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",

@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-01-16T00:00:00.000Z",
+    "image": "/_astro/lost-highway-1997.VPr4YDMO_2lezyy.png",
+    "slug": "lost-highway-1997",
+    "stars": 4.5,
+    "title": "Lost Highway (1997)"
+  },
+  {
+    "date": "2025-01-16T00:00:00.000Z",
     "image": "/_astro/den-of-thieves-2018.DyBkW5Mi_jabao.png",
     "slug": "den-of-thieves-2018",
     "stars": 3.5,
@@ -33,12 +40,5 @@
     "slug": "def-by-temptation-1990",
     "stars": 2.5,
     "title": "Def by Temptation (1990)"
-  },
-  {
-    "date": "2025-01-10T00:00:00.000Z",
-    "image": "/_astro/the-brigand-of-kandahar-1965.Dkra2koQ_Z2jAjEb.png",
-    "slug": "the-brigand-of-kandahar-1965",
-    "stars": 1.5,
-    "title": "The Brigand of Kandahar (1965)"
   }
 ]
