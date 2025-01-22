@@ -1,0 +1,22 @@
+---
+import { Content } from "~/components/404/404";
+import { getProps } from "~/components/404/getProps";
+import Layout from "~/layouts/Layout.astro";
+
+const title = "404: Not Found";
+const deck = '"Dick Laurent is dead."';
+
+const props = await getProps({
+  deck,
+  title,
+});
+---
+
+<Layout
+  canonical={false}
+  meta={{ description: deck }}
+  openGraph={false}
+  title={title}
+>
+  <Content {...props} />
+</Layout>

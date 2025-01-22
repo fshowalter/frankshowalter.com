@@ -3,9 +3,15 @@ import { getFluidImageProps } from "~/api/images";
 import { movielogUpdates } from "~/api/movielog";
 import { ImageConfig } from "~/components/LatestUpdates";
 
-import type { Props } from "./Home";
+import type { Props } from "./404";
 
-export async function getProps(): Promise<Props> {
+export async function getProps({
+  deck,
+  title,
+}: {
+  deck: string;
+  title: string;
+}): Promise<Props> {
   const booklogItems = await booklogUpdates();
   const movielogItems = await movielogUpdates();
 
@@ -18,6 +24,7 @@ export async function getProps(): Promise<Props> {
         };
       }),
     ),
+    deck,
     movielogUpdates: await Promise.all(
       movielogItems.map(async (item) => {
         return {
@@ -30,5 +37,6 @@ export async function getProps(): Promise<Props> {
         };
       }),
     ),
+    title,
   };
 }
