@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-01-18T00:00:00.000Z",
+    "image": "/_astro/nightbitch-2024.DgmpenyM_2dHzCf.png",
+    "slug": "nightbitch-2024",
+    "stars": 1,
+    "title": "Nightbitch (2024)"
+  },
+  {
     "date": "2025-01-16T00:00:00.000Z",
     "image": "/_astro/lost-highway-1997.VPr4YDMO_2lezyy.png",
     "slug": "lost-highway-1997",
@@ -33,12 +40,5 @@
     "slug": "the-return-of-the-musketeers-1989",
     "stars": 2,
     "title": "The Return of the Musketeers (1989)"
-  },
-  {
-    "date": "2025-01-11T00:00:00.000Z",
-    "image": "/_astro/def-by-temptation-1990.BLRYdDYO_ZhRTLa.png",
-    "slug": "def-by-temptation-1990",
-    "stars": 2.5,
-    "title": "Def by Temptation (1990)"
   }
 ]
