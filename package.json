@@ -48,7 +48,7 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "@vitest/coverage-istanbul": "3.0.5",
-    "@vitest/eslint-plugin": "1.1.26",
+    "@vitest/eslint-plugin": "1.1.27",
     "babel-plugin-react-compiler": "19.0.0-beta-e552027-20250112",
     "cspell": "8.17.3",
     "eslint": "9.20.0",
