@@ -33,7 +33,7 @@
     "astro": "5.2.5",
     "astro-compressor": "1.0.0",
     "autoprefixer": "10.4.20",
-    "postcss": "8.5.1",
+    "postcss": "8.5.2",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "satori": "0.12.1",
