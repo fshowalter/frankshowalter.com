@@ -59,7 +59,7 @@
     "eslint-plugin-unicorn": "56.0.1",
     "globals": "15.15.0",
     "jsdom": "26.0.0",
-    "knip": "5.44.0",
+    "knip": "5.44.1",
     "postcss-html": "1.8.0",
     "prettier": "3.5.0",
     "prettier-plugin-astro": "0.14.1",
