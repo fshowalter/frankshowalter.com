@@ -58,7 +58,7 @@
     "eslint-plugin-react-compiler": "19.0.0-beta-e552027-20250112",
     "eslint-plugin-tailwindcss": "3.18.0",
     "eslint-plugin-unicorn": "56.0.1",
-    "globals": "15.14.0",
+    "globals": "15.15.0",
     "jsdom": "26.0.0",
     "knip": "5.44.0",
     "postcss-html": "1.8.0",
