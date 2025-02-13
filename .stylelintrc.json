@@ -8,6 +8,7 @@
     }
   ],
   "rules": {
+    "import-notation": null,
     "order/order": [["custom-properties", "declarations", "rules", "at-rules"]],
     "order/properties-order": [
       ["all"],
@@ -17,20 +18,19 @@
       true,
       {
         "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "layer",
-          "config",
-          "variants",
-          "responsive",
-          "screen"
+          "theme",
+          "source",
+          "utility",
+          "variant",
+          "custom-variant",
+          "plugin"
         ]
       }
     ],
     "media-query-no-invalid": [
       true,
       {
-        "ignoreFunctions": ["screen"]
+        "ignoreFunctions": ["theme"]
       }
     ],
     "function-no-unknown": [
@@ -39,6 +39,7 @@
         "ignoreFunctions": ["theme"]
       }
     ],
+    "custom-property-pattern": null,
     "selector-id-pattern": null,
     "selector-class-pattern": null
   }
