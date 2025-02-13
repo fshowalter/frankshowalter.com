@@ -31,7 +31,7 @@ export function LatestUpdates({
   movielogUpdates,
 }: Props): JSX.Element {
   return (
-    <nav className="mx-auto w-full max-w-[888px] bg-subtle pb-20 tablet:px-container desktop:max-w-(--breakpoint-max)">
+    <nav className="bg-subtle tablet:px-container desktop:max-w-(--breakpoint-max) mx-auto w-full max-w-[888px] pb-20">
       <SubHeading as="h2" className="px-container tablet:px-0">
         Latest{" "}
         <a className="text-accent" href="https://www.franksmovielog.com">
@@ -106,7 +106,7 @@ function UpdateImage({
 
 function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol className="flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%] tablet:gap-x-[3%] tablet:px-0 desktop:justify-between desktop:gap-x-[2%]">
+    <ol className="tablet:gap-x-[3%] tablet:px-0 desktop:justify-between desktop:gap-x-[2%] flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%]">
       {children}
     </ol>
   );
@@ -122,10 +122,10 @@ function UpdateListItem({
   value: ListItemValue;
 }): JSX.Element {
   return (
-    <li className="relative flex w-[48%] max-w-[248px] flex-col items-center has-[a:hover]:bg-default has-[a:hover]:shadow-hover min-[600px]:w-[30.66666667%] tablet:w-[31.33333333%] desktop:w-[14.16666667%]">
+    <li className="has-[a:hover]:bg-default has-[a:hover]:shadow-hover tablet:w-[31.33333333%] desktop:w-[14.16666667%] relative flex w-[48%] max-w-[248px] flex-col items-center min-[600px]:w-[30.66666667%]">
       <a
         aria-label={value.title}
-        className="inline-block text-accent decoration-2 underline-offset-4 before:absolute before:inset-x-0 before:top-0 before:z-10 before:aspect-cover before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0"
+        className="text-accent before:aspect-cover before:bg-default inline-block decoration-2 underline-offset-4 before:absolute before:inset-x-0 before:top-0 before:z-10 before:opacity-15 after:absolute after:top-0 after:left-0 after:size-full after:opacity-0 hover:before:opacity-0"
         href={`${siteUrl}/reviews/${value.slug}/`}
         rel="canonical"
       >
@@ -141,7 +141,7 @@ function UpdateListItem({
         <div>
           <Grade height={18} value={value.stars} />
         </div>
-        <div className="ml-auto font-sans text-xs font-light text-subtle">
+        <div className="text-subtle ml-auto font-sans text-xs font-light">
           {formatDate(value.date)}
         </div>
       </div>
