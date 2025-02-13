@@ -31,7 +31,7 @@ export function LatestUpdates({
   movielogUpdates,
 }: Props): JSX.Element {
   return (
-    <nav className="mx-auto w-full max-w-[888px] bg-subtle pb-20 tablet:px-container desktop:max-w-screen-max">
+    <nav className="mx-auto w-full max-w-[888px] bg-subtle pb-20 tablet:px-container desktop:max-w-(--breakpoint-max)">
       <SubHeading as="h2" className="px-container tablet:px-0">
         Latest{" "}
         <a className="text-accent" href="https://www.franksmovielog.com">

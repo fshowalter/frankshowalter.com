@@ -29,7 +29,7 @@ function Wrapper({ children }: { children: React.ReactNode }) {
       className={`relative flex min-h-[clamp(340px,50vh,1350px)] w-full flex-col content-start items-center justify-end gap-6 bg-canvas pb-8 pt-40 tablet:pb-10 tablet:pt-40 desktop:pb-16 desktop:pt-40`}
     >
       <div
-        className={`z-10 mx-auto flex w-full max-w-[888px] flex-col px-container desktop:max-w-screen-max`}
+        className={`z-10 mx-auto flex w-full max-w-[888px] flex-col px-container desktop:max-w-(--breakpoint-max)`}
       >
         {children}
       </div>

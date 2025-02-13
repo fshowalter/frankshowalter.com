@@ -1,47 +1,78 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@layer theme, base, components, utilities;
 
-:root {
-  --bg-canvas: #f4eedf;
-  --bg-default: #fff;
-  --bg-footer: #2c3638;
-  --bg-subtle: #fafafa;
-  --border-default: #f4eedf;
-  --container-padding: 8%;
-  --fg-accent: #894731;
-  --fg-default: rgb(0 0 0 / 75%);
-  --fg-inverse: #fff;
-  --fg-subtle: rgb(0 0 0 / 60%);
-  --font-sans: "ArgentumSans";
-  --font-serif: "FrankRuhlLibre";
-  --image-filter: initial;
+@import "tailwindcss";
+
+@theme {
+  --background-color-*: initial;
+  --background-color-canvas: var(--bg-canvas);
+  --background-color-default: var(--bg-default);
+  --background-color-footer: var(--bg-footer);
+  --background-color-subtle: var(--bg-subtle);
+  --border-color-*: initial;
+  --border-color-default: var(--border-default);
+  --color-*: initial;
+  --color-accent: var(--fg-accent);
+  --color-default: var(--fg-default);
+  --color-inherit: inherit;
+  --color-inverse: var(--fg-inverse);
+  --color-subtle: var(--fg-subtle);
+  --tracking-*: initial;
+  --tracking-wide: 0.8px;
+  --breakpoint-*: initial;
+  --breakpoint-desktop: 1280px;
+  --breakpoint-max: 1696px;
+  --breakpoint-tablet: 768px;
+  --aspect-cover: 1 / 1.5;
+  --shadow-hover: 0 0 1px 1px var(--border-default);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --text-2_5xl: 1.625rem;
+  --container-unset: unset;
+  --padding-container: var(--container-padding);
 }
 
-@media (prefers-color-scheme: dark) {
+@layer utilities {
   :root {
-    --bg-canvas: #484745;
-    --bg-default: #322f2f;
-    --bg-footer: #252525;
-    --bg-subtle: #373434;
-    --border-default: #484745;
-    --fg-accent: #c86666;
-    --fg-default: rgb(255 255 255 / 75%);
-    --fg-inverse: #e6e6e6;
-    --fg-subtle: rgb(255 255 255 / 60%);
-    --image-filter: brightness(0.8) contrast(1);
+    --bg-canvas: #f4eedf;
+    --bg-default: #fff;
+    --bg-footer: #2c3638;
+    --bg-subtle: #fafafa;
+    --border-default: #f4eedf;
+    --container-padding: 8%;
+    --fg-accent: #894731;
+    --fg-default: rgb(0 0 0 / 75%);
+    --fg-inverse: #fff;
+    --fg-subtle: rgb(0 0 0 / 60%);
+    --font-sans: "ArgentumSans";
+    --font-serif: "FrankRuhlLibre";
+    --image-filter: initial;
   }
-}
 
-@media screen(tablet) {
-  :root {
-    --container-padding: 48px;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-canvas: #484745;
+      --bg-default: #322f2f;
+      --bg-footer: #252525;
+      --bg-subtle: #373434;
+      --border-default: #484745;
+      --fg-accent: #c86666;
+      --fg-default: rgb(255 255 255 / 75%);
+      --fg-inverse: #e6e6e6;
+      --fg-subtle: rgb(255 255 255 / 60%);
+      --image-filter: brightness(0.8) contrast(1);
+    }
   }
-}
 
-@media screen(desktop) {
-  :root {
-    --container-padding: 80px;
+  @media (width >= theme(--breakpoint-tablet)) {
+    :root {
+      --container-padding: 48px;
+    }
+  }
+
+  @media (width >= theme(--breakpoint-desktop)) {
+    :root {
+      --container-padding: 80px;
+    }
   }
 }
 
