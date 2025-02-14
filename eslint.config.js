@@ -4,6 +4,7 @@ import eslintPluginAstro from "eslint-plugin-astro";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
+import tailwind from "eslint-plugin-tailwindcss";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
@@ -59,6 +60,11 @@ export default tsEslint.config(
     },
   },
   {
+    extends: [...tailwind.configs["flat/recommended"]],
+    files: ["**/*.astro"],
+  },
+  {
+    extends: [...tailwind.configs["flat/recommended"]],
     files: ["**/*.tsx"],
     plugins: { react, "react-compiler": reactCompiler },
     rules: {
