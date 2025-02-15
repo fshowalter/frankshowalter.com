@@ -122,7 +122,7 @@ function UpdateListItem({
   value: ListItemValue;
 }): JSX.Element {
   return (
-    <li className="relative flex w-[48%] max-w-[248px] flex-col items-center has-[a:hover]:bg-default has-[a:hover]:shadow-hover min-[600px]:w-[30.66666667%] tablet:w-[31.33333333%] desktop:w-[14.16666667%]">
+    <li className="has-[a:hover]:bg-hover relative flex w-[48%] max-w-[248px] flex-col items-center text-subtle has-[a:hover]:text-inverse has-[a:hover]:shadow-hover min-[600px]:w-[30.66666667%] tablet:w-[31.33333333%] desktop:w-[14.16666667%]">
       <a
         aria-label={value.title}
         className="inline-block text-accent decoration-2 underline-offset-4 before:absolute before:inset-x-0 before:top-0 before:z-10 before:aspect-cover before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0"
@@ -141,7 +141,7 @@ function UpdateListItem({
         <div>
           <Grade height={18} value={value.stars} />
         </div>
-        <div className="ml-auto font-sans text-xs font-light text-subtle">
+        <div className="ml-auto font-sans text-xs font-light">
           {formatDate(value.date)}
         </div>
       </div>
