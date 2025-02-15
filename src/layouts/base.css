@@ -5,6 +5,7 @@
 :root {
   --bg-canvas: #f4eedf;
   --bg-default: #fff;
+  --bg-cover: rgb(10 10 10);
   --bg-footer: #2c3638;
   --bg-subtle: #fafafa;
   --border-default: #f4eedf;
