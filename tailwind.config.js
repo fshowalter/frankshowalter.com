@@ -4,6 +4,7 @@ export default {
   theme: {
     backgroundColor: {
       canvas: "var(--bg-canvas)",
+      cover: "var(--bg-cover)",
       default: "var(--bg-default)",
       footer: "var(--bg-footer)",
       subtle: "var(--bg-subtle)",
