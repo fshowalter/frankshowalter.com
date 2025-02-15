@@ -8,9 +8,7 @@ export default {
       footer: "var(--bg-footer)",
       subtle: "var(--bg-subtle)",
     },
-    borderColor: {
-      default: "var(--border-default)",
-    },
+    borderColor: { default: "var(--border-default)" },
     colors: {
       accent: "var(--fg-accent)",
       default: "var(--fg-default)",
@@ -19,33 +17,14 @@ export default {
       subtle: "var(--fg-subtle)",
     },
     extend: {
-      aspectRatio: {
-        cover: "1 / 1.5",
-      },
-      boxShadow: {
-        hover: "0 0 1px 1px var(--border-default)",
-      },
-      fontFamily: {
-        sans: "var(--font-sans)",
-        serif: "var(--font-serif)",
-      },
-      fontSize: {
-        "2.5xl": "1.625rem",
-      },
-      maxWidth: {
-        unset: "unset",
-      },
-      padding: {
-        container: "var(--container-padding)",
-      },
+      aspectRatio: { cover: "1 / 1.5" },
+      boxShadow: { hover: "0 0 1px 1px var(--bg-canvas)" },
+      fontFamily: { sans: "var(--font-sans)", serif: "var(--font-serif)" },
+      fontSize: { "2.5xl": "1.625rem" },
+      maxWidth: { unset: "unset" },
+      padding: { container: "var(--container-padding)" },
     },
-    letterSpacing: {
-      wide: ".8px",
-    },
-    screens: {
-      desktop: "1280px",
-      max: "1696px",
-      tablet: "768px",
-    },
+    letterSpacing: { wide: ".8px" },
+    screens: { desktop: "1280px", max: "1696px", tablet: "768px" },
   },
 };
