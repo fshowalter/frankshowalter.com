@@ -7,7 +7,6 @@
   --bg-default: #fff;
   --bg-footer: #2c3638;
   --bg-subtle: #fafafa;
-  --bg-hover: #872010;
   --border-default: #f4eedf;
   --container-padding: 8%;
   --fg-accent: #894731;
@@ -25,7 +24,6 @@
     --bg-default: #322f2f;
     --bg-footer: #252525;
     --bg-subtle: #373434;
-    --bg-hover: #452020;
     --border-default: #484745;
     --fg-accent: #c86666;
     --fg-default: rgb(255 255 255 / 75%);

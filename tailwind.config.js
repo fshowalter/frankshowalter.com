@@ -6,7 +6,6 @@ export default {
       canvas: "var(--bg-canvas)",
       default: "var(--bg-default)",
       footer: "var(--bg-footer)",
-      hover: "var(--bg-hover)",
       subtle: "var(--bg-subtle)",
     },
     borderColor: { default: "var(--border-default)" },
@@ -19,7 +18,7 @@ export default {
     },
     extend: {
       aspectRatio: { cover: "1 / 1.5" },
-      boxShadow: { hover: "0 0 1px 1px var(--border-default)" },
+      boxShadow: { hover: "0 0 1px 1px var(--bg-canvas)" },
       fontFamily: { sans: "var(--font-sans)", serif: "var(--font-serif)" },
       fontSize: { "2.5xl": "1.625rem" },
       maxWidth: { unset: "unset" },
