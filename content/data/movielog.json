@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-02-06T00:00:00.000Z",
+    "image": "/_astro/red-rooms-2023.0anFEzE1_Z13uW0O.png",
+    "slug": "red-rooms-2023",
+    "stars": 2.5,
+    "title": "Red Rooms (2023)"
+  },
+  {
+    "date": "2025-02-06T00:00:00.000Z",
     "image": "/_astro/the-collector-2009.BVDlOOTl_Z22YYIF.png",
     "slug": "the-collector-2009",
     "stars": 3.5,
@@ -33,12 +40,5 @@
     "slug": "lost-highway-1997",
     "stars": 4.5,
     "title": "Lost Highway (1997)"
-  },
-  {
-    "date": "2025-01-16T00:00:00.000Z",
-    "image": "/_astro/den-of-thieves-2018.DyBkW5Mi_jabao.png",
-    "slug": "den-of-thieves-2018",
-    "stars": 3.5,
-    "title": "Den of Thieves (2018)"
   }
 ]
