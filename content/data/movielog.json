@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-02-06T00:00:00.000Z",
+    "image": "/_astro/the-collector-2009.BVDlOOTl_Z22YYIF.png",
+    "slug": "the-collector-2009",
+    "stars": 3.5,
+    "title": "The Collector (2009)"
+  },
+  {
     "date": "2025-01-27T00:00:00.000Z",
     "image": "/_astro/deadly-blessing-1981.40R7xP4z_ZXbUAu.png",
     "slug": "deadly-blessing-1981",
@@ -33,12 +40,5 @@
     "slug": "den-of-thieves-2018",
     "stars": 3.5,
     "title": "Den of Thieves (2018)"
-  },
-  {
-    "date": "2025-01-14T00:00:00.000Z",
-    "image": "/_astro/challenge-the-devil-1963.Ci052FFS_1sK1xD.png",
-    "slug": "challenge-the-devil-1963",
-    "stars": 1,
-    "title": "Challenge the Devil (1963)"
   }
 ]
