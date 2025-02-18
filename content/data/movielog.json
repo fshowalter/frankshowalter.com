@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-02-16T00:00:00.000Z",
+    "image": "/_astro/the-black-cat-1934.BjNrxl9b_2giGzQ.png",
+    "slug": "the-black-cat-1934",
+    "stars": 3.5,
+    "title": "The Black Cat (1934)"
+  },
+  {
     "date": "2025-02-11T00:00:00.000Z",
     "image": "/_astro/the-blood-beast-terror-1968.CDdRmSxI_Z14M0Jg.png",
     "slug": "the-blood-beast-terror-1968",
@@ -33,12 +40,5 @@
     "slug": "murder-by-decree-1979",
     "stars": 2,
     "title": "Murder by Decree (1979)"
-  },
-  {
-    "date": "2025-01-18T00:00:00.000Z",
-    "image": "/_astro/nightbitch-2024.DgmpenyM_2dHzCf.png",
-    "slug": "nightbitch-2024",
-    "stars": 1,
-    "title": "Nightbitch (2024)"
   }
 ]
