@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-02-19T00:00:00.000Z",
+    "image": "/_astro/the-web-of-death-1976.Dx72Cr4s_2r06CN.png",
+    "slug": "the-web-of-death-1976",
+    "stars": 2,
+    "title": "The Web of Death (1976)"
+  },
+  {
     "date": "2025-02-16T00:00:00.000Z",
     "image": "/_astro/the-black-cat-1934.BjNrxl9b_2giGzQ.png",
     "slug": "the-black-cat-1934",
@@ -33,12 +40,5 @@
     "slug": "deadly-blessing-1981",
     "stars": 1.5,
     "title": "Deadly Blessing (1981)"
-  },
-  {
-    "date": "2025-01-23T00:00:00.000Z",
-    "image": "/_astro/murder-by-decree-1979.Budh1hu4_299fFk.png",
-    "slug": "murder-by-decree-1979",
-    "stars": 2,
-    "title": "Murder by Decree (1979)"
   }
 ]
