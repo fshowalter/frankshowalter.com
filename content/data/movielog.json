@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-02-22T00:00:00.000Z",
+    "image": "/_astro/asylum-1972.DEXNTUPk_Z1aGarU.png",
+    "slug": "asylum-1972",
+    "stars": 2,
+    "title": "Asylum (1972)"
+  },
+  {
     "date": "2025-02-19T00:00:00.000Z",
     "image": "/_astro/the-web-of-death-1976.Dx72Cr4s_2r06CN.png",
     "slug": "the-web-of-death-1976",
@@ -33,12 +40,5 @@
     "slug": "the-collector-2009",
     "stars": 3.5,
     "title": "The Collector (2009)"
-  },
-  {
-    "date": "2025-01-27T00:00:00.000Z",
-    "image": "/_astro/deadly-blessing-1981.40R7xP4z_ZXbUAu.png",
-    "slug": "deadly-blessing-1981",
-    "stars": 1.5,
-    "title": "Deadly Blessing (1981)"
   }
 ]
