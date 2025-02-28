@@ -30,7 +30,7 @@
     "@astrojs/sitemap": "3.2.1",
     "@astrojs/tailwind": "6.0.0",
     "@playform/inline": "0.1.1",
-    "astro": "5.4.0",
+    "astro": "5.4.1",
     "astro-compressor": "1.0.0",
     "autoprefixer": "10.4.20",
     "postcss": "8.5.3",
