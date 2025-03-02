@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-02-28T00:00:00.000Z",
+    "image": "/_astro/the-law-and-jake-wade-1958.DyQWson2_Z2rbOF2.png",
+    "slug": "the-law-and-jake-wade-1958",
+    "stars": 3,
+    "title": "The Law and Jake Wade (1958)"
+  },
+  {
     "date": "2025-02-22T00:00:00.000Z",
     "image": "/_astro/asylum-1972.DEXNTUPk_Z1aGarU.png",
     "slug": "asylum-1972",
@@ -33,12 +40,5 @@
     "slug": "red-rooms-2023",
     "stars": 2.5,
     "title": "Red Rooms (2023)"
-  },
-  {
-    "date": "2025-02-06T00:00:00.000Z",
-    "image": "/_astro/the-collector-2009.BVDlOOTl_Z22YYIF.png",
-    "slug": "the-collector-2009",
-    "stars": 3.5,
-    "title": "The Collector (2009)"
   }
 ]
