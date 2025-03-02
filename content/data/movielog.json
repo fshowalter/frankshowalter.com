@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-03-01T00:00:00.000Z",
+    "image": "/_astro/a-nightmare-on-elm-street-3-dream-warriors-1987.BwVeGdQK_Zuk2JE.png",
+    "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
+    "stars": 3.5,
+    "title": "A Nightmare on Elm Street 3: Dream Warriors (1987)"
+  },
+  {
     "date": "2025-02-28T00:00:00.000Z",
     "image": "/_astro/the-law-and-jake-wade-1958.DyQWson2_Z2rbOF2.png",
     "slug": "the-law-and-jake-wade-1958",
@@ -33,12 +40,5 @@
     "slug": "the-blood-beast-terror-1968",
     "stars": 1.5,
     "title": "The Blood Beast Terror (1968)"
-  },
-  {
-    "date": "2025-02-06T00:00:00.000Z",
-    "image": "/_astro/red-rooms-2023.0anFEzE1_Z13uW0O.png",
-    "slug": "red-rooms-2023",
-    "stars": 2.5,
-    "title": "Red Rooms (2023)"
   }
 ]
