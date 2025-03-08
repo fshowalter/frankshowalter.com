@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-03-04T00:00:00.000Z",
+    "image": "/_astro/the-worlds-end-2013.Dei4D_A8_1hUCI2.png",
+    "slug": "the-worlds-end-2013",
+    "stars": 4,
+    "title": "The World's End (2013)"
+  },
+  {
     "date": "2025-03-01T00:00:00.000Z",
     "image": "/_astro/a-nightmare-on-elm-street-3-dream-warriors-1987.BwVeGdQK_Zuk2JE.png",
     "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
@@ -33,12 +40,5 @@
     "slug": "the-black-cat-1934",
     "stars": 3.5,
     "title": "The Black Cat (1934)"
-  },
-  {
-    "date": "2025-02-11T00:00:00.000Z",
-    "image": "/_astro/the-blood-beast-terror-1968.CDdRmSxI_Z14M0Jg.png",
-    "slug": "the-blood-beast-terror-1968",
-    "stars": 1.5,
-    "title": "The Blood Beast Terror (1968)"
   }
 ]
