@@ -9,5 +9,6 @@
     "enabled": true,
     "schedule": ["at any time"]
   },
-  "postUpdateOptions": ["npmDedupe"]
+  "postUpdateOptions": ["npmDedupe"],
+  "automerge": true
 }
