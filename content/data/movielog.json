@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-03-06T00:00:00.000Z",
+    "image": "/_astro/count-dracula-1970.ByUXr2sz_eTurr.png",
+    "slug": "count-dracula-1970",
+    "stars": 1.5,
+    "title": "Count Dracula (1970)"
+  },
+  {
     "date": "2025-03-04T00:00:00.000Z",
     "image": "/_astro/the-worlds-end-2013.Dei4D_A8_1hUCI2.png",
     "slug": "the-worlds-end-2013",
@@ -33,12 +40,5 @@
     "slug": "the-web-of-death-1976",
     "stars": 2,
     "title": "The Web of Death (1976)"
-  },
-  {
-    "date": "2025-02-16T00:00:00.000Z",
-    "image": "/_astro/the-black-cat-1934.BjNrxl9b_2giGzQ.png",
-    "slug": "the-black-cat-1934",
-    "stars": 3.5,
-    "title": "The Black Cat (1934)"
   }
 ]
