@@ -29,7 +29,7 @@
     "@astrojs/react": "4.2.2",
     "@astrojs/sitemap": "3.3.0",
     "@astrojs/tailwind": "6.0.2",
-    "@playform/inline": "0.1.1",
+    "@playform/inline": "0.1.2",
     "astro": "5.5.5",
     "astro-compressor": "1.0.0",
     "autoprefixer": "10.4.21",
