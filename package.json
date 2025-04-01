@@ -46,7 +46,7 @@
     "@types/node": "22.13.14",
     "@types/react": "19.0.12",
     "@types/react-dom": "19.0.4",
-    "@vitest/coverage-istanbul": "3.0.9",
+    "@vitest/coverage-istanbul": "3.1.1",
     "@vitest/eslint-plugin": "1.1.38",
     "babel-plugin-react-compiler": "19.0.0-beta-e993439-20250328",
     "cspell": "8.18.1",
@@ -69,7 +69,7 @@
     "stylelint-order": "6.0.4",
     "typescript": "5.8.2",
     "typescript-eslint": "8.29.0",
-    "vitest": "3.0.9"
+    "vitest": "3.1.1"
   },
   "engines": {
     "node": "22.14.0",
