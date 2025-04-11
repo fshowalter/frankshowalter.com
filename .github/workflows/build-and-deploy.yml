@@ -35,9 +35,9 @@ jobs:
           path: |
             node_modules
             .astro
-          key: ${{ runner.os }}-astro-cache-v2-${{ github.run_id }}
+          key: ${{ runner.os }}-astro-cache-v3-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-astro-cache-v2-
+            ${{ runner.os }}-astro-cache-v3-
 
       - name: build
         run: npm run build
