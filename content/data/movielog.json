@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-03-14T00:00:00.000Z",
+    "image": "/_astro/heretic-2024.LMASeJRX_ZNRodI.png",
+    "slug": "heretic-2024",
+    "stars": 2,
+    "title": "Heretic (2024)"
+  },
+  {
     "date": "2025-03-08T00:00:00.000Z",
     "image": "/_astro/pray-for-death-1985.DutpuSAm_sHS6d.png",
     "slug": "pray-for-death-1985",
@@ -33,12 +40,5 @@
     "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
     "stars": 3.5,
     "title": "A Nightmare on Elm Street 3: Dream Warriors (1987)"
-  },
-  {
-    "date": "2025-02-28T00:00:00.000Z",
-    "image": "/_astro/the-law-and-jake-wade-1958.DyQWson2_Z2rbOF2.png",
-    "slug": "the-law-and-jake-wade-1958",
-    "stars": 3,
-    "title": "The Law and Jake Wade (1958)"
   }
 ]
