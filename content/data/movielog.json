@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-03-22T00:00:00.000Z",
+    "image": "/_astro/casablanca-1942.A7e_s1qr_Z2ciNYy.png",
+    "slug": "casablanca-1942",
+    "stars": 5,
+    "title": "Casablanca (1942)"
+  },
+  {
     "date": "2025-03-14T00:00:00.000Z",
     "image": "/_astro/heretic-2024.LMASeJRX_ZNRodI.png",
     "slug": "heretic-2024",
@@ -33,12 +40,5 @@
     "slug": "the-worlds-end-2013",
     "stars": 4,
     "title": "The World's End (2013)"
-  },
-  {
-    "date": "2025-03-01T00:00:00.000Z",
-    "image": "/_astro/a-nightmare-on-elm-street-3-dream-warriors-1987.BwVeGdQK_Zuk2JE.png",
-    "slug": "a-nightmare-on-elm-street-3-dream-warriors-1987",
-    "stars": 3.5,
-    "title": "A Nightmare on Elm Street 3: Dream Warriors (1987)"
   }
 ]
