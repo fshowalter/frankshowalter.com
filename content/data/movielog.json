@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-03-22T00:00:00.000Z",
+    "image": "/_astro/rio-bravo-1959.BDq875_S_1tLnEl.png",
+    "slug": "rio-bravo-1959",
+    "stars": 5,
+    "title": "Rio Bravo (1959)"
+  },
+  {
+    "date": "2025-03-22T00:00:00.000Z",
     "image": "/_astro/casablanca-1942.A7e_s1qr_Z2ciNYy.png",
     "slug": "casablanca-1942",
     "stars": 5,
@@ -33,12 +40,5 @@
     "slug": "count-dracula-1970",
     "stars": 1.5,
     "title": "Count Dracula (1970)"
-  },
-  {
-    "date": "2025-03-04T00:00:00.000Z",
-    "image": "/_astro/the-worlds-end-2013.Dei4D_A8_1hUCI2.png",
-    "slug": "the-worlds-end-2013",
-    "stars": 4,
-    "title": "The World's End (2013)"
   }
 ]
