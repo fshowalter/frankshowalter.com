@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-05-02T00:00:00.000Z",
+    "image": "/_astro/dutchman-1966.DI4S-Lkr_20Kxky.png",
+    "slug": "dutchman-1966",
+    "stars": 2,
+    "title": "Dutchman (1966)"
+  },
+  {
     "date": "2025-03-22T00:00:00.000Z",
     "image": "/_astro/rio-bravo-1959.BDq875_S_1tLnEl.png",
     "slug": "rio-bravo-1959",
@@ -33,12 +40,5 @@
     "slug": "blood-suckers-1971",
     "stars": 2.5,
     "title": "Blood Suckers (1971)"
-  },
-  {
-    "date": "2025-03-06T00:00:00.000Z",
-    "image": "/_astro/count-dracula-1970.ByUXr2sz_eTurr.png",
-    "slug": "count-dracula-1970",
-    "stars": 1.5,
-    "title": "Count Dracula (1970)"
   }
 ]
