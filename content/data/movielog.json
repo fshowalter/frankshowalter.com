@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-05-03T00:00:00.000Z",
+    "image": "/_astro/the-crimson-cult-1968.BT3XMTgH_Z10kbCQ.png",
+    "slug": "the-crimson-cult-1968",
+    "stars": 2,
+    "title": "The Crimson Cult (1968)"
+  },
+  {
     "date": "2025-05-02T00:00:00.000Z",
     "image": "/_astro/dutchman-1966.DI4S-Lkr_20Kxky.png",
     "slug": "dutchman-1966",
@@ -33,12 +40,5 @@
     "slug": "pray-for-death-1985",
     "stars": 2,
     "title": "Pray for Death (1985)"
-  },
-  {
-    "date": "2025-03-08T00:00:00.000Z",
-    "image": "/_astro/blood-suckers-1971.CfvhvbG7_Z1sWiL3.png",
-    "slug": "blood-suckers-1971",
-    "stars": 2.5,
-    "title": "Blood Suckers (1971)"
   }
 ]
