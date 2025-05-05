@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-05-04T00:00:00.000Z",
+    "image": "/_astro/the-revengers-1972.rDZdRFaY_1zQW4v.png",
+    "slug": "the-revengers-1972",
+    "stars": 3,
+    "title": "The Revengers (1972)"
+  },
+  {
     "date": "2025-05-03T00:00:00.000Z",
     "image": "/_astro/the-crimson-cult-1968.BT3XMTgH_Z10kbCQ.png",
     "slug": "the-crimson-cult-1968",
@@ -33,12 +40,5 @@
     "slug": "heretic-2024",
     "stars": 2,
     "title": "Heretic (2024)"
-  },
-  {
-    "date": "2025-03-08T00:00:00.000Z",
-    "image": "/_astro/pray-for-death-1985.DutpuSAm_sHS6d.png",
-    "slug": "pray-for-death-1985",
-    "stars": 2,
-    "title": "Pray for Death (1985)"
   }
 ]
