@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-05-05T00:00:00.000Z",
+    "image": "/_astro/double-dynamite-1951.BXIPO3Iz_AFk6z.png",
+    "slug": "double-dynamite-1951",
+    "stars": 1,
+    "title": "Double Dynamite (1951)"
+  },
+  {
     "date": "2025-05-04T00:00:00.000Z",
     "image": "/_astro/the-revengers-1972.rDZdRFaY_1zQW4v.png",
     "slug": "the-revengers-1972",
@@ -33,12 +40,5 @@
     "slug": "casablanca-1942",
     "stars": 5,
     "title": "Casablanca (1942)"
-  },
-  {
-    "date": "2025-03-14T00:00:00.000Z",
-    "image": "/_astro/heretic-2024.LMASeJRX_ZNRodI.png",
-    "slug": "heretic-2024",
-    "stars": 2,
-    "title": "Heretic (2024)"
   }
 ]
