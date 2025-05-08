@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-05-06T00:00:00.000Z",
+    "image": "/_astro/scream-1996.C6_Mp0ja_Z2ukget.png",
+    "slug": "scream-1996",
+    "stars": 3.5,
+    "title": "Scream (1996)"
+  },
+  {
     "date": "2025-05-05T00:00:00.000Z",
     "image": "/_astro/double-dynamite-1951.BXIPO3Iz_AFk6z.png",
     "slug": "double-dynamite-1951",
@@ -33,12 +40,5 @@
     "slug": "rio-bravo-1959",
     "stars": 5,
     "title": "Rio Bravo (1959)"
-  },
-  {
-    "date": "2025-03-22T00:00:00.000Z",
-    "image": "/_astro/casablanca-1942.A7e_s1qr_Z2ciNYy.png",
-    "slug": "casablanca-1942",
-    "stars": 5,
-    "title": "Casablanca (1942)"
   }
 ]
