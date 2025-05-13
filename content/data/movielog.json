@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-05-08T00:00:00.000Z",
+    "image": "/_astro/sinners-2025.Cb6lm7da_Z26Gr4t.png",
+    "slug": "sinners-2025",
+    "stars": 4,
+    "title": "Sinners (2025)"
+  },
+  {
+    "date": "2025-05-08T00:00:00.000Z",
     "image": "/_astro/clown-in-a-cornfield-2025.BFaLRFQo_z7izC.png",
     "slug": "clown-in-a-cornfield-2025",
     "stars": 2.5,
@@ -33,12 +40,5 @@
     "slug": "the-crimson-cult-1968",
     "stars": 2,
     "title": "The Crimson Cult (1968)"
-  },
-  {
-    "date": "2025-05-02T00:00:00.000Z",
-    "image": "/_astro/dutchman-1966.DI4S-Lkr_20Kxky.png",
-    "slug": "dutchman-1966",
-    "stars": 2,
-    "title": "Dutchman (1966)"
   }
 ]
