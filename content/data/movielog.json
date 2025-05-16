@@ -1,5 +1,26 @@
 [
   {
+    "date": "2025-05-15T00:00:00.000Z",
+    "image": "/_astro/the-rite-1969.hD2AtLvJ_1A6x3A.png",
+    "slug": "the-rite-1969",
+    "stars": 3,
+    "title": "The Rite (1969)"
+  },
+  {
+    "date": "2025-05-13T00:00:00.000Z",
+    "image": "/_astro/executioners-from-shaolin-1977.wrXOJUF2_kCfQd.png",
+    "slug": "executioners-from-shaolin-1977",
+    "stars": 2.5,
+    "title": "Executioners from Shaolin (1977)"
+  },
+  {
+    "date": "2025-05-10T00:00:00.000Z",
+    "image": "/_astro/flesh-blood-1985.B3PMsT7G_1G3Ovf.png",
+    "slug": "flesh-blood-1985",
+    "stars": 3,
+    "title": "Flesh+Blood (1985)"
+  },
+  {
     "date": "2025-05-08T00:00:00.000Z",
     "image": "/_astro/sinners-2025.Cb6lm7da_Z26Gr4t.png",
     "slug": "sinners-2025",
@@ -19,26 +40,5 @@
     "slug": "scream-1996",
     "stars": 3.5,
     "title": "Scream (1996)"
-  },
-  {
-    "date": "2025-05-05T00:00:00.000Z",
-    "image": "/_astro/double-dynamite-1951.BXIPO3Iz_AFk6z.png",
-    "slug": "double-dynamite-1951",
-    "stars": 1,
-    "title": "Double Dynamite (1951)"
-  },
-  {
-    "date": "2025-05-04T00:00:00.000Z",
-    "image": "/_astro/the-revengers-1972.rDZdRFaY_1zQW4v.png",
-    "slug": "the-revengers-1972",
-    "stars": 3,
-    "title": "The Revengers (1972)"
-  },
-  {
-    "date": "2025-05-03T00:00:00.000Z",
-    "image": "/_astro/the-crimson-cult-1968.BT3XMTgH_Z10kbCQ.png",
-    "slug": "the-crimson-cult-1968",
-    "stars": 2,
-    "title": "The Crimson Cult (1968)"
   }
 ]
