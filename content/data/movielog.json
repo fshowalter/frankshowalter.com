@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-05-16T00:00:00.000Z",
+    "image": "/_astro/the-day-of-the-beast-1995.BRwY-qoq_Z2nFnfX.png",
+    "slug": "the-day-of-the-beast-1995",
+    "stars": 4,
+    "title": "The Day of the Beast (1995)"
+  },
+  {
     "date": "2025-05-15T00:00:00.000Z",
     "image": "/_astro/the-rite-1969.hD2AtLvJ_1A6x3A.png",
     "slug": "the-rite-1969",
@@ -33,12 +40,5 @@
     "slug": "clown-in-a-cornfield-2025",
     "stars": 2.5,
     "title": "Clown in a Cornfield (2025)"
-  },
-  {
-    "date": "2025-05-06T00:00:00.000Z",
-    "image": "/_astro/scream-1996.C6_Mp0ja_Z2ukget.png",
-    "slug": "scream-1996",
-    "stars": 3.5,
-    "title": "Scream (1996)"
   }
 ]
