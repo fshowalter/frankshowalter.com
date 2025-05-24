@@ -1,44 +1,44 @@
 [
   {
+    "date": "2025-05-23T00:00:00.000Z",
+    "image": "/_astro/red-spell-spells-red-1983.Bq9RuFBI_Z2tm2KJ.png",
+    "slug": "red-spell-spells-red-1983",
+    "stars": 1.5,
+    "title": "Red Spell Spells Red (1983)"
+  },
+  {
+    "date": "2025-05-22T00:00:00.000Z",
+    "image": "/_astro/the-naked-gun-from-the-files-of-police-squad-1988.qPBnEBkF_Z1dzu48.png",
+    "slug": "the-naked-gun-from-the-files-of-police-squad-1988",
+    "stars": 4.5,
+    "title": "The Naked Gun: From the Files of Police Squad! (1988)"
+  },
+  {
+    "date": "2025-05-22T00:00:00.000Z",
+    "image": "/_astro/jason-goes-to-hell-the-final-friday-1993.ygbh6NH5_Z2idwt1.png",
+    "slug": "jason-goes-to-hell-the-final-friday-1993",
+    "stars": 3,
+    "title": "Jason Goes to Hell: The Final Friday (1993)"
+  },
+  {
+    "date": "2025-05-20T00:00:00.000Z",
+    "image": "/_astro/catchfire-1990.E8Llju5w_ZqqzrT.png",
+    "slug": "catchfire-1990",
+    "stars": 3,
+    "title": "Catchfire (1990)"
+  },
+  {
+    "date": "2025-05-17T00:00:00.000Z",
+    "image": "/_astro/house-of-dracula-1945.MsCPO_vI_Z2pdF9x.png",
+    "slug": "house-of-dracula-1945",
+    "stars": 2,
+    "title": "House of Dracula (1945)"
+  },
+  {
     "date": "2025-05-17T00:00:00.000Z",
     "image": "/_astro/the-devils-advocate-1997.BIS9xDtM_1xEA1x.png",
     "slug": "the-devils-advocate-1997",
     "stars": 4,
     "title": "The Devil's Advocate (1997)"
-  },
-  {
-    "date": "2025-05-16T00:00:00.000Z",
-    "image": "/_astro/the-day-of-the-beast-1995.BRwY-qoq_Z2nFnfX.png",
-    "slug": "the-day-of-the-beast-1995",
-    "stars": 4,
-    "title": "The Day of the Beast (1995)"
-  },
-  {
-    "date": "2025-05-15T00:00:00.000Z",
-    "image": "/_astro/the-rite-1969.hD2AtLvJ_1A6x3A.png",
-    "slug": "the-rite-1969",
-    "stars": 3,
-    "title": "The Rite (1969)"
-  },
-  {
-    "date": "2025-05-13T00:00:00.000Z",
-    "image": "/_astro/executioners-from-shaolin-1977.wrXOJUF2_kCfQd.png",
-    "slug": "executioners-from-shaolin-1977",
-    "stars": 2.5,
-    "title": "Executioners from Shaolin (1977)"
-  },
-  {
-    "date": "2025-05-10T00:00:00.000Z",
-    "image": "/_astro/flesh-blood-1985.B3PMsT7G_1G3Ovf.png",
-    "slug": "flesh-blood-1985",
-    "stars": 3,
-    "title": "Flesh+Blood (1985)"
-  },
-  {
-    "date": "2025-05-08T00:00:00.000Z",
-    "image": "/_astro/sinners-2025.Cb6lm7da_Z26Gr4t.png",
-    "slug": "sinners-2025",
-    "stars": 4,
-    "title": "Sinners (2025)"
   }
 ]
