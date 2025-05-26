@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-05-24T00:00:00.000Z",
+    "image": "/_astro/the-hound-of-the-baskervilles-1959.wrIWHklU_Z3H3jq.png",
+    "slug": "the-hound-of-the-baskervilles-1959",
+    "stars": 4,
+    "title": "The Hound of the Baskervilles (1959)"
+  },
+  {
+    "date": "2025-05-24T00:00:00.000Z",
+    "image": "/_astro/prime-cut-1972.DxX5sAYy_1irrJP.png",
+    "slug": "prime-cut-1972",
+    "stars": 3.5,
+    "title": "Prime Cut (1972)"
+  },
+  {
     "date": "2025-05-23T00:00:00.000Z",
     "image": "/_astro/red-spell-spells-red-1983.Bq9RuFBI_Z2tm2KJ.png",
     "slug": "red-spell-spells-red-1983",
@@ -26,19 +40,5 @@
     "slug": "catchfire-1990",
     "stars": 3,
     "title": "Catchfire (1990)"
-  },
-  {
-    "date": "2025-05-17T00:00:00.000Z",
-    "image": "/_astro/house-of-dracula-1945.MsCPO_vI_Z2pdF9x.png",
-    "slug": "house-of-dracula-1945",
-    "stars": 2,
-    "title": "House of Dracula (1945)"
-  },
-  {
-    "date": "2025-05-17T00:00:00.000Z",
-    "image": "/_astro/the-devils-advocate-1997.BIS9xDtM_1xEA1x.png",
-    "slug": "the-devils-advocate-1997",
-    "stars": 4,
-    "title": "The Devil's Advocate (1997)"
   }
 ]
