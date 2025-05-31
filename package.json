@@ -63,7 +63,7 @@
     "postcss-html": "1.8.0",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1",
-    "prettier-plugin-tailwindcss": "0.6.11",
+    "prettier-plugin-tailwindcss": "0.6.12",
     "stylelint": "16.19.1",
     "stylelint-config-standard": "38.0.0",
     "stylelint-order": "7.0.0",
