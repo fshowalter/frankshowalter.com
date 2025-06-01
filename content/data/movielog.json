@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-05-30T00:00:00.000Z",
+    "image": "/_astro/the-las-vegas-story-1952.--B2foAz_b3fvd.png",
+    "slug": "the-las-vegas-story-1952",
+    "stars": 2.5,
+    "title": "The Las Vegas Story (1952)"
+  },
+  {
+    "date": "2025-05-28T00:00:00.000Z",
+    "image": "/_astro/return-of-the-fly-1959.BBIItu_w_Z1MWUuV.png",
+    "slug": "return-of-the-fly-1959",
+    "stars": 2,
+    "title": "Return of the Fly (1959)"
+  },
+  {
     "date": "2025-05-26T00:00:00.000Z",
     "image": "/_astro/take-one-false-step-1949.bexfNHqa_Z1vbuAD.png",
     "slug": "take-one-false-step-1949",
@@ -26,19 +40,5 @@
     "slug": "red-spell-spells-red-1983",
     "stars": 1.5,
     "title": "Red Spell Spells Red (1983)"
-  },
-  {
-    "date": "2025-05-22T00:00:00.000Z",
-    "image": "/_astro/the-naked-gun-from-the-files-of-police-squad-1988.qPBnEBkF_Z1dzu48.png",
-    "slug": "the-naked-gun-from-the-files-of-police-squad-1988",
-    "stars": 4.5,
-    "title": "The Naked Gun: From the Files of Police Squad! (1988)"
-  },
-  {
-    "date": "2025-05-22T00:00:00.000Z",
-    "image": "/_astro/jason-goes-to-hell-the-final-friday-1993.ygbh6NH5_Z2idwt1.png",
-    "slug": "jason-goes-to-hell-the-final-friday-1993",
-    "stars": 3,
-    "title": "Jason Goes to Hell: The Final Friday (1993)"
   }
 ]
