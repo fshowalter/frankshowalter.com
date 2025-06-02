@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-05-31T00:00:00.000Z",
+    "image": "/_astro/soul-of-the-sword-1978.CbQd32Mv_2mgtcu.png",
+    "slug": "soul-of-the-sword-1978",
+    "stars": 3.5,
+    "title": "Soul of the Sword (1978)"
+  },
+  {
     "date": "2025-05-30T00:00:00.000Z",
     "image": "/_astro/the-las-vegas-story-1952.--B2foAz_b3fvd.png",
     "slug": "the-las-vegas-story-1952",
@@ -33,12 +40,5 @@
     "slug": "prime-cut-1972",
     "stars": 3.5,
     "title": "Prime Cut (1972)"
-  },
-  {
-    "date": "2025-05-23T00:00:00.000Z",
-    "image": "/_astro/red-spell-spells-red-1983.Bq9RuFBI_Z2tm2KJ.png",
-    "slug": "red-spell-spells-red-1983",
-    "stars": 1.5,
-    "title": "Red Spell Spells Red (1983)"
   }
 ]
