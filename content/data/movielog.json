@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-05-31T00:00:00.000Z",
+    "image": "/_astro/and-god-said-to-cain-1970.Ax4kg-TS_1NTfpY.png",
+    "slug": "and-god-said-to-cain-1970",
+    "stars": 3,
+    "title": "And God Said to Cain... (1970)"
+  },
+  {
+    "date": "2025-05-31T00:00:00.000Z",
     "image": "/_astro/soul-of-the-sword-1978.CbQd32Mv_2mgtcu.png",
     "slug": "soul-of-the-sword-1978",
     "stars": 3.5,
@@ -33,12 +40,5 @@
     "slug": "the-hound-of-the-baskervilles-1959",
     "stars": 4,
     "title": "The Hound of the Baskervilles (1959)"
-  },
-  {
-    "date": "2025-05-24T00:00:00.000Z",
-    "image": "/_astro/prime-cut-1972.DxX5sAYy_1irrJP.png",
-    "slug": "prime-cut-1972",
-    "stars": 3.5,
-    "title": "Prime Cut (1972)"
   }
 ]
