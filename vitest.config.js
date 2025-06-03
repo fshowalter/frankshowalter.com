@@ -8,9 +8,7 @@ export default getViteConfig({
       provider: "istanbul",
     },
     globals: true, // needed for testing-library teardown
-    // Vitest configuration options
-    setupFiles: ["setupTests.ts"],
-    workspace: [
+    projects: [
       {
         extends: true,
         test: {
@@ -20,5 +18,7 @@ export default getViteConfig({
         },
       },
     ],
+    // Vitest configuration options
+    setupFiles: ["setupTests.ts"],
   },
 });
