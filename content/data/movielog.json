@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-06-07T00:00:00.000Z",
+    "image": "/_astro/tank-1984.NjXrGN3Y_ASq4a.png",
+    "slug": "tank-1984",
+    "stars": 3.5,
+    "title": "Tank (1984)"
+  },
+  {
     "date": "2025-06-05T00:00:00.000Z",
     "image": "/_astro/winterbeast-1992.6p1Gj8qm_Z18GMfk.png",
     "slug": "winterbeast-1992",
@@ -33,12 +40,5 @@
     "slug": "soul-of-the-sword-1978",
     "stars": 3.5,
     "title": "Soul of the Sword (1978)"
-  },
-  {
-    "date": "2025-05-30T00:00:00.000Z",
-    "image": "/_astro/the-las-vegas-story-1952.--B2foAz_b3fvd.png",
-    "slug": "the-las-vegas-story-1952",
-    "stars": 2.5,
-    "title": "The Las Vegas Story (1952)"
   }
 ]
