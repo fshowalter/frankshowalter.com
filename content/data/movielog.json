@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-06-08T00:00:00.000Z",
+    "image": "/_astro/opera-1987.BC-WJm54_vV4yi.png",
+    "slug": "opera-1987",
+    "stars": 2,
+    "title": "Opera (1987)"
+  },
+  {
     "date": "2025-06-07T00:00:00.000Z",
     "image": "/_astro/tank-1984.NjXrGN3Y_ASq4a.png",
     "slug": "tank-1984",
@@ -33,12 +40,5 @@
     "slug": "and-god-said-to-cain-1970",
     "stars": 3,
     "title": "And God Said to Cain... (1970)"
-  },
-  {
-    "date": "2025-05-31T00:00:00.000Z",
-    "image": "/_astro/soul-of-the-sword-1978.CbQd32Mv_2mgtcu.png",
-    "slug": "soul-of-the-sword-1978",
-    "stars": 3.5,
-    "title": "Soul of the Sword (1978)"
   }
 ]
