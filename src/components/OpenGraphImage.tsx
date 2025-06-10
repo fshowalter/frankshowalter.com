@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 export function OpenGraphImage({
-  sectionHead = "Frank's Book Log",
+  sectionHead = "Frank Showalter",
   title,
 }: {
   sectionHead?: string;
