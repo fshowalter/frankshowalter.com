@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-06-09T00:00:00.000Z",
+    "image": "/_astro/massacre-time-1966.C2MvRMoT_ZvbKxH.png",
+    "slug": "massacre-time-1966",
+    "stars": 3,
+    "title": "Massacre Time (1966)"
+  },
+  {
     "date": "2025-06-08T00:00:00.000Z",
     "image": "/_astro/opera-1987.BC-WJm54_vV4yi.png",
     "slug": "opera-1987",
@@ -33,12 +40,5 @@
     "slug": "escape-from-alcatraz-1979",
     "stars": 4,
     "title": "Escape from Alcatraz (1979)"
-  },
-  {
-    "date": "2025-05-31T00:00:00.000Z",
-    "image": "/_astro/and-god-said-to-cain-1970.Ax4kg-TS_1NTfpY.png",
-    "slug": "and-god-said-to-cain-1970",
-    "stars": 3,
-    "title": "And God Said to Cain... (1970)"
   }
 ]
