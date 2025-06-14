@@ -129,15 +129,13 @@ function UpdateListItem({
         href={`${siteUrl}/reviews/${value.slug}/`}
         rel="canonical"
       >
-        <div className="bg-[rgb(10_10_10)]">
-          <UpdateImage
-            decoding="async"
-            imageProps={value.imageProps}
-            {...ImageConfig}
-            alt={value.title}
-            loading={eagerLoadCoverImage ? "eager" : "lazy"}
-          />
-        </div>
+        <UpdateImage
+          decoding="async"
+          imageProps={value.imageProps}
+          {...ImageConfig}
+          alt={value.title}
+          loading={eagerLoadCoverImage ? "eager" : "lazy"}
+        />
       </a>
       <div className="flex w-full grow flex-wrap items-center px-1 py-2 tablet:p-2">
         <div>
