@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-06-13T00:00:00.000Z",
+    "image": "/_astro/jason-x-2001.DwHx-IlW_Z16AEmf.png",
+    "slug": "jason-x-2001",
+    "stars": 4,
+    "title": "Jason X (2001)"
+  },
+  {
     "date": "2025-06-12T00:00:00.000Z",
     "image": "/_astro/ebola-syndrome-1996.BiF26yFW_1TtJUo.png",
     "slug": "ebola-syndrome-1996",
@@ -33,12 +40,5 @@
     "slug": "tank-1984",
     "stars": 3.5,
     "title": "Tank (1984)"
-  },
-  {
-    "date": "2025-06-05T00:00:00.000Z",
-    "image": "/_astro/winterbeast-1992.6p1Gj8qm_Z18GMfk.png",
-    "slug": "winterbeast-1992",
-    "stars": 1.5,
-    "title": "Winterbeast (1992)"
   }
 ]
