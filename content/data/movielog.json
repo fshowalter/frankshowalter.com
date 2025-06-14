@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-06-12T00:00:00.000Z",
+    "image": "/_astro/ebola-syndrome-1996.BiF26yFW_1TtJUo.png",
+    "slug": "ebola-syndrome-1996",
+    "stars": 3.5,
+    "title": "Ebola Syndrome (1996)"
+  },
+  {
     "date": "2025-06-10T00:00:00.000Z",
     "image": "/_astro/hands-of-the-ripper-1971.G2BX9dPd_BmXOa.png",
     "slug": "hands-of-the-ripper-1971",
@@ -33,12 +40,5 @@
     "slug": "winterbeast-1992",
     "stars": 1.5,
     "title": "Winterbeast (1992)"
-  },
-  {
-    "date": "2025-06-05T00:00:00.000Z",
-    "image": "/_astro/oceans-eleven-1960.CMFz01EE_lNKRC.png",
-    "slug": "oceans-eleven-1960",
-    "stars": 4.5,
-    "title": "Ocean's Eleven (1960)"
   }
 ]
