@@ -31,8 +31,20 @@ export function LatestUpdates({
   movielogUpdates,
 }: Props): JSX.Element {
   return (
-    <nav className="mx-auto w-full max-w-[888px] bg-subtle pb-20 tablet:px-container desktop:max-w-(--breakpoint-max)">
-      <SubHeading as="h2" className="px-container tablet:px-0">
+    <nav
+      className={`
+        mx-auto w-full max-w-[888px] bg-subtle pb-20
+        tablet:px-container
+        desktop:max-w-(--breakpoint-max)
+      `}
+    >
+      <SubHeading
+        as="h2"
+        className={`
+          px-container
+          tablet:px-0
+        `}
+      >
         Latest{" "}
         <a className="text-accent" href="https://www.franksmovielog.com">
           Movie Reviews
@@ -50,7 +62,13 @@ export function LatestUpdates({
           );
         })}
       </UpdateList>
-      <SubHeading as="h2" className="px-container tablet:px-0">
+      <SubHeading
+        as="h2"
+        className={`
+          px-container
+          tablet:px-0
+        `}
+      >
         Latest{" "}
         <a className="text-accent" href="https://www.franksbooklog.com">
           Book Reviews
@@ -106,7 +124,13 @@ function UpdateImage({
 
 function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol className="flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%] tablet:gap-x-[3%] tablet:px-0 desktop:justify-between desktop:gap-x-[2%]">
+    <ol
+      className={`
+        flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%]
+        tablet:gap-x-[3%] tablet:px-0
+        desktop:justify-between desktop:gap-x-[2%]
+      `}
+    >
       {children}
     </ol>
   );
@@ -122,10 +146,25 @@ function UpdateListItem({
   value: ListItemValue;
 }): JSX.Element {
   return (
-    <li className="relative flex w-[48%] max-w-[248px] flex-col items-center text-subtle has-[a:hover]:bg-default has-[a:hover]:shadow-hover min-[600px]:w-[30.66666667%] tablet:w-[31.33333333%] desktop:w-[14.16666667%]">
+    <li
+      className={`
+        relative flex w-[48%] max-w-[248px] flex-col items-center text-subtle
+        has-[a:hover]:bg-default has-[a:hover]:shadow-hover
+        min-[600px]:w-[30.66666667%]
+        tablet:w-[31.33333333%]
+        desktop:w-[14.16666667%]
+      `}
+    >
       <a
         aria-label={value.title}
-        className="inline-block text-accent decoration-2 underline-offset-4 before:absolute before:inset-x-0 before:top-0 before:z-10 before:aspect-cover before:bg-default before:opacity-15 after:absolute after:left-0 after:top-0 after:size-full after:opacity-0 hover:before:opacity-0"
+        className={`
+          inline-block text-accent decoration-2 underline-offset-4
+          before:absolute before:inset-x-0 before:top-0 before:z-10
+          before:aspect-cover before:bg-default before:opacity-15
+          after:absolute after:top-0 after:left-0 after:size-full
+          after:opacity-0
+          hover:before:opacity-0
+        `}
         href={`${siteUrl}/reviews/${value.slug}/`}
         rel="canonical"
       >
@@ -137,7 +176,12 @@ function UpdateListItem({
           loading={eagerLoadCoverImage ? "eager" : "lazy"}
         />
       </a>
-      <div className="flex w-full grow flex-wrap items-center px-1 py-2 tablet:p-2">
+      <div
+        className={`
+          flex w-full grow flex-wrap items-center px-1 py-2
+          tablet:p-2
+        `}
+      >
         <div>
           <Grade height={18} value={value.stars} />
         </div>

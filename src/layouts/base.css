@@ -1,42 +1,32 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @theme {
+  --aspect-cover: 1 / 1.5;
   --background-color-*: initial;
   --background-color-canvas: var(--bg-canvas);
   --background-color-default: var(--bg-default);
   --background-color-footer: var(--bg-footer);
   --background-color-subtle: var(--bg-subtle);
-
   --border-color-*: initial;
   --border-color-default: var(--border-default);
-
+  --breakpoint-*: initial;
+  --breakpoint-desktop: 1280px;
+  --breakpoint-max: 1696px;
+  --breakpoint-tablet: 768px;
   --color-*: initial;
   --color-accent: var(--fg-accent);
   --color-default: var(--fg-default);
   --color-inherit: inherit;
   --color-inverse: var(--fg-inverse);
   --color-subtle: var(--fg-subtle);
-
-  --tracking-*: initial;
-  --tracking-wide: 0.8px;
-
-  --breakpoint-*: initial;
-  --breakpoint-desktop: 1280px;
-  --breakpoint-max: 1696px;
-  --breakpoint-tablet: 768px;
-
-  --aspect-cover: 1 / 1.5;
-
-  --shadow-hover: 0 0 1px 1px var(--bg-canvas);
-
+  --container-unset: unset;
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
-
-  --text-2_5xl: 1.625rem;
-
-  --container-unset: unset;
-
   --padding-container: var(--container-padding);
+  --shadow-hover: 0 0 1px 1px var(--bg-canvas);
+  --text-2_5xl: 1.625rem;
+  --tracking-*: initial;
+  --tracking-wide: 0.8px;
 }
 
 /*
@@ -69,8 +59,8 @@
     --fg-default: rgb(0 0 0 / 75%);
     --fg-inverse: #fff;
     --fg-subtle: rgb(0 0 0 / 60%);
-    --font-sans: 'ArgentumSans';
-    --font-serif: 'FrankRuhlLibre';
+    --font-sans: "ArgentumSans";
+    --font-serif: "FrankRuhlLibre";
     --image-filter: initial;
   }
 

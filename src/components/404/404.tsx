@@ -16,7 +16,7 @@ export function Content({
   title,
 }: Props): JSX.Element {
   return (
-    <Layout className="bg-subtle pb-8">
+    <Layout className="pb-8 bg-subtle">
       <SolidBackdrop
         deck={deck}
         title={title}
