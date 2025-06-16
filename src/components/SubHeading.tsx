@@ -11,7 +11,11 @@ export function SubHeading({
 
   return (
     <Component
-      className={`py-10 font-sans text-xs font-semibold uppercase tracking-wide text-subtle ${className}`}
+      className={`
+        py-10 font-sans text-xs font-semibold tracking-wide text-subtle
+        uppercase
+        ${className}
+      `}
     >
       {children}
     </Component>

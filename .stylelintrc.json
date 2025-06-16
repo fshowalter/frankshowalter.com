@@ -13,24 +13,25 @@
       ["all"],
       { "unspecified": "bottomAlphabetical" }
     ],
+    "import-notation": null,
+    "custom-property-pattern": null,
     "at-rule-no-unknown": [
       true,
       {
         "ignoreAtRules": [
-          "tailwind",
-          "apply",
-          "layer",
-          "config",
-          "variants",
-          "responsive",
-          "screen"
+          "theme",
+          "source",
+          "utility",
+          "variant",
+          "custom-variant",
+          "plugin"
         ]
       }
     ],
     "media-query-no-invalid": [
       true,
       {
-        "ignoreFunctions": ["screen"]
+        "ignoreFunctions": ["theme"]
       }
     ],
     "function-no-unknown": [
