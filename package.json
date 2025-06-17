@@ -30,7 +30,7 @@
     "@astrojs/sitemap": "3.4.1",
     "@playform/inline": "0.1.2",
     "@tailwindcss/vite": "4.1.10",
-    "astro": "5.9.3",
+    "astro": "5.9.4",
     "astro-compressor": "1.0.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
