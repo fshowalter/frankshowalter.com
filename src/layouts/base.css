@@ -29,25 +29,7 @@
   --tracking-wide: 0.8px;
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
-}
-
-@layer utilities {
   :root {
     --bg-canvas: #f4eedf;
     --bg-default: #fff;
@@ -62,6 +44,30 @@
     --font-sans: "ArgentumSans";
     --font-serif: "FrankRuhlLibre";
     --image-filter: initial;
+
+    text-size-adjust: none;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    background-color: var(--bg-canvas);
+    color: var(--fg-default);
+    font-family:
+      FrankRuhlLibre, "Iowan Old Style", Georgia, Cambria, "Times New Roman",
+      Times, serif;
+    font-feature-settings: "kern", "liga", "clig", "calt", "ss06", "lnum";
+    font-kerning: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: normal;
+  }
+
+  img {
+    filter: var(--image-filter);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -89,34 +95,6 @@
     :root {
       --container-padding: 80px;
     }
-  }
-}
-
-@layer base {
-  html,
-  body {
-    height: 100%;
-  }
-
-  :root {
-    text-size-adjust: none;
-  }
-
-  body {
-    background-color: var(--bg-canvas);
-    color: var(--fg-default);
-    font-family:
-      FrankRuhlLibre, "Iowan Old Style", Georgia, Cambria, "Times New Roman",
-      Times, serif;
-    font-feature-settings: "kern", "liga", "clig", "calt", "ss06", "lnum";
-    font-kerning: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-weight: normal;
-  }
-
-  img {
-    filter: var(--image-filter);
   }
 
   @font-face {
