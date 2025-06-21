@@ -26,6 +26,9 @@ function contentHmr() {
 
 // https://astro.build/config
 export default defineConfig({
+  build: {
+    inlineStylesheets: "always",
+  },
   devToolbar: {
     enabled: false,
   },
