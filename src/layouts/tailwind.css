@@ -48,11 +48,6 @@
     text-size-adjust: none;
   }
 
-  html,
-  body {
-    height: 100%;
-  }
-
   body {
     background-color: var(--bg-canvas);
     color: var(--fg-default);

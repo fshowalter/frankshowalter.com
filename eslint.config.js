@@ -70,7 +70,7 @@ export default tsEslint.config(
     settings: {
       "better-tailwindcss": {
         // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
-        entryPoint: "src/layouts/base.css",
+        entryPoint: "src/layouts/tailwind.css",
       },
     },
   },
@@ -90,7 +90,7 @@ export default tsEslint.config(
     settings: {
       "better-tailwindcss": {
         // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
-        entryPoint: "src/layouts/base.css",
+        entryPoint: "src/layouts/tailwind.css",
       },
       react: {
         version: "detect",
