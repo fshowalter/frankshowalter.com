@@ -5,7 +5,7 @@ export function normalizeSrcs(result: string) {
   );
 
   return normalizedScriptSrcs.replaceAll(
-    /(src: url\("\/_astro\/fonts\/)(.*)(.woff2"\) format\("woff2"\);)/g,
-    "$1test-hash$3",
+    /("\/_astro\/fonts\/)[a-f0-9]+(.woff2")/g,
+    "$1test-hash$2",
   );
 }
