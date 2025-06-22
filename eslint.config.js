@@ -18,7 +18,7 @@ export default tsEslint.config(
     ignores: ["dist/", ".astro/", "coverage/", "content/", "public/"],
   },
   eslint.configs.recommended,
-  eslintPluginUnicorn.configs["flat/recommended"],
+  eslintPluginUnicorn.configs.recommended,
   perfectionist.configs["recommended-natural"],
   ...eslintPluginAstro.configs.recommended,
   {
