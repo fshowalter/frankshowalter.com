@@ -2,29 +2,39 @@
 
 @theme {
   --aspect-cover: 1 / 1.5;
+
   --background-color-*: initial;
   --background-color-canvas: var(--bg-canvas);
   --background-color-default: var(--bg-default);
   --background-color-footer: var(--bg-footer);
   --background-color-subtle: var(--bg-subtle);
+
   --border-color-*: initial;
   --border-color-default: var(--border-default);
+
   --breakpoint-*: initial;
   --breakpoint-desktop: 1280px;
   --breakpoint-max: 1696px;
   --breakpoint-tablet: 768px;
+
   --color-*: initial;
   --color-accent: var(--fg-accent);
   --color-default: var(--fg-default);
   --color-inherit: inherit;
   --color-inverse: var(--fg-inverse);
   --color-subtle: var(--fg-subtle);
+
   --container-unset: unset;
+
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
+
   --padding-container: var(--container-padding);
+
   --shadow-hover: 0 0 1px 1px var(--bg-canvas);
+
   --text-2_5xl: 1.625rem;
+
   --tracking-*: initial;
   --tracking-wide: 0.8px;
 }
@@ -41,8 +51,8 @@
     --fg-default: rgb(0 0 0 / 75%);
     --fg-inverse: #fff;
     --fg-subtle: rgb(0 0 0 / 60%);
-    --font-sans: "ArgentumSans";
-    --font-serif: "FrankRuhlLibre";
+    --font-sans: var(--font-argentum-sans);
+    --font-serif: var(--font-frank-ruhl-libre);
     --image-filter: initial;
 
     text-size-adjust: none;
@@ -52,8 +62,8 @@
     background-color: var(--bg-canvas);
     color: var(--fg-default);
     font-family:
-      FrankRuhlLibre, "Iowan Old Style", Georgia, Cambria, "Times New Roman",
-      Times, serif;
+      var(--font-frank-ruhl-libre), "Iowan Old Style", Georgia, Cambria,
+      "Times New Roman", Times, serif;
     font-feature-settings: "kern", "liga", "clig", "calt", "ss06", "lnum";
     font-kerning: normal;
     -webkit-font-smoothing: antialiased;
@@ -90,50 +100,5 @@
     :root {
       --container-padding: 80px;
     }
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: 600;
-    src: url("/fonts/ArgentumSans/ArgentumSans-SemiBold.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: 500;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Medium.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: 300;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Light.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: ArgentumSans;
-    font-style: normal;
-    font-weight: normal;
-    src: url("/fonts/ArgentumSans/ArgentumSans-Regular.woff2") format("woff2");
-  }
-
-  @font-face {
-    font-display: swap;
-    font-family: FrankRuhlLibre;
-    font-style: normal;
-    font-weight: 300 900;
-    src: url("/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre_latin_300 900_normal.woff2")
-      format("woff2");
-    unicode-range:
-      U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
-      U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
-      U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 }

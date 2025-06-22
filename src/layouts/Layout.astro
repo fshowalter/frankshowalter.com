@@ -1,5 +1,6 @@
 ---
 import "./tailwind.css";
+import { Font } from "astro:assets";
 
 type Meta = {
   description: string;
@@ -63,6 +64,8 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
         </>
       )
     }
+    <Font cssVariable="--font-argentum-sans" preload />
+    <Font cssVariable="--font-frank-ruhl-libre" preload />
     <title>{pageTitle}</title>
   </head>
   <body class="h-full">

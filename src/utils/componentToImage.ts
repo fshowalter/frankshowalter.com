@@ -15,21 +15,21 @@ async function componentToSvg(component: JSX.Element) {
     fonts: [
       {
         data: await fs.readFile(
-          "./public/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre-Regular.ttf",
+          "./src/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre-Regular.ttf",
         ),
         name: "FrankRuhlLibre",
         weight: 400,
       },
       {
         data: await fs.readFile(
-          "./public/fonts/ArgentumSans/ArgentumSans-Regular.ttf",
+          "./src/fonts/ArgentumSans/ArgentumSans-Regular.ttf",
         ),
         name: "ArgentumSans",
         weight: 400,
       },
       {
         data: await fs.readFile(
-          "./public/fonts/ArgentumSans/ArgentumSans-SemiBold.ttf",
+          "./src/fonts/ArgentumSans/ArgentumSans-SemiBold.ttf",
         ),
         name: "ArgentumSans",
         weight: 600,
