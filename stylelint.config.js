@@ -7,16 +7,10 @@ export default {
     "at-rule-no-unknown": [
       true,
       {
-        ignoreAtRules: [
-          "theme",
-          "source",
-          "utility",
-          "variant",
-          "custom-variant",
-          "plugin",
-        ],
+        ignoreAtRules: ["theme", "layer", "utility", "component"],
       },
     ],
+    "custom-property-empty-line-before": null,
     "custom-property-pattern": null,
     "function-no-unknown": [
       true,
@@ -31,6 +25,7 @@ export default {
         ignoreFunctions: ["theme"],
       },
     ],
+    "no-descending-specificity": null,
     "order/order": [["custom-properties", "declarations", "rules", "at-rules"]],
     "order/properties-order": [["all"], { unspecified: "bottomAlphabetical" }],
     "selector-class-pattern": null,

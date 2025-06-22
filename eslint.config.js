@@ -2,6 +2,10 @@ import eslint from "@eslint/js";
 import vitest from "@vitest/eslint-plugin";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
+import {
+  getDefaultAttributes,
+  getDefaultCallees,
+} from "eslint-plugin-better-tailwindcss/api/defaults";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
@@ -14,7 +18,7 @@ export default tsEslint.config(
     ignores: ["dist/", ".astro/", "coverage/", "content/", "public/"],
   },
   eslint.configs.recommended,
-  eslintPluginUnicorn.configs["flat/recommended"],
+  eslintPluginUnicorn.configs.recommended,
   perfectionist.configs["recommended-natural"],
   ...eslintPluginAstro.configs.recommended,
   {
@@ -25,7 +29,7 @@ export default tsEslint.config(
     },
   },
   {
-    files: ["*.[m]js"],
+    files: ["*.js"],
     languageOptions: {
       globals: {
         ...globals.node,
@@ -89,7 +93,8 @@ export default tsEslint.config(
     },
     settings: {
       "better-tailwindcss": {
-        // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
+        attributes: [...getDefaultAttributes(), ".*Classes"],
+        callees: [...getDefaultCallees(), "ccn"],
         entryPoint: "src/layouts/tailwind.css",
       },
       react: {
