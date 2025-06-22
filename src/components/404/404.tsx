@@ -20,11 +20,7 @@ export function Content({
       <SolidBackdrop
         deck={deck}
         title={title}
-        titleClasses={`
-          font-sans text-2.5xl font-semibold uppercase
-          tablet:text-5xl
-          desktop:text-7xl
-        `}
+        titleStyle="text-2.5xl tablet:text-5xl font-bold uppercase tracking-widest desktop:text-7xl font-sans"
       />
       <LatestUpdates
         booklogUpdates={booklogUpdates}
