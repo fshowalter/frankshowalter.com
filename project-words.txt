@@ -1,13 +1,9 @@
 # Project Words - DO NOT TOUCH - This is updated through CI
 booklog
 Booklog
-callees
-Callees
 frankshowalter
 fshowalter
 movielog
 Movielog
-ruhl
 Ruhl
 Showalter
-Srcs

@@ -1,15 +1,15 @@
 export function SolidBackdrop({
   deck,
   title,
-  titleClasses,
+  titleStyle,
 }: {
   deck: React.ReactNode;
   title: string;
-  titleClasses?: string;
+  titleStyle?: string;
 }) {
   return (
     <Wrapper>
-      <Title className={titleClasses} value={title} />
+      <Title className={titleStyle} value={title} />
       <Deck value={deck} />
     </Wrapper>
   );
