@@ -2,12 +2,6 @@
 /** @type {import('stylelint').Config} */
 export default {
   extends: ["stylelint-config-standard"],
-  overrides: [
-    {
-      customSyntax: "postcss-html",
-      files: [".astro", "**/*.astro"],
-    },
-  ],
   plugins: ["stylelint-order"],
   rules: {
     "at-rule-no-unknown": [
