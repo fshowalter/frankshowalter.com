@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-06-14T00:00:00.000Z",
+    "image": "/_astro/pals-of-the-saddle-1938.C5N3tk1g_ysymG.png",
+    "slug": "pals-of-the-saddle-1938",
+    "stars": 2.5,
+    "title": "Pals of the Saddle (1938)"
+  },
+  {
     "date": "2025-06-13T00:00:00.000Z",
     "image": "/_astro/jason-x-2001.DwHx-IlW_Z16AEmf.png",
     "slug": "jason-x-2001",
@@ -33,12 +40,5 @@
     "slug": "opera-1987",
     "stars": 2,
     "title": "Opera (1987)"
-  },
-  {
-    "date": "2025-06-07T00:00:00.000Z",
-    "image": "/_astro/tank-1984.NjXrGN3Y_ASq4a.png",
-    "slug": "tank-1984",
-    "stars": 3.5,
-    "title": "Tank (1984)"
   }
 ]
