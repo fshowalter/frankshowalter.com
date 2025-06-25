@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-06-15T00:00:00.000Z",
+    "image": "/_astro/only-angels-have-wings-1939.C_h-VgHc_Xd4jM.png",
+    "slug": "only-angels-have-wings-1939",
+    "stars": 4.5,
+    "title": "Only Angels Have Wings (1939)"
+  },
+  {
     "date": "2025-06-14T00:00:00.000Z",
     "image": "/_astro/pals-of-the-saddle-1938.C5N3tk1g_ysymG.png",
     "slug": "pals-of-the-saddle-1938",
@@ -33,12 +40,5 @@
     "slug": "massacre-time-1966",
     "stars": 3,
     "title": "Massacre Time (1966)"
-  },
-  {
-    "date": "2025-06-08T00:00:00.000Z",
-    "image": "/_astro/opera-1987.BC-WJm54_vV4yi.png",
-    "slug": "opera-1987",
-    "stars": 2,
-    "title": "Opera (1987)"
   }
 ]
