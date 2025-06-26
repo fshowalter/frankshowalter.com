@@ -126,9 +126,9 @@ function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <ol
       className={`
-        flex flex-wrap justify-center gap-x-[4%] gap-y-[6vw] px-[4%]
-        tablet:gap-x-[3%] tablet:px-0
-        desktop:justify-between desktop:gap-x-[2%]
+        flex flex-wrap justify-center gap-x-[4%] gap-y-[3vw] px-[4%]
+        tablet:-mx-4 tablet:gap-x-[3%] tablet:px-0
+        desktop:flex-nowrap desktop:justify-between desktop:gap-x-0
       `}
     >
       {children}
@@ -148,11 +148,11 @@ function UpdateListItem({
   return (
     <li
       className={`
-        relative flex w-[48%] max-w-[248px] flex-col items-center text-subtle
-        has-[a:hover]:bg-default has-[a:hover]:shadow-hover
+        relative flex w-[48%] max-w-[280px] flex-col items-center text-subtle
+        has-[a:hover]:bg-canvas has-[a:hover]:shadow-hover
         min-[600px]:w-[30.66666667%]
-        tablet:w-[31.33333333%]
-        desktop:w-[14.16666667%]
+        tablet:w-[31.33333333%] tablet:px-4 tablet:py-4
+        desktop:w-full
       `}
     >
       <a
@@ -179,13 +179,22 @@ function UpdateListItem({
       <div
         className={`
           flex w-full grow flex-wrap items-center px-1 py-2
-          tablet:p-2
+          tablet:px-px tablet:py-3
         `}
       >
         <div>
-          <Grade height={18} value={value.stars} />
+          <Grade
+            className="tablet:h-5 tablet:w-auto"
+            height={18}
+            value={value.stars}
+          />
         </div>
-        <div className="ml-auto font-sans text-xs font-light">
+        <div
+          className={`
+            ml-auto font-sans text-xs font-light
+            tablet:text-sm
+          `}
+        >
           {formatDate(value.date)}
         </div>
       </div>
