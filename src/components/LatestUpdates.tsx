@@ -135,8 +135,8 @@ function UpdateListItem({
   return (
     <li
       className={`
-        group relative flex w-[50%] max-w-[280px] flex-col items-center px-2
-        py-2 text-subtle
+        relative flex w-[50%] max-w-[280px] flex-col items-center px-2 py-2
+        text-subtle
         has-[a:hover]:bg-canvas has-[a:hover]:shadow-hover
         min-[600px]:w-[33%]
         min-[900px]:px-4 min-[900px]:py-4
@@ -159,11 +159,11 @@ function UpdateListItem({
       </a>
       <div
         className={`
-          flex w-full grow flex-wrap items-center px-1 py-2
+          flex w-full grow flex-wrap items-center gap-x-2 px-1 py-2
           tablet:px-px tablet:py-3
         `}
       >
-        <div>
+        <div className="mr-auto">
           <Grade
             className="tablet:h-5 tablet:w-auto"
             height={18}
@@ -172,12 +172,12 @@ function UpdateListItem({
         </div>
         <div
           className={`
-            ml-auto font-sans text-xs font-light
-            group-hover:text-accent
+            pl-1 font-sans text-xs leading-6 font-light
             tablet:text-sm
           `}
         >
-          {formatDate(value.date)}
+          {" "}
+          on {formatDate(value.date)}
         </div>
       </div>
     </li>
