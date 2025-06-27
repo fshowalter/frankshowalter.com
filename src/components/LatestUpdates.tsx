@@ -39,7 +39,7 @@ export function LatestUpdates({
     >
       <SubHeading as="h2">
         Latest{" "}
-        <a className="text-accent" href="https://www.franksmovielog.com">
+        <a className="text-[#579]" href="https://www.franksmovielog.com">
           Movie Reviews
         </a>
       </SubHeading>
@@ -57,7 +57,7 @@ export function LatestUpdates({
       </UpdateList>
       <SubHeading as="h2">
         Latest{" "}
-        <a className="text-accent" href="https://www.franksbooklog.com">
+        <a className="text-[#579]" href="https://www.franksbooklog.com">
           Book Reviews
         </a>
       </SubHeading>
