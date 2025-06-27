@@ -33,18 +33,11 @@ export function LatestUpdates({
   return (
     <nav
       className={`
-        mx-auto w-full max-w-[888px] pb-20
-        min-[600px]:px-container
+        mx-auto w-full max-w-[888px] px-container pb-20
         desktop:max-w-(--breakpoint-max)
       `}
     >
-      <SubHeading
-        as="h2"
-        className={`
-          px-container
-          min-[600px]:px-0
-        `}
-      >
+      <SubHeading as="h2">
         Latest{" "}
         <a className="text-accent" href="https://www.franksmovielog.com">
           Movie Reviews
@@ -62,13 +55,7 @@ export function LatestUpdates({
           );
         })}
       </UpdateList>
-      <SubHeading
-        as="h2"
-        className={`
-          px-container
-          min-[600px]:px-0
-        `}
-      >
+      <SubHeading as="h2">
         Latest{" "}
         <a className="text-accent" href="https://www.franksbooklog.com">
           Book Reviews
@@ -126,8 +113,8 @@ function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <ol
       className={`
-        -mx-4 flex flex-wrap justify-center gap-y-2 px-[4%]
-        min-[600px]:gap-x-0 min-[600px]:px-0
+        -mx-2 flex flex-wrap justify-center gap-x-0
+        min-[900px]:-mx-4
         desktop:flex-nowrap desktop:justify-between
       `}
     >
@@ -148,10 +135,11 @@ function UpdateListItem({
   return (
     <li
       className={`
-        group relative flex w-[50%] max-w-[280px] flex-col items-center px-4
-        py-4 text-subtle
+        group relative flex w-[50%] max-w-[280px] flex-col items-center px-2
+        py-2 text-subtle
         has-[a:hover]:bg-canvas has-[a:hover]:shadow-hover
         min-[600px]:w-[33%]
+        min-[900px]:px-4 min-[900px]:py-4
         desktop:w-full
       `}
     >
