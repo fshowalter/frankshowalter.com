@@ -33,7 +33,7 @@ export function LatestUpdates({
   return (
     <nav
       className={`
-        mx-auto w-full max-w-[888px] bg-subtle pb-20
+        mx-auto w-full max-w-[888px] pb-20
         tablet:px-container
         desktop:max-w-(--breakpoint-max)
       `}
@@ -148,7 +148,8 @@ function UpdateListItem({
   return (
     <li
       className={`
-        relative flex w-[48%] max-w-[280px] flex-col items-center text-subtle
+        group relative flex w-[48%] max-w-[280px] flex-col items-center px-4
+        py-4 text-subtle
         has-[a:hover]:bg-canvas has-[a:hover]:shadow-hover
         min-[600px]:w-[30.66666667%]
         tablet:w-[31.33333333%] tablet:px-4 tablet:py-4
@@ -157,14 +158,7 @@ function UpdateListItem({
     >
       <a
         aria-label={value.title}
-        className={`
-          inline-block text-accent decoration-2 underline-offset-4
-          before:absolute before:inset-x-0 before:top-0 before:z-10
-          before:aspect-cover before:bg-default before:opacity-15
-          after:absolute after:top-0 after:left-0 after:size-full
-          after:opacity-0
-          hover:before:opacity-0
-        `}
+        className={``}
         href={`${siteUrl}/reviews/${value.slug}/`}
         rel="canonical"
       >
@@ -192,6 +186,7 @@ function UpdateListItem({
         <div
           className={`
             ml-auto font-sans text-xs font-light
+            group-hover:text-accent
             tablet:text-sm
           `}
         >
