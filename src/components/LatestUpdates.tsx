@@ -34,7 +34,7 @@ export function LatestUpdates({
     <nav
       className={`
         mx-auto w-full max-w-[888px] pb-20
-        tablet:px-container
+        min-[600px]:px-container
         desktop:max-w-(--breakpoint-max)
       `}
     >
@@ -42,7 +42,7 @@ export function LatestUpdates({
         as="h2"
         className={`
           px-container
-          tablet:px-0
+          min-[600px]:px-0
         `}
       >
         Latest{" "}
@@ -66,7 +66,7 @@ export function LatestUpdates({
         as="h2"
         className={`
           px-container
-          tablet:px-0
+          min-[600px]:px-0
         `}
       >
         Latest{" "}
@@ -126,9 +126,9 @@ function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <ol
       className={`
-        flex flex-wrap justify-center gap-x-[4%] gap-y-[3vw] px-[4%]
-        tablet:-mx-4 tablet:gap-x-[3%] tablet:px-0
-        desktop:flex-nowrap desktop:justify-between desktop:gap-x-0
+        -mx-4 flex flex-wrap justify-center gap-y-2 px-[4%]
+        min-[600px]:gap-x-0 min-[600px]:px-0
+        desktop:flex-nowrap desktop:justify-between
       `}
     >
       {children}
@@ -148,11 +148,10 @@ function UpdateListItem({
   return (
     <li
       className={`
-        group relative flex w-[48%] max-w-[280px] flex-col items-center px-4
+        group relative flex w-[50%] max-w-[280px] flex-col items-center px-4
         py-4 text-subtle
         has-[a:hover]:bg-canvas has-[a:hover]:shadow-hover
-        min-[600px]:w-[30.66666667%]
-        tablet:w-[31.33333333%] tablet:px-4 tablet:py-4
+        min-[600px]:w-[33%]
         desktop:w-full
       `}
     >
