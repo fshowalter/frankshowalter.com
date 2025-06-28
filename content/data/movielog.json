@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-06-15T00:00:00.000Z",
+    "image": "/_astro/red-river-1948.CXgW46No_2kpTtC.png",
+    "slug": "red-river-1948",
+    "stars": 4.5,
+    "title": "Red River (1948)"
+  },
+  {
+    "date": "2025-06-15T00:00:00.000Z",
     "image": "/_astro/only-angels-have-wings-1939.C_h-VgHc_Xd4jM.png",
     "slug": "only-angels-have-wings-1939",
     "stars": 4.5,
@@ -33,12 +40,5 @@
     "slug": "hands-of-the-ripper-1971",
     "stars": 2,
     "title": "Hands of the Ripper (1971)"
-  },
-  {
-    "date": "2025-06-09T00:00:00.000Z",
-    "image": "/_astro/massacre-time-1966.C2MvRMoT_ZvbKxH.png",
-    "slug": "massacre-time-1966",
-    "stars": 3,
-    "title": "Massacre Time (1966)"
   }
 ]
