@@ -10,8 +10,13 @@ export function Footer(): JSX.Element {
         desktop:p-10
       `}
     >
-      <p className="mx-auto text-lg">
-        I&apos;m too old for social media. What you see is what you get.
+      <p
+        className={`
+          flex w-full flex-wrap items-center justify-center gap-x-1 text-lg
+        `}
+      >
+        <span className="shrink-0">I&apos;m too old for social media.</span>
+        <span className="shrink-0">What you see is what you get.</span>
       </p>
     </div>
   );
