@@ -164,6 +164,7 @@ function UpdateListItem({
           `}
           href={`${siteUrl}/reviews/${value.slug}/`}
           rel="canonical"
+          title={value.title}
         >
           <UpdateImage
             decoding="async"
