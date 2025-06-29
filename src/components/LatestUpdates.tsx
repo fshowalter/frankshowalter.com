@@ -153,11 +153,11 @@ function UpdateListItem({
           aria-label={value.title}
           className={`
             inline-block
-            before:absolute before:inset-x-4 before:top-4 before:aspect-cover
-            before:bg-default before:opacity-15
+            before:absolute before:inset-x-4 before:top-4 before:z-10
+            before:aspect-cover before:bg-default before:opacity-15
             after:absolute after:top-0 after:left-0 after:z-10 after:size-full
             after:opacity-0
-            hover:text-accent hover:before:opacity-0
+            hover:before:opacity-0
             min-[496px]:before:inset-x-12 min-[496px]:before:top-10
           `}
           href={`${siteUrl}/reviews/${value.slug}/`}
