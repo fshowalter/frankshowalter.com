@@ -114,7 +114,6 @@ function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
     <ol
       className={`
         -mx-4 flex flex-wrap content-stretch justify-center
-        min-[496px]:-mx-4
         min-[736px]:-mx-12
         min-[1360px]:gap-y-4
       `}
@@ -136,7 +135,7 @@ function UpdateListItem({
   return (
     <li
       className={`
-        relative flex w-[50%] max-w-[344px] flex-col items-center p-2
+        relative flex w-[50%] max-w-[344px] flex-col items-center p-1
         text-subtle
         has-[a:hover]:bg-canvas has-[a:hover]:shadow-hover
         min-[496px]:p-4
@@ -146,7 +145,7 @@ function UpdateListItem({
     >
       <div
         className={`
-          flex h-full w-full flex-col bg-default p-2
+          flex h-full w-full flex-col bg-default p-3
           min-[496px]:px-8 min-[496px]:pt-6 min-[496px]:pb-4
         `}
       >

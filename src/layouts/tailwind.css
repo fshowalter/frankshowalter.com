@@ -84,7 +84,7 @@
       --border-default: #484745;
       --fg-accent: #c86666;
       --fg-default: rgb(255 255 255 / 75%);
-      --fg-inverse: #e6e6e6;
+      --fg-inverse: #bbb;
       --fg-subtle: rgb(255 255 255 / 60%);
       --image-filter: brightness(0.8) contrast(1);
     }
