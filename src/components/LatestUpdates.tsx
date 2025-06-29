@@ -182,7 +182,7 @@ function UpdateListItem({
         >
           <div className="mr-auto">
             <Grade
-              className="tablet:h-5 tablet:w-auto"
+              className="max:h-5 max:w-auto"
               height={18}
               value={value.stars}
             />
@@ -190,7 +190,7 @@ function UpdateListItem({
           <div
             className={`
               pl-1 font-sans text-xs leading-6 font-light
-              tablet:text-sm
+              max:text-sm
             `}
           >
             {" "}
