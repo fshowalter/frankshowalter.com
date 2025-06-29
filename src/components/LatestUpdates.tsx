@@ -182,9 +182,7 @@ function UpdateListItem({
             <Grade
               className={`
                 h-4 w-auto
-                max:h-5
                 @min-[168px]:h-[18px]
-                @min-[192px]:h-[20px]
               `}
               height={16}
               value={value.stars}
