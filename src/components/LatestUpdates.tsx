@@ -34,7 +34,7 @@ export function LatestUpdates({
     <nav
       className={`
         mx-auto w-full max-w-[888px] px-container pb-20
-        desktop:max-w-(--breakpoint-max)
+        min-[1360px]:max-w-(--breakpoint-max)
       `}
     >
       <SubHeading as="h2">
@@ -113,7 +113,7 @@ function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <ol
       className={`
-        -mx-2 flex flex-wrap content-stretch justify-center
+        -mx-4 flex flex-wrap content-stretch justify-center
         min-[496px]:-mx-4
         min-[736px]:-mx-12
         min-[1360px]:gap-y-4
@@ -146,16 +146,15 @@ function UpdateListItem({
     >
       <div
         className={`
-          flex h-full w-full flex-col bg-default
-          min-[496px]:px-8 min-[496px]:pb-4
-          min-[640px]:pt-6
+          flex h-full w-full flex-col bg-default p-2
+          min-[496px]:px-8 min-[496px]:pt-6 min-[496px]:pb-4
         `}
       >
         <a
           aria-label={value.title}
           className={`
             inline-block
-            before:absolute before:inset-x-2 before:top-2 before:aspect-cover
+            before:absolute before:inset-x-4 before:top-4 before:aspect-cover
             before:bg-default before:opacity-15
             after:absolute after:top-0 after:left-0 after:z-10 after:size-full
             after:opacity-0
@@ -176,25 +175,39 @@ function UpdateListItem({
         </a>
         <div
           className={`
-            flex w-full grow flex-wrap items-center gap-x-2 px-1 py-2
+            @container flex w-full grow flex-wrap items-center gap-x-2 px-1 py-2
             tablet:px-px tablet:py-3
           `}
         >
           <div className="mr-auto">
             <Grade
-              className="max:h-5 max:w-auto"
-              height={18}
+              className={`
+                h-4 w-auto
+                max:h-5
+                @min-[168px]:h-[18px]
+                @min-[192px]:h-[20px]
+              `}
+              height={16}
               value={value.stars}
             />
           </div>
           <div
             className={`
-              pl-1 font-sans text-xs leading-6 font-light
-              max:text-sm
+              basis-12 pl-1 font-sans text-xs leading-6 font-light
+              whitespace-nowrap
+              @min-[192px]:basis-20 @min-[192px]:text-sm
             `}
           >
             {" "}
-            on {formatDate(value.date)}
+            <span
+              className={`
+                hidden
+                @min-[152px]:inline
+              `}
+            >
+              on
+            </span>{" "}
+            {formatDate(value.date)}
           </div>
         </div>
       </div>

@@ -27,8 +27,9 @@ export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
         title="Frank Showalter"
         titleClasses={`
           font-sans text-2xl font-semibold uppercase
+          max:text-7xl
           tablet:text-5xl
-          desktop:text-7xl
+          desktop:text-6xl
         `}
       />
       <LatestUpdates
