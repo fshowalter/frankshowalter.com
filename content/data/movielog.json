@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-07-01T00:00:00.000Z",
+    "image": "/_astro/his-kind-of-woman-1951.C0mq6F_i_1cSimt.png",
+    "slug": "his-kind-of-woman-1951",
+    "stars": 4.5,
+    "title": "His Kind of Woman (1951)"
+  },
+  {
+    "date": "2025-06-28T00:00:00.000Z",
+    "image": "/_astro/tentacles-1977.BtZfIkwE_Z1w1CMW.png",
+    "slug": "tentacles-1977",
+    "stars": 2,
+    "title": "Tentacles (1977)"
+  },
+  {
     "date": "2025-06-15T00:00:00.000Z",
     "image": "/_astro/red-river-1948.CXgW46No_2kpTtC.png",
     "slug": "red-river-1948",
@@ -26,19 +40,5 @@
     "slug": "jason-x-2001",
     "stars": 4,
     "title": "Jason X (2001)"
-  },
-  {
-    "date": "2025-06-12T00:00:00.000Z",
-    "image": "/_astro/ebola-syndrome-1996.BiF26yFW_1TtJUo.png",
-    "slug": "ebola-syndrome-1996",
-    "stars": 3.5,
-    "title": "Ebola Syndrome (1996)"
-  },
-  {
-    "date": "2025-06-10T00:00:00.000Z",
-    "image": "/_astro/hands-of-the-ripper-1971.G2BX9dPd_BmXOa.png",
-    "slug": "hands-of-the-ripper-1971",
-    "stars": 2,
-    "title": "Hands of the Ripper (1971)"
   }
 ]
