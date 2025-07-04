@@ -1,6 +1,13 @@
 [
   {
     "date": "2025-07-01T00:00:00.000Z",
+    "image": "/_astro/tropic-thunder-2008.7fdgFBYY_Z2dkliP.png",
+    "slug": "tropic-thunder-2008",
+    "stars": 4.5,
+    "title": "Tropic Thunder (2008)"
+  },
+  {
+    "date": "2025-07-01T00:00:00.000Z",
     "image": "/_astro/his-kind-of-woman-1951.C0mq6F_i_1cSimt.png",
     "slug": "his-kind-of-woman-1951",
     "stars": 4.5,
@@ -33,12 +40,5 @@
     "slug": "pals-of-the-saddle-1938",
     "stars": 2.5,
     "title": "Pals of the Saddle (1938)"
-  },
-  {
-    "date": "2025-06-13T00:00:00.000Z",
-    "image": "/_astro/jason-x-2001.DwHx-IlW_Z16AEmf.png",
-    "slug": "jason-x-2001",
-    "stars": 4,
-    "title": "Jason X (2001)"
   }
 ]
