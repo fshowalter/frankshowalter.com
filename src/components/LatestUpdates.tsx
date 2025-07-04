@@ -174,20 +174,18 @@ function UpdateListItem({
         </a>
         <div
           className={`
-            @container flex w-full grow flex-wrap items-center gap-x-2 px-1 py-2
-            tablet:px-px tablet:py-3
+            @container flex w-full grow flex-wrap items-center gap-x-1 px-1 py-2
+            tablet:py-3
           `}
         >
-          <div className="mr-auto">
-            <Grade
-              className={`
-                h-4 w-auto
-                @min-[168px]:h-[18px]
-              `}
-              height={16}
-              value={value.stars}
-            />
-          </div>
+          <Grade
+            className={`
+              h-4 w-auto
+              @min-[168px]:h-[18px]
+            `}
+            height={16}
+            value={value.stars}
+          />
           <div
             className={`
               basis-12 pl-1 font-sans text-xs leading-6 font-light
