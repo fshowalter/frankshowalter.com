@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-07-04T00:00:00.000Z",
+    "image": "/_astro/scream-and-scream-again-1970.DkUtbYLu_Z2tYvWG.png",
+    "slug": "scream-and-scream-again-1970",
+    "stars": 3.5,
+    "title": "Scream and Scream Again (1970)"
+  },
+  {
     "date": "2025-07-01T00:00:00.000Z",
     "image": "/_astro/tropic-thunder-2008.7fdgFBYY_Z2dkliP.png",
     "slug": "tropic-thunder-2008",
@@ -33,12 +40,5 @@
     "slug": "only-angels-have-wings-1939",
     "stars": 4.5,
     "title": "Only Angels Have Wings (1939)"
-  },
-  {
-    "date": "2025-06-14T00:00:00.000Z",
-    "image": "/_astro/pals-of-the-saddle-1938.C5N3tk1g_ysymG.png",
-    "slug": "pals-of-the-saddle-1938",
-    "stars": 2.5,
-    "title": "Pals of the Saddle (1938)"
   }
 ]
