@@ -8,6 +8,7 @@
   --background-color-default: var(--bg-default);
   --background-color-footer: var(--bg-footer);
   --background-color-subtle: var(--bg-subtle);
+  --background-color-hover: var(--bg-hover);
 
   --border-color-*: initial;
   --border-color-default: var(--border-default);
@@ -45,6 +46,7 @@
     --bg-default: #fff;
     --bg-footer: #2b2b2b;
     --bg-subtle: #fafafa;
+    --bg-hover: #f7f5f3;
     --border-default: #f4eedf;
     --container-padding: 8%;
     --fg-accent: #a52422;

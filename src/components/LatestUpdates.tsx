@@ -135,7 +135,7 @@ function UpdateListItem({
   return (
     <li
       className={`
-        relative flex w-[50%] max-w-[344px] flex-col items-center p-1
+        relative flex w-[50%] max-w-[344px] flex-col items-center p-1 font-light
         text-subtle
         has-[a:hover]:bg-canvas has-[a:hover]:shadow-hover
         min-[496px]:p-4
@@ -146,6 +146,7 @@ function UpdateListItem({
       <div
         className={`
           flex h-full w-full flex-col bg-default p-3
+          has-[a:hover]:bg-hover
           min-[496px]:px-8 min-[496px]:pt-6 min-[496px]:pb-4
         `}
       >
@@ -188,8 +189,7 @@ function UpdateListItem({
           />
           <div
             className={`
-              basis-12 pl-1 font-sans text-xs leading-6 font-light
-              whitespace-nowrap
+              basis-12 pl-1 font-sans text-xs leading-6 whitespace-nowrap
               @min-[192px]:basis-20 @min-[192px]:text-sm
             `}
           >
