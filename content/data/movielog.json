@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-07-05T00:00:00.000Z",
+    "image": "/_astro/zombie-holocaust-1980.DVFzhXmw_NtxAd.png",
+    "slug": "zombie-holocaust-1980",
+    "stars": 2,
+    "title": "Zombie Holocaust (1980)"
+  },
+  {
     "date": "2025-07-04T00:00:00.000Z",
     "image": "/_astro/scream-and-scream-again-1970.DkUtbYLu_Z2tYvWG.png",
     "slug": "scream-and-scream-again-1970",
@@ -33,12 +40,5 @@
     "slug": "red-river-1948",
     "stars": 4.5,
     "title": "Red River (1948)"
-  },
-  {
-    "date": "2025-06-15T00:00:00.000Z",
-    "image": "/_astro/only-angels-have-wings-1939.C_h-VgHc_Xd4jM.png",
-    "slug": "only-angels-have-wings-1939",
-    "stars": 4.5,
-    "title": "Only Angels Have Wings (1939)"
   }
 ]
