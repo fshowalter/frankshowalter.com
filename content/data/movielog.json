@@ -1,5 +1,12 @@
 [
   {
+    "date": "2025-07-07T00:00:00.000Z",
+    "image": "/_astro/the-return-of-the-musketeers-1989.baj7OjM3_nF1y7.png",
+    "slug": "the-return-of-the-musketeers-1989",
+    "stars": 2,
+    "title": "The Return of the Musketeers (1989)"
+  },
+  {
     "date": "2025-07-05T00:00:00.000Z",
     "image": "/_astro/zombie-holocaust-1980.DVFzhXmw_NtxAd.png",
     "slug": "zombie-holocaust-1980",
@@ -33,12 +40,5 @@
     "slug": "tentacles-1977",
     "stars": 2,
     "title": "Tentacles (1977)"
-  },
-  {
-    "date": "2025-06-15T00:00:00.000Z",
-    "image": "/_astro/red-river-1948.CXgW46No_2kpTtC.png",
-    "slug": "red-river-1948",
-    "stars": 4.5,
-    "title": "Red River (1948)"
   }
 ]
