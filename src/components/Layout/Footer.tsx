@@ -5,8 +5,8 @@ export function Footer(): JSX.Element {
     <div
       className={`
         flex flex-wrap items-start justify-between gap-[10%] bg-footer
-        px-container py-10 text-sm text-inverse
-        tablet:px-12 tablet:pt-10
+        px-container py-5 text-sm text-inverse
+        tablet:px-12
         desktop:p-10
       `}
     >

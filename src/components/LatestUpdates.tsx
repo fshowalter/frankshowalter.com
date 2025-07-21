@@ -47,9 +47,14 @@ export function LatestUpdates({
       `}
     >
       <SubHeading as="h2">
-        Latest{" "}
-        <a className="text-accent" href="https://www.franksmovielog.com">
-          Movie Reviews
+        <a
+          className={`
+            inline-block transform-gpu transition-transform
+            hover:scale-110
+          `}
+          href="https://www.franksmovielog.com"
+        >
+          Latest <span className="text-accent">Movie Reviews</span>
         </a>
       </SubHeading>
       <UpdateList>
@@ -192,14 +197,18 @@ function UpdateDetails({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <div
-      className={`
-        @container flex justify-center bg-default px-4 pb-8
-        group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)]
-        @min-[193px]:px-[clamp(4px,14cqw,32px)] @min-[193px]:pb-6
-      `}
-    >
-      <div className={`flex w-full max-w-[200px] flex-col`}>{children}</div>
+    <div className="@container">
+      <div
+        className={`
+          flex justify-center bg-default px-4 pb-8
+          group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)]
+          @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6
+        `}
+      >
+        <div className={`flex w-full max-w-[248px] flex-col px-1`}>
+          {children}
+        </div>
+      </div>
     </div>
   );
 }
@@ -229,28 +238,33 @@ function UpdateImage({
   width: number;
 }): JSX.Element {
   return (
-    <div
-      className={`
-        @container z-10 flex justify-center self-end bg-default px-3 pt-3
-        @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6
-      `}
-    >
-      <div
-        className={`
-          relative
-          after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20
-          after:bg-default after:opacity-15 after:transition-opacity
-          group-hover/card:after:opacity-0
-        `}
-      >
-        <img
-          {...imageProps}
-          {...rest}
-          alt=""
-          className="rounded-[2.5px]"
-          decoding={decoding}
-          loading={loading}
-        />
+    <div className={`@container flex self-end`}>
+      <div className={`z-10 flex justify-center bg-default`}>
+        <div
+          className={`
+            px-3 pt-3
+            @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6
+          `}
+        >
+          <div
+            className={`
+              relative max-w-[248px]
+              after:absolute after:inset-x-0 after:top-0 after:bottom-0
+              after:z-20 after:bg-default after:opacity-15
+              after:transition-opacity
+              group-hover/card:after:opacity-0
+            `}
+          >
+            <img
+              {...imageProps}
+              {...rest}
+              alt=""
+              className="rounded-[2.5px]"
+              decoding={decoding}
+              loading={loading}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -303,8 +317,7 @@ function UpdateTitle({
     <div
       className={`
         pt-2 text-xs leading-4 font-medium
-        tablet:pt-3 tablet:text-sm tablet:leading-4
-        desktop:pt-2 desktop:text-xl
+        tablet:pt-3
       `}
     >
       <a

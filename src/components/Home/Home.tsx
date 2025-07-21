@@ -35,7 +35,7 @@ export function Home({
         imageProps={backdropImageProps}
         title="Frank Showalter"
         titleClasses={`
-          font-sans text-2xl font-semibold uppercase
+          font-sans text-2xl font-semibold text-inverse uppercase
           tablet:text-5xl
           laptop:text-6xl
           desktop:text-7xl
