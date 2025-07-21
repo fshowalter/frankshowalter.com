@@ -24,6 +24,7 @@ export default tsEslint.config(
   {
     rules: {
       "unicorn/filename-case": "off",
+      "unicorn/no-array-reverse": "off",
       "unicorn/no-nested-ternary": "off",
       "unicorn/prevent-abbreviations": "off",
     },
