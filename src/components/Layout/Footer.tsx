@@ -5,18 +5,28 @@ export function Footer(): JSX.Element {
     <div
       className={`
         flex flex-wrap items-start justify-between gap-[10%] bg-footer
-        px-container py-10 text-inverse
+        px-container py-10 text-sm text-inverse
         tablet:px-12 tablet:pt-10
         desktop:p-10
       `}
     >
       <p
         className={`
-          flex w-full flex-wrap items-center justify-center gap-x-1 text-lg
+          w-full px-container text-center leading-5 font-normal text-[#b0b0b0]
         `}
       >
-        <span className="shrink-0">I&apos;m too old for social media.</span>
-        <span className="shrink-0">What you see is what you get.</span>
+        All images used in accordance with the{" "}
+        <a
+          className={`
+            text-inherit underline
+            hover:bg-default hover:text-default
+          `}
+          href="http://www.copyright.gov/title17/92chap1.html#107"
+          rel="nofollow"
+        >
+          Fair Use Law
+        </a>
+        .
       </p>
     </div>
   );

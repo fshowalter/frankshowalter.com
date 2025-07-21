@@ -1,16 +1,24 @@
 import type { JSX } from "react";
 import type React from "react";
 
-import { SolidBackdrop } from "~/components/Backdrop";
+import type { BackdropImageProps } from "~/api/backdrops";
+
+import { Backdrop } from "~/components/Backdrop";
 import { LatestUpdates } from "~/components/LatestUpdates";
 import { Layout } from "~/components/Layout";
 
-export type Props = React.ComponentProps<typeof LatestUpdates>;
+export type Props = React.ComponentProps<typeof LatestUpdates> & {
+  backdropImageProps: BackdropImageProps;
+};
 
-export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
+export function Home({
+  backdropImageProps,
+  booklogUpdates,
+  movielogUpdates,
+}: Props): JSX.Element {
   return (
     <Layout className="bg-subtle pb-8">
-      <SolidBackdrop
+      <Backdrop
         deck={
           <>
             I write stuff. Mostly{" "}
@@ -24,12 +32,13 @@ export function Home({ booklogUpdates, movielogUpdates }: Props): JSX.Element {
             .
           </>
         }
+        imageProps={backdropImageProps}
         title="Frank Showalter"
         titleClasses={`
           font-sans text-2xl font-semibold uppercase
-          max:text-7xl
           tablet:text-5xl
-          desktop:text-6xl
+          laptop:text-6xl
+          desktop:text-7xl
         `}
       />
       <LatestUpdates
