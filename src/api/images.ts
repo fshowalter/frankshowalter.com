@@ -1,10 +1,15 @@
 import { getImage } from "astro:assets";
+import fs from "node:fs";
+import path from "node:path";
+import sharp from "sharp";
 
 import { normalizeSources } from "./utils/normalizeSources";
 
 export type ImageProps = {
+  height: number;
   src: string;
   srcSet: string;
+  width: number;
 };
 
 let covers = import.meta.glob<{ default: ImageMetadata }>(
@@ -30,17 +35,20 @@ if (import.meta.env.MODE === "test") {
 export async function getFluidImageProps(
   kind: "cover" | "poster",
   slug: string,
-  { height, width }: { height: number; width: number },
+  width: number,
 ): Promise<ImageProps> {
   let image;
+  let height;
 
   switch (kind) {
     case "cover": {
       image = await getCover(slug);
+      height = await getImageHeight(getCoverPath(slug), width);
       break;
     }
     case "poster": {
       image = await getPoster(slug);
+      height = await getImageHeight(getPosterPath(slug), width);
       break;
     }
   }
@@ -55,9 +63,22 @@ export async function getFluidImageProps(
   });
 
   return {
+    height,
     src: normalizeSources(optimizedImage.src),
     srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+    width,
   };
+}
+
+export async function getImageHeight(coverPath: string, targetWidth: number) {
+  try {
+    const { height, width } = await sharp(coverPath).metadata();
+
+    return (height / width) * targetWidth;
+  } catch (error) {
+    console.error("Error:", error);
+    return 0;
+  }
 }
 
 async function getCover(slug: string) {
@@ -78,6 +99,15 @@ async function getCover(slug: string) {
   return cover;
 }
 
+function getCoverPath(slug: string) {
+  const coverPath = path.resolve(`./content/assets/covers/${slug}.png`);
+  if (fs.existsSync(coverPath)) {
+    return coverPath;
+  }
+
+  throw new Error(`No cover for ${slug}`);
+}
+
 async function getPoster(slug: string) {
   const posterKey = Object.keys(posters).find((image) => {
     return image.endsWith(`${slug}.png`);
@@ -94,4 +124,13 @@ async function getPoster(slug: string) {
   }
 
   return poster;
+}
+
+function getPosterPath(slug: string) {
+  const posterPath = path.resolve(`./content/assets/posters/${slug}.png`);
+  if (fs.existsSync(posterPath)) {
+    return posterPath;
+  }
+
+  throw new Error(`No poster for ${slug}`);
 }

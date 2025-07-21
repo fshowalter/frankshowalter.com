@@ -14,9 +14,9 @@
   --border-color-default: var(--border-default);
 
   --breakpoint-*: initial;
-  --breakpoint-desktop: 1360px;
-  --breakpoint-max: 1840px;
   --breakpoint-tablet: 768px;
+  --breakpoint-laptop: 1360px;
+  --breakpoint-desktop: 1840px;
 
   --color-*: initial;
   --color-accent: var(--fg-accent);
@@ -30,10 +30,15 @@
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 
+  --container-popout: calc(64px + var(--max-width-prose));
+
   --padding-container: var(--container-padding);
+  --max-width-prose: 36rem;
 
   --shadow-hover: 0 0 1px 1px var(--fg-canvas);
 
+  --text-xxs: 0.6875rem;
+  --text-md: 1.125rem;
   --text-2_5xl: 1.625rem;
 
   --tracking-*: initial;
@@ -98,7 +103,7 @@
     }
   }
 
-  @media (width >= theme(--breakpoint-desktop)) {
+  @media (width >= theme(--breakpoint-laptop)) {
     :root {
       --container-padding: 80px;
     }
