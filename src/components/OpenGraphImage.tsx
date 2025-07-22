@@ -1,8 +1,10 @@
 import type { JSX } from "react";
 export function OpenGraphImage({
+  backdrop,
   sectionHead = "Frank Showalter",
   title,
 }: {
+  backdrop?: string;
   sectionHead?: string;
   title: string;
 }): JSX.Element {
@@ -16,6 +18,14 @@ export function OpenGraphImage({
         width: "1200px",
       }}
     >
+      <img
+        height={630}
+        src={backdrop}
+        style={{
+          objectFit: "cover",
+        }}
+        width={1200}
+      />
       <div
         style={{
           bottom: 0,
@@ -41,7 +51,7 @@ export function OpenGraphImage({
         </div>
         <div
           style={{
-            color: "rgb(0 0 0 / 75%)",
+            color: "#fff",
             display: "flex",
             flexWrap: "wrap",
             fontFamily: "ArgentumSans",

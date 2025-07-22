@@ -218,7 +218,7 @@ function UpdateGrade({ stars }: { stars: number }): JSX.Element {
     <Grade
       className={`
         mt-2 h-3 w-15
-        tablet:mt-3 tablet:h-[18px] tablet:w-[90px]
+        @min-[248px]:mt-2 @min-[248px]:h-[14px] @min-[248px]:w-[70px]
       `}
       height={16}
       value={stars}
