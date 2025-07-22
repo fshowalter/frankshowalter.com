@@ -47,9 +47,9 @@
 @layer base {
   :root {
     --bg-canvas: #8f8f8f;
-    --bg-default: #fff;
+    --bg-default: #fafafa;
     --bg-footer: #2b2b2b;
-    --bg-subtle: #fafafa;
+    --bg-subtle: #e9e9e9;
     --bg-hover: #f7f5f3;
     --border-default: #f4eedf;
     --container-padding: 8%;
@@ -86,7 +86,7 @@
       --bg-canvas: #484745;
       --bg-default: #322f2f;
       --bg-footer: #252525;
-      --bg-subtle: #373434;
+      --bg-subtle: #212121;
       --border-default: #484745;
       --fg-accent: #c86666;
       --fg-default: rgb(255 255 255 / 75%);
