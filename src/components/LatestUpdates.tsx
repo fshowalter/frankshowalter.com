@@ -296,9 +296,9 @@ function UpdateListItem({
     <li
       className={`
         group/card relative row-span-2 grid transform-gpu grid-rows-subgrid
-        gap-y-0 transition-transform
-        has-[a:hover]:-translate-y-1 has-[a:hover]:scale-105
+        gap-y-0 bg-default transition-transform
         has-[a:hover]:drop-shadow-2xl
+        tablet:bg-inherit tablet:has-[a:hover]:scale-105
       `}
     >
       {children}
