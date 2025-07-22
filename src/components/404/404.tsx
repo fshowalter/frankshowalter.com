@@ -1,15 +1,19 @@
 import type { JSX } from "react";
 
-import { SolidBackdrop } from "~/components/Backdrop";
+import type { BackdropImageProps } from "~/api/backdrops";
+
+import { Backdrop } from "~/components/Backdrop";
 import { LatestUpdates } from "~/components/LatestUpdates";
 import { Layout } from "~/components/Layout";
 
 export type Props = React.ComponentProps<typeof LatestUpdates> & {
+  backdropImageProps: BackdropImageProps;
   deck: string;
   title: string;
 };
 
 export function Content({
+  backdropImageProps,
   booklogUpdates,
   deck,
   movielogUpdates,
@@ -17,8 +21,9 @@ export function Content({
 }: Props): JSX.Element {
   return (
     <Layout className="bg-subtle pb-8">
-      <SolidBackdrop
+      <Backdrop
         deck={deck}
+        imageProps={backdropImageProps}
         title={title}
         titleClasses={`
           font-sans text-2.5xl font-semibold uppercase

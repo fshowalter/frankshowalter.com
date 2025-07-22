@@ -1,38 +1,45 @@
 [
   {
-    "title": "Night of the Demons (1988)",
+    "title": "Night of the Demons",
     "slug": "night-of-the-demons-1988",
     "date": "2025-01-14",
-    "stars": 2.5
+    "stars": 2.5,
+    "year": "1988"
   },
   {
-    "title": "The Return of the Musketeers (1989)",
+    "title": "The Return of the Musketeers",
     "slug": "the-return-of-the-musketeers-1989",
     "date": "2025-01-11",
-    "stars": 2
+    "stars": 2,
+    "year": "1989"
+
   },
   {
-    "title": "Def by Temptation (1990)",
+    "title": "Def by Temptation",
     "slug": "def-by-temptation-1990",
     "date": "2025-01-11",
-    "stars": 2.5
+    "stars": 2.5,
+    "year": "1990"
   },
   {
-    "title": "The Brigand of Kandahar (1965)",
+    "title": "The Brigand of Kandahar",
     "slug": "the-brigand-of-kandahar-1965",
     "date": "2025-01-10",
-    "stars": 1.5
+    "stars": 1.5,
+    "year": "1965"
   },
   {
-    "title": "Leprechaun 6: Back 2 Tha Hood (2003)",
+    "title": "Leprechaun 6: Back 2 Tha Hood",
     "slug": "leprechaun-6-back-2-tha-hood-2003",
     "date": "2025-01-10",
-    "stars": 2
+    "stars": 2,
+    "year": "2003"
   },
   {
-    "title": "Crimes of the Future (2022)",
+    "title": "Crimes of the Future",
     "slug": "crimes-of-the-future-2022",
     "date": "2025-01-09",
-    "stars": 3.5
+    "stars": 3.5,
+    "year": "2022"
   }
 ]

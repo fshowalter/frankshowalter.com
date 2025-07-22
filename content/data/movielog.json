@@ -4,41 +4,47 @@
     "image": "/_astro/the-return-of-the-musketeers-1989.baj7OjM3_nF1y7.png",
     "slug": "the-return-of-the-musketeers-1989",
     "stars": 2,
-    "title": "The Return of the Musketeers (1989)"
+    "title": "The Return of the Musketeers",
+    "year": "1989"
   },
   {
     "date": "2025-07-05T00:00:00.000Z",
     "image": "/_astro/zombie-holocaust-1980.DVFzhXmw_NtxAd.png",
     "slug": "zombie-holocaust-1980",
     "stars": 2,
-    "title": "Zombie Holocaust (1980)"
+    "title": "Zombie Holocaust",
+    "year": "1980"
   },
   {
     "date": "2025-07-04T00:00:00.000Z",
     "image": "/_astro/scream-and-scream-again-1970.DkUtbYLu_Z2tYvWG.png",
     "slug": "scream-and-scream-again-1970",
     "stars": 3.5,
-    "title": "Scream and Scream Again (1970)"
+    "title": "Scream and Scream Again",
+    "year": "1970"
   },
   {
     "date": "2025-07-01T00:00:00.000Z",
     "image": "/_astro/tropic-thunder-2008.7fdgFBYY_Z2dkliP.png",
     "slug": "tropic-thunder-2008",
     "stars": 4.5,
-    "title": "Tropic Thunder (2008)"
+    "title": "Tropic Thunder",
+    "year": "2008"
   },
   {
     "date": "2025-07-01T00:00:00.000Z",
     "image": "/_astro/his-kind-of-woman-1951.C0mq6F_i_1cSimt.png",
     "slug": "his-kind-of-woman-1951",
     "stars": 4.5,
-    "title": "His Kind of Woman (1951)"
+    "title": "His Kind of Woman",
+    "year": "1951"
   },
   {
     "date": "2025-06-28T00:00:00.000Z",
     "image": "/_astro/tentacles-1977.BtZfIkwE_Z1w1CMW.png",
     "slug": "tentacles-1977",
     "stars": 2,
-    "title": "Tentacles (1977)"
+    "title": "Tentacles",
+    "year": "1977"
   }
 ]

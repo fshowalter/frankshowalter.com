@@ -1,44 +1,62 @@
 [
   {
+    "authors": [
+      "Philip Fracassi"
+    ],
+    "date": "2025-07-12T00:00:00.000Z",
+    "image": "/_astro/shiloh-by-philip-fracassi.D4NtraLi_Z8V8dx.png",
+    "slug": "king-mob-by-philip-fracassi",
+    "stars": 3,
+    "title": "King Mob"
+  },
+  {
+    "authors": [
+      "Philip Fracassi"
+    ],
+    "date": "2025-07-11T00:00:00.000Z",
+    "image": "/_astro/shiloh-by-philip-fracassi.D4NtraLi_Z8V8dx.png",
+    "slug": "shiloh-by-philip-fracassi",
+    "stars": 4,
+    "title": "Shiloh"
+  },
+  {
+    "authors": [
+      "Philip Fracassi"
+    ],
+    "date": "2025-07-11T00:00:00.000Z",
+    "image": "/_astro/commodore-by-philip-fracassi.B6kn71WY_Z1tUWNH.png",
+    "slug": "commodore-by-philip-fracassi",
+    "stars": 5,
+    "title": "Commodore"
+  },
+  {
+    "authors": [
+      "Leslie H. Whitten Jr."
+    ],
+    "date": "2025-07-11T00:00:00.000Z",
+    "image": "/_astro/progeny-of-the-adder-by-leslie-h-whitten-jr.Bmxx3I6Q_1oXpif.png",
+    "slug": "progeny-of-the-adder-by-leslie-h-whitten-jr",
+    "stars": 3.5,
+    "title": "Progeny of the Adder"
+  },
+  {
+    "authors": [
+      "Richard Laymon"
+    ],
     "date": "2025-02-15T00:00:00.000Z",
-    "image": "/_astro/the-lonely-one-by-richard-laymon.BCahQJAG_Z24UM7H.png",
+    "image": "/_astro/the-lonely-one-by-richard-laymon.DuIeKssk_ZaVlai.png",
     "slug": "the-lonely-one-by-richard-laymon",
     "stars": 3,
-    "title": "The Lonely One by Richard Laymon"
+    "title": "The Lonely One"
   },
   {
+    "authors": [
+      "Peter Straub"
+    ],
     "date": "2024-12-01T00:00:00.000Z",
-    "image": "/_astro/ghost-story-by-peter-straub.DL0v_Eis_1hAfdk.png",
+    "image": "/_astro/ghost-story-by-peter-straub.OGz1HCPK_zCIaM.png",
     "slug": "ghost-story-by-peter-straub",
     "stars": 4,
-    "title": "Ghost Story by Peter Straub"
-  },
-  {
-    "date": "2024-11-08T00:00:00.000Z",
-    "image": "/_astro/goth-by-lol-tolhurst.DbxS-bmp_Z2SOyv.png",
-    "slug": "goth-by-lol-tolhurst",
-    "stars": 3,
-    "title": "Goth by Lol Tolhurst"
-  },
-  {
-    "date": "2024-08-25T00:00:00.000Z",
-    "image": "/_astro/recessional-by-david-mamet.D8KgJSiZ_C25qT.png",
-    "slug": "recessional-by-david-mamet",
-    "stars": 2,
-    "title": "Recessional by David Mamet"
-  },
-  {
-    "date": "2024-07-01T00:00:00.000Z",
-    "image": "/_astro/fast-forward-by-stephen-morris.8zCzJ6vA_1PFL7W.png",
-    "slug": "fast-forward-by-stephen-morris",
-    "stars": 4.5,
-    "title": "Fast Forward by Stephen Morris"
-  },
-  {
-    "date": "2024-06-30T00:00:00.000Z",
-    "image": "/_astro/gothic-by-philip-fracassi.D7nk-G8B_IHd3l.png",
-    "slug": "gothic-by-philip-fracassi",
-    "stars": 4,
-    "title": "Gothic by Philip Fracassi"
+    "title": "Ghost Story"
   }
 ]

@@ -8,7 +8,7 @@ type DownloadOptions = {
   skipExisting?: boolean;
 };
 
-const UpdateSchema = z.object({
+const BaseUpdateSchema = z.object({
   date: z.coerce.date(),
   image: z.string(),
   slug: z.string(),
@@ -16,7 +16,16 @@ const UpdateSchema = z.object({
   title: z.string(),
 });
 
-const UpdatesArraySchema = z.array(UpdateSchema);
+const MovieUpdateSchema = BaseUpdateSchema.extend({
+  year: z.string(),
+});
+
+const BookUpdateSchema = BaseUpdateSchema.extend({
+  authors: z.array(z.string()),
+});
+
+const MovieUpdatesArraySchema = z.array(MovieUpdateSchema);
+const BookUpdatesArraySchema = z.array(BookUpdateSchema);
 
 type MediaSource = {
   baseUrl: string; // Added baseUrl for resolving relative paths
@@ -190,7 +199,12 @@ async function processMediaUpdates(source: MediaSource): Promise<void> {
   try {
     const jsonData = await readFile(source.jsonPath, "utf8");
     const rawUpdates = JSON.parse(jsonData) as unknown[];
-    const updates = UpdatesArraySchema.parse(rawUpdates);
+
+    // Use appropriate schema based on media type
+    const updates =
+      source.type === "movie"
+        ? MovieUpdatesArraySchema.parse(rawUpdates)
+        : BookUpdatesArraySchema.parse(rawUpdates);
 
     console.log(`Processing ${updates.length} ${source.type} updates`);
 

@@ -1,13 +1,16 @@
-import type { z } from "zod";
-
 import { promises as fs } from "node:fs";
+import { z } from "zod";
 
 import { UpdateSchema } from "./updateSchema";
 import { getContentPath } from "./utils/getContentPath";
 
 const movielogJsonFile = getContentPath("data", "movielog.json");
 
-type MovielogUpdate = z.infer<typeof UpdateSchema>;
+const MovielogUpdateSchema = UpdateSchema.extend({
+  year: z.string(),
+});
+
+type MovielogUpdate = z.infer<typeof MovielogUpdateSchema>;
 
 export async function movielogUpdates(): Promise<MovielogUpdate[]> {
   return parseMovielogJson();
@@ -18,6 +21,6 @@ async function parseMovielogJson() {
   const data = JSON.parse(json) as unknown[];
 
   return data.map((item) => {
-    return UpdateSchema.parse(item);
+    return MovielogUpdateSchema.parse(item);
   });
 }
