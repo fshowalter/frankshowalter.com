@@ -46,7 +46,7 @@
 
 @layer base {
   :root {
-    --bg-canvas: #f4eedf;
+    --bg-canvas: #8f8f8f;
     --bg-default: #fff;
     --bg-footer: #2b2b2b;
     --bg-subtle: #fafafa;
