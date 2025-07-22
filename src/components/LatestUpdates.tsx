@@ -95,11 +95,10 @@ function BooklogUpdateListItem({
 }): JSX.Element {
   return (
     <UpdateListItem>
-      <UpdateImage
+      <UpdateCover
         decoding="async"
         imageProps={value.imageProps}
         {...ImageConfig}
-        className={`max-w-[200px] rounded-[2.5px]`}
         loading={"lazy"}
       />
 
@@ -154,7 +153,7 @@ function MovielogUpdateListItem({
 }): JSX.Element {
   return (
     <UpdateListItem>
-      <UpdateImage
+      <UpdatePoster
         decoding="async"
         imageProps={value.imageProps}
         {...ImageConfig}
@@ -174,6 +173,53 @@ function MovielogUpdateListItem({
         <UpdateGrade stars={value.stars} />
       </UpdateDetails>
     </UpdateListItem>
+  );
+}
+
+function UpdateCover({
+  decoding = "async",
+  imageProps,
+  loading = "lazy",
+  ...rest
+}: React.ImgHTMLAttributes<HTMLImageElement> & {
+  decoding: "async" | "auto" | "sync";
+  imageProps: ImageProps | undefined;
+  loading: "eager" | "lazy";
+  width: number;
+}): JSX.Element {
+  return (
+    <UpdateImage>
+      <div
+        className={`
+          relative
+          after:absolute after:top-0 after:left-0 after:z-20 after:block
+          after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)]
+          after:bg-size-[100%_100%] after:mix-blend-soft-light
+        `}
+      >
+        <div
+          className={`
+            relative z-10
+            before:absolute before:top-0 before:left-0 before:z-10 before:block
+            before:size-full before:rounded-[2.5px]
+            before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%]
+            after:absolute after:top-0 after:left-0 after:z-10 after:block
+            after:size-full after:rounded-[2.5px]
+            after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%]
+            after:mix-blend-multiply
+          `}
+        >
+          <img
+            {...imageProps}
+            {...rest}
+            alt=""
+            className="rounded-[2.5px]"
+            decoding={decoding}
+            loading={loading}
+          />
+        </div>
+      </div>
+    </UpdateImage>
   );
 }
 
@@ -226,17 +272,7 @@ function UpdateGrade({ stars }: { stars: number }): JSX.Element {
   );
 }
 
-function UpdateImage({
-  decoding = "async",
-  imageProps,
-  loading = "lazy",
-  ...rest
-}: React.ImgHTMLAttributes<HTMLImageElement> & {
-  decoding: "async" | "auto" | "sync";
-  imageProps: ImageProps | undefined;
-  loading: "eager" | "lazy";
-  width: number;
-}): JSX.Element {
+function UpdateImage({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <div className={`@container flex self-end`}>
       <div className={`z-10 flex justify-center bg-default`}>
@@ -255,14 +291,7 @@ function UpdateImage({
               group-hover/card:after:opacity-0
             `}
           >
-            <img
-              {...imageProps}
-              {...rest}
-              alt=""
-              className="rounded-[2.5px]"
-              decoding={decoding}
-              loading={loading}
-            />
+            {children}
           </div>
         </div>
       </div>
@@ -303,6 +332,40 @@ function UpdateListItem({
     >
       {children}
     </li>
+  );
+}
+
+function UpdatePoster({
+  decoding = "async",
+  imageProps,
+  loading = "lazy",
+  ...rest
+}: React.ImgHTMLAttributes<HTMLImageElement> & {
+  decoding: "async" | "auto" | "sync";
+  imageProps: ImageProps | undefined;
+  loading: "eager" | "lazy";
+  width: number;
+}): JSX.Element {
+  return (
+    <UpdateImage>
+      <div
+        className={`
+          relative
+          after:absolute after:top-0 after:left-0 after:z-20 after:block
+          after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)]
+          after:bg-size-[100%_100%] after:mix-blend-soft-light
+        `}
+      >
+        <img
+          {...imageProps}
+          {...rest}
+          alt=""
+          className="rounded-[2.5px]"
+          decoding={decoding}
+          loading={loading}
+        />
+      </div>
+    </UpdateImage>
   );
 }
 
