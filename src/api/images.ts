@@ -70,17 +70,6 @@ export async function getFluidImageProps(
   };
 }
 
-export async function getImageHeight(coverPath: string, targetWidth: number) {
-  try {
-    const { height, width } = await sharp(coverPath).metadata();
-
-    return (height / width) * targetWidth;
-  } catch (error) {
-    console.error("Error:", error);
-    return 0;
-  }
-}
-
 async function getCover(slug: string) {
   const coverKey = Object.keys(covers).find((image) => {
     return image.endsWith(`${slug}.png`);
@@ -106,6 +95,17 @@ function getCoverPath(slug: string) {
   }
 
   throw new Error(`No cover for ${slug}`);
+}
+
+async function getImageHeight(coverPath: string, targetWidth: number) {
+  try {
+    const { height, width } = await sharp(coverPath).metadata();
+
+    return (height / width) * targetWidth;
+  } catch (error) {
+    console.error("Error:", error);
+    return 0;
+  }
 }
 
 async function getPoster(slug: string) {
