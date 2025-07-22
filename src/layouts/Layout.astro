@@ -41,16 +41,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     <link href="/sitemap-index.xml" rel="sitemap" />
     <meta content={meta.description} name="description" />
     <slot name="meta-theme-color">
-      <meta
-        content="#8f8f8f"
-        media="(prefers-color-scheme: light)"
-        name="theme-color"
-      />
-      <meta
-        content="#484745"
-        media="(prefers-color-scheme: dark)"
-        name="theme-color"
-      />
+      <meta content="rgba(0,0,0,.85)" name="theme-color" />
     </slot>
     {
       openGraph && (
