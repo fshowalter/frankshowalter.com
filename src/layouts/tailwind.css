@@ -31,8 +31,6 @@
   --font-sans: var(--font-sans);
   --font-serif: var(--font-serif);
 
-  --container-popout: calc(64px + var(--max-width-prose));
-
   --padding-container: var(--container-padding);
   --max-width-prose: 36rem;
 
