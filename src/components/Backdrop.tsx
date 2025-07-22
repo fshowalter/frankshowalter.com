@@ -66,6 +66,8 @@ function Wrapper({
       className={`
         relative flex min-h-[clamp(340px,50vh,1350px)] w-full flex-col
         content-start items-center justify-end gap-6 bg-canvas pt-40 pb-8
+        after:absolute after:size-full after:bg-linear-to-b
+        after:from-[rgba(0,0,0,.85)] after:to-transparent after:to-95%
         tablet:pt-40 tablet:pb-10
         desktop:pb-16
       `}

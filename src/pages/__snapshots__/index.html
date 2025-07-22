@@ -10,16 +10,7 @@
       content="Landing page for Frank Showalter, movie and book critic, and all-around swell guy."
       name="description"
     />
-    <meta
-      content="#8f8f8f"
-      media="(prefers-color-scheme: light)"
-      name="theme-color"
-    />
-    <meta
-      content="#484745"
-      media="(prefers-color-scheme: dark)"
-      name="theme-color"
-    />
+    <meta content="rgba(0,0,0,.85)" name="theme-color" />
     <meta content="https://www.frankshowalter.com/og.jpg" property="og:image" />
     <meta content="https://www.frankshowalter.com/" property="og:url" />
     <meta content="Frank Showalter" property="og:title" />
@@ -54,7 +45,7 @@
       <div class="flex min-h-full w-full flex-col bg-default">
         <main class="grow bg-subtle pb-8" id="content">
           <header
-            class="relative flex min-h-[clamp(340px,50vh,1350px)] w-full flex-col content-start items-center justify-end gap-6 bg-canvas pt-40 pb-8 tablet:pt-40 tablet:pb-10 desktop:pb-16"
+            class="relative flex min-h-[clamp(340px,50vh,1350px)] w-full flex-col content-start items-center justify-end gap-6 bg-canvas pt-40 pb-8 after:absolute after:size-full after:bg-linear-to-b after:from-[rgba(0,0,0,.85)] after:to-transparent after:to-95% tablet:pt-40 tablet:pb-10 desktop:pb-16"
           >
             <img
               class="absolute inset-0 size-full object-cover object-top"
