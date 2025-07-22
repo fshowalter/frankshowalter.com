@@ -41,8 +41,8 @@ function Deck({ value }: { value?: React.ReactNode }) {
     <p
       className={`
         mt-1 text-base
-        tablet:text-lg
-        laptop:my-4 laptop:text-xl
+        laptop:text-lg
+        desktop:my-4 desktop:text-xl
       `}
     >
       {value}
@@ -67,7 +67,7 @@ function Wrapper({
         relative flex min-h-[clamp(340px,50vh,1350px)] w-full flex-col
         content-start items-center justify-end gap-6 bg-canvas pt-40 pb-8
         tablet:pt-40 tablet:pb-10
-        laptop:pt-40 laptop:pb-16
+        desktop:pb-16
       `}
     >
       {heroImage}

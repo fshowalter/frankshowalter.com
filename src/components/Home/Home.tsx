@@ -19,19 +19,7 @@ export function Home({
   return (
     <Layout className="bg-subtle pb-8">
       <Backdrop
-        deck={
-          <>
-            I write stuff. Mostly{" "}
-            <a className="text-accent" href="https://www.franksmovielog.com/">
-              movie reviews
-            </a>
-            , sometimes{" "}
-            <a className="text-accent" href="https://www.franksbooklog.com/">
-              book reviews
-            </a>
-            .
-          </>
-        }
+        deck={<>I write stuff. Mostly movie reviews, sometimes book reviews.</>}
         imageProps={backdropImageProps}
         title="Frank Showalter"
         titleClasses={`
