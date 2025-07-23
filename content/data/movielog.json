@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-07-13T00:00:00.000Z",
+    "image": "/_astro/a-reason-to-live-a-reason-to-die-1972.C7pWRk03_1GWmeX.png",
+    "slug": "a-reason-to-live-a-reason-to-die-1972",
+    "stars": 2,
+    "title": "A Reason to Live, a Reason to Die",
+    "year": "1972"
+  },
+  {
     "date": "2025-07-07T00:00:00.000Z",
     "image": "/_astro/the-return-of-the-musketeers-1989.baj7OjM3_nF1y7.png",
     "slug": "the-return-of-the-musketeers-1989",
@@ -38,13 +46,5 @@
     "stars": 4.5,
     "title": "His Kind of Woman",
     "year": "1951"
-  },
-  {
-    "date": "2025-06-28T00:00:00.000Z",
-    "image": "/_astro/tentacles-1977.BtZfIkwE_Z1w1CMW.png",
-    "slug": "tentacles-1977",
-    "stars": 2,
-    "title": "Tentacles",
-    "year": "1977"
   }
 ]
