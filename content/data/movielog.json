@@ -1,5 +1,21 @@
 [
   {
+    "date": "2025-07-20T00:00:00.000Z",
+    "image": "/_astro/superman-2025.Do1_Vnz4_Z10XFpI.png",
+    "slug": "superman-2025",
+    "stars": 4,
+    "title": "Superman",
+    "year": "2025"
+  },
+  {
+    "date": "2025-07-14T00:00:00.000Z",
+    "image": "/_astro/the-french-connection-1971.B3qHFm-W_ZCp7p0.png",
+    "slug": "the-french-connection-1971",
+    "stars": 4,
+    "title": "The French Connection",
+    "year": "1971"
+  },
+  {
     "date": "2025-07-13T00:00:00.000Z",
     "image": "/_astro/a-reason-to-live-a-reason-to-die-1972.C7pWRk03_1GWmeX.png",
     "slug": "a-reason-to-live-a-reason-to-die-1972",
@@ -30,21 +46,5 @@
     "stars": 3.5,
     "title": "Scream and Scream Again",
     "year": "1970"
-  },
-  {
-    "date": "2025-07-01T00:00:00.000Z",
-    "image": "/_astro/tropic-thunder-2008.7fdgFBYY_Z2dkliP.png",
-    "slug": "tropic-thunder-2008",
-    "stars": 4.5,
-    "title": "Tropic Thunder",
-    "year": "2008"
-  },
-  {
-    "date": "2025-07-01T00:00:00.000Z",
-    "image": "/_astro/his-kind-of-woman-1951.C0mq6F_i_1cSimt.png",
-    "slug": "his-kind-of-woman-1951",
-    "stars": 4.5,
-    "title": "His Kind of Woman",
-    "year": "1951"
   }
 ]
