@@ -42,7 +42,7 @@ export function LatestUpdates({
   return (
     <nav
       className={`
-        mx-auto w-full max-w-(--breakpoint-desktop) bg-subtle px-container
+        mx-auto w-full max-w-[908px] bg-subtle px-container
         laptop:max-w-(--breakpoint-desktop) laptop:px-container
       `}
     >
@@ -248,7 +248,7 @@ function UpdateDetails({
         className={`
           flex justify-center bg-default px-4 pb-8
           group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)]
-          @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6
+          @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6
         `}
       >
         <div className={`flex w-full max-w-[248px] flex-col px-1`}>
@@ -274,12 +274,17 @@ function UpdateGrade({ stars }: { stars: number }): JSX.Element {
 
 function UpdateImage({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <div className={`@container flex self-end`}>
+    <div
+      className={`
+        @container flex self-end
+        tablet:self-auto
+      `}
+    >
       <div className={`z-10 flex justify-center bg-default`}>
         <div
           className={`
             px-3 pt-3
-            @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6
+            @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6
           `}
         >
           <div
@@ -303,12 +308,11 @@ function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
     <ol
       className={`
-        -mx-4 grid auto-rows-[auto_1fr] grid-cols-2 gap-x-[clamp(8px,2vw,32px)]
-        gap-y-[clamp(8px,2vw,32px)]
-        tablet:grid-cols-3 tablet:gap-x-6 tablet:gap-y-6
-        tablet-landscape:-mx-6 tablet-landscape:grid-cols-6
-        tablet-landscape:gap-x-6 tablet-landscape:gap-y-6
-        desktop:-mx-8 desktop:grid-cols-6 desktop:gap-y-12
+        -mx-4 grid auto-rows-[auto_1fr] grid-cols-2 flex-wrap
+        gap-x-[clamp(8px,2vw,32px)] gap-y-[clamp(8px,2vw,32px)]
+        tablet:flex tablet:items-baseline tablet:gap-x-4 tablet:gap-y-4
+        laptop:-mx-6 laptop:gap-x-6 laptop:gap-y-6
+        desktop:-mx-8 desktop:gap-y-12
       `}
     >
       {children}
@@ -325,9 +329,11 @@ function UpdateListItem({
     <li
       className={`
         group/card relative row-span-2 grid transform-gpu grid-rows-subgrid
-        gap-y-0 bg-default transition-transform
+        flex-col gap-y-0 bg-default transition-transform
         has-[a:hover]:drop-shadow-2xl
-        tablet:bg-inherit tablet:has-[a:hover]:scale-105
+        tablet:flex tablet:w-[calc((100%_-_32px)_/_3)]
+        tablet:has-[a:hover]:scale-105
+        laptop:w-[calc((100%_-_120px)_/_6)]
       `}
     >
       {children}

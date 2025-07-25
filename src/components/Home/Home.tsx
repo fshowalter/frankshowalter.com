@@ -17,7 +17,7 @@ export function Home({
   movielogUpdates,
 }: Props): JSX.Element {
   return (
-    <Layout className="bg-subtle pb-8">
+    <Layout className="bg-subtle pb-16">
       <Backdrop
         deck={<>I write stuff. Mostly movie reviews, sometimes book reviews.</>}
         imageProps={backdropImageProps}
