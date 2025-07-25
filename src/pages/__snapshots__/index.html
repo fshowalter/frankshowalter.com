@@ -43,7 +43,7 @@
         >Skip to content</a
       >
       <div class="flex min-h-full w-full flex-col bg-default">
-        <main class="grow bg-subtle pb-8" id="content">
+        <main class="grow bg-subtle pb-16" id="content">
           <header
             class="relative flex min-h-[clamp(340px,50vh,1350px)] w-full flex-col content-start items-center justify-end gap-6 bg-canvas pt-40 pb-8 after:absolute after:size-full after:bg-linear-to-b after:from-[rgba(0,0,0,.85)] after:to-transparent after:to-95% tablet:pt-40 tablet:pb-10 desktop:pb-16"
           >
@@ -64,7 +64,7 @@
               loading="eager"
             />
             <div
-              class="z-10 mx-auto flex w-full flex-col px-container laptop:max-w-(--breakpoint-desktop)"
+              class="z-10 mx-auto flex w-full max-w-[908px] flex-col px-container laptop:max-w-(--breakpoint-desktop)"
             >
               <h1
                 class="font-sans text-2xl font-semibold text-inverse uppercase tablet:text-5xl laptop:text-6xl desktop:text-7xl"
@@ -79,7 +79,7 @@
             </div>
           </header>
           <nav
-            class="mx-auto w-full max-w-(--breakpoint-desktop) bg-subtle px-container laptop:max-w-(--breakpoint-desktop) laptop:px-container"
+            class="mx-auto w-full max-w-[908px] bg-subtle px-container laptop:max-w-(--breakpoint-desktop) laptop:px-container"
           >
             <h2
               class="py-10 font-sans text-xs font-semibold tracking-wide text-subtle uppercase undefined"
@@ -91,15 +91,15 @@
               >
             </h2>
             <ol
-              class="-mx-4 grid auto-rows-[auto_1fr] grid-cols-2 gap-x-[clamp(8px,2vw,32px)] gap-y-[clamp(8px,2vw,32px)] tablet:grid-cols-3 tablet:gap-x-6 tablet:gap-y-6 tablet-landscape:-mx-6 tablet-landscape:grid-cols-6 tablet-landscape:gap-x-6 tablet-landscape:gap-y-6 desktop:-mx-8 desktop:grid-cols-6 desktop:gap-y-12"
+              class="-mx-4 grid auto-rows-[auto_1fr] grid-cols-2 flex-wrap gap-x-[clamp(8px,2vw,32px)] gap-y-[clamp(8px,2vw,32px)] tablet:flex tablet:items-baseline tablet:gap-x-4 tablet:gap-y-4 laptop:-mx-6 laptop:gap-x-6 laptop:gap-y-6 desktop:-mx-8 desktop:gap-y-12"
             >
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -130,7 +130,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -168,12 +168,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -204,7 +204,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -242,12 +242,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -278,7 +278,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -316,12 +316,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -352,7 +352,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -390,12 +390,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -426,7 +426,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -464,12 +464,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -500,7 +500,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -548,15 +548,15 @@
               >
             </h2>
             <ol
-              class="-mx-4 grid auto-rows-[auto_1fr] grid-cols-2 gap-x-[clamp(8px,2vw,32px)] gap-y-[clamp(8px,2vw,32px)] tablet:grid-cols-3 tablet:gap-x-6 tablet:gap-y-6 tablet-landscape:-mx-6 tablet-landscape:grid-cols-6 tablet-landscape:gap-x-6 tablet-landscape:gap-y-6 desktop:-mx-8 desktop:grid-cols-6 desktop:gap-y-12"
+              class="-mx-4 grid auto-rows-[auto_1fr] grid-cols-2 flex-wrap gap-x-[clamp(8px,2vw,32px)] gap-y-[clamp(8px,2vw,32px)] tablet:flex tablet:items-baseline tablet:gap-x-4 tablet:gap-y-4 laptop:-mx-6 laptop:gap-x-6 laptop:gap-y-6 desktop:-mx-8 desktop:gap-y-12"
             >
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -591,7 +591,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -631,12 +631,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -671,7 +671,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -711,12 +711,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -751,7 +751,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -791,12 +791,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -831,7 +831,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -871,12 +871,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -911,7 +911,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div
@@ -951,12 +951,12 @@
                 </div>
               </li>
               <li
-                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:bg-inherit tablet:has-[a:hover]:scale-105"
+                class="group/card relative row-span-2 grid transform-gpu grid-rows-subgrid flex-col gap-y-0 bg-default transition-transform has-[a:hover]:drop-shadow-2xl tablet:flex tablet:w-[calc((100%_-_32px)_/_3)] tablet:has-[a:hover]:scale-105 laptop:w-[calc((100%_-_120px)_/_6)]"
               >
-                <div class="@container flex self-end">
+                <div class="@container flex self-end tablet:self-auto">
                   <div class="z-10 flex justify-center bg-default">
                     <div
-                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pt-6"
+                      class="px-3 pt-3 @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6"
                     >
                       <div
                         class="relative max-w-[248px] after:absolute after:inset-x-0 after:top-0 after:bottom-0 after:z-20 after:bg-default after:opacity-15 after:transition-opacity group-hover/card:after:opacity-0"
@@ -991,7 +991,7 @@
                 </div>
                 <div class="@container">
                   <div
-                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,10cqw,32px)] @min-[200px]:pb-6"
+                    class="flex justify-center bg-default px-4 pb-8 group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)] @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6"
                   >
                     <div class="flex w-full max-w-[248px] flex-col px-1">
                       <div

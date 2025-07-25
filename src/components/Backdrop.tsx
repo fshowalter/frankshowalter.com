@@ -75,7 +75,7 @@ function Wrapper({
       {heroImage}
       <div
         className={`
-          z-10 mx-auto flex w-full flex-col px-container
+          z-10 mx-auto flex w-full max-w-[908px] flex-col px-container
           laptop:max-w-(--breakpoint-desktop)
         `}
       >
