@@ -247,7 +247,6 @@ function UpdateDetails({
       <div
         className={`
           flex justify-center bg-default px-4 pb-8
-          group-has-[a:hover]/card:shadow-[0px_-5px_5px_2px,rgba(0,0,0,.85)]
           @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6
         `}
       >
@@ -289,7 +288,7 @@ function UpdateImage({ children }: { children: React.ReactNode }): JSX.Element {
         >
           <div
             className={`
-              relative max-w-[248px]
+              relative max-w-[248px] drop-shadow-sm
               after:absolute after:inset-x-0 after:top-0 after:bottom-0
               after:z-20 after:bg-default after:opacity-15
               after:transition-opacity
