@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-07-25T00:00:00.000Z",
+    "image": "/_astro/theyre-coming-to-get-you-1972.B50rWwbz_4MKSp.png",
+    "slug": "theyre-coming-to-get-you-1972",
+    "stars": 2,
+    "title": "They're Coming to Get You!",
+    "year": "1972"
+  },
+  {
     "date": "2025-07-20T00:00:00.000Z",
     "image": "/_astro/superman-2025.Do1_Vnz4_Z10XFpI.png",
     "slug": "superman-2025",
@@ -38,13 +46,5 @@
     "stars": 2,
     "title": "Zombie Holocaust",
     "year": "1980"
-  },
-  {
-    "date": "2025-07-04T00:00:00.000Z",
-    "image": "/_astro/scream-and-scream-again-1970.DkUtbYLu_Z2tYvWG.png",
-    "slug": "scream-and-scream-again-1970",
-    "stars": 3.5,
-    "title": "Scream and Scream Again",
-    "year": "1970"
   }
 ]
