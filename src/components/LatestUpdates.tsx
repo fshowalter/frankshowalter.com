@@ -246,7 +246,7 @@ function UpdateDetails({
     <div className="@container">
       <div
         className={`
-          flex justify-center bg-default px-4 pb-8
+          flex justify-center px-4 pb-8
           @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6
         `}
       >
@@ -279,7 +279,7 @@ function UpdateImage({ children }: { children: React.ReactNode }): JSX.Element {
         tablet:self-auto
       `}
     >
-      <div className={`z-10 flex justify-center bg-default`}>
+      <div className={`z-10 flex justify-center`}>
         <div
           className={`
             px-3 pt-3
