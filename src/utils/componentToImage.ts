@@ -5,9 +5,9 @@ import satori from "satori";
 import sharp from "sharp";
 
 export async function componentToImage(component: JSX.Element) {
-  return await sharp(Buffer.from(await componentToSvg(component)))
+  return (await sharp(Buffer.from(await componentToSvg(component)))
     .jpeg()
-    .toBuffer();
+    .toBuffer()) as Uint8Array<ArrayBuffer>;
 }
 
 async function componentToSvg(component: JSX.Element) {
