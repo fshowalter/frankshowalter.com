@@ -23,7 +23,7 @@ export function Home({
         imageProps={backdropImageProps}
         title="Frank Showalter"
       />
-      <div className="border-t-1 border-[#252525]">
+      <div className="border-t-4 border-(--bg-hero-border)">
         <LatestUpdates
           booklogUpdates={booklogUpdates}
           movielogUpdates={movielogUpdates}

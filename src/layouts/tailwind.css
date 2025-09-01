@@ -50,6 +50,7 @@
 @layer base {
   :root {
     --bg-calendar: #fbfaf8;
+    --bg-hero-border: #252525;
     --bg-accent: #b4841e;
     --bg-canvas: #f4f1ea;
     --bg-default: #fff;
@@ -107,6 +108,7 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
+      --bg-hero-border: #1e1e1e;
       --bg-calendar: #393938;
       --bg-accent: #aa7f33;
       --bg-canvas: #484745;

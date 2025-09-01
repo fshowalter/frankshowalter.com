@@ -17,7 +17,7 @@ export function Backdrop({
 }) {
   const heroImage = (
     <img
-      className={`absolute inset-0 size-full object-cover object-top`}
+      className={`absolute inset-0 size-full object-cover object-bottom`}
       {...imageProps}
       {...BackdropImageConfig}
       alt=""
@@ -85,8 +85,8 @@ function Wrapper({
         className={`
           z-10 mx-auto flex w-full max-w-[908px] flex-col px-container
           after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
-          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.1)]
-          after:via-transparent after:via-10% after:to-100% after:blur-md
+          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.4)]
+          after:via-transparent after:via-10% after:to-100%
           laptop:max-w-(--breakpoint-desktop)
         `}
       >
