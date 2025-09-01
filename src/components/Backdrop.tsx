@@ -74,7 +74,7 @@ function Wrapper({
     <header
       className={`
         relative flex min-h-[400px] w-full flex-col content-start items-center
-        justify-end gap-6 bg-canvas pt-40 pb-8 text-inverse
+        justify-end gap-6 bg-canvas pt-40 pb-8 text-inverse drop-shadow-xl
         tablet:min-h-[640px] tablet:pt-40 tablet:pb-10
         laptop:min-h-[clamp(640px,70vh,1350px)] laptop:pt-40 laptop:pb-16
         desktop:pb-16

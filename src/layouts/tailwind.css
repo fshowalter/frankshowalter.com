@@ -83,6 +83,7 @@
     );
     --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 15%);
     --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 12%);
+    --drop-shadow-xl: -5px 0px 20px rgb(0 0 0 / 50%);
     --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 15%);
     --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 15%);
   }

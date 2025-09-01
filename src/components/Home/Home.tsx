@@ -23,10 +23,12 @@ export function Home({
         imageProps={backdropImageProps}
         title="Frank Showalter"
       />
-      <LatestUpdates
-        booklogUpdates={booklogUpdates}
-        movielogUpdates={movielogUpdates}
-      />
+      <div className="border-t border-default">
+        <LatestUpdates
+          booklogUpdates={booklogUpdates}
+          movielogUpdates={movielogUpdates}
+        />
+      </div>
     </Layout>
   );
 }
