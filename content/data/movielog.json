@@ -1,5 +1,13 @@
 [
   {
+    "date": "2025-07-26T00:00:00.000Z",
+    "image": "/_astro/stay-hungry-1976.CAeE1CiX_ZfbTyB.png",
+    "slug": "stay-hungry-1976",
+    "stars": 2.5,
+    "title": "Stay Hungry",
+    "year": "1976"
+  },
+  {
     "date": "2025-07-25T00:00:00.000Z",
     "image": "/_astro/theyre-coming-to-get-you-1972.B50rWwbz_4MKSp.png",
     "slug": "theyre-coming-to-get-you-1972",
@@ -38,13 +46,5 @@
     "stars": 2,
     "title": "The Return of the Musketeers",
     "year": "1989"
-  },
-  {
-    "date": "2025-07-05T00:00:00.000Z",
-    "image": "/_astro/zombie-holocaust-1980.DVFzhXmw_NtxAd.png",
-    "slug": "zombie-holocaust-1980",
-    "stars": 2,
-    "title": "Zombie Holocaust",
-    "year": "1980"
   }
 ]
