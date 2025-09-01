@@ -74,7 +74,7 @@ function Wrapper({
     <header
       className={`
         relative flex min-h-[400px] w-full flex-col content-start items-center
-        justify-end gap-6 bg-canvas pt-40 pb-8 text-inverse drop-shadow-xl
+        justify-end gap-6 bg-canvas pt-40 pb-8 text-inverse
         tablet:min-h-[640px] tablet:pt-40 tablet:pb-10
         laptop:min-h-[clamp(640px,70vh,1350px)] laptop:pt-40 laptop:pb-16
         desktop:pb-16
@@ -84,6 +84,9 @@ function Wrapper({
       <div
         className={`
           z-10 mx-auto flex w-full max-w-[908px] flex-col px-container
+          after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
+          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.35)]
+          after:via-transparent after:via-10% after:to-100% after:blur-md
           laptop:max-w-(--breakpoint-desktop)
         `}
       >
