@@ -21,16 +21,7 @@ export function Content({
 }: Props): JSX.Element {
   return (
     <Layout className="bg-subtle pb-8">
-      <Backdrop
-        deck={deck}
-        imageProps={backdropImageProps}
-        title={title}
-        titleClasses={`
-          font-sans text-2.5xl font-semibold uppercase
-          tablet:text-5xl
-          desktop:text-7xl
-        `}
-      />
+      <Backdrop deck={deck} imageProps={backdropImageProps} title={title} />
       <LatestUpdates
         booklogUpdates={booklogUpdates}
         movielogUpdates={movielogUpdates}
