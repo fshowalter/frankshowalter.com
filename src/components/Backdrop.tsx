@@ -10,12 +10,10 @@ export function Backdrop({
   deck,
   imageProps,
   title,
-  titleClasses,
 }: {
   deck: React.ReactNode;
   imageProps: BackdropImageProps;
   title: string;
-  titleClasses?: string;
 }) {
   const heroImage = (
     <img
@@ -30,7 +28,7 @@ export function Backdrop({
 
   return (
     <Wrapper heroImage={heroImage}>
-      <Title className={titleClasses} value={title} />
+      <Title value={title} />
       <Deck value={deck} />
     </Wrapper>
   );
@@ -40,9 +38,9 @@ function Deck({ value }: { value?: React.ReactNode }) {
   return (
     <p
       className={`
-        mt-1 text-base
-        laptop:text-lg
-        desktop:my-4 desktop:text-xl
+        mt-1 font-sans text-base
+        [text-shadow:1px_1px_2px_black]
+        laptop:my-4 laptop:text-xl
       `}
     >
       {value}
@@ -50,8 +48,19 @@ function Deck({ value }: { value?: React.ReactNode }) {
   );
 }
 
-function Title({ className, value }: { className?: string; value: string }) {
-  return <h1 className={className}>{value}</h1>;
+function Title({ value }: { className?: string; value: string }) {
+  return (
+    <h1
+      className={`
+        text-[2rem] leading-10 font-extrabold
+        [text-shadow:1px_1px_2px_#252525]
+        tablet:text-4xl
+        laptop:text-7xl
+      `}
+    >
+      {value}
+    </h1>
+  );
 }
 
 function Wrapper({
@@ -64,11 +73,10 @@ function Wrapper({
   return (
     <header
       className={`
-        relative flex min-h-[clamp(340px,50vh,1350px)] w-full flex-col
-        content-start items-center justify-end gap-6 bg-canvas pt-40 pb-8
-        after:absolute after:size-full after:bg-linear-to-b
-        after:from-[rgba(0,0,0,.85)] after:to-transparent after:to-95%
-        tablet:pt-40 tablet:pb-10
+        relative flex min-h-[400px] w-full flex-col content-start items-center
+        justify-end gap-6 bg-canvas pt-40 pb-8 text-inverse
+        tablet:min-h-[640px] tablet:pt-40 tablet:pb-10
+        laptop:min-h-[clamp(640px,70vh,1350px)] laptop:pt-40 laptop:pb-16
         desktop:pb-16
       `}
     >

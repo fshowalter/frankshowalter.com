@@ -39,6 +39,20 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     {canonical && <link href={canonicalUrl} rel="canonical" />}
     <link href="/favicon.svg" rel="icon" sizes="any" type="image/svg+xml" />
     <link href="/sitemap-index.xml" rel="sitemap" />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="/fonts/Assistant/Assistant.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre_latin_300-900_normal.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
     <meta content={meta.description} name="description" />
     <slot name="meta-theme-color">
       <meta content="rgba(0,0,0,.85)" name="theme-color" />

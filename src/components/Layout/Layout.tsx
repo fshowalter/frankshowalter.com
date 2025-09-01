@@ -27,7 +27,7 @@ export function Layout({
       <div className="flex min-h-full w-full flex-col bg-default">
         <main
           className={`
-            grow
+            z-10 grow
             ${className}
           `}
           id="content"

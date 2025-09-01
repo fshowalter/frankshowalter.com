@@ -42,43 +42,27 @@ export function LatestUpdates({
   return (
     <nav
       className={`
-        mx-auto w-full max-w-[908px] bg-subtle px-container
+        mx-auto w-full max-w-[908px] bg-subtle
+        tablet:px-container
         laptop:max-w-(--breakpoint-desktop) laptop:px-container
       `}
     >
-      <SubHeading as="h2">
-        <a
-          className={`
-            inline-block transform-gpu transition-transform
-            hover:scale-110
-          `}
-          href="https://www.franksmovielog.com"
-        >
-          Latest <span className="text-accent">Movie Reviews</span>
-        </a>
-      </SubHeading>
+      <LatestUpdatesHeading
+        accentText="Movie Reviews"
+        href="https://www.franksmovielog.com"
+        text="Latest"
+      />
       <UpdateList>
-        {movielogUpdates.map((value, index) => {
-          return (
-            <MovielogUpdateListItem
-              eagerLoadCoverImage={index < 2}
-              key={value.slug}
-              value={value}
-            />
-          );
+        {movielogUpdates.map((value) => {
+          return <MovielogUpdateListItem key={value.slug} value={value} />;
         })}
       </UpdateList>
-      <SubHeading as="h2">
-        <a
-          className={`
-            inline-block transform-gpu transition-transform
-            hover:scale-110
-          `}
-          href="https://www.franksbooklog.com"
-        >
-          Latest <span className="text-accent">Book Reviews</span>
-        </a>
-      </SubHeading>
+      <LatestUpdatesHeading
+        accentText="Book Reviews"
+        href="https://www.franksbooklog.com"
+        text="Latest"
+      />
+
       <UpdateList>
         {booklogUpdates.map((value) => {
           return <BooklogUpdateListItem key={value.slug} value={value} />;
@@ -95,12 +79,7 @@ function BooklogUpdateListItem({
 }): JSX.Element {
   return (
     <UpdateListItem>
-      <UpdateCover
-        decoding="async"
-        imageProps={value.imageProps}
-        {...ImageConfig}
-        loading={"lazy"}
-      />
+      <UpdateCover imageProps={value.imageProps} {...ImageConfig} />
 
       <UpdateDetails>
         <UpdateDate date={value.date} />
@@ -109,26 +88,15 @@ function BooklogUpdateListItem({
         >
           {value.title}
         </UpdateTitle>
-        <p
+        <div
           className={`
-            pt-1 font-sans text-xxs leading-[14px] font-light text-subtle
-            tablet:pt-2
+            -mt-1 text-[15px] leading-4 font-normal tracking-prose text-muted
           `}
         >
-          <span
-            className={`
-              hidden
-              tablet:inline
-            `}
-          >
-            by{" "}
-          </span>
           {toSentenceArray(
-            value.authors.map((author) => {
-              return <span key={author}>{author}</span>;
-            }),
+            value.authors.map((value) => <span key={value}>{value}</span>),
           )}
-        </p>{" "}
+        </div>
         <UpdateGrade stars={value.stars} />
       </UpdateDetails>
     </UpdateListItem>
@@ -144,29 +112,51 @@ function formatDate(reviewDate: Date) {
   });
 }
 
+function LatestUpdatesHeading({
+  accentText,
+  href,
+  text,
+}: {
+  accentText: string;
+  as?: "h2" | "h3" | "h4" | "h5";
+  href: string;
+  text: string;
+}): React.JSX.Element {
+  return (
+    <SubHeading as="h2">
+      <a
+        className={`
+          relative -mb-1 inline-block transform-gpu px-container pb-1
+          transition-all
+          after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-bottom-right after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:after:scale-x-100
+          tablet:px-0
+        `}
+        href={href}
+      >
+        {text} <span className={`text-accent`}>{accentText}</span>
+      </a>
+    </SubHeading>
+  );
+}
+
 function MovielogUpdateListItem({
-  eagerLoadCoverImage,
   value,
 }: {
-  eagerLoadCoverImage: boolean;
   value: MovielogListItemValue;
 }): JSX.Element {
   return (
     <UpdateListItem>
-      <UpdatePoster
-        decoding="async"
-        imageProps={value.imageProps}
-        {...ImageConfig}
-        className={`max-w-[200px] rounded-[2.5px]`}
-        loading={eagerLoadCoverImage ? "eager" : "lazy"}
-      />
+      <UpdatePoster imageProps={value.imageProps} {...ImageConfig} />
       <UpdateDetails>
         <UpdateDate date={value.date} />
         <UpdateTitle
           href={`https://www.franksmovielog.com/reviews/${value.slug}/`}
         >
-          {value.title}{" "}
-          <span className={`text-xxs leading-0 font-light text-subtle`}>
+          {value.title}&#x202F;&#x202F;
+          <span className={`text-xxs leading-none font-light text-subtle`}>
             ({value.year})
           </span>
         </UpdateTitle>
@@ -177,24 +167,30 @@ function MovielogUpdateListItem({
 }
 
 function UpdateCover({
-  decoding = "async",
+  className,
   imageProps,
-  loading = "lazy",
-  ...rest
-}: React.ImgHTMLAttributes<HTMLImageElement> & {
-  decoding: "async" | "auto" | "sync";
-  imageProps: ImageProps | undefined;
-  loading: "eager" | "lazy";
-  width: number;
-}): JSX.Element {
+}: {
+  className?: string;
+  imageProps: ImageProps;
+}): React.JSX.Element {
   return (
-    <UpdateImage>
+    <div
+      className={`
+        relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
+        rounded-sm shadow-all transition-transform
+        after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+        after:bg-default after:opacity-15 after:transition-opacity
+        group-has-[a:hover]/list-item:after:opacity-0
+        ${className ?? "tablet:w-auto"}
+      `}
+    >
       <div
         className={`
           relative
-          after:absolute after:top-0 after:left-0 after:z-20 after:block
-          after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)]
-          after:bg-size-[100%_100%] after:mix-blend-soft-light
+          after:absolute after:top-0 after:left-0 after:z-10 after:block
+          after:size-full after:rounded-[2.5px]
+          after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%]
+          after:mix-blend-multiply
         `}
       >
         <div
@@ -203,23 +199,26 @@ function UpdateCover({
             before:absolute before:top-0 before:left-0 before:z-10 before:block
             before:size-full before:rounded-[2.5px]
             before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%]
-            after:absolute after:top-0 after:left-0 after:z-10 after:block
-            after:size-full after:rounded-[2.5px]
-            after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%]
-            after:mix-blend-multiply
+            after:absolute after:top-0 after:left-0 after:block after:size-full
+            after:rounded-[2.5px] after:bg-[url(/assets/spot.png)]
+            after:bg-size-[100%_100%] after:mix-blend-soft-light
           `}
         >
           <img
             {...imageProps}
-            {...rest}
             alt=""
-            className="rounded-[2.5px]"
-            decoding={decoding}
-            loading={loading}
+            {...ImageConfig}
+            className={`
+              transform-gpu rounded-[2.5px] bg-default shadow-sm
+              transition-transform duration-500
+              group-has-[a:hover]/list-item:scale-110
+              @min-[160px]:shadow-lg
+            `}
+            loading="lazy"
           />
         </div>
       </div>
-    </UpdateImage>
+    </div>
   );
 }
 
@@ -227,7 +226,7 @@ function UpdateDate({ date }: { date: Date }): JSX.Element {
   return (
     <div
       className={`
-        pt-3 font-sans text-xxs leading-4 font-light whitespace-nowrap
+        font-sans text-[13px] leading-4 font-normal whitespace-nowrap
         text-subtle
         tablet:tracking-wide
       `}
@@ -243,79 +242,38 @@ function UpdateDetails({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <div className="@container">
+    <div className="@container/details w-full">
       <div
         className={`
-          flex justify-center px-4 pb-8
-          @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pb-6
+          flex grow flex-col items-start gap-y-2
+          tablet:mt-2 tablet:w-full tablet:px-1
         `}
       >
-        <div className={`flex w-full max-w-[248px] flex-col px-1`}>
-          {children}
-        </div>
+        {children}
       </div>
     </div>
   );
 }
 
 function UpdateGrade({ stars }: { stars: number }): JSX.Element {
-  return (
-    <Grade
-      className={`
-        mt-2 h-3 w-15
-        @min-[248px]:mt-2 @min-[248px]:h-[14px] @min-[248px]:w-[70px]
-      `}
-      height={16}
-      value={stars}
-    />
-  );
-}
-
-function UpdateImage({ children }: { children: React.ReactNode }): JSX.Element {
-  return (
-    <div
-      className={`
-        @container flex self-end
-        tablet:self-auto
-      `}
-    >
-      <div className={`z-10 flex justify-center`}>
-        <div
-          className={`
-            px-3 pt-3
-            @min-[200px]:px-[clamp(4px,12cqw,32px)] @min-[200px]:pt-6
-          `}
-        >
-          <div
-            className={`
-              relative max-w-[248px] drop-shadow-sm
-              after:absolute after:inset-x-0 after:top-0 after:bottom-0
-              after:z-20 after:bg-default after:opacity-15
-              after:transition-opacity
-              group-hover/card:after:opacity-0
-            `}
-          >
-            {children}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <Grade className="-mt-0.5 pb-[3px]" height={15} value={stars} />;
 }
 
 function UpdateList({ children }: { children: React.ReactNode }): JSX.Element {
   return (
-    <ol
-      className={`
-        -mx-4 grid auto-rows-[auto_1fr] grid-cols-2 flex-wrap
-        gap-x-[clamp(8px,2vw,32px)] gap-y-[clamp(8px,2vw,32px)]
-        tablet:flex tablet:items-baseline tablet:gap-x-4 tablet:gap-y-4
-        laptop:-mx-6 laptop:gap-x-6 laptop:gap-y-6
-        desktop:-mx-8 desktop:gap-y-12
-      `}
-    >
-      {children}
-    </ol>
+    <div className="@container/update-list">
+      <ol
+        className={`
+          items-baseline
+          [--update-list-item-width:50%]
+          tablet:-mx-6 tablet:flex tablet:flex-wrap
+          @min-[calc((250px_*_2)_+_1px)]/update-list:[--update-list-item-width:33.33%]
+          @min-[calc((250px_*_5)_+_1px)]/update-list:[--update-list-item-width:16.66%]
+        `}
+      >
+        {children}
+      </ol>
+    </div>
   );
 }
 
@@ -327,12 +285,13 @@ function UpdateListItem({
   return (
     <li
       className={`
-        group/card relative row-span-2 grid transform-gpu grid-rows-subgrid
-        flex-col gap-y-0 bg-default transition-transform
-        has-[a:hover]:drop-shadow-2xl
-        tablet:flex tablet:w-[calc((100%_-_32px)_/_3)]
-        tablet:has-[a:hover]:scale-105
-        laptop:w-[calc((100%_-_120px)_/_6)]
+        group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop)
+        transform-gpu flex-row gap-x-[5%] bg-default px-container py-4
+        transition-transform duration-500
+        tablet:w-(--update-list-item-width) tablet:flex-col
+        tablet:bg-transparent tablet:px-6 tablet:py-6
+        tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default
+        tablet:has-[a:hover]:drop-shadow-2xl
       `}
     >
       {children}
@@ -341,36 +300,34 @@ function UpdateListItem({
 }
 
 function UpdatePoster({
-  decoding = "async",
   imageProps,
-  loading = "lazy",
-  ...rest
-}: React.ImgHTMLAttributes<HTMLImageElement> & {
-  decoding: "async" | "auto" | "sync";
-  imageProps: ImageProps | undefined;
-  loading: "eager" | "lazy";
-  width: number;
-}): JSX.Element {
+}: {
+  imageProps: ImageProps;
+}): React.JSX.Element {
   return (
-    <UpdateImage>
-      <div
+    <div
+      className={`
+        relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden
+        rounded-sm shadow-all
+        after:absolute after:top-0 after:left-0 after:size-full after:bg-default
+        after:opacity-15 after:transition-all after:duration-500
+        group-has-[a:hover]/list-item:after:opacity-0
+        tablet:w-full
+      `}
+    >
+      <img
+        {...imageProps}
+        alt=""
+        {...ImageConfig}
         className={`
-          relative
-          after:absolute after:top-0 after:left-0 after:z-20 after:block
-          after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)]
-          after:bg-size-[100%_100%] after:mix-blend-soft-light
+          aspect-[1/1.5] w-full transform-gpu object-cover transition-transform
+          duration-500
+          group-has-[a:hover]/list-item:scale-110
         `}
-      >
-        <img
-          {...imageProps}
-          {...rest}
-          alt=""
-          className="rounded-[2.5px]"
-          decoding={decoding}
-          loading={loading}
-        />
-      </div>
-    </UpdateImage>
+        decoding="async"
+        loading="lazy"
+      />
+    </div>
   );
 }
 
@@ -382,24 +339,18 @@ function UpdateTitle({
   href: string;
 }): JSX.Element {
   return (
-    <div
+    <a
       className={`
-        pt-2 text-xs leading-4 font-medium
-        tablet:pt-3
+        text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default
+        transition-all duration-500
+        after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+        after:opacity-0
+        hover:text-accent
       `}
+      href={href}
+      rel="canonical"
     >
-      <a
-        className={`
-          block font-sans
-          after:absolute after:top-0 after:left-0 after:z-60 after:size-full
-          after:opacity-0
-          hover:text-accent
-        `}
-        href={href}
-        rel="canonical"
-      >
-        {children}
-      </a>
-    </div>
+      {children}
+    </a>
   );
 }
