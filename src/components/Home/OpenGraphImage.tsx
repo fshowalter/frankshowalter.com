@@ -1,12 +1,17 @@
 import type { JSX } from "react";
+
+export type OpenGraphImageComponentType = (
+  props: OpenGraphImageProps,
+) => React.JSX.Element;
+
+type OpenGraphImageProps = {
+  backdrop: string;
+};
+
 export function OpenGraphImage({
   backdrop,
-  sectionHead = "Frank Showalter",
-  title,
 }: {
   backdrop?: string;
-  sectionHead?: string;
-  title: string;
 }): JSX.Element {
   return (
     <div
@@ -41,28 +46,29 @@ export function OpenGraphImage({
       >
         <div
           style={{
-            color: "rgb(0 0 0 / 60%)",
-            fontFamily: "ArgentumSans",
-            marginBottom: "16px",
-            textTransform: "uppercase",
+            color: "#fff",
+            display: "flex",
+            fontFamily: "FrankRuhlLibre",
+            fontSize: "72px",
+            fontWeight: 800,
+            lineHeight: 1,
+            marginTop: "auto",
+            textShadow: "1px 1px 2px black",
           }}
         >
-          {sectionHead}
+          Frank Showalter
         </div>
         <div
           style={{
-            color: "#fff",
-            display: "flex",
-            flexWrap: "wrap",
-            fontFamily: "ArgentumSans",
-            fontSize: "88px",
-            fontWeight: 600,
-            lineHeight: 1,
-            textTransform: "uppercase",
-            textWrap: "balance",
+            color: "#c29d52",
+            fontFamily: "Assistant",
+            fontSize: "20px",
+            fontWeight: 700,
+            marginBottom: "8px",
+            textShadow: "1px 1px 2px black",
           }}
         >
-          {title}
+          Mostly movie reviews, sometimes book reviews.
         </div>
       </div>
     </div>

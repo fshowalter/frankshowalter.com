@@ -16,7 +16,7 @@ export function Grade({
   value,
 }: {
   className?: string;
-  height: 16 | 18 | 24 | 32;
+  height: 15 | 16 | 18 | 24 | 32;
   value?: number | string;
 }) {
   if (!value || value == "Abandoned") {
