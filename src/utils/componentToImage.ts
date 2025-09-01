@@ -16,11 +16,7 @@ export async function componentToImage(
 ): Promise<Uint8Array<ArrayBuffer>> {
   const svg = await componentToSvg(component);
   return (await sharp(Buffer.from(svg))
-    .jpeg({
-      mozjpeg: false,
-      progressive: false,
-      quality: 90,
-    })
+    .jpeg()
     .toBuffer()) as Uint8Array<ArrayBuffer>;
 }
 
