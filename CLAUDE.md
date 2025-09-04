@@ -5,17 +5,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Commands
 
 ### Core Development
+
 - `npm run dev` or `npm start` - Start development server
 - `npm run build` - Build production site
 - `npm run preview` - Preview production build locally
 
 ### Testing & Quality
+
 - `npm test` - Run all tests
 - `npm run test:watch` - Run tests in watch mode
 - `npm run test:coverage` - Run tests with coverage report
 - `npm run test:update` - Update test snapshots
 
 ### Code Quality
+
 - `npm run lint` - Run ESLint
 - `npm run lint:fix` - Fix ESLint issues
 - `npm run format` - Check Prettier formatting
@@ -25,13 +28,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run lint:spelling` - Check spelling with cspell
 - `npm run knip` - Check for unused dependencies/exports
 
-### Additional Tools  
+### Additional Tools
+
 - `npm run check` - Run Astro type checking
 - `npm run update:data` - Update content data (requires Node --experimental-strip-types)
 
 ## Architecture Overview
 
 ### Tech Stack
+
 - **Framework**: Astro 5.x with React integration
 - **Styling**: TailwindCSS 4.x with custom CSS variables
 - **Testing**: Vitest with Istanbul coverage
@@ -68,7 +73,8 @@ content/
 
 **Path Aliases**: `~/*` maps to `src/*` for clean imports
 
-**Vitest Setup**: 
+**Vitest Setup**:
+
 - Global teardown enabled for testing-library
 - Istanbul coverage provider
 - Separate project config for pages with Node environment
@@ -82,6 +88,6 @@ content/
 
 - The site focuses on movie and book reviews with a content-driven architecture
 - Custom HMR plugin reloads when content files change
-- All imports use TypeScript path aliases (`~/`)  
+- All imports use TypeScript path aliases (`~/`)
 - Content data updates require running the `update:data` script
 - Tests include snapshot testing for rendered HTML output
