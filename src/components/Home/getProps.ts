@@ -22,7 +22,6 @@ export async function getProps(): Promise<Props> {
         return {
           ...item,
           displayDate: formatDate(item.date),
-          imageConfig: HomeImageConfig,
           imageProps: await getFluidImageProps(
             "cover",
             item.slug,
@@ -36,7 +35,6 @@ export async function getProps(): Promise<Props> {
         return {
           ...item,
           displayDate: formatDate(item.date),
-          imageConfig: HomeImageConfig,
           imageProps: await getFluidImageProps(
             "poster",
             item.slug,

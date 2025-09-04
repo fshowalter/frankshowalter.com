@@ -36,14 +36,14 @@ if (import.meta.env.MODE === "test") {
 export async function getFluidImageProps(
   kind: "cover" | "poster",
   slug: string,
-  imageProps: {
+  imageConfig: {
     sizes: string;
     width: number;
   },
 ): Promise<ImageProps> {
   let image;
   let height;
-  const { sizes, width } = imageProps;
+  const { sizes, width } = imageConfig;
 
   switch (kind) {
     case "cover": {
