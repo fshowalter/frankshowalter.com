@@ -3,9 +3,10 @@ import { booklogUpdates } from "~/api/booklog";
 import { getFluidImageProps } from "~/api/images";
 import { movielogUpdates } from "~/api/movielog";
 import { BackdropImageConfig } from "~/components/Backdrop";
-import { ImageConfig } from "~/components/LatestUpdates";
 
 import type { Props } from "./Home";
+
+import { HomeImageConfig } from "./Home";
 
 export async function getProps(): Promise<Props> {
   const booklogItems = await booklogUpdates();
@@ -20,10 +21,12 @@ export async function getProps(): Promise<Props> {
       booklogItems.map(async (item) => {
         return {
           ...item,
+          displayDate: formatDate(item.date),
+          imageConfig: HomeImageConfig,
           imageProps: await getFluidImageProps(
             "cover",
             item.slug,
-            ImageConfig.width,
+            HomeImageConfig,
           ),
         };
       }),
@@ -32,13 +35,24 @@ export async function getProps(): Promise<Props> {
       movielogItems.map(async (item) => {
         return {
           ...item,
+          displayDate: formatDate(item.date),
+          imageConfig: HomeImageConfig,
           imageProps: await getFluidImageProps(
             "poster",
             item.slug,
-            ImageConfig.width,
+            HomeImageConfig,
           ),
         };
       }),
     ),
   };
+}
+
+function formatDate(reviewDate: Date) {
+  return reviewDate.toLocaleString("en-GB", {
+    day: "2-digit",
+    month: "short",
+    timeZone: "UTC",
+    year: "numeric",
+  });
 }

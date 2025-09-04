@@ -7,6 +7,7 @@ import { normalizeSources } from "./utils/normalizeSources";
 
 export type ImageProps = {
   height: number;
+  sizes: string;
   src: string;
   srcSet: string;
   width: number;
@@ -35,10 +36,14 @@ if (import.meta.env.MODE === "test") {
 export async function getFluidImageProps(
   kind: "cover" | "poster",
   slug: string,
-  width: number,
+  imageProps: {
+    sizes: string;
+    width: number;
+  },
 ): Promise<ImageProps> {
   let image;
   let height;
+  const { sizes, width } = imageProps;
 
   switch (kind) {
     case "cover": {
@@ -64,6 +69,7 @@ export async function getFluidImageProps(
 
   return {
     height,
+    sizes,
     src: normalizeSources(optimizedImage.src),
     srcSet: normalizeSources(optimizedImage.srcSet.attribute),
     width,
