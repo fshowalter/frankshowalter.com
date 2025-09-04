@@ -10,10 +10,11 @@ import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
 
-export default tsEslint.config(
+export default defineConfig(
   {
     ignores: ["dist/", ".astro/", "coverage/", "content/", "public/"],
   },

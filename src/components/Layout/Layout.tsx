@@ -12,7 +12,7 @@ export function Layout({
   className?: string;
 }): JSX.Element {
   return (
-    <div>
+    <div className="h-full">
       <a
         className={`
           absolute top-0.5 left-1/2 z-50 mx-auto
