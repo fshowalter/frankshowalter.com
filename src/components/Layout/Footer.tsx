@@ -12,7 +12,7 @@ export function Footer(): JSX.Element {
     >
       <p
         className={`
-          w-full px-container text-center leading-5 font-normal text-inverse
+          w-full px-container text-center leading-5 font-normal text-off-white
         `}
       >
         All images used in accordance with the{" "}

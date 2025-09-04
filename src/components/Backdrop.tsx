@@ -38,7 +38,7 @@ function Deck({ value }: { value?: React.ReactNode }) {
   return (
     <p
       className={`
-        mt-1 font-sans text-base
+        mt-1 font-sans text-base text-off-white
         [text-shadow:1px_1px_2px_black]
         laptop:my-4 laptop:text-xl
       `}
@@ -74,7 +74,8 @@ function Wrapper({
     <header
       className={`
         relative flex min-h-[400px] w-full flex-col content-start items-center
-        justify-end gap-6 bg-[#141414] pt-40 pb-8 text-inverse
+        justify-end gap-6 border-b-2 border-hero-bg bg-hero-bg pt-40 pb-8
+        text-white
         tablet:min-h-[640px] tablet:pt-40 tablet:pb-10
         laptop:min-h-[clamp(640px,70vh,1350px)] laptop:pt-40 laptop:pb-16
         desktop:pb-16
