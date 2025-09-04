@@ -1,13 +1,10 @@
-import type { JSX } from "react";
-import type React from "react";
-
 export function UpdateTitle({
   children,
   href,
 }: {
   children: React.ReactNode;
   href: string;
-}): JSX.Element {
+}): React.JSX.Element {
   return (
     <a
       className={`
