@@ -38,37 +38,35 @@ export function Home({
         imageProps={backdropImageProps}
         title="Frank Showalter"
       />
-      <div className="border-t-4 border-(--bg-hero-border)">
-        <nav
-          className={`
-            mx-auto w-full max-w-[908px] bg-subtle
-            tablet:px-container
-            laptop:max-w-(--breakpoint-desktop) laptop:px-container
-          `}
-        >
-          <HomeSubHeading
-            accentText="Movie Reviews"
-            href="https://www.franksmovielog.com"
-            text="Latest"
-          />
-          <HomeUpdateList>
-            {movielogUpdates.map((value) => {
-              return <MovielogUpdateListItem key={value.slug} value={value} />;
-            })}
-          </HomeUpdateList>
-          <HomeSubHeading
-            accentText="Book Reviews"
-            href="https://www.franksbooklog.com"
-            text="Latest"
-          />
+      <nav
+        className={`
+          mx-auto w-full max-w-[908px] bg-subtle
+          tablet:px-container
+          laptop:max-w-(--breakpoint-desktop) laptop:px-container
+        `}
+      >
+        <HomeSubHeading
+          accentText="Movie Reviews"
+          href="https://www.franksmovielog.com"
+          text="Latest"
+        />
+        <HomeUpdateList>
+          {movielogUpdates.map((value) => {
+            return <MovielogUpdateListItem key={value.slug} value={value} />;
+          })}
+        </HomeUpdateList>
+        <HomeSubHeading
+          accentText="Book Reviews"
+          href="https://www.franksbooklog.com"
+          text="Latest"
+        />
 
-          <HomeUpdateList>
-            {booklogUpdates.map((value) => {
-              return <BooklogUpdateListItem key={value.slug} value={value} />;
-            })}
-          </HomeUpdateList>
-        </nav>
-      </div>
+        <HomeUpdateList>
+          {booklogUpdates.map((value) => {
+            return <BooklogUpdateListItem key={value.slug} value={value} />;
+          })}
+        </HomeUpdateList>
+      </nav>
     </Layout>
   );
 }

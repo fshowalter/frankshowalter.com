@@ -1,17 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --aspect-cover: 1 / 1.5;
-
   --background-color-*: initial;
-  --background-color-canvas: var(--bg-canvas);
-  --background-color-default: var(--bg-default);
-  --background-color-footer: var(--bg-footer);
-  --background-color-subtle: var(--bg-subtle);
-  --background-color-hover: var(--bg-hover);
+  --background-color-default: light-dark(#fff, #322f2f);
+  --background-color-footer: #2b292b;
+  --background-color-subtle: light-dark(#f9f7f4, #3e3d3c);
 
   --border-color-*: initial;
-  --border-color-default: var(--border-default);
 
   --breakpoint-*: initial;
   --breakpoint-tablet: 768px;
@@ -20,12 +15,15 @@
   --breakpoint-desktop: 1840px;
 
   --color-*: initial;
-  --color-accent: var(--fg-accent);
-  --color-default: var(--fg-default);
+  --color-accent: #bf8a00;
+  --color-default: light-dark(#252525, rgb(255 255 255 / 75%));
+  --color-hero-bg: #141414;
   --color-inherit: inherit;
-  --color-inverse: var(--fg-inverse);
-  --color-subtle: var(--fg-subtle);
-  --color-muted: var(--fg-muted);
+  --color-inverse: light-dark(rgb(255 255 255 / 75%), #252525);
+  --color-muted: light-dark(#4a4a4a, rgb(255 255 255 / 65%));
+  --color-off-white: rgb(255 255 255 / 85%);
+  --color-subtle: light-dark(rgb(0 0 0 / 60%), #b2b0b0);
+  --color-white: #fff;
 
   --container-unset: unset;
 
@@ -33,14 +31,11 @@
   --font-serif: var(--font-serif);
 
   --padding-container: var(--container-padding);
-  --max-width-prose: 36rem;
 
   --shadow-all: 0 0 0 1px var(--border-default);
-  --shadow-hover: 0 0 1px 1px var(--fg-canvas);
 
   --text-xxs: 0.6875rem;
   --text-md: 1.125rem;
-  --text-2_5xl: 1.625rem;
 
   --tracking-*: initial;
   --tracking-wide: 0.8px;
@@ -49,44 +44,16 @@
 
 @layer base {
   :root {
-    --bg-calendar: #fbfaf8;
-    --bg-hero-border: #252525;
-    --bg-accent: #b4841e;
-    --bg-canvas: #f4f1ea;
-    --bg-default: #fff;
-    --bg-footer: #2b292b;
-    --bg-hover: #f7f5f3;
-    --bg-inverse: rgb(0 0 0 / 75%);
-    --bg-progress: #14bd41;
-    --bg-stripe: #fcfcfc;
-    --bg-group: #ededed;
-    --bg-subtle: #f9f7f4;
-
-    --border-default: #e9e7e0;
-    --fg-accent: #bf8a00;
-    --fg-default: #252525;
-    --fg-inverse: #fff;
-    --fg-inverse-subtle: #b0b0b0;
-    --fg-muted: #4a4a4a;
-    --fg-subtle: rgb(0 0 0 / 60%);
     --image-filter: initial;
+
     --container-padding: 8%;
+
     --font-sans: "Assistant";
     --font-serif: "FrankRuhlLibre";
-    --list-item-poster-width: 64px;
-    --hero-gradient: linear-gradient(
-      to top,
-      rgb(0 0 0 / 55%),
-      rgb(0 0 0 / 17%) 25%,
-      transparent 40%,
-      rgb(0 0 0 / 17%) 75%,
-      rgb(0 0 0 / 55%) 100%
-    );
-    --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 15%);
-    --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 12%);
-    --drop-shadow-xl: -5px 0px 20px rgb(0 0 0 / 50%);
+
     --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 15%);
-    --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 15%);
+
+    color-scheme: light dark;
   }
 
   body {
@@ -108,28 +75,9 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg-hero-border: #1e1e1e;
-      --bg-calendar: #393938;
-      --bg-accent: #aa7f33;
-      --bg-canvas: #484745;
-      --bg-default: #322f2f;
-      --bg-hover: #3c393a;
-      --bg-inverse: #322f2f;
-      --bg-progress: #379634;
-      --bg-group: #464646;
-      --bg-stripe: #3c393a;
-      --bg-subtle: #3e3d3c;
-      --border-default: #484745;
-      --fg-accent: #bf8a00;
-      --fg-default: rgb(255 255 255 / 75%);
-      --fg-muted: rgb(255 255 255 / 65%);
-      --fg-subtle: #b2b0b0;
       --image-filter: brightness(0.8) contrast(1);
-      --hero-gradient: unset;
-      --drop-shadow-sm: 0 1px 2px rgb(0 0 0 / 80%);
-      --drop-shadow-md: 0 3px 3px rgb(0 0 0 / 80%);
+
       --drop-shadow-2xl: 0 25px 25px rgb(0 0 0 / 65%);
-      --drop-shadow-lg: 0 4px 4px rgb(0 0 0 / 25%);
     }
   }
 
