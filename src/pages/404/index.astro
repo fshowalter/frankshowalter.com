@@ -1,7 +1,11 @@
 ---
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Layout } from "~/components/layout";
-import { getLayoutBackdropImageProps } from "~/components/Layout/getLayoutBackdropImageProps";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
+import { getRecentUpdatesProps } from "~/features/recent-updates/getRecentUpdatesProps";
+import { RecentUpdates } from "~/features/recent-updates/RecentUpdates";
+
+const recentUpdatesProps = await getRecentUpdatesProps();
 
 const title = "404 Not Found";
 const deck = `"They're coming to get you, Barbra!"`;
@@ -15,14 +19,16 @@ const backdropImageProps = await getLayoutBackdropImageProps("not-found");
   title={title}
 >
   <Layout
+    backdrop={{
+      backdropImageProps,
+      centerText: true,
+      deck,
+      size: "full",
+      title,
+    }}
     className="flex flex-col bg-subtle"
     logo={true}
-    backdrop={{
-      deck,
-      backdropImageProps,
-      title,
-      centerText: true,
-      size: "full",
-    }}><span></span></Layout
+  >
+    <RecentUpdates {...recentUpdatesProps} /></Layout
   >
 </AstroPageShell>

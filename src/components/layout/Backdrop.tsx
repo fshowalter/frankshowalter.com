@@ -13,9 +13,9 @@ export const BackdropImageConfig = {
  * Props for the Backdrop component.
  */
 export type BackdropProps = {
+  backdropImageProps: BackdropImageProps;
   centerText?: boolean;
   deck?: React.ReactNode;
-  backdropImageProps: BackdropImageProps;
   size?: "default" | "full";
   title: string;
   titleStyle?: string;
@@ -34,16 +34,16 @@ export type BackdropProps = {
  * @returns Backdrop hero section with image and text overlay
  */
 export function Backdrop({
+  backdropImageProps,
   centerText = false,
   deck,
-  backdropImageProps,
   size = "default",
   title,
   titleStyle,
 }: BackdropProps): React.JSX.Element {
   const heroImage = (
     <img
-      className="absolute inset-0 size-full object-cover object-top"
+      className="absolute inset-0 size-full object-cover object-bottom"
       {...backdropImageProps}
       {...BackdropImageConfig}
       alt=""

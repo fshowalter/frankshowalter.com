@@ -1,9 +1,9 @@
 ---
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
 import { getRecentUpdatesProps } from "~/features/recent-updates/getRecentUpdatesProps";
 import { RecentUpdates } from "~/features/recent-updates/RecentUpdates";
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/Layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
 
 const recentUpdatesProps = await getRecentUpdatesProps();
 const backdropImageProps = await getLayoutBackdropImageProps("home");
@@ -24,8 +24,9 @@ const metaDescription =
   <Layout
     backdrop={{
       backdropImageProps,
-      title: "Frank Showalter",
       deck,
+      size: "full",
+      title: "Frank Showalter",
     }}
   >
     <RecentUpdates {...recentUpdatesProps} />

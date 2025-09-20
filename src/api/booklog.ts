@@ -1,7 +1,7 @@
 import { promises as fs } from "node:fs";
 import { z } from "zod";
 
-import { UpdateSchema } from "./updateSchema";
+import { UpdateSchema } from "./UpdateSchema";
 import { getContentPath } from "./utils/getContentPath";
 
 const booklogJsonFile = getContentPath("data", "booklog.json");

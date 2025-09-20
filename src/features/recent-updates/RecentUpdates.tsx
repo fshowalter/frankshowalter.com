@@ -1,14 +1,9 @@
-import type { BackdropImageProps } from "~/api/backdrops";
+import type { BooklogUpdateValue } from "~/components/booklog-update/BooklogUpdate";
+import type { MovielogUpdateValue } from "~/components/movielog-update/MovielogUpdate";
 
-import {
-  BooklogUpdate,
-  type BooklogUpdateValue,
-} from "../../components/booklog-update/BooklogUpdate";
-import { UpdateList } from "../../components/update-list/UpdateList";
-import {
-  MovielogUpdate,
-  type MovielogUpdateValue,
-} from "../../components/movielog-update/MovielogUpdate";
+import { BooklogUpdate } from "~/components/booklog-update/BooklogUpdate";
+import { MovielogUpdate } from "~/components/movielog-update/MovielogUpdate";
+import { UpdateList } from "~/components/update-list/UpdateList";
 import { UpdateListHeading } from "~/components/update-list/UpdateListHeading";
 
 export type RecentUpdatesProps = {
@@ -27,13 +22,13 @@ export function RecentUpdates({
   movielogUpdates,
 }: RecentUpdatesProps): React.JSX.Element {
   return (
-    <div className="border-t-4 border-(--bg-hero-border)">
+    <div className="border-t-4 border-(--bg-hero-border) bg-subtle pb-16">
       <nav
         className={`
-            mx-auto w-full max-w-[908px] bg-subtle
-            tablet:px-container
-            laptop:max-w-(--breakpoint-desktop) laptop:px-container
-          `}
+          mx-auto w-full max-w-[908px]
+          tablet:px-container
+          laptop:max-w-(--breakpoint-desktop) laptop:px-container
+        `}
       >
         <UpdateListHeading
           accentText="Movie Reviews"

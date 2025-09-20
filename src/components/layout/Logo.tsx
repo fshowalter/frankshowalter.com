@@ -22,7 +22,7 @@ export function Logo({ className }: { className?: string }): React.JSX.Element {
         <a href="/">Frank Showalter</a>
       </div>
       <p className={"w-full pl-px text-sm leading-4 italic opacity-85"}>
-        "I thought you'd be taller."
+        “I thought you&apos;d be taller”
       </p>
     </div>
   );

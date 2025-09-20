@@ -1,11 +1,11 @@
 import { UpdateListItem } from "./UpdateListItem";
 
-export function UpdateList<T>({
-  values,
+export function UpdateList<T extends { slug: string }>({
   children,
+  values,
 }: {
+  children: (value: T) => React.ReactNode;
   values: T[];
-  children: (item: T) => React.ReactNode;
 }): React.JSX.Element {
   return (
     <div className="@container/update-list">
@@ -18,9 +18,9 @@ export function UpdateList<T>({
           @min-[calc((250px_*_5)_+_1px)]/update-list:[--update-list-item-width:16.66%]
         `}
       >
-        <UpdateListItem>
-          {[...values].map((value) => children(value))}
-        </UpdateListItem>
+        {[...values].map((value) => (
+          <UpdateListItem key={value.slug}>{children(value)}</UpdateListItem>
+        ))}
       </ol>
     </div>
   );

@@ -116,7 +116,9 @@ const rule = {
 
         for (const specifier of importNode.specifiers) {
           if (specifier.type === "ImportSpecifier") {
-            const importSpec = /** @type {ImportSpecifierWithKind} */ (specifier);
+            const importSpec = /** @type {ImportSpecifierWithKind} */ (
+              specifier
+            );
             if (importSpec.importKind === "type") {
               typeSpecifiers.push(importSpec);
             } else {
@@ -149,10 +151,10 @@ const rule = {
               if (valueSpecifiers.length > 0) {
                 // Handle default imports separately
                 const defaultImports = valueSpecifiers.filter(
-                  (s) => s.type === "ImportDefaultSpecifier"
+                  (s) => s.type === "ImportDefaultSpecifier",
                 );
                 const namespaceImports = valueSpecifiers.filter(
-                  (s) => s.type === "ImportNamespaceSpecifier"
+                  (s) => s.type === "ImportNamespaceSpecifier",
                 );
                 const namedImports = /** @type {ImportSpecifierWithKind[]} */ (
                   valueSpecifiers.filter((s) => s.type === "ImportSpecifier")
@@ -169,7 +171,7 @@ const rule = {
                 // Add namespace import with proper comma
                 const namespaceImportPart = buildNamespaceImportPart(
                   /** @type {ImportNamespaceSpecifier[]} */ (namespaceImports),
-                  defaultImports.length > 0
+                  defaultImports.length > 0,
                 );
                 if (namespaceImportPart) {
                   importParts.push(namespaceImportPart);
@@ -178,7 +180,7 @@ const rule = {
                 // Add named imports with proper comma
                 const namedImportsPart = buildNamedImportsPart(
                   namedImports,
-                  defaultImports.length > 0 || namespaceImports.length > 0
+                  defaultImports.length > 0 || namespaceImports.length > 0,
                 );
                 if (namedImportsPart) {
                   importParts.push(namedImportsPart);

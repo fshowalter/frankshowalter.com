@@ -1,9 +1,11 @@
-import { UpdateDate } from "../update-date/UpdateDate";
-import { UpdateDetails } from "../update-details/UpdateDetails";
-import { UpdateGrade } from "../update-grade/UpdateGrade";
-import { UpdatePoster } from "./UpdatePoster";
-import { UpdateTitle } from "../update-title/UpdateTitle";
 import type { ImageProps } from "~/api/images";
+
+import { UpdateDate } from "~/components/update-date/UpdateDate";
+import { UpdateDetails } from "~/components/update-details/UpdateDetails";
+import { UpdateGrade } from "~/components/update-grade/UpdateGrade";
+import { UpdateTitle } from "~/components/update-title/UpdateTitle";
+
+import { UpdatePoster } from "./UpdatePoster";
 
 export type MovielogUpdateValue = {
   displayDate: string;

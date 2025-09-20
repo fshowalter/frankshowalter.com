@@ -1,19 +1,20 @@
+import type { ImageProps } from "~/api/images";
+
+import { UpdateDate } from "~/components/update-date/UpdateDate";
+import { UpdateDetails } from "~/components/update-details/UpdateDetails";
+import { UpdateGrade } from "~/components/update-grade/UpdateGrade";
+import { UpdateTitle } from "~/components/update-title/UpdateTitle";
 import { toSentenceArray } from "~/utils/toSentenceArray";
 
 import { UpdateCover } from "./UpdateCover";
-import { UpdateDate } from "../update-date/UpdateDate";
-import { UpdateDetails } from "../update-details/UpdateDetails";
-import { UpdateGrade } from "../update-grade/UpdateGrade";
-import { UpdateTitle } from "../update-title/UpdateTitle";
-import type { ImageProps } from "~/api/images";
 
 export type BooklogUpdateValue = {
+  authors: string[];
   displayDate: string;
   imageProps: ImageProps;
   slug: string;
   stars: number;
   title: string;
-  authors: string[];
 };
 
 export function BooklogUpdate({
