@@ -142,7 +142,8 @@ function Wrapper({
           z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
           after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
-          after:w-full after:bg-(image:--hero-gradient)
+          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.4)]
+          after:via-transparent after:via-10% after:to-100%
         `}
       >
         {children}

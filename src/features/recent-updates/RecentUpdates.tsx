@@ -22,7 +22,7 @@ export function RecentUpdates({
   movielogUpdates,
 }: RecentUpdatesProps): React.JSX.Element {
   return (
-    <div className="border-t-4 border-(--bg-hero-border) bg-subtle pb-16">
+    <div className="bg-subtle pb-16">
       <nav
         className={`
           mx-auto w-full max-w-[908px]
