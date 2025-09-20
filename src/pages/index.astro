@@ -1,19 +1,33 @@
 ---
-import { getProps } from "~/components/Home/getProps";
-import { Home } from "~/components/Home/Home";
-import Layout from "~/layouts/Layout.astro";
+import { getRecentUpdatesProps } from "~/features/recent-updates/getRecentUpdatesProps";
+import { RecentUpdates } from "~/features/recent-updates/RecentUpdates";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { getLayoutBackdropImageProps } from "~/components/Layout/getLayoutBackdropImageProps";
+import { Layout } from "~/components/layout/Layout";
 
-const props = await getProps();
+const recentUpdatesProps = await getRecentUpdatesProps();
+const backdropImageProps = await getLayoutBackdropImageProps("home");
+
+const deck = "I write stuff. Mostly movie reviews, sometimes book reviews.";
+const metaDescription =
+  "Frank Showalter: writer of stuff. Mainly movie reviews, sometimes book reviews, and all-around swell guy.";
 ---
 
-<Layout
+<AstroPageShell
   canonical={true}
   meta={{
-    description:
-      "Landing page for Frank Showalter, movie and book critic, and all-around swell guy.",
+    description: metaDescription,
   }}
   openGraph={{ description: "Frank Showalter", type: "website" }}
   title="Frank Showalter"
 >
-  <Home {...props} />
-</Layout>
+  <Layout
+    backdrop={{
+      backdropImageProps,
+      title: "Frank Showalter",
+      deck,
+    }}
+  >
+    <RecentUpdates {...recentUpdatesProps} />
+  </Layout>
+</AstroPageShell>

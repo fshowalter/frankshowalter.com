@@ -1,22 +1,28 @@
 ---
-import { Content } from "~/components/404/404";
-import { getProps } from "~/components/404/getProps";
-import Layout from "~/layouts/Layout.astro";
+import AstroPageShell from "~/astro/AstroPageShell.astro";
+import { Layout } from "~/components/layout";
+import { getLayoutBackdropImageProps } from "~/components/Layout/getLayoutBackdropImageProps";
 
-const title = "404: Not Found";
+const title = "404 Not Found";
 const deck = `"They're coming to get you, Barbra!"`;
-
-const props = await getProps({
-  deck,
-  title,
-});
+const backdropImageProps = await getLayoutBackdropImageProps("not-found");
 ---
 
-<Layout
+<AstroPageShell
   canonical={false}
   meta={{ description: deck }}
   openGraph={false}
   title={title}
 >
-  <Content {...props} />
-</Layout>
+  <Layout
+    className="flex flex-col bg-subtle"
+    logo={true}
+    backdrop={{
+      deck,
+      backdropImageProps,
+      title,
+      centerText: true,
+      size: "full",
+    }}><span></span></Layout
+  >
+</AstroPageShell>

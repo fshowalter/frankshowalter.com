@@ -1,22 +1,16 @@
-import { getBackdropImageProps } from "~/api/backdrops";
 import { booklogUpdates } from "~/api/booklog";
 import { getFluidImageProps } from "~/api/images";
 import { movielogUpdates } from "~/api/movielog";
-import { BackdropImageConfig } from "~/components/Backdrop";
 
-import type { Props } from "./Home";
+import type { RecentUpdatesProps } from "./RecentUpdates";
 
-import { HomeImageConfig } from "./Home";
+import { RecentUpdatesImageConfig } from "./RecentUpdates";
 
-export async function getProps(): Promise<Props> {
+export async function getRecentUpdatesProps(): Promise<RecentUpdatesProps> {
   const booklogItems = await booklogUpdates();
   const movielogItems = await movielogUpdates();
 
   return {
-    backdropImageProps: await getBackdropImageProps(
-      "home",
-      BackdropImageConfig,
-    ),
     booklogUpdates: await Promise.all(
       booklogItems.map(async (item) => {
         return {
@@ -25,7 +19,7 @@ export async function getProps(): Promise<Props> {
           imageProps: await getFluidImageProps(
             "cover",
             item.slug,
-            HomeImageConfig,
+            RecentUpdatesImageConfig,
           ),
         };
       }),
@@ -38,7 +32,7 @@ export async function getProps(): Promise<Props> {
           imageProps: await getFluidImageProps(
             "poster",
             item.slug,
-            HomeImageConfig,
+            RecentUpdatesImageConfig,
           ),
         };
       }),

@@ -1,6 +1,6 @@
-import { SubHeading } from "~/components/SubHeading";
+import { SubHeading } from "~/components/sub-heading/SubHeading";
 
-export function HomeSubHeading({
+export function UpdateListHeading({
   accentText,
   href,
   text,

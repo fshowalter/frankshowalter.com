@@ -6,7 +6,7 @@ type OpenGraphImageProps = {
   backdrop: string;
 };
 
-export function OpenGraphImage({
+export function HomeOpenGraphImage({
   backdrop,
 }: {
   backdrop?: string;

@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import satori from "satori";
 import sharp from "sharp";
 
-import type { OpenGraphImageComponentType } from "~/components/Home/OpenGraphImage";
+import type { OpenGraphImageComponentType } from "~/features/home/HomeOpenGraphImage";
 
 // Font data cache to avoid reading fonts multiple times
 let fontDataCache: Font[] | undefined;
