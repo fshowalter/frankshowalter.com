@@ -12,7 +12,7 @@ export const BackdropImageConfig = {
 /**
  * Props for the Backdrop component.
  */
-export type BackdropProps = {
+type BackdropProps = {
   backdropImageProps: BackdropImageProps;
   centerText?: boolean;
   deck?: React.ReactNode;
