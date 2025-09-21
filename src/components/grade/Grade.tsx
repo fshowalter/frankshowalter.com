@@ -10,6 +10,10 @@ const gradeMap: Record<string, [string, string]> = {
   5: ["/svg/5-stars.svg", "5 stars (out of 5)"],
 };
 
+/**
+ * Displays a star rating visualization with support for half stars.
+ * Shows appropriate star SVGs based on the numeric rating value.
+ */
 export function Grade({
   className,
   height,

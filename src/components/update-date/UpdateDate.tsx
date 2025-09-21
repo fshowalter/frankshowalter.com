@@ -1,3 +1,7 @@
+/**
+ * Displays a formatted date string for update entries.
+ * Styled with subtle text color and consistent typography.
+ */
 export function UpdateDate({
   displayDate,
 }: {

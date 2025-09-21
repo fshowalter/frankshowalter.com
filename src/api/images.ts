@@ -5,6 +5,9 @@ import sharp from "sharp";
 
 import { normalizeSources } from "./utils/normalizeSources";
 
+/**
+ * Properties for responsive images including dimensions and source sets.
+ */
 export type ImageProps = {
   height: number;
   sizes: string;
@@ -33,6 +36,10 @@ if (import.meta.env.MODE === "test") {
   );
 }
 
+/**
+ * Generates responsive image properties for book covers and movie posters.
+ * Handles image optimization and creates appropriate srcSet values for different screen sizes.
+ */
 export async function getFluidImageProps(
   kind: "cover" | "poster",
   slug: string,

@@ -12,6 +12,10 @@ const BooklogUpdateSchema = UpdateSchema.extend({
 
 type BooklogUpdate = z.infer<typeof BooklogUpdateSchema>;
 
+/**
+ * Fetches and parses all book review updates from the booklog JSON file.
+ * Returns an array of validated booklog entries with author and rating information.
+ */
 export async function booklogUpdates(): Promise<BooklogUpdate[]> {
   return parseBooklogJson();
 }

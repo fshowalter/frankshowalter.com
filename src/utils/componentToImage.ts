@@ -11,6 +11,10 @@ let fontDataCache: Font[] | undefined;
 
 type OpenGraphImageComponent = OpenGraphImageComponentType;
 
+/**
+ * Converts a React component to a JPEG image using Satori for SVG rendering and Sharp for image conversion.
+ * Used primarily for generating Open Graph images from React components.
+ */
 export async function componentToImage(
   component: ReturnType<OpenGraphImageComponent>,
 ): Promise<Uint8Array<ArrayBuffer>> {

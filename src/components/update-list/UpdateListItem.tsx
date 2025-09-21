@@ -1,3 +1,7 @@
+/**
+ * Individual list item wrapper for update entries.
+ * Provides hover effects and responsive layout transitions.
+ */
 export function UpdateListItem({
   children,
 }: {
