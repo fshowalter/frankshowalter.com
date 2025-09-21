@@ -1,5 +1,9 @@
 import type { ImageProps } from "~/api/images";
 
+/**
+ * Displays a movie poster image with shadow and hover effects.
+ * Includes aspect ratio preservation and lazy loading.
+ */
 export function UpdatePoster({
   imageProps,
 }: {

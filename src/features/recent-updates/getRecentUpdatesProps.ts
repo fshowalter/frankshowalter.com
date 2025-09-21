@@ -6,6 +6,10 @@ import type { RecentUpdatesProps } from "./RecentUpdates";
 
 import { RecentUpdatesImageConfig } from "./RecentUpdates";
 
+/**
+ * Fetches and prepares data for the RecentUpdates component.
+ * Retrieves book and movie updates with formatted dates and optimized images.
+ */
 export async function getRecentUpdatesProps(): Promise<RecentUpdatesProps> {
   const booklogItems = await booklogUpdates();
   const movielogItems = await movielogUpdates();

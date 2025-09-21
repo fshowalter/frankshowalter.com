@@ -4,6 +4,10 @@ import { Backdrop } from "./Backdrop";
 import { Footer } from "./Footer";
 import { Logo } from "./Logo";
 
+/**
+ * Main layout component that provides the page structure with backdrop, header, and footer.
+ * Wraps content in a consistent visual design across all pages.
+ */
 export function Layout({
   backdrop,
   children,

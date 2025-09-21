@@ -1,3 +1,7 @@
+/**
+ * Renders a styled subheading component with configurable semantic heading level.
+ * Displays uppercase text with consistent spacing and typography.
+ */
 export function SubHeading({
   as,
   children,

@@ -8,6 +8,9 @@ import { toSentenceArray } from "~/utils/toSentenceArray";
 
 import { UpdateCover } from "./UpdateCover";
 
+/**
+ * Data structure for a book review update.
+ */
 export type BooklogUpdateValue = {
   authors: string[];
   displayDate: string;
@@ -17,6 +20,9 @@ export type BooklogUpdateValue = {
   title: string;
 };
 
+/**
+ * Displays a book review update with cover image, title, authors, and rating.
+ */
 export function BooklogUpdate({
   value,
 }: {

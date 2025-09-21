@@ -12,6 +12,10 @@ const MovielogUpdateSchema = UpdateSchema.extend({
 
 type MovielogUpdate = z.infer<typeof MovielogUpdateSchema>;
 
+/**
+ * Fetches and parses all movie review updates from the movielog JSON file.
+ * Returns an array of validated movielog entries with year and rating information.
+ */
 export async function movielogUpdates(): Promise<MovielogUpdate[]> {
   return parseMovielogJson();
 }

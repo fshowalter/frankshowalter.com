@@ -7,6 +7,9 @@ import { UpdateTitle } from "~/components/update-title/UpdateTitle";
 
 import { UpdatePoster } from "./UpdatePoster";
 
+/**
+ * Data structure for a movie review update.
+ */
 export type MovielogUpdateValue = {
   displayDate: string;
   imageProps: ImageProps;
@@ -16,6 +19,9 @@ export type MovielogUpdateValue = {
   year: string;
 };
 
+/**
+ * Displays a movie review update with poster image, title, year, and rating.
+ */
 export function MovielogUpdate({
   value,
 }: {

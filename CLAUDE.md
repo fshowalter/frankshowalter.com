@@ -48,11 +48,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```
 src/
 ├── api/           # Data access layer and content parsing
-├── components/    # React components organized by feature
-├── layouts/       # Astro layout components
+├── astro/         # Astro-specific components (layouts, shells)
+├── components/    # Shared React components organized by purpose
+├── css/           # Global CSS and styles
+├── features/      # Feature-specific components and logic
 ├── pages/         # Astro pages and API routes
-├── utils/         # Shared utility functions
-└── fonts/         # Custom font files
+└── utils/         # Shared utility functions
 
 content/
 ├── data/          # JSON data files (booklog, movielog)
@@ -63,7 +64,12 @@ content/
 
 **Content Management**: Content is stored as JSON files in `/content/data/` and parsed through the API layer using Zod schemas. The `getContentPath` utility handles path resolution.
 
-**Component Architecture**: Components follow a props-based pattern with TypeScript interfaces. Each major feature has its own directory under `/components` with co-located getProps functions.
+**Component Architecture**:
+
+- Shared components live in `/components/` organized by purpose (e.g., update-list, grade, sub-heading)
+- Feature-specific components are in `/features/` (e.g., home, recent-updates) with co-located getProps functions
+- Astro-specific components (layouts, shells) are in `/astro/`
+- Components follow a props-based pattern with TypeScript interfaces
 
 **Image Handling**: Images are processed through the `/src/api/images.ts` system with automatic optimization. Open Graph images are generated dynamically using Satori.
 

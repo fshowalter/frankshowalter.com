@@ -3,6 +3,9 @@ import path from "node:path";
 import sharp from "sharp";
 
 import { normalizeSources } from "./utils/normalizeSources";
+/**
+ * Properties for backdrop images used in page backgrounds.
+ */
 export type BackdropImageProps = {
   src: string;
   srcSet: string;
@@ -12,6 +15,10 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/backdrops/*.png",
 );
 
+/**
+ * Generates optimized backdrop image properties for page backgrounds.
+ * Creates AVIF format images with responsive srcSet for performance.
+ */
 export async function getBackdropImageProps(
   slug: string,
   {
@@ -39,6 +46,10 @@ export async function getBackdropImageProps(
   };
 }
 
+/**
+ * Converts a backdrop image to a base64-encoded PNG string for Open Graph images.
+ * Used to embed backdrop images directly in dynamically generated OG images.
+ */
 export async function getOpenGraphBackdropAsBase64String(slug: string) {
   const imageBuffer = await sharp(
     path.resolve(`./content/assets/backdrops/${slug}.png`),

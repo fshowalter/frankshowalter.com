@@ -1,3 +1,7 @@
+/**
+ * Container component for update entry details.
+ * Provides responsive layout and spacing for child elements.
+ */
 export function UpdateDetails({
   children,
 }: {

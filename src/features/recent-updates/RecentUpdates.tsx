@@ -6,17 +6,28 @@ import { MovielogUpdate } from "~/components/movielog-update/MovielogUpdate";
 import { UpdateList } from "~/components/update-list/UpdateList";
 import { UpdateListHeading } from "~/components/update-list/UpdateListHeading";
 
+/**
+ * Props for the RecentUpdates component.
+ */
 export type RecentUpdatesProps = {
   booklogUpdates: BooklogUpdateValue[];
   movielogUpdates: MovielogUpdateValue[];
 };
 
+/**
+ * Responsive image configuration for update entry images.
+ * Defines sizes for different viewport widths.
+ */
 export const RecentUpdatesImageConfig = {
   sizes:
     "(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)",
   width: 248,
 };
 
+/**
+ * Displays recent book and movie review updates in separate sections.
+ * Each section includes a heading and responsive grid of update entries.
+ */
 export function RecentUpdates({
   booklogUpdates,
   movielogUpdates,

@@ -1,5 +1,8 @@
 import type { JSX } from "react";
 
+/**
+ * Site footer component displaying copyright and fair use information.
+ */
 export function Footer(): JSX.Element {
   return (
     <div

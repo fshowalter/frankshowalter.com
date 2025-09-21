@@ -1,5 +1,9 @@
 import { SubHeading } from "~/components/sub-heading/SubHeading";
 
+/**
+ * Heading component for update lists with linked text and accent highlight.
+ * Features an animated underline effect on hover.
+ */
 export function UpdateListHeading({
   accentText,
   href,

@@ -1,3 +1,7 @@
+/**
+ * Clickable title component for update entries.
+ * Features responsive text sizing and accent color on hover.
+ */
 export function UpdateTitle({
   children,
   href,

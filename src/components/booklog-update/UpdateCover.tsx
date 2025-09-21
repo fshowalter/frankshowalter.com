@@ -1,5 +1,9 @@
 import type { ImageProps } from "~/api/images";
 
+/**
+ * Displays a book cover image with decorative spine and shadow effects.
+ * Includes hover state transitions for interactive lists.
+ */
 export function UpdateCover({
   className,
   imageProps,

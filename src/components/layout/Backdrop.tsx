@@ -70,7 +70,7 @@ function Deck({
   return (
     <p
       className={`
-        mt-1 font-sans text-base
+        mt-1 font-sans text-base font-semibold text-white/75
         [text-shadow:1px_1px_2px_black]
         laptop:my-4 laptop:text-xl
         ${center ? `text-center` : ""}

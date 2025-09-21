@@ -1,4 +1,8 @@
 import type { JSX } from "react";
+/**
+ * Converts an array of elements into a sentence-like array by adding commas and "and" between elements.
+ * For example: ["a", "b", "c"] becomes ["a", ", ", "b", ", ", "and ", "c"]
+ */
 export function toSentenceArray<T extends JSX.Element | string>(
   values: readonly T[],
 ): T[] {

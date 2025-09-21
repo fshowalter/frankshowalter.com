@@ -1,5 +1,9 @@
 import { UpdateListItem } from "./UpdateListItem";
 
+/**
+ * Generic list component for displaying update entries.
+ * Provides responsive grid layout with automatic column adjustment based on container width.
+ */
 export function UpdateList<T extends { slug: string }>({
   children,
   values,
