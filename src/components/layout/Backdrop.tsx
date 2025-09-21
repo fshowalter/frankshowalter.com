@@ -121,7 +121,7 @@ function Wrapper({
   const defaultSizes =
     "min-h-[400px] tablet:min-h-[640px] laptop:min-h-[clamp(640px,70vh,1350px)]";
 
-  const fullSizes = "min-h-[100vh] max-h-[1350px]";
+  const fullSizes = "min-h-[90vh] max-h-[1350px]";
 
   const sizes = size === "full" ? fullSizes : defaultSizes;
 
