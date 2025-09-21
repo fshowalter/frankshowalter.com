@@ -1,15 +1,19 @@
 import type { JSX } from "react";
 
+import { Backdrop } from "./Backdrop";
 import { Footer } from "./Footer";
+import { Logo } from "./Logo";
 
 export function Layout({
+  backdrop,
   children,
   className,
-  ...rest
+  logo = false,
 }: {
-  [x: string]: unknown;
+  backdrop: React.ComponentProps<typeof Backdrop>;
   children: React.ReactNode;
   className?: string;
+  logo?: boolean;
 }): JSX.Element {
   return (
     <div className="h-full">
@@ -25,14 +29,21 @@ export function Layout({
         Skip to content
       </a>
       <div className="flex min-h-full w-full flex-col bg-default">
+        {logo && (
+          <div
+            className={`absolute top-0 left-0 z-30 px-container py-6 text-white`}
+          >
+            <Logo />
+          </div>
+        )}
         <main
           className={`
             z-10 grow
             ${className}
           `}
           id="content"
-          {...rest}
         >
+          {backdrop && <Backdrop {...backdrop} />}
           {children}
         </main>
         <Footer />

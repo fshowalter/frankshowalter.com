@@ -8,15 +8,9 @@ export type BackdropImageProps = {
   srcSet: string;
 };
 
-let images = import.meta.glob<{ default: ImageMetadata }>(
+const images = import.meta.glob<{ default: ImageMetadata }>(
   "/content/assets/backdrops/*.png",
 );
-
-if (import.meta.env.MODE === "test") {
-  images = import.meta.glob<{ default: ImageMetadata }>(
-    `/src/api/fixtures/assets/backdrops/*.png`,
-  );
-}
 
 export async function getBackdropImageProps(
   slug: string,

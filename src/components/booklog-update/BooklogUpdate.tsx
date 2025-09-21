@@ -1,25 +1,29 @@
+import type { ImageProps } from "~/api/images";
+
+import { UpdateDate } from "~/components/update-date/UpdateDate";
+import { UpdateDetails } from "~/components/update-details/UpdateDetails";
+import { UpdateGrade } from "~/components/update-grade/UpdateGrade";
+import { UpdateTitle } from "~/components/update-title/UpdateTitle";
 import { toSentenceArray } from "~/utils/toSentenceArray";
 
-import type { ListItemValue } from "./ListItemValue";
-
 import { UpdateCover } from "./UpdateCover";
-import { UpdateDate } from "./UpdateDate";
-import { UpdateDetails } from "./UpdateDetails";
-import { UpdateGrade } from "./UpdateGrade";
-import { UpdateListItem } from "./UpdateListItem";
-import { UpdateTitle } from "./UpdateTitle";
 
-export type BooklogListItemValue = ListItemValue & {
+export type BooklogUpdateValue = {
   authors: string[];
+  displayDate: string;
+  imageProps: ImageProps;
+  slug: string;
+  stars: number;
+  title: string;
 };
 
-export function BooklogUpdateListItem({
+export function BooklogUpdate({
   value,
 }: {
-  value: BooklogListItemValue;
+  value: BooklogUpdateValue;
 }): React.JSX.Element {
   return (
-    <UpdateListItem>
+    <>
       <UpdateCover imageProps={value.imageProps} />
 
       <UpdateDetails>
@@ -40,6 +44,6 @@ export function BooklogUpdateListItem({
         </div>
         <UpdateGrade stars={value.stars} />
       </UpdateDetails>
-    </UpdateListItem>
+    </>
   );
 }

@@ -1,23 +1,28 @@
-import type { ListItemValue } from "./ListItemValue";
+import type { ImageProps } from "~/api/images";
 
-import { UpdateDate } from "./UpdateDate";
-import { UpdateDetails } from "./UpdateDetails";
-import { UpdateGrade } from "./UpdateGrade";
-import { UpdateListItem } from "./UpdateListItem";
+import { UpdateDate } from "~/components/update-date/UpdateDate";
+import { UpdateDetails } from "~/components/update-details/UpdateDetails";
+import { UpdateGrade } from "~/components/update-grade/UpdateGrade";
+import { UpdateTitle } from "~/components/update-title/UpdateTitle";
+
 import { UpdatePoster } from "./UpdatePoster";
-import { UpdateTitle } from "./UpdateTitle";
 
-export type MovielogListItemValue = ListItemValue & {
+export type MovielogUpdateValue = {
+  displayDate: string;
+  imageProps: ImageProps;
+  slug: string;
+  stars: number;
+  title: string;
   year: string;
 };
 
-export function MovielogUpdateListItem({
+export function MovielogUpdate({
   value,
 }: {
-  value: MovielogListItemValue;
+  value: MovielogUpdateValue;
 }): React.JSX.Element {
   return (
-    <UpdateListItem>
+    <>
       <UpdatePoster imageProps={value.imageProps} />
       <UpdateDetails>
         <UpdateDate displayDate={value.displayDate} />
@@ -31,6 +36,6 @@ export function MovielogUpdateListItem({
         </UpdateTitle>
         <UpdateGrade stars={value.stars} />
       </UpdateDetails>
-    </UpdateListItem>
+    </>
   );
 }

@@ -6,11 +6,13 @@ type OpenGraphImageProps = {
   backdrop: string;
 };
 
-export function OpenGraphImage({
+export function HomeOpenGraphImage({
   backdrop,
 }: {
   backdrop?: string;
 }): React.JSX.Element {
+  // eslint-disable-next-line react-hooks/no-unused-directives
+  "use no memo";
   return (
     <div
       style={{

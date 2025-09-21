@@ -8,15 +8,24 @@ import {
 } from "eslint-plugin-better-tailwindcss/api/defaults";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
-import reactCompiler from "eslint-plugin-react-compiler";
+import reactHooks from "eslint-plugin-react-hooks";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import tsEslint from "typescript-eslint";
+import tseslint from "typescript-eslint";
+
+import separateTypeImports from "./eslint-rules/separate-type-imports.js";
 
 export default defineConfig(
   {
-    ignores: ["dist/", ".astro/", "coverage/", "content/", "public/"],
+    ignores: [
+      "dist/",
+      ".astro/",
+      "coverage/",
+      "content/",
+      "public/",
+      "scripts/",
+    ],
   },
   eslint.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
@@ -39,7 +48,10 @@ export default defineConfig(
     },
   },
   {
-    extends: [...tsEslint.configs.recommendedTypeChecked],
+    extends: [
+      tseslint.configs.recommendedTypeChecked,
+      "react-hooks/recommended-latest",
+    ],
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
@@ -48,10 +60,20 @@ export default defineConfig(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
+    plugins: {
+      local: {
+        rules: {
+          "separate-type-imports": separateTypeImports,
+        },
+      },
+      "react-hooks": reactHooks,
+    },
     rules: {
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
-      "@typescript-eslint/consistent-type-imports": "error",
+      "@typescript-eslint/consistent-type-imports": "off", // Turned off in favor of our custom rule
+      "@typescript-eslint/no-import-type-side-effects": "error",
+      "local/separate-type-imports": "error",
       "no-restricted-imports": [
         "error",
         {
@@ -72,11 +94,11 @@ export default defineConfig(
     },
     rules: {
       ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
+      "better-tailwindcss/no-conflicting-classes": "error",
     },
     settings: {
       "better-tailwindcss": {
-        // tailwindcss 4: the path to the entry file of the css based tailwind config (eg: `src/global.css`)
-        entryPoint: "src/layouts/tailwind.css",
+        entryPoint: "src/css/tailwind.css",
       },
     },
   },
@@ -85,19 +107,25 @@ export default defineConfig(
     plugins: {
       "better-tailwindcss": eslintPluginBetterTailwindcss,
       react,
-      "react-compiler": reactCompiler,
     },
     rules: {
-      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
       ...react.configs.recommended.rules,
-      "react-compiler/react-compiler": "error",
+      "react/boolean-prop-naming": "error",
+      "react/button-has-type": "error",
       "react/react-in-jsx-scope": "off",
+      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
+      "@typescript-eslint/explicit-function-return-type": "error",
+      "better-tailwindcss/no-conflicting-classes": "error",
+      "better-tailwindcss/no-unregistered-classes": [
+        "error",
+        { detectComponentClasses: true },
+      ],
     },
     settings: {
       "better-tailwindcss": {
         attributes: [...getDefaultAttributes(), ".*Classes"],
         callees: [...getDefaultCallees(), "ccn"],
-        entryPoint: "src/layouts/tailwind.css",
+        entryPoint: "src/css/tailwind.css",
       },
       react: {
         version: "detect",
@@ -111,6 +139,19 @@ export default defineConfig(
     },
     rules: {
       ...vitest.configs.recommended.rules,
+      "vitest/expect-expect": [
+        "error",
+        {
+          assertFunctionNames: [
+            "expect",
+            "filterDrawerTests.testOpenClose",
+            "filterDrawerTests.testEscapeKey",
+            "filterDrawerTests.testClickOutside",
+            "filterDrawerTests.testViewResultsButton",
+            "filterDrawerTests.testDesktopScroll",
+          ],
+        },
+      ],
     },
   },
 );
