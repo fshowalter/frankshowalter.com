@@ -65,6 +65,7 @@ content/
 **Content Management**: Content is stored as JSON files in `/content/data/` and parsed through the API layer using Zod schemas. The `getContentPath` utility handles path resolution.
 
 **Component Architecture**:
+
 - Shared components live in `/components/` organized by purpose (e.g., update-list, grade, sub-heading)
 - Feature-specific components are in `/features/` (e.g., home, recent-updates) with co-located getProps functions
 - Astro-specific components (layouts, shells) are in `/astro/`
