@@ -4,15 +4,20 @@ on:
   pull_request:
     types: [opened, synchronize]
     # Optional: Only run on specific file changes
-    # paths:
-    #   - "src/**/*.ts"
-    #   - "src/**/*.tsx"
-    #   - "src/**/*.js"
-    #   - "src/**/*.jsx"
+    paths:
+      - "src/**/*.ts"
+      - "src/**/*.tsx"
+      - "src/**/*.js"
+      - "src/**/*.jsx"
+      - "src/**/*.astro"
+      - "*.md"
+      - "**/*.json"
+      - "package*.json"
+      - "!content/**"
 
 jobs:
   claude-review:
-    # Optional: Filter by PR author
+    # Skip dependency bot PRs since they auto-merge if CI passes
     if: |
       github.event.pull_request.user.login != 'renovate[bot]' &&
       github.event.pull_request.user.login != 'dependabot[bot]' &&
@@ -30,6 +35,21 @@ jobs:
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5
         with:
           fetch-depth: 1
+
+      - name: setup node
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: setup npm
+        run: |
+          ./npm_use.sh &&
+          npm --version &&
+          npm list -g --depth 0
+
+      - name: install dependencies
+        run: npm ci
 
       - name: Run Claude Code Review
         id: claude-review
