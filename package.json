@@ -29,7 +29,7 @@
     "@astrojs/react": "4.3.1",
     "@astrojs/sitemap": "3.6.0",
     "@tailwindcss/vite": "4.1.13",
-    "astro": "5.13.10",
+    "astro": "5.13.11",
     "astro-compressor": "1.1.2",
     "react": "19.1.1",
     "react-dom": "19.1.1",
