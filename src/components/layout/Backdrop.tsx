@@ -146,7 +146,7 @@ function Wrapper({
         ${heroImage ? "bg-[#2A2B2A] text-white" : "text-default"}
         pt-40 pb-8
         tablet:pt-40 tablet:pb-10
-        laptop:pt-52 laptop:pb-20
+        laptop:pt-60 laptop:pb-30
       `}
     >
       {heroImage && heroImage}

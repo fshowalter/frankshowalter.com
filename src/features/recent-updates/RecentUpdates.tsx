@@ -50,6 +50,7 @@ export function RecentUpdates({
         >
           <UpdateListHeading
             accentText="Movie Reviews"
+            className="text-left"
             href="https://www.franksmovielog.com"
             text="Latest"
           />
@@ -87,7 +88,7 @@ export function RecentUpdates({
               className={`
                 group/all-reviews mx-auto w-full max-w-[500px] transform-gpu
                 rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
-                font-bold tracking-wide text-accent uppercase transition-all
+                font-semibold tracking-wide text-accent transition-all
                 hover:scale-105 hover:bg-accent hover:text-white
               `}
               href="/reviews/"
@@ -95,7 +96,7 @@ export function RecentUpdates({
               <span
                 className={`
                   relative inline-block pb-1
-                  after:absolute after:bottom-0 after:left-0 after:h-0.5
+                  after:absolute after:bottom-0 after:left-0 after:h-px
                   after:w-full after:origin-center after:scale-x-0
                   after:transform-gpu after:bg-white after:transition-transform
                   after:duration-500
@@ -116,6 +117,7 @@ export function RecentUpdates({
         >
           <UpdateListHeading
             accentText="Book Reviews"
+            className="text-right"
             href="https://www.franksbooklog.com"
             text="Latest"
           />
@@ -134,7 +136,7 @@ export function RecentUpdates({
               className={`
                 group/all-reviews mx-auto w-full max-w-[500px] transform-gpu
                 rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
-                font-bold tracking-wide text-accent uppercase transition-all
+                font-semibold tracking-wide text-accent transition-all
                 hover:scale-105 hover:bg-accent hover:text-white
               `}
               href="/reviews/"
@@ -142,7 +144,7 @@ export function RecentUpdates({
               <span
                 className={`
                   relative inline-block pb-1
-                  after:absolute after:bottom-0 after:left-0 after:h-0.5
+                  after:absolute after:bottom-0 after:left-0 after:h-px
                   after:w-full after:origin-center after:scale-x-0
                   after:transform-gpu after:bg-white after:transition-transform
                   after:duration-500

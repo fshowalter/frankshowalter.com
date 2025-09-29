@@ -6,11 +6,13 @@ import { SubHeading } from "~/components/sub-heading/SubHeading";
  */
 export function UpdateListHeading({
   accentText,
+  className = "",
   href,
   text,
 }: {
   accentText: string;
   as?: "h2" | "h3" | "h4" | "h5";
+  className?: string;
   href: string;
   text: string;
 }): React.JSX.Element {
@@ -18,8 +20,8 @@ export function UpdateListHeading({
     <SubHeading
       as="h2"
       className={`
-        text-center
-        laptop:px-[3%] laptop:text-left
+        px-[1.5%] text-center
+        laptop:text-left
       `}
     >
       <a
