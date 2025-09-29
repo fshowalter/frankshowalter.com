@@ -42,7 +42,12 @@ export function RecentUpdates({
           laptop:flex laptop:max-w-(--breakpoint-desktop)
         `}
       >
-        <nav className={`w-full max-w-[1056px]`}>
+        <nav
+          className={`
+            w-full max-w-[1056px]
+            desktop:grow
+          `}
+        >
           <UpdateListHeading
             accentText="Movie Reviews"
             href="https://www.franksmovielog.com"
@@ -106,6 +111,7 @@ export function RecentUpdates({
           className={`
             mx-auto w-full max-w-[720px]
             laptop:min-w-[548px]
+            desktop:shrink
           `}
         >
           <UpdateListHeading
