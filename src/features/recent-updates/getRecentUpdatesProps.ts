@@ -5,6 +5,8 @@ import { movielogUpdates } from "~/api/movielog";
 import type { RecentUpdatesProps } from "./RecentUpdates";
 
 import { RecentUpdatesImageConfig } from "./RecentUpdates";
+import { getStillImageProps } from "~/api/stills";
+import { StillImageConfig } from "~/components/movielog-update/MovielogUpdate";
 
 /**
  * Fetches and prepares data for the RecentUpdates component.
@@ -33,11 +35,7 @@ export async function getRecentUpdatesProps(): Promise<RecentUpdatesProps> {
         return {
           ...item,
           displayDate: formatDate(item.date),
-          imageProps: await getFluidImageProps(
-            "poster",
-            item.slug,
-            RecentUpdatesImageConfig,
-          ),
+          imageProps: await getStillImageProps(item.slug, StillImageConfig),
         };
       }),
     ),

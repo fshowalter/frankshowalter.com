@@ -41,15 +41,35 @@ export function RecentUpdates({
           tablet:px-container
         `}
       >
-        <nav className="w-2/3">
+        <nav className="w-2/3 max-w-[960px]">
           <UpdateListHeading
             accentText="Movie Reviews"
             href="https://www.franksmovielog.com"
             text="Latest"
           />
-          <UpdateList values={movielogUpdates}>
-            {(value) => <MovielogUpdate key={value.slug} value={value} />}
-          </UpdateList>
+          <ol
+            className={`
+              flex flex-wrap gap-x-[3%]
+              tablet:gap-y-[6vw]
+              laptop:gap-y-[3vw]
+            `}
+          >
+            {movielogUpdates.map((value, index) => {
+              return (
+                <MovielogUpdate
+                  className={`
+                    ${
+                      index === 0
+                        ? `[--review-card-width:100%]`
+                        : `tablet:[--review-card-width:47%]`
+                    }
+                  `}
+                  key={value.slug}
+                  value={value}
+                />
+              );
+            })}
+          </ol>
         </nav>
         <nav className="w-1/3">
           <UpdateListHeading

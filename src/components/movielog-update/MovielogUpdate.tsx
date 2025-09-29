@@ -5,6 +5,7 @@ import { UpdateDetails } from "~/components/update-details/UpdateDetails";
 import { UpdateGrade } from "~/components/update-grade/UpdateGrade";
 import { UpdateTitle } from "~/components/update-title/UpdateTitle";
 
+import { ReviewCard } from "./ReviewCard";
 import { UpdatePoster } from "./UpdatePoster";
 
 /**
@@ -15,33 +16,42 @@ export type MovielogUpdateValue = {
   imageProps: ImageProps;
   slug: string;
   stars: number;
+  synopsis: string;
   title: string;
   year: string;
+};
+
+export const StillImageConfig = {
+  height: 360,
+  sizes:
+    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
+  width: 640,
 };
 
 /**
  * Displays a movie review update with poster image, title, year, and rating.
  */
 export function MovielogUpdate({
+  className,
   value,
 }: {
+  className?: string;
   value: MovielogUpdateValue;
 }): React.JSX.Element {
   return (
-    <>
-      <UpdatePoster imageProps={value.imageProps} />
-      <UpdateDetails>
-        <UpdateDate displayDate={value.displayDate} />
-        <UpdateTitle
-          href={`https://www.franksmovielog.com/reviews/${value.slug}/`}
-        >
-          {value.title}&#x202F;&#x202F;
-          <span className={`text-xxs leading-none font-light text-subtle`}>
-            ({value.year})
-          </span>
-        </UpdateTitle>
-        <UpdateGrade stars={value.stars} />
-      </UpdateDetails>
-    </>
+    <ReviewCard
+      as="li"
+      className={className}
+      imageConfig={StillImageConfig}
+      value={{
+        excerpt: value.synopsis,
+        gradeValue: value.stars,
+        releaseYear: value.year,
+        reviewDisplayDate: value.displayDate,
+        slug: value.slug,
+        stillImageProps: value.imageProps,
+        title: value.title,
+      }}
+    />
   );
 }

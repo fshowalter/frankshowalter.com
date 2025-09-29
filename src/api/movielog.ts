@@ -8,6 +8,7 @@ const movielogJsonFile = getContentPath("data", "movielog.json");
 
 const MovielogUpdateSchema = UpdateSchema.extend({
   year: z.string(),
+  synopsis: z.string(),
 });
 
 type MovielogUpdate = z.infer<typeof MovielogUpdateSchema>;
