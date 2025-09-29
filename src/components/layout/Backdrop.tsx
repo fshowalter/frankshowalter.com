@@ -144,8 +144,8 @@ function Wrapper({
         relative flex w-full flex-col content-start items-center justify-end
         gap-6
         ${heroImage ? "bg-[#2A2B2A] text-white" : "text-default"}
-        pt-40 pb-8
-        tablet:pt-40 tablet:pb-10
+        pt-40 pb-20
+        tablet:pt-40 tablet:pb-20
         laptop:pt-60 laptop:pb-30
       `}
     >
