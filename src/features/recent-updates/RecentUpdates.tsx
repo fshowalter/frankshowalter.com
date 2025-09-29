@@ -37,11 +37,12 @@ export function RecentUpdates({
     <div className="w-full bg-subtle pb-16">
       <div
         className={`
-          mx-auto flex w-full max-w-(--breakpoint-desktop) gap-x-16
+          mx-auto grid w-full max-w-(--breakpoint-desktop) grid-cols-[auto_1fr]
+          gap-x-16
           tablet:px-container
         `}
       >
-        <nav className="w-2/3 max-w-[960px]">
+        <nav className="w-full max-w-[960px]">
           <UpdateListHeading
             accentText="Movie Reviews"
             href="https://www.franksmovielog.com"
@@ -54,7 +55,7 @@ export function RecentUpdates({
               laptop:gap-y-[3vw]
             `}
           >
-            {movielogUpdates.map((value, index) => {
+            {movielogUpdates.slice(0, 5).map((value, index) => {
               return (
                 <MovielogUpdate
                   className={`
@@ -66,38 +67,81 @@ export function RecentUpdates({
                   `}
                   key={value.slug}
                   value={value}
+                  variant={index === 0 ? "primary" : "secondary"}
                 />
               );
             })}
           </ol>
+          <div
+            className={`
+              flex px-container py-10
+              has-[a:hover]:drop-shadow-lg
+            `}
+          >
+            <a
+              className={`
+                group/all-reviews mx-auto w-full max-w-[500px] transform-gpu
+                rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
+                font-bold tracking-wide text-accent uppercase transition-all
+                hover:scale-105 hover:bg-accent hover:text-white
+              `}
+              href="/reviews/"
+            >
+              <span
+                className={`
+                  relative inline-block pb-1
+                  after:absolute after:bottom-0 after:left-0 after:h-0.5
+                  after:w-full after:origin-center after:scale-x-0
+                  after:transform-gpu after:bg-white after:transition-transform
+                  after:duration-500
+                  group-hover/all-reviews:after:scale-x-100
+                `}
+              >
+                More Movie Reviews
+              </span>
+            </a>
+          </div>
         </nav>
-        <nav className="w-1/3">
+        <nav>
           <UpdateListHeading
             accentText="Book Reviews"
             href="https://www.franksbooklog.com"
             text="Latest"
           />
-          <ol>
-            {booklogUpdates.map((value) => {
-              return (
-                <li
-                  className={`
-                    group/list-item relative mb-1 flex w-full
-                    max-w-(--breakpoint-desktop) transform-gpu flex-row
-                    gap-x-[5%] bg-default px-container py-4 transition-transform
-                    duration-500
-                    tablet:bg-transparent tablet:px-0 tablet:py-6
-                    tablet:has-[a:hover]:-translate-y-2
-                    tablet:has-[a:hover]:bg-default
-                    tablet:has-[a:hover]:drop-shadow-2xl
-                  `}
-                  key={value.slug}
-                >
-                  <BooklogUpdate value={value} />
-                </li>
-              );
+          <ol className="flex flex-col gap-y-[1vw]">
+            {booklogUpdates.slice(0, 4).map((value) => {
+              return <BooklogUpdate key={value.slug} value={value} />;
             })}
           </ol>
+          <div
+            className={`
+              flex px-container py-10
+              has-[a:hover]:drop-shadow-lg
+            `}
+          >
+            <a
+              className={`
+                group/all-reviews max-w-button mx-auto w-full transform-gpu
+                rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
+                font-bold tracking-wide text-accent uppercase transition-all
+                hover:scale-105 hover:bg-accent hover:text-white
+              `}
+              href="/reviews/"
+            >
+              <span
+                className={`
+                  relative inline-block pb-1
+                  after:absolute after:bottom-0 after:left-0 after:h-0.5
+                  after:w-full after:origin-center after:scale-x-0
+                  after:transform-gpu after:bg-white after:transition-transform
+                  after:duration-500
+                  group-hover/all-reviews:after:scale-x-100
+                `}
+              >
+                More Book Reviews
+              </span>
+            </a>
+          </div>
         </nav>
       </div>
     </div>

@@ -8,6 +8,8 @@ const booklogJsonFile = getContentPath("data", "booklog.json");
 
 const BooklogUpdateSchema = UpdateSchema.extend({
   authors: z.array(z.string()),
+  kind: z.string(),
+  workYear: z.string(),
 });
 
 type BooklogUpdate = z.infer<typeof BooklogUpdateSchema>;

@@ -16,7 +16,7 @@ export function SubHeading({
   return (
     <Component
       className={`
-        pt-10 pb-10 font-sans text-xs font-bold tracking-wide text-subtle
+        pt-10 pb-10 font-sans text-sm font-bold tracking-wide text-subtle/70
         uppercase
         tablet:pb-5
         ${className ?? ""}

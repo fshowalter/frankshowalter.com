@@ -1,3 +1,5 @@
+import type { ComponentProps } from "react";
+
 import type { ImageProps } from "~/api/images";
 
 import { UpdateDate } from "~/components/update-date/UpdateDate";
@@ -34,9 +36,11 @@ export const StillImageConfig = {
 export function MovielogUpdate({
   className,
   value,
+  variant = "secondary",
 }: {
   className?: string;
   value: MovielogUpdateValue;
+  variant?: ComponentProps<typeof ReviewCard>["variant"];
 }): React.JSX.Element {
   return (
     <ReviewCard
@@ -52,6 +56,7 @@ export function MovielogUpdate({
         stillImageProps: value.imageProps,
         title: value.title,
       }}
+      variant={variant}
     />
   );
 }

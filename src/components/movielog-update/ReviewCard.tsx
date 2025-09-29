@@ -31,6 +31,7 @@ export function ReviewCard({
   className = "",
   imageConfig,
   value,
+  variant = "secondary",
 }: {
   as?: React.ElementType;
   className?: string;
@@ -40,6 +41,7 @@ export function ReviewCard({
     width: number;
   };
   value: ReviewCardValue;
+  variant?: "primary" | "secondary";
 }): React.JSX.Element {
   const Component = as;
 
@@ -120,7 +122,10 @@ export function ReviewCard({
         />
 
         <RenderedMarkdown
-          className={`tracking-prose text-muted`}
+          className={`
+            tracking-prose text-muted
+            ${variant === "primary" ? `text-lg` : ""}
+          `}
           text={value.excerpt}
         />
       </div>

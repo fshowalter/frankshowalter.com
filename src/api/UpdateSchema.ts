@@ -8,5 +8,6 @@ export const UpdateSchema = z.object({
   date: z.coerce.date(),
   slug: z.string(),
   stars: z.number(),
+  synopsis: z.string(),
   title: z.string(),
 });
