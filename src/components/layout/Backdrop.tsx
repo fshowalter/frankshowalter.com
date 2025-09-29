@@ -81,6 +81,7 @@ function Deck({
             `
             : "text-subtle"
         }
+        tablet:text-lg
         laptop:my-4 laptop:text-xl
         ${center ? `text-center` : ""}
       `}
@@ -107,7 +108,7 @@ function Title({
         `
           text-[2rem] leading-10 font-extrabold
           ${shadow ? "[text-shadow:1px_1px_2px_rgba(0,0,0,.25)]" : ""}
-          tablet:text-4xl
+          tablet:text-5xl
           laptop:text-7xl
         `
       }
@@ -145,7 +146,7 @@ function Wrapper({
         ${heroImage ? "bg-[#2A2B2A] text-white" : "text-default"}
         pt-40 pb-8
         tablet:pt-40 tablet:pb-10
-        laptop:pt-40 laptop:pb-18
+        laptop:pt-42 laptop:pb-20
       `}
     >
       {heroImage && heroImage}

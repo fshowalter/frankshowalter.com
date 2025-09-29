@@ -73,11 +73,10 @@ export function ReviewCard({
         >
           <div
             className={`
-              clip-path-cover
-              after:clip-path-cover
               absolute top-[2.5%] bottom-[2.5%] left-[0] w-full overflow-hidden
-              bg-default bg-cover bg-center
+              bg-default bg-cover bg-center clip-path-cover
               after:absolute after:size-full after:backdrop-blur-sm
+              after:clip-path-cover
               @min-[500px]/card:hidden
             `}
             style={{
@@ -87,22 +86,21 @@ export function ReviewCard({
           />
           <div
             className={`
-              after:z-sticky after:absolute after:top-0 after:left-0
-              after:size-full after:bg-default after:opacity-15
-              after:transition-opacity
               relative w-1/2 max-w-[200px] shrink-0 self-start overflow-hidden
               rounded-sm shadow-all transition-transform
+              after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+              after:bg-default after:opacity-15 after:transition-opacity
               group-has-[a:hover]/list-item:after:opacity-0
               @min-[500px]/card:w-full
             `}
           >
             <div
               className={`
-                after:z-sticky after:absolute after:top-0 after:left-0
-                after:block after:size-full after:rounded-[2.5px]
+                relative
+                after:absolute after:top-0 after:left-0 after:z-10 after:block
+                after:size-full after:rounded-[2.5px]
                 after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%]
                 after:mix-blend-multiply
-                relative
               `}
             >
               <div
@@ -144,7 +142,7 @@ export function ReviewCard({
           {value.reviewDate && (
             <div
               className={`
-                tracking-wider mb-1 font-sans text-xs leading-4 font-normal
+                font-sans text-xs leading-4 font-normal tracking-wider
                 text-subtle uppercase
                 laptop:tracking-wide
               `}
@@ -154,9 +152,8 @@ export function ReviewCard({
           )}
           <a
             className={`
-              after:z-sticky after:absolute after:top-0 after:left-0
-              after:size-full
               block text-2xl font-medium transition-colors duration-500
+              after:absolute after:top-0 after:left-0 after:z-10 after:size-full
               hover:text-accent hover:before:opacity-0
             `}
             href={`/reviews/${value.slug}/`}
@@ -176,7 +173,7 @@ export function ReviewCard({
             {value.workYear} | {value.kind}
           </div>
           <div>
-            <Grade className="py-1" height={18} value={value.gradeValue} />
+            <Grade className="mb-2 py-1" height={18} value={value.gradeValue} />
           </div>
           <RenderedMarkdown
             className="tracking-prose text-muted"

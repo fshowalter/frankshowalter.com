@@ -37,12 +37,12 @@ export function RecentUpdates({
     <div className="w-full bg-subtle pb-16">
       <div
         className={`
-          mx-auto grid w-full max-w-(--breakpoint-desktop) grid-cols-[auto_1fr]
-          gap-x-16
+          mx-auto w-full max-w-[1056px] gap-x-16
           tablet:px-container
+          laptop:flex laptop:max-w-(--breakpoint-desktop)
         `}
       >
-        <nav className="w-full max-w-[960px]">
+        <nav className={`w-full max-w-[1056px]`}>
           <UpdateListHeading
             accentText="Movie Reviews"
             href="https://www.franksmovielog.com"
@@ -50,8 +50,8 @@ export function RecentUpdates({
           />
           <ol
             className={`
-              flex flex-wrap gap-x-[3%]
-              tablet:gap-y-[6vw]
+              flex flex-wrap justify-between gap-x-[2%]
+              tablet:gap-y-[3vw]
               laptop:gap-y-[3vw]
             `}
           >
@@ -62,7 +62,7 @@ export function RecentUpdates({
                     ${
                       index === 0
                         ? `[--review-card-width:100%]`
-                        : `tablet:[--review-card-width:47%]`
+                        : `tablet:[--review-card-width:48%]`
                     }
                   `}
                   key={value.slug}
@@ -102,13 +102,18 @@ export function RecentUpdates({
             </a>
           </div>
         </nav>
-        <nav>
+        <nav
+          className={`
+            mx-auto w-full max-w-[720px]
+            laptop:min-w-[548px]
+          `}
+        >
           <UpdateListHeading
             accentText="Book Reviews"
             href="https://www.franksbooklog.com"
             text="Latest"
           />
-          <ol className="flex flex-col gap-y-[1vw]">
+          <ol className="flex flex-col gap-y-[2vw]">
             {booklogUpdates.slice(0, 4).map((value) => {
               return <BooklogUpdate key={value.slug} value={value} />;
             })}
@@ -121,7 +126,7 @@ export function RecentUpdates({
           >
             <a
               className={`
-                group/all-reviews max-w-button mx-auto w-full transform-gpu
+                group/all-reviews mx-auto w-full max-w-[500px] transform-gpu
                 rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
                 font-bold tracking-wide text-accent uppercase transition-all
                 hover:scale-105 hover:bg-accent hover:text-white

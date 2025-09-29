@@ -79,14 +79,23 @@ export function ReviewCard({
       <div
         className={`
           flex grow flex-col px-1 pb-8
-          tablet:px-[8%]
-          laptop:pr-[10%] laptop:pl-[8.5%]
+          ${
+            variant === "primary"
+              ? `
+                tablet:px-[4%]
+                laptop:pr-[5%] laptop:pl-[4.25%]
+              `
+              : `
+                tablet:px-[8%]
+                laptop:pr-[10%] laptop:pl-[8.5%]
+              `
+          }
         `}
       >
         {value.reviewDisplayDate && (
           <div
             className={`
-              tracking-wider mb-3 font-sans text-xs leading-4 font-normal
+              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
               text-subtle uppercase
               laptop:tracking-wide
             `}
@@ -96,11 +105,11 @@ export function ReviewCard({
         )}
         <a
           className={`
-            after:z-sticky after:absolute after:top-0 after:left-0
-            after:size-full
-            text-2.5xl mb-3 block leading-7 font-medium text-default
+            mb-3 block text-2xl leading-7 font-medium text-default
             transition-all duration-500
-            laptop:text-2.5xl
+            after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+            tablet:text-2.5xl
+            ${variant === "primary" ? "laptop:text-3xl" : "laptop:text-2.5xl"}
             hover:text-accent
             tablet:text-2xl
           `}
@@ -117,7 +126,7 @@ export function ReviewCard({
             mb-5
             tablet:mb-8
           `}
-          height={24}
+          height={variant === "primary" ? 24 : 18}
           value={value.gradeValue}
         />
 

@@ -15,7 +15,13 @@ export function UpdateListHeading({
   text: string;
 }): React.JSX.Element {
   return (
-    <SubHeading as="h2">
+    <SubHeading
+      as="h2"
+      className={`
+        text-center
+        laptop:px-[3%] laptop:text-left
+      `}
+    >
       <a
         className={`
           relative -mb-1 inline-block transform-gpu px-container pb-1
