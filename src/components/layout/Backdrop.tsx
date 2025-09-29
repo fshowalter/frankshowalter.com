@@ -72,7 +72,7 @@ function Deck({
   return (
     <p
       className={`
-        mt-1 font-sans text-base font-semibold
+        mt-1 font-sans text-base font-normal
         ${
           shadow
             ? `
@@ -145,7 +145,7 @@ function Wrapper({
         ${heroImage ? "bg-[#2A2B2A] text-white" : "text-default"}
         pt-40 pb-8
         tablet:pt-40 tablet:pb-10
-        laptop:pt-40 laptop:pb-16
+        laptop:pt-40 laptop:pb-18
       `}
     >
       {heroImage && heroImage}
