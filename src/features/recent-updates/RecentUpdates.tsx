@@ -5,6 +5,7 @@ import { BooklogUpdate } from "~/components/booklog-update/BooklogUpdate";
 import { MovielogUpdate } from "~/components/movielog-update/MovielogUpdate";
 import { UpdateList } from "~/components/update-list/UpdateList";
 import { UpdateListHeading } from "~/components/update-list/UpdateListHeading";
+import { UpdateListItem } from "~/components/update-list/UpdateListItem";
 
 /**
  * Props for the RecentUpdates component.
@@ -33,32 +34,52 @@ export function RecentUpdates({
   movielogUpdates,
 }: RecentUpdatesProps): React.JSX.Element {
   return (
-    <div className="bg-subtle pb-16">
-      <nav
+    <div className="w-full bg-subtle pb-16">
+      <div
         className={`
-          mx-auto w-full max-w-[908px]
+          mx-auto flex w-full max-w-(--breakpoint-desktop) gap-x-16
           tablet:px-container
-          laptop:max-w-(--breakpoint-desktop) laptop:px-container
         `}
       >
-        <UpdateListHeading
-          accentText="Movie Reviews"
-          href="https://www.franksmovielog.com"
-          text="Latest"
-        />
-        <UpdateList values={movielogUpdates}>
-          {(value) => <MovielogUpdate key={value.slug} value={value} />}
-        </UpdateList>
-
-        <UpdateListHeading
-          accentText="Book Reviews"
-          href="https://www.franksbooklog.com"
-          text="Latest"
-        />
-        <UpdateList values={booklogUpdates}>
-          {(value) => <BooklogUpdate key={value.slug} value={value} />}
-        </UpdateList>
-      </nav>
+        <nav className="w-2/3">
+          <UpdateListHeading
+            accentText="Movie Reviews"
+            href="https://www.franksmovielog.com"
+            text="Latest"
+          />
+          <UpdateList values={movielogUpdates}>
+            {(value) => <MovielogUpdate key={value.slug} value={value} />}
+          </UpdateList>
+        </nav>
+        <nav className="w-1/3">
+          <UpdateListHeading
+            accentText="Book Reviews"
+            href="https://www.franksbooklog.com"
+            text="Latest"
+          />
+          <ol>
+            {booklogUpdates.map((value) => {
+              return (
+                <li
+                  className={`
+                    group/list-item relative mb-1 flex w-full
+                    max-w-(--breakpoint-desktop) transform-gpu flex-row
+                    gap-x-[5%] bg-default px-container py-4 transition-transform
+                    duration-500
+                    tablet:bg-transparent tablet:px-0 tablet:py-6
+                    tablet:has-[a:hover]:-translate-y-2
+                    tablet:has-[a:hover]:bg-default
+                    tablet:has-[a:hover]:drop-shadow-2xl
+                  `}
+                  key={value.slug}
+                >
+                  <BooklogUpdate value={value} />
+                </li>
+              );
+            })}
+          </ol>
+        </nav>
+      </div>
     </div>
   );
 }
