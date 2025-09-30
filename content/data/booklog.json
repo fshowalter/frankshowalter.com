@@ -1,62 +1,46 @@
 [
   {
-    "authors": [
-      "Philip Fracassi"
-    ],
+    "authors": ["Philip Fracassi"],
     "date": "2025-07-12T00:00:00.000Z",
-    "image": "/_astro/shiloh-by-philip-fracassi.D4NtraLi_Z8V8dx.png",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksbooklog.com%2Fcontent%2Fassets%2Fcovers%2Fking-mob-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&w=500&h=773&q=100&f=png",
+    "kind": "Short Story",
     "slug": "king-mob-by-philip-fracassi",
     "stars": 3,
-    "title": "King Mob"
+    "synopsis": "In 1780 London, William Blake finds himself swept into the Gordon Riots, only to discover the rioters' enigmatic leader harbors a dark secret.",
+    "title": "King Mob",
+    "workYear": "2017"
   },
   {
-    "authors": [
-      "Philip Fracassi"
-    ],
+    "authors": ["Philip Fracassi"],
     "date": "2025-07-11T00:00:00.000Z",
-    "image": "/_astro/shiloh-by-philip-fracassi.D4NtraLi_Z8V8dx.png",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksbooklog.com%2Fcontent%2Fassets%2Fcovers%2Fshiloh-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&w=500&h=773&q=100&f=png",
+    "kind": "Novella",
     "slug": "shiloh-by-philip-fracassi",
     "stars": 4,
-    "title": "Shiloh"
+    "synopsis": "During the brutal Civil War battle, as artillery shreds trees and flesh alike and soldiers become scavengers among the corpses, a Confederate veteran encounters something supernatural stalking the battlefield.",
+    "title": "Shiloh",
+    "workYear": "2017"
   },
   {
-    "authors": [
-      "Philip Fracassi"
-    ],
+    "authors": ["Philip Fracassi"],
     "date": "2025-07-11T00:00:00.000Z",
-    "image": "/_astro/commodore-by-philip-fracassi.B6kn71WY_Z1tUWNH.png",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksbooklog.com%2Fcontent%2Fassets%2Fcovers%2Fcommodore-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=100&f=png",
+    "kind": "Novella",
     "slug": "commodore-by-philip-fracassi",
     "stars": 5,
-    "title": "Commodore"
+    "synopsis": "Five thirteen-year-old boys go hunting for a mysterious black Commodore in the local junkyard but discover the car--and their town--harbor darker secrets than they could have imagined.",
+    "title": "Commodore",
+    "workYear": "2021"
   },
   {
-    "authors": [
-      "Leslie H. Whitten Jr."
-    ],
+    "authors": ["Leslie H. Whitten Jr."],
     "date": "2025-07-11T00:00:00.000Z",
-    "image": "/_astro/progeny-of-the-adder-by-leslie-h-whitten-jr.Bmxx3I6Q_1oXpif.png",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksbooklog.com%2Fcontent%2Fassets%2Fcovers%2Fprogeny-of-the-adder-by-leslie-h-whitten-jr.png%3ForigWidth%3D500%26origHeight%3D824%26origFormat%3Dpng&w=500&h=824&q=100&f=png",
+    "kind": "Novel",
     "slug": "progeny-of-the-adder-by-leslie-h-whitten-jr",
     "stars": 3.5,
-    "title": "Progeny of the Adder"
-  },
-  {
-    "authors": [
-      "Richard Laymon"
-    ],
-    "date": "2025-02-15T00:00:00.000Z",
-    "image": "/_astro/the-lonely-one-by-richard-laymon.DuIeKssk_ZaVlai.png",
-    "slug": "the-lonely-one-by-richard-laymon",
-    "stars": 3,
-    "title": "The Lonely One"
-  },
-  {
-    "authors": [
-      "Peter Straub"
-    ],
-    "date": "2024-12-01T00:00:00.000Z",
-    "image": "/_astro/ghost-story-by-peter-straub.OGz1HCPK_zCIaM.png",
-    "slug": "ghost-story-by-peter-straub",
-    "stars": 4,
-    "title": "Ghost Story"
+    "synopsis": "A D.C. detective's case involving blonde women turning up dead in the Potomac drained of blood leads to a mysterious suspect with supernatural implications.",
+    "title": "Progeny of the Adder",
+    "workYear": "1965"
   }
 ]

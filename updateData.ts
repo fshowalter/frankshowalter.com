@@ -13,6 +13,7 @@ const BaseUpdateSchema = z.object({
   image: z.string(),
   slug: z.string(),
   stars: z.number(),
+  synopsis: z.string(),
   title: z.string(),
 });
 
@@ -22,6 +23,8 @@ const MovieUpdateSchema = BaseUpdateSchema.extend({
 
 const BookUpdateSchema = BaseUpdateSchema.extend({
   authors: z.array(z.string()),
+  kind: z.string(),
+  workYear: z.string(),
 });
 
 const MovieUpdatesArraySchema = z.array(MovieUpdateSchema);
@@ -38,7 +41,7 @@ type MediaSource = {
 const SOURCES: MediaSource[] = [
   {
     baseUrl: "https://www.franksmovielog.com",
-    imagesDir: "./content/assets/posters",
+    imagesDir: "./content/assets/stills",
     jsonPath: "./content/data/movielog.json",
     type: "movie",
     url: "https://www.franksmovielog.com/updates.json",

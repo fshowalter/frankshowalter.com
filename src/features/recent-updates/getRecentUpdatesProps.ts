@@ -1,10 +1,15 @@
 import { booklogUpdates } from "~/api/booklog";
-import { getFluidImageProps } from "~/api/images";
+import { getFluidCoverImageProps } from "~/api/covers";
 import { movielogUpdates } from "~/api/movielog";
+import { getStillImageProps } from "~/api/stills";
 
 import type { RecentUpdatesProps } from "./RecentUpdates";
 
-import { RecentUpdatesImageConfig } from "./RecentUpdates";
+import {
+  CoverImageConfig,
+  StillImageConfig,
+  StillSplashImageConfig,
+} from "./RecentUpdates";
 
 /**
  * Fetches and prepares data for the RecentUpdates component.
@@ -19,24 +24,28 @@ export async function getRecentUpdatesProps(): Promise<RecentUpdatesProps> {
       booklogItems.map(async (item) => {
         return {
           ...item,
-          displayDate: formatDate(item.date),
-          imageProps: await getFluidImageProps(
-            "cover",
+          coverImageProps: await getFluidCoverImageProps(
             item.slug,
-            RecentUpdatesImageConfig,
+            CoverImageConfig,
           ),
+          excerpt: item.synopsis,
+          gradeValue: item.stars,
+          reviewDisplayDate: formatDate(item.date),
         };
       }),
     ),
     movielogUpdates: await Promise.all(
-      movielogItems.map(async (item) => {
+      movielogItems.map(async (item, index) => {
         return {
           ...item,
           displayDate: formatDate(item.date),
-          imageProps: await getFluidImageProps(
-            "poster",
+          excerpt: item.synopsis,
+          gradeValue: item.stars,
+          releaseYear: item.year,
+          reviewDisplayDate: formatDate(item.date),
+          stillImageProps: await getStillImageProps(
             item.slug,
-            RecentUpdatesImageConfig,
+            index === 0 ? StillSplashImageConfig : StillImageConfig,
           ),
         };
       }),

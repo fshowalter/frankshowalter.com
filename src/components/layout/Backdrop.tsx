@@ -13,7 +13,7 @@ export const BackdropImageConfig = {
  * Props for the Backdrop component.
  */
 type BackdropProps = {
-  backdropImageProps: BackdropImageProps;
+  backdropImageProps?: BackdropImageProps;
   centerText?: boolean;
   deck?: React.ReactNode;
   size?: "default" | "full";
@@ -41,7 +41,7 @@ export function Backdrop({
   title,
   titleStyle,
 }: BackdropProps): React.JSX.Element {
-  const heroImage = (
+  const heroImage = backdropImageProps ? (
     <img
       className="absolute inset-0 size-full object-cover object-bottom"
       {...backdropImageProps}
@@ -50,28 +50,38 @@ export function Backdrop({
       fetchPriority="high"
       loading="eager"
     />
-  );
+  ) : undefined;
 
   return (
     <Wrapper centerText={centerText} heroImage={heroImage} size={size}>
-      <Title className={titleStyle} value={title} />
-      <Deck center={centerText} value={deck} />
+      <Title className={titleStyle} shadow={Boolean(heroImage)} value={title} />
+      <Deck center={centerText} shadow={Boolean(heroImage)} value={deck} />
     </Wrapper>
   );
 }
 
 function Deck({
   center,
+  shadow = true,
   value,
 }: {
   center?: boolean;
+  shadow?: boolean;
   value: React.ReactNode;
 }): React.JSX.Element {
   return (
     <p
       className={`
-        mt-1 font-sans text-base font-semibold text-white/75
-        [text-shadow:1px_1px_2px_black]
+        mt-1 font-sans text-base font-normal
+        ${
+          shadow
+            ? `
+              text-white/75
+              [text-shadow:1px_1px_2px_black]
+            `
+            : "text-subtle"
+        }
+        tablet:text-lg
         laptop:my-4 laptop:text-xl
         ${center ? `text-center` : ""}
       `}
@@ -83,10 +93,12 @@ function Deck({
 
 function Title({
   className,
+  shadow = true,
   value,
 }: {
   center?: boolean;
   className?: string;
+  shadow?: boolean;
   value: string;
 }): React.JSX.Element {
   return (
@@ -95,8 +107,8 @@ function Title({
         className ||
         `
           text-[2rem] leading-10 font-extrabold
-          [text-shadow:1px_1px_2px_rgba(0,0,0,.25)]
-          tablet:text-4xl
+          ${shadow ? "[text-shadow:1px_1px_2px_rgba(0,0,0,.25)]" : ""}
+          tablet:text-5xl
           laptop:text-7xl
         `
       }
@@ -123,27 +135,35 @@ function Wrapper({
 
   const fullSizes = "min-h-[90vh] max-h-[1350px]";
 
-  const sizes = size === "full" ? fullSizes : defaultSizes;
+  const sizes = heroImage ? (size === "full" ? fullSizes : defaultSizes) : "";
 
   return (
     <header
       className={`
         ${sizes}
         relative flex w-full flex-col content-start items-center justify-end
-        gap-6 bg-[#2A2B2A] pt-40 pb-8 text-white
-        tablet:pt-40 tablet:pb-10
-        laptop:pt-40 laptop:pb-16
+        gap-6
+        ${heroImage ? "bg-[#2A2B2A] text-white" : "text-default"}
+        pt-40 pb-20
+        tablet:pt-40 tablet:pb-20
+        laptop:pt-60 laptop:pb-30
       `}
     >
-      {heroImage}
+      {heroImage && heroImage}
       <div
         className={`
           ${centerText ? "items-center" : ""}
           z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
           px-container
-          after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
-          after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.4)]
-          after:via-transparent after:via-10% after:to-100%
+          ${
+            heroImage
+              ? `
+                after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
+                after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.4)]
+                after:via-transparent after:via-10% after:to-100%
+              `
+              : ""
+          }
         `}
       >
         {children}
