@@ -95,7 +95,7 @@ export function MovielogUpdateCard({
         {value.reviewDisplayDate && (
           <div
             className={`
-              mb-3 font-sans text-xs leading-4 font-normal tracking-wider
+              mb-2 font-sans text-xs leading-4 font-normal tracking-wider
               text-subtle uppercase
               laptop:tracking-wide
             `}
@@ -103,6 +103,14 @@ export function MovielogUpdateCard({
             {value.reviewDisplayDate}
           </div>
         )}
+        <a
+          className={`
+            z-20 mb-2 font-sans text-xs tracking-wide text-accent uppercase
+          `}
+          href="http://www.franksmovielog.com/"
+        >
+          Movie Reviews
+        </a>
         <a
           className={`
             mb-3 block text-2xl leading-7 font-medium text-default
@@ -124,7 +132,7 @@ export function MovielogUpdateCard({
         <Grade
           className={`
             mb-5
-            tablet:mb-8
+            ${variant === "primary" ? `tablet:mb-8` : `tablet:mb-6`}
           `}
           height={variant === "primary" ? 24 : 18}
           value={value.gradeValue}

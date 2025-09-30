@@ -10,10 +10,10 @@ type DownloadOptions = {
 
 const BaseUpdateSchema = z.object({
   date: z.coerce.date(),
+  excerpt: z.string(),
   image: z.string(),
   slug: z.string(),
   stars: z.number(),
-  synopsis: z.string(),
   title: z.string(),
 });
 
