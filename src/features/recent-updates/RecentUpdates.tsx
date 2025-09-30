@@ -87,8 +87,8 @@ export function RecentUpdates({
             <a
               className={`
                 group/all-reviews mx-auto w-full max-w-[500px] transform-gpu
-                rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
-                font-semibold tracking-wide text-accent transition-all
+                rounded-md bg-default pt-5 pb-4 text-center font-sans text-base
+                font-medium text-accent transition-all duration-500
                 hover:scale-105 hover:bg-accent hover:text-white
               `}
               href="/reviews/"
@@ -135,8 +135,8 @@ export function RecentUpdates({
             <a
               className={`
                 group/all-reviews mx-auto w-full max-w-[500px] transform-gpu
-                rounded-md bg-default pt-5 pb-4 text-center font-sans text-sm
-                font-semibold tracking-wide text-accent transition-all
+                rounded-md bg-default pt-5 pb-4 text-center font-sans text-base
+                font-medium text-accent transition-all duration-500
                 hover:scale-105 hover:bg-accent hover:text-white
               `}
               href="/reviews/"

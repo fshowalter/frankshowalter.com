@@ -1,4 +1,6 @@
 ---
+import React from "react";
+
 import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
 import { Layout } from "~/components/layout/Layout";
@@ -8,9 +10,15 @@ import { RecentUpdates } from "~/features/recent-updates/RecentUpdates";
 const recentUpdatesProps = await getRecentUpdatesProps();
 const backdropImageProps = await getLayoutBackdropImageProps("home");
 
-const deck = "I write stuff. Mostly movie reviews, sometimes book reviews.";
+const deck = `I write stuff. Mostly <a class="inline-block relative text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-center after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:after:scale-x-100" href="http://www.franksmovielog.com/">movie reviews</a>, sometimes <a class="text-accent inline-block relative text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
+          after:origin-center after:scale-x-0 after:bg-accent
+          after:transition-transform after:duration-500
+          hover:after:scale-x-100" href="http://www.franksbooklog.com/">book reviews</a>.`;
 const metaDescription =
-  "Frank Showalter: writer of stuff. Mainly movie reviews, sometimes book reviews, and all-around swell guy.";
+  "Frank Showalter: writer of stuff. Mostly movie reviews, sometimes book reviews, and all-around swell guy.";
 ---
 
 <AstroPageShell
@@ -24,7 +32,9 @@ const metaDescription =
   <Layout
     backdrop={{
       centerText: true,
-      deck,
+      deck: React.createElement("span", {
+        dangerouslySetInnerHTML: { __html: deck },
+      }),
       size: "full",
       title: "Frank Showalter",
     }}
