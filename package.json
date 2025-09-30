@@ -40,7 +40,7 @@
     "zod": "3.25.76"
   },
   "devDependencies": {
-    "@anthropic-ai/claude-code": "2.0.0",
+    "@anthropic-ai/claude-code": "2.0.1",
     "@eslint/js": "9.36.0",
     "@types/estree": "1.0.8",
     "@types/node": "22.18.7",
