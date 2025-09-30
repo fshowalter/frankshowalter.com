@@ -7,7 +7,7 @@ import { Still } from "~/components/still/Still";
 /**
  * Data structure for review card content.
  */
-export type ReviewCardValue = {
+export type MovielogUpdateCardValue = {
   excerpt: string;
   gradeValue: number;
   releaseYear: string;
@@ -26,7 +26,7 @@ export type ReviewCardValue = {
  * @param props.variant - Visual style variant ("primary" or "secondary")
  * @returns Review card with still image, title, grade, and excerpt
  */
-export function ReviewCard({
+export function MovielogUpdateCard({
   as = "div",
   className = "",
   imageConfig,
@@ -40,7 +40,7 @@ export function ReviewCard({
     sizes: string;
     width: number;
   };
-  value: ReviewCardValue;
+  value: MovielogUpdateCardValue;
   variant?: "primary" | "secondary";
 }): React.JSX.Element {
   const Component = as;

@@ -1,11 +1,10 @@
-import { SubHeading } from "~/components/sub-heading/SubHeading";
-
 /**
  * Heading component for update lists with linked text and accent highlight.
  * Features an animated underline effect on hover.
  */
 export function UpdateListHeading({
   accentText,
+  as = "h2",
   className = "",
   href,
   text,
@@ -16,12 +15,15 @@ export function UpdateListHeading({
   href: string;
   text: string;
 }): React.JSX.Element {
+  const Component = as;
+
   return (
-    <SubHeading
-      as="h2"
+    <Component
       className={`
-        px-[1.5%] text-center
+        mb-5 border-t border-border px-[1.5%] pt-10 pb-5 text-center font-sans
+        text-base font-medium text-subtle/70
         laptop:text-left
+        ${className ?? ""}
       `}
     >
       <a
@@ -38,6 +40,6 @@ export function UpdateListHeading({
       >
         {text} <span className={`text-accent`}>{accentText}</span>
       </a>
-    </SubHeading>
+    </Component>
   );
 }

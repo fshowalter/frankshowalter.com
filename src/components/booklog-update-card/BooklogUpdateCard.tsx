@@ -4,17 +4,7 @@ import { Grade } from "~/components/grade/Grade";
 import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";
 import { toSentenceArray } from "~/utils/toSentenceArray";
 
-/**
- * Configuration for cover images in review cards
- */
-export const ReviewCardCoverImageConfig = {
-  height: 372,
-  sizes:
-    "(min-width: 1860px) 200px, (min-width: 1440px) calc(9.75vw + 21px), (min-width: 1280px) calc(16.43vw - 59px), (min-width: 1040px) calc(6.36vw + 120px), (min-width: 960px) 200px, (min-width: 780px) calc(11.25vw + 94px), (min-width: 620px) 200px, (min-width: 460px) calc(25.71vw + 46px), calc(42.14vw - 12px)",
-  width: 248,
-};
-
-export type ReviewCardValue = {
+export type BooklogUpdateCardValue = {
   /** Array of authors for the reviewed work */
   authors: string[];
   /** Cover image properties for display */
@@ -25,7 +15,7 @@ export type ReviewCardValue = {
   gradeValue: number;
   /** Type of work (e.g., "Novel", "Short Story") */
   kind: string;
-  reviewDate?: string;
+  reviewDisplayDate: string;
   /** URL slug for the review */
   slug: string;
   /** Title of the reviewed work */
@@ -43,13 +33,23 @@ export type ReviewCardValue = {
  * @param props.value - Review data to display in the card
  * @returns Review card component with cover, title, grade, and excerpt
  */
-export function ReviewCard({
+export function BooklogUpdateCard({
+  as = "div",
+  imageConfig,
   value,
 }: {
-  value: ReviewCardValue;
+  as?: React.ElementType;
+  imageConfig: {
+    height: number;
+    sizes: string;
+    width: number;
+  };
+  value: BooklogUpdateCardValue;
 }): React.JSX.Element {
+  const Component = as;
+
   return (
-    <li
+    <Component
       className={`
         group/list-item @container/card relative row-span-2 grid transform-gpu
         grid-rows-subgrid gap-y-0 bg-default py-6 pr-8 pl-4 transition-transform
@@ -119,7 +119,7 @@ export function ReviewCard({
                 <img
                   {...value.coverImageProps}
                   alt=""
-                  {...ReviewCardCoverImageConfig}
+                  {...imageConfig}
                   className={`
                     transform-gpu rounded-[2.5px] bg-default
                     transition-transform duration-500
@@ -139,7 +139,7 @@ export function ReviewCard({
             @min-[500px]/card:mt-0 @min-[500px]/card:px-0
           `}
         >
-          {value.reviewDate && (
+          {value.reviewDisplayDate && (
             <div
               className={`
                 font-sans text-xs leading-4 font-normal tracking-wider
@@ -147,7 +147,7 @@ export function ReviewCard({
                 laptop:tracking-wide
               `}
             >
-              {formatDate(value.reviewDate)}
+              {value.reviewDisplayDate}
             </div>
           )}
           <a
@@ -181,15 +181,6 @@ export function ReviewCard({
           />
         </div>
       </div>
-    </li>
+    </Component>
   );
-}
-
-function formatDate(reviewDate: string): string {
-  return new Date(reviewDate).toLocaleString("en-GB", {
-    day: "2-digit",
-    month: "short",
-    timeZone: "UTC",
-    year: "numeric",
-  });
 }

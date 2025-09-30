@@ -1,28 +1,40 @@
-import type { BooklogUpdateValue } from "~/components/booklog-update/BooklogUpdate";
-import type { MovielogUpdateValue } from "~/components/movielog-update/MovielogUpdate";
+import type { BooklogUpdateCardValue } from "~/components/booklog-update-card/BooklogUpdateCard";
+import type { MovielogUpdateCardValue } from "~/components/movielog-update-card/MovielogUpdateCard";
 
-import { BooklogUpdate } from "~/components/booklog-update/BooklogUpdate";
-import { MovielogUpdate } from "~/components/movielog-update/MovielogUpdate";
-import { UpdateList } from "~/components/update-list/UpdateList";
-import { UpdateListHeading } from "~/components/update-list/UpdateListHeading";
-import { UpdateListItem } from "~/components/update-list/UpdateListItem";
+import { BooklogUpdateCard } from "~/components/booklog-update-card/BooklogUpdateCard";
+import { MovielogUpdateCard } from "~/components/movielog-update-card/MovielogUpdateCard";
+import { UpdateListHeading } from "~/components/update-list-heading/UpdateListHeading";
 
 /**
  * Props for the RecentUpdates component.
  */
 export type RecentUpdatesProps = {
-  booklogUpdates: BooklogUpdateValue[];
-  movielogUpdates: MovielogUpdateValue[];
+  booklogUpdates: BooklogUpdateCardValue[];
+  movielogUpdates: MovielogUpdateCardValue[];
 };
 
 /**
  * Responsive image configuration for update entry images.
  * Defines sizes for different viewport widths.
  */
-export const RecentUpdatesImageConfig = {
+export const CoverImageConfig = {
   sizes:
     "(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)",
   width: 248,
+};
+
+export const StillImageConfig = {
+  height: 360,
+  sizes:
+    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
+  width: 640,
+};
+
+export const StillSplashImageConfig = {
+  height: 360,
+  sizes:
+    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
+  width: 640,
 };
 
 /**
@@ -63,7 +75,7 @@ export function RecentUpdates({
           >
             {movielogUpdates.slice(0, 5).map((value, index) => {
               return (
-                <MovielogUpdate
+                <MovielogUpdateCard
                   className={`
                     ${
                       index === 0
@@ -71,6 +83,9 @@ export function RecentUpdates({
                         : `tablet:[--review-card-width:48%]`
                     }
                   `}
+                  imageConfig={
+                    index === 0 ? StillSplashImageConfig : StillImageConfig
+                  }
                   key={value.slug}
                   value={value}
                   variant={index === 0 ? "primary" : "secondary"}
@@ -123,7 +138,9 @@ export function RecentUpdates({
           />
           <ol className="flex flex-col gap-y-[2vw]">
             {booklogUpdates.slice(0, 4).map((value) => {
-              return <BooklogUpdate key={value.slug} value={value} />;
+              return (
+                <BooklogUpdateCard as="li" key={value.slug} value={value} />
+              );
             })}
           </ol>
           <div

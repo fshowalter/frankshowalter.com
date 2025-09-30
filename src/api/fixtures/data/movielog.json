@@ -1,45 +1,56 @@
 [
   {
-    "title": "Night of the Demons",
-    "slug": "night-of-the-demons-1988",
-    "date": "2025-01-14",
-    "stars": 2.5,
-    "year": "1988"
-  },
-  {
-    "title": "The Return of the Musketeers",
-    "slug": "the-return-of-the-musketeers-1989",
-    "date": "2025-01-11",
+    "date": "2025-09-27T00:00:00.000Z",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com%2Fcontent%2Fassets%2Fposters%2Fthe-untold-story-1993.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=100&f=png",
+    "slug": "the-untold-story-1993",
     "stars": 2,
-    "year": "1989"
-
+    "synopsis": "Anthony Wong plays a psychotic restaurant owner who falls under police suspicion after a bag of severed limbs washes ashore.",
+    "title": "The Untold Story",
+    "year": "1993"
   },
   {
-    "title": "Def by Temptation",
-    "slug": "def-by-temptation-1990",
-    "date": "2025-01-11",
+    "date": "2025-09-25T00:00:00.000Z",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com%2Fcontent%2Fassets%2Fposters%2Fa-field-in-england-2013.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=100&f=png",
+    "slug": "a-field-in-england-2013",
+    "stars": 4,
+    "synopsis": "During the English Civil War, a group of deserters encounter a sinister alchemist in a mushroom-laden field.",
+    "title": "A Field in England",
+    "year": "2013"
+  },
+  {
+    "date": "2025-09-25T00:00:00.000Z",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com%2Fcontent%2Fassets%2Fposters%2Fthe-swimmer-1968.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=100&f=png",
+    "slug": "the-swimmer-1968",
+    "stars": 5,
+    "synopsis": "Burt Lancaster descends into hell via a series of manicured backyard pools.",
+    "title": "The Swimmer",
+    "year": "1968"
+  },
+  {
+    "date": "2025-07-26T00:00:00.000Z",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com%2Fcontent%2Fassets%2Fposters%2Fstay-hungry-1976.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=100&f=png",
+    "slug": "stay-hungry-1976",
     "stars": 2.5,
-    "year": "1990"
+    "synopsis": "In Birmingham, rich kid Jeff Bridges falls for gym receptionist Sally Field and befriends bodybuilder Arnold Schwarzenegger, much to the dismay of his country-club family and friends.",
+    "title": "Stay Hungry",
+    "year": "1976"
   },
   {
-    "title": "The Brigand of Kandahar",
-    "slug": "the-brigand-of-kandahar-1965",
-    "date": "2025-01-10",
-    "stars": 1.5,
-    "year": "1965"
-  },
-  {
-    "title": "Leprechaun 6: Back 2 Tha Hood",
-    "slug": "leprechaun-6-back-2-tha-hood-2003",
-    "date": "2025-01-10",
+    "date": "2025-07-25T00:00:00.000Z",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com%2Fcontent%2Fassets%2Fposters%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=100&f=png",
+    "slug": "theyre-coming-to-get-you-1972",
     "stars": 2,
-    "year": "2003"
+    "synopsis": "Haunted by nightmares after losing her unborn child in a car crash, a woman turns to a Satanic cult for relief, only to find she cannot escape their influence.",
+    "title": "They're Coming to Get You!",
+    "year": "1972"
   },
   {
-    "title": "Crimes of the Future",
-    "slug": "crimes-of-the-future-2022",
-    "date": "2025-01-09",
-    "stars": 3.5,
-    "year": "2022"
+    "date": "2025-07-20T00:00:00.000Z",
+    "image": "/_image/?href=%2F%40fs%2FUsers%2Ffrank%2FDeveloper%2Ffranksmovielog.com%2Fcontent%2Fassets%2Fposters%2Fsuperman-2025.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&w=500&h=750&q=100&f=png",
+    "slug": "superman-2025",
+    "stars": 4,
+    "synopsis": "Three years into his crime-fighting career, a young Superman battles a series of schemes orchestrated by billionaire Lex Luthor.",
+    "title": "Superman",
+    "year": "2025"
   }
 ]

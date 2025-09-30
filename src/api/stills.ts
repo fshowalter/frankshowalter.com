@@ -15,29 +15,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 /**
- * Generates OpenGraph still image source URL.
- * @param slug - Identifier for the still image
- * @returns Optimized JPEG image source URL
- */
-export async function getOpenGraphStillSrc(slug: string) {
-  const stillFilePath = Object.keys(images).find((path) => {
-    return path.endsWith(`/${slug}.png`);
-  })!;
-
-  const stillFile = await images[stillFilePath]();
-
-  const image = await getImage({
-    format: "jpeg",
-    height: 675,
-    quality: 80,
-    src: stillFile.default,
-    width: 1200,
-  });
-
-  return normalizeSources(image.src);
-}
-
-/**
  * Retrieves still image properties for a given slug.
  * @param slug - Identifier for the still image
  * @param options - Image dimensions

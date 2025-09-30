@@ -57,7 +57,7 @@
         </div>
         <main class="z-10 grow flex flex-col bg-subtle" id="content">
           <header
-            class="min-h-[90vh] max-h-[1350px] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] pt-40 pb-8 text-white tablet:pt-40 tablet:pb-10 laptop:pt-40 laptop:pb-16"
+            class="min-h-[90vh] max-h-[1350px] relative flex w-full flex-col content-start items-center justify-end gap-6 bg-[#2A2B2A] text-white pt-40 pb-20 tablet:pt-40 tablet:pb-20 laptop:pt-60 laptop:pb-30"
           >
             <img
               class="absolute inset-0 size-full object-cover object-bottom"
@@ -79,764 +79,787 @@
               class="items-center z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col px-container after:absolute after:top-0 after:left-0 after:-z-10 after:h-full after:w-full after:bg-linear-to-t after:from-[rgba(0,0,0,.4)] after:via-transparent after:via-10% after:to-100%"
             >
               <h1
-                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-4xl laptop:text-7xl"
+                class="text-[2rem] leading-10 font-extrabold [text-shadow:1px_1px_2px_rgba(0,0,0,.25)] tablet:text-5xl laptop:text-7xl"
                 data-pagefind-weight="10"
               >
                 404 Not Found
               </h1>
               <p
-                class="mt-1 font-sans text-base font-semibold text-white/75 [text-shadow:1px_1px_2px_black] laptop:my-4 laptop:text-xl text-center"
+                class="mt-1 font-sans text-base font-normal text-white/75 [text-shadow:1px_1px_2px_black] tablet:text-lg laptop:my-4 laptop:text-xl text-center"
               >
                 &quot;It&#x27;s hard for us here to be reporting this to you,
                 but it does seem to be a fact.&quot;
               </p>
             </div>
           </header>
-          <div class="bg-subtle pb-16">
-            <nav
-              class="mx-auto w-full max-w-[908px] tablet:px-container laptop:max-w-(--breakpoint-desktop) laptop:px-container"
+          <div class="w-full bg-subtle pb-16">
+            <div
+              class="mx-auto w-full max-w-[1056px] gap-x-16 tablet:px-container laptop:flex laptop:max-w-(--breakpoint-desktop)"
             >
-              <h2
-                class="pt-10 pb-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase tablet:pb-5"
-              >
-                <a
-                  class="relative -mb-1 inline-block transform-gpu px-container pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:after:scale-x-100 tablet:px-0"
-                  href="https://www.franksmovielog.com"
-                  >Latest<!-- -->
-                  <span class="text-accent">Movie Reviews</span></a
+              <nav class="w-full max-w-[1056px] desktop:grow">
+                <h2
+                  class="mb-5 border-t border-border px-[1.5%] pt-10 pb-5 text-center font-sans text-base font-medium text-subtle/70 laptop:text-left text-left"
                 >
-              </h2>
-              <div class="@container/update-list">
+                  <a
+                    class="relative -mb-1 inline-block transform-gpu px-container pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:after:scale-x-100 tablet:px-0"
+                    href="https://www.franksmovielog.com"
+                    >Latest<!-- -->
+                    <span class="text-accent">Movie Reviews</span></a
+                  >
+                </h2>
                 <ol
-                  class="items-baseline [--update-list-item-width:50%] tablet:-mx-6 tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/update-list:[--update-list-item-width:33.33%] @min-[calc((250px_*_5)_+_1px)]/update-list:[--update-list-item-width:16.66%]"
+                  class="flex flex-wrap justify-between gap-x-[2%] tablet:gap-y-[3vw] laptop:gap-y-[3vw]"
                 >
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                  <div
+                    class="group/card relative mb-1 flex w-(--review-card-width) transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl [--review-card-width:100%]"
                   >
                     <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
                     >
                       <img
-                        height="372"
-                        sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                        src="/_image/?href=%2Fassets%2Fposters%2Fnight-of-the-demons-1988.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
+                        src="/_image/?href=%2Fassets%2Fstills%2Fthe-untold-story-1993.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
                         srcset="
-                          /_image/?href=%2Fassets%2Fposters%2Fnight-of-the-demons-1988.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                          /_image/?href=%2Fassets%2Fposters%2Fnight-of-the-demons-1988.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                          /_image/?href=%2Fassets%2Fposters%2Fnight-of-the-demons-1988.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                          /_image/?href=%2Fassets%2Fposters%2Fnight-of-the-demons-1988.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-untold-story-1993.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=160&amp;h=90&amp;q=80&amp;f=avif    160w,
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-untold-story-1993.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=320&amp;h=180&amp;q=80&amp;f=avif   320w,
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-untold-story-1993.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif   640w,
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-untold-story-1993.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=1280&amp;h=720&amp;q=80&amp;f=avif 1280w
                         "
-                        width="248"
                         alt=""
-                        class="aspect-[1/1.5] w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
                         decoding="async"
                         loading="lazy"
+                        height="360"
+                        sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
+                        width="640"
+                        class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
                       />
                     </div>
-                    <div class="@container/details w-full">
+                    <div
+                      class="flex grow flex-col px-1 pb-8 tablet:px-[4%] laptop:pr-[5%] laptop:pl-[4.25%]"
+                    >
                       <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                        class="mb-3 font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                      >
+                        27 Sept 2025
+                      </div>
+                      <a
+                        class="mb-3 block text-2xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full tablet:text-2.5xl laptop:text-3xl hover:text-accent tablet:text-2xl"
+                        href="/reviews/the-untold-story-1993/"
+                        >The Untold Story<!-- --> <span
+                          class="text-sm leading-none font-normal text-muted"
+                          >1993</span
+                        ></a
+                      ><picture
+                        ><source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/2-stars-dark.svg" />
+                        <img
+                          alt="2 stars (out of 5)"
+                          class="mb-5 tablet:mb-8"
+                          height="24"
+                          src="/svg/2-stars.svg"
+                          width="120"
+                      /></picture>
+                      <div
+                        class="rendered-markdown tracking-prose text-muted text-lg"
+                      >
+                        Anthony Wong plays a psychotic restaurant owner who
+                        falls under police suspicion after a bag of severed
+                        limbs washes ashore.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="group/card relative mb-1 flex w-(--review-card-width) transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl tablet:[--review-card-width:48%]"
+                  >
+                    <div
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                    >
+                      <img
+                        src="/_image/?href=%2Fassets%2Fstills%2Fa-field-in-england-2013.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
+                        srcset="
+                          /_image/?href=%2Fassets%2Fstills%2Fa-field-in-england-2013.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=160&amp;h=90&amp;q=80&amp;f=avif    160w,
+                          /_image/?href=%2Fassets%2Fstills%2Fa-field-in-england-2013.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=320&amp;h=180&amp;q=80&amp;f=avif   320w,
+                          /_image/?href=%2Fassets%2Fstills%2Fa-field-in-england-2013.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif   640w,
+                          /_image/?href=%2Fassets%2Fstills%2Fa-field-in-england-2013.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=1280&amp;h=720&amp;q=80&amp;f=avif 1280w
+                        "
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        height="360"
+                        sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
+                        width="640"
+                        class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
+                    >
+                      <div
+                        class="mb-3 font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                      >
+                        25 Sept 2025
+                      </div>
+                      <a
+                        class="mb-3 block text-2xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full tablet:text-2.5xl laptop:text-2.5xl hover:text-accent tablet:text-2xl"
+                        href="/reviews/a-field-in-england-2013/"
+                        >A Field in England<!-- --> <span
+                          class="text-sm leading-none font-normal text-muted"
+                          >2013</span
+                        ></a
+                      ><picture
+                        ><source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/4-stars-dark.svg" />
+                        <img
+                          alt="4 stars (out of 5)"
+                          class="mb-5 tablet:mb-8"
+                          height="18"
+                          src="/svg/4-stars.svg"
+                          width="90"
+                      /></picture>
+                      <div class="rendered-markdown tracking-prose text-muted">
+                        During the English Civil War, a group of deserters
+                        encounter a sinister alchemist in a mushroom-laden
+                        field.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="group/card relative mb-1 flex w-(--review-card-width) transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl tablet:[--review-card-width:48%]"
+                  >
+                    <div
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                    >
+                      <img
+                        src="/_image/?href=%2Fassets%2Fstills%2Fthe-swimmer-1968.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
+                        srcset="
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-swimmer-1968.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=160&amp;h=90&amp;q=80&amp;f=avif    160w,
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-swimmer-1968.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=320&amp;h=180&amp;q=80&amp;f=avif   320w,
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-swimmer-1968.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif   640w,
+                          /_image/?href=%2Fassets%2Fstills%2Fthe-swimmer-1968.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=1280&amp;h=720&amp;q=80&amp;f=avif 1280w
+                        "
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        height="360"
+                        sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
+                        width="640"
+                        class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
+                    >
+                      <div
+                        class="mb-3 font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                      >
+                        25 Sept 2025
+                      </div>
+                      <a
+                        class="mb-3 block text-2xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full tablet:text-2.5xl laptop:text-2.5xl hover:text-accent tablet:text-2xl"
+                        href="/reviews/the-swimmer-1968/"
+                        >The Swimmer<!-- --> <span
+                          class="text-sm leading-none font-normal text-muted"
+                          >1968</span
+                        ></a
+                      ><picture
+                        ><source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/5-stars-dark.svg" />
+                        <img
+                          alt="5 stars (out of 5)"
+                          class="mb-5 tablet:mb-8"
+                          height="18"
+                          src="/svg/5-stars.svg"
+                          width="90"
+                      /></picture>
+                      <div class="rendered-markdown tracking-prose text-muted">
+                        Burt Lancaster descends into hell via a series of
+                        manicured backyard pools.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="group/card relative mb-1 flex w-(--review-card-width) transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl tablet:[--review-card-width:48%]"
+                  >
+                    <div
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                    >
+                      <img
+                        src="/_image/?href=%2Fassets%2Fstills%2Fstay-hungry-1976.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
+                        srcset="
+                          /_image/?href=%2Fassets%2Fstills%2Fstay-hungry-1976.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=160&amp;h=90&amp;q=80&amp;f=avif    160w,
+                          /_image/?href=%2Fassets%2Fstills%2Fstay-hungry-1976.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=320&amp;h=180&amp;q=80&amp;f=avif   320w,
+                          /_image/?href=%2Fassets%2Fstills%2Fstay-hungry-1976.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif   640w,
+                          /_image/?href=%2Fassets%2Fstills%2Fstay-hungry-1976.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=1280&amp;h=720&amp;q=80&amp;f=avif 1280w
+                        "
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        height="360"
+                        sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
+                        width="640"
+                        class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
+                    >
+                      <div
+                        class="mb-3 font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                      >
+                        26 Jul 2025
+                      </div>
+                      <a
+                        class="mb-3 block text-2xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full tablet:text-2.5xl laptop:text-2.5xl hover:text-accent tablet:text-2xl"
+                        href="/reviews/stay-hungry-1976/"
+                        >Stay Hungry<!-- --> <span
+                          class="text-sm leading-none font-normal text-muted"
+                          >1976</span
+                        ></a
+                      ><picture
+                        ><source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/2-half-stars-dark.svg" />
+                        <img
+                          alt="2.5 stars (out of 5)"
+                          class="mb-5 tablet:mb-8"
+                          height="18"
+                          src="/svg/2-half-stars.svg"
+                          width="90"
+                      /></picture>
+                      <div class="rendered-markdown tracking-prose text-muted">
+                        In Birmingham, rich kid Jeff Bridges falls for gym
+                        receptionist Sally Field and befriends bodybuilder
+                        Arnold Schwarzenegger, much to the dismay of his
+                        country-club family and friends.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="group/card relative mb-1 flex w-(--review-card-width) transform-gpu flex-col bg-default px-[8%] pt-12 transition-transform duration-500 tablet:mb-0 tablet:px-0 tablet:pt-0 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl tablet:[--review-card-width:48%]"
+                  >
+                    <div
+                      class="relative mb-6 block overflow-hidden after:absolute after:top-0 after:left-0 after:aspect-video after:size-full after:bg-default after:opacity-15 after:duration-500 group-has-[a:hover]/card:after:opacity-0 tablet:after:inset-x-0 tablet:after:top-0"
+                    >
+                      <img
+                        src="/_image/?href=%2Fassets%2Fstills%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif"
+                        srcset="
+                          /_image/?href=%2Fassets%2Fstills%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=160&amp;h=90&amp;q=80&amp;f=avif    160w,
+                          /_image/?href=%2Fassets%2Fstills%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=320&amp;h=180&amp;q=80&amp;f=avif   320w,
+                          /_image/?href=%2Fassets%2Fstills%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=640&amp;h=360&amp;q=80&amp;f=avif   640w,
+                          /_image/?href=%2Fassets%2Fstills%2Ftheyre-coming-to-get-you-1972.png%3ForigWidth%3D1920%26origHeight%3D1080%26origFormat%3Dpng&amp;w=1280&amp;h=720&amp;q=80&amp;f=avif 1280w
+                        "
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        height="360"
+                        sizes="(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw"
+                        width="640"
+                        class="aspect-video h-auto w-full transform-gpu transition-transform duration-500 group-has-[a:hover]/card:scale-110"
+                      />
+                    </div>
+                    <div
+                      class="flex grow flex-col px-1 pb-8 tablet:px-[8%] laptop:pr-[10%] laptop:pl-[8.5%]"
+                    >
+                      <div
+                        class="mb-3 font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                      >
+                        25 Jul 2025
+                      </div>
+                      <a
+                        class="mb-3 block text-2xl leading-7 font-medium text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full tablet:text-2.5xl laptop:text-2.5xl hover:text-accent tablet:text-2xl"
+                        href="/reviews/theyre-coming-to-get-you-1972/"
+                        >They&#x27;re Coming to Get You!<!-- --> <span
+                          class="text-sm leading-none font-normal text-muted"
+                          >1972</span
+                        ></a
+                      ><picture
+                        ><source
+                          media="(prefers-color-scheme: dark)"
+                          srcset="/svg/2-stars-dark.svg" />
+                        <img
+                          alt="2 stars (out of 5)"
+                          class="mb-5 tablet:mb-8"
+                          height="18"
+                          src="/svg/2-stars.svg"
+                          width="90"
+                      /></picture>
+                      <div class="rendered-markdown tracking-prose text-muted">
+                        Haunted by nightmares after losing her unborn child in a
+                        car crash, a woman turns to a Satanic cult for relief,
+                        only to find she cannot escape their influence.
+                      </div>
+                    </div>
+                  </div>
+                </ol>
+                <div
+                  class="flex px-container py-10 has-[a:hover]:drop-shadow-lg"
+                >
+                  <a
+                    class="group/all-reviews mx-auto w-full max-w-[500px] transform-gpu rounded-md bg-default pt-5 pb-4 text-center font-sans text-base font-medium text-accent transition-all duration-500 hover:scale-105 hover:bg-accent hover:text-white"
+                    href="/reviews/"
+                    ><span
+                      class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:transform-gpu after:bg-white after:transition-transform after:duration-500 group-hover/all-reviews:after:scale-x-100"
+                      >More Movie Reviews</span
+                    ></a
+                  >
+                </div>
+              </nav>
+              <nav
+                class="mx-auto w-full max-w-[720px] laptop:min-w-[548px] desktop:shrink"
+              >
+                <h2
+                  class="mb-5 border-t border-border px-[1.5%] pt-10 pb-5 text-center font-sans text-base font-medium text-subtle/70 laptop:text-left text-right"
+                >
+                  <a
+                    class="relative -mb-1 inline-block transform-gpu px-container pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:after:scale-x-100 tablet:px-0"
+                    href="https://www.franksbooklog.com"
+                    >Latest<!-- -->
+                    <span class="text-accent">Book Reviews</span></a
+                  >
+                </h2>
+                <ol class="flex flex-col gap-y-[2vw]">
+                  <li
+                    class="group/list-item @container/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default py-6 pr-8 pl-4 transition-transform duration-500 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
+                  >
+                    <div
+                      class="row-span-2 grid grid-cols-1 grid-rows-subgrid gap-x-[5%] @min-[500px]/card:flex @min-[500px]/card:flex-row"
+                    >
+                      <div
+                        class="relative row-start-1 flex shrink-0 justify-center self-end @min-[500px]/card:w-1/4 @min-[500px]/card:self-start @min-[500px]/card:drop-shadow-md"
                       >
                         <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
+                          class="absolute top-[2.5%] bottom-[2.5%] left-[0] w-full overflow-hidden bg-default bg-cover bg-center clip-path-cover after:absolute after:size-full after:backdrop-blur-sm after:clip-path-cover @min-[500px]/card:hidden"
+                          style="
+                            background-color: var(--background-color-default);
+                            background-image:
+                              linear-gradient(
+                                90deg,
+                                rgba(var(--bg-default-rgb), 1) 0%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  30%,
+                                rgba(var(--bg-default-rgb), 0) 50%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  70%,
+                                rgba(var(--bg-default-rgb), 1) 100%
+                              ),
+                              url(/_image/?href=%2Fassets%2Fcovers%2Fking-mob-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=248&amp;h=383&amp;q=80&amp;f=avif);
+                          "
+                        ></div>
+                        <div
+                          class="relative w-1/2 max-w-[200px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 @min-[500px]/card:w-full"
                         >
-                          14 Jan 2025
+                          <div
+                            class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
+                          >
+                            <div
+                              class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
+                            >
+                              <img
+                                height="383.408"
+                                src="/_image/?href=%2Fassets%2Fcovers%2Fking-mob-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=248&amp;h=383&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fassets%2Fcovers%2Fking-mob-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=62&amp;h=96&amp;q=80&amp;f=avif    62w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fking-mob-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=124&amp;h=192&amp;q=80&amp;f=avif 124w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fking-mob-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=248&amp;h=383&amp;q=80&amp;f=avif 248w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fking-mob-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=496&amp;h=766&amp;q=80&amp;f=avif 496w
+                                "
+                                width="248"
+                                alt=""
+                                class="transform-gpu rounded-[2.5px] bg-default transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="row-start-2 mt-4 flex flex-col gap-y-2 px-[8%] @min-[500px]/card:mt-0 @min-[500px]/card:px-0"
+                      >
+                        <div
+                          class="font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                        >
+                          12 Jul 2025
                         </div>
                         <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksmovielog.com/reviews/night-of-the-demons-1988/"
-                          rel="canonical"
-                          >Night of the Demons<!-- -->  <span
-                            class="text-xxs leading-none font-light text-subtle"
-                            >(<!-- -->1988<!-- -->)</span
-                          ></a
-                        ><picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/2-half-stars-dark.svg" />
-                          <img
-                            alt="2.5 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/2-half-stars.svg"
-                            width="75"
-                        /></picture>
+                          class="block text-2xl font-medium transition-colors duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0"
+                          href="/reviews/king-mob-by-philip-fracassi/"
+                          >King Mob</a
+                        >
+                        <div class="-mt-2"><span>Philip Fracassi</span></div>
+                        <div
+                          class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                        >
+                          2017<!-- -->
+                          |
+                          <!-- -->Short Story
+                        </div>
+                        <div>
+                          <picture
+                            ><source
+                              media="(prefers-color-scheme: dark)"
+                              srcset="/svg/3-stars-dark.svg" />
+                            <img
+                              alt="3 stars (out of 5)"
+                              class="mb-2 py-1"
+                              height="18"
+                              src="/svg/3-stars.svg"
+                              width="90"
+                          /></picture>
+                        </div>
+                        <div
+                          class="rendered-markdown tracking-prose text-muted"
+                        >
+                          In 1780 London, William Blake finds himself swept into
+                          the Gordon Riots, only to discover the rioters'
+                          enigmatic leader harbors a dark secret.
+                        </div>
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                    class="group/list-item @container/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default py-6 pr-8 pl-4 transition-transform duration-500 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
+                      class="row-span-2 grid grid-cols-1 grid-rows-subgrid gap-x-[5%] @min-[500px]/card:flex @min-[500px]/card:flex-row"
                     >
-                      <img
-                        height="372"
-                        sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                        src="/_image/?href=%2Fassets%2Fposters%2Fthe-return-of-the-musketeers-1989.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                        srcset="
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-return-of-the-musketeers-1989.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-return-of-the-musketeers-1989.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-return-of-the-musketeers-1989.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-return-of-the-musketeers-1989.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                        "
-                        width="248"
-                        alt=""
-                        class="aspect-[1/1.5] w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                        decoding="async"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="@container/details w-full">
                       <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                        class="relative row-start-1 flex shrink-0 justify-center self-end @min-[500px]/card:w-1/4 @min-[500px]/card:self-start @min-[500px]/card:drop-shadow-md"
                       >
                         <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
+                          class="absolute top-[2.5%] bottom-[2.5%] left-[0] w-full overflow-hidden bg-default bg-cover bg-center clip-path-cover after:absolute after:size-full after:backdrop-blur-sm after:clip-path-cover @min-[500px]/card:hidden"
+                          style="
+                            background-color: var(--background-color-default);
+                            background-image:
+                              linear-gradient(
+                                90deg,
+                                rgba(var(--bg-default-rgb), 1) 0%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  30%,
+                                rgba(var(--bg-default-rgb), 0) 50%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  70%,
+                                rgba(var(--bg-default-rgb), 1) 100%
+                              ),
+                              url(/_image/?href=%2Fassets%2Fcovers%2Fshiloh-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=248&amp;h=383&amp;q=80&amp;f=avif);
+                          "
+                        ></div>
+                        <div
+                          class="relative w-1/2 max-w-[200px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 @min-[500px]/card:w-full"
                         >
-                          11 Jan 2025
+                          <div
+                            class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
+                          >
+                            <div
+                              class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
+                            >
+                              <img
+                                height="383.408"
+                                src="/_image/?href=%2Fassets%2Fcovers%2Fshiloh-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=248&amp;h=383&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fassets%2Fcovers%2Fshiloh-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=62&amp;h=96&amp;q=80&amp;f=avif    62w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fshiloh-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=124&amp;h=192&amp;q=80&amp;f=avif 124w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fshiloh-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=248&amp;h=383&amp;q=80&amp;f=avif 248w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fshiloh-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D773%26origFormat%3Dpng&amp;w=496&amp;h=766&amp;q=80&amp;f=avif 496w
+                                "
+                                width="248"
+                                alt=""
+                                class="transform-gpu rounded-[2.5px] bg-default transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="row-start-2 mt-4 flex flex-col gap-y-2 px-[8%] @min-[500px]/card:mt-0 @min-[500px]/card:px-0"
+                      >
+                        <div
+                          class="font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                        >
+                          11 Jul 2025
                         </div>
                         <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksmovielog.com/reviews/the-return-of-the-musketeers-1989/"
-                          rel="canonical"
-                          >The Return of the Musketeers<!-- -->  <span
-                            class="text-xxs leading-none font-light text-subtle"
-                            >(<!-- -->1989<!-- -->)</span
-                          ></a
-                        ><picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/2-stars-dark.svg" />
-                          <img
-                            alt="2 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/2-stars.svg"
-                            width="75"
-                        /></picture>
+                          class="block text-2xl font-medium transition-colors duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0"
+                          href="/reviews/shiloh-by-philip-fracassi/"
+                          >Shiloh</a
+                        >
+                        <div class="-mt-2"><span>Philip Fracassi</span></div>
+                        <div
+                          class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                        >
+                          2017<!-- -->
+                          |
+                          <!-- -->Novella
+                        </div>
+                        <div>
+                          <picture
+                            ><source
+                              media="(prefers-color-scheme: dark)"
+                              srcset="/svg/4-stars-dark.svg" />
+                            <img
+                              alt="4 stars (out of 5)"
+                              class="mb-2 py-1"
+                              height="18"
+                              src="/svg/4-stars.svg"
+                              width="90"
+                          /></picture>
+                        </div>
+                        <div
+                          class="rendered-markdown tracking-prose text-muted"
+                        >
+                          During the brutal Civil War battle, as artillery
+                          shreds trees and flesh alike and soldiers become
+                          scavengers among the corpses, a Confederate veteran
+                          encounters something supernatural stalking the
+                          battlefield.
+                        </div>
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                    class="group/list-item @container/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default py-6 pr-8 pl-4 transition-transform duration-500 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
+                      class="row-span-2 grid grid-cols-1 grid-rows-subgrid gap-x-[5%] @min-[500px]/card:flex @min-[500px]/card:flex-row"
                     >
-                      <img
-                        height="372"
-                        sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                        src="/_image/?href=%2Fassets%2Fposters%2Fdef-by-temptation-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                        srcset="
-                          /_image/?href=%2Fassets%2Fposters%2Fdef-by-temptation-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                          /_image/?href=%2Fassets%2Fposters%2Fdef-by-temptation-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                          /_image/?href=%2Fassets%2Fposters%2Fdef-by-temptation-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                          /_image/?href=%2Fassets%2Fposters%2Fdef-by-temptation-1990.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                        "
-                        width="248"
-                        alt=""
-                        class="aspect-[1/1.5] w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                        decoding="async"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="@container/details w-full">
                       <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                        class="relative row-start-1 flex shrink-0 justify-center self-end @min-[500px]/card:w-1/4 @min-[500px]/card:self-start @min-[500px]/card:drop-shadow-md"
                       >
                         <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
+                          class="absolute top-[2.5%] bottom-[2.5%] left-[0] w-full overflow-hidden bg-default bg-cover bg-center clip-path-cover after:absolute after:size-full after:backdrop-blur-sm after:clip-path-cover @min-[500px]/card:hidden"
+                          style="
+                            background-color: var(--background-color-default);
+                            background-image:
+                              linear-gradient(
+                                90deg,
+                                rgba(var(--bg-default-rgb), 1) 0%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  30%,
+                                rgba(var(--bg-default-rgb), 0) 50%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  70%,
+                                rgba(var(--bg-default-rgb), 1) 100%
+                              ),
+                              url(/_image/?href=%2Fassets%2Fcovers%2Fcommodore-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif);
+                          "
+                        ></div>
+                        <div
+                          class="relative w-1/2 max-w-[200px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 @min-[500px]/card:w-full"
                         >
-                          11 Jan 2025
+                          <div
+                            class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
+                          >
+                            <div
+                              class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
+                            >
+                              <img
+                                height="372"
+                                src="/_image/?href=%2Fassets%2Fcovers%2Fcommodore-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fassets%2Fcovers%2Fcommodore-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fcommodore-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fcommodore-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fcommodore-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
+                                "
+                                width="248"
+                                alt=""
+                                class="transform-gpu rounded-[2.5px] bg-default transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="row-start-2 mt-4 flex flex-col gap-y-2 px-[8%] @min-[500px]/card:mt-0 @min-[500px]/card:px-0"
+                      >
+                        <div
+                          class="font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
+                        >
+                          11 Jul 2025
                         </div>
                         <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksmovielog.com/reviews/def-by-temptation-1990/"
-                          rel="canonical"
-                          >Def by Temptation<!-- -->  <span
-                            class="text-xxs leading-none font-light text-subtle"
-                            >(<!-- -->1990<!-- -->)</span
-                          ></a
-                        ><picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/2-half-stars-dark.svg" />
-                          <img
-                            alt="2.5 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/2-half-stars.svg"
-                            width="75"
-                        /></picture>
+                          class="block text-2xl font-medium transition-colors duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0"
+                          href="/reviews/commodore-by-philip-fracassi/"
+                          >Commodore</a
+                        >
+                        <div class="-mt-2"><span>Philip Fracassi</span></div>
+                        <div
+                          class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
+                        >
+                          2021<!-- -->
+                          |
+                          <!-- -->Novella
+                        </div>
+                        <div>
+                          <picture
+                            ><source
+                              media="(prefers-color-scheme: dark)"
+                              srcset="/svg/5-stars-dark.svg" />
+                            <img
+                              alt="5 stars (out of 5)"
+                              class="mb-2 py-1"
+                              height="18"
+                              src="/svg/5-stars.svg"
+                              width="90"
+                          /></picture>
+                        </div>
+                        <div
+                          class="rendered-markdown tracking-prose text-muted"
+                        >
+                          Five thirteen-year-old boys go hunting for a
+                          mysterious black Commodore in the local junkyard but
+                          discover the car--and their town--harbor darker
+                          secrets than they could have imagined.
+                        </div>
                       </div>
                     </div>
                   </li>
                   <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                    class="group/list-item @container/card relative row-span-2 grid transform-gpu grid-rows-subgrid gap-y-0 bg-default py-6 pr-8 pl-4 transition-transform duration-500 tablet-landscape:has-[a:hover]:-translate-y-2 tablet-landscape:has-[a:hover]:drop-shadow-2xl"
                   >
                     <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
+                      class="row-span-2 grid grid-cols-1 grid-rows-subgrid gap-x-[5%] @min-[500px]/card:flex @min-[500px]/card:flex-row"
                     >
-                      <img
-                        height="372"
-                        sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                        src="/_image/?href=%2Fassets%2Fposters%2Fthe-brigand-of-kandahar-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                        srcset="
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-brigand-of-kandahar-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-brigand-of-kandahar-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-brigand-of-kandahar-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                          /_image/?href=%2Fassets%2Fposters%2Fthe-brigand-of-kandahar-1965.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                        "
-                        width="248"
-                        alt=""
-                        class="aspect-[1/1.5] w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                        decoding="async"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="@container/details w-full">
                       <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                        class="relative row-start-1 flex shrink-0 justify-center self-end @min-[500px]/card:w-1/4 @min-[500px]/card:self-start @min-[500px]/card:drop-shadow-md"
                       >
                         <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
+                          class="absolute top-[2.5%] bottom-[2.5%] left-[0] w-full overflow-hidden bg-default bg-cover bg-center clip-path-cover after:absolute after:size-full after:backdrop-blur-sm after:clip-path-cover @min-[500px]/card:hidden"
+                          style="
+                            background-color: var(--background-color-default);
+                            background-image:
+                              linear-gradient(
+                                90deg,
+                                rgba(var(--bg-default-rgb), 1) 0%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  30%,
+                                rgba(var(--bg-default-rgb), 0) 50%,
+                                rgba(
+                                    var(--bg-default-rgb),
+                                    var(--bg-default-alpha)
+                                  )
+                                  70%,
+                                rgba(var(--bg-default-rgb), 1) 100%
+                              ),
+                              url(/_image/?href=%2Fassets%2Fcovers%2Fprogeny-of-the-adder-by-leslie-h-whitten-jr.png%3ForigWidth%3D500%26origHeight%3D824%26origFormat%3Dpng&amp;w=248&amp;h=409&amp;q=80&amp;f=avif);
+                          "
+                        ></div>
+                        <div
+                          class="relative w-1/2 max-w-[200px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 @min-[500px]/card:w-full"
                         >
-                          10 Jan 2025
+                          <div
+                            class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
+                          >
+                            <div
+                              class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
+                            >
+                              <img
+                                height="408.70399999999995"
+                                src="/_image/?href=%2Fassets%2Fcovers%2Fprogeny-of-the-adder-by-leslie-h-whitten-jr.png%3ForigWidth%3D500%26origHeight%3D824%26origFormat%3Dpng&amp;w=248&amp;h=409&amp;q=80&amp;f=avif"
+                                srcset="
+                                  /_image/?href=%2Fassets%2Fcovers%2Fprogeny-of-the-adder-by-leslie-h-whitten-jr.png%3ForigWidth%3D500%26origHeight%3D824%26origFormat%3Dpng&amp;w=62&amp;h=102&amp;q=80&amp;f=avif   62w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fprogeny-of-the-adder-by-leslie-h-whitten-jr.png%3ForigWidth%3D500%26origHeight%3D824%26origFormat%3Dpng&amp;w=124&amp;h=205&amp;q=80&amp;f=avif 124w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fprogeny-of-the-adder-by-leslie-h-whitten-jr.png%3ForigWidth%3D500%26origHeight%3D824%26origFormat%3Dpng&amp;w=248&amp;h=409&amp;q=80&amp;f=avif 248w,
+                                  /_image/?href=%2Fassets%2Fcovers%2Fprogeny-of-the-adder-by-leslie-h-whitten-jr.png%3ForigWidth%3D500%26origHeight%3D824%26origFormat%3Dpng&amp;w=496&amp;h=818&amp;q=80&amp;f=avif 496w
+                                "
+                                width="248"
+                                alt=""
+                                class="transform-gpu rounded-[2.5px] bg-default transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
+                                decoding="async"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
                         </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksmovielog.com/reviews/the-brigand-of-kandahar-1965/"
-                          rel="canonical"
-                          >The Brigand of Kandahar<!-- -->  <span
-                            class="text-xxs leading-none font-light text-subtle"
-                            >(<!-- -->1965<!-- -->)</span
-                          ></a
-                        ><picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/1-half-stars-dark.svg" />
-                          <img
-                            alt="1.5 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/1-half-stars.svg"
-                            width="75"
-                        /></picture>
                       </div>
-                    </div>
-                  </li>
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                  >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                    >
-                      <img
-                        height="372"
-                        sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                        src="/_image/?href=%2Fassets%2Fposters%2Fleprechaun-6-back-2-tha-hood-2003.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                        srcset="
-                          /_image/?href=%2Fassets%2Fposters%2Fleprechaun-6-back-2-tha-hood-2003.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                          /_image/?href=%2Fassets%2Fposters%2Fleprechaun-6-back-2-tha-hood-2003.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                          /_image/?href=%2Fassets%2Fposters%2Fleprechaun-6-back-2-tha-hood-2003.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                          /_image/?href=%2Fassets%2Fposters%2Fleprechaun-6-back-2-tha-hood-2003.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                        "
-                        width="248"
-                        alt=""
-                        class="aspect-[1/1.5] w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                        decoding="async"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="@container/details w-full">
                       <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
+                        class="row-start-2 mt-4 flex flex-col gap-y-2 px-[8%] @min-[500px]/card:mt-0 @min-[500px]/card:px-0"
                       >
                         <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
+                          class="font-sans text-xs leading-4 font-normal tracking-wider text-subtle uppercase laptop:tracking-wide"
                         >
-                          10 Jan 2025
+                          11 Jul 2025
                         </div>
                         <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksmovielog.com/reviews/leprechaun-6-back-2-tha-hood-2003/"
-                          rel="canonical"
-                          >Leprechaun 6: Back 2 Tha Hood<!-- -->  <span
-                            class="text-xxs leading-none font-light text-subtle"
-                            >(<!-- -->2003<!-- -->)</span
-                          ></a
-                        ><picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/2-stars-dark.svg" />
-                          <img
-                            alt="2 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/2-stars.svg"
-                            width="75"
-                        /></picture>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                  >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all after:absolute after:top-0 after:left-0 after:size-full after:bg-default after:opacity-15 after:transition-all after:duration-500 group-has-[a:hover]/list-item:after:opacity-0 tablet:w-full"
-                    >
-                      <img
-                        height="372"
-                        sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                        src="/_image/?href=%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                        srcset="
-                          /_image/?href=%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                          /_image/?href=%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                          /_image/?href=%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                          /_image/?href=%2Fassets%2Fposters%2Fcrimes-of-the-future-2022.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                        "
-                        width="248"
-                        alt=""
-                        class="aspect-[1/1.5] w-full transform-gpu object-cover transition-transform duration-500 group-has-[a:hover]/list-item:scale-110"
-                        decoding="async"
-                        loading="lazy"
-                      />
-                    </div>
-                    <div class="@container/details w-full">
-                      <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                      >
+                          class="block text-2xl font-medium transition-colors duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full hover:text-accent hover:before:opacity-0"
+                          href="/reviews/progeny-of-the-adder-by-leslie-h-whitten-jr/"
+                          >Progeny of the Adder</a
+                        >
+                        <div class="-mt-2">
+                          <span>Leslie H. Whitten Jr.</span>
+                        </div>
                         <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
+                          class="font-sans text-sm leading-4 font-normal tracking-prose text-subtle"
                         >
-                          09 Jan 2025
+                          1965<!-- -->
+                          |
+                          <!-- -->Novel
                         </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksmovielog.com/reviews/crimes-of-the-future-2022/"
-                          rel="canonical"
-                          >Crimes of the Future<!-- -->  <span
-                            class="text-xxs leading-none font-light text-subtle"
-                            >(<!-- -->2022<!-- -->)</span
-                          ></a
-                        ><picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/3-half-stars-dark.svg" />
-                          <img
-                            alt="3.5 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/3-half-stars.svg"
-                            width="75"
-                        /></picture>
+                        <div>
+                          <picture
+                            ><source
+                              media="(prefers-color-scheme: dark)"
+                              srcset="/svg/3-half-stars-dark.svg" />
+                            <img
+                              alt="3.5 stars (out of 5)"
+                              class="mb-2 py-1"
+                              height="18"
+                              src="/svg/3-half-stars.svg"
+                              width="90"
+                          /></picture>
+                        </div>
+                        <div
+                          class="rendered-markdown tracking-prose text-muted"
+                        >
+                          A D.C. detective's case involving blonde women turning
+                          up dead in the Potomac drained of blood leads to a
+                          mysterious suspect with supernatural implications.
+                        </div>
                       </div>
                     </div>
                   </li>
                 </ol>
-              </div>
-              <h2
-                class="pt-10 pb-10 font-sans text-xs font-bold tracking-wide text-subtle uppercase tablet:pb-5"
-              >
-                <a
-                  class="relative -mb-1 inline-block transform-gpu px-container pb-1 transition-all after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-bottom-right after:scale-x-0 after:bg-accent after:transition-transform after:duration-500 hover:after:scale-x-100 tablet:px-0"
-                  href="https://www.franksbooklog.com"
-                  >Latest<!-- -->
-                  <span class="text-accent">Book Reviews</span></a
+                <div
+                  class="flex px-container py-10 has-[a:hover]:drop-shadow-lg"
                 >
-              </h2>
-              <div class="@container/update-list">
-                <ol
-                  class="items-baseline [--update-list-item-width:50%] tablet:-mx-6 tablet:flex tablet:flex-wrap @min-[calc((250px_*_2)_+_1px)]/update-list:[--update-list-item-width:33.33%] @min-[calc((250px_*_5)_+_1px)]/update-list:[--update-list-item-width:16.66%]"
-                >
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
+                  <a
+                    class="group/all-reviews mx-auto w-full max-w-[500px] transform-gpu rounded-md bg-default pt-5 pb-4 text-center font-sans text-base font-medium text-accent transition-all duration-500 hover:scale-105 hover:bg-accent hover:text-white"
+                    href="/reviews/"
+                    ><span
+                      class="relative inline-block pb-1 after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-center after:scale-x-0 after:transform-gpu after:bg-white after:transition-transform after:duration-500 group-hover/all-reviews:after:scale-x-100"
+                      >More Book Reviews</span
+                    ></a
                   >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
-                    >
-                      <div
-                        class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
-                      >
-                        <div
-                          class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
-                        >
-                          <img
-                            height="372"
-                            sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                            src="/_image/?href=%2Fassets%2Fcovers%2Fghost-story-by-peter-straub.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                            srcset="
-                              /_image/?href=%2Fassets%2Fcovers%2Fghost-story-by-peter-straub.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fghost-story-by-peter-straub.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fghost-story-by-peter-straub.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fghost-story-by-peter-straub.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                            "
-                            width="248"
-                            alt=""
-                            class="transform-gpu rounded-[2.5px] bg-default shadow-sm transition-transform duration-500 group-has-[a:hover]/list-item:scale-110 @min-[160px]:shadow-lg"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="@container/details w-full">
-                      <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                      >
-                        <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
-                        >
-                          01 Dec 2024
-                        </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksbooklog.com/reviews/ghost-story-by-peter-straub/"
-                          rel="canonical"
-                          >Ghost Story</a
-                        >
-                        <div
-                          class="-mt-1 text-[15px] leading-4 font-normal tracking-prose text-muted"
-                        >
-                          <span>Peter Straub</span>
-                        </div>
-                        <picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/4-stars-dark.svg" />
-                          <img
-                            alt="4 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/4-stars.svg"
-                            width="75"
-                        /></picture>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                  >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
-                    >
-                      <div
-                        class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
-                      >
-                        <div
-                          class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
-                        >
-                          <img
-                            height="372"
-                            sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                            src="/_image/?href=%2Fassets%2Fcovers%2Fgoth-by-lol-tolhurst.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                            srcset="
-                              /_image/?href=%2Fassets%2Fcovers%2Fgoth-by-lol-tolhurst.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fgoth-by-lol-tolhurst.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fgoth-by-lol-tolhurst.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fgoth-by-lol-tolhurst.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                            "
-                            width="248"
-                            alt=""
-                            class="transform-gpu rounded-[2.5px] bg-default shadow-sm transition-transform duration-500 group-has-[a:hover]/list-item:scale-110 @min-[160px]:shadow-lg"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="@container/details w-full">
-                      <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                      >
-                        <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
-                        >
-                          08 Nov 2024
-                        </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksbooklog.com/reviews/goth-by-lol-tolhurst/"
-                          rel="canonical"
-                          >Goth</a
-                        >
-                        <div
-                          class="-mt-1 text-[15px] leading-4 font-normal tracking-prose text-muted"
-                        >
-                          <span>Lol Tolhurst</span>
-                        </div>
-                        <picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/3-stars-dark.svg" />
-                          <img
-                            alt="3 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/3-stars.svg"
-                            width="75"
-                        /></picture>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                  >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
-                    >
-                      <div
-                        class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
-                      >
-                        <div
-                          class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
-                        >
-                          <img
-                            height="372"
-                            sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                            src="/_image/?href=%2Fassets%2Fcovers%2Frecessional-by-david-mamet.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                            srcset="
-                              /_image/?href=%2Fassets%2Fcovers%2Frecessional-by-david-mamet.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                              /_image/?href=%2Fassets%2Fcovers%2Frecessional-by-david-mamet.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                              /_image/?href=%2Fassets%2Fcovers%2Frecessional-by-david-mamet.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                              /_image/?href=%2Fassets%2Fcovers%2Frecessional-by-david-mamet.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                            "
-                            width="248"
-                            alt=""
-                            class="transform-gpu rounded-[2.5px] bg-default shadow-sm transition-transform duration-500 group-has-[a:hover]/list-item:scale-110 @min-[160px]:shadow-lg"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="@container/details w-full">
-                      <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                      >
-                        <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
-                        >
-                          25 Aug 2024
-                        </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksbooklog.com/reviews/recessional-by-david-mamet/"
-                          rel="canonical"
-                          >Recessional</a
-                        >
-                        <div
-                          class="-mt-1 text-[15px] leading-4 font-normal tracking-prose text-muted"
-                        >
-                          <span>David Mamet</span>
-                        </div>
-                        <picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/2-stars-dark.svg" />
-                          <img
-                            alt="2 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/2-stars.svg"
-                            width="75"
-                        /></picture>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                  >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
-                    >
-                      <div
-                        class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
-                      >
-                        <div
-                          class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
-                        >
-                          <img
-                            height="372"
-                            sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                            src="/_image/?href=%2Fassets%2Fcovers%2Ffast-forward-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                            srcset="
-                              /_image/?href=%2Fassets%2Fcovers%2Ffast-forward-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                              /_image/?href=%2Fassets%2Fcovers%2Ffast-forward-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                              /_image/?href=%2Fassets%2Fcovers%2Ffast-forward-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                              /_image/?href=%2Fassets%2Fcovers%2Ffast-forward-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                            "
-                            width="248"
-                            alt=""
-                            class="transform-gpu rounded-[2.5px] bg-default shadow-sm transition-transform duration-500 group-has-[a:hover]/list-item:scale-110 @min-[160px]:shadow-lg"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="@container/details w-full">
-                      <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                      >
-                        <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
-                        >
-                          01 Jul 2024
-                        </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksbooklog.com/reviews/fast-forward-by-stephen-morris/"
-                          rel="canonical"
-                          >Fast Forward</a
-                        >
-                        <div
-                          class="-mt-1 text-[15px] leading-4 font-normal tracking-prose text-muted"
-                        >
-                          <span>Stephen Morris</span>
-                        </div>
-                        <picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/4-half-stars-dark.svg" />
-                          <img
-                            alt="4.5 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/4-half-stars.svg"
-                            width="75"
-                        /></picture>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                  >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
-                    >
-                      <div
-                        class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
-                      >
-                        <div
-                          class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
-                        >
-                          <img
-                            height="372"
-                            sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                            src="/_image/?href=%2Fassets%2Fcovers%2Fgothic-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                            srcset="
-                              /_image/?href=%2Fassets%2Fcovers%2Fgothic-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fgothic-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fgothic-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                              /_image/?href=%2Fassets%2Fcovers%2Fgothic-by-philip-fracassi.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                            "
-                            width="248"
-                            alt=""
-                            class="transform-gpu rounded-[2.5px] bg-default shadow-sm transition-transform duration-500 group-has-[a:hover]/list-item:scale-110 @min-[160px]:shadow-lg"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="@container/details w-full">
-                      <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                      >
-                        <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
-                        >
-                          30 Jun 2024
-                        </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksbooklog.com/reviews/gothic-by-philip-fracassi/"
-                          rel="canonical"
-                          >Gothic</a
-                        >
-                        <div
-                          class="-mt-1 text-[15px] leading-4 font-normal tracking-prose text-muted"
-                        >
-                          <span>Philip Fracassi</span>
-                        </div>
-                        <picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/4-stars-dark.svg" />
-                          <img
-                            alt="4 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/4-stars.svg"
-                            width="75"
-                        /></picture>
-                      </div>
-                    </div>
-                  </li>
-                  <li
-                    class="group/list-item relative mb-1 flex w-full max-w-(--breakpoint-desktop) transform-gpu flex-row gap-x-[5%] bg-default px-container py-4 transition-transform duration-500 tablet:w-(--update-list-item-width) tablet:flex-col tablet:bg-transparent tablet:px-6 tablet:py-6 tablet:has-[a:hover]:-translate-y-2 tablet:has-[a:hover]:bg-default tablet:has-[a:hover]:drop-shadow-2xl"
-                  >
-                    <div
-                      class="relative w-1/4 max-w-[250px] shrink-0 self-start overflow-hidden rounded-sm shadow-all transition-transform after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:bg-default after:opacity-15 after:transition-opacity group-has-[a:hover]/list-item:after:opacity-0 tablet:w-auto"
-                    >
-                      <div
-                        class="relative after:absolute after:top-0 after:left-0 after:z-10 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%] after:mix-blend-multiply"
-                      >
-                        <div
-                          class="relative z-10 before:absolute before:top-0 before:left-0 before:z-10 before:block before:size-full before:rounded-[2.5px] before:bg-[url(/assets/spine-light.png)] before:bg-size-[100%_100%] after:absolute after:top-0 after:left-0 after:block after:size-full after:rounded-[2.5px] after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%] after:mix-blend-soft-light"
-                        >
-                          <img
-                            height="372"
-                            sizes="(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)"
-                            src="/_image/?href=%2Fassets%2Fcovers%2Frecord-play-pause-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif"
-                            srcset="
-                              /_image/?href=%2Fassets%2Fcovers%2Frecord-play-pause-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=62&amp;h=93&amp;q=80&amp;f=avif    62w,
-                              /_image/?href=%2Fassets%2Fcovers%2Frecord-play-pause-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=124&amp;h=186&amp;q=80&amp;f=avif 124w,
-                              /_image/?href=%2Fassets%2Fcovers%2Frecord-play-pause-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=248&amp;h=372&amp;q=80&amp;f=avif 248w,
-                              /_image/?href=%2Fassets%2Fcovers%2Frecord-play-pause-by-stephen-morris.png%3ForigWidth%3D500%26origHeight%3D750%26origFormat%3Dpng&amp;w=496&amp;h=744&amp;q=80&amp;f=avif 496w
-                            "
-                            width="248"
-                            alt=""
-                            class="transform-gpu rounded-[2.5px] bg-default shadow-sm transition-transform duration-500 group-has-[a:hover]/list-item:scale-110 @min-[160px]:shadow-lg"
-                            loading="lazy"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="@container/details w-full">
-                      <div
-                        class="flex grow flex-col items-start gap-y-2 tablet:mt-2 tablet:w-full tablet:px-1"
-                      >
-                        <div
-                          class="font-sans text-[13px] leading-4 font-normal whitespace-nowrap text-subtle tablet:tracking-wide"
-                        >
-                          11 Nov 2023
-                        </div>
-                        <a
-                          class="text-[clamp(16px,5cqw,24px)] leading-5 font-semibold text-default transition-all duration-500 after:absolute after:top-0 after:left-0 after:z-10 after:size-full after:opacity-0 hover:text-accent"
-                          href="https://www.franksbooklog.com/reviews/record-play-pause-by-stephen-morris/"
-                          rel="canonical"
-                          >Record Play Pause</a
-                        >
-                        <div
-                          class="-mt-1 text-[15px] leading-4 font-normal tracking-prose text-muted"
-                        >
-                          <span>Stephen Morris</span>
-                        </div>
-                        <picture
-                          ><source
-                            media="(prefers-color-scheme: dark)"
-                            srcset="/svg/5-stars-dark.svg" />
-                          <img
-                            alt="5 stars (out of 5)"
-                            class="-mt-0.5 pb-[3px]"
-                            height="15"
-                            src="/svg/5-stars.svg"
-                            width="75"
-                        /></picture>
-                      </div>
-                    </div>
-                  </li>
-                </ol>
-              </div>
-            </nav>
+                </div>
+              </nav>
+            </div>
           </div>
         </main>
         <div
