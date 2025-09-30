@@ -7,6 +7,7 @@ import { getContentPath } from "./utils/getContentPath";
 const movielogJsonFile = getContentPath("data", "movielog.json");
 
 const MovielogUpdateSchema = UpdateSchema.extend({
+  genres: z.array(z.string()),
   year: z.string(),
 });
 
