@@ -9,6 +9,7 @@ import { Still } from "~/components/still/Still";
  */
 export type MovielogUpdateCardValue = {
   excerpt: string;
+  genres: string[];
   gradeValue: number;
   releaseYear: string;
   reviewDisplayDate: string;
@@ -140,11 +141,25 @@ export function MovielogUpdateCard({
 
         <RenderedMarkdown
           className={`
-            tracking-prose text-muted
+            mb-6 tracking-prose text-muted
             ${variant === "primary" ? `text-lg` : ""}
           `}
           text={value.excerpt}
         />
+        <div
+          className={`
+            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
+            laptop:tracking-wide
+          `}
+        >
+          {value.genres.map((genre, index) => {
+            if (index === 0) {
+              return <span key={genre}>{genre}</span>;
+            }
+
+            return <span key={genre}>, {genre}</span>;
+          })}
+        </div>
       </div>
     </Component>
   );

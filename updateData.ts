@@ -18,6 +18,7 @@ const BaseUpdateSchema = z.object({
 });
 
 const MovieUpdateSchema = BaseUpdateSchema.extend({
+  genres: z.array(z.string()),
   year: z.string(),
 });
 

@@ -2,6 +2,12 @@
   {
     "date": "2025-09-27T00:00:00.000Z",
     "excerpt": "<p>Anthony Wong plays a psychotic restaurant owner who falls under police suspicion after a bag of severed limbs washes ashore.</p>",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Horror",
+      "Thriller"
+    ],
     "image": "/_astro/the-untold-story-1993.Cql9znYK_QJ5wo.png",
     "slug": "the-untold-story-1993",
     "stars": 2,
@@ -11,6 +17,12 @@
   {
     "date": "2025-09-25T00:00:00.000Z",
     "excerpt": "<p>During the English Civil War, a group of deserters encounter a sinister alchemist in a mushroom-laden field.</p>",
+    "genres": [
+      "Drama",
+      "History",
+      "Horror",
+      "Mystery"
+    ],
     "image": "/_astro/a-field-in-england-2013.SdtnnkGH_PH5Gn.png",
     "slug": "a-field-in-england-2013",
     "stars": 4,
@@ -20,6 +32,9 @@
   {
     "date": "2025-09-25T00:00:00.000Z",
     "excerpt": "<p>Burt Lancaster descends into hell via a series of manicured backyard pools.</p>",
+    "genres": [
+      "Drama"
+    ],
     "image": "/_astro/the-swimmer-1968.DHjLBZS__gbYzP.png",
     "slug": "the-swimmer-1968",
     "stars": 5,
@@ -29,6 +44,10 @@
   {
     "date": "2025-07-26T00:00:00.000Z",
     "excerpt": "<p>In Birmingham, rich kid Jeff Bridges falls for gym receptionist Sally Field and befriends bodybuilder Arnold Schwarzenegger, much to the dismay of his country-club family and friends.</p>",
+    "genres": [
+      "Comedy",
+      "Drama"
+    ],
     "image": "/_astro/stay-hungry-1976.BMeMeIcU_Z12k9Tx.png",
     "slug": "stay-hungry-1976",
     "stars": 2.5,
@@ -38,6 +57,10 @@
   {
     "date": "2025-07-25T00:00:00.000Z",
     "excerpt": "<p>Haunted by nightmares after losing her unborn child in a car crash, a woman turns to a Satanic cult for relief, only to find she cannot escape their influence.</p>",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
     "image": "/_astro/theyre-coming-to-get-you-1972.DcuZfUD4_Z1JqxPb.png",
     "slug": "theyre-coming-to-get-you-1972",
     "stars": 2,
