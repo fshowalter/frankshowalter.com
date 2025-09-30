@@ -21,31 +21,6 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 /**
- * Calculates the proportional height for a cover image given a target width.
- * Maintains the original aspect ratio of the cover image.
- *
- * @param coverPath - File system path to the cover image
- * @param targetWidth - Desired width in pixels
- * @returns Promise resolving to calculated height, or 0 if error occurs
- *
- * @example
- * ```typescript
- * const height = await getCoverHeight('/path/to/cover.png', 300);
- * console.log(height); // e.g., 450 for a 2:3 aspect ratio
- * ```
- */
-export async function getCoverHeight(coverPath: string, targetWidth: number) {
-  try {
-    const { height, width } = await sharp(coverPath).metadata();
-
-    return (height / width) * targetWidth;
-  } catch (error) {
-    console.error("Error:", error);
-    return 0;
-  }
-}
-
-/**
  * Generates optimized cover image properties with responsive widths.
  * Creates AVIF images with multiple breakpoints (0.25x, 0.5x, 1x, 2x) for responsive display.
  *
@@ -86,29 +61,6 @@ export async function getFluidCoverImageProps(
 }
 
 /**
- * Retrieves the file system path for a work's cover image.
- * Falls back to default cover if the specific work cover doesn't exist.
- *
- * @param work - Work object containing slug for cover identification
- * @returns File system path to cover image, or empty string if none exists
- *
- * @example
- * ```typescript
- * const coverPath = getWorkCoverPath({ slug: 'book-slug' });
- * console.log(coverPath); // '/path/to/content/assets/covers/book-slug.png'
- * ```
- */
-export function getWorkCoverPath(slug: string) {
-  const workCover = coverPath(slug);
-
-  if (workCover) {
-    return workCover;
-  }
-
-  return coverPath("default") || "";
-}
-
-/**
  * Internal function to resolve the file system path for a cover image.
  * Checks if the cover file exists in the content/assets/covers directory.
  *
@@ -122,6 +74,31 @@ function coverPath(slug: string) {
   }
 
   return;
+}
+
+/**
+ * Calculates the proportional height for a cover image given a target width.
+ * Maintains the original aspect ratio of the cover image.
+ *
+ * @param coverPath - File system path to the cover image
+ * @param targetWidth - Desired width in pixels
+ * @returns Promise resolving to calculated height, or 0 if error occurs
+ *
+ * @example
+ * ```typescript
+ * const height = await getCoverHeight('/path/to/cover.png', 300);
+ * console.log(height); // e.g., 450 for a 2:3 aspect ratio
+ * ```
+ */
+async function getCoverHeight(coverPath: string, targetWidth: number) {
+  try {
+    const { height, width } = await sharp(coverPath).metadata();
+
+    return (height / width) * targetWidth;
+  } catch (error) {
+    console.error("Error:", error);
+    return 0;
+  }
 }
 
 /**
@@ -145,4 +122,27 @@ async function getWorkCoverFile(slug: string) {
   })!;
 
   return await images[defaultWorkCoverKey]();
+}
+
+/**
+ * Retrieves the file system path for a work's cover image.
+ * Falls back to default cover if the specific work cover doesn't exist.
+ *
+ * @param work - Work object containing slug for cover identification
+ * @returns File system path to cover image, or empty string if none exists
+ *
+ * @example
+ * ```typescript
+ * const coverPath = getWorkCoverPath({ slug: 'book-slug' });
+ * console.log(coverPath); // '/path/to/content/assets/covers/book-slug.png'
+ * ```
+ */
+function getWorkCoverPath(slug: string) {
+  const workCover = coverPath(slug);
+
+  if (workCover) {
+    return workCover;
+  }
+
+  return coverPath("default") || "";
 }
