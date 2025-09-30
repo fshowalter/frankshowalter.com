@@ -148,6 +148,14 @@ export function BooklogUpdateCard({
           )}
           <a
             className={`
+              z-20 font-sans text-xs tracking-wide text-accent uppercase
+            `}
+            href="http://www.franksbooklog.com/"
+          >
+            Book Reviews
+          </a>
+          <a
+            className={`
               block text-2xl font-medium transition-colors duration-500
               after:absolute after:top-0 after:left-0 after:z-10 after:size-full
               hover:text-accent hover:before:opacity-0

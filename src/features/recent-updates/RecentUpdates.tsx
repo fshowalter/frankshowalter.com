@@ -63,6 +63,7 @@ export function RecentUpdates({
           <UpdateListHeading
             accentText="Movie Reviews"
             href="https://www.franksmovielog.com"
+            id="movie-reviews"
             text="Latest"
           />
           <ol
@@ -132,6 +133,7 @@ export function RecentUpdates({
           <UpdateListHeading
             accentText="Book Reviews"
             href="https://www.franksbooklog.com"
+            id="book-reviews"
             text="Latest"
           />
           <ol className="flex flex-col gap-y-[2vw]">

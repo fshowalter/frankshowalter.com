@@ -6,8 +6,8 @@ import { z } from "zod";
  */
 export const UpdateSchema = z.object({
   date: z.coerce.date(),
+  excerpt: z.string(),
   slug: z.string(),
   stars: z.number(),
-  synopsis: z.string(),
   title: z.string(),
 });

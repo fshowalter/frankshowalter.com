@@ -7,12 +7,14 @@ export function UpdateListHeading({
   as = "h2",
   className = "",
   href,
+  id,
   text,
 }: {
   accentText: string;
   as?: "h2" | "h3" | "h4" | "h5";
   className?: string;
   href: string;
+  id?: string;
   text: string;
 }): React.JSX.Element {
   const Component = as;
@@ -25,6 +27,7 @@ export function UpdateListHeading({
         laptop:text-left
         ${className ?? ""}
       `}
+      id={id}
     >
       <a
         className={`

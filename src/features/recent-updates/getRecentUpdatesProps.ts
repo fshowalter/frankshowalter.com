@@ -28,7 +28,6 @@ export async function getRecentUpdatesProps(): Promise<RecentUpdatesProps> {
             item.slug,
             CoverImageConfig,
           ),
-          excerpt: item.synopsis,
           gradeValue: item.stars,
           reviewDisplayDate: formatDate(item.date),
         };
@@ -39,7 +38,6 @@ export async function getRecentUpdatesProps(): Promise<RecentUpdatesProps> {
         return {
           ...item,
           displayDate: formatDate(item.date),
-          excerpt: item.synopsis,
           gradeValue: item.stars,
           releaseYear: item.year,
           reviewDisplayDate: formatDate(item.date),
