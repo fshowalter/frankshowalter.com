@@ -35,15 +35,11 @@ export type BooklogUpdateCardValue = {
  */
 export function BooklogUpdateCard({
   as = "div",
-  imageConfig,
+  imageSizes,
   value,
 }: {
   as?: React.ElementType;
-  imageConfig: {
-    height: number;
-    sizes: string;
-    width: number;
-  };
+  imageSizes: string;
   value: BooklogUpdateCardValue;
 }): React.JSX.Element {
   const Component = as;
@@ -119,7 +115,6 @@ export function BooklogUpdateCard({
                 <img
                   {...value.coverImageProps}
                   alt=""
-                  {...imageConfig}
                   className={`
                     transform-gpu rounded-[2.5px] bg-default
                     transition-transform duration-500
@@ -127,6 +122,7 @@ export function BooklogUpdateCard({
                   `}
                   decoding="async"
                   loading="lazy"
+                  sizes={imageSizes}
                 />
               </div>
             </div>

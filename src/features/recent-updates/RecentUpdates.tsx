@@ -19,22 +19,22 @@ export type RecentUpdatesProps = {
  */
 export const CoverImageConfig = {
   sizes:
-    "(min-width: 1800px) 218px, (min-width: 1280px) calc(11.8vw + 8px), (min-width: 960px) 248px, (min-width: 600px) calc(23.24vw + 30px), calc(41.43vw + 8px)",
-  width: 248,
+    "(min-width: 1760px) 168px, (min-width: 1360px) 10vw, (min-width: 780px) calc(1.61vw + 146px), (min-width: 560px) calc(20vw + 16px), (min-width: 480px) 200px, calc(46.25vw - 13px)",
+  width: 200,
 };
 
 export const StillImageConfig = {
-  height: 360,
+  height: 362,
   sizes:
-    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
-  width: 640,
+    "(min-width: 2020px) 430px, (min-width: 1780px) calc(13.18vw + 166px), (min-width: 1360px) calc(29.75vw - 132px), (min-width: 1120px) 461px, (min-width: 780px) 41.56vw, 83.91vw",
+  width: 644,
 };
 
 export const StillSplashImageConfig = {
-  height: 360,
+  height: 540,
   sizes:
-    "(min-width: 1800px) 481px, (min-width: 1280px) calc(26vw + 18px), (min-width: 780px) calc(47.08vw - 46px), 83.91vw",
-  width: 640,
+    "(min-width: 1960px) 896px, (min-width: 1760px) 44.44vw, (min-width: 1360px) calc(60vw - 248px), (min-width: 1140px) 960px, (min-width: 840px) calc(77.14vw + 96px), calc(90.77vw - 20px)",
+  width: 960,
 };
 
 /**
@@ -139,7 +139,12 @@ export function RecentUpdates({
           <ol className="flex flex-col gap-y-[2vw]">
             {booklogUpdates.slice(0, 4).map((value) => {
               return (
-                <BooklogUpdateCard as="li" key={value.slug} value={value} />
+                <BooklogUpdateCard
+                  as="li"
+                  imageSizes={CoverImageConfig.sizes}
+                  key={value.slug}
+                  value={value}
+                />
               );
             })}
           </ol>
