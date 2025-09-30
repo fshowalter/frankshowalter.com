@@ -132,7 +132,7 @@ export function MovielogUpdateCard({
         <Grade
           className={`
             mb-5
-            tablet:mb-8
+            ${variant === "primary" ? `tablet:mb-8` : `tablet:mb-6`}
           `}
           height={variant === "primary" ? 24 : 18}
           value={value.gradeValue}
