@@ -62,7 +62,6 @@ export function RecentUpdates({
         >
           <UpdateListHeading
             accentText="Movie Reviews"
-            className="text-left"
             href="https://www.franksmovielog.com"
             text="Latest"
           />
@@ -132,7 +131,6 @@ export function RecentUpdates({
         >
           <UpdateListHeading
             accentText="Book Reviews"
-            className="text-right"
             href="https://www.franksbooklog.com"
             text="Latest"
           />
