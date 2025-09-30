@@ -24,7 +24,6 @@ export function RenderedMarkdown({
   return (
     <Component
       className={`
-        rendered-markdown
         ${className ?? ""}
       `}
       dangerouslySetInnerHTML={{

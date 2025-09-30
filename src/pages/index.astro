@@ -2,13 +2,11 @@
 import React from "react";
 
 import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
 import { Layout } from "~/components/layout/Layout";
 import { getRecentUpdatesProps } from "~/features/recent-updates/getRecentUpdatesProps";
 import { RecentUpdates } from "~/features/recent-updates/RecentUpdates";
 
 const recentUpdatesProps = await getRecentUpdatesProps();
-const backdropImageProps = await getLayoutBackdropImageProps("home");
 
 const deck = `I write stuff. Mostly <a class="inline-block relative text-accent after:absolute after:bottom-0 after:left-0 after:h-px after:w-full
           after:origin-center after:scale-x-0 after:bg-accent
