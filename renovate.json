@@ -10,11 +10,5 @@
     "schedule": ["at any time"]
   },
   "postUpdateOptions": ["npmDedupe"],
-  "automerge": true,
-  "packageRules": [
-    {
-      "matchPackageNames": ["eslint-plugin-react-hooks"],
-      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(-rc)?-?\\.?(?<build>\\d+)"
-    }
-  ]
+  "automerge": true
 }
