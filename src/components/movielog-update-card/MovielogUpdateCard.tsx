@@ -108,7 +108,7 @@ export function MovielogUpdateCard({
           className={`
             z-20 mb-2 font-sans text-xs tracking-wide text-accent uppercase
           `}
-          href="http://www.franksmovielog.com/"
+          href="https://www.franksmovielog.com/"
         >
           Movie Reviews
         </a>
@@ -122,7 +122,7 @@ export function MovielogUpdateCard({
             hover:text-accent
             tablet:text-2xl
           `}
-          href={`/reviews/${value.slug}/`}
+          href={`https://www.franksmovielog.com/reviews/${value.slug}/`}
         >
           {value.title}&nbsp;
           <span className="text-sm leading-none font-normal text-muted">
