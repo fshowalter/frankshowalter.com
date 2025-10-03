@@ -106,7 +106,7 @@ export function RecentUpdates({
                 font-medium text-accent transition-all duration-500
                 hover:scale-105 hover:bg-accent hover:text-white
               `}
-              href="/reviews/"
+              href="https://www.franksmovielog.com/reviews/"
             >
               <span
                 className={`
@@ -161,7 +161,7 @@ export function RecentUpdates({
                 font-medium text-accent transition-all duration-500
                 hover:scale-105 hover:bg-accent hover:text-white
               `}
-              href="/reviews/"
+              href="https://www.franksbooklog.com/reviews/"
             >
               <span
                 className={`
