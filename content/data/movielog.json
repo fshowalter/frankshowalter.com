@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-03T00:00:00.000Z",
+    "excerpt": "<p>A former Union soldier dragging a coffin arrives in a mudhole border town to settle a vendetta with a racist Confederate major.</p>",
+    "genres": [
+      "Action",
+      "Drama",
+      "Western"
+    ],
+    "image": "/_astro/django-1966.CNriRcaW_Z7xo12.png",
+    "slug": "django-1966",
+    "stars": 4,
+    "title": "Django",
+    "year": "1966"
+  },
+  {
     "date": "2025-09-27T00:00:00.000Z",
     "excerpt": "<p>Anthony Wong plays a psychotic restaurant owner who falls under police suspicion after a bag of severed limbs washes ashore.</p>",
     "genres": [
@@ -53,18 +67,5 @@
     "stars": 2.5,
     "title": "Stay Hungry",
     "year": "1976"
-  },
-  {
-    "date": "2025-07-25T00:00:00.000Z",
-    "excerpt": "<p>Haunted by nightmares after losing her unborn child in a car crash, a woman turns to a Satanic cult for relief, only to find she cannot escape their influence.</p>",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/theyre-coming-to-get-you-1972.DcuZfUD4_Z1JqxPb.png",
-    "slug": "theyre-coming-to-get-you-1972",
-    "stars": 2,
-    "title": "They're Coming to Get You!",
-    "year": "1972"
   }
 ]
