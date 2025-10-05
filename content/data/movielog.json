@@ -1,5 +1,20 @@
 [
   {
+    "date": "2025-10-04T00:00:00.000Z",
+    "excerpt": "<p>A black-gloved killer stalks victims connected to a Paris brothel while Bogart impersonator Robert Sacchi investigates and mad scientist Howard Vernon lurks in the wings.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-french-sex-murders-1972.BvCq1cYh_L5kRe.png",
+    "slug": "the-french-sex-murders-1972",
+    "stars": 3,
+    "title": "The French Sex Murders",
+    "year": "1972"
+  },
+  {
     "date": "2025-10-03T00:00:00.000Z",
     "excerpt": "<p>A former Union soldier dragging a coffin arrives in a mudhole border town to settle a vendetta with a racist Confederate major.</p>",
     "genres": [
@@ -54,18 +69,5 @@
     "stars": 5,
     "title": "The Swimmer",
     "year": "1968"
-  },
-  {
-    "date": "2025-07-26T00:00:00.000Z",
-    "excerpt": "<p>In Birmingham, rich kid Jeff Bridges falls for gym receptionist Sally Field and befriends bodybuilder Arnold Schwarzenegger, much to the dismay of his country-club family and friends.</p>",
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "image": "/_astro/stay-hungry-1976.BMeMeIcU_Z12k9Tx.png",
-    "slug": "stay-hungry-1976",
-    "stars": 2.5,
-    "title": "Stay Hungry",
-    "year": "1976"
   }
 ]
