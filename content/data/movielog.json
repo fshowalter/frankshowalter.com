@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-05T00:00:00.000Z",
+    "excerpt": "<p>A group of parapsychologists out to cleanse a haunted house fall prey to a murderous warlock’s spirit.</p>",
+    "genres": [
+      "Action",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/witchtrap-1989.yOBJ5olZ_ZlAx4o.png",
+    "slug": "witchtrap-1989",
+    "stars": 3,
+    "title": "Witchtrap",
+    "year": "1989"
+  },
+  {
     "date": "2025-10-04T00:00:00.000Z",
     "excerpt": "<p>A black-gloved killer stalks victims connected to a Paris brothel while Bogart impersonator Robert Sacchi investigates and mad scientist Howard Vernon lurks in the wings.</p>",
     "genres": [
@@ -10,7 +24,7 @@
     ],
     "image": "/_astro/the-french-sex-murders-1972.BvCq1cYh_L5kRe.png",
     "slug": "the-french-sex-murders-1972",
-    "stars": 3,
+    "stars": 2.5,
     "title": "The French Sex Murders",
     "year": "1972"
   },
@@ -57,17 +71,5 @@
     "stars": 4,
     "title": "A Field in England",
     "year": "2013"
-  },
-  {
-    "date": "2025-09-25T00:00:00.000Z",
-    "excerpt": "<p>Burt Lancaster descends into hell via a series of manicured backyard pools.</p>",
-    "genres": [
-      "Drama"
-    ],
-    "image": "/_astro/the-swimmer-1968.DHjLBZS__gbYzP.png",
-    "slug": "the-swimmer-1968",
-    "stars": 5,
-    "title": "The Swimmer",
-    "year": "1968"
   }
 ]
