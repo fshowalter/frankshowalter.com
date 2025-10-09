@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-10-07T00:00:00.000Z",
+    "excerpt": "<p>In a remote South Korean village, a cop races to uncover the secret behind a strange illness before his daughter succumbs, even as the town grows increasingly suspicious of a recently arrived Japanese stranger.</p>",
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "image": "/_astro/the-wailing-2016.DnJ3YZ0m_weqbd.png",
+    "slug": "the-wailing-2016",
+    "stars": 3,
+    "title": "The Wailing",
+    "year": "2016"
+  },
+  {
     "date": "2025-10-05T00:00:00.000Z",
     "excerpt": "<p>A group of parapsychologists out to cleanse a haunted house fall prey to a murderous warlock’s spirit.</p>",
     "genres": [
@@ -56,20 +69,5 @@
     "stars": 2,
     "title": "The Untold Story",
     "year": "1993"
-  },
-  {
-    "date": "2025-09-25T00:00:00.000Z",
-    "excerpt": "<p>During the English Civil War, a group of deserters encounter a sinister alchemist in a mushroom-laden field.</p>",
-    "genres": [
-      "Drama",
-      "History",
-      "Horror",
-      "Mystery"
-    ],
-    "image": "/_astro/a-field-in-england-2013.SdtnnkGH_PH5Gn.png",
-    "slug": "a-field-in-england-2013",
-    "stars": 4,
-    "title": "A Field in England",
-    "year": "2013"
   }
 ]
