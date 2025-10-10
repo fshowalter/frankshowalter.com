@@ -1,6 +1,20 @@
 [
   {
     "date": "2025-10-07T00:00:00.000Z",
+    "excerpt": "<p>Bodies pile up when a nebbish everyman crosses paths with a pair of bumbling assassins while rivaling small-time grifter Bruce Campbell for the girl of his dreams.</p>",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Horror"
+    ],
+    "image": "/_astro/crimewave-1985.DI0udGU3_Z1vrpQC.png",
+    "slug": "crimewave-1985",
+    "stars": 1.5,
+    "title": "Crimewave",
+    "year": "1985"
+  },
+  {
+    "date": "2025-10-07T00:00:00.000Z",
     "excerpt": "<p>In a remote South Korean village, a cop races to uncover the secret behind a strange illness before his daughter succumbs, even as the town grows increasingly suspicious of a recently arrived Japanese stranger.</p>",
     "genres": [
       "Drama",
@@ -54,20 +68,5 @@
     "stars": 4,
     "title": "Django",
     "year": "1966"
-  },
-  {
-    "date": "2025-09-27T00:00:00.000Z",
-    "excerpt": "<p>Anthony Wong plays a psychotic restaurant owner who falls under police suspicion after a bag of severed limbs washes ashore.</p>",
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/the-untold-story-1993.Cql9znYK_QJ5wo.png",
-    "slug": "the-untold-story-1993",
-    "stars": 2,
-    "title": "The Untold Story",
-    "year": "1993"
   }
 ]
