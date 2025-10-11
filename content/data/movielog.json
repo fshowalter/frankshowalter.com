@@ -1,5 +1,20 @@
 [
   {
+    "date": "2025-10-10T00:00:00.000Z",
+    "excerpt": "<p>A recently paralyzed man develops a bond with his service monkey, unaware that she’s been dosed with an experimental serum that turns his rage into her violence.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/monkey-shines-1988.sciNuVB5_2rtC0Q.png",
+    "slug": "monkey-shines-1988",
+    "stars": 2,
+    "title": "Monkey Shines",
+    "year": "1988"
+  },
+  {
     "date": "2025-10-07T00:00:00.000Z",
     "excerpt": "<p>Bodies pile up when a nebbish everyman crosses paths with a pair of bumbling assassins while rivaling small-time grifter Bruce Campbell for the girl of his dreams.</p>",
     "genres": [
@@ -54,19 +69,5 @@
     "stars": 2.5,
     "title": "The French Sex Murders",
     "year": "1972"
-  },
-  {
-    "date": "2025-10-03T00:00:00.000Z",
-    "excerpt": "<p>A former Union soldier dragging a coffin arrives in a mudhole border town to settle a vendetta with a racist Confederate major.</p>",
-    "genres": [
-      "Action",
-      "Drama",
-      "Western"
-    ],
-    "image": "/_astro/django-1966.CNriRcaW_Z7xo12.png",
-    "slug": "django-1966",
-    "stars": 4,
-    "title": "Django",
-    "year": "1966"
   }
 ]
