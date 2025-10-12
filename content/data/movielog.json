@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-11T00:00:00.000Z",
+    "excerpt": "<p>After experimental US Army bio-weapon turns much of a Filipino town into flesh-eating zombies, scientists rush to find a cure, while the military fights to contain the outbreak and assorted tourists struggle to stay alive.</p>",
+    "genres": [
+      "Action",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/zombie-3-1988.IMWpVU6E_ZT43xj.png",
+    "slug": "zombie-3-1988",
+    "stars": 2,
+    "title": "Zombie 3",
+    "year": "1988"
+  },
+  {
     "date": "2025-10-10T00:00:00.000Z",
     "excerpt": "<p>A recently paralyzed man develops a bond with his service monkey, unaware that she’s been dosed with an experimental serum that turns his rage into her violence.</p>",
     "genres": [
@@ -54,20 +68,5 @@
     "stars": 3,
     "title": "Witchtrap",
     "year": "1989"
-  },
-  {
-    "date": "2025-10-04T00:00:00.000Z",
-    "excerpt": "<p>A black-gloved killer stalks victims connected to a Paris brothel while Bogart impersonator Robert Sacchi investigates and mad scientist Howard Vernon lurks in the wings.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-french-sex-murders-1972.BvCq1cYh_L5kRe.png",
-    "slug": "the-french-sex-murders-1972",
-    "stars": 2.5,
-    "title": "The French Sex Murders",
-    "year": "1972"
   }
 ]
