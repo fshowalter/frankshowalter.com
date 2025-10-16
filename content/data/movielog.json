@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-14T00:00:00.000Z",
+    "excerpt": "<p>During a city-wide blackout, asylum escapees Jack Palance and Martin Landau lay siege to their new doctor’s suburban home.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/alone-in-the-dark-1982.B8WOHXvA_X3quG.png",
+    "slug": "alone-in-the-dark-1982",
+    "stars": 2,
+    "title": "Alone in the Dark",
+    "year": "1982"
+  },
+  {
     "date": "2025-10-11T00:00:00.000Z",
     "excerpt": "<p>After experimental US Army bio-weapon turns much of a Filipino town into flesh-eating zombies, scientists rush to find a cure, while the military fights to contain the outbreak and assorted tourists struggle to stay alive.</p>",
     "genres": [
@@ -54,19 +68,5 @@
     "stars": 3,
     "title": "The Wailing",
     "year": "2016"
-  },
-  {
-    "date": "2025-10-05T00:00:00.000Z",
-    "excerpt": "<p>A group of parapsychologists out to cleanse a haunted house fall prey to a murderous warlock’s spirit.</p>",
-    "genres": [
-      "Action",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/witchtrap-1989.yOBJ5olZ_ZlAx4o.png",
-    "slug": "witchtrap-1989",
-    "stars": 3,
-    "title": "Witchtrap",
-    "year": "1989"
   }
 ]
