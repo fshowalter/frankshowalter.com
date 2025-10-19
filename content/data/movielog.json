@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-10-18T00:00:00.000Z",
+    "excerpt": "<p>On Valentine’s Day 1900, during a day-trip to Australia’s primordial Hanging Rock, three schoolgirls and a teacher vanish without a trace.</p>",
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "image": "/_astro/picnic-at-hanging-rock-1975.ChVrJSqi_Z21FC0O.png",
+    "slug": "picnic-at-hanging-rock-1975",
+    "stars": 3.5,
+    "title": "Picnic at Hanging Rock",
+    "year": "1975"
+  },
+  {
     "date": "2025-10-17T00:00:00.000Z",
     "excerpt": "<p>Nicolas Cage plays a cop who travels to a remote island searching for a missing girl and finds a society ruled by women.</p>",
     "genres": [
@@ -55,19 +68,5 @@
     "stars": 2,
     "title": "Monkey Shines",
     "year": "1988"
-  },
-  {
-    "date": "2025-10-07T00:00:00.000Z",
-    "excerpt": "<p>Bodies pile up when a nebbish everyman crosses paths with a pair of bumbling assassins while rivaling small-time grifter Bruce Campbell for the girl of his dreams.</p>",
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Horror"
-    ],
-    "image": "/_astro/crimewave-1985.DI0udGU3_Z1vrpQC.png",
-    "slug": "crimewave-1985",
-    "stars": 1.5,
-    "title": "Crimewave",
-    "year": "1985"
   }
 ]
