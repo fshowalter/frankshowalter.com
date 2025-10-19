@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-17T00:00:00.000Z",
+    "excerpt": "<p>Nicolas Cage plays a cop who travels to a remote island searching for a missing girl and finds a society ruled by women.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-wicker-man-2006.BhhVH8ZR_2086pQ.png",
+    "slug": "the-wicker-man-2006",
+    "stars": 2,
+    "title": "The Wicker Man",
+    "year": "2006"
+  },
+  {
     "date": "2025-10-14T00:00:00.000Z",
     "excerpt": "<p>During a city-wide blackout, asylum escapees Jack Palance and Martin Landau lay siege to their new doctor’s suburban home.</p>",
     "genres": [
@@ -55,18 +69,5 @@
     "stars": 1.5,
     "title": "Crimewave",
     "year": "1985"
-  },
-  {
-    "date": "2025-10-07T00:00:00.000Z",
-    "excerpt": "<p>In a remote South Korean village, a cop races to uncover the secret behind a strange illness before his daughter succumbs, even as the town grows increasingly suspicious of a recently arrived Japanese stranger.</p>",
-    "genres": [
-      "Drama",
-      "Horror"
-    ],
-    "image": "/_astro/the-wailing-2016.DnJ3YZ0m_weqbd.png",
-    "slug": "the-wailing-2016",
-    "stars": 3,
-    "title": "The Wailing",
-    "year": "2016"
   }
 ]
