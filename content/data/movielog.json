@@ -1,5 +1,20 @@
 [
   {
+    "date": "2025-10-19T00:00:00.000Z",
+    "excerpt": "<p>With his family facing eviction, a young boy living in the L.A. ghetto agrees to help rob his slumlord landlords, only to discover their suburban home holds untold horrors.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-people-under-the-stairs-1991.DXCi4bYF_ZawTSo.png",
+    "slug": "the-people-under-the-stairs-1991",
+    "stars": 4,
+    "title": "The People Under the Stairs",
+    "year": "1991"
+  },
+  {
     "date": "2025-10-18T00:00:00.000Z",
     "excerpt": "<p>On Valentine’s Day 1900, during a day-trip to Australia’s primordial Hanging Rock, three schoolgirls and a teacher vanish without a trace.</p>",
     "genres": [
@@ -52,21 +67,6 @@
     "slug": "zombie-3-1988",
     "stars": 2,
     "title": "Zombie 3",
-    "year": "1988"
-  },
-  {
-    "date": "2025-10-10T00:00:00.000Z",
-    "excerpt": "<p>A recently paralyzed man develops a bond with his service monkey, unaware that she’s been dosed with an experimental serum that turns his rage into her violence.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/monkey-shines-1988.sciNuVB5_2rtC0Q.png",
-    "slug": "monkey-shines-1988",
-    "stars": 2,
-    "title": "Monkey Shines",
     "year": "1988"
   }
 ]
