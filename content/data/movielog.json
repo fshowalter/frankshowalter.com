@@ -1,5 +1,17 @@
 [
   {
+    "date": "2025-10-20T00:00:00.000Z",
+    "excerpt": "<p>Richard Burton plays a world-weary priest investigating the death of Father Merrin while Linda Blair once again battles the demon Pazuzu, this time through a hypnosis machine with strobe lights—or something.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/exorcist-ii-the-heretic-1977.DUIkXtaf_CYTyn.png",
+    "slug": "exorcist-ii-the-heretic-1977",
+    "stars": 1.5,
+    "title": "Exorcist II: The Heretic",
+    "year": "1977"
+  },
+  {
     "date": "2025-10-19T00:00:00.000Z",
     "excerpt": "<p>With his family facing eviction, a young boy living in the L.A. ghetto agrees to help rob his slumlord landlords, only to discover their suburban home holds untold horrors.</p>",
     "genres": [
@@ -54,19 +66,5 @@
     "stars": 2,
     "title": "Alone in the Dark",
     "year": "1982"
-  },
-  {
-    "date": "2025-10-11T00:00:00.000Z",
-    "excerpt": "<p>After experimental US Army bio-weapon turns much of a Filipino town into flesh-eating zombies, scientists rush to find a cure, while the military fights to contain the outbreak and assorted tourists struggle to stay alive.</p>",
-    "genres": [
-      "Action",
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/zombie-3-1988.IMWpVU6E_ZT43xj.png",
-    "slug": "zombie-3-1988",
-    "stars": 2,
-    "title": "Zombie 3",
-    "year": "1988"
   }
 ]
