@@ -1,5 +1,20 @@
 [
   {
+    "date": "2025-10-22T00:00:00.000Z",
+    "excerpt": "<p>Al Pacino plays a cop who goes undercover in Manhattan’s leather bar scene to catch a serial killer.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/cruising-1980.BlH73epF_Z1qPXzq.png",
+    "slug": "cruising-1980",
+    "stars": 4,
+    "title": "Cruising",
+    "year": "1980"
+  },
+  {
     "date": "2025-10-20T00:00:00.000Z",
     "excerpt": "<p>Richard Burton plays a world-weary priest investigating the death of Father Merrin while Linda Blair once again battles the demon Pazuzu, this time through a hypnosis machine with strobe lights—or something.</p>",
     "genres": [
@@ -52,19 +67,5 @@
     "stars": 2,
     "title": "The Wicker Man",
     "year": "2006"
-  },
-  {
-    "date": "2025-10-14T00:00:00.000Z",
-    "excerpt": "<p>During a city-wide blackout, asylum escapees Jack Palance and Martin Landau lay siege to their new doctor’s suburban home.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/alone-in-the-dark-1982.B8WOHXvA_X3quG.png",
-    "slug": "alone-in-the-dark-1982",
-    "stars": 2,
-    "title": "Alone in the Dark",
-    "year": "1982"
   }
 ]
