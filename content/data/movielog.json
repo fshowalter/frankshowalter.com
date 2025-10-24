@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-23T00:00:00.000Z",
+    "excerpt": "<p>Desperate to rival her beautiful stepsister for a Prince’s affections, a young woman resorts to grotesque means to transform her face and body.</p>",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Horror"
+    ],
+    "image": "/_astro/the-ugly-stepsister-2025.q895RPzr_iOsNk.png",
+    "slug": "the-ugly-stepsister-2025",
+    "stars": 4,
+    "title": "The Ugly Stepsister",
+    "year": "2025"
+  },
+  {
     "date": "2025-10-22T00:00:00.000Z",
     "excerpt": "<p>Al Pacino plays a cop who goes undercover in Manhattan’s leather bar scene to catch a serial killer.</p>",
     "genres": [
@@ -53,19 +67,5 @@
     "stars": 3.5,
     "title": "Picnic at Hanging Rock",
     "year": "1975"
-  },
-  {
-    "date": "2025-10-17T00:00:00.000Z",
-    "excerpt": "<p>Nicolas Cage plays a cop who travels to a remote island searching for a missing girl and finds a society ruled by women.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-wicker-man-2006.BhhVH8ZR_2086pQ.png",
-    "slug": "the-wicker-man-2006",
-    "stars": 2,
-    "title": "The Wicker Man",
-    "year": "2006"
   }
 ]
