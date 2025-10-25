@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-24T00:00:00.000Z",
+    "excerpt": "<p>An English couple arrive on a remote Spanish island to find it deserted except for the children.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/who-can-kill-a-child-1976.CFGGQK35_Z2uCDlC.png",
+    "slug": "who-can-kill-a-child-1976",
+    "stars": 2,
+    "title": "Who Can Kill a Child?",
+    "year": "1976"
+  },
+  {
     "date": "2025-10-23T00:00:00.000Z",
     "excerpt": "<p>A teen reanimates his dead girlfriend with a secret military chemical, but she wakes up craving human flesh.</p>",
     "genres": [
@@ -51,20 +65,5 @@
     "stars": 1.5,
     "title": "Exorcist II: The Heretic",
     "year": "1977"
-  },
-  {
-    "date": "2025-10-19T00:00:00.000Z",
-    "excerpt": "<p>With his family facing eviction, a young boy living in the L.A. ghetto agrees to help rob his slumlord landlords, only to discover their suburban home holds untold horrors.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-people-under-the-stairs-1991.DXCi4bYF_ZawTSo.png",
-    "slug": "the-people-under-the-stairs-1991",
-    "stars": 4,
-    "title": "The People Under the Stairs",
-    "year": "1991"
   }
 ]
