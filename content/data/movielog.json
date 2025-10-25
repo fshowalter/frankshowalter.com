@@ -1,6 +1,18 @@
 [
   {
     "date": "2025-10-23T00:00:00.000Z",
+    "excerpt": "<p>A teen reanimates his dead girlfriend with a secret military chemical, but she wakes up craving human flesh.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/return-of-the-living-dead-iii-1993.BUxn6oZE_Z1zXBRQ.png",
+    "slug": "return-of-the-living-dead-iii-1993",
+    "stars": 2.5,
+    "title": "Return of the Living Dead III",
+    "year": "1993"
+  },
+  {
+    "date": "2025-10-23T00:00:00.000Z",
     "excerpt": "<p>Desperate to rival her beautiful stepsister for a Prince’s affections, a young woman resorts to grotesque means to transform her face and body.</p>",
     "genres": [
       "Comedy",
@@ -54,18 +66,5 @@
     "stars": 4,
     "title": "The People Under the Stairs",
     "year": "1991"
-  },
-  {
-    "date": "2025-10-18T00:00:00.000Z",
-    "excerpt": "<p>On Valentine’s Day 1900, during a day-trip to Australia’s primordial Hanging Rock, three schoolgirls and a teacher vanish without a trace.</p>",
-    "genres": [
-      "Drama",
-      "Mystery"
-    ],
-    "image": "/_astro/picnic-at-hanging-rock-1975.ChVrJSqi_Z21FC0O.png",
-    "slug": "picnic-at-hanging-rock-1975",
-    "stars": 3.5,
-    "title": "Picnic at Hanging Rock",
-    "year": "1975"
   }
 ]
