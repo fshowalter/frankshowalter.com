@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-10-26T00:00:00.000Z",
+    "excerpt": "<p>Three film students stalk a bear poacher into the Norwegian wilderness and stumble into Norway’s best-kept secret: trolls are real, and someone has to kill them.</p>",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Thriller"
+    ],
+    "image": "/_astro/troll-hunter-2010.Lt-MxgKX_wGENv.png",
+    "slug": "troll-hunter-2010",
+    "stars": 3.5,
+    "title": "Troll Hunter",
+    "year": "2010"
+  },
+  {
     "date": "2025-10-25T00:00:00.000Z",
     "excerpt": "<p>The survivors of the first film, now in college, struggle to identify a copycat killer carving through the student body.</p>",
     "genres": [
@@ -51,20 +65,5 @@
     "stars": 4,
     "title": "The Ugly Stepsister",
     "year": "2025"
-  },
-  {
-    "date": "2025-10-22T00:00:00.000Z",
-    "excerpt": "<p>Al Pacino plays a cop who goes undercover in Manhattan’s leather bar scene to catch a serial killer.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/cruising-1980.BlH73epF_Z1qPXzq.png",
-    "slug": "cruising-1980",
-    "stars": 4,
-    "title": "Cruising",
-    "year": "1980"
   }
 ]
