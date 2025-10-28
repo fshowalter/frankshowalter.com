@@ -43,7 +43,7 @@
     "@anthropic-ai/claude-code": "2.0.28",
     "@eslint/js": "9.38.0",
     "@types/estree": "1.0.8",
-    "@types/node": "24.9.1",
+    "@types/node": "24.9.2",
     "@types/react": "19.2.2",
     "@types/react-dom": "19.2.2",
     "@vitest/coverage-istanbul": "3.2.4",
@@ -70,7 +70,7 @@
     "vitest": "3.2.4"
   },
   "engines": {
-    "node": "22.21.0",
+    "node": "24.11.0",
     "npm": "11.6.2"
   }
 }
