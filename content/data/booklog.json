@@ -1,6 +1,19 @@
 [
   {
     "authors": [
+      "Karl Edward Wagner"
+    ],
+    "date": "2025-10-26T00:00:00.000Z",
+    "excerpt": "<p>A grief-stricken man sees visions of a flapper-era woman at his Tennessee cabin—and discovers he’s not the first.</p>",
+    "image": "/_astro/in-the-pines-by-karl-edward-wagner.BYxhynvj_9R8dY.png",
+    "kind": "Short Story",
+    "slug": "in-the-pines-by-karl-edward-wagner",
+    "stars": 3,
+    "title": "In the Pines",
+    "workYear": "1973"
+  },
+  {
+    "authors": [
       "Philip Fracassi"
     ],
     "date": "2025-07-12T00:00:00.000Z",
@@ -37,18 +50,5 @@
     "stars": 5,
     "title": "Commodore",
     "workYear": "2021"
-  },
-  {
-    "authors": [
-      "Leslie H. Whitten Jr."
-    ],
-    "date": "2025-07-11T00:00:00.000Z",
-    "excerpt": "<p>A D.C. detective’s case involving blonde women turning up dead in the Potomac drained of blood leads to a mysterious suspect with supernatural implications.</p>",
-    "image": "/_astro/progeny-of-the-adder-by-leslie-h-whitten-jr.Bmxx3I6Q_1oXpif.png",
-    "kind": "Novel",
-    "slug": "progeny-of-the-adder-by-leslie-h-whitten-jr",
-    "stars": 3.5,
-    "title": "Progeny of the Adder",
-    "workYear": "1965"
   }
 ]
