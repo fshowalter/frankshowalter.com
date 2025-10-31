@@ -29,19 +29,6 @@ export function debounce(func: OnChangeHandler, wait: number): OnChangeHandler {
 }
 
 /**
- * Alias for backward compatibility with TextFilter component
- * @param func The onChange handler function
- * @param wait The number of milliseconds to wait
- * @returns Debounced onChange handler
- */
-export function debounceOnChange(
-  func: OnChangeHandler,
-  wait: number,
-): OnChangeHandler {
-  return debounce(func, wait);
-}
-
-/**
  * Wraps a given function in a setTimeout call with the given milliseconds.
  * @param func The function to wrap.
  * @param wait The number of milliseconds to wait before executing.
