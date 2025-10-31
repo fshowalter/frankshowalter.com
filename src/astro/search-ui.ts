@@ -132,15 +132,19 @@ export class SearchAPI {
       const pagefindModule = (await import(
         /* @vite-ignore */ `${bundlePath}pagefind.js`
       )) as PagefindAPI & {
-        mergeIndex: (url: string) => void;
+        mergeIndex: (url: string, options: { baseUrl: string }) => void;
         options: (config: {
           baseUrl: string;
           bundlePath: string;
         }) => Promise<void>;
       };
 
-      pagefindModule.mergeIndex("/pagefind-movielog");
-      pagefindModule.mergeIndex("/pagefind-booklog");
+      pagefindModule.mergeIndex("/pagefind-movielog", {
+        baseUrl: "https://www.franksmovielog.com/",
+      });
+      pagefindModule.mergeIndex("/pagefind-booklog", {
+        baseUrl: "https://www.franksbooklog.com/",
+      });
 
       // Store the API reference
       this.api = pagefindModule;
