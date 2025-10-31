@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-10-30T00:00:00.000Z",
+    "excerpt": "<p>Seeking to lure Sidney Prescott out of hiding, Ghostface carves his way through the cast of a horror movie based on her life.</p>",
+    "genres": [
+      "Horror",
+      "Mystery"
+    ],
+    "image": "/_astro/scream-3-2000.DYoMTg1x_Zfzcur.png",
+    "slug": "scream-3-2000",
+    "stars": 1.5,
+    "title": "Scream 3",
+    "year": "2000"
+  },
+  {
     "date": "2025-10-28T00:00:00.000Z",
     "excerpt": "<p>Three years after his abduction by aliens, a man returns to his wife and young son, but is he still human?</p>",
     "genres": [
@@ -51,19 +64,5 @@
     "stars": 2.5,
     "title": "Scream 2",
     "year": "1997"
-  },
-  {
-    "date": "2025-10-24T00:00:00.000Z",
-    "excerpt": "<p>An English couple arrive on a remote Spanish island to find it deserted except for the children.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/who-can-kill-a-child-1976.CFGGQK35_Z2uCDlC.png",
-    "slug": "who-can-kill-a-child-1976",
-    "stars": 2,
-    "title": "Who Can Kill a Child?",
-    "year": "1976"
   }
 ]
