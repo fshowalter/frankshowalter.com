@@ -91,6 +91,44 @@ function Deck({
   );
 }
 
+function SearchButton(): React.JSX.Element {
+  return (
+    <div className={`w-full max-w-[430px]`}>
+      <button
+        aria-keyshortcuts="Control+K"
+        aria-label="Search"
+        className={`
+          mt-1 flex h-10 w-full cursor-pointer items-center justify-end
+          overflow-hidden rounded-2xl border border-border bg-white px-2 text-sm
+          leading-6 text-default/55 ring-default transition-all duration-500
+          hover:border-accent hover:text-accent
+        `}
+        data-open-modal
+        disabled
+        suppressHydrationWarning
+        title="Search: Control+K"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          className="size-7"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+  );
+}
+
 function Title({
   className,
   shadow = true,
@@ -168,52 +206,5 @@ function Wrapper({
         <SearchButton />
       </div>
     </header>
-  );
-}
-
-function SearchButton(): React.JSX.Element {
-  return (
-    <div
-      className={`
-        max-w-[430px] w-full
-      `}
-    >
-      <button
-        aria-keyshortcuts="Control+K"
-        aria-label="Search"
-        className={`
-          flex h-10 cursor-pointer items-center justify-end
-          overflow-hidden text-sm leading-6 ring-default transition-all
-          bg-white border-border border rounded-2xl px-2
-          duration-500
-          hover:text-accent
-          hover:border-accent
-          w-full
-          mt-1
-          text-default/55
-        `}
-        data-open-modal
-        disabled
-        suppressHydrationWarning
-        title="Search: Control+K"
-        type="button"
-      >
-        <svg
-          aria-hidden="true"
-          className="size-7"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
-    </div>
   );
 }

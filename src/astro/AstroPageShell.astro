@@ -87,8 +87,8 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
       <div class="contents" data-dialog-frame>
         <button
           class={`
-            z-sticky absolute right-4 mt-5 h-6 cursor-pointer border-none
-            bg-subtle px-2 font-mono text-xs font-light text-muted
+            absolute right-4 mt-5 h-6 cursor-pointer border-none bg-subtle px-2
+            font-mono text-xs font-light text-muted
             hover:bg-inverse hover:text-white
             focus:outline-accent
             tablet:right-6
@@ -206,8 +206,8 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
             <button
               aria-controls="pagefind-results"
               class={`
-                bg-canvas mx-auto block h-10 w-full max-w-[430px] font-sans
-                text-xs font-medium tracking-wide text-default uppercase
+                mx-auto block h-10 w-full max-w-[430px] font-sans text-xs
+                font-medium tracking-wide text-default uppercase
                 hover:bg-inverse hover:text-white
                 focus:-outline-offset-2 focus:outline-accent
               `}
