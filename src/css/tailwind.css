@@ -1,10 +1,15 @@
 @import "tailwindcss";
 
 @theme {
+  --z-index-search-backdrop: 50;
+  --z-index-sticky: 10;
+
   --background-color-*: initial;
   --background-color-default: light-dark(#fff, #322f2f);
   --background-color-footer: #2b292b;
   --background-color-subtle: light-dark(#f9f7f4, #3e3d3c);
+  --background-color-canvas: light-dark(#f4f1ea, #484745);
+  --background-color-inverse: light-dark(rgb(0 0 0 / 75%), #322f2f);
 
   --border-color-*: initial;
 

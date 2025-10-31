@@ -26,7 +26,9 @@
     <meta content="rgba(0,0,0,.85)" name="theme-color" />
     <title>404 Not Found - Frank Showalter</title>
   </head>
-  <body class="h-full">
+  <body
+    class="h-full data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed data-search-modal-open:before:inset-0 data-search-modal-open:before:z-search-backdrop data-search-modal-open:before:backdrop-blur-xs"
+  >
     <link
       rel="preload"
       as="image"
@@ -1029,7 +1031,7 @@
     >
       <div class="contents" data-dialog-frame>
         <button
-          class="absolute right-4 mt-5 h-6 cursor-pointer border-none bg-subtle px-2 font-mono text-xs font-light text-muted hover:bg-inverse hover:text-white focus:outline-accent tablet:right-6 laptop:right-8"
+          class="absolute right-4 z-sticky mt-5 h-6 cursor-pointer border-none bg-subtle px-2 font-mono text-xs font-light text-muted hover:bg-inverse hover:text-white focus:outline-accent tablet:right-6 laptop:right-8"
           data-close-modal
         >
           ESC
@@ -1114,7 +1116,7 @@
           <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
-              class="mx-auto block h-10 w-full max-w-[430px] font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
+              class="mx-auto block h-10 w-full max-w-[430px] cursor-pointer bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
               id="pagefind-load-more"
               type="button"
             >
