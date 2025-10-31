@@ -59,6 +59,16 @@
     --bg-default-rgb: 255, 255, 255;
     --bg-default-alpha: 0.4;
 
+    --hero-gradient: linear-gradient(
+      to top,
+      rgb(0 0 0 / 30%),
+      rgb(0 0 0 / 10%) 20%,
+      transparent 25%,
+      transparent 80%,
+      rgb(0 0 0 / 10%) 85%,
+      rgb(0 0 0 / 30%) 100%
+    );
+
     color-scheme: light dark;
   }
 
@@ -87,6 +97,16 @@
 
       --bg-default-rgb: 50, 47, 47;
       --bg-default-alpha: 0.5;
+
+      --hero-gradient: linear-gradient(
+        to top,
+        rgb(0 0 0 / 15%),
+        rgb(0 0 0 / 10%) 25%,
+        transparent 25%,
+        transparent 80%,
+        rgb(0 0 0 / 10%) 85%,
+        rgb(0 0 0 / 20%) 100%
+      );
     }
   }
 

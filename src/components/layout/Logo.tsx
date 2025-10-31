@@ -8,8 +8,8 @@ export function Logo({ className }: { className?: string }): React.JSX.Element {
   return (
     <div
       className={`
-        flex transform-gpu flex-col transition-transform duration-500
-        has-[a:hover]:scale-105
+        flex transform-gpu flex-col transition-all duration-500
+        has-[a:hover]:text-accent
         ${className ?? ""}
       `}
     >
