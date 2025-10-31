@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-10-28T00:00:00.000Z",
+    "excerpt": "<p>Three years after his abduction by aliens, a man returns to his wife and young son, but is he still human?</p>",
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/xtro-1982.BBS5aS0n_ltfBO.png",
+    "slug": "xtro-1982",
+    "stars": 4,
+    "title": "Xtro",
+    "year": "1982"
+  },
+  {
     "date": "2025-10-27T00:00:00.000Z",
     "excerpt": "<p>A deranged hotel owner kills people and feeds their bodies to his pet crocodile.</p>",
     "genres": [
@@ -52,17 +65,5 @@
     "stars": 2,
     "title": "Who Can Kill a Child?",
     "year": "1976"
-  },
-  {
-    "date": "2025-10-23T00:00:00.000Z",
-    "excerpt": "<p>A teen reanimates his dead girlfriend with a secret military chemical, but she wakes up craving human flesh.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/return-of-the-living-dead-iii-1993.BUxn6oZE_Z1zXBRQ.png",
-    "slug": "return-of-the-living-dead-iii-1993",
-    "stars": 2.5,
-    "title": "Return of the Living Dead III",
-    "year": "1993"
   }
 ]
