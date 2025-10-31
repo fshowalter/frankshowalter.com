@@ -1,0 +1,25 @@
+---
+import { Layout } from "~/components/layout/Layout";
+
+import AstroPageShell from "./AstroPageShell.astro";
+---
+
+<AstroPageShell
+  canonical={true}
+  meta={{
+    description: "Test page for navigation menu testing",
+  }}
+  openGraph={false}
+  title="Test Page"
+>
+  <Layout
+    backdrop={{
+      centerText: true,
+      deck: "For testing only...",
+      size: "full",
+      title: "Frank Showalter",
+    }}
+  >
+    <div>Test content for navigation menu testing</div>
+  </Layout>
+</AstroPageShell>

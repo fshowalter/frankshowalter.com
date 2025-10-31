@@ -9,3 +9,13 @@
   to = "https://www.franksmovielog.com/:splat"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/pagefind-movielog/*"
+  to = "https://www.franksmovielog.com/pagefind/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/pagefind-booklog/*"
+  to = "https://www.franksbooklog.com/pagefind/:splat"
+  status = 200

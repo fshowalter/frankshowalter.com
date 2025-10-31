@@ -72,7 +72,7 @@ function Deck({
   return (
     <p
       className={`
-        mt-1 font-sans text-base font-normal
+        my-4 font-sans text-base font-normal
         ${
           shadow
             ? `
@@ -82,7 +82,7 @@ function Deck({
             : "text-subtle"
         }
         tablet:text-lg
-        laptop:my-4 laptop:text-xl
+        laptop:text-xl
         ${center ? `text-center` : ""}
       `}
     >
@@ -142,7 +142,6 @@ function Wrapper({
       className={`
         ${sizes}
         relative flex w-full flex-col content-start items-center justify-end
-        gap-6
         ${heroImage ? "bg-[#2A2B2A] text-white" : "text-default"}
         pt-40 pb-20
         tablet:pt-40 tablet:pb-20
@@ -166,7 +165,55 @@ function Wrapper({
         `}
       >
         {children}
+        <SearchButton />
       </div>
     </header>
+  );
+}
+
+function SearchButton(): React.JSX.Element {
+  return (
+    <div
+      className={`
+        max-w-[430px] w-full
+      `}
+    >
+      <button
+        aria-keyshortcuts="Control+K"
+        aria-label="Search"
+        className={`
+          flex h-10 cursor-pointer items-center justify-end
+          overflow-hidden text-sm leading-6 ring-default transition-all
+          bg-white border-border border rounded-2xl px-2
+          duration-500
+          hover:text-accent
+          hover:border-accent
+          w-full
+          mt-1
+          text-default/55
+        `}
+        data-open-modal
+        disabled
+        suppressHydrationWarning
+        title="Search: Control+K"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          className="size-7"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
   );
 }
