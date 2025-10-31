@@ -72,5 +72,170 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
   </head>
   <body class="h-full">
     <slot />
+    <dialog
+      aria-label="Search"
+      class={`
+        fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default
+        bg-default shadow-lg
+        backdrop:bg-[#000] backdrop:opacity-40
+        open:flex open:flex-col
+        tablet:mx-auto tablet:mt-16 tablet:h-min
+        tablet:max-h-[min(100vh-128px,900px)]
+        tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl
+      `}
+    >
+      <div class="contents" data-dialog-frame>
+        <button
+          class={`
+            absolute right-4 mt-5 h-6 cursor-pointer border-none bg-subtle px-2
+            font-mono text-xs font-light text-muted
+            hover:bg-inverse hover:text-white
+            focus:outline-accent
+            tablet:right-6
+            laptop:right-8
+          `}
+          data-close-modal>ESC</button
+        >
+        <!-- Fixed Search Input Section -->
+        <div class="shrink-0">
+          <!-- Search Form with magnifying glass icon -->
+          <form aria-label="Site search" onsubmit="return false" role="search">
+            <div class="relative">
+              <!-- Magnifying glass icon -->
+              <svg
+                aria-hidden="true"
+                class={`
+                  pointer-events-none absolute top-[18px] left-4 h-5 w-5
+                  text-default opacity-70
+                `}
+                fill="none"
+                height="18"
+                viewBox="0 0 18 18"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z"
+                  fill="currentColor"></path>
+              </svg>
+
+              <!-- Search input -->
+              <input
+                aria-describedby="pagefind-results-counter"
+                aria-label="Search query"
+                autocapitalize="off"
+                autocomplete="off"
+                autocorrect="off"
+                autofocus
+                class={`
+                  h-14 w-full border-0 bg-transparent pr-[70px] pl-[54px]
+                  font-serif text-lg font-normal text-default outline-none
+                  placeholder:text-muted placeholder:opacity-50
+                  focus:outline-none
+                  [&::-ms-clear]:hidden [&::-ms-clear]:appearance-none
+                  [&::-webkit-search-cancel-button]:hidden
+                  [&::-webkit-search-cancel-button]:appearance-none
+                `}
+                enterkeyhint="search"
+                id="pagefind-search-input"
+                placeholder="Search"
+                spellcheck="false"
+                type="search"
+              />
+
+              <!-- Clear button -->
+              <button
+                aria-label="Clear search"
+                class={`
+                  absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle
+                  text-subtle
+                  hover:text-default
+                  focus:outline-accent
+                `}
+                id="pagefind-clear-button"
+                type="button"
+              >
+                <svg
+                  class="h-full w-full"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.09L13.41 12Z"
+                  ></path>
+                </svg>
+              </button>
+
+              <!-- Border line after input -->
+              <div class={`absolute right-0 bottom-0 left-0 h-px bg-border`}>
+              </div>
+            </div>
+          </form>
+
+          <!-- Results message/counter -->
+          <div
+            aria-atomic="true"
+            aria-live="polite"
+            class={`
+              border-b border-default px-4 py-4 font-sans text-xs font-normal
+              text-subtle
+              empty:hidden
+            `}
+            id="pagefind-results-counter"
+            role="status"
+          >
+          </div>
+        </div>
+
+        <!-- Scrollable Results Area -->
+        <div
+          aria-label="Search results"
+          class={`
+            min-h-0 flex-1 overflow-x-clip overflow-y-auto overscroll-contain
+            -outline-offset-2
+            focus:outline-accent
+          `}
+          id="pagefind-results-wrapper"
+          role="region"
+        >
+          <div id="pagefind-results"></div>
+
+          <!-- Load More Button -->
+          <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
+            <button
+              aria-controls="pagefind-results"
+              class={`
+                mx-auto block h-10 w-full max-w-[430px] font-sans text-xs
+                font-medium tracking-wide text-default uppercase
+                hover:bg-inverse hover:text-white
+                focus:-outline-offset-2 focus:outline-accent
+              `}
+              id="pagefind-load-more"
+              type="button"
+            >
+              Load more results
+            </button>
+          </div>
+        </div>
+
+        <div
+          class={`
+            px-4 py-4 font-sans text-xs font-light tracking-wide text-subtle
+            tablet:px-6
+            laptop:block laptop:px-8
+          `}
+        >
+          <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
+            >Tab</kbd
+          > to navigate
+          <kbd
+            class="ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle"
+            >ESC</kbd
+          > to close
+        </div>
+      </div>
+    </dialog>
   </body>
 </html>
+<script src="./search.ts"></script>

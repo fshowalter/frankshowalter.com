@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": ["src/**/*.astro", "src/pages/**/*.spec.ts"],
+  "entry": ["src/**/*.astro", "src/pages/**/*.spec.ts", "src/astro/search.ts"],
   "project": ["**/*", "!src/**/__mocks__/**"],
   "ignoreDependencies": [
     "@anthropic-ai/claude-code",
