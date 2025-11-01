@@ -99,8 +99,9 @@ function SearchButton(): React.JSX.Element {
         aria-label="Search"
         className={`
           mt-1 flex h-10 w-full cursor-pointer items-center justify-end
-          overflow-hidden rounded-2xl border border-border bg-white px-2 text-sm
-          leading-6 text-[#252525]/55 ring-default transition-all duration-500
+          overflow-hidden rounded-2xl border border-border bg-inverse px-2
+          text-sm leading-6 text-default/55 ring-default transition-all
+          duration-500
           hover:border-accent hover:text-accent
         `}
         data-open-modal
