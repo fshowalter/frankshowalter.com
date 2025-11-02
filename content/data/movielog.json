@@ -1,6 +1,21 @@
 [
   {
     "date": "2025-11-01T00:00:00.000Z",
+    "excerpt": "<p>In a Canadian village, a newly arrived British family faces institutional corruption after accusing the town patriarch of pedophilia.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/never-take-candy-from-a-stranger-1960.CXZxfFSW_ZdM56s.png",
+    "slug": "never-take-candy-from-a-stranger-1960",
+    "stars": 4,
+    "title": "Never Take Candy from A Stranger",
+    "year": "1960"
+  },
+  {
+    "date": "2025-11-01T00:00:00.000Z",
     "excerpt": "<p>In turn-of-the-century New Orleans, Ava Gardner plays a woman scorned who transforms inherited money into a weapon of romantic revenge against her former lover, played by Robert Mitchum, with tragic results.</p>",
     "genres": [
       "Crime",
@@ -52,18 +67,5 @@
     "stars": 4,
     "title": "Xtro",
     "year": "1982"
-  },
-  {
-    "date": "2025-10-27T00:00:00.000Z",
-    "excerpt": "<p>A deranged hotel owner kills people and feeds their bodies to his pet crocodile.</p>",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/eaten-alive-1976.mdvyem-L_26tqU9.png",
-    "slug": "eaten-alive-1976",
-    "stars": 1.5,
-    "title": "Eaten Alive",
-    "year": "1976"
   }
 ]
