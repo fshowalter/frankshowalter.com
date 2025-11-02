@@ -1,5 +1,33 @@
 [
   {
+    "date": "2025-11-01T00:00:00.000Z",
+    "excerpt": "<p>In turn-of-the-century New Orleans, Ava Gardner plays a woman scorned who transforms inherited money into a weapon of romantic revenge against her former lover, played by Robert Mitchum, with tragic results.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Romance"
+    ],
+    "image": "/_astro/my-forbidden-past-1951.CCYm2l6w_Z1LaGXk.png",
+    "slug": "my-forbidden-past-1951",
+    "stars": 2.5,
+    "title": "My Forbidden Past",
+    "year": "1951"
+  },
+  {
+    "date": "2025-10-31T00:00:00.000Z",
+    "excerpt": "<p>An alien creature beamed through a satellite dish terrorizes a California family.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/terrorvision-1986.Bf7U9cUX_d9koe.png",
+    "slug": "terrorvision-1986",
+    "stars": 1,
+    "title": "TerrorVision",
+    "year": "1986"
+  },
+  {
     "date": "2025-10-30T00:00:00.000Z",
     "excerpt": "<p>Seeking to lure Sidney Prescott out of hiding, Ghostface carves his way through the cast of a horror movie based on her life.</p>",
     "genres": [
@@ -37,32 +65,5 @@
     "stars": 1.5,
     "title": "Eaten Alive",
     "year": "1976"
-  },
-  {
-    "date": "2025-10-26T00:00:00.000Z",
-    "excerpt": "<p>Three film students stalk a bear poacher into the Norwegian wilderness and stumble into Norway’s best-kept secret: trolls are real, and someone has to kill them.</p>",
-    "genres": [
-      "Drama",
-      "Fantasy",
-      "Thriller"
-    ],
-    "image": "/_astro/troll-hunter-2010.Lt-MxgKX_wGENv.png",
-    "slug": "troll-hunter-2010",
-    "stars": 3.5,
-    "title": "Troll Hunter",
-    "year": "2010"
-  },
-  {
-    "date": "2025-10-25T00:00:00.000Z",
-    "excerpt": "<p>The survivors of the first film, now in college, struggle to identify a copycat killer carving through the student body.</p>",
-    "genres": [
-      "Horror",
-      "Mystery"
-    ],
-    "image": "/_astro/scream-2-1997.C_uJqRFb_1QyKCS.png",
-    "slug": "scream-2-1997",
-    "stars": 2.5,
-    "title": "Scream 2",
-    "year": "1997"
   }
 ]
