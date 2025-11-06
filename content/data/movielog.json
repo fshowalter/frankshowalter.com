@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-11-03T00:00:00.000Z",
+    "excerpt": "<p>A moonlighting private eye falls for the fashion designer he’s surveilling after discovering her secret life as a prostitute—but a deranged street preacher is watching too.</p>",
+    "genres": [
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/crimes-of-passion-1984.B-PIgxON_Z1dUspD.png",
+    "slug": "crimes-of-passion-1984",
+    "stars": 4,
+    "title": "Crimes of Passion",
+    "year": "1984"
+  },
+  {
     "date": "2025-11-01T00:00:00.000Z",
     "excerpt": "<p>When Sidney Prescott returns to Woodsboro to promote her memoir, Ghostface begins carving through everyone around her.</p>",
     "genres": [
@@ -54,18 +68,5 @@
     "stars": 1,
     "title": "TerrorVision",
     "year": "1986"
-  },
-  {
-    "date": "2025-10-30T00:00:00.000Z",
-    "excerpt": "<p>Seeking to lure Sidney Prescott out of hiding, Ghostface carves his way through the cast of a horror movie based on her life.</p>",
-    "genres": [
-      "Horror",
-      "Mystery"
-    ],
-    "image": "/_astro/scream-3-2000.DYoMTg1x_Zfzcur.png",
-    "slug": "scream-3-2000",
-    "stars": 1.5,
-    "title": "Scream 3",
-    "year": "2000"
   }
 ]
