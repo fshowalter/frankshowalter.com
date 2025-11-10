@@ -3,6 +3,19 @@
     "authors": [
       "Karl Edward Wagner"
     ],
+    "date": "2025-11-09T00:00:00.000Z",
+    "excerpt": "<p>A college student visits the last man on an abandoned, kudzu-choked street and learns what lurks beneath the vines.</p>",
+    "image": "/_astro/in-the-pines-by-karl-edward-wagner.BYxhynvj_9R8dY.png",
+    "kind": "Short Story",
+    "slug": "where-the-summer-ends-by-karl-edward-wagner",
+    "stars": 2,
+    "title": "Where the Summer Ends",
+    "workYear": "1980"
+  },
+  {
+    "authors": [
+      "Karl Edward Wagner"
+    ],
     "date": "2025-10-26T00:00:00.000Z",
     "excerpt": "<p>A grief-stricken man sees visions of a flapper-era woman at his Tennessee cabin—and discovers he’s not the first.</p>",
     "image": "/_astro/in-the-pines-by-karl-edward-wagner.BYxhynvj_9R8dY.png",
@@ -37,18 +50,5 @@
     "stars": 4,
     "title": "Shiloh",
     "workYear": "2017"
-  },
-  {
-    "authors": [
-      "Philip Fracassi"
-    ],
-    "date": "2025-07-11T00:00:00.000Z",
-    "excerpt": "<p>Five thirteen-year-old boys go hunting for a mysterious black Commodore in the local junkyard but discover the car—and their town—harbor darker secrets than they could have imagined.</p>",
-    "image": "/_astro/commodore-by-philip-fracassi.B6kn71WY_Z1tUWNH.png",
-    "kind": "Novella",
-    "slug": "commodore-by-philip-fracassi",
-    "stars": 5,
-    "title": "Commodore",
-    "workYear": "2021"
   }
 ]
