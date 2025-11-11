@@ -1,6 +1,20 @@
 [
   {
     "date": "2025-11-08T00:00:00.000Z",
+    "excerpt": "<p>A young man returns to the family sheep farm to find his older brother’s genetic experiments have turned the flock into bloodthirsty monsters.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/black-sheep-2006.DeoMVv_i_2tG6BN.png",
+    "slug": "black-sheep-2006",
+    "stars": 2.5,
+    "title": "Black Sheep",
+    "year": "2006"
+  },
+  {
+    "date": "2025-11-08T00:00:00.000Z",
     "excerpt": "<p>A group of parapsychologists out to cleanse a haunted house fall prey to a murderous warlock’s spirit.</p>",
     "genres": [
       "Action",
@@ -54,18 +68,5 @@
     "stars": 4,
     "title": "Crimes of Passion",
     "year": "1984"
-  },
-  {
-    "date": "2025-11-01T00:00:00.000Z",
-    "excerpt": "<p>When Sidney Prescott returns to Woodsboro to promote her memoir, Ghostface begins carving through everyone around her.</p>",
-    "genres": [
-      "Horror",
-      "Mystery"
-    ],
-    "image": "/_astro/scream-4-2011.Cz-4mQqv_VvsR9.png",
-    "slug": "scream-4-2011",
-    "stars": 3.5,
-    "title": "Scream 4",
-    "year": "2011"
   }
 ]
