@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-11-08T00:00:00.000Z",
+    "excerpt": "<p>A group of parapsychologists out to cleanse a haunted house fall prey to a murderous warlock’s spirit.</p>",
+    "genres": [
+      "Action",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/witchtrap-1989.yOBJ5olZ_ZlAx4o.png",
+    "slug": "witchtrap-1989",
+    "stars": 3.5,
+    "title": "Witchtrap",
+    "year": "1989"
+  },
+  {
     "date": "2025-11-06T00:00:00.000Z",
     "excerpt": "<p>Bond trader Tom Hanks and mistress Melanie Griffith take a wrong turn into the South Bronx, hit a local kid, and flee—sparking a media circus fanned by alcoholic journalist Bruce Willis.</p>",
     "genres": [
@@ -53,20 +67,5 @@
     "stars": 3.5,
     "title": "Scream 4",
     "year": "2011"
-  },
-  {
-    "date": "2025-11-01T00:00:00.000Z",
-    "excerpt": "<p>In a Canadian village, a newly arrived British family faces institutional corruption after accusing the town patriarch of pedophilia.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/never-take-candy-from-a-stranger-1960.CXZxfFSW_ZdM56s.png",
-    "slug": "never-take-candy-from-a-stranger-1960",
-    "stars": 4,
-    "title": "Never Take Candy from a Stranger",
-    "year": "1960"
   }
 ]
