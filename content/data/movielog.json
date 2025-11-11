@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-11-06T00:00:00.000Z",
+    "excerpt": "<p>Bond trader Tom Hanks and mistress Melanie Griffith take a wrong turn into the South Bronx, hit a local kid, and flee—sparking a media circus fanned by alcoholic journalist Bruce Willis.</p>",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "image": "/_astro/the-bonfire-of-the-vanities-1990.CnEgjcoj_2kDzzl.png",
+    "slug": "the-bonfire-of-the-vanities-1990",
+    "stars": 2,
+    "title": "The Bonfire of the Vanities",
+    "year": "1990"
+  },
+  {
     "date": "2025-11-05T00:00:00.000Z",
     "excerpt": "<p>Society gentleman Errol Flynn leads a double-life as a mystery writer and gets caught up in a real murder case.</p>",
     "genres": [
@@ -54,19 +68,5 @@
     "stars": 4,
     "title": "Never Take Candy from a Stranger",
     "year": "1960"
-  },
-  {
-    "date": "2025-11-01T00:00:00.000Z",
-    "excerpt": "<p>In turn-of-the-century New Orleans, Ava Gardner plays a woman scorned who transforms inherited money into a weapon of romantic revenge against her former lover, played by Robert Mitchum, with tragic results.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Romance"
-    ],
-    "image": "/_astro/my-forbidden-past-1951.CCYm2l6w_Z1LaGXk.png",
-    "slug": "my-forbidden-past-1951",
-    "stars": 2.5,
-    "title": "My Forbidden Past",
-    "year": "1951"
   }
 ]
