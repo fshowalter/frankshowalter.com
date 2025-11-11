@@ -1,6 +1,19 @@
 [
   {
     "date": "2025-11-08T00:00:00.000Z",
+    "excerpt": "<p>A mercenary team forces the only man who ever escaped a serial killer to lead them back into the killer’s trap-filled lair to rescue a wealthy businessman’s daughter.</p>",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/the-collection-2012.CxvncgJu_ZEkgzr.png",
+    "slug": "the-collection-2012",
+    "stars": 3.5,
+    "title": "The Collection",
+    "year": "2012"
+  },
+  {
+    "date": "2025-11-08T00:00:00.000Z",
     "excerpt": "<p>A young man returns to the family sheep farm to find his older brother’s genetic experiments have turned the flock into bloodthirsty monsters.</p>",
     "genres": [
       "Comedy",
@@ -54,19 +67,5 @@
     "stars": 1,
     "title": "Footsteps in the Dark",
     "year": "1941"
-  },
-  {
-    "date": "2025-11-03T00:00:00.000Z",
-    "excerpt": "<p>A moonlighting private eye falls for the fashion designer he’s surveilling after discovering her secret life as a prostitute—but a deranged street preacher is watching too.</p>",
-    "genres": [
-      "Drama",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/crimes-of-passion-1984.B-PIgxON_Z1dUspD.png",
-    "slug": "crimes-of-passion-1984",
-    "stars": 4,
-    "title": "Crimes of Passion",
-    "year": "1984"
   }
 ]
