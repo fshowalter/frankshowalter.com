@@ -137,7 +137,7 @@ export function RecentUpdates({
             text="Latest"
           />
           <ol className="flex flex-col gap-y-[2vw]">
-            {booklogUpdates.slice(0, 4).map((value) => {
+            {booklogUpdates.slice(0, 5).map((value) => {
               return (
                 <BooklogUpdateCard
                   as="li"
