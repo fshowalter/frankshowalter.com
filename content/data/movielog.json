@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-11-12T00:00:00.000Z",
+    "excerpt": "<p>Detective George C. Scott investigates murders matching the M.O. of a serial killer executed fifteen years prior, leading him to a psychiatric ward and a patient who looks exactly like Father Karras.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery"
+    ],
+    "image": "/_astro/the-exorcist-iii-1990.B1W7XBFA_2vBL6E.png",
+    "slug": "the-exorcist-iii-1990",
+    "stars": 3,
+    "title": "The Exorcist III",
+    "year": "1990"
+  },
+  {
     "date": "2025-11-11T00:00:00.000Z",
     "excerpt": "<p>Taken prisoner deep in German territory, Errol Flynn and Ronald Reagan lead a downed RAF bomber crew on an escape back to England.</p>",
     "genres": [
@@ -52,19 +66,5 @@
     "stars": 3.5,
     "title": "Witchtrap",
     "year": "1989"
-  },
-  {
-    "date": "2025-11-06T00:00:00.000Z",
-    "excerpt": "<p>Bond trader Tom Hanks and mistress Melanie Griffith take a wrong turn into the South Bronx, hit a local kid, and flee—sparking a media circus fanned by alcoholic journalist Bruce Willis.</p>",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Romance"
-    ],
-    "image": "/_astro/the-bonfire-of-the-vanities-1990.CnEgjcoj_2kDzzl.png",
-    "slug": "the-bonfire-of-the-vanities-1990",
-    "stars": 2,
-    "title": "The Bonfire of the Vanities",
-    "year": "1990"
   }
 ]
