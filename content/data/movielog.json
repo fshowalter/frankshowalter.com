@@ -1,5 +1,35 @@
 [
   {
+    "date": "2025-11-15T00:00:00.000Z",
+    "excerpt": "<p>Lionel Barrymore escapes from Devil’s Island and disguises himself as an old woman to seek revenge on the men that framed him by shrinking them to doll-size.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/the-devil-doll-1936.D5IKocxp_1O91Yo.png",
+    "slug": "the-devil-doll-1936",
+    "stars": 2,
+    "title": "The Devil-Doll",
+    "year": "1936"
+  },
+  {
+    "date": "2025-11-13T00:00:00.000Z",
+    "excerpt": "<p>Sharp-dressed inspector Bela Lugosi arrives at a British estate in Calcutta to investigate a séance murder that may be linked to a prior killing.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/the-thirteenth-chair-1929.eWto5Pcq_rOjfs.png",
+    "slug": "the-thirteenth-chair-1929",
+    "stars": 2,
+    "title": "The Thirteenth Chair",
+    "year": "1929"
+  },
+  {
     "date": "2025-11-12T00:00:00.000Z",
     "excerpt": "<p>Detective George C. Scott investigates murders matching the M.O. of a serial killer executed fifteen years prior, leading him to a psychiatric ward and a patient who looks exactly like Father Karras.</p>",
     "genres": [
@@ -38,33 +68,5 @@
     "stars": 3.5,
     "title": "The Collection",
     "year": "2012"
-  },
-  {
-    "date": "2025-11-08T00:00:00.000Z",
-    "excerpt": "<p>A young man returns to the family sheep farm to find his older brother’s genetic experiments have turned the flock into bloodthirsty monsters.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/black-sheep-2006.DeoMVv_i_2tG6BN.png",
-    "slug": "black-sheep-2006",
-    "stars": 2.5,
-    "title": "Black Sheep",
-    "year": "2006"
-  },
-  {
-    "date": "2025-11-08T00:00:00.000Z",
-    "excerpt": "<p>A group of parapsychologists out to cleanse a haunted house fall prey to a murderous warlock’s spirit.</p>",
-    "genres": [
-      "Action",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/witchtrap-1989.yOBJ5olZ_ZlAx4o.png",
-    "slug": "witchtrap-1989",
-    "stars": 3.5,
-    "title": "Witchtrap",
-    "year": "1989"
   }
 ]
