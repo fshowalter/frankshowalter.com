@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-11-21T00:00:00.000Z",
+    "excerpt": "<p>The denizens of a Brooklyn scrapyard contend with a psychotic Vietnam vet, an overzealous cop, an angry mobster, and a toxic liquor that turns bodies into human Slurpees.</p>",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "image": "/_astro/street-trash-1987.NVvcp3fY_ZjApE9.png",
+    "slug": "street-trash-1987",
+    "stars": 3,
+    "title": "Street Trash",
+    "year": "1987"
+  },
+  {
     "date": "2025-11-16T00:00:00.000Z",
     "excerpt": "<p>William Peter Blatty’s director’s cut still has George C. Scott investigating murders by a killer who died fifteen years ago, but makes different choices—some smart, some not.</p>",
     "genres": [
@@ -56,18 +69,5 @@
     "stars": 3,
     "title": "The Exorcist III",
     "year": "1990"
-  },
-  {
-    "date": "2025-11-11T00:00:00.000Z",
-    "excerpt": "<p>Taken prisoner deep in German territory, Errol Flynn and Ronald Reagan lead a downed RAF bomber crew on an escape back to England.</p>",
-    "genres": [
-      "Drama",
-      "War"
-    ],
-    "image": "/_astro/desperate-journey-1942.sIYOe1aw_2fOC44.png",
-    "slug": "desperate-journey-1942",
-    "stars": 2,
-    "title": "Desperate Journey",
-    "year": "1942"
   }
 ]
