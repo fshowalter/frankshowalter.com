@@ -1,6 +1,20 @@
 [
   {
     "date": "2025-11-22T00:00:00.000Z",
+    "excerpt": "<p>Anton Diffring kidnaps beautiful Hazel Court to blackmail surgeon Christopher Lee into performing an operation to keep him young.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/the-man-who-could-cheat-death-1959.BY7Lw7ol_kdv5p.png",
+    "slug": "the-man-who-could-cheat-death-1959",
+    "stars": 2,
+    "title": "The Man Who Could Cheat Death",
+    "year": "1959"
+  },
+  {
+    "date": "2025-11-22T00:00:00.000Z",
     "excerpt": "<p>In a sprawling mansion, a mystery writer and her guests are terrorized by a masked killer searching for a fortune in stolen securities.</p>",
     "genres": [
       "Horror",
@@ -53,21 +67,5 @@
     "stars": 2,
     "title": "The Devil-Doll",
     "year": "1936"
-  },
-  {
-    "date": "2025-11-13T00:00:00.000Z",
-    "excerpt": "<p>Sharp-dressed inspector Bela Lugosi arrives at a British estate in Calcutta to investigate a séance murder that may be linked to a prior killing.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Mystery",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/the-thirteenth-chair-1929.eWto5Pcq_rOjfs.png",
-    "slug": "the-thirteenth-chair-1929",
-    "stars": 2,
-    "title": "The Thirteenth Chair",
-    "year": "1929"
   }
 ]
