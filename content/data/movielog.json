@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-11-22T00:00:00.000Z",
+    "excerpt": "<p>In a sprawling mansion, a mystery writer and her guests are terrorized by a masked killer searching for a fortune in stolen securities.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-bat-1959.CwpWDfoS_Z1vpX5e.png",
+    "slug": "the-bat-1959",
+    "stars": 1,
+    "title": "The Bat",
+    "year": "1959"
+  },
+  {
     "date": "2025-11-21T00:00:00.000Z",
     "excerpt": "<p>The denizens of a Brooklyn scrapyard contend with a psychotic Vietnam vet, an overzealous cop, an angry mobster, and a toxic liquor that turns bodies into human Slurpees.</p>",
     "genres": [
@@ -55,19 +69,5 @@
     "stars": 2,
     "title": "The Thirteenth Chair",
     "year": "1929"
-  },
-  {
-    "date": "2025-11-12T00:00:00.000Z",
-    "excerpt": "<p>Detective George C. Scott investigates murders matching the M.O. of a serial killer executed fifteen years prior, leading him to a psychiatric ward and a patient who looks exactly like Father Karras.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Mystery"
-    ],
-    "image": "/_astro/the-exorcist-iii-1990.B1W7XBFA_2vBL6E.png",
-    "slug": "the-exorcist-iii-1990",
-    "stars": 3,
-    "title": "The Exorcist III",
-    "year": "1990"
   }
 ]
