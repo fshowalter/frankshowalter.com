@@ -1,6 +1,21 @@
 [
   {
     "date": "2025-11-22T00:00:00.000Z",
+    "excerpt": "<p>In reverse-chronological order, we follow two men’s quest for vengeance after a woman close to them is brutally assaulted.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/irreversible-2002.DmC3DM9R_Zq6YvV.png",
+    "slug": "irreversible-2002",
+    "stars": 4,
+    "title": "Irreversible",
+    "year": "2002"
+  },
+  {
+    "date": "2025-11-22T00:00:00.000Z",
     "excerpt": "<p>Anton Diffring kidnaps beautiful Hazel Court to blackmail surgeon Christopher Lee into performing an operation to keep him young.</p>",
     "genres": [
       "Drama",
@@ -53,19 +68,5 @@
     "stars": 3,
     "title": "The Exorcist III: Legion",
     "year": "1990"
-  },
-  {
-    "date": "2025-11-15T00:00:00.000Z",
-    "excerpt": "<p>Lionel Barrymore escapes from Devil’s Island and disguises himself as an old woman to seek revenge on the men that framed him by shrinking them to doll-size.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/the-devil-doll-1936.D5IKocxp_1O91Yo.png",
-    "slug": "the-devil-doll-1936",
-    "stars": 2,
-    "title": "The Devil-Doll",
-    "year": "1936"
   }
 ]
