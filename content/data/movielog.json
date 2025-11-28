@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-11-23T00:00:00.000Z",
+    "excerpt": "<p>A nurse in wartime England endures personal and professional hardships while remaining true to her vocation.</p>",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "image": "/_astro/vigil-in-the-night-1940.DMquxKp-_HzLDG.png",
+    "slug": "vigil-in-the-night-1940",
+    "stars": 4,
+    "title": "Vigil in the Night",
+    "year": "1940"
+  },
+  {
     "date": "2025-11-22T00:00:00.000Z",
     "excerpt": "<p>In reverse-chronological order, we follow two men’s quest for vengeance after a woman close to them is brutally assaulted.</p>",
     "genres": [
@@ -54,19 +67,5 @@
     "stars": 3,
     "title": "Street Trash",
     "year": "1987"
-  },
-  {
-    "date": "2025-11-16T00:00:00.000Z",
-    "excerpt": "<p>William Peter Blatty’s director’s cut still has George C. Scott investigating murders by a killer who died fifteen years ago, but makes different choices—some smart, some not.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-exorcist-iii-legion-1990.DtfkBb0X_ZFPR31.png",
-    "slug": "the-exorcist-iii-legion-1990",
-    "stars": 3,
-    "title": "The Exorcist III: Legion",
-    "year": "1990"
   }
 ]
