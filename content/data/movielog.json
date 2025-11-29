@@ -1,5 +1,23 @@
 [
   {
+    "date": "2025-11-26T00:00:00.000Z",
+    "excerpt": "<p>Humphrey Bogart plays a Runyonesque gambler who stumbles onto a Nazi spy ring after his favorite cheesecake baker is murdered.</p>",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Thriller",
+      "War"
+    ],
+    "image": "/_astro/all-through-the-night-1942.CrcmHu0__Z1Whou6.png",
+    "slug": "all-through-the-night-1942",
+    "stars": 4,
+    "title": "All Through the Night",
+    "year": "1942"
+  },
+  {
     "date": "2025-11-25T00:00:00.000Z",
     "excerpt": "<p>Homely Dr. Jekyll’s serum transforms him into the dashing, sociopathic Edward Hyde—who promptly torments Jekyll’s unfaithful wife and her lover, Jekyll’s backstabbing best friend, Christopher Lee.</p>",
     "genres": [
@@ -53,20 +71,5 @@
     "stars": 4,
     "title": "Vigil in the Night",
     "year": "1940"
-  },
-  {
-    "date": "2025-11-22T00:00:00.000Z",
-    "excerpt": "<p>In reverse-chronological order, we follow two men’s quest for vengeance after a woman close to them is brutally assaulted.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/irreversible-2002.DmC3DM9R_Zq6YvV.png",
-    "slug": "irreversible-2002",
-    "stars": 4,
-    "title": "Irreversible",
-    "year": "2002"
   }
 ]
