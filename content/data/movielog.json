@@ -1,5 +1,21 @@
 [
   {
+    "date": "2025-11-24T00:00:00.000Z",
+    "excerpt": "<p>Caribbean pirate Burt Lancaster captures a British ship, schemes to sell its arms twice over, then falls for a rebel leader’s daughter and switches sides.</p>",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Drama",
+      "Romance"
+    ],
+    "image": "/_astro/the-crimson-pirate-1952.DRbYmEVv_1S8XSO.png",
+    "slug": "the-crimson-pirate-1952",
+    "stars": 2.5,
+    "title": "The Crimson Pirate",
+    "year": "1952"
+  },
+  {
     "date": "2025-11-23T00:00:00.000Z",
     "excerpt": "<p>Ten years after the Jigsaw killer’s death, police investigate a fresh set of murders bearing his MO while a group of strangers endure one of his “games”.</p>",
     "genres": [
@@ -53,20 +69,6 @@
     "slug": "the-man-who-could-cheat-death-1959",
     "stars": 2,
     "title": "The Man Who Could Cheat Death",
-    "year": "1959"
-  },
-  {
-    "date": "2025-11-22T00:00:00.000Z",
-    "excerpt": "<p>In a sprawling mansion, a mystery writer and her guests are terrorized by a masked killer searching for a fortune in stolen securities.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-bat-1959.CwpWDfoS_Z1vpX5e.png",
-    "slug": "the-bat-1959",
-    "stars": 1,
-    "title": "The Bat",
     "year": "1959"
   }
 ]
