@@ -1,6 +1,20 @@
 [
   {
     "date": "2025-11-23T00:00:00.000Z",
+    "excerpt": "<p>Ten years after the Jigsaw killer’s death, police investigate a fresh set of murders bearing his MO while a group of strangers endure one of his “games”.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/jigsaw-2017.BJilnV4K_ZaLJ6C.png",
+    "slug": "jigsaw-2017",
+    "stars": 1.5,
+    "title": "Jigsaw",
+    "year": "2017"
+  },
+  {
+    "date": "2025-11-23T00:00:00.000Z",
     "excerpt": "<p>A nurse in wartime England endures personal and professional hardships while remaining true to her vocation.</p>",
     "genres": [
       "Drama",
@@ -54,18 +68,5 @@
     "stars": 1,
     "title": "The Bat",
     "year": "1959"
-  },
-  {
-    "date": "2025-11-21T00:00:00.000Z",
-    "excerpt": "<p>The denizens of a Brooklyn scrapyard contend with a psychotic Vietnam vet, an overzealous cop, an angry mobster, and a toxic liquor that turns bodies into human Slurpees.</p>",
-    "genres": [
-      "Comedy",
-      "Horror"
-    ],
-    "image": "/_astro/street-trash-1987.NVvcp3fY_ZjApE9.png",
-    "slug": "street-trash-1987",
-    "stars": 3,
-    "title": "Street Trash",
-    "year": "1987"
   }
 ]
