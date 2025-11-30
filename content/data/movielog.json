@@ -1,6 +1,23 @@
 [
   {
     "date": "2025-11-26T00:00:00.000Z",
+    "excerpt": "<p>An affluent family grows increasingly alarmed when the Pilgrim re-enactors they hired for Thanksgiving refuse to break character, even as people go missing.</p>",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/pilgrim-2019.DNd2Ae4J_ZYRQvf.png",
+    "slug": "pilgrim-2019",
+    "stars": 2,
+    "title": "Pilgrim",
+    "year": "2019"
+  },
+  {
+    "date": "2025-11-26T00:00:00.000Z",
     "excerpt": "<p>Humphrey Bogart plays a Runyonesque gambler who stumbles onto a Nazi spy ring after his favorite cheesecake baker is murdered.</p>",
     "genres": [
       "Action",
@@ -19,7 +36,7 @@
   },
   {
     "date": "2025-11-25T00:00:00.000Z",
-    "excerpt": "<p>Homely Dr. Jekyll’s serum transforms him into the dashing, sociopathic Edward Hyde—who promptly torments Jekyll’s unfaithful wife and her lover, Jekyll’s backstabbing best friend, Christopher Lee.</p>",
+    "excerpt": "<p>Homely Dr. Jekyll’s serum transforms him into the dashing, sociopathic Edward Hyde—who promptly torments Jekyll’s unfaithful wife and her lover, Jekyll’s backstabbing best friend, played by Christopher Lee.</p>",
     "genres": [
       "Horror"
     ],
@@ -58,18 +75,5 @@
     "stars": 1.5,
     "title": "Jigsaw",
     "year": "2017"
-  },
-  {
-    "date": "2025-11-23T00:00:00.000Z",
-    "excerpt": "<p>A nurse in wartime England endures personal and professional hardships while remaining true to her vocation.</p>",
-    "genres": [
-      "Drama",
-      "Romance"
-    ],
-    "image": "/_astro/vigil-in-the-night-1940.DMquxKp-_HzLDG.png",
-    "slug": "vigil-in-the-night-1940",
-    "stars": 4,
-    "title": "Vigil in the Night",
-    "year": "1940"
   }
 ]
