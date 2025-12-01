@@ -1,5 +1,33 @@
 [
   {
+    "date": "2025-11-29T00:00:00.000Z",
+    "excerpt": "<p>A Massachusetts detective enlists a Harvard forensic specialist to crack the case of a skeleton on a Cape Cod beach.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/mystery-street-1950.CTBwzF7m_jrOLk.png",
+    "slug": "mystery-street-1950",
+    "stars": 2.5,
+    "title": "Mystery Street",
+    "year": "1950"
+  },
+  {
+    "date": "2025-11-27T00:00:00.000Z",
+    "excerpt": "<p>When his institutionalized twin brother escapes on Thanksgiving night, a young man embarks on a homicidal rampage through a Jacksonville garden apartment complex.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/blood-rage-1987.D1DmHC7G_Z1Farwb.png",
+    "slug": "blood-rage-1987",
+    "stars": 3.5,
+    "title": "Blood Rage",
+    "year": "1987"
+  },
+  {
     "date": "2025-11-26T00:00:00.000Z",
     "excerpt": "<p>An affluent family grows increasingly alarmed when the Pilgrim re-enactors they hired for Thanksgiving refuse to break character, even as people go missing.</p>",
     "genres": [
@@ -45,35 +73,5 @@
     "stars": 3,
     "title": "The Two Faces of Dr. Jekyll",
     "year": "1960"
-  },
-  {
-    "date": "2025-11-24T00:00:00.000Z",
-    "excerpt": "<p>Caribbean pirate Burt Lancaster captures a British ship, schemes to sell its arms twice over, then falls for a rebel leader’s daughter and switches sides.</p>",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Comedy",
-      "Drama",
-      "Romance"
-    ],
-    "image": "/_astro/the-crimson-pirate-1952.DRbYmEVv_1S8XSO.png",
-    "slug": "the-crimson-pirate-1952",
-    "stars": 2.5,
-    "title": "The Crimson Pirate",
-    "year": "1952"
-  },
-  {
-    "date": "2025-11-23T00:00:00.000Z",
-    "excerpt": "<p>Ten years after the Jigsaw killer’s death, police investigate a fresh set of murders bearing his MO while a group of strangers endure one of his “games”.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/jigsaw-2017.BJilnV4K_ZaLJ6C.png",
-    "slug": "jigsaw-2017",
-    "stars": 1.5,
-    "title": "Jigsaw",
-    "year": "2017"
   }
 ]
