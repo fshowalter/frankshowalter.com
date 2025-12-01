@@ -1,5 +1,20 @@
 [
   {
+    "date": "2025-11-30T00:00:00.000Z",
+    "excerpt": "<p>From the morgue slab, a corpse narrates how a tangled affair involving hypnotist Bela Lugosi, a midget sidekick, her suspicious doctor, and a mysterious green mask led to her demise.</p>",
+    "genres": [
+      "Crime",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/scared-to-death-1946.H3zsl5ui_Z2duoP3.png",
+    "slug": "scared-to-death-1946",
+    "stars": 0.5,
+    "title": "Scared to Death",
+    "year": "1946"
+  },
+  {
     "date": "2025-11-29T00:00:00.000Z",
     "excerpt": "<p>A Massachusetts detective enlists a Harvard forensic specialist to crack the case of a skeleton on a Cape Cod beach.</p>",
     "genres": [
@@ -61,17 +76,5 @@
     "stars": 4,
     "title": "All Through the Night",
     "year": "1942"
-  },
-  {
-    "date": "2025-11-25T00:00:00.000Z",
-    "excerpt": "<p>Homely Dr. Jekyll’s serum transforms him into the dashing, sociopathic Edward Hyde—who promptly torments Jekyll’s unfaithful wife and her lover, Jekyll’s backstabbing best friend, played by Christopher Lee.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/the-two-faces-of-dr-jekyll-1960.CcxQA0TF_1clA8t.png",
-    "slug": "the-two-faces-of-dr-jekyll-1960",
-    "stars": 3,
-    "title": "The Two Faces of Dr. Jekyll",
-    "year": "1960"
   }
 ]
