@@ -1,4 +1,5 @@
 const gradeMap: Record<string, [string, string]> = {
+  0.5: ["/svg/haf-star.svg", "1/2 star (out of 5)"],
   1: ["/svg/1-star.svg", "1 star (out of 5)"],
   1.5: ["/svg/1-half-stars.svg", "1.5 stars (out of 5)"],
   2: ["/svg/2-stars.svg", "2 stars (out of 5)"],
