@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-12-01T00:00:00.000Z",
+    "excerpt": "<p>Duane and his deformed, surgically-separated conjoined twin Belial find refuge in a home for “unique individuals” until a nosy reporter threatens to ruin everything.</p>",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "image": "/_astro/basket-case-2-1990.D6gHF5Tq_1omwnV.png",
+    "slug": "basket-case-2-1990",
+    "stars": 3,
+    "title": "Basket Case 2",
+    "year": "1990"
+  },
+  {
     "date": "2025-11-30T00:00:00.000Z",
     "excerpt": "<p>From the morgue slab, a corpse narrates how a tangled affair involving hypnotist Bela Lugosi, a midget sidekick, her suspicious doctor, and a mysterious green mask led to her demise.</p>",
     "genres": [
@@ -58,23 +71,5 @@
     "stars": 2,
     "title": "Pilgrim",
     "year": "2019"
-  },
-  {
-    "date": "2025-11-26T00:00:00.000Z",
-    "excerpt": "<p>Humphrey Bogart plays a Runyonesque gambler who stumbles onto a Nazi spy ring after his favorite cheesecake baker is murdered.</p>",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Crime",
-      "Drama",
-      "Film-Noir",
-      "Thriller",
-      "War"
-    ],
-    "image": "/_astro/all-through-the-night-1942.CrcmHu0__Z1Whou6.png",
-    "slug": "all-through-the-night-1942",
-    "stars": 4,
-    "title": "All Through the Night",
-    "year": "1942"
   }
 ]
