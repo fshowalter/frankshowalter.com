@@ -1,5 +1,19 @@
 [
   {
+    "date": "2025-12-18T00:00:00.000Z",
+    "excerpt": "<p>An elite assassin carves a bloody path of revenge through her former squad to her ultimate target: her ex-lover and boss, Bill.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "image": "/_astro/kill-bill-the-whole-bloody-affair-2006.Drf-wgJ0_Zzstom.png",
+    "slug": "kill-bill-the-whole-bloody-affair-2006",
+    "stars": 4,
+    "title": "Kill Bill: The Whole Bloody Affair",
+    "year": "2006"
+  },
+  {
     "date": "2025-12-02T00:00:00.000Z",
     "excerpt": "<p>Saddled with a bank-mandated accountant and publicist, traveling circus owner Victor Mature tries to keep his show afloat and ferret out a deadly saboteur.</p>",
     "genres": [
@@ -55,17 +69,5 @@
     "stars": 2.5,
     "title": "Mystery Street",
     "year": "1950"
-  },
-  {
-    "date": "2025-11-27T00:00:00.000Z",
-    "excerpt": "<p>When his institutionalized twin brother escapes on Thanksgiving night, a young man embarks on a homicidal rampage through a Jacksonville garden apartment complex.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/blood-rage-1987.D1DmHC7G_Z1Farwb.png",
-    "slug": "blood-rage-1987",
-    "stars": 3.5,
-    "title": "Blood Rage",
-    "year": "1987"
   }
 ]
