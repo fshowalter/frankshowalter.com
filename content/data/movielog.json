@@ -1,5 +1,20 @@
 [
   {
+    "date": "2025-12-23T00:00:00.000Z",
+    "excerpt": "<p>A sexually frustrated high school student struggles with his attraction to his new substitute teacher while a serial killer preys on the female student body—but nobody seems to mind because the football team keeps winning.</p>",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/pretty-maids-all-in-a-row-1971.Co8AnCFT_Z1H4JtH.png",
+    "slug": "pretty-maids-all-in-a-row-1971",
+    "stars": 4,
+    "title": "Pretty Maids All in a Row",
+    "year": "1971"
+  },
+  {
     "date": "2025-12-18T00:00:00.000Z",
     "excerpt": "<p>An elite assassin carves a bloody path of revenge through her former squad to her ultimate target: her ex-lover and boss, Bill.</p>",
     "genres": [
@@ -53,21 +68,5 @@
     "stars": 0.5,
     "title": "Scared to Death",
     "year": "1946"
-  },
-  {
-    "date": "2025-11-29T00:00:00.000Z",
-    "excerpt": "<p>A Massachusetts detective enlists a Harvard forensic specialist to crack the case of a skeleton on a Cape Cod beach.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Film-Noir",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/mystery-street-1950.CTBwzF7m_jrOLk.png",
-    "slug": "mystery-street-1950",
-    "stars": 2.5,
-    "title": "Mystery Street",
-    "year": "1950"
   }
 ]
