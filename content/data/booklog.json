@@ -1,6 +1,19 @@
 [
   {
     "authors": [
+      "Mark Andrews"
+    ],
+    "date": "2025-12-20T00:00:00.000Z",
+    "excerpt": "<p>An oral history of the Sisters of Mercy’s rise from Leeds clubs through their debut album and subsequent implosion.</p>",
+    "image": "/_astro/paint-my-name-in-black-and-gold-by-mark-andrews.BdzV2l6b_2jdWGP.png",
+    "kind": "Nonfiction",
+    "slug": "paint-my-name-in-black-and-gold-by-mark-andrews",
+    "stars": 3,
+    "title": "Paint My Name in Black and Gold",
+    "workYear": "2021"
+  },
+  {
+    "authors": [
       "Karl Edward Wagner"
     ],
     "date": "2025-11-09T00:00:00.000Z",
@@ -50,18 +63,5 @@
     "stars": 4,
     "title": "Shiloh",
     "workYear": "2017"
-  },
-  {
-    "authors": [
-      "Philip Fracassi"
-    ],
-    "date": "2025-07-11T00:00:00.000Z",
-    "excerpt": "<p>Five thirteen-year-old boys go hunting for a mysterious black Commodore in the local junkyard but discover the car—and their town—harbor darker secrets than they could have imagined.</p>",
-    "image": "/_astro/commodore-by-philip-fracassi.B6kn71WY_Z1tUWNH.png",
-    "kind": "Novella",
-    "slug": "commodore-by-philip-fracassi",
-    "stars": 5,
-    "title": "Commodore",
-    "workYear": "2021"
   }
 ]
