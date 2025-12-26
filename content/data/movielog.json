@@ -1,5 +1,17 @@
 [
   {
+    "date": "2025-12-25T00:00:00.000Z",
+    "excerpt": "<p>A recovering alcoholic ex-cop turned department store Santa discovers a teenage girl is the unwilling pawn in a Neo-Nazi plot to revive the Third Reich by having her impregnated by a demonic two-foot-tall elf.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/elves-1989.BP-0CH49_ZY90YT.png",
+    "slug": "elves-1989",
+    "stars": 2,
+    "title": "Elves",
+    "year": "1989"
+  },
+  {
     "date": "2025-12-23T00:00:00.000Z",
     "excerpt": "<p>A sexually frustrated high school student struggles with his attraction to his new substitute teacher while a serial killer preys on the female student body—but nobody seems to mind because the football team keeps winning.</p>",
     "genres": [
@@ -53,20 +65,5 @@
     "stars": 3,
     "title": "Basket Case 2",
     "year": "1990"
-  },
-  {
-    "date": "2025-11-30T00:00:00.000Z",
-    "excerpt": "<p>From the morgue slab, a corpse narrates how a tangled affair involving hypnotist Bela Lugosi, a midget sidekick, her suspicious doctor, and a mysterious green mask led to her demise.</p>",
-    "genres": [
-      "Crime",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/scared-to-death-1946.H3zsl5ui_Z2duoP3.png",
-    "slug": "scared-to-death-1946",
-    "stars": 0.5,
-    "title": "Scared to Death",
-    "year": "1946"
   }
 ]
