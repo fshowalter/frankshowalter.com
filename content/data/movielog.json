@@ -1,5 +1,17 @@
 [
   {
+    "date": "2025-12-26T00:00:00.000Z",
+    "excerpt": "<p>A resurrected Freddy resumes his murderous ways, exploiting Alice—a teen who absorbs the dream powers of his victims—to claim more lives.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/a-nightmare-on-elm-street-4-the-dream-master-1988.DRj6SMs7_Fp9cC.png",
+    "slug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
+    "stars": 1.5,
+    "title": "A Nightmare on Elm Street 4: The Dream Master",
+    "year": "1988"
+  },
+  {
     "date": "2025-12-25T00:00:00.000Z",
     "excerpt": "<p>A recovering alcoholic ex-cop turned department store Santa discovers a teenage girl is the unwilling pawn in a Neo-Nazi plot to revive the Third Reich by having her impregnated by a demonic two-foot-tall elf.</p>",
     "genres": [
@@ -52,18 +64,5 @@
     "stars": 3,
     "title": "The Big Circus",
     "year": "1959"
-  },
-  {
-    "date": "2025-11-30T00:00:00.000Z",
-    "excerpt": "<p>Duane and his deformed, surgically-separated conjoined twin Belial find refuge in a home for “unique individuals” until a nosy reporter threatens to ruin everything.</p>",
-    "genres": [
-      "Comedy",
-      "Horror"
-    ],
-    "image": "/_astro/basket-case-2-1990.D6gHF5Tq_1omwnV.png",
-    "slug": "basket-case-2-1990",
-    "stars": 3,
-    "title": "Basket Case 2",
-    "year": "1990"
   }
 ]
