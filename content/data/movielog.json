@@ -1,5 +1,29 @@
 [
   {
+    "date": "2025-12-29T00:00:00.000Z",
+    "excerpt": "<p>A village pastor’s crisis of faith blinds him to his failures as a priest and his cruelty toward the woman who loves him.</p>",
+    "genres": [
+      "Drama"
+    ],
+    "image": "/_astro/winter-light-1963.D5YkJxw6_2j5waU.png",
+    "slug": "winter-light-1963",
+    "stars": 4,
+    "title": "Winter Light",
+    "year": "1963"
+  },
+  {
+    "date": "2025-12-28T00:00:00.000Z",
+    "excerpt": "<p>An unearthed Celtic stone head spreads horrific visions wherever it goes.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/from-the-old-earth-1981.leVT_mmi_1RouPB.png",
+    "slug": "from-the-old-earth-1981",
+    "stars": 1.5,
+    "title": "From the Old Earth",
+    "year": "1981"
+  },
+  {
     "date": "2025-12-27T00:00:00.000Z",
     "excerpt": "<p>Caught between her cop boyfriend and his lovelorn partner, a young Triad boss becomes the target of a brutal power grab by one of her enforcers.</p>",
     "genres": [
@@ -35,34 +59,5 @@
     "stars": 2,
     "title": "Elves",
     "year": "1989"
-  },
-  {
-    "date": "2025-12-23T00:00:00.000Z",
-    "excerpt": "<p>A sexually frustrated high school student struggles with his attraction to his new substitute teacher while a serial killer preys on the female student body—but nobody seems to mind because the football team keeps winning.</p>",
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/pretty-maids-all-in-a-row-1971.Co8AnCFT_Z1H4JtH.png",
-    "slug": "pretty-maids-all-in-a-row-1971",
-    "stars": 4,
-    "title": "Pretty Maids All in a Row",
-    "year": "1971"
-  },
-  {
-    "date": "2025-12-18T00:00:00.000Z",
-    "excerpt": "<p>An elite assassin carves a bloody path of revenge through her former squad to her ultimate target: her ex-lover and boss, Bill.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller"
-    ],
-    "image": "/_astro/kill-bill-the-whole-bloody-affair-2006.Drf-wgJ0_Zzstom.png",
-    "slug": "kill-bill-the-whole-bloody-affair-2006",
-    "stars": 4,
-    "title": "Kill Bill: The Whole Bloody Affair",
-    "year": "2006"
   }
 ]
