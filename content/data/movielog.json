@@ -1,5 +1,18 @@
 [
   {
+    "date": "2025-12-30T00:00:00.000Z",
+    "excerpt": "<p>A research scientist specializing in sexual aggression seduces her married colleague into an escalating affair, then goes to alarming lengths to keep him from ending it.</p>",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/body-chemistry-1990.Cr1waDIr_1xoH7a.png",
+    "slug": "body-chemistry-1990",
+    "stars": 2,
+    "title": "Body Chemistry",
+    "year": "1990"
+  },
+  {
     "date": "2025-12-29T00:00:00.000Z",
     "excerpt": "<p>A village pastor’s crisis of faith blinds him to his failures as a priest and his cruelty toward the woman who loves him.</p>",
     "genres": [
@@ -47,17 +60,5 @@
     "stars": 1.5,
     "title": "A Nightmare on Elm Street 4: The Dream Master",
     "year": "1988"
-  },
-  {
-    "date": "2025-12-25T00:00:00.000Z",
-    "excerpt": "<p>A recovering alcoholic ex-cop turned department store Santa discovers a teenage girl is the unwilling pawn in a Neo-Nazi plot to revive the Third Reich by having her impregnated by a demonic two-foot-tall elf.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/elves-1989.BP-0CH49_ZY90YT.png",
-    "slug": "elves-1989",
-    "stars": 2,
-    "title": "Elves",
-    "year": "1989"
   }
 ]
