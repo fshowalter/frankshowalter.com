@@ -1,5 +1,32 @@
 [
   {
+    "date": "2026-01-01T00:00:00.000Z",
+    "excerpt": "<p>A rare book dealer hired to authenticate a tome supposedly penned by Satan himself turns from skeptic to believer as the body count rises.</p>",
+    "genres": [
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-ninth-gate-1999.JEli2UOO_Zd36gB.png",
+    "slug": "the-ninth-gate-1999",
+    "stars": 4,
+    "title": "The Ninth Gate",
+    "year": "1999"
+  },
+  {
+    "date": "2026-01-01T00:00:00.000Z",
+    "excerpt": "<p>Bodies pile up as a low-rent private investigator’s search for a missing crooner leads him into a shadowy occult world.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/angel-heart-1987.64ylK9Ge_Z1LK7FT.png",
+    "slug": "angel-heart-1987",
+    "stars": 3,
+    "title": "Angel Heart",
+    "year": "1987"
+  },
+  {
     "date": "2025-12-30T00:00:00.000Z",
     "excerpt": "<p>A research scientist specializing in sexual aggression seduces her married colleague into an escalating affair, then goes to alarming lengths to keep him from ending it.</p>",
     "genres": [
@@ -35,30 +62,5 @@
     "stars": 1.5,
     "title": "From the Old Earth",
     "year": "1981"
-  },
-  {
-    "date": "2025-12-27T00:00:00.000Z",
-    "excerpt": "<p>Caught between her cop boyfriend and his lovelorn partner, a young Triad boss becomes the target of a brutal power grab by one of her enforcers.</p>",
-    "genres": [
-      "Action",
-      "Crime"
-    ],
-    "image": "/_astro/an-eye-for-an-eye-1990.CJFTdIY5_1oLPfJ.png",
-    "slug": "an-eye-for-an-eye-1990",
-    "stars": 1,
-    "title": "An Eye for an Eye",
-    "year": "1990"
-  },
-  {
-    "date": "2025-12-26T00:00:00.000Z",
-    "excerpt": "<p>A resurrected Freddy resumes his murderous ways, exploiting Alice—a teen who absorbs the dream powers of his victims—to claim more lives.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/a-nightmare-on-elm-street-4-the-dream-master-1988.DRj6SMs7_Fp9cC.png",
-    "slug": "a-nightmare-on-elm-street-4-the-dream-master-1988",
-    "stars": 1.5,
-    "title": "A Nightmare on Elm Street 4: The Dream Master",
-    "year": "1988"
   }
 ]
