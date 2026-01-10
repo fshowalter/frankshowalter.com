@@ -27,9 +27,9 @@
   "dependencies": {
     "@astrojs/check": "0.9.6",
     "@astrojs/react": "4.4.2",
-    "@astrojs/sitemap": "3.6.0",
+    "@astrojs/sitemap": "3.6.1",
     "@tailwindcss/vite": "4.1.18",
-    "astro": "5.16.6",
+    "astro": "5.16.7",
     "astro-compressor": "1.2.0",
     "pagefind": "1.4.0",
     "react": "19.2.3",
