@@ -75,10 +75,7 @@ function Deck({
         my-4 font-sans text-base font-normal
         ${
           shadow
-            ? `
-              text-white/75
-              [text-shadow:1px_1px_2px_black]
-            `
+            ? `text-white/75 [text-shadow:1px_1px_2px_black]`
             : "text-subtle"
         }
         tablet:text-lg
@@ -93,15 +90,14 @@ function Deck({
 
 function SearchButton(): React.JSX.Element {
   return (
-    <div className={`w-full max-w-[430px]`}>
+    <div className={`w-full max-w-107.5`}>
       <button
         aria-keyshortcuts="Control+K"
         aria-label="Search"
         className={`
           mt-1 flex h-10 w-full cursor-pointer items-center justify-end
           overflow-hidden rounded-2xl border border-border bg-default px-2
-          text-sm leading-6 text-default/55 ring-default transition-all
-          duration-500
+          text-sm/6 text-default/55 ring-default transition-all duration-500
           hover:border-accent hover:text-accent
         `}
         data-open-modal
@@ -145,7 +141,7 @@ function Title({
       className={
         className ||
         `
-          text-[2rem] leading-10 font-extrabold
+          text-[2rem]/10 font-extrabold
           ${shadow ? "[text-shadow:1px_1px_2px_rgba(0,0,0,.25)]" : ""}
           tablet:text-5xl
           laptop:text-7xl
@@ -196,8 +192,8 @@ function Wrapper({
           ${
             heroImage
               ? `
-                after:absolute after:top-0 after:left-0 after:-z-10 after:h-full
-                after:w-full after:bg-(image:--hero-gradient)
+                after:absolute after:top-0 after:left-0 after:-z-10
+                after:size-full after:bg-(image:--hero-gradient)
               `
               : ""
           }

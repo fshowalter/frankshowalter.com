@@ -96,8 +96,8 @@ export function MovielogUpdateCard({
         {value.reviewDisplayDate && (
           <div
             className={`
-              mb-2 font-sans text-xs leading-4 font-normal tracking-wider
-              text-subtle uppercase
+              mb-2 font-sans text-xs/4 font-normal tracking-wider text-subtle
+              uppercase
               laptop:tracking-wide
             `}
           >
@@ -114,8 +114,8 @@ export function MovielogUpdateCard({
         </a>
         <a
           className={`
-            mb-3 block text-2xl leading-7 font-medium text-default
-            transition-all duration-500
+            mb-3 block text-2xl/7 font-medium text-default transition-all
+            duration-500
             after:absolute after:top-0 after:left-0 after:z-10 after:size-full
             tablet:text-2.5xl
             ${variant === "primary" ? "laptop:text-3xl" : "laptop:text-2.5xl"}
@@ -148,7 +148,7 @@ export function MovielogUpdateCard({
         />
         <div
           className={`
-            mt-auto font-sans text-xs leading-4 tracking-wider text-subtle
+            mt-auto font-sans text-xs/4 tracking-wider text-subtle
             laptop:tracking-wide
           `}
         >

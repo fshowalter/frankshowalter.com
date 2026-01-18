@@ -14,5 +14,6 @@
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "stylelint.validate": ["css", "postcss", "tailwindcss"]
+  "stylelint.validate": ["css", "postcss", "tailwindcss"],
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore"
 }
