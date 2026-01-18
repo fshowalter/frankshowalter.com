@@ -9,6 +9,12 @@
     "enabled": true,
     "schedule": ["at any time"]
   },
+  "packageRules": [
+    {
+      "extends": ["packages:stylelint"],
+      "groupName": "Stylelint packages"
+    }
+  ],
   "postUpdateOptions": ["npmDedupe"],
   "automerge": true
 }
