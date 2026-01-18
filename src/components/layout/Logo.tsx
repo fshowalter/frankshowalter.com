@@ -15,13 +15,13 @@ export function Logo({ className }: { className?: string }): React.JSX.Element {
     >
       <div
         className={`
-          text-[1.375rem] leading-8 font-normal whitespace-nowrap
+          text-[1.375rem]/8 font-normal whitespace-nowrap
           tablet:text-[1.5625rem]
         `}
       >
         <a href="/">Frank Showalter</a>
       </div>
-      <p className={"w-full pl-px text-sm leading-4 italic opacity-85"}>
+      <p className={"w-full pl-px text-sm/4 italic opacity-85"}>
         “I thought you&apos;d be taller”
       </p>
     </div>

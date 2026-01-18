@@ -73,8 +73,8 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
   <body
     class={`
       h-full
-      data-search-modal-open:overflow-hidden data-search-modal-open:before:fixed
-      data-search-modal-open:before:inset-0
+      data-search-modal-open:overflow-hidden
+      data-search-modal-open:before:fixed data-search-modal-open:before:inset-0
       data-search-modal-open:before:z-search-backdrop
       data-search-modal-open:before:backdrop-blur-xs
     `}
@@ -113,7 +113,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
               <svg
                 aria-hidden="true"
                 class={`
-                  pointer-events-none absolute top-[18px] left-4 h-5 w-5
+                  pointer-events-none absolute top-4.5 left-4 size-5
                   text-default opacity-70
                 `}
                 fill="none"
@@ -136,8 +136,8 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
                 autocorrect="off"
                 autofocus
                 class={`
-                  h-14 w-full border-0 bg-transparent pr-[70px] pl-[54px]
-                  font-serif text-lg font-normal text-default outline-none
+                  h-14 w-full border-0 bg-transparent pr-17.5 pl-13.5 font-serif
+                  text-lg font-normal text-default outline-none
                   placeholder:text-muted placeholder:opacity-50
                   focus:outline-none
                   [&::-ms-clear]:hidden [&::-ms-clear]:appearance-none
@@ -155,7 +155,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
               <button
                 aria-label="Clear search"
                 class={`
-                  absolute top-6 right-24 hidden h-4 w-4 rounded-full bg-subtle
+                  absolute top-6 right-24 hidden size-4 rounded-full bg-subtle
                   text-subtle
                   hover:text-default
                   focus:outline-accent
@@ -164,7 +164,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
                 type="button"
               >
                 <svg
-                  class="h-full w-full"
+                  class="size-full"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   xmlns="http://www.w3.org/2000/svg"
@@ -186,7 +186,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
             aria-atomic="true"
             aria-live="polite"
             class={`
-              border-b border-default px-4 py-4 font-sans text-xs font-normal
+              border-b border-default p-4 font-sans text-xs font-normal
               text-subtle
               empty:hidden
             `}
@@ -210,11 +210,11 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
           <div id="pagefind-results"></div>
 
           <!-- Load More Button -->
-          <div class="hidden px-4 py-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="pagefind-load-more-wrapper">
             <button
               aria-controls="pagefind-results"
               class={`
-                mx-auto block h-10 w-full max-w-[430px] cursor-pointer bg-canvas
+                mx-auto block h-10 w-full max-w-107.5 cursor-pointer bg-canvas
                 font-sans text-xs font-medium tracking-wide text-default
                 uppercase
                 hover:bg-inverse hover:text-white
@@ -230,7 +230,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
 
         <div
           class={`
-            px-4 py-4 font-sans text-xs font-light tracking-wide text-subtle
+            p-4 font-sans text-xs font-light tracking-wide text-subtle
             tablet:px-6
             laptop:block laptop:px-8
           `}

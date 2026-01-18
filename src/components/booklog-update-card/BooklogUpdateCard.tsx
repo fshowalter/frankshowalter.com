@@ -69,7 +69,7 @@ export function BooklogUpdateCard({
         >
           <div
             className={`
-              absolute top-[2.5%] bottom-[2.5%] left-[0] w-full overflow-hidden
+              absolute top-[2.5%] bottom-[2.5%] left-0 w-full overflow-hidden
               bg-default bg-cover bg-center clip-path-cover
               after:absolute after:size-full after:backdrop-blur-sm
               after:clip-path-cover
@@ -138,8 +138,8 @@ export function BooklogUpdateCard({
           {value.reviewDisplayDate && (
             <div
               className={`
-                font-sans text-xs leading-4 font-normal tracking-wider
-                text-subtle uppercase
+                font-sans text-xs/4 font-normal tracking-wider text-subtle
+                uppercase
                 laptop:tracking-wide
               `}
             >
@@ -158,7 +158,8 @@ export function BooklogUpdateCard({
             className={`
               block text-2xl font-medium transition-colors duration-500
               after:absolute after:top-0 after:left-0 after:z-10 after:size-full
-              hover:text-accent hover:before:opacity-0
+              hover:text-accent
+              hover:before:opacity-0
             `}
             href={`https://www.franksbooklog.com/reviews/${value.slug}/`}
           >
@@ -171,7 +172,7 @@ export function BooklogUpdateCard({
           </div>
           <div
             className={`
-              font-sans text-sm leading-4 font-normal tracking-prose text-subtle
+              font-sans text-sm/4 font-normal tracking-prose text-subtle
             `}
           >
             {value.workYear} | {value.kind}
