@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-01-18T00:00:00.000Z",
+    "excerpt": "<p>Three California surf bums grow up and apart through the 1960s and into the 70s, as the world changes around them.</p>",
+    "genres": [
+      "Drama",
+      "Sport"
+    ],
+    "image": "/_astro/big-wednesday-1978.DajQQN8B_ZKzMON.png",
+    "slug": "big-wednesday-1978",
+    "stars": 4,
+    "title": "Big Wednesday",
+    "year": "1978"
+  },
+  {
     "date": "2026-01-08T00:00:00.000Z",
     "excerpt": "<p>An insurance investigator tracking a missing horror novelist discovers the author’s fiction is bleeding into reality.</p>",
     "genres": [
@@ -55,18 +68,5 @@
     "stars": 3,
     "title": "Angel Heart",
     "year": "1987"
-  },
-  {
-    "date": "2025-12-30T00:00:00.000Z",
-    "excerpt": "<p>A research scientist specializing in sexual aggression seduces her married colleague into an escalating affair, then goes to alarming lengths to keep him from ending it.</p>",
-    "genres": [
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/body-chemistry-1990.Cr1waDIr_1xoH7a.png",
-    "slug": "body-chemistry-1990",
-    "stars": 2,
-    "title": "Body Chemistry",
-    "year": "1990"
   }
 ]
