@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-01-19T00:00:00.000Z",
+    "excerpt": "<p>A murdered woman’s tabby cat terrorizes her killers in a gloomy old mansion.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-shadow-of-the-cat-1961.LuT-f6b0_1x6lU0.png",
+    "slug": "the-shadow-of-the-cat-1961",
+    "stars": 1,
+    "title": "The Shadow of the Cat",
+    "year": "1961"
+  },
+  {
     "date": "2026-01-18T00:00:00.000Z",
     "excerpt": "<p>Three California surf bums grow up and apart through the 1960s and into the 70s, as the world changes around them.</p>",
     "genres": [
@@ -54,19 +68,5 @@
     "stars": 4,
     "title": "The Ninth Gate",
     "year": "1999"
-  },
-  {
-    "date": "2026-01-01T00:00:00.000Z",
-    "excerpt": "<p>Bodies pile up as a low-rent private investigator’s search for a missing crooner leads him into a shadowy occult world.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/angel-heart-1987.64ylK9Ge_Z1LK7FT.png",
-    "slug": "angel-heart-1987",
-    "stars": 3,
-    "title": "Angel Heart",
-    "year": "1987"
   }
 ]
