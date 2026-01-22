@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-01-20T00:00:00.000Z",
+    "excerpt": "<p>Determined to civilize his dead partner’s no-good son, a former lawman recruits the kid a wife through the mail order catalog.</p>",
+    "genres": [
+      "Comedy",
+      "Western"
+    ],
+    "image": "/_astro/mail-order-bride-1964.BvHpL8ZE_Z28A4jE.png",
+    "slug": "mail-order-bride-1964",
+    "stars": 3,
+    "title": "Mail Order Bride",
+    "year": "1964"
+  },
+  {
     "date": "2026-01-19T00:00:00.000Z",
     "excerpt": "<p>A murdered woman’s tabby cat terrorizes her killers in a gloomy old mansion.</p>",
     "genres": [
@@ -55,18 +68,5 @@
     "stars": 5,
     "title": "The Curse of Frankenstein",
     "year": "1957"
-  },
-  {
-    "date": "2026-01-01T00:00:00.000Z",
-    "excerpt": "<p>A rare book dealer hired to authenticate a tome supposedly penned by Satan himself turns from skeptic to believer as the body count rises.</p>",
-    "genres": [
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-ninth-gate-1999.JEli2UOO_Zd36gB.png",
-    "slug": "the-ninth-gate-1999",
-    "stars": 4,
-    "title": "The Ninth Gate",
-    "year": "1999"
   }
 ]
