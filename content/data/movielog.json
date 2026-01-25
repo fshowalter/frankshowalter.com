@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-01-22T00:00:00.000Z",
+    "excerpt": "<p>Robert Quarry plays Khorda, a vampire posing as a hippie guru to a house full of flower children he turns into his undead horde.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/deathmaster-1972.CE1T4Img_17HIY9.png",
+    "slug": "deathmaster-1972",
+    "stars": 1,
+    "title": "Deathmaster",
+    "year": "1972"
+  },
+  {
     "date": "2026-01-20T00:00:00.000Z",
     "excerpt": "<p>Determined to civilize his dead partner’s no-good son, a former lawman recruits the kid a wife through the mail order catalog.</p>",
     "genres": [
@@ -54,19 +66,5 @@
     "stars": 4,
     "title": "In the Mouth of Madness",
     "year": "1994"
-  },
-  {
-    "date": "2026-01-08T00:00:00.000Z",
-    "excerpt": "<p>Awaiting execution, Baron Frankenstein recounts how he created life from corpse parts—and how his partner’s sabotage turned genius into monster.</p>",
-    "genres": [
-      "Horror",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/the-curse-of-frankenstein-1957.B5UUIsCC_Z11IalE.png",
-    "slug": "the-curse-of-frankenstein-1957",
-    "stars": 5,
-    "title": "The Curse of Frankenstein",
-    "year": "1957"
   }
 ]
