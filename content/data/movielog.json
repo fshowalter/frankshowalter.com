@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-01-25T00:00:00.000Z",
+    "excerpt": "<p>Julian Sands plays the titular Phantom, a man raised by rats who stalks the catacombs beneath the Paris opera house and falls for a promising understudy with tragic results.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/the-phantom-of-the-opera-1998.DrnfKI7H_xeyRk.png",
+    "slug": "the-phantom-of-the-opera-1998",
+    "stars": 1,
+    "title": "The Phantom of the Opera",
+    "year": "1998"
+  },
+  {
     "date": "2026-01-24T00:00:00.000Z",
     "excerpt": "<p>After accidentally killing his wife, an exterminator flees to Interzone, a hallucinatory North African city where he writes reports on his insect typewriter and traces the source of a mysterious narcotic.</p>",
     "genres": [
@@ -50,18 +62,5 @@
     "stars": 1,
     "title": "The Shadow of the Cat",
     "year": "1961"
-  },
-  {
-    "date": "2026-01-18T00:00:00.000Z",
-    "excerpt": "<p>Three California surf bums grow up and apart through the 1960s and into the 70s, as the world changes around them.</p>",
-    "genres": [
-      "Drama",
-      "Sport"
-    ],
-    "image": "/_astro/big-wednesday-1978.DajQQN8B_ZKzMON.png",
-    "slug": "big-wednesday-1978",
-    "stars": 4,
-    "title": "Big Wednesday",
-    "year": "1978"
   }
 ]
