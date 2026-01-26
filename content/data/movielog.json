@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-01-24T00:00:00.000Z",
+    "excerpt": "<p>After accidentally killing his wife, an exterminator flees to Interzone, a hallucinatory North African city where he writes reports on his insect typewriter and traces the source of a mysterious narcotic.</p>",
+    "genres": [
+      "Drama",
+      "Mystery"
+    ],
+    "image": "/_astro/naked-lunch-1991.CGD0kVYV_Z1zKH6i.png",
+    "slug": "naked-lunch-1991",
+    "stars": 3.5,
+    "title": "Naked Lunch",
+    "year": "1991"
+  },
+  {
     "date": "2026-01-22T00:00:00.000Z",
     "excerpt": "<p>Robert Quarry plays Khorda, a vampire posing as a hippie guru to a house full of flower children he turns into his undead horde.</p>",
     "genres": [
@@ -50,21 +63,5 @@
     "stars": 4,
     "title": "Big Wednesday",
     "year": "1978"
-  },
-  {
-    "date": "2026-01-08T00:00:00.000Z",
-    "excerpt": "<p>An insurance investigator tracking a missing horror novelist discovers the author’s fiction is bleeding into reality.</p>",
-    "genres": [
-      "Drama",
-      "Fantasy",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/in-the-mouth-of-madness-1994.D_k5HIl3_1uLYUQ.png",
-    "slug": "in-the-mouth-of-madness-1994",
-    "stars": 4,
-    "title": "In the Mouth of Madness",
-    "year": "1994"
   }
 ]
