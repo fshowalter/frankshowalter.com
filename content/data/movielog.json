@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-01-26T00:00:00.000Z",
+    "excerpt": "<p>A theater troupe travels to perform for a mysterious nobleman at his remote castle, unaware he’s perfected a formula that kills and embalms instantly—and wants them as specimens.</p>",
+    "genres": [
+      "Horror",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/the-castle-of-the-living-dead-1964.D1HKI-ZZ_OLCQL.png",
+    "slug": "the-castle-of-the-living-dead-1964",
+    "stars": 2,
+    "title": "The Castle of the Living Dead",
+    "year": "1964"
+  },
+  {
     "date": "2026-01-25T00:00:00.000Z",
     "excerpt": "<p>Julian Sands plays the titular Phantom, a man raised by rats who stalks the catacombs beneath the Paris opera house and falls for a promising understudy with tragic results.</p>",
     "genres": [
@@ -48,19 +62,5 @@
     "stars": 3,
     "title": "Mail Order Bride",
     "year": "1964"
-  },
-  {
-    "date": "2026-01-19T00:00:00.000Z",
-    "excerpt": "<p>A murdered woman’s tabby cat terrorizes her killers in a gloomy old mansion.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-shadow-of-the-cat-1961.LuT-f6b0_1x6lU0.png",
-    "slug": "the-shadow-of-the-cat-1961",
-    "stars": 1,
-    "title": "The Shadow of the Cat",
-    "year": "1961"
   }
 ]
