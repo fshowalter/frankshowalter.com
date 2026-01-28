@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-01-27T00:00:00.000Z",
+    "excerpt": "<p>A swordsman faces double-crosses and moral dilemmas on his quest for vengeance after discovering his father’s headless corpse.</p>",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "image": "/_astro/jade-tiger-1977.Dff0pK2c_t51y6.png",
+    "slug": "jade-tiger-1977",
+    "stars": 2.5,
+    "title": "Jade Tiger",
+    "year": "1977"
+  },
+  {
     "date": "2026-01-26T00:00:00.000Z",
     "excerpt": "<p>A theater troupe travels to perform for a mysterious nobleman at his remote castle, unaware he’s perfected a formula that kills and embalms instantly—and wants them as specimens.</p>",
     "genres": [
@@ -49,18 +62,5 @@
     "stars": 1,
     "title": "Deathmaster",
     "year": "1972"
-  },
-  {
-    "date": "2026-01-20T00:00:00.000Z",
-    "excerpt": "<p>Determined to civilize his dead partner’s no-good son, a former lawman recruits the kid a wife through the mail order catalog.</p>",
-    "genres": [
-      "Comedy",
-      "Western"
-    ],
-    "image": "/_astro/mail-order-bride-1964.BvHpL8ZE_Z28A4jE.png",
-    "slug": "mail-order-bride-1964",
-    "stars": 3,
-    "title": "Mail Order Bride",
-    "year": "1964"
   }
 ]
