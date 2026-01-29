@@ -114,6 +114,14 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  image: {
+    service: {
+      config: {
+        kernel: "mks2021",
+      },
+      entrypoint: "astro/assets/services/sharp",
+    },
+  },
   integrations: [
     react({
       babel: {
