@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-01-29T00:00:00.000Z",
+    "excerpt": "<p>A ruthless government agent invades a Northern California sanctuary city to eliminate the one obstacle to joining an elite white-supremacist society known as the  Christmas Adventurers Club.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/one-battle-after-another-2025.Bcgad6OX_Z2x3QQu.png",
+    "slug": "one-battle-after-another-2025",
+    "stars": 2.5,
+    "title": "One Battle After Another",
+    "year": "2025"
+  },
+  {
     "date": "2026-01-27T00:00:00.000Z",
     "excerpt": "<p>A swordsman faces double-crosses and moral dilemmas on his quest for vengeance after discovering his father’s headless corpse.</p>",
     "genres": [
@@ -50,17 +65,5 @@
     "stars": 3.5,
     "title": "Naked Lunch",
     "year": "1991"
-  },
-  {
-    "date": "2026-01-22T00:00:00.000Z",
-    "excerpt": "<p>Robert Quarry plays Khorda, a vampire posing as a hippie guru to a house full of flower children he turns into his undead horde.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/deathmaster-1972.CE1T4Img_17HIY9.png",
-    "slug": "deathmaster-1972",
-    "stars": 1,
-    "title": "Deathmaster",
-    "year": "1972"
   }
 ]
