@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-01-31T00:00:00.000Z",
+    "excerpt": "<p>A stranger crashes a wedding to warn the groom that his bride-to-be steals, manipulates, and may have murdered a man.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Romance"
+    ],
+    "image": "/_astro/the-locket-1946.bgOtgpGK_Z25NkPX.png",
+    "slug": "the-locket-1946",
+    "stars": 3,
+    "title": "The Locket",
+    "year": "1946"
+  },
+  {
     "date": "2026-01-30T00:00:00.000Z",
     "excerpt": "<p>A haunted mirror’s vengeful spirit terrorizes a southern Maryland family.</p>",
     "genres": [
@@ -53,17 +68,5 @@
     "stars": 2,
     "title": "The Castle of the Living Dead",
     "year": "1964"
-  },
-  {
-    "date": "2026-01-25T00:00:00.000Z",
-    "excerpt": "<p>Julian Sands plays the titular Phantom, a man raised by rats who stalks the catacombs beneath the Paris opera house and falls for a promising understudy with tragic results.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/the-phantom-of-the-opera-1998.DrnfKI7H_xeyRk.png",
-    "slug": "the-phantom-of-the-opera-1998",
-    "stars": 1,
-    "title": "The Phantom of the Opera",
-    "year": "1998"
   }
 ]
