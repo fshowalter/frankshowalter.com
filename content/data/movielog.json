@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-01-30T00:00:00.000Z",
+    "excerpt": "<p>A haunted mirror’s vengeful spirit terrorizes a southern Maryland family.</p>",
+    "genres": [
+      "Drama",
+      "Horror"
+    ],
+    "image": "/_astro/the-boogey-man-1980.Bp1nQ90t_Z7jvMP.png",
+    "slug": "the-boogey-man-1980",
+    "stars": 1.5,
+    "title": "The Boogey Man",
+    "year": "1980"
+  },
+  {
     "date": "2026-01-29T00:00:00.000Z",
     "excerpt": "<p>A ruthless government agent invades a Northern California sanctuary city to eliminate the one obstacle to joining an elite white-supremacist society known as the  Christmas Adventurers Club.</p>",
     "genres": [
@@ -52,18 +65,5 @@
     "stars": 1,
     "title": "The Phantom of the Opera",
     "year": "1998"
-  },
-  {
-    "date": "2026-01-24T00:00:00.000Z",
-    "excerpt": "<p>After accidentally killing his wife, an exterminator flees to Interzone, a hallucinatory North African city where he writes reports on his insect typewriter and traces the source of a mysterious narcotic.</p>",
-    "genres": [
-      "Drama",
-      "Mystery"
-    ],
-    "image": "/_astro/naked-lunch-1991.CGD0kVYV_Z1zKH6i.png",
-    "slug": "naked-lunch-1991",
-    "stars": 3.5,
-    "title": "Naked Lunch",
-    "year": "1991"
   }
 ]
