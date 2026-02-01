@@ -18,6 +18,7 @@ jobs:
       (github.event_name == 'pull_request_review' && contains(github.event.review.body, '@claude')) ||
       (github.event_name == 'issues' && (contains(github.event.issue.body, '@claude') || contains(github.event.issue.title, '@claude')))
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: read
       pull-requests: read
@@ -32,7 +33,7 @@ jobs:
 
       - name: Run Claude Code
         id: claude
-        uses: anthropics/claude-code-action@0ed5eeaa54d3b0170e79f1ff29996342cf0605f1 # v1
+        uses: anthropics/claude-code-action@70e16deb18402428bd09e08d1ec3662a872e3c72 # v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
 
@@ -40,10 +41,27 @@ jobs:
           additional_permissions: |
             actions: read
 
-          # Optional: Give a custom prompt to Claude. If this is not specified, Claude will perform the instructions specified in the comment that tagged it.
-          # prompt: 'Update the pull request description to include a summary of changes.'
+          # Optional: Customize the trigger phrase (default: @claude)
+          # trigger_phrase: "/claude"
 
-          # Optional: Add claude_args to customize behavior and configuration
-          # See https://github.com/anthropics/claude-code-action/blob/main/docs/usage.md
-          # or https://docs.anthropic.com/en/docs/claude-code/sdk#command-line for available options
-          # claude_args: '--model claude-opus-4-1-20250805 --allowed-tools Bash(gh pr:*)'
+          # Optional: Trigger when specific user is assigned to an issue
+          # assignee_trigger: "claude-bot"
+
+          # Claude arguments for model and tool configuration
+          claude_args: |
+            --allowedTools Bash(npm run test -- --max-workers=2),Bash(npm run lint),Bash(npm run lint:fix),Bash(npm run check),Bash(npm run format),Bash(npm run format:fix),Bash(npm run knip)
+            --system-prompt "Follow the instructions in CLAUDE.md for this project. Always use max-workers=2 when running tests to prevent memory issues. Prefer editing existing files over creating new ones. Never create documentation files unless explicitly requested."
+
+          # Optional: Specify model (defaults to Claude Sonnet 4.5, uncomment for Claude Opus 4.5)
+          # claude_args: |
+          #   --model claude-opus-4-5-20251101
+          #   --allowedTools Bash(npm run test -- --max-workers=2),Bash(npm run lint),Bash(npm run lint:fix),Bash(npm run check),Bash(npm run format),Bash(npm run format:fix),Bash(npm run knip)
+          #   --system-prompt "Follow the instructions in CLAUDE.md for this project. Always use max-workers=2 when running tests to prevent memory issues. Prefer editing existing files over creating new ones. Never create documentation files unless explicitly requested."
+
+          # Optional: Custom environment variables for Claude
+          # settings: |
+          #   {
+          #     "env": {
+          #       "NODE_ENV": "test"
+          #     }
+          #   }
