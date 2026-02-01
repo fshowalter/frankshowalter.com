@@ -4,16 +4,8 @@ on:
   pull_request:
     types: [opened, synchronize]
     # Only run on specific file changes
-    paths:
-      - "src/**/*.ts"
-      - "src/**/*.tsx"
-      - "src/**/*.js"
-      - "src/**/*.jsx"
-      - "src/**/*.astro"
-      - "*.md"
-      - "**/*.json"
-      - "package*.json"
-      - "!content/**"
+    paths-ignore:
+      - "content/**"
 
 jobs:
   claude-review:
@@ -97,6 +89,3 @@ jobs:
           # if: |
           #   !contains(github.event.pull_request.title, '[skip-review]') &&
           #   !contains(github.event.pull_request.title, '[WIP]')
-
-          # Optional: allow bot users to trigger the action
-          allowed_bots: "dependabot[bot],renovate[bot]"

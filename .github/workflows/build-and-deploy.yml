@@ -28,14 +28,30 @@ jobs:
           npm --version &&
           npm list -g --depth 0
 
+      - name: Get @astro version
+        id: get-astro-version
+        run: |
+          astro_version=$(cat package.json | jq '.dependencies.astro') 
+          echo "@astro version: $astro_version"
+          echo "astro_version=$astro_version" >> "$GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Get sharp version
+        id: get-sharp-version
+        run: |
+          sharp_version=$(cat package.json | jq '.dependencies.sharp') 
+          echo "sharp: $sharp_version"
+          echo "sharp_version=$sharp_version" >> "$GITHUB_OUTPUT"
+        shell: bash
+
       - name: get astro cache
         id: astro-cache-build
         uses: actions/cache@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: node_modules/.astro
-          key: ${{ runner.os }}-astro-cache-v3-${{ github.run_id }}
+          key: astro-${{ steps.get-astro-version.outputs.astro_version }}-sharp-${{ steps.get-sharp-version.outputs.sharp_version }}-cache-v2-${{ github.run_id }}
           restore-keys: |
-            ${{ runner.os }}-astro-cache-v3-
+            astro-${{ steps.get-astro-version.outputs.astro_version }}-sharp-${{ steps.get-sharp-version.outputs.sharp_version }}-cache-v2-
 
       - name: install dependencies
         run: npm install
