@@ -3,7 +3,7 @@ name: Claude Code Review
 on:
   pull_request:
     types: [opened, synchronize]
-    # Optional: Only run on specific file changes
+    # Only run on specific file changes
     paths:
       - "src/**/*.ts"
       - "src/**/*.tsx"
@@ -37,43 +37,47 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: setup node
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
-        with:
-          node-version-file: ".nvmrc"
-          cache: "npm"
-
-      - name: setup npm
-        run: |
-          ./npm_use.sh &&
-          npm --version &&
-          npm list -g --depth 0
-
-      - name: install dependencies
-        run: npm ci
-
       - name: Run Claude Code Review
         id: claude-review
-        uses: anthropics/claude-code-action@0ed5eeaa54d3b0170e79f1ff29996342cf0605f1 # v1
+        uses: anthropics/claude-code-action@70e16deb18402428bd09e08d1ec3662a872e3c72 # v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+
+          # Direct prompt for automated review (no @claude mention needed)
           prompt: |
+            REPO: ${{ github.repository }}
+            PR NUMBER: ${{ github.event.pull_request.number }}
+
             Please review this pull request and provide feedback on:
             - Code quality and best practices
             - Potential bugs or issues
             - Performance considerations
             - Security concerns
             - Test coverage
+            - For markdown files: Check spelling, grammar, and documentation clarity
 
-            Use the repository's CLAUDE.md for guidance on style and conventions. Be constructive and helpful in your feedback.
-
-            Use `gh pr comment` with your Bash tool to leave your review as a comment on the PR.
+            Be constructive and helpful in your feedback.
 
           # Use sticky comments to make Claude reuse the same comment on subsequent pushes to the same PR
           use_sticky_comment: true
 
+          # Enable progress tracking for better visibility
+          track_progress: true
+
+          # Claude arguments for tool configuration
+          claude_args: |
+            --allowedTools Bash(npm run test -- --max-workers=2),Bash(npm run lint),Bash(npm run check)
+
+          # Optional: Specify model (defaults to Claude Sonnet 4.5, uncomment for Claude Opus 4.5)
+          # claude_args: |
+          #   --model claude-opus-4-5-20251101
+          #   --allowedTools Bash(npm run test -- --max-workers=2),Bash(npm run lint),Bash(npm run check)
+
           # Optional: Customize review based on file types
-          # direct_prompt: |
+          # prompt: |
+          #   REPO: ${{ github.repository }}
+          #   PR NUMBER: ${{ github.event.pull_request.number }}
+          #
           #   Review this PR focusing on:
           #   - For TypeScript files: Type safety and proper interface usage
           #   - For API endpoints: Security, input validation, and error handling
@@ -81,13 +85,13 @@ jobs:
           #   - For tests: Coverage, edge cases, and test quality
 
           # Optional: Different prompts for different authors
-          # direct_prompt: |
+          # prompt: |
+          #   REPO: ${{ github.repository }}
+          #   PR NUMBER: ${{ github.event.pull_request.number }}
+          #
           #   ${{ github.event.pull_request.author_association == 'FIRST_TIME_CONTRIBUTOR' &&
           #   'Welcome! Please review this PR from a first-time contributor. Be encouraging and provide detailed explanations for any suggestions.' ||
           #   'Please provide a thorough code review focusing on our coding standards and best practices.' }}
-
-          # Optional: Add specific tools for running tests or linting
-          allowed_tools: "Bash(npm run test),Bash(npm run lint),Bash(npm run typecheck)"
 
           # Optional: Skip review for certain conditions
           # if: |
