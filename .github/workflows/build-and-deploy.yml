@@ -33,7 +33,7 @@ jobs:
         uses: actions/cache/restore@cdf6c1fa76f9f475f3d7449005a359c84ca0f306 # v5
         with:
           path: node_modules/.astro
-          key: astro-cache-v1-will-miss
+          key: astro-cache-v1-pr-no-save
           restore-keys: |
             astro-cache-v1-
 
