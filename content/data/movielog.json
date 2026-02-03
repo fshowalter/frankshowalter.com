@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-02-01T00:00:00.000Z",
+    "excerpt": "<p>During World War I, cryptographer William Powell battles a spy ring while fending off the well-meaning chaos of his superior’s meddlesome niece, Rosalind Russell.</p>",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "War"
+    ],
+    "image": "/_astro/rendezvous-1935.z2xBz1xL_538KI.png",
+    "slug": "rendezvous-1935",
+    "stars": 3,
+    "title": "Rendezvous",
+    "year": "1935"
+  },
+  {
     "date": "2026-01-31T00:00:00.000Z",
     "excerpt": "<p>A stranger crashes a wedding to warn the groom that his bride-to-be steals, manipulates, and may have murdered a man.</p>",
     "genres": [
@@ -8,7 +22,7 @@
       "Film-Noir",
       "Romance"
     ],
-    "image": "/_astro/the-locket-1946.bgOtgpGK_Z25NkPX.png",
+    "image": "/_astro/the-locket-1946.bgOtgpGK_1c3M96.png",
     "slug": "the-locket-1946",
     "stars": 3,
     "title": "The Locket",
@@ -21,7 +35,7 @@
       "Drama",
       "Horror"
     ],
-    "image": "/_astro/the-boogey-man-1980.Bp1nQ90t_Z7jvMP.png",
+    "image": "/_astro/the-boogey-man-1980.Bp1nQ90t_Z1tLnuV.png",
     "slug": "the-boogey-man-1980",
     "stars": 1.5,
     "title": "The Boogey Man",
@@ -36,7 +50,7 @@
       "Drama",
       "Thriller"
     ],
-    "image": "/_astro/one-battle-after-another-2025.Bcgad6OX_Z2x3QQu.png",
+    "image": "/_astro/one-battle-after-another-2025.Bcgad6OX_Z1ajyDw.png",
     "slug": "one-battle-after-another-2025",
     "stars": 2.5,
     "title": "One Battle After Another",
@@ -49,24 +63,10 @@
       "Action",
       "Adventure"
     ],
-    "image": "/_astro/jade-tiger-1977.Dff0pK2c_t51y6.png",
+    "image": "/_astro/jade-tiger-1977.Dff0pK2c_Z1jeYfL.png",
     "slug": "jade-tiger-1977",
     "stars": 2.5,
     "title": "Jade Tiger",
     "year": "1977"
-  },
-  {
-    "date": "2026-01-26T00:00:00.000Z",
-    "excerpt": "<p>A theater troupe travels to perform for a mysterious nobleman at his remote castle, unaware he’s perfected a formula that kills and embalms instantly—and wants them as specimens.</p>",
-    "genres": [
-      "Horror",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/the-castle-of-the-living-dead-1964.D1HKI-ZZ_OLCQL.png",
-    "slug": "the-castle-of-the-living-dead-1964",
-    "stars": 2,
-    "title": "The Castle of the Living Dead",
-    "year": "1964"
   }
 ]
