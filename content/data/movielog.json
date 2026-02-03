@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-02-01T00:00:00.000Z",
+    "excerpt": "<p>An alluring Hong Kong woman hires Ti Lung and his team of matching-tracksuit-wearing commandos to hunt down her father’s killer in Cambodia.</p>",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "image": "/_astro/mercenaries-from-hong-kong-1982.Dzx90o3-_Z1wYEIb.png",
+    "slug": "mercenaries-from-hong-kong-1982",
+    "stars": 3,
+    "title": "Mercenaries from Hong Kong",
+    "year": "1982"
+  },
+  {
+    "date": "2026-02-01T00:00:00.000Z",
     "excerpt": "<p>During World War I, cryptographer William Powell battles a spy ring while fending off the well-meaning chaos of his superior’s meddlesome niece, Rosalind Russell.</p>",
     "genres": [
       "Comedy",
@@ -55,18 +68,5 @@
     "stars": 2.5,
     "title": "One Battle After Another",
     "year": "2025"
-  },
-  {
-    "date": "2026-01-27T00:00:00.000Z",
-    "excerpt": "<p>A swordsman faces double-crosses and moral dilemmas on his quest for vengeance after discovering his father’s headless corpse.</p>",
-    "genres": [
-      "Action",
-      "Adventure"
-    ],
-    "image": "/_astro/jade-tiger-1977.Dff0pK2c_Z1jeYfL.png",
-    "slug": "jade-tiger-1977",
-    "stars": 2.5,
-    "title": "Jade Tiger",
-    "year": "1977"
   }
 ]
