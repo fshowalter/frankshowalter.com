@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-02-02T00:00:00.000Z",
+    "excerpt": "<p>A Northern California fishing village comes under assault from sea monsters bent on breeding with human women.</p>",
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/humanoids-from-the-deep-1980.CxbcV0Tt_1UMLm8.png",
+    "slug": "humanoids-from-the-deep-1980",
+    "stars": 3.5,
+    "title": "Humanoids from the Deep",
+    "year": "1980"
+  },
+  {
     "date": "2026-02-01T00:00:00.000Z",
     "excerpt": "<p>An alluring Hong Kong woman hires Ti Lung and his team of matching-tracksuit-wearing commandos to hunt down her father’s killer in Cambodia.</p>",
     "genres": [
@@ -53,20 +66,5 @@
     "stars": 1.5,
     "title": "The Boogey Man",
     "year": "1980"
-  },
-  {
-    "date": "2026-01-29T00:00:00.000Z",
-    "excerpt": "<p>A ruthless government agent invades a Northern California sanctuary city to eliminate the one obstacle to joining an elite white-supremacist society known as the  Christmas Adventurers Club.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/one-battle-after-another-2025.Bcgad6OX_Z1ajyDw.png",
-    "slug": "one-battle-after-another-2025",
-    "stars": 2.5,
-    "title": "One Battle After Another",
-    "year": "2025"
   }
 ]
