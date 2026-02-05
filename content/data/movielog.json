@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-02-04T00:00:00.000Z",
+    "excerpt": "<p>After losing his arm when his school is massacred, kung-fu student Jimmy Wang Yu transforms his remaining arm into an indestructible instrument of vengeance.</p>",
+    "genres": [
+      "Action",
+      "Drama",
+      "Fantasy"
+    ],
+    "image": "/_astro/one-armed-boxer-1972.BZY5-a8A_1lETaK.png",
+    "slug": "one-armed-boxer-1972",
+    "stars": 4,
+    "title": "One-Armed Boxer",
+    "year": "1972"
+  },
+  {
     "date": "2026-02-02T00:00:00.000Z",
     "excerpt": "<p>A Northern California fishing village comes under assault from sea monsters bent on breeding with human women.</p>",
     "genres": [
@@ -53,18 +67,5 @@
     "stars": 3,
     "title": "The Locket",
     "year": "1946"
-  },
-  {
-    "date": "2026-01-30T00:00:00.000Z",
-    "excerpt": "<p>A haunted mirror’s vengeful spirit terrorizes a southern Maryland family.</p>",
-    "genres": [
-      "Drama",
-      "Horror"
-    ],
-    "image": "/_astro/the-boogey-man-1980.Bp1nQ90t_Z1tLnuV.png",
-    "slug": "the-boogey-man-1980",
-    "stars": 1.5,
-    "title": "The Boogey Man",
-    "year": "1980"
   }
 ]
