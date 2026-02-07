@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-02-05T00:00:00.000Z",
+    "excerpt": "<p>When a small-town diner owner makes national news by stopping two spree killers, an east coast mobster shows up claiming the hero is actually a notorious Philadelphia killer.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/a-history-of-violence-2005.DQlNyVJa_Z1K1zXs.png",
+    "slug": "a-history-of-violence-2005",
+    "stars": 3.5,
+    "title": "A History of Violence",
+    "year": "2005"
+  },
+  {
     "date": "2026-02-04T00:00:00.000Z",
     "excerpt": "<p>After losing his arm when his school is massacred, kung-fu student Jimmy Wang Yu transforms his remaining arm into an indestructible instrument of vengeance.</p>",
     "genres": [
@@ -52,20 +67,5 @@
     "stars": 3,
     "title": "Rendezvous",
     "year": "1935"
-  },
-  {
-    "date": "2026-01-31T00:00:00.000Z",
-    "excerpt": "<p>A stranger crashes a wedding to warn the groom that his bride-to-be steals, manipulates, and may have murdered a man.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Film-Noir",
-      "Romance"
-    ],
-    "image": "/_astro/the-locket-1946.bgOtgpGK_1c3M96.png",
-    "slug": "the-locket-1946",
-    "stars": 3,
-    "title": "The Locket",
-    "year": "1946"
   }
 ]
