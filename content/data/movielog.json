@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-02-06T00:00:00.000Z",
+    "excerpt": "<p>“Dirty” Harry Callahan suspects a squad of sharp-shooting young motorcycle officers are operating as vigilantes, executing criminals the courts won’t touch.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/magnum-force-1973.Bl-uv0kQ_mU0CH.png",
+    "slug": "magnum-force-1973",
+    "stars": 3.5,
+    "title": "Magnum Force",
+    "year": "1973"
+  },
+  {
     "date": "2026-02-05T00:00:00.000Z",
     "excerpt": "<p>When a small-town diner owner makes national news by stopping two spree killers, an east coast mobster shows up claiming the hero is actually a notorious Philadelphia killer.</p>",
     "genres": [
@@ -53,19 +68,5 @@
     "stars": 3,
     "title": "Mercenaries from Hong Kong",
     "year": "1982"
-  },
-  {
-    "date": "2026-02-01T00:00:00.000Z",
-    "excerpt": "<p>During World War I, cryptographer William Powell battles a spy ring while fending off the well-meaning chaos of his superior’s meddlesome niece, Rosalind Russell.</p>",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "War"
-    ],
-    "image": "/_astro/rendezvous-1935.z2xBz1xL_538KI.png",
-    "slug": "rendezvous-1935",
-    "stars": 3,
-    "title": "Rendezvous",
-    "year": "1935"
   }
 ]
