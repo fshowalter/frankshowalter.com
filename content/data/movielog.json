@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-02-07T00:00:00.000Z",
+    "excerpt": "<p>Scandal sheet editor Edward G. Robinson assigns oily reporter Boris Karloff to dredge up a twenty-year-old murder story, with tragic results.</p>",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "image": "/_astro/five-star-final-1931.r8BDz_Fj_1ebGdw.png",
+    "slug": "five-star-final-1931",
+    "stars": 2,
+    "title": "Five Star Final",
+    "year": "1931"
+  },
+  {
     "date": "2026-02-06T00:00:00.000Z",
     "excerpt": "<p>“Dirty” Harry Callahan suspects a squad of sharp-shooting young motorcycle officers are operating as vigilantes, executing criminals the courts won’t touch.</p>",
     "genres": [
@@ -55,18 +68,5 @@
     "stars": 3.5,
     "title": "Humanoids from the Deep",
     "year": "1980"
-  },
-  {
-    "date": "2026-02-01T00:00:00.000Z",
-    "excerpt": "<p>An alluring Hong Kong woman hires Ti Lung and his team of matching-tracksuit-wearing commandos to hunt down her father’s killer in Cambodia.</p>",
-    "genres": [
-      "Action",
-      "Drama"
-    ],
-    "image": "/_astro/mercenaries-from-hong-kong-1982.Dzx90o3-_Z1wYEIb.png",
-    "slug": "mercenaries-from-hong-kong-1982",
-    "stars": 3,
-    "title": "Mercenaries from Hong Kong",
-    "year": "1982"
   }
 ]
