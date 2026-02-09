@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-02-08T00:00:00.000Z",
+    "excerpt": "<p>When a neighborhood kid is fingered for murder, aging alcoholic defense attorney Spencer Tracy comes out of semi-retirement to take the case, only to backslide under the pressure.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir"
+    ],
+    "image": "/_astro/the-people-against-ohara-1951.BLSbSme2_Z243nEr.png",
+    "slug": "the-people-against-ohara-1951",
+    "stars": 3.5,
+    "title": "The People Against O'Hara",
+    "year": "1951"
+  },
+  {
     "date": "2026-02-07T00:00:00.000Z",
     "excerpt": "<p>Scandal sheet editor Edward G. Robinson assigns oily reporter Boris Karloff to dredge up a twenty-year-old murder story, with tragic results.</p>",
     "genres": [
@@ -55,18 +69,5 @@
     "stars": 4,
     "title": "One-Armed Boxer",
     "year": "1972"
-  },
-  {
-    "date": "2026-02-02T00:00:00.000Z",
-    "excerpt": "<p>A Northern California fishing village comes under assault from sea monsters bent on breeding with human women.</p>",
-    "genres": [
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/humanoids-from-the-deep-1980.CxbcV0Tt_1UMLm8.png",
-    "slug": "humanoids-from-the-deep-1980",
-    "stars": 3.5,
-    "title": "Humanoids from the Deep",
-    "year": "1980"
   }
 ]
