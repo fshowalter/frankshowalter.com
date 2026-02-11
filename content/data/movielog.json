@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-02-10T00:00:00.000Z",
+    "excerpt": "<p>In 1950, a motley crew of inept Boston thieves pull off the then-biggest heist in history by robbing the Brink’s warehouse.</p>",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Drama",
+      "History"
+    ],
+    "image": "/_astro/the-brinks-job-1978.BavV9rY1_Z1x15d1.png",
+    "slug": "the-brinks-job-1978",
+    "stars": 2,
+    "title": "The Brink's Job",
+    "year": "1978"
+  },
+  {
     "date": "2026-02-09T00:00:00.000Z",
     "excerpt": "<p>In a deserted luxury hotel on the Belgian coast, a Hungarian Countess corrupts a newlywed couple.</p>",
     "genres": [
@@ -50,20 +65,5 @@
     "stars": 2,
     "title": "Five Star Final",
     "year": "1931"
-  },
-  {
-    "date": "2026-02-06T00:00:00.000Z",
-    "excerpt": "<p>“Dirty” Harry Callahan suspects a squad of sharp-shooting young motorcycle officers are operating as vigilantes, executing criminals the courts won’t touch.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/magnum-force-1973.Bl-uv0kQ_mU0CH.png",
-    "slug": "magnum-force-1973",
-    "stars": 3.5,
-    "title": "Magnum Force",
-    "year": "1973"
   }
 ]
