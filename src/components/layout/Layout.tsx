@@ -15,7 +15,7 @@ export function Layout({
   logo = false,
 }: {
   backdrop: React.ComponentProps<typeof Backdrop>;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
   logo?: boolean;
 }): JSX.Element {
@@ -48,7 +48,7 @@ export function Layout({
           id="content"
         >
           {backdrop && <Backdrop {...backdrop} />}
-          {children}
+          {children && children}
         </main>
         <Footer />
       </div>
