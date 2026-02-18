@@ -2,9 +2,9 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { UpdateSchema } from "./UpdateSchema";
-import { getContentPath } from "./utils/getContentPath";
+import { getDataFile } from "./utils/getDataFile";
 
-const movielogJsonFile = getContentPath("data", "movielog.json");
+const movielogJsonFile = getDataFile("movielog.json");
 
 const MovielogUpdateSchema = UpdateSchema.extend({
   genres: z.array(z.string()),

@@ -2,9 +2,9 @@ import { promises as fs } from "node:fs";
 import { z } from "zod";
 
 import { UpdateSchema } from "./UpdateSchema";
-import { getContentPath } from "./utils/getContentPath";
+import { getDataFile } from "./utils/getDataFile";
 
-const booklogJsonFile = getContentPath("data", "booklog.json");
+const booklogJsonFile = getDataFile("booklog.json");
 
 const BooklogUpdateSchema = UpdateSchema.extend({
   authors: z.array(z.string()),
