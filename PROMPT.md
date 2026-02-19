@@ -16,6 +16,7 @@ APPEND to @progress.txt (never replace, always append):
 
 - What was implemented
 - Files changed
+- Missing permissions (what tools did you try to use but couldn't?)
 - **Learnings for future iterations:**
   - Patterns discovered (e.g., "this codebase uses X for Y")
   - Gotchas encountered (e.g., "don't forget to update Z when changing W")
