@@ -29,7 +29,7 @@ a structural move only.
 - All existing tests pass (import path updated)
 - No behavior changes
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 

@@ -151,11 +151,3 @@ export function resolveSearchElements(
   };
 }
 
-// Initialize when DOM is ready (skip in test environment)
-if (typeof process === "undefined" || !process.env?.VITEST) {
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", initSearch);
-  } else {
-    initSearch();
-  }
-}
