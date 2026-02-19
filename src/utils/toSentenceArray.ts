@@ -14,10 +14,6 @@ export function toSentenceArray<T extends JSX.Element | string>(
 
   const lastWord = words.pop();
 
-  if (!lastWord) {
-    return words;
-  }
-
   const lastWords = [" and ", lastWord];
   if (words.length === 1) {
     return [...words, ...lastWords] as T[];

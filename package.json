@@ -18,10 +18,9 @@
     "lint:spelling:fix": "rm -rf project-words.txt && echo \"# Project Words - DO NOT TOUCH - npm run lint:spelling:fix\" >> project-words.txt && npm run -s lint:spelling -- --words-only --unique --no-exit-code --no-summary \"**\" | LC_ALL=en_US.UTF-8 sort --ignore-case >> project-words.txt",
     "preview": "astro preview",
     "start": "astro dev",
-    "test:coverage": "TEST_COVERAGE=true vitest run src --coverage.all true --coverage",
-    "test:update": "vitest -u run src",
-    "test:watch": "vitest src",
-    "test": "vitest run src",
+    "test:coverage": "TEST_COVERAGE=true vitest run src --coverage.all true --coverage --max-workers=2",
+    "test:update": "vitest -u run src --max-workers=2",
+    "test": "vitest run src --max-workers=2",
     "update:data": "node --experimental-strip-types updateData.ts"
   },
   "dependencies": {

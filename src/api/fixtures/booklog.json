@@ -27,28 +27,29 @@
   },
   {
     "authors": [
-      "Philip Fracassi"
+      "Piers Anthony"
     ],
     "date": "2025-07-11T00:00:00.000Z",
-    "excerpt": "<p>Five thirteen-year-old boys go hunting for a mysterious black Commodore in the local junkyard but discover the car—and their town—harbor darker secrets than they could have imagined.</p>",
-    "image": "/_astro/commodore-by-philip-fracassi.B6kn71WY_Z1tUWNH.png",
-    "kind": "Novella",
-    "slug": "commodore-by-philip-fracassi",
-    "stars": 5,
-    "title": "Commodore",
-    "workYear": "2021"
+    "excerpt": "<p>The private papers of Hope Hubris, the Tyrant of Jupiter.</p>",
+    "image": "/_astro/refugee-by-piers-anthony.B6kn71WY_Z1tUWNH.png",
+    "kind": "Novel",
+    "slug": "refugee-by-piers-anthony",
+    "stars": 0,
+    "title": "Refugee",
+    "workYear": "1983"
   },
   {
     "authors": [
-      "Leslie H. Whitten Jr."
+      "Jocko Willink",
+      "Leif Babin"
     ],
     "date": "2025-07-11T00:00:00.000Z",
-    "excerpt": "<p>A D.C. detective’s case involving blonde women turning up dead in the Potomac drained of blood leads to a mysterious suspect with supernatural implications.</p>",
+    "excerpt": "<p>Former Navy SEALs Jocko Willink and Leif Babin distill the principals they honed in the battle of Ramadi and demonstrate their applicability to business.</p>",
     "image": "/_astro/progeny-of-the-adder-by-leslie-h-whitten-jr.Bmxx3I6Q_1oXpif.png",
-    "kind": "Novel",
-    "slug": "progeny-of-the-adder-by-leslie-h-whitten-jr",
-    "stars": 3.5,
-    "title": "Progeny of the Adder",
-    "workYear": "1965"
+    "kind": "Nonfiction",
+    "slug": "extreme-ownership-by-jocko-willink-leif-babin",
+    "stars": 4,
+    "title": "Extreme Ownership",
+    "workYear": "2015"
   }
-]
+] 

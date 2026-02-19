@@ -33,7 +33,7 @@ describe("AstroPageShell", () => {
       const container = await AstroContainer.create({ renderers });
 
       // Import our test page that uses the AstroPageShell
-      const TestPageModule = (await import("./TestPage.astro")) as {
+      const TestPageModule = (await import("./fixtures/TestPage.astro")) as {
         default: AstroComponentFactory;
       };
       const TestPage = TestPageModule.default;
@@ -477,7 +477,7 @@ describe("AstroPageShell", () => {
       const renderers = await loadRenderers([reactContainerRenderer()]);
       const container = await AstroContainer.create({ renderers });
 
-      const TestPageModule = (await import("./TestPage.astro")) as {
+      const TestPageModule = (await import("./fixtures/TestPage.astro")) as {
         default: AstroComponentFactory;
       };
       const TestPage = TestPageModule.default;
@@ -577,7 +577,7 @@ describe("AstroPageShell", () => {
               excerpt: "Test excerpt 1",
               filters: {},
               meta: { title: "Test Title 1" },
-              url: "/test1",
+              url: "https://www.franksmovielog.com/test1",
               weighted_locations: [],
             }),
             id: "1",
@@ -589,7 +589,7 @@ describe("AstroPageShell", () => {
               excerpt: "Test excerpt 2",
               filters: {},
               meta: { title: "Test Title 2" },
-              url: "/test2",
+              url: "https://www.franksmovielog.com/test2",
               weighted_locations: [],
             }),
             id: "2",
@@ -711,7 +711,7 @@ describe("AstroPageShell", () => {
               excerpt: "Test excerpt",
               filters: {},
               meta: { title: "Test Title" },
-              url: "/test",
+              url: "https://www.franksmovielog.com/test",
               weighted_locations: [],
             }),
             id: "1",
@@ -827,7 +827,7 @@ describe("AstroPageShell", () => {
             excerpt: `Excerpt ${id}`,
             filters: {},
             meta: { title: `Result ${id}` },
-            url: `/result${id}`,
+            url: `https://www.franksmovielog.com/result${id}`,
             weighted_locations: [],
           }),
           id,
