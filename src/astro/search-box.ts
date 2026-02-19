@@ -312,6 +312,7 @@ class SearchBox extends HTMLElement {
 
     const nextBatch = remaining.slice(0, this.config.pageSize);
     const scrollPosition = this.resultsContainer.scrollTop;
+    const gen = this.searchGeneration;
 
     try {
       const resultData = await Promise.all(
@@ -319,6 +320,8 @@ class SearchBox extends HTMLElement {
           return r.data();
         }),
       );
+
+      if (gen !== this.searchGeneration) return;
 
       this.state = {
         allResults,
@@ -336,6 +339,7 @@ class SearchBox extends HTMLElement {
       // Announce to screen readers that new results were loaded
       this.announceToScreenReader(`${resultData.length} more results loaded`);
     } catch (error) {
+      if (gen !== this.searchGeneration) return;
       console.error("Failed to load more results:", error);
       this.state = {
         kind: "error",
