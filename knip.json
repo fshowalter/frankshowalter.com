@@ -1,6 +1,10 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": ["src/**/*.astro", "src/pages/**/*.spec.ts", "src/astro/search-box.ts"],
+  "entry": [
+    "src/**/*.astro",
+    "src/pages/**/*.spec.ts",
+    "src/astro/search-box.ts"
+  ],
   "project": ["**/*", "!src/**/__mocks__/**"],
   "ignoreDependencies": ["babel-plugin-react-compiler", "@vitest/coverage-v8"],
   "ignore": ["updateData.ts"]

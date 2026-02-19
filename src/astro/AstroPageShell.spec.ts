@@ -26,7 +26,9 @@ const mockSearchAPI = {
 async function initSearchBox(document: Document): Promise<void> {
   await import("./search-box.ts");
   const searchBoxEl = document.querySelector("search-box");
-  (searchBoxEl as unknown as { connectedCallback(): void })?.connectedCallback();
+  (
+    searchBoxEl as unknown as { connectedCallback(): void }
+  )?.connectedCallback();
 }
 
 describe("AstroPageShell", () => {
@@ -168,7 +170,9 @@ describe("AstroPageShell", () => {
 
         // Call connectedCallback again to pick up the new userAgent
         const searchBoxEl = document.querySelector("search-box");
-        (searchBoxEl as unknown as { connectedCallback(): void })?.connectedCallback();
+        (
+          searchBoxEl as unknown as { connectedCallback(): void }
+        )?.connectedCallback();
 
         const openBtn = document.querySelector("[data-open-search]");
         expect(openBtn?.getAttribute("aria-keyshortcuts")).toBe("Meta+K");
@@ -212,8 +216,9 @@ describe("AstroPageShell", () => {
       });
 
       it("closes when close button is clicked", ({ expect }) => {
-        const closeBtn =
-          document.querySelector<HTMLButtonElement>("[data-close-search]");
+        const closeBtn = document.querySelector<HTMLButtonElement>(
+          "[data-close-search]",
+        );
 
         expect(dialog?.open).toBe(true);
 
@@ -284,7 +289,6 @@ describe("AstroPageShell", () => {
         // eslint-disable-next-line @typescript-eslint/unbound-method
         expect(dialog?.close).toHaveBeenCalled();
       });
-
     });
 
     describe("when Cmd+K is pressed", () => {
@@ -350,7 +354,8 @@ describe("AstroPageShell", () => {
         // Wait for SearchUI lazy-load and init to complete
         await new Promise((resolve) => setTimeout(resolve, 100));
 
-        const input = document.querySelector<HTMLInputElement>("#search-box-input");
+        const input =
+          document.querySelector<HTMLInputElement>("#search-box-input");
         expect(input).toBeTruthy();
 
         const blurSpy = vi.spyOn(input!, "blur");
@@ -375,12 +380,10 @@ describe("AstroPageShell", () => {
         // Wait for SearchUI lazy-load and init to complete
         await new Promise((resolve) => setTimeout(resolve, 100));
 
-        const clearBtn = document.querySelector<HTMLButtonElement>(
-          "#search-box-clear",
-        );
-        const searchInput = document.querySelector<HTMLInputElement>(
-          "#search-box-input",
-        );
+        const clearBtn =
+          document.querySelector<HTMLButtonElement>("#search-box-clear");
+        const searchInput =
+          document.querySelector<HTMLInputElement>("#search-box-input");
 
         expect(clearBtn).toBeTruthy();
         expect(searchInput).toBeTruthy();

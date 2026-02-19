@@ -19,12 +19,6 @@ export type PagefindResult = {
   words: number[];
 };
 
-type PagefindSearchOptions = {
-  filters?: Record<string, string | string[]>;
-  sort?: Record<string, "asc" | "desc">;
-  verbose?: boolean;
-};
-
 /**
  * Search results returned by Pagefind API.
  */
@@ -42,11 +36,6 @@ export type PagefindSearchResults = {
 
 // AIDEV-NOTE: `Pagefind` is the raw imported library interface; `PagefindAPI` is the wrapper class.
 type Pagefind = {
-  debouncedSearch(
-    query: string,
-    options?: PagefindSearchOptions,
-    debounceTimeoutMs?: number,
-  ): Promise<PagefindSearchResults>;
   destroy(): Promise<void>;
   filters(): Promise<Record<string, Record<string, number>>>;
   init(): Promise<void>;
@@ -62,6 +51,12 @@ type PagefindAnchor = {
   id: string;
   location: number;
   text: string;
+};
+
+type PagefindSearchOptions = {
+  filters?: Record<string, string | string[]>;
+  sort?: Record<string, "asc" | "desc">;
+  verbose?: boolean;
 };
 
 type PagefindSubResult = {
@@ -145,8 +140,6 @@ export class PagefindAPI {
       throw new Error("Search API not initialized");
     }
 
-    return this.api.debouncedSearch
-      ? this.api.debouncedSearch(query, options, 0)
-      : this.api.search(query, options);
+    return this.api.search(query, options);
   }
 }

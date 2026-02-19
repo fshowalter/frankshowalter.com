@@ -73,252 +73,258 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
   <body class="h-full">
     <slot />
     <search-box>
-    <dialog
-      aria-label="Search"
-      class={`
-        fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default
-        bg-default shadow-lg
-        backdrop:bg-[#000] backdrop:opacity-40 backdrop:backdrop-blur-xs
-        open:flex open:flex-col
-        tablet:mx-auto tablet:mt-16 tablet:h-min
-        tablet:max-h-[min(100vh-128px,900px)]
-        tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl
-      `}
-    >
-      <div class="contents" data-dialog-frame>
-        <button
-          class={`
-            absolute right-4 z-sticky mt-5 h-6 cursor-pointer border-none
-            bg-subtle px-2 font-mono text-xs font-light text-muted
-            hover:bg-inverse hover:text-white
-            focus:outline-accent
-            tablet:right-6
-            laptop:right-8
-          `}
-          data-close-search>ESC</button
-        >
-        <!-- Fixed Search Input Section -->
-        <div class="shrink-0">
-          <!-- Search Form with magnifying glass icon -->
-          <form aria-label="Site search" onsubmit="return false" role="search">
-            <div class="relative">
-              <!-- Magnifying glass icon -->
-              <svg
-                aria-hidden="true"
-                class={`
-                  pointer-events-none absolute top-4.5 left-4 size-5
-                  text-default opacity-70
-                `}
-                fill="none"
-                height="18"
-                viewBox="0 0 18 18"
-                width="18"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z"
-                  fill="currentColor"></path>
-              </svg>
-
-              <!-- Search input -->
-              <input
-                aria-describedby="search-box-counter"
-                aria-label="Search query"
-                autocapitalize="off"
-                autocomplete="off"
-                autocorrect="off"
-                autofocus
-                class={`
-                  h-14 w-full border-0 bg-transparent pr-17.5 pl-13.5 font-serif
-                  text-lg font-normal text-default outline-none
-                  placeholder:text-muted placeholder:opacity-50
-                  focus:outline-none
-                  [&::-ms-clear]:hidden [&::-ms-clear]:appearance-none
-                  [&::-webkit-search-cancel-button]:hidden
-                  [&::-webkit-search-cancel-button]:appearance-none
-                `}
-                enterkeyhint="search"
-                id="search-box-input"
-                placeholder="Search"
-                spellcheck="false"
-                type="search"
-              />
-
-              <!-- Clear button -->
-              <button
-                aria-label="Clear search"
-                class={`
-                  absolute top-6 right-24 hidden size-4 rounded-full bg-subtle
-                  text-subtle
-                  hover:text-default
-                  focus:outline-accent
-                `}
-                id="search-box-clear"
-                type="button"
-              >
+      <dialog
+        aria-label="Search"
+        class={`
+          fixed inset-x-4 m-auto h-screen w-full rounded-lg border
+          border-default bg-default shadow-lg
+          backdrop:bg-[#000] backdrop:opacity-40 backdrop:backdrop-blur-xs
+          open:flex open:flex-col
+          tablet:mx-auto tablet:mt-16 tablet:h-min
+          tablet:max-h-[min(100vh-128px,900px)]
+          tablet:max-w-[min(100vw-64px,36rem)] tablet:rounded-xl
+        `}
+      >
+        <div class="contents" data-dialog-frame>
+          <button
+            class={`
+              absolute right-4 z-sticky mt-5 h-6 cursor-pointer border-none
+              bg-subtle px-2 font-mono text-xs font-light text-muted
+              hover:bg-inverse hover:text-white
+              focus:outline-accent
+              tablet:right-6
+              laptop:right-8
+            `}
+            data-close-search>ESC</button
+          >
+          <!-- Fixed Search Input Section -->
+          <div class="shrink-0">
+            <!-- Search Form with magnifying glass icon -->
+            <form
+              aria-label="Site search"
+              onsubmit="return false"
+              role="search"
+            >
+              <div class="relative">
+                <!-- Magnifying glass icon -->
                 <svg
-                  class="size-full"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  class={`
+                    pointer-events-none absolute top-4.5 left-4 size-5
+                    text-default opacity-70
+                  `}
+                  fill="none"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  width="18"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="m13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.09L13.41 12Z"
-                  ></path>
+                    d="M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z"
+                    fill="currentColor"></path>
                 </svg>
-              </button>
 
-              <!-- Border line after input -->
-              <div class={`absolute right-0 bottom-0 left-0 h-px bg-border`}>
+                <!-- Search input -->
+                <input
+                  aria-describedby="search-box-counter"
+                  aria-label="Search query"
+                  autocapitalize="off"
+                  autocomplete="off"
+                  autocorrect="off"
+                  autofocus
+                  class={`
+                    h-14 w-full border-0 bg-transparent pr-17.5 pl-13.5
+                    font-serif text-lg font-normal text-default outline-none
+                    placeholder:text-muted placeholder:opacity-50
+                    focus:outline-none
+                    [&::-ms-clear]:hidden [&::-ms-clear]:appearance-none
+                    [&::-webkit-search-cancel-button]:hidden
+                    [&::-webkit-search-cancel-button]:appearance-none
+                  `}
+                  enterkeyhint="search"
+                  id="search-box-input"
+                  placeholder="Search"
+                  spellcheck="false"
+                  type="search"
+                />
+
+                <!-- Clear button -->
+                <button
+                  aria-label="Clear search"
+                  class={`
+                    absolute top-6 right-24 hidden size-4 rounded-full bg-subtle
+                    text-subtle
+                    hover:text-default
+                    focus:outline-accent
+                  `}
+                  id="search-box-clear"
+                  type="button"
+                >
+                  <svg
+                    class="size-full"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="m13.41 12 6.3-6.29a1 1 0 1 0-1.42-1.42L12 10.59l-6.29-6.3a1 1 0 0 0-1.42 1.42l6.3 6.29-6.3 6.29a1 1 0 0 0 .33 1.64 1 1 0 0 0 1.09-.22l6.29-6.3 6.29 6.3a1 1 0 0 0 1.64-.33 1 1 0 0 0-.22-1.09L13.41 12Z"
+                    ></path>
+                  </svg>
+                </button>
+
+                <!-- Border line after input -->
+                <div class={`absolute right-0 bottom-0 left-0 h-px bg-border`}>
+                </div>
               </div>
-            </div>
-          </form>
+            </form>
 
-          <!-- Results message/counter -->
-          <div
-            aria-atomic="true"
-            aria-live="polite"
-            class={`
-              border-b border-default p-4 font-sans text-xs font-normal
-              text-subtle
-              empty:hidden
-            `}
-            id="search-box-counter"
-            role="status"
-          >
-          </div>
-        </div>
-
-        <!-- Scrollable Results Area -->
-        <div
-          aria-label="Search results"
-          class={`
-            min-h-0 flex-1 overflow-x-clip overflow-y-auto overscroll-contain
-            -outline-offset-2
-            focus:outline-accent
-          `}
-          id="search-box-results-wrapper"
-          role="region"
-        >
-          <div id="search-box-results"></div>
-
-          <!-- Load More Button -->
-          <div class="hidden p-4" id="search-box-load-more-wrapper">
-            <button
-              aria-controls="search-box-results"
+            <!-- Results message/counter -->
+            <div
+              aria-atomic="true"
+              aria-live="polite"
               class={`
-                mx-auto block h-10 w-full max-w-107.5 cursor-pointer bg-canvas
-                font-sans text-xs font-medium tracking-wide text-default
-                uppercase
-                hover:bg-inverse hover:text-white
-                focus:-outline-offset-2 focus:outline-accent
+                border-b border-default p-4 font-sans text-xs font-normal
+                text-subtle
+                empty:hidden
               `}
-              id="search-box-load-more"
-              type="button"
+              id="search-box-counter"
+              role="status"
             >
-              Load more results
-            </button>
+            </div>
+          </div>
+
+          <!-- Scrollable Results Area -->
+          <div
+            aria-label="Search results"
+            class={`
+              min-h-0 flex-1 overflow-x-clip overflow-y-auto overscroll-contain
+              -outline-offset-2
+              focus:outline-accent
+            `}
+            id="search-box-results-wrapper"
+            role="region"
+          >
+            <div id="search-box-results"></div>
+
+            <!-- Load More Button -->
+            <div class="hidden p-4" id="search-box-load-more-wrapper">
+              <button
+                aria-controls="search-box-results"
+                class={`
+                  mx-auto block h-10 w-full max-w-107.5 cursor-pointer bg-canvas
+                  font-sans text-xs font-medium tracking-wide text-default
+                  uppercase
+                  hover:bg-inverse hover:text-white
+                  focus:-outline-offset-2 focus:outline-accent
+                `}
+                id="search-box-load-more"
+                type="button"
+              >
+                Load more results
+              </button>
+            </div>
+          </div>
+
+          <div
+            class={`
+              p-4 font-sans text-xs font-light tracking-wide text-subtle
+              tablet:px-6
+              laptop:block laptop:px-8
+            `}
+          >
+            <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
+              >Tab</kbd
+            > to navigate
+            <kbd
+              class="
+                ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle
+              "
+              >ESC</kbd
+            > to close
           </div>
         </div>
+      </dialog>
 
-        <div
-          class={`
-            p-4 font-sans text-xs font-light tracking-wide text-subtle
-            tablet:px-6
-            laptop:block laptop:px-8
-          `}
-        >
-          <kbd class="rounded-md bg-default p-2 font-mono text-xs text-subtle"
-            >Tab</kbd
-          > to navigate
-          <kbd
-            class="ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle"
-            >ESC</kbd
-          > to close
-        </div>
-      </div>
-    </dialog>
-
-    <!-- AIDEV-NOTE: <template> content is inert until cloned by search-box.ts.
+      <!-- AIDEV-NOTE: <template> content is inert until cloned by search-box.ts.
          Tailwind 4.x scans .astro source files — classes inside <template> tags
          are found and included in the CSS output. -->
 
-    <!-- Single search result item; data-field attributes filled by cloneResult() -->
-    <template data-result-item>
-      <li
-        class="
-          relative grid grid-cols-[min(25%,80px)_1fr] gap-x-6 border-t
-          border-border px-[8%] py-6 transition-all
-          first-of-type:border-none
-          last-of-type:border-b
-          focus-within:bg-subtle focus-within:outline-1
-          focus-within:-outline-offset-2 focus-within:outline-[rgb(38,132,255)]
-          hover:bg-subtle
-          tablet:px-6
-          laptop:px-8
-        "
-      >
-        <div class="shrink-0 drop-shadow-md" data-field="image-wrapper">
-          <img
-            alt=""
-            class="h-auto w-full"
-            data-field="image"
-            loading="lazy"
-            src=""
-          />
-        </div>
-        <div class="min-w-0 flex-1">
-          <h3 class="font-serif text-base font-semibold text-default">
-            <a
-              class="
-                block
-                after:absolute after:size-full after:opacity-0
-                hover:text-accent
-              "
-              data-field="link"
-              href=""
-            ></a>
-          </h3>
-          <p class="text-sm/normal text-default" data-field="excerpt">
-          </p>
-        </div>
-      </li>
-    </template>
-
-    <!-- Loading skeleton — 3 copies cloned while search is in-flight -->
-    <template data-skeleton>
-      <div class="animate-pulse p-4">
-        <div
+      <!-- Single search result item; data-field attributes filled by cloneResult() -->
+      <template data-result-item>
+        <li
           class="
-            grid grid-cols-[min(25%,80px)_1fr] gap-x-6 px-[8%] py-6
+            relative grid grid-cols-[min(25%,80px)_1fr] gap-x-6 border-t
+            border-border px-[8%] py-6 transition-all
+            first-of-type:border-none
+            last-of-type:border-b
+            focus-within:bg-subtle focus-within:outline-1
+            focus-within:-outline-offset-2
+            focus-within:outline-[rgb(38,132,255)]
+            hover:bg-subtle
             tablet:px-6
             laptop:px-8
           "
         >
-          <div class="h-12 w-full shrink-0 bg-subtle"></div>
+          <div class="shrink-0 drop-shadow-md" data-field="image-wrapper">
+            <img
+              alt=""
+              class="h-auto w-full"
+              data-field="image"
+              loading="lazy"
+              src=""
+            />
+          </div>
           <div class="min-w-0 flex-1">
-            <div class="mb-2 h-5 w-3/4 bg-subtle"></div>
-            <div class="h-3 w-full bg-subtle"></div>
-            <div class="mt-1 h-3 w-5/6 bg-subtle"></div>
+            <h3 class="font-serif text-base font-semibold text-default">
+              <a
+                class="
+                  block
+                  after:absolute after:size-full after:opacity-0
+                  hover:text-accent
+                "
+                data-field="link"
+                href=""></a>
+            </h3>
+            <p class="text-sm/normal text-default" data-field="excerpt"></p>
+          </div>
+        </li>
+      </template>
+
+      <!-- Loading skeleton — 3 copies cloned while search is in-flight -->
+      <template data-skeleton>
+        <div class="animate-pulse p-4">
+          <div
+            class="
+              grid grid-cols-[min(25%,80px)_1fr] gap-x-6 px-[8%] py-6
+              tablet:px-6
+              laptop:px-8
+            "
+          >
+            <div class="h-12 w-full shrink-0 bg-subtle"></div>
+            <div class="min-w-0 flex-1">
+              <div class="mb-2 h-5 w-3/4 bg-subtle"></div>
+              <div class="h-3 w-full bg-subtle"></div>
+              <div class="mt-1 h-3 w-5/6 bg-subtle"></div>
+            </div>
           </div>
         </div>
-      </div>
-    </template>
+      </template>
 
-    <!-- Empty state — shown when search returns no results -->
-    <template data-empty>
-      <div class="px-4 py-8 text-center font-sans text-sm text-subtle">
-        No results found. Try adjusting your search terms.
-      </div>
-    </template>
+      <!-- Empty state — shown when search returns no results -->
+      <template data-empty>
+        <div class="px-4 py-8 text-center font-sans text-sm text-subtle">
+          No results found. Try adjusting your search terms.
+        </div>
+      </template>
 
-    <!-- Error state — data-field="message" textContent filled by renderError() -->
-    <template data-error>
-      <div
-        class="px-4 py-8 text-center font-sans text-sm text-subtle"
-        data-field="message"
-      ></div>
-    </template>
+      <!-- Error state — data-field="message" textContent filled by renderError() -->
+      <template data-error>
+        <div
+          class="px-4 py-8 text-center font-sans text-sm text-subtle"
+          data-field="message"
+        >
+        </div>
+      </template>
     </search-box>
   </body>
 </html>

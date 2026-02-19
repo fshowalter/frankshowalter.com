@@ -79,9 +79,8 @@ class SearchBox extends HTMLElement {
 
     // Cache element refs — IDs prefixed with search-box- to avoid collisions
     this.input = this.querySelector<HTMLInputElement>("#search-box-input")!;
-    this.clearButton = this.querySelector<HTMLButtonElement>(
-      "#search-box-clear",
-    )!;
+    this.clearButton =
+      this.querySelector<HTMLButtonElement>("#search-box-clear")!;
     this.resultsCounter = this.querySelector<HTMLElement>(
       "#search-box-counter",
     )!;
@@ -228,7 +227,9 @@ class SearchBox extends HTMLElement {
   // AIDEV-NOTE: Clones the result-item template and fills data-field slots.
   // Removes the image-wrapper if no image is present in the result metadata.
   private cloneResult(doc: PagefindDocument): DocumentFragment {
-    const clone = this.resultTemplate.content.cloneNode(true) as DocumentFragment;
+    const clone = this.resultTemplate.content.cloneNode(
+      true,
+    ) as DocumentFragment;
     const link = clone.querySelector<HTMLAnchorElement>("[data-field='link']")!;
     link.href = doc.url;
     link.textContent = doc.meta.title;
@@ -380,7 +381,9 @@ class SearchBox extends HTMLElement {
     if (this.state.kind !== "error") return;
     this.resultsCounter.textContent = "";
     this.resultsContainer.innerHTML = "";
-    const clone = this.errorTemplate.content.cloneNode(true) as DocumentFragment;
+    const clone = this.errorTemplate.content.cloneNode(
+      true,
+    ) as DocumentFragment;
     const msg = clone.querySelector<HTMLElement>("[data-field='message']");
     if (msg) msg.textContent = this.state.message;
     this.resultsContainer.append(clone);
