@@ -101,7 +101,8 @@ export class SearchBoxController {
     if (!closeBtn || !dialog || !dialogFrame) return;
 
     // Cache element refs — IDs prefixed with search-box- to avoid collisions
-    this.input = this.root.querySelector<HTMLInputElement>("#search-box-input")!;
+    this.input =
+      this.root.querySelector<HTMLInputElement>("#search-box-input")!;
     this.clearButton =
       this.root.querySelector<HTMLButtonElement>("#search-box-clear")!;
     this.resultsCounter = this.root.querySelector<HTMLElement>(
@@ -506,7 +507,10 @@ export function formatCounter(total: number, query: string): string {
 // AIDEV-NOTE: Guard prevents ReferenceError when the module is imported in Node
 // (e.g. tests). HTMLElement and customElements are browser-only globals. Tests
 // instantiate SearchBoxController directly and never need SearchBox.
-if (typeof HTMLElement !== "undefined" && typeof customElements !== "undefined") {
+if (
+  typeof HTMLElement !== "undefined" &&
+  typeof customElements !== "undefined"
+) {
   class SearchBox extends HTMLElement {
     private controller: SearchBoxController | undefined = undefined;
 

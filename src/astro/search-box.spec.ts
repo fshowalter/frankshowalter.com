@@ -35,11 +35,10 @@ async function createDom(): Promise<{
   const renderers = await loadRenderers([reactContainerRenderer()]);
   const container = await AstroContainer.create({ renderers });
 
-  const TestPageModule = (await import(
-    "./fixtures/search-box-fixture.astro"
-  )) as {
-    default: AstroComponentFactory;
-  };
+  const TestPageModule =
+    (await import("./fixtures/search-box-fixture.astro")) as {
+      default: AstroComponentFactory;
+    };
   const TestPage = TestPageModule.default;
 
   const result = await container.renderToString(TestPage, {
@@ -87,7 +86,10 @@ async function createDom(): Promise<{
   // Reset modules to get a fresh search-box.ts instance each test
   vi.resetModules();
 
-  const controller = await initController(document, window as unknown as Window);
+  const controller = await initController(
+    document,
+    window as unknown as Window,
+  );
 
   const cleanup = () => {
     const d = document.querySelector("dialog");
@@ -161,10 +163,7 @@ describe("search modal", () => {
         value:
           "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
       });
-      controller = await initController(
-        document,
-        window as unknown as Window,
-      );
+      controller = await initController(document, window as unknown as Window);
     });
 
     it("sets Mac keyboard shortcut", ({ expect }) => {
@@ -193,8 +192,7 @@ describe("search modal", () => {
     let dialog: HTMLDialogElement | null;
 
     beforeEach(() => {
-      openBtn =
-        document.querySelector<HTMLButtonElement>("[data-open-search]");
+      openBtn = document.querySelector<HTMLButtonElement>("[data-open-search]");
       dialog = document.querySelector<HTMLDialogElement>("dialog");
       // Open the modal
       openBtn?.click();
@@ -879,9 +877,9 @@ describe("search functionality", () => {
 
       // Load more button should be hidden after loading all results
       await waitFor(() => {
-        expect(
-          loadMoreButton.parentElement?.classList.contains("hidden"),
-        ).toBe(true);
+        expect(loadMoreButton.parentElement?.classList.contains("hidden")).toBe(
+          true,
+        );
       });
     });
   });

@@ -237,9 +237,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
               >Tab</kbd
             > to navigate
             <kbd
-              class="
-                ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle
-              "
+              class="ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle"
               >ESC</kbd
             > to close
           </div>
@@ -253,8 +251,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
       <!-- Single search result item; data-field attributes filled by cloneResult() -->
       <template data-result-item>
         <li
-          class="
-            relative grid grid-cols-[min(25%,80px)_1fr] gap-x-6 border-t
+          class="relative grid grid-cols-[min(25%,80px)_1fr] gap-x-6 border-t
             border-border px-[8%] py-6 transition-all
             first-of-type:border-none
             last-of-type:border-b
@@ -263,8 +260,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
             focus-within:outline-[rgb(38,132,255)]
             hover:bg-subtle
             tablet:px-6
-            laptop:px-8
-          "
+            laptop:px-8"
         >
           <div class="shrink-0 drop-shadow-md" data-field="image-wrapper">
             <img
@@ -278,11 +274,9 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
           <div class="min-w-0 flex-1">
             <h3 class="font-serif text-base font-semibold text-default">
               <a
-                class="
-                  block
+                class="block
                   after:absolute after:size-full after:opacity-0
-                  hover:text-accent
-                "
+                  hover:text-accent"
                 data-field="link"
                 href=""></a>
             </h3>
@@ -295,11 +289,9 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
       <template data-skeleton>
         <div class="animate-pulse p-4">
           <div
-            class="
-              grid grid-cols-[min(25%,80px)_1fr] gap-x-6 px-[8%] py-6
+            class="grid grid-cols-[min(25%,80px)_1fr] gap-x-6 px-[8%] py-6
               tablet:px-6
-              laptop:px-8
-            "
+              laptop:px-8"
           >
             <div class="h-12 w-full shrink-0 bg-subtle"></div>
             <div class="min-w-0 flex-1">

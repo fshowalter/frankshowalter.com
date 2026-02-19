@@ -42,6 +42,7 @@ src/astro/
 ### `createDom(): Promise<{ dom, document, window, cleanup }>`
 
 Shared async setup used by both `beforeEach` blocks. Handles:
+
 1. Rendering `search-box-fixture.astro` via the Astro container API
 2. Constructing the JSDOM instance from rendered HTML
 3. Setting `globalThis.requestAnimationFrame = win.requestAnimationFrame`
@@ -63,7 +64,10 @@ instantiates `SearchBoxController`, calls `.init()`, and returns the instance
 so callers can invoke `.destroy()` before re-initialising (e.g. the Mac UA test):
 
 ```ts
-async function initController(document: Document, win: Window): Promise<SearchBoxController> {
+async function initController(
+  document: Document,
+  win: Window,
+): Promise<SearchBoxController> {
   const { SearchBoxController } = await import("./search-box.ts");
   const root = document.querySelector("search-box")!;
   const controller = new SearchBoxController(root, win);
@@ -167,28 +171,28 @@ user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime, document });
 `formatCounter` is not tested in isolation. Integration tests assert the
 counter element's `textContent` directly:
 
-| Case | Covered by |
-|---|---|
-| 0 results | "shows no results message when search returns empty" |
-| 1 result  | "clears results when user clears the input" |
+| Case      | Covered by                                                   |
+| --------- | ------------------------------------------------------------ |
+| 0 results | "shows no results message when search returns empty"         |
+| 1 result  | "clears results when user clears the input"                  |
 | N results | "displays results when user types a search query" (existing) |
 
 ---
 
 ## What is removed
 
-| Item | Reason |
-|---|---|
-| `AstroPageShell.spec.ts` | Contained only search tests; now in `search-box.spec.ts` |
-| `formatCounter` unit tests | Covered by integration; isolated test adds no signal |
-| All `globalThis.*` assignments | `SearchBoxController` takes `win: Window`; no bridging needed |
-| `initSearchBox()` | Replaced by `initController()` which instantiates `SearchBoxController` directly |
-| Manual `connectedCallback()` call | `SearchBoxController.init()` replaces it |
-| Outer `describe("AstroPageShell")` wrapper | Meaningless once file is `search-box.spec.ts` |
+| Item                                       | Reason                                                                           |
+| ------------------------------------------ | -------------------------------------------------------------------------------- |
+| `AstroPageShell.spec.ts`                   | Contained only search tests; now in `search-box.spec.ts`                         |
+| `formatCounter` unit tests                 | Covered by integration; isolated test adds no signal                             |
+| All `globalThis.*` assignments             | `SearchBoxController` takes `win: Window`; no bridging needed                    |
+| `initSearchBox()`                          | Replaced by `initController()` which instantiates `SearchBoxController` directly |
+| Manual `connectedCallback()` call          | `SearchBoxController.init()` replaces it                                         |
+| Outer `describe("AstroPageShell")` wrapper | Meaningless once file is `search-box.spec.ts`                                    |
 
 ## What is renamed
 
-| Old | New | Reason |
-|---|---|---|
-| `fixtures/TestPage.astro` | `fixtures/search-box-fixture.astro` | Name reflects purpose |
-| `initSearchBox()` | `initController()` | Reflects `SearchBoxController` usage |
+| Old                       | New                                 | Reason                               |
+| ------------------------- | ----------------------------------- | ------------------------------------ |
+| `fixtures/TestPage.astro` | `fixtures/search-box-fixture.astro` | Name reflects purpose                |
+| `initSearchBox()`         | `initController()`                  | Reflects `SearchBoxController` usage |

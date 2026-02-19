@@ -16,6 +16,7 @@ results render (before the clear step) that `counter?.textContent` equals
 for it to render — only the counter assertion is missing. No new test needed.
 
 **Success criteria**:
+
 - `npm test` passes
 - The singular counter string (`1 result for "…"`) is asserted somewhere in
   the integration suite
@@ -30,6 +31,7 @@ for it to render — only the counter assertion is missing. No new test needed.
 is deleted. `TestPage.astro` is renamed to match its purpose.
 
 **Changes**:
+
 1. Rename `./fixtures/TestPage.astro` → `./fixtures/search-box-fixture.astro`
    (use `git mv` to preserve history).
 2. Update the import path inside `AstroPageShell.spec.ts` to use the new name.
@@ -41,6 +43,7 @@ is deleted. `TestPage.astro` is renamed to match its purpose.
 6. Delete `AstroPageShell.spec.ts`.
 
 **Success criteria**:
+
 - `npm test` passes
 - No test references `AstroPageShell.spec.ts`
 - `formatCounter` unit tests are gone; integration coverage from Stage 1
@@ -57,6 +60,7 @@ the behavior class directly — eliminating all `globalThis` bridging and the
 `connectedCallback()` hack.
 
 **Changes to `search-box.ts`**:
+
 1. Extract a `SearchBoxController` class with constructor
    `(root: Element, win: Window)`.
 2. Move all logic from `connectedCallback()` into `SearchBoxController.init()`:
@@ -67,6 +71,7 @@ the behavior class directly — eliminating all `globalThis` bridging and the
    `disconnectedCallback()`).
 4. Export `SearchBoxController`.
 5. `SearchBox` web component becomes a thin shell:
+
    ```ts
    class SearchBox extends HTMLElement {
      private controller: SearchBoxController | null = null;
@@ -83,19 +88,25 @@ the behavior class directly — eliminating all `globalThis` bridging and the
      }
    }
    ```
+
    Note: the `initialized` guard is replaced by `if (this.controller) return;`
    — same effect, but the controller instance itself is the flag.
+
 6. Add an `AIDEV-NOTE` at the top of the file explaining the two-class split:
    tests instantiate `SearchBoxController` directly with `dom.window` to avoid
    bridging JSDOM globals onto Node's `globalThis`.
 
 **Changes to `search-box.spec.ts`**:
+
 1. Remove all `globalThis.*` assignments from both `beforeEach` blocks.
 2. Keep only `globalThis.requestAnimationFrame = window.requestAnimationFrame`
    — `userEvent` needs it.
 3. Rename `initSearchBox` → `initController`, updating the body and return type:
    ```ts
-   async function initController(document: Document, win: Window): Promise<SearchBoxController> {
+   async function initController(
+     document: Document,
+     win: Window,
+   ): Promise<SearchBoxController> {
      const { SearchBoxController } = await import("./search-box.ts");
      const root = document.querySelector("search-box")!;
      const controller = new SearchBoxController(root, win);
@@ -115,13 +126,14 @@ the behavior class directly — eliminating all `globalThis` bridging and the
         outer `beforeEach`.
      2. Sets the Mac userAgent on the window:
         `Object.defineProperty(window.navigator, "userAgent",
-        { configurable: true, value: "…Mac…" })`.
+{ configurable: true, value: "…Mac…" })`.
      3. Re-calls `await initController(document, window as unknown as Window)`
         and overwrites `controller`.
    - `it("sets Mac keyboard shortcut")` becomes a plain assertion — no manual
      element/flag access needed.
 
 **Success criteria**:
+
 - `npm test` passes
 - No `globalThis` assignments remain except `requestAnimationFrame`
 - `search-box.ts` exports `SearchBoxController`
@@ -138,6 +150,7 @@ the behavior class directly — eliminating all `globalThis` bridging and the
 `describe` blocks.
 
 **Changes**:
+
 1. Extract a `createDom()` async function (see SPEC.md) that covers everything
    shared: Astro render → JSDOM → `requestAnimationFrame` → dialog mocks →
    `vi.stubGlobal` → `vi.resetModules` → `initController` → cleanup fn.
@@ -159,6 +172,7 @@ the behavior class directly — eliminating all `globalThis` bridging and the
    now part of the `cleanup()` function returned by `createDom()`.
 
 **Success criteria**:
+
 - `npm test` passes
 - Neither `beforeEach` repeats DOM/JSDOM setup inline
 - The only differences between the two `beforeEach` blocks are: fake timers,
