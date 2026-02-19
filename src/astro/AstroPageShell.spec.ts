@@ -11,7 +11,6 @@ import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import type { PagefindAPI, PagefindSearchResults } from "./pagefind-api";
-import type { SearchElements } from "./search-ui";
 
 // Create mock search API that will be injected into SearchUI
 const mockSearchAPI = {
@@ -351,7 +350,7 @@ describe("AstroPageShell", () => {
         // Wait for SearchUI lazy-load and init to complete
         await new Promise((resolve) => setTimeout(resolve, 100));
 
-        const input = document.querySelector<HTMLInputElement>("#search-input");
+        const input = document.querySelector<HTMLInputElement>("#search-box-input");
         expect(input).toBeTruthy();
 
         const blurSpy = vi.spyOn(input!, "blur");
@@ -377,10 +376,10 @@ describe("AstroPageShell", () => {
         await new Promise((resolve) => setTimeout(resolve, 100));
 
         const clearBtn = document.querySelector<HTMLButtonElement>(
-          "#search-clear-button",
+          "#search-box-clear",
         );
         const searchInput = document.querySelector<HTMLInputElement>(
-          "#search-input",
+          "#search-box-input",
         );
 
         expect(clearBtn).toBeTruthy();
@@ -443,17 +442,15 @@ describe("AstroPageShell", () => {
       // Reset modules to clear search-box.ts instance state
       vi.resetModules();
 
-      // Re-setup mocks after reset
-      vi.mock("./search-ui", async () => {
+      // Re-setup mocks after reset — inject mockSearchAPI so SearchBox uses it
+      vi.mock("./pagefind-api", async () => {
         const actual =
-          await vi.importActual<typeof import("./search-ui")>("./search-ui");
+          await vi.importActual<typeof import("./pagefind-api")>(
+            "./pagefind-api",
+          );
         return {
           ...actual,
-          SearchUI: class extends actual.SearchUI {
-            constructor(elements: SearchElements) {
-              super(elements, mockSearchAPI as PagefindAPI);
-            }
-          },
+          PagefindAPI: vi.fn().mockImplementation(() => mockSearchAPI),
         };
       });
 
@@ -622,7 +619,7 @@ describe("AstroPageShell", () => {
         });
 
         // Check counter
-        const counter = document.querySelector("#search-results-counter");
+        const counter = document.querySelector("#search-box-counter");
         expect(counter?.textContent).toContain("2 results");
       });
 
@@ -649,7 +646,7 @@ describe("AstroPageShell", () => {
 
         // Check for no results message
         await waitFor(() => {
-          const counter = document.querySelector("#search-results-counter");
+          const counter = document.querySelector("#search-box-counter");
           expect(counter?.textContent).toBe('No results for "notfound"');
 
           const results = queries.getByRole("region", {
@@ -749,10 +746,10 @@ describe("AstroPageShell", () => {
         await vi.advanceTimersByTimeAsync(150);
 
         // Results should be cleared
-        const resultsDiv = document.querySelector("#search-results");
+        const resultsDiv = document.querySelector("#search-box-results");
         expect(resultsDiv?.innerHTML).toBe("");
 
-        const counter = document.querySelector("#search-results-counter");
+        const counter = document.querySelector("#search-box-counter");
         expect(counter?.textContent).toBe("");
       });
 
@@ -809,7 +806,7 @@ describe("AstroPageShell", () => {
         expect(searchInput.value).toBe("");
         expect(clearButton.classList.contains("hidden")).toBe(true);
 
-        const resultsDiv = document.querySelector("#search-results");
+        const resultsDiv = document.querySelector("#search-box-results");
         expect(resultsDiv?.innerHTML).toBe("");
       });
 
@@ -892,7 +889,7 @@ describe("AstroPageShell", () => {
 
         // Only the fresh (search 2) results should be visible
         await waitFor(() => {
-          const resultsDiv = document.querySelector("#search-results");
+          const resultsDiv = document.querySelector("#search-box-results");
           expect(resultsDiv?.textContent).toContain("Fresh Result");
           expect(resultsDiv?.textContent).not.toContain("Stale Result");
         });

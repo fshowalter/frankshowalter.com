@@ -21,6 +21,36 @@
 
 ---
 
+## 2026-02-19 - Stage 3: Merge SearchUI into Component and Add Templates
+
+- Rewrote `src/astro/search-box.ts` — absorbed all `SearchUI` logic directly into `SearchBox`. Added `SearchState` type and `formatCounter()` (moved from `search-ui.ts`). `PagefindAPI` is now a static import and instantiated as an instance field. `setupEventListeners()` is called synchronously in `connectedCallback()` (no longer deferred to after API init), so Enter-key and clear-button event tests work without API initialization. `PagefindAPI.init()` is still called lazily on first modal open.
+- Added `<template>` elements to `AstroPageShell.astro` inside `<search-box>`: `data-result-item`, `data-skeleton`, `data-empty`, `data-error`. All dynamic content now rendered via `template.content.cloneNode(true)` — no HTML strings in JS.
+- Renamed element IDs in `AstroPageShell.astro` from `search-*` to `search-box-*` prefix. Updated `aria-describedby` and `aria-controls` to match.
+- Replaced `resolveSearchElements()` with direct `this.querySelector()` calls using the new `search-box-*` IDs.
+- Deleted `src/astro/search-ui.ts` and `src/astro/search-ui.spec.ts`.
+- Updated `AstroPageShell.spec.ts`: removed `SearchElements` import from `search-ui`; changed mock from `vi.mock("./search-ui")` to `vi.mock("./pagefind-api")` injecting `mockSearchAPI` via `PagefindAPI: vi.fn().mockImplementation(() => mockSearchAPI)`; updated all `#search-*` selectors to `#search-box-*`.
+- Created `src/astro/search-box.spec.ts` with `formatCounter` unit tests. Used `beforeAll` + dynamic import pattern to set `globalThis.HTMLElement` before importing `search-box.ts` (Node environment requires this).
+- Regenerated HTML snapshots — all 29 tests pass, 2 snapshots updated.
+
+**Files changed:**
+- `src/astro/search-box.ts` — rewritten: SearchUI absorbed, templates, no HTML strings
+- `src/astro/AstroPageShell.astro` — renamed IDs, added `<template>` elements, lint fixes applied
+- `src/astro/AstroPageShell.spec.ts` — updated mock and ID selectors
+- `src/astro/search-box.spec.ts` — created
+- `src/astro/search-ui.ts` — deleted
+- `src/astro/search-ui.spec.ts` — deleted
+- `src/pages/__snapshots__/index.html` — regenerated
+- `src/pages/404/__snapshots__/index.html` — regenerated
+
+**Learnings for future iterations:**
+- `vi.mock()` inside `beforeEach` works after `vi.resetModules()` for static imports in the target module — the factory is registered before the subsequent `await import()` call, so the mock is applied when the module is loaded.
+- When moving from a dynamic import (lazy-loading `search-ui.ts` in `openModal()`) to a static import (`pagefind-api.ts` at the top of `search-box.ts`), the mock must now be set up before `initSearchBox()` is called (not before the open-button click). The `vi.resetModules()` + `vi.mock()` + `await initSearchBox()` sequence in `beforeEach` handles this correctly.
+- `setupEventListeners()` called in `connectedCallback()` (synchronously) means the Enter-key and clear-button tests in the "search modal" describe block no longer need the API to be initialized — they work immediately after `connectedCallback()`.
+- `<template>` elements in Astro SSR output are correctly parsed by JSDOM with their content in `template.content`. `template.content.cloneNode(true)` works as expected.
+- The lint rule `better-tailwindcss/enforce-canonical-classes` flags `text-sm leading-normal` → `text-sm/normal` and `px-4 py-4` → `p-4` in template elements. Always run `npm run lint:fix` after adding template HTML in `.astro` files. After lint fix, regenerate snapshots again.
+
+---
+
 ## 2026-02-19 - Stage 2: Move Modal Logic into the Component
 
 - Rewrote `src/astro/search-box.ts` — moved all modal logic from `search-modal.ts` into `SearchBox.connectedCallback()`. Open button still uses `document.querySelector("button[data-open-search]")` (it's in `Backdrop.tsx` outside `<search-box>`); all other elements use `this.querySelector()`. Instance state (`pagefindLoading`, `searchUIInstance`) replaces module-level state. Added `disconnectedCallback()` to remove the global Cmd+K keydown handler. Added `customElements.get` guard to prevent double-registration.
