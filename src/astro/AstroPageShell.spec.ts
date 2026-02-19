@@ -20,6 +20,16 @@ const mockSearchAPI = {
   search: vi.fn(),
 } as unknown as Mocked<PagefindAPI>;
 
+// Helper: initialize the SearchBox custom element in the JSDOM environment.
+// search-box.ts registers the element with customElements.define(); we then
+// call connectedCallback() manually because JSDOM may not retroactively
+// upgrade already-connected elements when the definition is registered.
+async function initSearchBox(document: Document): Promise<void> {
+  await import("./search-box.ts");
+  const searchBoxEl = document.querySelector("search-box");
+  (searchBoxEl as unknown as { connectedCallback(): void })?.connectedCallback();
+}
+
 describe("AstroPageShell", () => {
   describe("search modal", () => {
     let dom: JSDOMType;
@@ -73,9 +83,12 @@ describe("AstroPageShell", () => {
       globalThis.removeEventListener = window.removeEventListener.bind(window);
       globalThis.dispatchEvent = window.dispatchEvent.bind(window);
 
-      // Add HTMLInputElement to global scope for customSearch
+      // Add DOM globals required by search-box.ts (class extends HTMLElement,
+      // customElements.define, etc.)
+      globalThis.HTMLElement = window.HTMLElement;
       globalThis.HTMLInputElement = window.HTMLInputElement;
       globalThis.HTMLButtonElement = window.HTMLButtonElement;
+      globalThis.customElements = window.customElements;
 
       vi.stubGlobal("import.meta.env", {
         BASE_URL: "/",
@@ -97,13 +110,12 @@ describe("AstroPageShell", () => {
         });
       }
 
-      // Reset modules to get a fresh search-modal.ts instance each test
-      // (clears searchUIInstance/searchUILoading module-level state)
+      // Reset modules to get a fresh search-box.ts instance each test
+      // (clears searchUIInstance/pagefindLoading instance state on the element)
       vi.resetModules();
 
-      // Import and initialize pageFind
-      const { initPageFind } = await import("./search-modal.ts");
-      initPageFind();
+      // Import and initialize the SearchBox custom element
+      await initSearchBox(document);
 
       cleanup = () => {
         const dialog = document.querySelector("dialog");
@@ -121,12 +133,12 @@ describe("AstroPageShell", () => {
 
     describe("on initial render", () => {
       it("renders search button", ({ expect }) => {
-        const openBtn = document.querySelector("[data-open-modal]");
+        const openBtn = document.querySelector("[data-open-search]");
         expect(openBtn).toBeTruthy();
       });
 
       it("renders close button", ({ expect }) => {
-        const closeBtn = document.querySelector("[data-close-modal]");
+        const closeBtn = document.querySelector("[data-close-search]");
         expect(closeBtn).toBeTruthy();
       });
 
@@ -137,13 +149,13 @@ describe("AstroPageShell", () => {
 
       it("enables search button after initialization", ({ expect }) => {
         const openBtn =
-          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+          document.querySelector<HTMLButtonElement>("[data-open-search]");
         expect(openBtn?.disabled).toBe(false);
       });
     });
 
     describe("on Mac", () => {
-      it("sets Mac keyboard shortcut", async ({ expect }) => {
+      it("sets Mac keyboard shortcut", ({ expect }) => {
         // Re-initialize with Mac user agent
         const originalUserAgent = Object.getOwnPropertyDescriptor(
           window.navigator,
@@ -155,12 +167,11 @@ describe("AstroPageShell", () => {
             "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
         });
 
-        // Re-import and initialize
-        vi.resetModules();
-        const { initPageFind } = await import("./search-modal.ts");
-        initPageFind();
+        // Call connectedCallback again to pick up the new userAgent
+        const searchBoxEl = document.querySelector("search-box");
+        (searchBoxEl as unknown as { connectedCallback(): void })?.connectedCallback();
 
-        const openBtn = document.querySelector("[data-open-modal]");
+        const openBtn = document.querySelector("[data-open-search]");
         expect(openBtn?.getAttribute("aria-keyshortcuts")).toBe("Meta+K");
         expect(openBtn?.getAttribute("title")).toBe("Search: ⌘K");
 
@@ -178,7 +189,7 @@ describe("AstroPageShell", () => {
     describe("when search button is clicked", () => {
       it("opens modal", ({ expect }) => {
         const openBtn =
-          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+          document.querySelector<HTMLButtonElement>("[data-open-search]");
         const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
         openBtn?.click();
@@ -195,7 +206,7 @@ describe("AstroPageShell", () => {
 
       beforeEach(() => {
         openBtn =
-          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+          document.querySelector<HTMLButtonElement>("[data-open-search]");
         dialog = document.querySelector<HTMLDialogElement>("dialog");
         // Open the modal
         openBtn?.click();
@@ -203,7 +214,7 @@ describe("AstroPageShell", () => {
 
       it("closes when close button is clicked", ({ expect }) => {
         const closeBtn =
-          document.querySelector<HTMLButtonElement>("[data-close-modal]");
+          document.querySelector<HTMLButtonElement>("[data-close-search]");
 
         expect(dialog?.open).toBe(true);
 
@@ -294,7 +305,7 @@ describe("AstroPageShell", () => {
 
       it("closes modal when already open", ({ expect }) => {
         const openBtn =
-          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+          document.querySelector<HTMLButtonElement>("[data-open-search]");
         const dialog = document.querySelector<HTMLDialogElement>("dialog");
 
         // Open the modal first
@@ -334,7 +345,7 @@ describe("AstroPageShell", () => {
       it("blurs search input", async ({ expect }) => {
         // Open modal first so SearchUI initializes and registers the keydown listener
         const openBtn =
-          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+          document.querySelector<HTMLButtonElement>("[data-open-search]");
         openBtn?.click();
 
         // Wait for SearchUI lazy-load and init to complete
@@ -359,7 +370,7 @@ describe("AstroPageShell", () => {
       it("focuses search input", async ({ expect }) => {
         // Open modal first so SearchUI initializes and registers the click listener
         const openBtn =
-          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+          document.querySelector<HTMLButtonElement>("[data-open-search]");
         openBtn?.click();
 
         // Wait for SearchUI lazy-load and init to complete
@@ -429,7 +440,7 @@ describe("AstroPageShell", () => {
       // Use fake timers
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
-      // Reset modules to clear search-modal.ts state
+      // Reset modules to clear search-box.ts instance state
       vi.resetModules();
 
       // Re-setup mocks after reset
@@ -501,8 +512,12 @@ describe("AstroPageShell", () => {
       globalThis.removeEventListener = window.removeEventListener.bind(window);
       globalThis.dispatchEvent = window.dispatchEvent.bind(window);
 
+      // Add DOM globals required by search-box.ts (class extends HTMLElement,
+      // customElements.define, etc.)
+      globalThis.HTMLElement = window.HTMLElement;
       globalThis.HTMLInputElement = window.HTMLInputElement;
       globalThis.HTMLButtonElement = window.HTMLButtonElement;
+      globalThis.customElements = window.customElements;
 
       vi.stubGlobal("import.meta.env", {
         BASE_URL: "/",
@@ -524,9 +539,8 @@ describe("AstroPageShell", () => {
         });
       }
 
-      // Import and initialize search
-      const { initPageFind } = await import("./search-modal.ts");
-      initPageFind();
+      // Import and initialize the SearchBox custom element
+      await initSearchBox(document);
 
       // Initialize user with fake timers AFTER DOM is set up
       user = userEvent.setup({

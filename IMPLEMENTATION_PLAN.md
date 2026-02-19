@@ -58,7 +58,7 @@ a structural move only.
 - `SearchBox.connectedCallback()` handles all modal behavior
 - All modal tests pass
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 

@@ -100,7 +100,7 @@ function SearchButton(): React.JSX.Element {
           text-sm/6 text-default/55 ring-default transition-all duration-500
           hover:border-accent hover:text-accent
         `}
-        data-open-modal
+        data-open-search
         disabled
         suppressHydrationWarning
         title="Search: Control+K"
