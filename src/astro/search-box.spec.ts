@@ -11,6 +11,7 @@ import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import type { PagefindAPI, PagefindSearchResults } from "./pagefind-api";
+import type { SearchBoxController } from "./search-box.ts";
 
 // Create mock search API that will be injected into SearchBox
 const mockSearchAPI = {
@@ -19,16 +20,18 @@ const mockSearchAPI = {
   search: vi.fn(),
 } as unknown as Mocked<PagefindAPI>;
 
-// Helper: initialize the SearchBox custom element in the JSDOM environment.
-// search-box.ts registers the element with customElements.define(); we then
-// call connectedCallback() manually because JSDOM may not retroactively
-// upgrade already-connected elements when the definition is registered.
-async function initSearchBox(document: Document): Promise<void> {
-  await import("./search-box.ts");
-  const searchBoxEl = document.querySelector("search-box");
-  (
-    searchBoxEl as unknown as { connectedCallback(): void }
-  )?.connectedCallback();
+// Helper: instantiate SearchBoxController directly, bypassing the web component shell.
+// Uses a dynamic import so vi.mock("./pagefind-api") — called inside beforeEach — is
+// already registered before search-box.ts imports it.
+async function initController(
+  document: Document,
+  win: Window,
+): Promise<SearchBoxController> {
+  const { SearchBoxController } = await import("./search-box.ts");
+  const root = document.querySelector("search-box")!;
+  const controller = new SearchBoxController(root, win);
+  controller.init();
+  return controller;
 }
 
 describe("search modal", () => {
@@ -36,13 +39,13 @@ describe("search modal", () => {
   let document: Document;
   let window: DOMWindow;
   let cleanup: () => void;
+  let controller: SearchBoxController;
 
   beforeEach(async () => {
     // Render the test page using Astro's container API
     const renderers = await loadRenderers([reactContainerRenderer()]);
     const container = await AstroContainer.create({ renderers });
 
-    // Import our test page that uses the AstroPageShell
     const TestPageModule = (await import(
       "./fixtures/search-box-fixture.astro"
     )) as {
@@ -65,32 +68,14 @@ describe("search modal", () => {
     document = dom.window.document;
     window = dom.window;
 
-    // Make JSDOM's window and document available globally
+    // globalThis.window is needed by @testing-library/user-event's clipboard
+    // cleanup (afterEach/afterAll registered at module import time).
+    // globalThis.document is needed by @testing-library/dom's waitFor.
+    // globalThis.requestAnimationFrame is needed by userEvent internals.
+    // These are test-utility requirements, not search-box.ts requirements.
     globalThis.window = window as unknown as typeof globalThis & Window;
     globalThis.document = document;
-    Object.defineProperty(globalThis, "navigator", {
-      configurable: true,
-      value: window.navigator,
-      writable: true,
-    });
-
-    // Set up mocks
     globalThis.requestAnimationFrame = window.requestAnimationFrame;
-    globalThis.requestIdleCallback =
-      window.requestIdleCallback ||
-      ((cb: IdleRequestCallback) => setTimeout(cb, 1));
-
-    // Set up globalThis event listeners
-    globalThis.addEventListener = window.addEventListener.bind(window);
-    globalThis.removeEventListener = window.removeEventListener.bind(window);
-    globalThis.dispatchEvent = window.dispatchEvent.bind(window);
-
-    // Add DOM globals required by search-box.ts (class extends HTMLElement,
-    // customElements.define, etc.)
-    globalThis.HTMLElement = window.HTMLElement;
-    globalThis.HTMLInputElement = window.HTMLInputElement;
-    globalThis.HTMLButtonElement = window.HTMLButtonElement;
-    globalThis.customElements = window.customElements;
 
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
@@ -113,11 +98,12 @@ describe("search modal", () => {
     }
 
     // Reset modules to get a fresh search-box.ts instance each test
-    // (clears searchUIInstance/pagefindLoading instance state on the element)
     vi.resetModules();
 
-    // Import and initialize the SearchBox custom element
-    await initSearchBox(document);
+    controller = await initController(
+      document,
+      window as unknown as Window,
+    );
 
     cleanup = () => {
       const dialog = document.querySelector("dialog");
@@ -158,22 +144,20 @@ describe("search modal", () => {
   });
 
   describe("on Mac", () => {
-    it("sets Mac keyboard shortcut", ({ expect }) => {
+    beforeEach(async () => {
+      controller.destroy();
       Object.defineProperty(window.navigator, "userAgent", {
         configurable: true,
         value:
           "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
       });
+      controller = await initController(
+        document,
+        window as unknown as Window,
+      );
+    });
 
-      const searchBoxEl = document.querySelector("search-box");
-      // Reset the initialized flag so connectedCallback re-runs the UA check.
-      // The guard added to prevent duplicate setup on DOM reconnect blocks the
-      // second call without this reset.
-      (searchBoxEl as unknown as { initialized: boolean }).initialized = false;
-      (
-        searchBoxEl as unknown as { connectedCallback(): void }
-      )?.connectedCallback();
-
+    it("sets Mac keyboard shortcut", ({ expect }) => {
       const openBtn = document.querySelector("[data-open-search]");
       expect(openBtn?.getAttribute("aria-keyshortcuts")).toBe("Meta+K");
       expect(openBtn?.getAttribute("title")).toBe("Search: ⌘K");
@@ -272,7 +256,7 @@ describe("search modal", () => {
         value: link,
         writable: false,
       });
-      globalThis.dispatchEvent(clickEvent);
+      window.dispatchEvent(clickEvent);
 
       // Wait for the 100ms delay before modal closes
       await new Promise((resolve) => setTimeout(resolve, 110));
@@ -291,7 +275,7 @@ describe("search modal", () => {
         key: "k",
         metaKey: true,
       });
-      globalThis.dispatchEvent(keyEvent);
+      window.dispatchEvent(keyEvent);
 
       // eslint-disable-next-line @typescript-eslint/unbound-method
       expect(dialog?.showModal).toHaveBeenCalled();
@@ -312,7 +296,7 @@ describe("search modal", () => {
         key: "k",
         metaKey: true,
       });
-      globalThis.dispatchEvent(keyEvent);
+      window.dispatchEvent(keyEvent);
 
       // eslint-disable-next-line @typescript-eslint/unbound-method
       expect(dialog?.close).toHaveBeenCalled();
@@ -328,7 +312,7 @@ describe("search modal", () => {
         ctrlKey: true,
         key: "k",
       });
-      globalThis.dispatchEvent(keyEvent);
+      window.dispatchEvent(keyEvent);
 
       // eslint-disable-next-line @typescript-eslint/unbound-method
       expect(dialog?.showModal).toHaveBeenCalled();
@@ -483,31 +467,14 @@ describe("search functionality", () => {
     document = dom.window.document;
     window = dom.window;
 
-    // Make JSDOM's window and document available globally
+    // globalThis.window is needed by @testing-library/user-event's clipboard
+    // cleanup (afterEach/afterAll registered at module import time).
+    // globalThis.document is needed by @testing-library/dom's waitFor.
+    // globalThis.requestAnimationFrame is needed by userEvent internals.
+    // These are test-utility requirements, not search-box.ts requirements.
     globalThis.window = window as unknown as typeof globalThis & Window;
     globalThis.document = document;
-    Object.defineProperty(globalThis, "navigator", {
-      configurable: true,
-      value: window.navigator,
-      writable: true,
-    });
-
-    // Set up mocks
     globalThis.requestAnimationFrame = window.requestAnimationFrame;
-    globalThis.requestIdleCallback =
-      window.requestIdleCallback ||
-      ((cb: IdleRequestCallback) => setTimeout(cb, 1));
-
-    globalThis.addEventListener = window.addEventListener.bind(window);
-    globalThis.removeEventListener = window.removeEventListener.bind(window);
-    globalThis.dispatchEvent = window.dispatchEvent.bind(window);
-
-    // Add DOM globals required by search-box.ts (class extends HTMLElement,
-    // customElements.define, etc.)
-    globalThis.HTMLElement = window.HTMLElement;
-    globalThis.HTMLInputElement = window.HTMLInputElement;
-    globalThis.HTMLButtonElement = window.HTMLButtonElement;
-    globalThis.customElements = window.customElements;
 
     vi.stubGlobal("import.meta.env", {
       BASE_URL: "/",
@@ -532,8 +499,7 @@ describe("search functionality", () => {
     // Reset modules to clear search-box.ts instance state
     vi.resetModules();
 
-    // Import and initialize the SearchBox custom element
-    await initSearchBox(document);
+    await initController(document, window as unknown as Window);
 
     // Initialize user with fake timers AFTER DOM is set up
     user = userEvent.setup({

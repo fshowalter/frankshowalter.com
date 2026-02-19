@@ -128,7 +128,7 @@ the behavior class directly — eliminating all `globalThis` bridging and the
 - `initController` replaces `initSearchBox` and returns `SearchBoxController`
 - Mac UA test uses nested `describe`/`beforeEach`; no direct flag/property access on the element
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 

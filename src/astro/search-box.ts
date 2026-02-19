@@ -1,9 +1,14 @@
+// AIDEV-NOTE: Two-class split — SearchBoxController holds all behavior and is
+// instantiated directly in tests with (root, dom.window) to avoid bridging JSDOM
+// globals onto Node's globalThis. SearchBox is a thin web component shell that
+// delegates to SearchBoxController.
+//
 // AIDEV-NOTE: SearchBox uses the light DOM pattern (no Shadow DOM). All children —
 // the dialog and templates — live in the regular DOM so Tailwind classes work
-// without any workaround. connectedCallback() is the single initialization point.
+// without any workaround.
 //
 // AIDEV-NOTE: The open button lives in Backdrop.tsx outside <search-box>, so it is
-// found via document.querySelector(). All other elements use this.querySelector()
+// found via win.document.querySelector(). All other elements use root.querySelector()
 // which scopes lookups to the component's subtree.
 import { debounce } from "~/utils/debounce";
 
@@ -27,7 +32,7 @@ type SearchState =
   | { kind: "idle" }
   | { kind: "loading"; query: string };
 
-class SearchBox extends HTMLElement {
+export class SearchBoxController {
   private api = new PagefindAPI();
   private clearButton!: HTMLButtonElement;
   private clickHandler: ((e: MouseEvent) => void) | undefined;
@@ -39,7 +44,6 @@ class SearchBox extends HTMLElement {
   private debouncedSearch!: (query: string) => void;
   private emptyTemplate!: HTMLTemplateElement;
   private errorTemplate!: HTMLTemplateElement;
-  private initialized = false;
   private input!: HTMLInputElement;
   private iosListenerAttached = false;
   private keydownHandler: ((e: KeyboardEvent) => void) | undefined;
@@ -50,70 +54,81 @@ class SearchBox extends HTMLElement {
   private resultsContainer!: HTMLElement;
   private resultsCounter!: HTMLElement;
   private resultTemplate!: HTMLTemplateElement;
+  private root: Element;
   // AIDEV-NOTE: Generation counter replaces AbortController. Each search increments the
   // counter; stale results (from an older search that resolved late) are discarded by
   // comparing gen against the current counter after every await point.
   private searchGeneration = 0;
   private skeletonTemplate!: HTMLTemplateElement;
   private state: SearchState = { kind: "idle" };
+  private win: Window;
 
-  connectedCallback(): void {
-    // AIDEV-NOTE: Guard against duplicate initialization if the element is moved
-    // in the DOM (e.g. Astro view transitions). setupEventListeners() and the
-    // global keydown handler would otherwise be registered more than once.
-    if (this.initialized) return;
+  constructor(root: Element, win: Window) {
+    this.root = root;
+    this.win = win;
+  }
 
+  destroy(): void {
+    if (this.keydownHandler) {
+      this.win.removeEventListener("keydown", this.keydownHandler);
+    }
+    if (this.clickHandler) {
+      this.win.removeEventListener("click", this.clickHandler);
+    }
+  }
+
+  init(): void {
     // AIDEV-NOTE: The open button is in Backdrop.tsx, outside <search-box>,
-    // so it must be found with document.querySelector().
-    const openBtn = document.querySelector<HTMLButtonElement>(
+    // so it must be found with win.document.querySelector().
+    const openBtn = this.win.document.querySelector<HTMLButtonElement>(
       "button[data-open-search]",
     );
     if (!openBtn) return;
 
-    if (/(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent)) {
+    if (/(Mac|iPhone|iPod|iPad)/i.test(this.win.navigator.userAgent)) {
       openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
       openBtn.setAttribute("title", "Search: ⌘K");
     }
 
-    const closeBtn = this.querySelector<HTMLButtonElement>(
+    const closeBtn = this.root.querySelector<HTMLButtonElement>(
       "button[data-close-search]",
     );
-    const dialog = this.querySelector<HTMLDialogElement>("dialog");
-    const dialogFrame = this.querySelector<HTMLDivElement>(
+    const dialog = this.root.querySelector<HTMLDialogElement>("dialog");
+    const dialogFrame = this.root.querySelector<HTMLDivElement>(
       "div[data-dialog-frame]",
     );
 
     if (!closeBtn || !dialog || !dialogFrame) return;
 
     // Cache element refs — IDs prefixed with search-box- to avoid collisions
-    this.input = this.querySelector<HTMLInputElement>("#search-box-input")!;
+    this.input = this.root.querySelector<HTMLInputElement>("#search-box-input")!;
     this.clearButton =
-      this.querySelector<HTMLButtonElement>("#search-box-clear")!;
-    this.resultsCounter = this.querySelector<HTMLElement>(
+      this.root.querySelector<HTMLButtonElement>("#search-box-clear")!;
+    this.resultsCounter = this.root.querySelector<HTMLElement>(
       "#search-box-counter",
     )!;
-    this.resultsContainer = this.querySelector<HTMLElement>(
+    this.resultsContainer = this.root.querySelector<HTMLElement>(
       "#search-box-results",
     )!;
-    this.loadMoreWrapper = this.querySelector<HTMLElement>(
+    this.loadMoreWrapper = this.root.querySelector<HTMLElement>(
       "#search-box-load-more-wrapper",
     )!;
-    this.loadMoreButton = this.querySelector<HTMLButtonElement>(
+    this.loadMoreButton = this.root.querySelector<HTMLButtonElement>(
       "#search-box-load-more",
     )!;
 
     // AIDEV-NOTE: Template refs hold dynamic content HTML. Tailwind 4.x scans
     // <template> tags in .astro source files — classes are included in CSS output.
-    this.resultTemplate = this.querySelector<HTMLTemplateElement>(
+    this.resultTemplate = this.root.querySelector<HTMLTemplateElement>(
       "template[data-result-item]",
     )!;
-    this.skeletonTemplate = this.querySelector<HTMLTemplateElement>(
+    this.skeletonTemplate = this.root.querySelector<HTMLTemplateElement>(
       "template[data-skeleton]",
     )!;
-    this.emptyTemplate = this.querySelector<HTMLTemplateElement>(
+    this.emptyTemplate = this.root.querySelector<HTMLTemplateElement>(
       "template[data-empty]",
     )!;
-    this.errorTemplate = this.querySelector<HTMLTemplateElement>(
+    this.errorTemplate = this.root.querySelector<HTMLTemplateElement>(
       "template[data-error]",
     )!;
 
@@ -136,12 +151,11 @@ class SearchBox extends HTMLElement {
       void this.handleSearch(query);
     }, this.config.debounceTimeoutMs);
 
-    this.initialized = true;
     this.setupEventListeners();
 
     // ios safari doesn't bubble click events unless a parent has a listener
     if (!this.iosListenerAttached) {
-      document.body.addEventListener("click", () => {});
+      this.win.document.body.addEventListener("click", () => {});
       this.iosListenerAttached = true;
     }
 
@@ -157,7 +171,7 @@ class SearchBox extends HTMLElement {
       }
 
       if (
-        document.body.contains(event.target as Node) &&
+        this.win.document.body.contains(event.target as Node) &&
         !dialogFrame.contains(event.target as Node)
       ) {
         closeModal();
@@ -187,7 +201,7 @@ class SearchBox extends HTMLElement {
       }
 
       event?.stopPropagation();
-      globalThis.addEventListener("click", onClick);
+      this.win.addEventListener("click", onClick);
     };
 
     const closeModal = () => dialog.close();
@@ -197,7 +211,7 @@ class SearchBox extends HTMLElement {
     closeBtn.addEventListener("click", closeModal);
 
     dialog.addEventListener("close", () => {
-      globalThis.removeEventListener("click", onClick);
+      this.win.removeEventListener("click", onClick);
     });
 
     // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
@@ -209,26 +223,16 @@ class SearchBox extends HTMLElement {
       }
     };
 
-    globalThis.addEventListener("keydown", this.keydownHandler);
-  }
-
-  disconnectedCallback(): void {
-    if (this.keydownHandler) {
-      globalThis.removeEventListener("keydown", this.keydownHandler);
-    }
-    if (this.clickHandler) {
-      globalThis.removeEventListener("click", this.clickHandler);
-    }
-    this.initialized = false;
+    this.win.addEventListener("keydown", this.keydownHandler);
   }
 
   private announceToScreenReader(message: string): void {
-    const announcement = document.createElement("div");
+    const announcement = this.win.document.createElement("div");
     announcement.setAttribute("role", "status");
     announcement.setAttribute("aria-live", "polite");
     announcement.className = "sr-only";
     announcement.textContent = message;
-    document.body.append(announcement);
+    this.win.document.body.append(announcement);
     setTimeout(() => {
       announcement.remove();
     }, 1000);
@@ -438,7 +442,7 @@ class SearchBox extends HTMLElement {
 
     this.resultsCounter.textContent = formatCounter(total, query);
 
-    const ol = document.createElement("ol");
+    const ol = this.win.document.createElement("ol");
     for (const result of results) {
       ol.append(this.cloneResult(result));
     }
@@ -499,6 +503,26 @@ export function formatCounter(total: number, query: string): string {
   return `${total} results for "${query}"`;
 }
 
-if (!customElements.get("search-box")) {
-  customElements.define("search-box", SearchBox);
+// AIDEV-NOTE: Guard prevents ReferenceError when the module is imported in Node
+// (e.g. tests). HTMLElement and customElements are browser-only globals. Tests
+// instantiate SearchBoxController directly and never need SearchBox.
+if (typeof HTMLElement !== "undefined" && typeof customElements !== "undefined") {
+  class SearchBox extends HTMLElement {
+    private controller: SearchBoxController | undefined = undefined;
+
+    connectedCallback(): void {
+      if (this.controller) return;
+      this.controller = new SearchBoxController(this, globalThis);
+      this.controller.init();
+    }
+
+    disconnectedCallback(): void {
+      this.controller?.destroy();
+      this.controller = undefined;
+    }
+  }
+
+  if (!customElements.get("search-box")) {
+    customElements.define("search-box", SearchBox);
+  }
 }

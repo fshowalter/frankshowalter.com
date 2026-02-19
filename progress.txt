@@ -67,3 +67,33 @@ gets a fresh JSDOM so cleanup is unnecessary.
 - `formatCounter` unit tests in `search-box.spec.ts` used a `beforeAll` block with its own JSDOM; removing them and the `beforeAll` is safe because Stage 1 already covered all 3 branches via integration
 
 ---
+
+## 2026-02-19 - Stage 3: Extract SearchBoxController from search-box.ts
+
+- Extracted `SearchBoxController` class from `SearchBox` web component in `search-box.ts`
+- `SearchBoxController` takes `(root: Element, win: Window)` — all DOM/global references now use `this.win` and `this.root` instead of bare `document`/`globalThis`/`navigator`
+- `SearchBoxController.init()` contains all the logic from `connectedCallback()`
+- `SearchBoxController.destroy()` contains listener cleanup from `disconnectedCallback()`
+- `SearchBox` becomes a thin shell: `controller` instance replaces the `initialized` boolean guard
+- `SearchBox` class wrapped in `typeof HTMLElement !== "undefined"` guard so module loads in Node without `ReferenceError`
+- Replaced `initSearchBox()` with `initController(document, win)` in spec — returns `SearchBoxController`, bypasses web component shell
+- Mac UA test uses nested `describe`/`beforeEach`: outer beforeEach initializes controller, nested beforeEach calls `controller.destroy()`, sets UA, and re-initializes
+- Removed `HTMLElement`, `customElements`, `addEventListener`, `removeEventListener`, `dispatchEvent`, `navigator`, `requestIdleCallback`, and `HTMLInputElement`/`HTMLButtonElement` global assignments
+- Kept three globals needed by test utilities (not search-box.ts): `globalThis.window`, `globalThis.document`, `globalThis.requestAnimationFrame`
+- Changed `globalThis.dispatchEvent(...)` calls in tests to `window.dispatchEvent(...)` (JSDOM window local variable)
+
+**Files changed**:
+- `src/astro/search-box.ts` — full rewrite with `SearchBoxController` export + thin `SearchBox` shell
+- `src/astro/search-box.spec.ts` — `initController` replaces `initSearchBox`, Mac UA test restructured, globalThis bridging removed
+
+**Missing permissions**: None
+
+**Learnings for future iterations:**
+- `@testing-library/user-event` registers `afterEach(()=>resetClipboardStubOnView(globalThis.window))` at module import time — `globalThis.window` MUST be set or the cleanup crashes. This is not documented in the SPEC.
+- `@testing-library/dom`'s `waitFor` requires `globalThis.document` to be set; it calls `getDocument()` which checks `typeof document === 'undefined'`
+- `perfectionist/sort-classes` sorts class members alphabetically case-insensitively; new fields `root` and `win` belong after all r-e-s-u-l-t* fields and before `s` (state)
+- `unicorn/prefer-global-this` prefers `globalThis` over `window` in the web component shell; `unicorn/no-null` prefers `undefined` over `null` for optional class fields
+- Wrapping `class SearchBox extends HTMLElement` in `if (typeof HTMLElement !== "undefined")` allows the module to load in Node.js without `ReferenceError` while still registering the custom element in browsers
+- The SPEC's claim "only requestAnimationFrame requires an explicit globalThis assignment" was incomplete: `globalThis.window` (for userEvent clipboard) and `globalThis.document` (for waitFor) are also needed
+
+---
