@@ -83,3 +83,32 @@
   - Removing the `if (!this.elements) return;` guards is safe once `elements` is non-optional in the constructor — TypeScript would otherwise flag them as dead code.
 
 ---
+
+## 2026-02-19 - Stage 4: Simplify Cancellation and Consolidate Event Handling
+
+- What was implemented:
+  - Replaced `AbortController` pattern in `SearchUI` with a generation counter (`private searchGeneration = 0`). Each `handleSearch()` call increments the counter and captures the value; after every `await` point, a stale check (`gen !== this.searchGeneration`) returns early, discarding results from superseded searches.
+  - Removed `abortController` field and all `AbortController` usage from `SearchUI.destroy()` and `handleSearch()`.
+  - Removed `signal` parameter from `PagefindAPI.search()` and all `AbortSignal`/`Promise.race` logic from `pagefind-api.ts`.
+  - Moved Enter key handler (blur input) from `search-modal.ts`'s global `keydown` listener into `SearchUI.setupEventListeners()` as a `keydown` listener on the input element.
+  - Added `event.stopPropagation()` to the clear button's `click` handler in `SearchUI.setupEventListeners()`, preventing the click from reaching the modal's global `onClick` handler.
+  - Removed the clear button ID special-case (`search-clear-button` check) from `search-modal.ts`'s `onClick` handler — now unnecessary.
+  - Added stale generation test: resolves search2 before search1; asserts only search2's results appear.
+  - Updated Enter key and clear button tests to open the modal first (waiting 100ms for SearchUI async init) and dispatch events on the element directly.
+  - Added `vi.resetModules()` to "search modal" `beforeEach` to clear `searchUIInstance` module-level state between tests (preventing stale DOM references from previous JSDOMs).
+  - Added 100ms pre-dispatch wait to "closes when clicking on a link" test (also needed by the `vi.resetModules()` change, same reason as "closes when clicking outside dialog frame").
+  - Removed `globalThis.AbortController = window.AbortController` from `beforeEach` (no longer needed).
+
+- Files changed:
+  - `src/astro/pagefind-api.ts` (simplified search method)
+  - `src/astro/search-ui.ts` (generation counter, Enter key handler, stopPropagation on clear)
+  - `src/astro/search-modal.ts` (removed clear button ID check and Enter key handler)
+  - `src/astro/AstroPageShell.spec.ts` (updated/added tests, vi.resetModules in beforeEach)
+  - `IMPLEMENTATION_PLAN.md` (Stage 4 → Complete)
+
+- **Learnings for future iterations:**
+  - Module-level state (`searchUIInstance`, `searchUILoading`) in `search-modal.ts` persists across tests in a describe block that doesn't call `vi.resetModules()`. Each JSDOM recreates the DOM but the old module instance holds stale element references. Fix: add `vi.resetModules()` before `await import("./search-modal.ts")` in `beforeEach`.
+  - When `vi.resetModules()` is added to a block's `beforeEach`, any test that opens the modal and immediately dispatches events needs to wait for the async SearchUI lazy-load to complete (onClick is only registered after the load). Use `await new Promise(resolve => setTimeout(resolve, 100))` before dispatching.
+  - The generation counter pattern is simpler than AbortController for cancelling async operations: increment on start, compare after each `await`, return early if stale.
+
+---

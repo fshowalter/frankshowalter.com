@@ -139,33 +139,14 @@ export class PagefindAPI {
    */
   async search(
     query: string,
-    options?: PagefindSearchOptions & { signal?: AbortSignal },
+    options?: PagefindSearchOptions,
   ): Promise<PagefindSearchResults> {
     if (!this.api) {
       throw new Error("Search API not initialized");
     }
 
-    // Extract signal from options
-    const { signal, ...searchOptions } = options || {};
-
-    // Create a promise that rejects on abort
-    const abortPromise = signal
-      ? new Promise<never>((_, reject) => {
-          signal.addEventListener("abort", () => {
-            reject(new DOMException("Search aborted", "AbortError"));
-          });
-        })
-      : undefined;
-
-    // Race between search and abort
-    const searchPromise = this.api.debouncedSearch
-      ? this.api.debouncedSearch(query, searchOptions, 0)
-      : this.api.search(query, searchOptions);
-
-    if (abortPromise) {
-      return Promise.race([searchPromise, abortPromise]);
-    }
-
-    return searchPromise;
+    return this.api.debouncedSearch
+      ? this.api.debouncedSearch(query, options, 0)
+      : this.api.search(query, options);
   }
 }

@@ -153,7 +153,7 @@ querying the DOM internally. Element IDs exist in exactly one JS location: `sear
 - Stale search test passes
 - `npm test` passes
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 

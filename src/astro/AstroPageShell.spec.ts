@@ -97,6 +97,10 @@ describe("AstroPageShell", () => {
         });
       }
 
+      // Reset modules to get a fresh search-modal.ts instance each test
+      // (clears searchUIInstance/searchUILoading module-level state)
+      vi.resetModules();
+
       // Import and initialize pageFind
       const { initPageFind } = await import("./search-modal.ts");
       initPageFind();
@@ -246,6 +250,9 @@ describe("AstroPageShell", () => {
       it("closes when clicking on a link", async ({ expect }) => {
         expect(dialog?.open).toBe(true);
 
+        // Wait for openModal's async SearchUI load so onClick is registered
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
         // Create and click a link
         const link = document.createElement("a");
         link.href = "/test";
@@ -324,33 +331,40 @@ describe("AstroPageShell", () => {
     });
 
     describe("when Enter is pressed in search input", () => {
-      it("blurs search input", ({ expect }) => {
-        // Use the actual input element from the rendered layout
-        const input = document.querySelector<HTMLInputElement>(
-          "#search-input",
-        );
+      it("blurs search input", async ({ expect }) => {
+        // Open modal first so SearchUI initializes and registers the keydown listener
+        const openBtn =
+          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+        openBtn?.click();
+
+        // Wait for SearchUI lazy-load and init to complete
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
+        const input = document.querySelector<HTMLInputElement>("#search-input");
         expect(input).toBeTruthy();
 
         const blurSpy = vi.spyOn(input!, "blur");
         input!.focus();
 
-        const keyEvent = new window.KeyboardEvent("keydown", {
-          bubbles: true,
-          key: "Enter",
-        });
-        Object.defineProperty(keyEvent, "target", {
-          value: input,
-          writable: false,
-        });
-        globalThis.dispatchEvent(keyEvent);
+        // Dispatch directly on the input element (handler is registered there by SearchUI)
+        input!.dispatchEvent(
+          new window.KeyboardEvent("keydown", { bubbles: true, key: "Enter" }),
+        );
 
         expect(blurSpy).toHaveBeenCalled();
       });
     });
 
     describe("when clear button is clicked", () => {
-      it("focuses search input", ({ expect }) => {
-        // Use the actual elements from the rendered layout
+      it("focuses search input", async ({ expect }) => {
+        // Open modal first so SearchUI initializes and registers the click listener
+        const openBtn =
+          document.querySelector<HTMLButtonElement>("[data-open-modal]");
+        openBtn?.click();
+
+        // Wait for SearchUI lazy-load and init to complete
+        await new Promise((resolve) => setTimeout(resolve, 100));
+
         const clearBtn = document.querySelector<HTMLButtonElement>(
           "#search-clear-button",
         );
@@ -363,21 +377,9 @@ describe("AstroPageShell", () => {
 
         const focusSpy = vi.spyOn(searchInput!, "focus");
 
-        // Open modal first to set up click listener
-        const openBtn =
-          document.querySelector<HTMLButtonElement>("[data-open-modal]");
-        openBtn?.click();
-
-        // Click the clear button
-        const clickEvent = new window.MouseEvent("click", {
-          bubbles: true,
-          cancelable: true,
-        });
-        Object.defineProperty(clickEvent, "target", {
-          value: clearBtn,
-          writable: false,
-        });
-        globalThis.dispatchEvent(clickEvent);
+        // Click the clear button directly (SearchUI's handler calls input.focus() and
+        // stopPropagation() so the modal's onClick handler is never reached)
+        clearBtn!.click();
 
         expect(focusSpy).toHaveBeenCalled();
       });
@@ -501,7 +503,6 @@ describe("AstroPageShell", () => {
 
       globalThis.HTMLInputElement = window.HTMLInputElement;
       globalThis.HTMLButtonElement = window.HTMLButtonElement;
-      globalThis.AbortController = window.AbortController;
 
       vi.stubGlobal("import.meta.env", {
         BASE_URL: "/",
@@ -796,6 +797,91 @@ describe("AstroPageShell", () => {
 
         const resultsDiv = document.querySelector("#search-results");
         expect(resultsDiv?.innerHTML).toBe("");
+      });
+
+      it("discards results from a stale search when a newer search resolves", async ({
+        expect,
+      }) => {
+        const queries = within(document.body);
+
+        // Deferred promises so we control resolution order
+        let resolveSearch1!: (value: PagefindSearchResults) => void;
+        let resolveSearch2!: (value: PagefindSearchResults) => void;
+        const search1Promise = new Promise<PagefindSearchResults>((resolve) => {
+          resolveSearch1 = resolve;
+        });
+        const search2Promise = new Promise<PagefindSearchResults>((resolve) => {
+          resolveSearch2 = resolve;
+        });
+
+        mockSearchAPI.search
+          .mockReturnValueOnce(search1Promise)
+          .mockReturnValueOnce(search2Promise);
+
+        await openSearchAndWaitForInit(queries);
+
+        // Trigger search 1 ("stale")
+        typeInSearchInput(queries, "stale");
+        await vi.advanceTimersByTimeAsync(150);
+
+        // Trigger search 2 ("fresh") — increments generation counter
+        typeInSearchInput(queries, "fresh");
+        await vi.advanceTimersByTimeAsync(150);
+
+        // Resolve search 2 first so its results are applied
+        resolveSearch2({
+          filters: {},
+          results: [
+            {
+              data: vi.fn().mockResolvedValue({
+                excerpt: "Fresh excerpt",
+                filters: {},
+                meta: { title: "Fresh Result" },
+                url: "https://www.franksmovielog.com/fresh",
+                weighted_locations: [],
+              }),
+              id: "fresh",
+              score: 1,
+              words: [],
+            },
+          ],
+          timings: { preload: 0, search: 0, total: 0 },
+          totalFilters: {},
+          unfilteredResultCount: 1,
+        });
+        await vi.runOnlyPendingTimersAsync();
+        await new Promise((resolve) => setTimeout(resolve, 10));
+
+        // Now resolve search 1 — it should be discarded (generation mismatch)
+        resolveSearch1({
+          filters: {},
+          results: [
+            {
+              data: vi.fn().mockResolvedValue({
+                excerpt: "Stale excerpt",
+                filters: {},
+                meta: { title: "Stale Result" },
+                url: "https://www.franksmovielog.com/stale",
+                weighted_locations: [],
+              }),
+              id: "stale",
+              score: 1,
+              words: [],
+            },
+          ],
+          timings: { preload: 0, search: 0, total: 0 },
+          totalFilters: {},
+          unfilteredResultCount: 1,
+        });
+        await vi.runOnlyPendingTimersAsync();
+        await new Promise((resolve) => setTimeout(resolve, 10));
+
+        // Only the fresh (search 2) results should be visible
+        await waitFor(() => {
+          const resultsDiv = document.querySelector("#search-results");
+          expect(resultsDiv?.textContent).toContain("Fresh Result");
+          expect(resultsDiv?.textContent).not.toContain("Stale Result");
+        });
       });
     });
 

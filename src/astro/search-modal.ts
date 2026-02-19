@@ -38,18 +38,6 @@ export function initPageFind(): void {
 
   /** Close the modal if a user clicks on a link or outside of the modal. */
   const onClick = (event: MouseEvent) => {
-    // Handle clear button focus first - refocus the input after clearing
-    if (
-      event.target instanceof HTMLButtonElement &&
-      event.target.id === "search-clear-button"
-    ) {
-      const input = document.querySelector(
-        "#search-input",
-      ) as HTMLInputElement;
-      input?.focus();
-      return; // Don't close the modal for clear button
-    }
-
     // Check if the target is an anchor element or contained within one
     const target = event.target as HTMLElement;
     const link = target.closest("a");
@@ -108,15 +96,6 @@ export function initPageFind(): void {
         void openModal();
       }
       e.preventDefault();
-    }
-
-    // Handle Enter key in search input
-    if (
-      e.target instanceof HTMLInputElement &&
-      e.target.id === "search-input" &&
-      e.key === "Enter"
-    ) {
-      e.target.blur();
     }
   });
 }

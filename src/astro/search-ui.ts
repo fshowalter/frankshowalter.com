@@ -34,7 +34,6 @@ type SearchState =
  * Search UI implementation
  */
 export class SearchUI {
-  private abortController: AbortController | undefined = undefined;
   private api: PagefindAPI;
   // Configuration
   private readonly config = {
@@ -47,6 +46,8 @@ export class SearchUI {
   private readonly debouncedSearch: (query: string) => void;
 
   private elements: SearchElements;
+
+  private searchGeneration = 0;
 
   private state: SearchState = { kind: "idle" };
 
@@ -64,15 +65,7 @@ export class SearchUI {
    * Clean up the search UI
    */
   async destroy(): Promise<void> {
-    // Abort any pending search
-    if (this.abortController) {
-      this.abortController.abort();
-      this.abortController = undefined;
-    }
-
-    // Clean up the API
     await this.api.destroy();
-
     this.state = { kind: "idle" };
   }
 
@@ -119,11 +112,6 @@ export class SearchUI {
    * Handle search
    */
   private async handleSearch(query: string): Promise<void> {
-    // Cancel any existing search
-    if (this.abortController) {
-      this.abortController.abort();
-    }
-
     const trimmedQuery = query.trim();
 
     if (!trimmedQuery) {
@@ -131,27 +119,24 @@ export class SearchUI {
       return;
     }
 
-    // Create new abort controller for this search
-    this.abortController = new AbortController();
+    // AIDEV-NOTE: Generation counter replaces AbortController. Each search increments the
+    // counter; stale results (from an older search that resolved late) are discarded by
+    // comparing gen against the current counter after every await point.
+    const gen = ++this.searchGeneration;
 
     this.state = { kind: "loading", query: trimmedQuery };
     this.render();
 
     try {
-      const searchResults = await this.api.search(trimmedQuery, {
-        signal: this.abortController?.signal,
-      });
-
-      // Ignore if this search was aborted or controller was destroyed
-      if (!this.abortController || this.abortController.signal.aborted) {
-        return;
-      }
+      const searchResults = await this.api.search(trimmedQuery);
+      if (gen !== this.searchGeneration) return;
 
       const resultData = await Promise.all(
         searchResults.results.slice(0, this.config.pageSize).map((r) => {
           return r.data();
         }),
       );
+      if (gen !== this.searchGeneration) return;
 
       this.state = resultData.length > 0 ? {
           allResults: searchResults.results,
@@ -162,11 +147,7 @@ export class SearchUI {
           visibleCount: resultData.length,
         } : { kind: "empty", query: trimmedQuery };
     } catch (error) {
-      if (error instanceof Error && error.name === "AbortError") {
-        // Search was cancelled, ignore
-        return;
-      }
-
+      if (gen !== this.searchGeneration) return;
       console.error("Search failed:", error);
       this.state = { kind: "error", message: "Search failed. Please try again." };
     }
@@ -386,8 +367,17 @@ export class SearchUI {
       this.debouncedSearch(target.value);
     });
 
-    // Clear button
-    clearButton.addEventListener("click", () => {
+    // Blur input on Enter (dismisses mobile keyboard)
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        input.blur();
+      }
+    });
+
+    // Clear button — stopPropagation prevents the click from reaching the modal's
+    // global onClick handler, which would otherwise attempt to close the modal.
+    clearButton.addEventListener("click", (e) => {
+      e.stopPropagation();
       this.clearSearch();
       input.focus();
     });
