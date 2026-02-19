@@ -39,6 +39,7 @@ class SearchBox extends HTMLElement {
   private debouncedSearch!: (query: string) => void;
   private emptyTemplate!: HTMLTemplateElement;
   private errorTemplate!: HTMLTemplateElement;
+  private initialized = false;
   private input!: HTMLInputElement;
   private iosListenerAttached = false;
   private keydownHandler: ((e: KeyboardEvent) => void) | undefined;
@@ -57,6 +58,11 @@ class SearchBox extends HTMLElement {
   private state: SearchState = { kind: "idle" };
 
   connectedCallback(): void {
+    // AIDEV-NOTE: Guard against duplicate initialization if the element is moved
+    // in the DOM (e.g. Astro view transitions). setupEventListeners() and the
+    // global keydown handler would otherwise be registered more than once.
+    if (this.initialized) return;
+
     // AIDEV-NOTE: The open button is in Backdrop.tsx, outside <search-box>,
     // so it must be found with document.querySelector().
     const openBtn = document.querySelector<HTMLButtonElement>(
@@ -130,6 +136,7 @@ class SearchBox extends HTMLElement {
       void this.handleSearch(query);
     }, this.config.debounceTimeoutMs);
 
+    this.initialized = true;
     this.setupEventListeners();
 
     // ios safari doesn't bubble click events unless a parent has a listener
@@ -212,6 +219,7 @@ class SearchBox extends HTMLElement {
     if (this.clickHandler) {
       globalThis.removeEventListener("click", this.clickHandler);
     }
+    this.initialized = false;
   }
 
   private announceToScreenReader(message: string): void {
