@@ -50,36 +50,83 @@ is deleted. `TestPage.astro` is renamed to match its purpose.
 
 ---
 
-## Stage 3: Replace hand-curated globals with `installWindowGlobals`
+## Stage 3: Extract `SearchBoxController` from `search-box.ts`
 
-**Goal**: Eliminate the brittle manually enumerated `globalThis.*` list.
+**Goal**: Separate logic from the web component shell so tests can instantiate
+the behavior class directly — eliminating all `globalThis` bridging and the
+`connectedCallback()` hack.
 
-**Changes**:
-1. Add `installWindowGlobals(win: DOMWindow)` helper at the top of
-   `search-box.spec.ts` (see SPEC.md for implementation). Key points:
-   - **No `key in globalThis` guard** — always overwrite so each test's
-     globals point to the current JSDOM instance, not the previous one.
-   - **Force `configurable: true`** on every descriptor so subsequent calls
-     can redefine properties that were installed in prior tests.
-2. In both `beforeEach` blocks, replace the hand-curated assignments with
-   `installWindowGlobals(window)`, keeping `requestAnimationFrame` as one
-   explicit line **after** the call:
+**Changes to `search-box.ts`**:
+1. Extract a `SearchBoxController` class with constructor
+   `(root: Element, win: Window)`.
+2. Move all logic from `connectedCallback()` into `SearchBoxController.init()`:
+   - Replace every bare `document` reference with `this.win.document`
+   - Replace every `globalThis` reference with `this.win`
+   - Replace `navigator` with `this.win.navigator`
+3. `SearchBoxController.destroy()` handles listener cleanup (currently in
+   `disconnectedCallback()`).
+4. Export `SearchBoxController`.
+5. `SearchBox` web component becomes a thin shell:
    ```ts
-   installWindowGlobals(window);
-   // requestAnimationFrame: explicit so userEvent always gets the JSDOM
-   // version regardless of what Node or the blanket helper may have set.
-   globalThis.requestAnimationFrame = window.requestAnimationFrame;
+   class SearchBox extends HTMLElement {
+     private controller: SearchBoxController | null = null;
+
+     connectedCallback(): void {
+       if (this.controller) return;
+       this.controller = new SearchBoxController(this, window);
+       this.controller.init();
+     }
+
+     disconnectedCallback(): void {
+       this.controller?.destroy();
+       this.controller = null;
+     }
+   }
    ```
-3. Remove the explicit `requestIdleCallback`, `HTMLInputElement`, and
-   `HTMLButtonElement` assignments; the blanket helper covers them.
-4. Add `vi.unstubAllGlobals()` to both `afterEach` blocks to clean up the
-   `import.meta.env` stub that `createDom()` sets via `vi.stubGlobal`.
+   Note: the `initialized` guard is replaced by `if (this.controller) return;`
+   — same effect, but the controller instance itself is the flag.
+6. Add an `AIDEV-NOTE` at the top of the file explaining the two-class split:
+   tests instantiate `SearchBoxController` directly with `dom.window` to avoid
+   bridging JSDOM globals onto Node's `globalThis`.
+
+**Changes to `search-box.spec.ts`**:
+1. Remove all `globalThis.*` assignments from both `beforeEach` blocks.
+2. Keep only `globalThis.requestAnimationFrame = window.requestAnimationFrame`
+   — `userEvent` needs it.
+3. Rename `initSearchBox` → `initController`, updating the body and return type:
+   ```ts
+   async function initController(document: Document, win: Window): Promise<SearchBoxController> {
+     const { SearchBoxController } = await import("./search-box.ts");
+     const root = document.querySelector("search-box")!;
+     const controller = new SearchBoxController(root, win);
+     controller.init();
+     return controller;
+   }
+   ```
+4. In each outer `describe` block, declare `let controller: SearchBoxController`
+   and assign it from the `initController` return value in `beforeEach`.
+5. At every `initController` call site, cast the jsdom window:
+   `initController(document, window as unknown as Window)`.
+6. Rewrite the Mac UA test using a nested `describe`/`beforeEach`:
+   - Outer `beforeEach` runs first (sets up DOM, calls `initController`, stores
+     the result in `controller`).
+   - Nested `beforeEach` inside `describe("on Mac")`:
+     1. Calls `controller.destroy()` to remove listeners registered by the
+        outer `beforeEach`.
+     2. Sets the Mac userAgent on the window:
+        `Object.defineProperty(window.navigator, "userAgent",
+        { configurable: true, value: "…Mac…" })`.
+     3. Re-calls `await initController(document, window as unknown as Window)`
+        and overwrites `controller`.
+   - `it("sets Mac keyboard shortcut")` becomes a plain assertion — no manual
+     element/flag access needed.
 
 **Success criteria**:
 - `npm test` passes
-- The hand-curated list is gone; `installWindowGlobals` is the only place
-  globals are installed (except the explicit `requestAnimationFrame` line)
-- Both `afterEach` blocks call `vi.unstubAllGlobals()`
+- No `globalThis` assignments remain except `requestAnimationFrame`
+- `search-box.ts` exports `SearchBoxController`
+- `initController` replaces `initSearchBox` and returns `SearchBoxController`
+- Mac UA test uses nested `describe`/`beforeEach`; no direct flag/property access on the element
 
 **Status**: Not Started
 
@@ -92,9 +139,8 @@ is deleted. `TestPage.astro` is renamed to match its purpose.
 
 **Changes**:
 1. Extract a `createDom()` async function (see SPEC.md) that covers everything
-   shared: Astro render → JSDOM → `installWindowGlobals` → explicit
-   `requestAnimationFrame` → dialog mocks → `vi.stubGlobal` →
-   `vi.resetModules` → `initSearchBox` → cleanup fn.
+   shared: Astro render → JSDOM → `requestAnimationFrame` → dialog mocks →
+   `vi.stubGlobal` → `vi.resetModules` → `initController` → cleanup fn.
 2. `describe("search modal")` `beforeEach`: call `createDom()`, assign
    destructured results.
 3. `describe("search functionality")` `beforeEach`:
@@ -107,8 +153,10 @@ is deleted. `TestPage.astro` is renamed to match its purpose.
    user = userEvent.setup({ advanceTimers: vi.advanceTimersByTime, document });
    ```
    Note: `vi.mock` is called inside `beforeEach`, not at module top level
-   (Vitest only hoists top-level calls). This is correct because `initSearchBox`
+   (Vitest only hoists top-level calls). This is correct because `initController`
    uses a dynamic `import()`, which consults the mock registry at call time.
+4. Remove the direct `window.close()` call from both `afterEach` blocks — it is
+   now part of the `cleanup()` function returned by `createDom()`.
 
 **Success criteria**:
 - `npm test` passes

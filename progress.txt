@@ -20,6 +20,25 @@
 
 ---
 
+## 2026-02-19 - Fix: Mac keyboard shortcut test
+
+The failure was NOT pre-existing. It was introduced by commit `181ea5c`
+("Add `initialized` guard to prevent duplicate `connectedCallback` setup on
+DOM reconnect"), which predated Stage 1.
+
+**Root cause**: `connectedCallback()` guards with `if (this.initialized) return;`.
+The test modifies `navigator.userAgent` then calls `connectedCallback()` again —
+but the guard returns immediately, so the UA check (and attribute setting) never runs.
+
+**Fix**: Reset `this.initialized = false` on the element before the second
+`connectedCallback()` call. Also removed the UA restoration code — each test
+gets a fresh JSDOM so cleanup is unnecessary.
+
+**Files changed**:
+- `src/astro/search-box.spec.ts` — reset `initialized`, remove UA restore
+
+---
+
 ## 2026-02-19 - Stage 2: Consolidate files + rename fixture
 
 - Renamed `src/astro/fixtures/TestPage.astro` → `src/astro/fixtures/search-box-fixture.astro`
@@ -35,7 +54,7 @@
 - `src/astro/AstroPageShell.spec.ts` — deleted
 - `src/astro/fixtures/TestPage.astro` — deleted
 
-**Pre-existing failure** (unchanged from Stage 1):
+**Pre-existing failure** (unchanged from Stage 1 — later found to NOT be pre-existing, see below):
 - "sets Mac keyboard shortcut" still fails — `aria-keyshortcuts` shows `Control+K` instead of `Meta+K`
 
 **Missing permissions**:
