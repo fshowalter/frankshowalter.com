@@ -19,7 +19,7 @@ export type PagefindResult = {
   words: number[];
 };
 
-export type PagefindSearchOptions = {
+type PagefindSearchOptions = {
   filters?: Record<string, string | string[]>;
   sort?: Record<string, "asc" | "desc">;
   verbose?: boolean;
