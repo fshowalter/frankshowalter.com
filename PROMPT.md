@@ -1,12 +1,13 @@
-1. Study @SPEC.md
-2. Study @IMPLEMENTATION_PLAN.md
-3. Study @progress.txt
-4. Pick the higest value task from @IMPLEMENTATION_PLAN and implement.
-5. Update @IMPLEMENTATION_PLAN
-6. Update @progress.txt
-7. Commit changes.
-8. Exit
-9. ONLY WORK ON ONE TASK AT A TIME
+1. Important: If you try and use a tool that requires permission, immediately print the request, including the required change to settings.json necessary to enable it, then exit.
+2. Study @SPEC.md
+3. Study @IMPLEMENTATION_PLAN.md
+4. Study @progress.txt
+5. Pick the higest value task from @IMPLEMENTATION_PLAN and implement.
+6. Update @IMPLEMENTATION_PLAN
+7. Update @progress.txt
+8. Commit changes.
+9. Exit
+10. ONLY WORK ON ONE TASK AT A TIME
 
 ## Progress Report Format
 

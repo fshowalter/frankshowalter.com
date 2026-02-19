@@ -1,14 +1,16 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir:*)",
+      "Bash(mkdir *)",
       "Bash(npm test:*)",
-      "Bash(npm run test:*)",
-      "Bash(npm run lint:*)",
-      "Bash(npm run knip)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
       "Bash(npm run check)",
+      "Bash(npm run test *)",
+      "Bash(npm run test:update *)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run lint:fix *)",
+      "Bash(npm run knip)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
       "WebSearch",
       "WebFetch(domain:caniuse.com)"
     ],

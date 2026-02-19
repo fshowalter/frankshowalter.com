@@ -39,9 +39,6 @@
 - `src/pages/__snapshots__/index.html` — regenerated
 - `src/pages/404/__snapshots__/index.html` — regenerated
 
-**Missing permissions:**
-- `npm run lint` and `npm run check` require user approval and could not be run. To enable: add `"Bash(npm run lint:*)"` and `"Bash(npm run check)"` (or similar) to the allowed commands in `.claude/settings.json`.
-
 **Learnings for future iterations:**
 - `class SearchBox extends HTMLElement` in the module means `HTMLElement` must be globally available when the module is imported. Tests must set `globalThis.HTMLElement = window.HTMLElement` before calling `await import("./search-box.ts")`.
 - `customElements.define()` must also use the JSDOM registry: set `globalThis.customElements = window.customElements` before importing. Each test creates a fresh JSDOM window so the registry is always empty at import time — no double-registration conflicts between tests.
