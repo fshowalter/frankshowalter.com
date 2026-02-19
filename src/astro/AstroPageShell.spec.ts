@@ -12,7 +12,7 @@ import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import type { PagefindAPI, PagefindSearchResults } from "./pagefind-api";
 
-// Create mock search API that will be injected into SearchUI
+// Create mock search API that will be injected into SearchBox
 const mockSearchAPI = {
   destroy: vi.fn(() => Promise.resolve()),
   init: vi.fn(() => Promise.resolve()),

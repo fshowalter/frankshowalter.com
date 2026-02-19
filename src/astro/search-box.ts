@@ -30,6 +30,7 @@ type SearchState =
 class SearchBox extends HTMLElement {
   private api = new PagefindAPI();
   private clearButton!: HTMLButtonElement;
+  private clickHandler: ((e: MouseEvent) => void) | undefined;
   private readonly config = {
     bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
     debounceTimeoutMs: 150,
@@ -39,6 +40,7 @@ class SearchBox extends HTMLElement {
   private emptyTemplate!: HTMLTemplateElement;
   private errorTemplate!: HTMLTemplateElement;
   private input!: HTMLInputElement;
+  private iosListenerAttached = false;
   private keydownHandler: ((e: KeyboardEvent) => void) | undefined;
   private loadMoreButton!: HTMLButtonElement;
   private loadMoreWrapper!: HTMLElement;
@@ -131,7 +133,10 @@ class SearchBox extends HTMLElement {
     this.setupEventListeners();
 
     // ios safari doesn't bubble click events unless a parent has a listener
-    document.body.addEventListener("click", () => {});
+    if (!this.iosListenerAttached) {
+      document.body.addEventListener("click", () => {});
+      this.iosListenerAttached = true;
+    }
 
     /** Close the modal if a user clicks on a link or outside of the modal. */
     const onClick = (event: MouseEvent) => {
@@ -151,6 +156,7 @@ class SearchBox extends HTMLElement {
         closeModal();
       }
     };
+    this.clickHandler = onClick;
 
     const openModal = async (event?: MouseEvent) => {
       dialog.showModal();
@@ -202,6 +208,9 @@ class SearchBox extends HTMLElement {
   disconnectedCallback(): void {
     if (this.keydownHandler) {
       globalThis.removeEventListener("keydown", this.keydownHandler);
+    }
+    if (this.clickHandler) {
+      globalThis.removeEventListener("click", this.clickHandler);
     }
   }
 
