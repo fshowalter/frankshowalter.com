@@ -46,7 +46,7 @@ is deleted. `TestPage.astro` is renamed to match its purpose.
 - `formatCounter` unit tests are gone; integration coverage from Stage 1
   covers all three branches
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 
