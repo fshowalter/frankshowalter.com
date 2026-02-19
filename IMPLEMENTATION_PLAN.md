@@ -121,14 +121,11 @@ the behavior class directly — eliminating all `globalThis` bridging and the
 6. Rewrite the Mac UA test using a nested `describe`/`beforeEach`:
    - Outer `beforeEach` runs first (sets up DOM, calls `initController`, stores
      the result in `controller`).
-   - Nested `beforeEach` inside `describe("on Mac")`:
-     1. Calls `controller.destroy()` to remove listeners registered by the
-        outer `beforeEach`.
-     2. Sets the Mac userAgent on the window:
-        `Object.defineProperty(window.navigator, "userAgent",
-{ configurable: true, value: "…Mac…" })`.
-     3. Re-calls `await initController(document, window as unknown as Window)`
-        and overwrites `controller`.
+   - Nested `beforeEach` inside `describe("on Mac")`: 1. Calls `controller.destroy()` to remove listeners registered by the
+     outer `beforeEach`. 2. Sets the Mac userAgent on the window:
+     `Object.defineProperty(window.navigator, "userAgent",
+{ configurable: true, value: "…Mac…" })`. 3. Re-calls `await initController(document, window as unknown as Window)`
+     and overwrites `controller`.
    - `it("sets Mac keyboard shortcut")` becomes a plain assertion — no manual
      element/flag access needed.
 
