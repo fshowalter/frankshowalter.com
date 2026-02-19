@@ -14,18 +14,21 @@ export type SearchElements = {
   resultsCounter: HTMLElement;
 };
 
-// Types for Search UI
-type SearchState = {
-  error: string | undefined;
-  filters: Record<string, Record<string, number>>;
-  hasSearched: boolean;
-  isSearching: boolean;
-  query: string;
-  results: PagefindDocument[];
-  selectedFilters: Record<string, string[]>;
-  totalResults: number;
-  visibleResults: number;
-};
+// AIDEV-NOTE: Discriminated union makes invalid states unrepresentable.
+// render() dispatches to one focused method per variant — no cross-branch conditionals.
+type SearchState =
+  | {
+      allResults: PagefindResult[];
+      kind: "results";
+      query: string;
+      results: PagefindDocument[];
+      total: number;
+      visibleCount: number;
+    }
+  | { kind: "empty"; query: string }
+  | { kind: "error"; message: string }
+  | { kind: "idle" }
+  | { kind: "loading"; query: string };
 
 /**
  * Search UI implementation
@@ -38,25 +41,18 @@ export class SearchUI {
     bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
     debounceTimeoutMs: 150,
     pageSize: 10,
-    resultsText: {
-      many_results: '[COUNT] results for "[SEARCH_TERM]"',
-      one_result: '[COUNT] result for "[SEARCH_TERM]"',
-      zero_results: 'No results for "[SEARCH_TERM]"',
-    },
     showImages: true,
   };
-  private currentSearchResults: PagefindResult[] = [];
   // Debounced search function to prevent memory leak
   private readonly debouncedSearch: (query: string) => void;
 
   private elements: SearchElements;
 
-  private state: SearchState;
+  private state: SearchState = { kind: "idle" };
 
   constructor(elements: SearchElements, api?: PagefindAPI) {
     this.elements = elements;
     this.api = api || new PagefindAPI();
-    this.state = this.getInitialState();
 
     // Create debounced search function once during construction
     this.debouncedSearch = debounce((query: string) => {
@@ -77,9 +73,7 @@ export class SearchUI {
     // Clean up the API
     await this.api.destroy();
 
-    // Clear results
-    this.currentSearchResults = [];
-    this.state = this.getInitialState();
+    this.state = { kind: "idle" };
   }
 
   /**
@@ -117,33 +111,8 @@ export class SearchUI {
   private clearSearch(): void {
     this.elements.input.value = "";
     this.elements.clearButton.classList.add("hidden");
-    this.updateState(this.getInitialState());
-    // Clear stored results when clearing search
-    this.currentSearchResults = [];
-    this.renderResults();
-  }
-
-  /**
-   * Get initial state
-   */
-  private getInitialState(): SearchState {
-    return {
-      error: undefined,
-      filters: {},
-      hasSearched: false,
-      isSearching: false,
-      query: "",
-      results: [],
-      selectedFilters: {},
-      totalResults: 0,
-      visibleResults: 0,
-    };
-  }
-
-  // Get remaining results from current search
-  private getRemainingResults(): PagefindResult[] {
-    // Return results that haven't been displayed yet
-    return this.currentSearchResults.slice(this.state.visibleResults);
+    this.state = { kind: "idle" };
+    this.render();
   }
 
   /**
@@ -165,12 +134,8 @@ export class SearchUI {
     // Create new abort controller for this search
     this.abortController = new AbortController();
 
-    this.updateState({
-      error: undefined,
-      hasSearched: true,
-      isSearching: true,
-    });
-    this.renderResults();
+    this.state = { kind: "loading", query: trimmedQuery };
+    this.render();
 
     try {
       const searchResults = await this.api.search(trimmedQuery, {
@@ -188,16 +153,14 @@ export class SearchUI {
         }),
       );
 
-      // Store the full results array for "load more" functionality
-      this.currentSearchResults = searchResults.results;
-
-      this.updateState({
-        filters: searchResults.filters,
-        isSearching: false,
-        results: resultData,
-        totalResults: searchResults.results.length,
-        visibleResults: resultData.length,
-      });
+      this.state = resultData.length > 0 ? {
+          allResults: searchResults.results,
+          kind: "results",
+          query: trimmedQuery,
+          results: resultData,
+          total: searchResults.results.length,
+          visibleCount: resultData.length,
+        } : { kind: "empty", query: trimmedQuery };
     } catch (error) {
       if (error instanceof Error && error.name === "AbortError") {
         // Search was cancelled, ignore
@@ -205,23 +168,23 @@ export class SearchUI {
       }
 
       console.error("Search failed:", error);
-      this.updateState({
-        error: "Search failed. Please try again.",
-        isSearching: false,
-      });
+      this.state = { kind: "error", message: "Search failed. Please try again." };
     }
 
-    this.renderResults();
+    this.render();
   }
 
   /**
    * Load more results
    */
   private async loadMoreResults(): Promise<void> {
-    const remainingResults = this.getRemainingResults();
-    if (remainingResults.length === 0) return;
+    if (this.state.kind !== "results") return;
 
-    const nextBatch = remainingResults.slice(0, this.config.pageSize);
+    const { allResults, query, results, total, visibleCount } = this.state;
+    const remaining = allResults.slice(visibleCount);
+    if (remaining.length === 0) return;
+
+    const nextBatch = remaining.slice(0, this.config.pageSize);
     const scrollPosition = this.elements.resultsContainer.scrollTop;
 
     try {
@@ -231,26 +194,94 @@ export class SearchUI {
         }),
       );
 
-      this.updateState({
-        results: [...this.state.results, ...resultData],
-        visibleResults: this.state.visibleResults + resultData.length,
-      });
-      this.renderResults();
+      this.state = {
+        allResults,
+        kind: "results",
+        query,
+        results: [...results, ...resultData],
+        total,
+        visibleCount: visibleCount + resultData.length,
+      };
+      this.render();
 
       // Restore scroll position
       this.elements.resultsContainer.scrollTop = scrollPosition;
 
       // Announce to screen readers that new results were loaded
-      const announcement = `${resultData.length} more results loaded`;
-      this.announceToScreenReader(announcement);
+      this.announceToScreenReader(`${resultData.length} more results loaded`);
     } catch (error) {
       console.error("Failed to load more results:", error);
-      this.showError("Failed to load more results.");
+      this.state = { kind: "error", message: "Failed to load more results." };
+      this.render();
     }
   }
 
   /**
+   * Dispatch rendering to the method for the current state.
+   * Contains only a switch — no inline HTML, no conditionals.
+   */
+  private render(): void {
+    switch (this.state.kind) {
+      case "empty": {
+        return this.renderEmpty();
+      }
+      case "error": {
+        return this.renderError();
+      }
+      case "idle": {
+        return this.renderIdle();
+      }
+      case "loading": {
+        return this.renderLoading();
+      }
+      case "results": {
+        return this.renderResultList();
+      }
+    }
+  }
+
+  private renderEmpty(): void {
+    if (this.state.kind !== "empty") return;
+    this.elements.resultsCounter.textContent = formatCounter(
+      0,
+      this.state.query,
+    );
+    this.elements.resultsContainer.innerHTML = `
+      <div class="px-4 py-8 text-center font-sans text-sm text-subtle">
+        No results found. Try adjusting your search terms.
+      </div>
+    `;
+    this.elements.loadMoreWrapper.classList.add("hidden");
+  }
+
+  private renderError(): void {
+    if (this.state.kind !== "error") return;
+    this.elements.resultsCounter.textContent = "";
+    this.elements.resultsContainer.innerHTML = `
+      <div class="px-4 py-8 text-center font-sans text-sm text-subtle">
+        ${this.state.message}
+      </div>
+    `;
+    this.elements.loadMoreWrapper.classList.add("hidden");
+  }
+
+  private renderIdle(): void {
+    this.elements.resultsCounter.textContent = "";
+    this.elements.resultsContainer.innerHTML = "";
+    this.elements.loadMoreWrapper.classList.add("hidden");
+  }
+
+  /**
    * Render loading skeleton
+   */
+  private renderLoading(): void {
+    this.elements.resultsCounter.textContent = "";
+    this.elements.resultsContainer.innerHTML = this.renderLoadingSkeleton();
+    this.elements.loadMoreWrapper.classList.add("hidden");
+  }
+
+  /**
+   * Render loading skeleton HTML
    */
   private renderLoadingSkeleton(): string {
     const skeletonItem = `
@@ -316,70 +347,25 @@ export class SearchUI {
   }
 
   /**
-   * Render search results
+   * Render result list — only called in "results" state.
+   * Owns load-more visibility since it only makes sense when results exist.
    */
-  private renderResults(): void {
-    const {
-      error,
-      hasSearched,
-      isSearching,
-      query,
-      results,
-      totalResults,
-      visibleResults,
-    } = this.state;
+  private renderResultList(): void {
+    if (this.state.kind !== "results") return;
+    const { allResults, query, results, total, visibleCount } = this.state;
 
-    // Update results counter
-    if (hasSearched && !isSearching) {
-      let counterText = "";
-      if (totalResults === 0) {
-        counterText = this.config.resultsText.zero_results;
-      } else if (totalResults === 1) {
-        counterText = this.config.resultsText.one_result;
-      } else {
-        counterText = this.config.resultsText.many_results;
-      }
+    this.elements.resultsCounter.textContent = formatCounter(total, query);
+    this.elements.resultsContainer.innerHTML = `<ol>${results
+      .map((result) => this.renderResultItem(result))
+      .join("")}</ol>`;
 
-      counterText = counterText
-        .replace("[COUNT]", totalResults.toString())
-        .replace("[SEARCH_TERM]", query);
-
-      this.elements.resultsCounter.textContent = counterText;
-    } else {
-      this.elements.resultsCounter.textContent = "";
-    }
-
-    // Update results container
-    if (error) {
-      this.elements.resultsContainer.innerHTML = `
-        <div class="px-4 py-8 text-center font-sans text-sm text-subtle">
-          ${error}
-        </div>
-      `;
-    } else if (isSearching) {
-      this.elements.resultsContainer.innerHTML = this.renderLoadingSkeleton();
-    } else if (results.length > 0) {
-      this.elements.resultsContainer.innerHTML = `<ol>${results
-        .map((result) => this.renderResultItem(result))
-        .join("")}</ol>`;
-    } else if (hasSearched) {
-      this.elements.resultsContainer.innerHTML = `
-        <div class="px-4 py-8 text-center font-sans text-sm text-subtle">
-          No results found. Try adjusting your search terms.
-        </div>
-      `;
-    } else {
-      this.elements.resultsContainer.innerHTML = "";
-    }
-
-    // Show/hide load more button
-    const remainingResults = this.getRemainingResults();
-    if (remainingResults.length > 0 && !isSearching) {
+    const remaining = allResults.length - visibleCount;
+    if (remaining > 0) {
       this.elements.loadMoreWrapper.classList.remove("hidden");
       this.elements.loadMoreButton.textContent = `Load ${Math.min(
-        remainingResults.length,
+        remaining,
         this.config.pageSize,
-      )} more (${totalResults - visibleResults} remaining)`;
+      )} more (${total - visibleCount} remaining)`;
     } else {
       this.elements.loadMoreWrapper.classList.add("hidden");
     }
@@ -393,7 +379,6 @@ export class SearchUI {
 
     input.addEventListener("input", (e) => {
       const target = e.target as HTMLInputElement;
-      this.updateState({ query: target.value });
 
       // Show/hide clear button based on input content
       clearButton.classList.toggle("hidden", !target.value);
@@ -417,17 +402,17 @@ export class SearchUI {
    * Show error message
    */
   private showError(message: string): void {
-    this.updateState({
-      error: message,
-      isSearching: false,
-    });
-    this.renderResults();
+    this.state = { kind: "error", message };
+    this.render();
   }
+}
 
-  /**
-   * Update component state
-   */
-  private updateState(updates: Partial<SearchState>): void {
-    this.state = { ...this.state, ...updates };
-  }
+/**
+ * Format the results counter text.
+ * Pure function — exported for unit testing.
+ */
+export function formatCounter(total: number, query: string): string {
+  if (total === 0) return `No results for "${query}"`;
+  if (total === 1) return `1 result for "${query}"`;
+  return `${total} results for "${query}"`;
 }

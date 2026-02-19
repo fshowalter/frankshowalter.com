@@ -121,7 +121,7 @@ querying the DOM internally. Element IDs exist in exactly one JS location: `sear
 - `formatCounter` is a pure exported function with a unit test
 - `npm test` passes
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 

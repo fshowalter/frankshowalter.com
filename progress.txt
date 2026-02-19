@@ -27,6 +27,32 @@
 
 ---
 
+## 2026-02-18 - Stage 3: Discriminated State Union and Render Dispatch
+
+- What was implemented:
+  - Replaced flat `SearchState` object with a discriminated union: `"idle"`, `"loading"`, `"results"`, `"empty"`, `"error"`. Invalid states are now unrepresentable.
+  - Removed `filters`, `selectedFilters`, `hasSearched`, `isSearching`, `visibleResults`, `totalResults` from state. Removed `getInitialState()` and `updateState()`.
+  - Moved `currentSearchResults` (full Pagefind result array) into the `"results"` variant as `allResults`; removed the class-level field.
+  - Renamed `renderResults()` → `render()`: now a pure switch dispatch with no inline HTML or conditionals.
+  - Extracted `renderIdle()`, `renderLoading()`, `renderResultList()`, `renderEmpty()`, `renderError()` — each focused and self-contained.
+  - Load-more visibility moved into `renderResultList()` (only meaningful when results exist).
+  - Extracted `formatCounter(total, query)` as a pure exported function.
+  - Created `src/astro/search-ui.spec.ts` with 3 unit tests for `formatCounter`.
+
+- Files changed:
+  - `src/astro/search-ui.ts` (rewritten)
+  - `src/astro/search-ui.spec.ts` (created)
+  - `IMPLEMENTATION_PLAN.md` (Stage 3 → Complete)
+
+- **Learnings for future iterations:**
+  - `perfectionist/sort-union-types` sorts union members alphabetically by their string representation — `npm run lint:fix` handles it automatically.
+  - `perfectionist/sort-modules` requires `export-class` before `export-function` — auto-fixed by lint:fix, so `formatCounter` ends up after the class even though it was written before it.
+  - `unicorn/switch-case-braces` requires braces on all `case` blocks; `unicorn/prefer-ternary` converts simple if/else to ternary — both auto-fixed.
+  - `perfectionist/sort-switch-case` requires switch cases sorted alphabetically — auto-fixed.
+  - The `render()` switch has no `default` branch because the discriminated union is exhaustive; TypeScript enforces this at compile time.
+
+---
+
 ## 2026-02-18 - Stage 2: Dependency Injection for Elements
 
 - What was implemented:
