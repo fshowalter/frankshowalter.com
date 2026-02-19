@@ -733,12 +733,14 @@ describe("AstroPageShell", () => {
         typeInSearchInput(queries, "test");
         await vi.advanceTimersByTimeAsync(150);
 
-        // Verify results are shown
+        // Verify results are shown and counter shows singular form
         await waitFor(() => {
           const results = queries.getByRole("region", {
             name: /search results/i,
           });
           expect(results.textContent).toContain("Test Title");
+          const counter = document.querySelector("#search-box-counter");
+          expect(counter?.textContent).toBe('1 result for "test"');
         });
 
         // Clear the input

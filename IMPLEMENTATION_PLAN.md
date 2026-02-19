@@ -20,7 +20,7 @@ for it to render — only the counter assertion is missing. No new test needed.
 - The singular counter string (`1 result for "…"`) is asserted somewhere in
   the integration suite
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 

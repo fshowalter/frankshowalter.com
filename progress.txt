@@ -1,0 +1,21 @@
+## 2026-02-19 - Stage 1: Add singular "1 result" integration test
+
+- Added counter assertion to "clears results when user clears the input" test in `AstroPageShell.spec.ts`
+- The test already mocked exactly 1 result; only the counter assertion was missing
+- Counter now asserts `'1 result for "test"'` after results render, before the clear step
+- This covers the `formatCounter` singular branch via integration (prerequisite for Stage 2)
+
+**Files changed**:
+- `src/astro/AstroPageShell.spec.ts` — added 2 lines inside `waitFor` block
+
+**Pre-existing failure** (unrelated to Stage 1):
+- "sets Mac keyboard shortcut" test was already failing before this change — `aria-keyshortcuts` shows `Control+K` instead of `Meta+K`; likely a JSDOM user-agent detection issue
+
+**Missing permissions**: None
+
+**Learnings for future iterations:**
+- The `waitFor` block already existed and waited for result render — the counter assertion fits naturally inside it (avoids a second `waitFor`)
+- Pre-existing "sets Mac keyboard shortcut" failure: the test re-initializes the element after mocking the `userAgent`, but `connectedCallback` may not see the mocked value because the navigator property override isn't reflected in JSDOM's internal state correctly; may need investigation in a future pass
+- Stage 2 can now proceed: integration covers all 3 `formatCounter` branches (0, 1, N results)
+
+---
