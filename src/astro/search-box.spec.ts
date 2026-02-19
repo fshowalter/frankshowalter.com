@@ -159,19 +159,17 @@ describe("search modal", () => {
 
   describe("on Mac", () => {
     it("sets Mac keyboard shortcut", ({ expect }) => {
-      // Re-initialize with Mac user agent
-      const originalUserAgent = Object.getOwnPropertyDescriptor(
-        window.navigator,
-        "userAgent",
-      );
       Object.defineProperty(window.navigator, "userAgent", {
         configurable: true,
         value:
           "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
       });
 
-      // Call connectedCallback again to pick up the new userAgent
       const searchBoxEl = document.querySelector("search-box");
+      // Reset the initialized flag so connectedCallback re-runs the UA check.
+      // The guard added to prevent duplicate setup on DOM reconnect blocks the
+      // second call without this reset.
+      (searchBoxEl as unknown as { initialized: boolean }).initialized = false;
       (
         searchBoxEl as unknown as { connectedCallback(): void }
       )?.connectedCallback();
@@ -179,15 +177,6 @@ describe("search modal", () => {
       const openBtn = document.querySelector("[data-open-search]");
       expect(openBtn?.getAttribute("aria-keyshortcuts")).toBe("Meta+K");
       expect(openBtn?.getAttribute("title")).toBe("Search: ⌘K");
-
-      // Restore original user agent
-      if (originalUserAgent) {
-        Object.defineProperty(
-          window.navigator,
-          "userAgent",
-          originalUserAgent,
-        );
-      }
     });
   });
 
