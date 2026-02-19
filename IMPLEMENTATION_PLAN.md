@@ -164,4 +164,4 @@ the behavior class directly — eliminating all `globalThis` bridging and the
 - The only differences between the two `beforeEach` blocks are: fake timers,
   mock injection, and `userEvent` init
 
-**Status**: Not Started
+**Status**: Complete

@@ -97,3 +97,26 @@ gets a fresh JSDOM so cleanup is unnecessary.
 - The SPEC's claim "only requestAnimationFrame requires an explicit globalThis assignment" was incomplete: `globalThis.window` (for userEvent clipboard) and `globalThis.document` (for waitFor) are also needed
 
 ---
+
+## 2026-02-19 - Stage 4: Extract shared `createDom()` setup helper
+
+- Extracted `createDom()` async helper that covers all shared setup: Astro render → JSDOM → globalThis test-utility assignments → dialog mocks → `vi.stubGlobal` → `vi.resetModules` → `initController` → cleanup fn
+- `cleanup()` now calls `window.close()` — removed it from both `afterEach` blocks
+- Both `describe` blocks reduced to a one-line `beforeEach` (plus block-specific setup for "search functionality": fake timers, mock injection, userEvent)
+- Removed `let dom: JSDOMType` from both describe blocks (unused)
+- `createDom()` returns `{ cleanup, controller, document, window }` (sorted alphabetically, `dom` not returned since unused at call sites)
+- `createDom` appears before `initController` in source (c < i alphabetically); hoisting makes this safe since both are `async function` declarations
+
+**Files changed**:
+- `src/astro/search-box.spec.ts` — added `createDom()`, simplified both `beforeEach` blocks
+
+**Missing permissions**: None
+
+**Learnings for future iterations:**
+- `perfectionist/sort-modules` requires alphabetical ordering of top-level function declarations — `createDom` (c) before `initController` (i); `async function` hoisting makes this work even when `createDom` calls `initController`
+- `perfectionist/sort-object-types` and `perfectionist/sort-objects` enforce alphabetical key order in both type annotations and object literals/destructuring patterns
+- When a function is accidentally removed during an edit (e.g., `initController` was removed from the old_string but not re-added in new_string), tests fail immediately — the missing function shows up as a call site error at runtime
+- When removing a variable from outer `let` declarations AND from destructuring, make sure to also remove it from the function's return type and return statement — otherwise TypeScript errors remain
+- The `JSDOMType` import alias (`JSDOM as JSDOMType`) can be removed when `dom` is no longer held in outer scope; `JSDOM` value import is still needed for the `new JSDOM(...)` call inside `createDom()`
+
+---

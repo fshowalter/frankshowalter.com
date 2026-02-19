@@ -1,5 +1,5 @@
 import type { AstroComponentFactory } from "astro/runtime/server/index.js";
-import type { DOMWindow, JSDOM as JSDOMType } from "jsdom";
+import type { DOMWindow } from "jsdom";
 import type { Mocked } from "vitest";
 
 import { getContainerRenderer as reactContainerRenderer } from "@astrojs/react";
@@ -20,6 +20,86 @@ const mockSearchAPI = {
   search: vi.fn(),
 } as unknown as Mocked<PagefindAPI>;
 
+// AIDEV-NOTE: createDom() is the shared async setup for both describe blocks.
+// It handles: Astro render → JSDOM → globalThis test-utility assignments →
+// dialog mocks → vi.stubGlobal → vi.resetModules → initController → cleanup fn.
+// The only differences between the two beforeEach blocks are fake timers,
+// mock injection, and userEvent init — everything else lives here.
+async function createDom(): Promise<{
+  cleanup: () => void;
+  controller: SearchBoxController;
+  document: Document;
+  window: DOMWindow;
+}> {
+  // Render the test page using Astro's container API
+  const renderers = await loadRenderers([reactContainerRenderer()]);
+  const container = await AstroContainer.create({ renderers });
+
+  const TestPageModule = (await import(
+    "./fixtures/search-box-fixture.astro"
+  )) as {
+    default: AstroComponentFactory;
+  };
+  const TestPage = TestPageModule.default;
+
+  const result = await container.renderToString(TestPage, {
+    partial: false,
+    request: new Request(`https://www.franksmovielog.com/test`),
+  });
+
+  // Create JSDOM instance with the rendered HTML
+  const dom = new JSDOM(result, {
+    pretendToBeVisual: true,
+    runScripts: "dangerously",
+    url: "https://www.franksmovielog.com/test",
+  });
+
+  const document = dom.window.document;
+  const window = dom.window;
+
+  // globalThis.window is needed by @testing-library/user-event's clipboard
+  // cleanup (afterEach/afterAll registered at module import time).
+  // globalThis.document is needed by @testing-library/dom's waitFor.
+  // globalThis.requestAnimationFrame is needed by userEvent internals.
+  // These are test-utility requirements, not search-box.ts requirements.
+  globalThis.window = window as unknown as typeof globalThis & Window;
+  globalThis.document = document;
+  globalThis.requestAnimationFrame = window.requestAnimationFrame;
+
+  vi.stubGlobal("import.meta.env", { BASE_URL: "/" });
+
+  // Mock dialog methods
+  const dialog = document.querySelector("dialog") as HTMLDialogElement;
+  if (dialog) {
+    dialog.showModal = vi.fn().mockImplementation(function (
+      this: HTMLDialogElement,
+    ) {
+      this.open = true;
+    });
+    dialog.close = vi.fn().mockImplementation(function (
+      this: HTMLDialogElement,
+    ) {
+      this.open = false;
+      this.dispatchEvent(new window.Event("close"));
+    });
+  }
+
+  // Reset modules to get a fresh search-box.ts instance each test
+  vi.resetModules();
+
+  const controller = await initController(document, window as unknown as Window);
+
+  const cleanup = () => {
+    const d = document.querySelector("dialog");
+    if (d) {
+      d.open = false;
+    }
+    window.close();
+  };
+
+  return { cleanup, controller, document, window };
+}
+
 // Helper: instantiate SearchBoxController directly, bypassing the web component shell.
 // Uses a dynamic import so vi.mock("./pagefind-api") — called inside beforeEach — is
 // already registered before search-box.ts imports it.
@@ -35,87 +115,17 @@ async function initController(
 }
 
 describe("search modal", () => {
-  let dom: JSDOMType;
   let document: Document;
   let window: DOMWindow;
   let cleanup: () => void;
   let controller: SearchBoxController;
 
   beforeEach(async () => {
-    // Render the test page using Astro's container API
-    const renderers = await loadRenderers([reactContainerRenderer()]);
-    const container = await AstroContainer.create({ renderers });
-
-    const TestPageModule = (await import(
-      "./fixtures/search-box-fixture.astro"
-    )) as {
-      default: AstroComponentFactory;
-    };
-    const TestPage = TestPageModule.default;
-
-    const result = await container.renderToString(TestPage, {
-      partial: false,
-      request: new Request(`https://www.franksmovielog.com/test`),
-    });
-
-    // Create JSDOM instance with the rendered HTML
-    dom = new JSDOM(result, {
-      pretendToBeVisual: true,
-      runScripts: "dangerously",
-      url: "https://www.franksmovielog.com/test",
-    });
-
-    document = dom.window.document;
-    window = dom.window;
-
-    // globalThis.window is needed by @testing-library/user-event's clipboard
-    // cleanup (afterEach/afterAll registered at module import time).
-    // globalThis.document is needed by @testing-library/dom's waitFor.
-    // globalThis.requestAnimationFrame is needed by userEvent internals.
-    // These are test-utility requirements, not search-box.ts requirements.
-    globalThis.window = window as unknown as typeof globalThis & Window;
-    globalThis.document = document;
-    globalThis.requestAnimationFrame = window.requestAnimationFrame;
-
-    vi.stubGlobal("import.meta.env", {
-      BASE_URL: "/",
-    });
-
-    // Mock dialog methods
-    const dialog = document.querySelector("dialog") as HTMLDialogElement;
-    if (dialog) {
-      dialog.showModal = vi.fn().mockImplementation(function (
-        this: HTMLDialogElement,
-      ) {
-        this.open = true;
-      });
-      dialog.close = vi.fn().mockImplementation(function (
-        this: HTMLDialogElement,
-      ) {
-        this.open = false;
-        this.dispatchEvent(new window.Event("close"));
-      });
-    }
-
-    // Reset modules to get a fresh search-box.ts instance each test
-    vi.resetModules();
-
-    controller = await initController(
-      document,
-      window as unknown as Window,
-    );
-
-    cleanup = () => {
-      const dialog = document.querySelector("dialog");
-      if (dialog) {
-        dialog.open = false;
-      }
-    };
+    ({ cleanup, controller, document, window } = await createDom());
   });
 
   afterEach(() => {
     cleanup();
-    window.close();
     vi.clearAllMocks();
     vi.unstubAllGlobals();
   });
@@ -375,7 +385,6 @@ describe("search modal", () => {
 });
 
 describe("search functionality", () => {
-  let dom: JSDOMType;
   let document: Document;
   let window: DOMWindow;
   let cleanup: () => void;
@@ -417,7 +426,10 @@ describe("search functionality", () => {
     // Use fake timers
     vi.useFakeTimers({ shouldAdvanceTime: true });
 
-    // Re-setup mocks after reset — inject mockSearchAPI so SearchBox uses it
+    // Re-setup mocks after reset — inject mockSearchAPI so SearchBox uses it.
+    // AIDEV-NOTE: vi.mock is called here (not at module top level) because Vitest
+    // only hoists top-level vi.mock calls. initController uses a dynamic import()
+    // which consults the mock registry at call time, so this order is correct.
     vi.mock("./pagefind-api", async () => {
       const actual =
         await vi.importActual<typeof import("./pagefind-api")>(
@@ -441,83 +453,17 @@ describe("search functionality", () => {
       unfilteredResultCount: 0,
     });
 
-    // Render the test page using Astro's container API
-    const renderers = await loadRenderers([reactContainerRenderer()]);
-    const container = await AstroContainer.create({ renderers });
-
-    const TestPageModule = (await import(
-      "./fixtures/search-box-fixture.astro"
-    )) as {
-      default: AstroComponentFactory;
-    };
-    const TestPage = TestPageModule.default;
-
-    const result = await container.renderToString(TestPage, {
-      partial: false,
-      request: new Request(`https://www.franksmovielog.com/test`),
-    });
-
-    // Create JSDOM instance with the rendered HTML
-    dom = new JSDOM(result, {
-      pretendToBeVisual: true,
-      runScripts: "dangerously",
-      url: "https://www.franksmovielog.com/test",
-    });
-
-    document = dom.window.document;
-    window = dom.window;
-
-    // globalThis.window is needed by @testing-library/user-event's clipboard
-    // cleanup (afterEach/afterAll registered at module import time).
-    // globalThis.document is needed by @testing-library/dom's waitFor.
-    // globalThis.requestAnimationFrame is needed by userEvent internals.
-    // These are test-utility requirements, not search-box.ts requirements.
-    globalThis.window = window as unknown as typeof globalThis & Window;
-    globalThis.document = document;
-    globalThis.requestAnimationFrame = window.requestAnimationFrame;
-
-    vi.stubGlobal("import.meta.env", {
-      BASE_URL: "/",
-    });
-
-    // Mock dialog methods
-    const dialog = document.querySelector("dialog") as HTMLDialogElement;
-    if (dialog) {
-      dialog.showModal = vi.fn().mockImplementation(function (
-        this: HTMLDialogElement,
-      ) {
-        this.open = true;
-      });
-      dialog.close = vi.fn().mockImplementation(function (
-        this: HTMLDialogElement,
-      ) {
-        this.open = false;
-        this.dispatchEvent(new window.Event("close"));
-      });
-    }
-
-    // Reset modules to clear search-box.ts instance state
-    vi.resetModules();
-
-    await initController(document, window as unknown as Window);
+    ({ cleanup, document, window } = await createDom());
 
     // Initialize user with fake timers AFTER DOM is set up
     user = userEvent.setup({
       advanceTimers: vi.advanceTimersByTime,
       document,
     });
-
-    cleanup = () => {
-      const dialog = document.querySelector("dialog");
-      if (dialog) {
-        dialog.open = false;
-      }
-    };
   });
 
   afterEach(() => {
     cleanup();
-    window.close();
     vi.clearAllMocks();
     vi.useRealTimers();
     vi.unstubAllGlobals();
