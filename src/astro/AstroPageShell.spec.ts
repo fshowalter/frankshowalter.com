@@ -10,15 +10,14 @@ import { loadRenderers } from "astro:container";
 import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
-import type { SearchAPI } from "./search-ui";
-import type { PagefindSearchResults } from "./search-ui";
+import type { PagefindAPI, PagefindSearchResults } from "./pagefind-api";
 
 // Create mock search API that will be injected into SearchUI
 const mockSearchAPI = {
   destroy: vi.fn(() => Promise.resolve()),
   init: vi.fn(() => Promise.resolve()),
   search: vi.fn(),
-} as unknown as Mocked<SearchAPI>;
+} as unknown as Mocked<PagefindAPI>;
 
 describe("AstroPageShell", () => {
   describe("search modal", () => {
@@ -98,11 +97,10 @@ describe("AstroPageShell", () => {
       }
 
       // Import and initialize pageFind
-      const { initPageFind } = await import("./search.ts");
+      const { initPageFind } = await import("./search-modal.ts");
       initPageFind();
 
       cleanup = () => {
-        delete document.body.dataset.searchModalOpen;
         const dialog = document.querySelector("dialog");
         if (dialog) {
           dialog.open = false;
@@ -154,7 +152,7 @@ describe("AstroPageShell", () => {
 
         // Re-import and initialize
         vi.resetModules();
-        const { initPageFind } = await import("./search.ts");
+        const { initPageFind } = await import("./search-modal.ts");
         initPageFind();
 
         const openBtn = document.querySelector("[data-open-modal]");
@@ -182,9 +180,7 @@ describe("AstroPageShell", () => {
 
         // eslint-disable-next-line @typescript-eslint/unbound-method
         expect(dialog?.showModal).toHaveBeenCalled();
-        expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(
-          true,
-        );
+        expect(dialog?.open).toBe(true);
       });
     });
 
@@ -271,20 +267,6 @@ describe("AstroPageShell", () => {
         expect(dialog?.close).toHaveBeenCalled();
       });
 
-      it("removes data-search-modal-open attribute when dialog closes", ({
-        expect,
-      }) => {
-        expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(
-          true,
-        );
-
-        // Trigger the close event (the mock close() already dispatches it)
-        dialog?.close();
-
-        expect(Object.hasOwn(document.body.dataset, "searchModalOpen")).toBe(
-          false,
-        );
-      });
     });
 
     describe("when Cmd+K is pressed", () => {
@@ -444,7 +426,7 @@ describe("AstroPageShell", () => {
       // Use fake timers
       vi.useFakeTimers({ shouldAdvanceTime: true });
 
-      // Reset modules to clear search.ts state
+      // Reset modules to clear search-modal.ts state
       vi.resetModules();
 
       // Re-setup mocks after reset
@@ -455,7 +437,7 @@ describe("AstroPageShell", () => {
           ...actual,
           SearchUI: class extends actual.SearchUI {
             constructor() {
-              super(mockSearchAPI as SearchAPI);
+              super(mockSearchAPI as PagefindAPI);
             }
           },
         };
@@ -541,7 +523,7 @@ describe("AstroPageShell", () => {
       }
 
       // Import and initialize search
-      const { initPageFind } = await import("./search.ts");
+      const { initPageFind } = await import("./search-modal.ts");
       initPageFind();
 
       // Initialize user with fake timers AFTER DOM is set up
@@ -551,7 +533,6 @@ describe("AstroPageShell", () => {
       });
 
       cleanup = () => {
-        delete document.body.dataset.searchModalOpen;
         const dialog = document.querySelector("dialog");
         if (dialog) {
           dialog.open = false;

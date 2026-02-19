@@ -72,7 +72,6 @@ export function initPageFind(): void {
 
   const openModal = async (event?: MouseEvent) => {
     dialog.showModal();
-    document.body.toggleAttribute("data-search-modal-open", true);
 
     // Lazy-load SearchUI on first open, prevent race condition with loading flag
     if (!searchUIInstance && !searchUILoading) {
@@ -97,7 +96,6 @@ export function initPageFind(): void {
   closeBtn.addEventListener("click", closeModal);
 
   dialog.addEventListener("close", () => {
-    document.body.toggleAttribute("data-search-modal-open", false);
     globalThis.removeEventListener("click", onClick);
   });
 

@@ -70,22 +70,14 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     }
     <title>{pageTitle}</title>
   </head>
-  <body
-    class={`
-      h-full
-      data-search-modal-open:overflow-hidden
-      data-search-modal-open:before:fixed data-search-modal-open:before:inset-0
-      data-search-modal-open:before:z-search-backdrop
-      data-search-modal-open:before:backdrop-blur-xs
-    `}
-  >
+  <body class="h-full">
     <slot />
     <dialog
       aria-label="Search"
       class={`
         fixed inset-x-4 m-auto h-screen w-full rounded-lg border border-default
         bg-default shadow-lg
-        backdrop:bg-[#000] backdrop:opacity-40
+        backdrop:bg-[#000] backdrop:opacity-40 backdrop:backdrop-blur-xs
         open:flex open:flex-col
         tablet:mx-auto tablet:mt-16 tablet:h-min
         tablet:max-h-[min(100vh-128px,900px)]
@@ -247,4 +239,4 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     </dialog>
   </body>
 </html>
-<script src="./search.ts"></script>
+<script src="./search-modal.ts"></script>
