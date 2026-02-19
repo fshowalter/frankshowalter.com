@@ -1,42 +1,3 @@
-/**
- * Search results returned by Pagefind API.
- */
-export type PagefindSearchResults = {
-  filters: Record<string, Record<string, number>>;
-  results: PagefindResult[];
-  timings: {
-    preload: number;
-    search: number;
-    total: number;
-  };
-  totalFilters: Record<string, Record<string, number>>;
-  unfilteredResultCount: number;
-};
-
-type PagefindAnchor = {
-  element: string;
-  id: string;
-  location: number;
-  text: string;
-};
-
-// AIDEV-NOTE: `Pagefind` is the raw imported library interface; `PagefindAPI` is the wrapper class.
-type Pagefind = {
-  debouncedSearch(
-    query: string,
-    options?: PagefindSearchOptions,
-    debounceTimeoutMs?: number,
-  ): Promise<PagefindSearchResults>;
-  destroy(): Promise<void>;
-  filters(): Promise<Record<string, Record<string, number>>>;
-  init(): Promise<void>;
-  preload(term: string, options?: PagefindSearchOptions): Promise<void>;
-  search(
-    query: string,
-    options?: PagefindSearchOptions,
-  ): Promise<PagefindSearchResults>;
-};
-
 export type PagefindDocument = {
   anchors?: PagefindAnchor[];
   excerpt: string;
@@ -62,6 +23,45 @@ export type PagefindSearchOptions = {
   filters?: Record<string, string | string[]>;
   sort?: Record<string, "asc" | "desc">;
   verbose?: boolean;
+};
+
+/**
+ * Search results returned by Pagefind API.
+ */
+export type PagefindSearchResults = {
+  filters: Record<string, Record<string, number>>;
+  results: PagefindResult[];
+  timings: {
+    preload: number;
+    search: number;
+    total: number;
+  };
+  totalFilters: Record<string, Record<string, number>>;
+  unfilteredResultCount: number;
+};
+
+// AIDEV-NOTE: `Pagefind` is the raw imported library interface; `PagefindAPI` is the wrapper class.
+type Pagefind = {
+  debouncedSearch(
+    query: string,
+    options?: PagefindSearchOptions,
+    debounceTimeoutMs?: number,
+  ): Promise<PagefindSearchResults>;
+  destroy(): Promise<void>;
+  filters(): Promise<Record<string, Record<string, number>>>;
+  init(): Promise<void>;
+  preload(term: string, options?: PagefindSearchOptions): Promise<void>;
+  search(
+    query: string,
+    options?: PagefindSearchOptions,
+  ): Promise<PagefindSearchResults>;
+};
+
+type PagefindAnchor = {
+  element: string;
+  id: string;
+  location: number;
+  text: string;
 };
 
 type PagefindSubResult = {

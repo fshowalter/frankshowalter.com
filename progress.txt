@@ -26,3 +26,34 @@
   - `mockSearchAPI` as a variable name is fine to keep even after renaming the type — only type references need updating.
 
 ---
+
+## 2026-02-18 - Stage 2: Dependency Injection for Elements
+
+- What was implemented:
+  - Exported `SearchElements` type from `search-ui.ts` so callers can use it.
+  - Changed `SearchUI` constructor from `constructor(api?: PagefindAPI)` to `constructor(elements: SearchElements, api?: PagefindAPI)`. Elements are now set in the constructor, removing the `elements | undefined` union and all `if (!this.elements) return;` guards.
+  - Removed `setupElements()` from `SearchUI`; `init()` no longer has a try/catch for element resolution.
+  - Added `resolveSearchElements(dialog: HTMLDialogElement): SearchElements` to `search-modal.ts` — the single JS location where `search-*` element IDs appear.
+  - Updated `openModal` in `search-modal.ts` to call `resolveSearchElements(dialog)` and pass elements to `new SearchUI(elements)`.
+  - Renamed all element IDs in `AstroPageShell.astro` from `pagefind-` prefix to `search-` (`pagefind-search-input` → `search-input`, etc.). Updated `aria-describedby` and `aria-controls` in the same pass.
+  - Updated `AstroPageShell.spec.ts`: added `SearchElements` import, updated mock constructor to `constructor(elements: SearchElements) { super(elements, mockSearchAPI) }`, updated all `#pagefind-*` querySelector references to `#search-*`.
+  - Ran `npm run test:update` to regenerate HTML snapshots.
+  - Fixed lint: `perfectionist/sort-modules` auto-fixed ordering in `pagefind-api.ts` and `search-modal.ts`; removed now-unused `PagefindSearchOptions` and `PagefindSearchResults` imports from `search-ui.ts`.
+
+- Files changed:
+  - `src/astro/search-ui.ts` (updated)
+  - `src/astro/search-modal.ts` (updated)
+  - `src/astro/pagefind-api.ts` (ordering auto-fixed by lint:fix)
+  - `src/astro/AstroPageShell.astro` (updated)
+  - `src/astro/AstroPageShell.spec.ts` (updated)
+  - `src/pages/__snapshots__/index.html` (updated)
+  - `src/pages/404/__snapshots__/index.html` (updated)
+  - `IMPLEMENTATION_PLAN.md` (Stage 2 → Complete)
+
+- **Learnings for future iterations:**
+  - `perfectionist/sort-modules` requires export-types before regular types alphabetically — `npm run lint:fix` handles this automatically.
+  - When removing a method that used type imports (e.g., `setupElements` used `PagefindSearchOptions`/`PagefindSearchResults`), check for now-unused imports with `npm run lint`.
+  - `dialog.querySelector("#id")` works fine for querying by ID within a subtree — no need to use `document.querySelector`.
+  - Removing the `if (!this.elements) return;` guards is safe once `elements` is non-optional in the constructor — TypeScript would otherwise flag them as dead code.
+
+---

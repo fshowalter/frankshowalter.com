@@ -1,4 +1,4 @@
-import type { SearchUI } from "./search-ui";
+import type { SearchElements, SearchUI } from "./search-ui";
 
 // Store reference to SearchUI instance for lazy loading
 let searchUIInstance: SearchUI | undefined;
@@ -41,10 +41,10 @@ export function initPageFind(): void {
     // Handle clear button focus first - refocus the input after clearing
     if (
       event.target instanceof HTMLButtonElement &&
-      event.target.id === "pagefind-clear-button"
+      event.target.id === "search-clear-button"
     ) {
       const input = document.querySelector(
-        "#pagefind-search-input",
+        "#search-input",
       ) as HTMLInputElement;
       input?.focus();
       return; // Don't close the modal for clear button
@@ -78,7 +78,8 @@ export function initPageFind(): void {
       searchUILoading = true;
       try {
         const { SearchUI } = await import("./search-ui");
-        searchUIInstance = new SearchUI();
+        const elements = resolveSearchElements(dialog);
+        searchUIInstance = new SearchUI(elements);
         await searchUIInstance.init();
       } finally {
         searchUILoading = false;
@@ -112,7 +113,7 @@ export function initPageFind(): void {
     // Handle Enter key in search input
     if (
       e.target instanceof HTMLInputElement &&
-      e.target.id === "pagefind-search-input" &&
+      e.target.id === "search-input" &&
       e.key === "Enter"
     ) {
       e.target.blur();
@@ -126,6 +127,49 @@ export function initPageFind(): void {
 export function initSearch(): void {
   initPageFind();
   // SearchUI is now lazy-loaded when the modal opens
+}
+
+// AIDEV-NOTE: Single source of truth for search element IDs in JS.
+// If an ID changes in AstroPageShell.astro, update only this function.
+export function resolveSearchElements(
+  dialog: HTMLDialogElement,
+): SearchElements {
+  const input = dialog.querySelector<HTMLInputElement>("#search-input");
+  const clearButton = dialog.querySelector<HTMLButtonElement>(
+    "#search-clear-button",
+  );
+  const resultsCounter = dialog.querySelector<HTMLElement>(
+    "#search-results-counter",
+  );
+  const resultsContainer =
+    dialog.querySelector<HTMLElement>("#search-results");
+  const loadMoreWrapper = dialog.querySelector<HTMLElement>(
+    "#search-load-more-wrapper",
+  );
+  const loadMoreButton = dialog.querySelector<HTMLButtonElement>(
+    "#search-load-more",
+  );
+
+  if (
+    !input ||
+    !clearButton ||
+    !resultsCounter ||
+    !resultsContainer ||
+    !loadMoreWrapper ||
+    !loadMoreButton
+  ) {
+    throw new Error("Required search elements not found");
+  }
+
+  return {
+    clearButton,
+    container: document.body,
+    input,
+    loadMoreButton,
+    loadMoreWrapper,
+    resultsContainer,
+    resultsCounter,
+  };
 }
 
 // Initialize when DOM is ready (skip in test environment)

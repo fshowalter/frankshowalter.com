@@ -1,15 +1,10 @@
 import { debounce } from "~/utils/debounce";
 
-import type {
-  PagefindDocument,
-  PagefindResult,
-  PagefindSearchOptions,
-  PagefindSearchResults,
-} from "./pagefind-api";
+import type { PagefindDocument, PagefindResult } from "./pagefind-api";
 
 import { PagefindAPI } from "./pagefind-api";
 
-type SearchElements = {
+export type SearchElements = {
   clearButton: HTMLButtonElement;
   container: HTMLElement;
   input: HTMLInputElement;
@@ -54,11 +49,12 @@ export class SearchUI {
   // Debounced search function to prevent memory leak
   private readonly debouncedSearch: (query: string) => void;
 
-  private elements: SearchElements | undefined = undefined;
+  private elements: SearchElements;
 
   private state: SearchState;
 
-  constructor(api?: PagefindAPI) {
+  constructor(elements: SearchElements, api?: PagefindAPI) {
+    this.elements = elements;
     this.api = api || new PagefindAPI();
     this.state = this.getInitialState();
 
@@ -90,13 +86,6 @@ export class SearchUI {
    * Initialize the search UI
    */
   async init(): Promise<void> {
-    try {
-      this.setupElements();
-    } catch {
-      // Search elements not found - likely in test environment or page without search
-      return;
-    }
-
     this.setupEventListeners();
 
     try {
@@ -126,8 +115,6 @@ export class SearchUI {
    * Clear search
    */
   private clearSearch(): void {
-    if (!this.elements) return;
-
     this.elements.input.value = "";
     this.elements.clearButton.classList.add("hidden");
     this.updateState(this.getInitialState());
@@ -163,8 +150,6 @@ export class SearchUI {
    * Handle search
    */
   private async handleSearch(query: string): Promise<void> {
-    if (!this.elements) return;
-
     // Cancel any existing search
     if (this.abortController) {
       this.abortController.abort();
@@ -233,8 +218,6 @@ export class SearchUI {
    * Load more results
    */
   private async loadMoreResults(): Promise<void> {
-    if (!this.elements) return;
-
     const remainingResults = this.getRemainingResults();
     if (remainingResults.length === 0) return;
 
@@ -336,8 +319,6 @@ export class SearchUI {
    * Render search results
    */
   private renderResults(): void {
-    if (!this.elements) return;
-
     const {
       error,
       hasSearched,
@@ -405,43 +386,9 @@ export class SearchUI {
   }
 
   /**
-   * Set up DOM elements
-   */
-  private setupElements(): void {
-    // AIDEV-NOTE: Using IDs from AstroPageShell.astro
-    this.elements = {
-      clearButton: document.querySelector(
-        "#pagefind-clear-button",
-      ) as HTMLButtonElement,
-      container: document.body,
-      input: document.querySelector(
-        "#pagefind-search-input",
-      ) as HTMLInputElement,
-      loadMoreButton: document.querySelector(
-        "#pagefind-load-more",
-      ) as HTMLButtonElement,
-      loadMoreWrapper: document.querySelector(
-        "#pagefind-load-more-wrapper",
-      ) as HTMLElement,
-      resultsContainer: document.querySelector(
-        "#pagefind-results",
-      ) as HTMLElement,
-      resultsCounter: document.querySelector(
-        "#pagefind-results-counter",
-      ) as HTMLElement,
-    };
-
-    if (!this.elements.input || !this.elements.resultsContainer) {
-      throw new Error("Required search elements not found");
-    }
-  }
-
-  /**
    * Set up event listeners
    */
   private setupEventListeners(): void {
-    if (!this.elements) return;
-
     const { clearButton, input, loadMoreButton } = this.elements;
 
     input.addEventListener("input", (e) => {

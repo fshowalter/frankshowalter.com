@@ -11,6 +11,7 @@ import { JSDOM } from "jsdom";
 import { afterEach, beforeEach, describe, it, vi } from "vitest";
 
 import type { PagefindAPI, PagefindSearchResults } from "./pagefind-api";
+import type { SearchElements } from "./search-ui";
 
 // Create mock search API that will be injected into SearchUI
 const mockSearchAPI = {
@@ -326,7 +327,7 @@ describe("AstroPageShell", () => {
       it("blurs search input", ({ expect }) => {
         // Use the actual input element from the rendered layout
         const input = document.querySelector<HTMLInputElement>(
-          "#pagefind-search-input",
+          "#search-input",
         );
         expect(input).toBeTruthy();
 
@@ -351,10 +352,10 @@ describe("AstroPageShell", () => {
       it("focuses search input", ({ expect }) => {
         // Use the actual elements from the rendered layout
         const clearBtn = document.querySelector<HTMLButtonElement>(
-          "#pagefind-clear-button",
+          "#search-clear-button",
         );
         const searchInput = document.querySelector<HTMLInputElement>(
-          "#pagefind-search-input",
+          "#search-input",
         );
 
         expect(clearBtn).toBeTruthy();
@@ -436,8 +437,8 @@ describe("AstroPageShell", () => {
         return {
           ...actual,
           SearchUI: class extends actual.SearchUI {
-            constructor() {
-              super(mockSearchAPI as PagefindAPI);
+            constructor(elements: SearchElements) {
+              super(elements, mockSearchAPI as PagefindAPI);
             }
           },
         };
@@ -606,7 +607,7 @@ describe("AstroPageShell", () => {
         });
 
         // Check counter
-        const counter = document.querySelector("#pagefind-results-counter");
+        const counter = document.querySelector("#search-results-counter");
         expect(counter?.textContent).toContain("2 results");
       });
 
@@ -633,7 +634,7 @@ describe("AstroPageShell", () => {
 
         // Check for no results message
         await waitFor(() => {
-          const counter = document.querySelector("#pagefind-results-counter");
+          const counter = document.querySelector("#search-results-counter");
           expect(counter?.textContent).toBe('No results for "notfound"');
 
           const results = queries.getByRole("region", {
@@ -733,10 +734,10 @@ describe("AstroPageShell", () => {
         await vi.advanceTimersByTimeAsync(150);
 
         // Results should be cleared
-        const resultsDiv = document.querySelector("#pagefind-results");
+        const resultsDiv = document.querySelector("#search-results");
         expect(resultsDiv?.innerHTML).toBe("");
 
-        const counter = document.querySelector("#pagefind-results-counter");
+        const counter = document.querySelector("#search-results-counter");
         expect(counter?.textContent).toBe("");
       });
 
@@ -793,7 +794,7 @@ describe("AstroPageShell", () => {
         expect(searchInput.value).toBe("");
         expect(clearButton.classList.contains("hidden")).toBe(true);
 
-        const resultsDiv = document.querySelector("#pagefind-results");
+        const resultsDiv = document.querySelector("#search-results");
         expect(resultsDiv?.innerHTML).toBe("");
       });
     });

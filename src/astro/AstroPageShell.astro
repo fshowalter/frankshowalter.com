@@ -121,7 +121,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
 
               <!-- Search input -->
               <input
-                aria-describedby="pagefind-results-counter"
+                aria-describedby="search-results-counter"
                 aria-label="Search query"
                 autocapitalize="off"
                 autocomplete="off"
@@ -137,7 +137,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
                   [&::-webkit-search-cancel-button]:appearance-none
                 `}
                 enterkeyhint="search"
-                id="pagefind-search-input"
+                id="search-input"
                 placeholder="Search"
                 spellcheck="false"
                 type="search"
@@ -152,7 +152,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
                   hover:text-default
                   focus:outline-accent
                 `}
-                id="pagefind-clear-button"
+                id="search-clear-button"
                 type="button"
               >
                 <svg
@@ -182,7 +182,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
               text-subtle
               empty:hidden
             `}
-            id="pagefind-results-counter"
+            id="search-results-counter"
             role="status"
           >
           </div>
@@ -196,15 +196,15 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
             -outline-offset-2
             focus:outline-accent
           `}
-          id="pagefind-results-wrapper"
+          id="search-results-wrapper"
           role="region"
         >
-          <div id="pagefind-results"></div>
+          <div id="search-results"></div>
 
           <!-- Load More Button -->
-          <div class="hidden p-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="search-load-more-wrapper">
             <button
-              aria-controls="pagefind-results"
+              aria-controls="search-results"
               class={`
                 mx-auto block h-10 w-full max-w-107.5 cursor-pointer bg-canvas
                 font-sans text-xs font-medium tracking-wide text-default
@@ -212,7 +212,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
                 hover:bg-inverse hover:text-white
                 focus:-outline-offset-2 focus:outline-accent
               `}
-              id="pagefind-load-more"
+              id="search-load-more"
               type="button"
             >
               Load more results

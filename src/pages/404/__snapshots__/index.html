@@ -182,7 +182,7 @@
               </svg>
               <!-- Search input -->
               <input
-                aria-describedby="pagefind-results-counter"
+                aria-describedby="search-results-counter"
                 aria-label="Search query"
                 autocapitalize="off"
                 autocomplete="off"
@@ -190,7 +190,7 @@
                 autofocus
                 class="h-14 w-full border-0 bg-transparent pr-17.5 pl-13.5 font-serif text-lg font-normal text-default outline-none placeholder:text-muted placeholder:opacity-50 focus:outline-none [&#38;::-ms-clear]:hidden [&#38;::-ms-clear]:appearance-none [&#38;::-webkit-search-cancel-button]:hidden [&#38;::-webkit-search-cancel-button]:appearance-none"
                 enterkeyhint="search"
-                id="pagefind-search-input"
+                id="search-input"
                 placeholder="Search"
                 spellcheck="false"
                 type="search"
@@ -199,7 +199,7 @@
               <button
                 aria-label="Clear search"
                 class="absolute top-6 right-24 hidden size-4 rounded-full bg-subtle text-subtle hover:text-default focus:outline-accent"
-                id="pagefind-clear-button"
+                id="search-clear-button"
                 type="button"
               >
                 <svg
@@ -224,7 +224,7 @@
             aria-atomic="true"
             aria-live="polite"
             class="border-b border-default p-4 font-sans text-xs font-normal text-subtle empty:hidden"
-            id="pagefind-results-counter"
+            id="search-results-counter"
             role="status"
           ></div>
         </div>
@@ -232,16 +232,16 @@
         <div
           aria-label="Search results"
           class="min-h-0 flex-1 overflow-x-clip overflow-y-auto overscroll-contain -outline-offset-2 focus:outline-accent"
-          id="pagefind-results-wrapper"
+          id="search-results-wrapper"
           role="region"
         >
-          <div id="pagefind-results"></div>
+          <div id="search-results"></div>
           <!-- Load More Button -->
-          <div class="hidden p-4" id="pagefind-load-more-wrapper">
+          <div class="hidden p-4" id="search-load-more-wrapper">
             <button
-              aria-controls="pagefind-results"
+              aria-controls="search-results"
               class="mx-auto block h-10 w-full max-w-107.5 cursor-pointer bg-canvas font-sans text-xs font-medium tracking-wide text-default uppercase hover:bg-inverse hover:text-white focus:-outline-offset-2 focus:outline-accent"
-              id="pagefind-load-more"
+              id="search-load-more"
               type="button"
             >
               Load more results
