@@ -58,7 +58,12 @@ to supply that data from `getCollection`.
 - `npm run build` and `npm run check` pass.
 - Home page renders correctly in dev.
 
-**Status**: Not Started
+**Status**: Complete
+
+Note: `src/pages/_index.spec.ts` and `src/pages/__snapshots__/index.html` were deleted here
+(originally planned for Stage 4) because the architecture change made them immediately
+non-functional — `getCollection` returns empty in the test environment and the old mock
+no longer applies.
 
 ---
 
@@ -105,8 +110,8 @@ to supply that data from `getCollection`.
 **Goal**: Remove everything the new approach replaces.
 
 **Steps**:
-1. Delete `src/pages/_index.spec.ts`.
-2. Delete `src/pages/__snapshots__/index.html`.
+1. ~~Delete `src/pages/_index.spec.ts`.~~ (Done in Stage 2)
+2. ~~Delete `src/pages/__snapshots__/index.html`.~~ (Done in Stage 2)
 3. Delete `src/api/booklog.ts`.
 4. Delete `src/api/movielog.ts`.
 5. Delete `src/api/UpdateSchema.ts`.

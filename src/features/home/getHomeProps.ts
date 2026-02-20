@@ -1,6 +1,6 @@
-import { booklogUpdates } from "~/api/booklog";
+import type { BooklogData, MovielogData } from "~/content.config";
+
 import { getFluidCoverImageProps } from "~/api/covers";
-import { movielogUpdates } from "~/api/movielog";
 import { getStillImageProps } from "~/api/stills";
 
 import type { HomeProps } from "./Home";
@@ -12,16 +12,16 @@ import {
 } from "./Home";
 
 /**
- * Fetches and prepares data for the Home component.
- * Retrieves book and movie updates with formatted dates and optimized images.
+ * Transforms pre-fetched booklog and movielog data into props for the Home component.
+ * Accepts data from Astro Content Collections instead of fetching internally.
  */
-export async function getHomeProps(): Promise<HomeProps> {
-  const booklogItems = await booklogUpdates();
-  const movielogItems = await movielogUpdates();
-
+export async function getHomeProps(
+  booklogEntries: BooklogData[],
+  movielogEntries: MovielogData[],
+): Promise<HomeProps> {
   return {
     booklogUpdates: await Promise.all(
-      booklogItems.map(async (item) => {
+      booklogEntries.map(async (item) => {
         return {
           ...item,
           coverImageProps: await getFluidCoverImageProps(
@@ -34,7 +34,7 @@ export async function getHomeProps(): Promise<HomeProps> {
       }),
     ),
     movielogUpdates: await Promise.all(
-      movielogItems.map(async (item, index) => {
+      movielogEntries.map(async (item, index) => {
         return {
           ...item,
           displayDate: formatDate(item.date),

@@ -147,3 +147,27 @@ gets a fresh JSDOM so cleanup is unnecessary.
 - Stage 1 leaves the old API layer (`booklog.ts`, `movielog.ts`, `UpdateSchema.ts`, `getDataFile.ts`) fully intact; deletion happens in Stage 4
 
 ---
+
+## 2026-02-19 - Stage 2: Update getHomeProps and index.astro
+
+- Updated `getHomeProps` signature: now accepts `booklogEntries: BooklogData[]` and `movielogEntries: MovielogData[]` as parameters instead of fetching internally
+- Removed `booklogUpdates()` and `movielogUpdates()` calls and their imports from `getHomeProps.ts`
+- Imported `BooklogData` and `MovielogData` types from `~/content.config`
+- Updated `index.astro` to call `getCollection('booklog')` and `getCollection('movielog')`, map `.data`, and pass arrays to `getHomeProps`
+- Deleted `src/pages/_index.spec.ts` and `src/pages/__snapshots__/index.html` (planned for Stage 4 but pulled forward because the architecture change immediately broke the snapshot test — `getCollection` returns empty in the test environment)
+- `npm run check` passes (0 errors), `npm run lint` passes (0 errors), `npm test` passes (26/26)
+
+**Files changed**:
+- `src/features/home/getHomeProps.ts` — new signature, removed internal fetching
+- `src/pages/index.astro` — uses `getCollection`, passes data to `getHomeProps`
+- `src/pages/_index.spec.ts` — deleted
+- `src/pages/__snapshots__/index.html` — deleted
+
+**Missing permissions**: None
+
+**Learnings for future iterations:**
+- `unicorn/no-await-expression-member` forbids `(await expr).member` — always assign the awaited value to a variable first, then access the property: `const result = await expr; result.map(...)`
+- Snapshot tests tied to a page that switches to `getCollection` will immediately break in the test environment because Astro's content layer isn't running; delete them in the same stage as the architecture change — don't leave broken tests between stages
+- CLAUDE.md rule "every commit must pass all existing tests" means if an architecture change breaks a test already planned for deletion, delete it in the same stage rather than leaving the repo in a failing state
+
+---
