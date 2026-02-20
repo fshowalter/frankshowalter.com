@@ -101,7 +101,7 @@ no longer applies.
 - `npm test` passes.
 - Assertions in `Home.spec.tsx` are meaningful (not just "it rendered something").
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 

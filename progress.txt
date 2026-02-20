@@ -171,3 +171,31 @@ gets a fresh JSDOM so cleanup is unnecessary.
 - CLAUDE.md rule "every commit must pass all existing tests" means if an architecture change breaks a test already planned for deletion, delete it in the same stage rather than leaving the repo in a failing state
 
 ---
+
+## 2026-02-19 - Stage 3: New Home Component Tests and Fixtures
+
+- Created `src/fixtures/booklog.ts` with 4 typed `BooklogData[]` entries (slugs from `src/api/fixtures/booklog.json`); all slugs have corresponding cover images in `content/assets/covers/`
+- Created `src/fixtures/movielog.ts` with 5 typed `MovielogData[]` entries (slugs from `src/api/fixtures/movielog.json`); all slugs have corresponding stills in `content/assets/stills/`
+- Added `features-jsdom` project to `vitest.config.ts`: jsdom environment covering `src/features/**/*.spec.tsx`
+- Created `src/features/home/Home.spec.tsx` with 5 assertions: correct number of book list items (4), first movie title present, first book title present, correct grade for first book entry (3 stars), first movie rendered as splash (grade img height=24)
+- Used `react-dom/client.createRoot` + `act` from `react` + `@testing-library/dom` `screen` (no `@testing-library/react` installed — SPEC was wrong about it being available)
+- All 31 tests pass; `npm run lint` passes
+
+**Files changed**:
+- `src/fixtures/booklog.ts` — new file
+- `src/fixtures/movielog.ts` — new file
+- `vitest.config.ts` — added `features-jsdom` project
+- `src/features/home/Home.spec.tsx` — new file
+
+**Missing permissions**: None
+
+**Learnings for future iterations:**
+- `@testing-library/react` is NOT installed — only `@testing-library/dom` and `@testing-library/user-event` are present; the SPEC was incorrect about this assumption. Use `react-dom/client.createRoot` + `act` from `react` as an alternative.
+- `act()` with a sync callback returns `void` (not a Promise); `@typescript-eslint/await-thenable` will error if you `await` it. Fix: use `act(async () => { ...; await Promise.resolve(); })` so the callback is async (satisfies `require-await`) and `act()` returns a Promise (satisfies `await-thenable`).
+- `unicorn/prefer-dom-node-append` prefers `element.append(child)` over `element.appendChild(child)`
+- `unicorn/prefer-dom-node-remove` prefers `child.remove()` over `parent.removeChild(child)`
+- `perfectionist/sort-imports` sorts local relative imports case-insensitively: `./getHomeProps` (g) must come before `./Home` (h), even though uppercase H has lower ASCII value than lowercase g
+- `getImage` from `astro:assets` works in the jsdom vitest environment (not just node) — image processing runs successfully in both environments
+- React warns "not configured to support act(...)" when `globalThis.IS_REACT_ACT_ENVIRONMENT` is not set to `true`; this is a stderr warning only and does not affect test correctness for pure presentational components
+
+---
