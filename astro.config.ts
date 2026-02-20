@@ -1,5 +1,4 @@
 import type { AstroIntegration } from "astro";
-import type { HmrContext } from "vite";
 
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -9,29 +8,9 @@ import { defineConfig } from "astro/config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createIndex } from "pagefind";
-import sirv from "sirv";
-
-function contentHmr() {
-  return {
-    enforce: "post" as const,
-    // HMR
-    handleHotUpdate({ file, server }: HmrContext) {
-      console.log(file);
-      if (file.includes("/content/")) {
-        console.log("reloading content file...");
-        server.ws.send({
-          path: "*",
-          type: "full-reload",
-        });
-      }
-    },
-    name: "content-hmr",
-  };
-}
 
 function pagefind(): AstroIntegration {
   let outDir: string;
-  let assets: null | string;
 
   return {
     hooks: {
@@ -44,6 +23,7 @@ function pagefind(): AstroIntegration {
         }
 
         const { errors: createErrors, index } = await createIndex({});
+
         if (!index) {
           logger.error("Pagefind failed to create index");
           for (const e of createErrors) logger.error(e);
@@ -76,30 +56,6 @@ function pagefind(): AstroIntegration {
       },
       "astro:config:setup": ({ config }) => {
         outDir = fileURLToPath(config.outDir);
-
-        assets = config.build.assetsPrefix ? null : config.build.assets; // eslint-disable-line unicorn/no-null
-      },
-      "astro:server:setup": ({ logger, server }) => {
-        if (!outDir) {
-          logger.warn(
-            "astro-pagefind couldn't reliably determine the output directory. Search assets will not be served.",
-          );
-          return;
-        }
-        const serve = sirv(outDir, {
-          dev: true,
-          etag: true,
-        });
-        server.middlewares.use((req, res, next) => {
-          if (
-            req.url?.startsWith("/pagefind/") ||
-            (assets && req.url?.startsWith(`/${assets}/`))
-          ) {
-            serve(req, res, next);
-          } else {
-            next();
-          }
-        });
       },
     },
     name: "pagefind",
@@ -142,6 +98,6 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["fsevents"],
     },
-    plugins: [tailwindcss(), contentHmr()],
+    plugins: [tailwindcss()],
   },
 });

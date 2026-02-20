@@ -9,13 +9,13 @@ export type BooklogUpdateCardValue = {
   authors: string[];
   /** Cover image properties for display */
   coverImageProps: CoverImageProps;
+  displayDate: string;
   /** Review excerpt text */
   excerpt: string;
   /** Grade given to the work */
   gradeValue: number;
   /** Type of work (e.g., "Novel", "Short Story") */
   kind: string;
-  reviewDisplayDate: string;
   /** URL slug for the review */
   slug: string;
   /** Title of the reviewed work */
@@ -135,17 +135,15 @@ export function BooklogUpdateCard({
             @min-[500px]/card:mt-0 @min-[500px]/card:px-0
           `}
         >
-          {value.reviewDisplayDate && (
-            <div
-              className={`
-                font-sans text-xs/4 font-normal tracking-wider text-subtle
-                uppercase
-                laptop:tracking-wide
-              `}
-            >
-              {value.reviewDisplayDate}
-            </div>
-          )}
+          <div
+            className={`
+              font-sans text-xs/4 font-normal tracking-wider text-subtle
+              uppercase
+              laptop:tracking-wide
+            `}
+          >
+            {value.displayDate}
+          </div>
           <a
             className={`
               z-20 font-sans text-xs tracking-wide text-accent uppercase
@@ -165,11 +163,7 @@ export function BooklogUpdateCard({
           >
             {value.title}
           </a>
-          <div className="-mt-2">
-            {toSentenceArray(
-              value.authors.map((value) => <span key={value}>{value}</span>),
-            )}
-          </div>
+          <div className="-mt-2">{toSentenceArray(value.authors)}</div>
           <div
             className={`
               font-sans text-sm/4 font-normal tracking-prose text-subtle
