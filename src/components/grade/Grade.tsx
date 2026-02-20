@@ -23,7 +23,7 @@ export function Grade({
   className?: string;
   height: 15 | 16 | 18 | 24 | 32;
   value?: number | string;
-}): false | React.JSX.Element {
+}): React.JSX.Element {
   if (!value || value == "Abandoned") {
     return <div>Abandoned</div>;
   }
