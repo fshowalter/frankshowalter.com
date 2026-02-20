@@ -72,7 +72,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
   </head>
   <body class="h-full">
     <slot />
-    <search-box>
+    <pagefind-search>
       <dialog
         aria-label="Search"
         class={`
@@ -326,7 +326,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
         >
         </div>
       </template>
-    </search-box>
-    <script src="./search-box.ts"></script>
+    </pagefind-search>
+    <script src="./pagefind-search.ts"></script>
   </body>
 </html>

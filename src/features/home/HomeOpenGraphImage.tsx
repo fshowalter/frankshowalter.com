@@ -1,23 +1,13 @@
 /**
  * Type definition for Open Graph image components.
  */
-export type OpenGraphImageComponentType = (
-  props: OpenGraphImageProps,
-) => React.JSX.Element;
-
-type OpenGraphImageProps = {
-  backdrop: string;
-};
+export type OpenGraphImageComponentType = () => React.JSX.Element;
 
 /**
  * Generates the Open Graph image for the home page.
- * Creates a 1200x630 image with backdrop, site title, and tagline.
+ * Creates a 1200x630 image with site title, and tagline.
  */
-export function HomeOpenGraphImage({
-  backdrop,
-}: {
-  backdrop?: string;
-}): React.JSX.Element {
+export function HomeOpenGraphImage(): React.JSX.Element {
   "use no memo";
 
   return (
@@ -30,52 +20,45 @@ export function HomeOpenGraphImage({
         width: "1200px",
       }}
     >
-      <img
-        height={630}
-        src={backdrop}
-        style={{
-          objectFit: "cover",
-        }}
-        width={1200}
-      />
       <div
         style={{
-          bottom: 0,
+          alignItems: "center",
           display: "flex",
           flexDirection: "column",
-          paddingBottom: "64px",
-          paddingLeft: "80px",
-          paddingRight: "80px",
-          paddingTop: "32px",
-          position: "absolute",
-          width: "1200px",
+          height: "100%",
+          justifyContent: "center",
+          width: "100%",
         }}
       >
         <div
+          data-testid="title"
           style={{
-            color: "#fff",
+            color: "#252525",
             display: "flex",
             fontFamily: "FrankRuhlLibre",
             fontSize: "72px",
             fontWeight: 800,
             lineHeight: 1,
-            marginTop: "auto",
-            textShadow: "1px 1px 2px black",
           }}
         >
           Frank Showalter
         </div>
         <div
+          data-testid="tagline"
           style={{
-            color: "#c29d52",
+            color: "rgb(0,0,0,.6)",
+            display: "flex",
             fontFamily: "Assistant",
             fontSize: "20px",
-            fontWeight: 700,
-            marginBottom: "8px",
-            textShadow: "1px 1px 2px black",
+            fontWeight: 400,
+            lineHeight: "1.25",
+            marginTop: "8px",
           }}
         >
-          Mostly movie reviews, sometimes book reviews.
+          Mostly&nbsp;
+          <span style={{ color: "#bf8a00" }}>movie reviews</span>
+          ,&nbsp;sometimes&nbsp;
+          <span style={{ color: "#bf8a00" }}>book reviews</span>.
         </div>
       </div>
     </div>

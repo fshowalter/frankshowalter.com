@@ -1,7 +1,5 @@
 import { getImage } from "astro:assets";
 
-import { normalizeSources } from "./utils/normalizeSources";
-
 /**
  * Props for still images.
  */
@@ -48,7 +46,7 @@ export async function getStillImageProps(
   });
 
   return {
-    src: normalizeSources(optimizedImage.src),
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+    src: optimizedImage.src,
+    srcSet: optimizedImage.srcSet.attribute,
   };
 }

@@ -1,4 +1,4 @@
-import type { StillImageProps } from "~/api/stills";
+import type { StillImageProps } from "~/assets/stills";
 
 type Props = React.ImgHTMLAttributes<HTMLImageElement> & {
   className?: string;

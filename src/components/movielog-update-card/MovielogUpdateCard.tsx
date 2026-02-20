@@ -1,4 +1,4 @@
-import type { StillImageProps } from "~/api/stills";
+import type { StillImageProps } from "~/assets/stills";
 
 import { Grade } from "~/components/grade/Grade";
 import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";

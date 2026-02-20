@@ -13,12 +13,8 @@ export function RenderedMarkdown({
 }: {
   as?: React.ElementType;
   className?: string;
-  text: string | undefined;
+  text: string;
 }): false | React.JSX.Element {
-  if (!text) {
-    return false;
-  }
-
   const Component = as;
 
   return (

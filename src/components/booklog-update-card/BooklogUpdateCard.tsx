@@ -1,4 +1,4 @@
-import type { CoverImageProps } from "~/api/covers";
+import type { CoverImageProps } from "~/assets/covers";
 
 import { Grade } from "~/components/grade/Grade";
 import { RenderedMarkdown } from "~/components/rendered-markdown/RenderedMarkdown";
