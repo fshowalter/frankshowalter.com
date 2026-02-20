@@ -1,5 +1,4 @@
 import type { AstroIntegration } from "astro";
-import type { HmrContext } from "vite";
 
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
@@ -10,24 +9,6 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createIndex } from "pagefind";
 import sirv from "sirv";
-
-function contentHmr() {
-  return {
-    enforce: "post" as const,
-    // HMR
-    handleHotUpdate({ file, server }: HmrContext) {
-      console.log(file);
-      if (file.includes("/content/")) {
-        console.log("reloading content file...");
-        server.ws.send({
-          path: "*",
-          type: "full-reload",
-        });
-      }
-    },
-    name: "content-hmr",
-  };
-}
 
 function pagefind(): AstroIntegration {
   let outDir: string;
@@ -142,6 +123,6 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["fsevents"],
     },
-    plugins: [tailwindcss(), contentHmr()],
+    plugins: [tailwindcss()],
   },
 });

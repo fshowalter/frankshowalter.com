@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-02-14T00:00:00.000Z",
+    "excerpt": "<p>Penniless producer George Murphy schemes to avoid eviction from his posh hotel penthouse and conscript playwright Frank Sinatra into his new show.</p>",
+    "genres": [
+      "Comedy",
+      "Music",
+      "Romance"
+    ],
+    "image": "/_astro/step-lively-1944.BuPOfboD_Z1eLWpa.png",
+    "slug": "step-lively-1944",
+    "stars": 1.5,
+    "title": "Step Lively",
+    "year": "1944"
+  },
+  {
     "date": "2026-02-12T00:00:00.000Z",
     "excerpt": "<p>Jason Voorhees gets a gritty makeover and hunts photogenic twenty-somethings around Crystal Lake.</p>",
     "genres": [
@@ -53,18 +67,5 @@
     "stars": 2.5,
     "title": "Daughters of Darkness",
     "year": "1971"
-  },
-  {
-    "date": "2026-02-08T00:00:00.000Z",
-    "excerpt": "<p>A mysterious woman lures a trio of British adventurers to her lost kingdom in Africa, believing one of them to be the reincarnation of her long-dead lover.</p>",
-    "genres": [
-      "Adventure",
-      "Fantasy"
-    ],
-    "image": "/_astro/she-1965.BXDlcGyc_Z1JLstR.png",
-    "slug": "she-1965",
-    "stars": 1,
-    "title": "She",
-    "year": "1965"
   }
 ]

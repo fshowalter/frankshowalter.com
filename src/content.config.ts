@@ -1,3 +1,5 @@
+import type { LoaderContext } from "astro/loaders";
+
 import { defineCollection } from "astro:content";
 import { promises as fs } from "node:fs";
 import { z } from "zod";
@@ -26,41 +28,49 @@ export const MovielogSchema = UpdateSchema.extend({
 export type BooklogData = z.infer<typeof BooklogSchema>;
 export type MovielogData = z.infer<typeof MovielogSchema>;
 
-const booklog = defineCollection({
-  loader: {
-    load: async ({ store }) => {
-      const raw = JSON.parse(
-        await fs.readFile(getDataFile("booklog.json"), "utf8"),
-      ) as { slug: string }[];
-      const newIds = new Set(raw.map((item) => item.slug));
-      for (const id of store.keys()) {
-        if (!newIds.has(id)) store.delete(id);
-      }
-      for (const item of raw) {
-        store.set({ data: item, id: item.slug });
-      }
+function updateLoader(filename: string) {
+  return {
+    load: async (ctx: LoaderContext) => {
+      const { store, watcher } = ctx;
+      const filePath = getDataFile(filename);
+
+      const sync = async () => {
+        const raw = JSON.parse(await fs.readFile(filePath, "utf8")) as (Record<
+          string,
+          unknown
+        > & { slug: string })[];
+
+        const newIds = new Set(raw.map((item) => item.slug));
+
+        for (const id of store.keys()) {
+          if (!newIds.has(id)) store.delete(id);
+        }
+
+        for (const item of raw) {
+          const data = await ctx.parseData({ data: item, id: item.slug });
+          store.set({ data, digest: ctx.generateDigest(item), id: item.slug });
+        }
+      };
+
+      await sync();
+      watcher?.add(filePath);
+      watcher?.on("change", (changedPath) => {
+        if (changedPath === filePath) {
+          void sync();
+        }
+      });
     },
-    name: "booklog-loader",
-  },
+    name: `${filename.replace(".json", "")}-loader`,
+  };
+}
+
+const booklog = defineCollection({
+  loader: updateLoader("booklog.json"),
   schema: BooklogSchema,
 });
 
 const movielog = defineCollection({
-  loader: {
-    load: async ({ store }) => {
-      const raw = JSON.parse(
-        await fs.readFile(getDataFile("movielog.json"), "utf8"),
-      ) as { slug: string }[];
-      const newIds = new Set(raw.map((item) => item.slug));
-      for (const id of store.keys()) {
-        if (!newIds.has(id)) store.delete(id);
-      }
-      for (const item of raw) {
-        store.set({ data: item, id: item.slug });
-      }
-    },
-    name: "movielog-loader",
-  },
+  loader: updateLoader("movielog.json"),
   schema: MovielogSchema,
 });
 

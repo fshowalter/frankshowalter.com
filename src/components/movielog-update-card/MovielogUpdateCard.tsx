@@ -154,10 +154,10 @@ export function MovielogUpdateCard({
         >
           {value.genres.map((genre, index) => {
             if (index === 0) {
-              return <span key={genre}>{genre}</span>;
+              return genre;
             }
 
-            return <span key={genre}>, {genre}</span>;
+            return `, ${genre}`;
           })}
         </div>
       </div>

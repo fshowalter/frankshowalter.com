@@ -136,6 +136,7 @@ export default defineConfig(
     },
     rules: {
       ...vitest.configs.recommended.rules,
+      "vitest/no-conditional-expect": ["error", { expectAssertions: true }],
     },
   },
 );

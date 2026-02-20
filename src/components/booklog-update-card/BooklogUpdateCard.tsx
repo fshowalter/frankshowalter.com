@@ -165,11 +165,7 @@ export function BooklogUpdateCard({
           >
             {value.title}
           </a>
-          <div className="-mt-2">
-            {toSentenceArray(
-              value.authors.map((value) => <span key={value}>{value}</span>),
-            )}
-          </div>
+          <div className="-mt-2">{toSentenceArray(value.authors)}</div>
           <div
             className={`
               font-sans text-sm/4 font-normal tracking-prose text-subtle

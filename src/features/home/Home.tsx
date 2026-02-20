@@ -72,10 +72,12 @@ export function Home({
               tablet:gap-y-[3vw]
               laptop:gap-y-[3vw]
             `}
+            data-testid="movielog-updates"
           >
             {movielogUpdates.slice(0, 5).map((value, index) => {
               return (
                 <MovielogUpdateCard
+                  as="li"
                   className={`
                     ${
                       index === 0
@@ -136,7 +138,10 @@ export function Home({
             id="book-reviews"
             text="Latest"
           />
-          <ol className="flex flex-col gap-y-[2vw]">
+          <ol
+            className="flex flex-col gap-y-[2vw]"
+            data-testid="booklog-updates"
+          >
             {booklogUpdates.slice(0, 5).map((value) => {
               return (
                 <BooklogUpdateCard

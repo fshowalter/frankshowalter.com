@@ -25,7 +25,7 @@ export function Grade({
   value?: number | string;
 }): false | React.JSX.Element {
   if (!value || value == "Abandoned") {
-    return false;
+    return <div>Abandoned</div>;
   }
 
   const [src, alt] = gradeMap[value];
