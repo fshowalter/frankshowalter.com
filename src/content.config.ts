@@ -2,9 +2,12 @@ import type { LoaderContext } from "astro/loaders";
 
 import { defineCollection } from "astro:content";
 import { promises as fs } from "node:fs";
+import path from "node:path";
 import { z } from "zod";
 
-import { getDataFile } from "~/api/utils/getDataFile";
+function getDataFile(file: string) {
+  return path.join(process.cwd(), "content", "data", file);
+}
 
 const UpdateSchema = z.object({
   date: z.coerce.date(),
@@ -28,35 +31,57 @@ export const MovielogSchema = UpdateSchema.extend({
 export type BooklogData = z.infer<typeof BooklogSchema>;
 export type MovielogData = z.infer<typeof MovielogSchema>;
 
+async function syncData(filePath: string, ctx: LoaderContext) {
+  const raw = JSON.parse(await fs.readFile(filePath, "utf8")) as (Record<
+    string,
+    unknown
+  > & { slug: string })[];
+
+  if (raw.length === 0) {
+    ctx.logger.warn(`No items found in ${filePath}`);
+  }
+  ctx.logger.debug(`Found ${raw.length} item array in ${filePath}`);
+
+  for (const rawItem of raw) {
+    const slug = rawItem.slug;
+    if (!slug) {
+      ctx.logger.error(`Item in ${filePath} is missing an id or slug field.`);
+      continue;
+    }
+  }
+
+  const newIds = new Set(
+    raw.map((item) => {
+      const slug = item.slug;
+      if (!slug) {
+        ctx.logger.error(`Item in ${filePath} is missing a slug field.`);
+      }
+      return slug;
+    }),
+  );
+
+  for (const id of ctx.store.keys()) {
+    if (!newIds.has(id)) ctx.store.delete(id);
+  }
+
+  for (const item of raw) {
+    const data = await ctx.parseData({ data: item, id: item.slug });
+    ctx.store.set({ data, digest: ctx.generateDigest(item), id: item.slug });
+  }
+}
+
 function updateLoader(filename: string) {
   return {
     load: async (ctx: LoaderContext) => {
-      const { store, watcher } = ctx;
+      const { watcher } = ctx;
       const filePath = getDataFile(filename);
 
-      const sync = async () => {
-        const raw = JSON.parse(await fs.readFile(filePath, "utf8")) as (Record<
-          string,
-          unknown
-        > & { slug: string })[];
-
-        const newIds = new Set(raw.map((item) => item.slug));
-
-        for (const id of store.keys()) {
-          if (!newIds.has(id)) store.delete(id);
-        }
-
-        for (const item of raw) {
-          const data = await ctx.parseData({ data: item, id: item.slug });
-          store.set({ data, digest: ctx.generateDigest(item), id: item.slug });
-        }
-      };
-
-      await sync();
+      await syncData(filePath, ctx);
       watcher?.add(filePath);
       watcher?.on("change", (changedPath) => {
         if (changedPath === filePath) {
-          void sync();
+          ctx.logger.info(`Reloading data from ${filePath}`);
+          void syncData(filePath, ctx);
         }
       });
     },

@@ -8,11 +8,11 @@ import { Still } from "~/components/still/Still";
  * Data structure for review card content.
  */
 export type MovielogUpdateCardValue = {
+  displayDate: string;
   excerpt: string;
   genres: string[];
   gradeValue: number;
   releaseYear: string;
-  reviewDisplayDate: string;
   slug: string;
   stillImageProps: StillImageProps;
   title: string;
@@ -93,17 +93,15 @@ export function MovielogUpdateCard({
           }
         `}
       >
-        {value.reviewDisplayDate && (
-          <div
-            className={`
-              mb-2 font-sans text-xs/4 font-normal tracking-wider text-subtle
-              uppercase
-              laptop:tracking-wide
-            `}
-          >
-            {value.reviewDisplayDate}
-          </div>
-        )}
+        <div
+          className={`
+            mb-2 font-sans text-xs/4 font-normal tracking-wider text-subtle
+            uppercase
+            laptop:tracking-wide
+          `}
+        >
+          {value.displayDate}
+        </div>
         <a
           className={`
             z-20 mb-2 font-sans text-xs tracking-wide text-accent uppercase

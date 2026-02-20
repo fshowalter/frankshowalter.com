@@ -28,8 +28,8 @@ export async function getHomeProps(
             item.slug,
             CoverImageConfig,
           ),
+          displayDate: formatDate(item.date),
           gradeValue: item.stars,
-          reviewDisplayDate: formatDate(item.date),
         };
       }),
     ),
@@ -40,7 +40,6 @@ export async function getHomeProps(
           displayDate: formatDate(item.date),
           gradeValue: item.stars,
           releaseYear: item.year,
-          reviewDisplayDate: formatDate(item.date),
           stillImageProps: await getStillImageProps(
             item.slug,
             index === 0 ? StillSplashImageConfig : StillImageConfig,

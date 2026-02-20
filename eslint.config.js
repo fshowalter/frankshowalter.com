@@ -2,10 +2,6 @@ import eslint from "@eslint/js";
 import vitest from "@vitest/eslint-plugin";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
-import {
-  getDefaultAttributes,
-  getDefaultCallees,
-} from "eslint-plugin-better-tailwindcss/api/defaults";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -120,8 +116,6 @@ export default defineConfig(
     },
     settings: {
       "better-tailwindcss": {
-        attributes: [...getDefaultAttributes(), ".*Classes"],
-        callees: [...getDefaultCallees(), "ccn"],
         entryPoint: "src/css/tailwind.css",
       },
       react: {
