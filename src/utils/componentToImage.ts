@@ -39,25 +39,18 @@ async function getFontData() {
     return fontDataCache;
   }
 
-  const [frankRuhlLibreExtraBold, assistantBold, assistantSemiBold] =
-    await Promise.all([
-      fs.readFile(
-        "./public/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre-ExtraBold.ttf",
-      ),
-      fs.readFile("./public/fonts/Assistant/Assistant-Bold.ttf"),
-      fs.readFile("./public/fonts/Assistant/Assistant-SemiBold.ttf"),
-    ]);
+  const [frankRuhlLibreExtraBold, assistantSemiBold] = await Promise.all([
+    fs.readFile(
+      "./public/fonts/Frank-Ruhl-Libre/Frank-Ruhl-Libre-ExtraBold.ttf",
+    ),
+    fs.readFile("./public/fonts/Assistant/Assistant-SemiBold.ttf"),
+  ]);
 
   fontDataCache = [
     {
       data: frankRuhlLibreExtraBold.buffer,
       name: "FrankRuhlLibre",
       weight: 800,
-    },
-    {
-      data: assistantBold.buffer,
-      name: "Assistant",
-      weight: 700,
     },
     {
       data: assistantSemiBold.buffer,
