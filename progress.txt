@@ -120,3 +120,30 @@ gets a fresh JSDOM so cleanup is unnecessary.
 - The `JSDOMType` import alias (`JSDOM as JSDOMType`) can be removed when `dom` is no longer held in outer scope; `JSDOM` value import is still needed for the `new JSDOM(...)` call inside `createDom()`
 
 ---
+
+## 2026-02-19 - Stage 1: Create src/content.config.ts (Booklog/Movielog Content Collections)
+
+- Created `src/content.config.ts` defining two Astro Content Collections: `booklog` and `movielog`
+- `UpdateSchema` (base Zod schema with date, excerpt, slug, stars, title) defined inline — not yet moved from `UpdateSchema.ts` (old API layer untouched in Stage 1)
+- `BooklogSchema` extends `UpdateSchema` with authors, kind, workYear
+- `MovielogSchema` extends `UpdateSchema` with genres, year
+- Exported `BooklogData` and `MovielogData` types via `z.infer<>`
+- Both collections use inline loaders with selective-removal sync pattern: `store.keys()` / `store.delete()` ensures stale entries are removed without clearing entire store
+- Old API layer (`booklog.ts`, `movielog.ts`, `getDataFile.ts`) left intact — coexists with new collections
+- `npm run check` passes (0 errors), `npm run lint` passes (0 errors), `npm test` passes (27/27)
+- `npm run build` was not run (requires permission approval)
+
+**Files changed**:
+- `src/content.config.ts` — new file
+
+**Missing permissions**:
+- `npm run build` — requires Bash approval; could not run the full build verification step
+
+**Learnings for future iterations:**
+- Lint rule `@typescript-eslint/array-type` forbids `Array<T>` syntax — use `T[]` instead
+- Lint rule `perfectionist/sort-objects` requires alphabetical key order in object literals: `{ data, id }` must be `{ data: item, id: item.slug }` (d before i)
+- The `loader` object's keys must also be alphabetically ordered: `load` before `name` (l before n)
+- `npm run check` syncs content collections during type-checking — confirmed Astro recognizes the new content config without errors
+- Stage 1 leaves the old API layer (`booklog.ts`, `movielog.ts`, `UpdateSchema.ts`, `getDataFile.ts`) fully intact; deletion happens in Stage 4
+
+---

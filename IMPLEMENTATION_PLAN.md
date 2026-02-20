@@ -28,7 +28,7 @@ parallel; nothing is broken yet.
 - `npm run build` and `npm run check` pass.
 - Collections return the expected entries.
 
-**Status**: Not Started
+**Status**: Complete
 
 ---
 
