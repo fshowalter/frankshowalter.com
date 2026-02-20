@@ -74,6 +74,7 @@ export function MovielogUpdateCard({
             group-has-[a:hover]/card:scale-110
           `}
           decoding="async"
+          fetchPriority={variant === "primary" ? "high" : "auto"}
           loading={variant === "primary" ? "eager" : "lazy"}
         />
       </div>
