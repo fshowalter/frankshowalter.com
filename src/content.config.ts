@@ -47,7 +47,7 @@ async function syncData(filePath: string, ctx: LoaderContext) {
     raw.map((item) => {
       const slug = item.slug;
       if (!slug) {
-        ctx.logger.error(`Item in ${filePath} is missing a slug field.`);
+        throw new Error(`Item in ${filePath} is missing a slug field.`);
       }
       return slug;
     }),
@@ -77,9 +77,7 @@ function updateLoader(filename: string) {
       watcher?.on("change", (changedPath) => {
         if (changedPath === filePath) {
           ctx.logger.info(`Reloading data from ${filePath}`);
-          syncData(filePath, ctx).catch((error: unknown) => {
-            ctx.logger.error(`Failed to reload ${filePath}: ${String(error)}`);
-          });
+          void syncData(filePath, ctx);
         }
       });
     },
