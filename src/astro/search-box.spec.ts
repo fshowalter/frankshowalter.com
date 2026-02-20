@@ -291,11 +291,8 @@ describe("search-box", () => {
       });
 
       describe("click outside dialog", () => {
-        it("closes the modal", async ({ expect }) => {
+        it("closes the modal", ({ expect }) => {
           expect(dialog?.open).toBe(true);
-
-          // Wait for async operations to complete (openModal is async now)
-          await new Promise((resolve) => setTimeout(resolve, 100));
 
           document.body.dispatchEvent(
             new window.MouseEvent("click", { bubbles: true, cancelable: true }),
@@ -326,9 +323,6 @@ describe("search-box", () => {
         it("closes the modal", async ({ expect }) => {
           expect(dialog?.open).toBe(true);
 
-          // Wait for openModal's async SearchUI load so onClick is registered
-          await new Promise((resolve) => setTimeout(resolve, 100));
-
           const link = document.createElement("a");
           link.href = "/test";
           document.body.append(link);
@@ -343,24 +337,20 @@ describe("search-box", () => {
           });
           window.dispatchEvent(clickEvent);
 
-          // Wait for the 100ms delay before modal closes
-          await new Promise((resolve) => setTimeout(resolve, 110));
-
-          // eslint-disable-next-line @typescript-eslint/unbound-method
-          expect(dialog?.close).toHaveBeenCalled();
+          await waitFor(() => {
+            // eslint-disable-next-line @typescript-eslint/unbound-method
+            expect(dialog?.close).toHaveBeenCalled();
+          });
         });
       });
     });
 
     describe("search input", () => {
       describe("Enter key", () => {
-        it("blurs the input", async ({ expect }) => {
+        it("blurs the input", ({ expect }) => {
           const openBtn =
             document.querySelector<HTMLButtonElement>("[data-open-search]");
           openBtn?.click();
-
-          // Wait for SearchUI lazy-load and init to complete
-          await new Promise((resolve) => setTimeout(resolve, 100));
 
           const input =
             document.querySelector<HTMLInputElement>("#search-box-input");
@@ -381,13 +371,10 @@ describe("search-box", () => {
       });
 
       describe("clear button", () => {
-        it("focuses the input", async ({ expect }) => {
+        it("focuses the input", ({ expect }) => {
           const openBtn =
             document.querySelector<HTMLButtonElement>("[data-open-search]");
           openBtn?.click();
-
-          // Wait for SearchUI lazy-load and init to complete
-          await new Promise((resolve) => setTimeout(resolve, 100));
 
           const clearBtn =
             document.querySelector<HTMLButtonElement>("#search-box-clear");

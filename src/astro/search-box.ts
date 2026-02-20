@@ -183,6 +183,11 @@ export class SearchBoxController {
 
     const openModal = async (event?: MouseEvent) => {
       dialog.showModal();
+      // stopPropagation and addEventListener must run synchronously before any
+      // await so the opening click cannot bubble up to trigger onClick, and
+      // onClick is registered before control returns to the caller.
+      event?.stopPropagation();
+      this.win.addEventListener("click", onClick);
 
       // Lazy-initialize PagefindAPI on first open; flag prevents race condition
       if (!this.pagefindInitialized && !this.pagefindLoading) {
@@ -201,9 +206,6 @@ export class SearchBoxController {
           this.pagefindLoading = false;
         }
       }
-
-      event?.stopPropagation();
-      this.win.addEventListener("click", onClick);
     };
 
     const closeModal = () => dialog.close();
