@@ -13,7 +13,7 @@ export function HomeOpenGraphImage(): React.JSX.Element {
   return (
     <div
       style={{
-        backgroundColor: "#f4eedf",
+        backgroundColor: "#f4f1ea",
         display: "flex",
         height: "630px",
         position: "relative",
