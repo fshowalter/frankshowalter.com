@@ -58,9 +58,6 @@ async function syncData(filePath: string, ctx: LoaderContext) {
   }
 
   for (const item of raw) {
-    if (!item.slug) {
-      continue;
-    }
     const data = await ctx.parseData({ data: item, id: item.slug });
     ctx.store.set({ data, digest: ctx.generateDigest(item), id: item.slug });
   }
