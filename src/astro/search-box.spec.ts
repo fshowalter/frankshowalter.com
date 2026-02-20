@@ -399,9 +399,7 @@ describe("search functionality", () => {
     await user.click(searchButton);
 
     // Wait for modal to open and SearchUI to initialize
-    await vi.runOnlyPendingTimersAsync();
-    await new Promise((resolve) => setTimeout(resolve, 100));
-    await vi.runOnlyPendingTimersAsync();
+    await vi.advanceTimersByTimeAsync(100);
 
     // Verify modal is open
     const dialog = document.querySelector("dialog");
@@ -769,8 +767,7 @@ describe("search functionality", () => {
         totalFilters: {},
         unfilteredResultCount: 1,
       });
-      await vi.runOnlyPendingTimersAsync();
-      await new Promise((resolve) => setTimeout(resolve, 10));
+      await vi.advanceTimersByTimeAsync(10);
 
       // Now resolve search 1 — it should be discarded (generation mismatch)
       resolveSearch1({
@@ -793,8 +790,7 @@ describe("search functionality", () => {
         totalFilters: {},
         unfilteredResultCount: 1,
       });
-      await vi.runOnlyPendingTimersAsync();
-      await new Promise((resolve) => setTimeout(resolve, 10));
+      await vi.advanceTimersByTimeAsync(10);
 
       // Only the fresh (search 2) results should be visible
       await waitFor(() => {
@@ -862,9 +858,7 @@ describe("search functionality", () => {
       await user.click(loadMoreButton);
 
       // Wait for all async operations to complete
-      // The renderResults function has 5 await calls for result.data()
-      await vi.runOnlyPendingTimersAsync();
-      await new Promise((resolve) => setTimeout(resolve, 10));
+      await vi.advanceTimersByTimeAsync(10);
 
       // Wait for additional results to be rendered
       await waitFor(() => {

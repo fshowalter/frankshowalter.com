@@ -45,7 +45,7 @@ export class SearchBoxController {
   private emptyTemplate!: HTMLTemplateElement;
   private errorTemplate!: HTMLTemplateElement;
   private input!: HTMLInputElement;
-  private iosListenerAttached = false;
+  private iosHandler: (() => void) | undefined;
   private keydownHandler: ((e: KeyboardEvent) => void) | undefined;
   private loadMoreButton!: HTMLButtonElement;
   private loadMoreWrapper!: HTMLElement;
@@ -74,6 +74,9 @@ export class SearchBoxController {
     }
     if (this.clickHandler) {
       this.win.removeEventListener("click", this.clickHandler);
+    }
+    if (this.iosHandler) {
+      this.win.document.body.removeEventListener("click", this.iosHandler);
     }
   }
 
@@ -155,10 +158,8 @@ export class SearchBoxController {
     this.setupEventListeners();
 
     // ios safari doesn't bubble click events unless a parent has a listener
-    if (!this.iosListenerAttached) {
-      this.win.document.body.addEventListener("click", () => {});
-      this.iosListenerAttached = true;
-    }
+    this.iosHandler = () => {};
+    this.win.document.body.addEventListener("click", this.iosHandler);
 
     /** Close the modal if a user clicks on a link or outside of the modal. */
     const onClick = (event: MouseEvent) => {
@@ -516,7 +517,10 @@ if (
 
     connectedCallback(): void {
       if (this.controller) return;
-      this.controller = new SearchBoxController(this, globalThis);
+      this.controller = new SearchBoxController(
+        this,
+        globalThis as unknown as Window,
+      );
       this.controller.init();
     }
 
