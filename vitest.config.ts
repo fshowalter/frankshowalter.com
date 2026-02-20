@@ -34,7 +34,5 @@ export default getViteConfig({
         },
       },
     ],
-    // Vitest configuration options
-    setupFiles: ["setupTests.ts"],
   },
 });

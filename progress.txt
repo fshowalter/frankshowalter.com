@@ -199,3 +199,32 @@ gets a fresh JSDOM so cleanup is unnecessary.
 - React warns "not configured to support act(...)" when `globalThis.IS_REACT_ACT_ENVIRONMENT` is not set to `true`; this is a stderr warning only and does not affect test correctness for pure presentational components
 
 ---
+
+## 2026-02-20 - Stage 4: Delete Old API Layer and Snapshot Test
+
+- Deleted `src/api/booklog.ts`, `src/api/movielog.ts`, `src/api/UpdateSchema.ts`
+- Deleted `src/api/fixtures/booklog.json`, `src/api/fixtures/movielog.json`
+- Deleted `src/api/utils/__mocks__/getDataFile.ts`
+- Kept `src/api/utils/getDataFile.ts` — still used by `src/content.config.ts`
+- Removed `vi.mock('src/api/utils/getDataFile')` from `setupTests.ts`
+- `setupTests.ts` became empty after removing the mock; deleted it to satisfy `unicorn/no-empty-file` lint rule
+- Removed `setupFiles: ['setupTests.ts']` from `vitest.config.ts`
+- `npm run lint`, `npm test` (28/28), `npm run check`, and `npm run knip` all pass
+
+**Files changed**:
+- `src/api/booklog.ts` — deleted
+- `src/api/movielog.ts` — deleted
+- `src/api/UpdateSchema.ts` — deleted
+- `src/api/fixtures/booklog.json` — deleted
+- `src/api/fixtures/movielog.json` — deleted
+- `src/api/utils/__mocks__/getDataFile.ts` — deleted
+- `setupTests.ts` — deleted (became empty)
+- `vitest.config.ts` — removed `setupFiles` entry
+
+**Missing permissions**: None
+
+**Learnings for future iterations:**
+- When a `setupTests.ts` contains only a `vi.mock(...)` call and that mock is removed, the file becomes empty — `unicorn/no-empty-file` will fail lint. Delete the file entirely and remove its `setupFiles` reference from `vitest.config.ts`.
+- Verify `getDataFile` callers before deleting: `src/content.config.ts` uses it (inline loaders call `getDataFile` to resolve `booklog.json`/`movielog.json`), so `getDataFile.ts` must be kept even after the old API is removed.
+
+---

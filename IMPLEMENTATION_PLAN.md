@@ -127,7 +127,11 @@ no longer applies.
 - All checks, tests, and build pass with no references to deleted files.
 - `knip` reports no new issues.
 
-**Status**: Not Started
+**Status**: Complete
+
+Note: `setupTests.ts` was also deleted (it became empty after removing the mock) and its
+`setupFiles` reference was removed from `vitest.config.ts`. `src/api/utils/getDataFile.ts`
+was kept because `src/content.config.ts` still uses it.
 
 ---
 
