@@ -1,4 +1,4 @@
-import type { BackdropImageProps } from "~/api/backdrops";
+import type { BackdropImageProps } from "~/assets/backdrops";
 
 /**
  * Image configuration for backdrop images.

@@ -1,6 +1,5 @@
 import type { APIRoute } from "astro";
 
-import { getOpenGraphBackdropAsBase64String } from "~/api/backdrops";
 import { HomeOpenGraphImage } from "~/features/home/HomeOpenGraphImage";
 import { componentToImage } from "~/utils/componentToImage";
 
@@ -9,11 +8,7 @@ import { componentToImage } from "~/utils/componentToImage";
  * Returns a JPEG image for social media sharing.
  */
 export const GET: APIRoute = async function get() {
-  const jpeg = await componentToImage(
-    HomeOpenGraphImage({
-      backdrop: await getOpenGraphBackdropAsBase64String("home"),
-    }),
-  );
+  const jpeg = await componentToImage(HomeOpenGraphImage());
 
   return new Response(jpeg, {
     headers: {

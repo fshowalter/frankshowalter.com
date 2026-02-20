@@ -1,8 +1,5 @@
 import { getImage } from "astro:assets";
-import path from "node:path";
-import sharp from "sharp";
 
-import { normalizeSources } from "./utils/normalizeSources";
 /**
  * Properties for backdrop images used in page backgrounds.
  */
@@ -41,24 +38,9 @@ export async function getBackdropImageProps(
   });
 
   return {
-    src: normalizeSources(optimizedImage.src),
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+    src: optimizedImage.src,
+    srcSet: optimizedImage.srcSet.attribute,
   };
-}
-
-/**
- * Converts a backdrop image to a base64-encoded PNG string for Open Graph images.
- * Used to embed backdrop images directly in dynamically generated OG images.
- */
-export async function getOpenGraphBackdropAsBase64String(slug: string) {
-  const imageBuffer = await sharp(
-    path.resolve(`./content/assets/backdrops/${slug}.png`),
-  )
-    .resize(1200)
-    .toFormat("png")
-    .toBuffer();
-
-  return `data:${"image/png"};base64,${imageBuffer.toString("base64")}`;
 }
 
 async function getBackdropFile(slug: string) {

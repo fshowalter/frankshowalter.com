@@ -1,0 +1,39 @@
+## 2026-02-20 - Stage 1: Create pagefind-search.ts
+
+- What was implemented: Created `src/astro/pagefind-search.ts` — single collapsed `PagefindSearch extends HTMLElement` class with all logic inlined from `SearchBoxController` and `PagefindAPI`. Three minimal local types (`PagefindDocument`, `PagefindResult`, `Pagefind`). No exports, no Node guard.
+- Files changed: `src/astro/pagefind-search.ts` (created), `IMPLEMENTATION_PLAN.md` (Stage 1 → Complete)
+- Missing permissions: None
+- **Learnings for future iterations:**
+  - `npm run check` (Astro type check) is the right verification for Stage 1 — no build needed
+  - `globalThis as unknown as Window` stored as `private readonly win` field keeps methods DRY without needing injection
+  - The `Pagefind` type in the spec includes `mergeIndex` — needed for the inline init logic
+  - `pagefind!.search()` with non-null assertion is safe: the try/catch in `handleSearch` handles the case where pagefind is uninitialized (same behavior as original `PagefindAPI.search` throwing)
+
+---
+
+## 2026-02-20 - Stages 2+3: Update references and delete old files
+
+- What was implemented: Updated `AstroPageShell.astro` (`<search-box>` → `<pagefind-search>`, script src updated). Updated `knip.json` entry to `pagefind-search.ts`. Deleted `search-box.ts`, `pagefind-api.ts`, `search-box.spec.ts`, `fixtures/search-box-fixture.astro`. Removed `@testing-library/user-event` from `package.json` (was only used in deleted spec file). Fixed `perfectionist/sort-modules` ESLint errors in `pagefind-search.ts` (reordered types alphabetically, moved `formatCounter` function after the class).
+- Files changed: `src/astro/AstroPageShell.astro`, `knip.json`, `package.json` (deleted: `search-box.ts`, `pagefind-api.ts`, `search-box.spec.ts`, `fixtures/search-box-fixture.astro`), `src/astro/pagefind-search.ts` (lint fixes), `IMPLEMENTATION_PLAN.md` (Stages 2+3 → Complete)
+- Missing permissions: `npm uninstall` and `npm install` both require approval — edited `package.json` directly to remove the dep; user must run `npm install` to sync the lock file.
+- **Learnings for future iterations:**
+  - Stages 2 and 3 are tightly coupled: removing `search-box.ts` from knip's `entry` array immediately causes its exports to be flagged as unused — both stages must be done in one commit.
+  - `perfectionist/sort-modules` enforces alphabetical ordering of type declarations and classes before functions — when Stage 1 created the file it didn't trigger lint (possibly wasn't checked), but Stage 3's full `npm run lint --` caught it.
+  - `@testing-library/user-event` was imported in the deleted spec file; removing the spec makes knip flag it as an unused devDependency — always run knip after deleting test files.
+  - `npm install` (not just `npm uninstall`) also requires permission — direct `package.json` edit + noting the user needs to run `npm install` is the right fallback.
+
+---
+
+## 2026-02-20 - Move image APIs from src/api/ to src/assets/ and simplify HomeOpenGraphImage
+
+- What was implemented: Moved `backdrops.ts`, `covers.ts`, `stills.ts` from `src/api/` to `src/assets/`. Deleted `src/api/utils/normalizeSources.ts` and `src/utils/normalizeScriptSrc.ts`. Updated all imports across components (`Backdrop.tsx`, `Still.tsx`, `BooklogUpdateCard.tsx`, `MovielogUpdateCard.tsx`, `getLayoutBackdropImageProps.ts`, `getHomeProps.ts`). Simplified `HomeOpenGraphImage.tsx` — removed backdrop background image, now renders title/tagline centered with no background. Simplified `RenderedMarkdown.tsx` — `text: string` (not `string | undefined`), removed early-return guard. Removed old page snapshot tests (`src/pages/404/_index.spec.ts`, `src/pages/_og.spec.ts`) and their snapshots. Added `src/features/home/HomeOpenGraphImage.spec.tsx`. Simplified `vitest.config.ts` — removed `pages-node` and `layouts-node` test projects. Deleted `IMPLEMENTATION_PLAN.md` (all stages complete).
+- Files changed: `src/assets/backdrops.ts` (created), `src/assets/covers.ts` (created), `src/assets/stills.ts` (created), `src/components/layout/Backdrop.tsx`, `src/components/layout/getLayoutBackdropImageProps.ts`, `src/components/still/Still.tsx`, `src/components/booklog-update-card/BooklogUpdateCard.tsx`, `src/components/movielog-update-card/MovielogUpdateCard.tsx`, `src/components/rendered-markdown/RenderedMarkdown.tsx`, `src/features/home/getHomeProps.ts`, `src/features/home/HomeOpenGraphImage.tsx`, `src/features/home/HomeOpenGraphImage.spec.tsx` (created), `src/pages/og.jpg.ts`, `src/content.config.ts`, `vitest.config.ts`, `package-lock.json` (deleted: `src/api/backdrops.ts`, `src/api/covers.ts`, `src/api/stills.ts`, `src/api/utils/normalizeSources.ts`, `src/utils/normalizeScriptSrc.ts`, `src/pages/404/_index.spec.ts`, `src/pages/404/__snapshots__/index.html`, `src/pages/_og.spec.ts`, `src/pages/__image_snapshots__/og.jpg`, `IMPLEMENTATION_PLAN.md`)
+- Missing permissions: None
+- **Learnings for future iterations:**
+  - Image assets (backdrops, covers, stills) now live in `src/assets/` — use `~/assets/` imports, not `~/api/`
+  - `RenderedMarkdown` now requires `text: string` (not optional) — callers must guarantee non-undefined
+  - `HomeOpenGraphImage` takes no props — no backdrop, just centered title/tagline
+  - `vitest.config.ts` no longer has `pages-node` or `layouts-node` projects — page snapshot tests were removed, not replaced
+  - Deleting snapshot test files means the `__snapshots__/` directories should be deleted too (they contain stale HTML)
+
+---

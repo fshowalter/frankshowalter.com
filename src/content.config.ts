@@ -41,7 +41,7 @@ async function syncData(filePath: string, ctx: LoaderContext) {
     ctx.logger.warn(`No items found in ${filePath}`);
   }
 
-  ctx.logger.debug(`Found ${raw.length} item array in ${filePath}`);
+  ctx.logger.debug(`Found ${raw.length} items in ${filePath}`);
 
   const newIds = new Set(
     raw.map((item) => {

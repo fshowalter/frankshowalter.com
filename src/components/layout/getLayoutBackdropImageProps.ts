@@ -1,4 +1,4 @@
-import { getBackdropImageProps } from "~/api/backdrops";
+import { getBackdropImageProps } from "~/assets/backdrops";
 
 import { BackdropImageConfig } from "./Backdrop";
 

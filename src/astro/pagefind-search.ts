@@ -1,20 +1,24 @@
-// AIDEV-NOTE: Two-class split — SearchBoxController holds all behavior and is
-// instantiated directly in tests with (root, dom.window) to avoid bridging JSDOM
-// globals onto Node's globalThis. SearchBox is a thin web component shell that
-// delegates to SearchBoxController.
-//
-// AIDEV-NOTE: SearchBox uses the light DOM pattern (no Shadow DOM). All children —
-// the dialog and templates — live in the regular DOM so Tailwind classes work
-// without any workaround.
-//
-// AIDEV-NOTE: The open button lives in Backdrop.tsx outside <search-box>, so it is
-// found via win.document.querySelector(). All other elements use root.querySelector()
-// which scopes lookups to the component's subtree.
 import { debounce } from "~/utils/debounce";
 
-import type { PagefindDocument, PagefindResult } from "./pagefind-api";
+// AIDEV-NOTE: Minimal browser-side Pagefind types — only fields the production code reads.
+// The `pagefind` npm package only ships types for its Node.js build/indexing API;
+// browser search API types are not in the published package, so we define our own.
+type Pagefind = {
+  destroy(): Promise<void>;
+  init(): Promise<void>;
+  mergeIndex(url: string, options: { baseUrl: string }): void;
+  search(query: string): Promise<{ results: PagefindResult[] }>;
+};
 
-import { PagefindAPI } from "./pagefind-api";
+type PagefindDocument = {
+  excerpt: string;
+  meta: { image?: string; image_alt?: string; title: string };
+  url: string;
+};
+
+type PagefindResult = {
+  data(): Promise<PagefindDocument>;
+};
 
 // AIDEV-NOTE: Discriminated union makes invalid states unrepresentable.
 // render() dispatches to one focused method per variant — no cross-branch conditionals.
@@ -32,8 +36,7 @@ type SearchState =
   | { kind: "idle" }
   | { kind: "loading"; query: string };
 
-export class SearchBoxController {
-  private api = new PagefindAPI();
+class PagefindSearch extends HTMLElement {
   private clearButton!: HTMLButtonElement;
   private clickHandler: ((e: MouseEvent) => void) | undefined;
   private readonly config = {
@@ -49,92 +52,74 @@ export class SearchBoxController {
   private keydownHandler: ((e: KeyboardEvent) => void) | undefined;
   private loadMoreButton!: HTMLButtonElement;
   private loadMoreWrapper!: HTMLElement;
+  private pagefind: Pagefind | undefined = undefined;
   private pagefindInitialized = false;
   private pagefindLoading = false;
   private resultsContainer!: HTMLElement;
   private resultsCounter!: HTMLElement;
   private resultTemplate!: HTMLTemplateElement;
-  private root: Element;
   // AIDEV-NOTE: Generation counter replaces AbortController. Each search increments the
   // counter; stale results (from an older search that resolved late) are discarded by
   // comparing gen against the current counter after every await point.
   private searchGeneration = 0;
   private skeletonTemplate!: HTMLTemplateElement;
   private state: SearchState = { kind: "idle" };
-  private win: Window;
+  private readonly win = globalThis as unknown as Window;
 
-  constructor(root: Element, win: Window) {
-    this.root = root;
-    this.win = win;
-  }
+  connectedCallback(): void {
+    const { win } = this;
 
-  destroy(): void {
-    if (this.keydownHandler) {
-      this.win.removeEventListener("keydown", this.keydownHandler);
-    }
-    if (this.clickHandler) {
-      this.win.removeEventListener("click", this.clickHandler);
-    }
-    if (this.iosHandler) {
-      this.win.document.body.removeEventListener("click", this.iosHandler);
-    }
-    // disconnectedCallback is synchronous so fire-and-forget is intentional here.
-    void this.api.destroy();
-  }
-
-  init(): void {
-    // AIDEV-NOTE: The open button is in Backdrop.tsx, outside <search-box>,
+    // AIDEV-NOTE: The open button is in Backdrop.tsx, outside <pagefind-search>,
     // so it must be found with win.document.querySelector().
-    const openBtn = this.win.document.querySelector<HTMLButtonElement>(
+    const openBtn = win.document.querySelector<HTMLButtonElement>(
       "button[data-open-search]",
     );
     if (!openBtn) return;
 
-    if (/(Mac|iPhone|iPod|iPad)/i.test(this.win.navigator.userAgent)) {
+    if (/(Mac|iPhone|iPod|iPad)/i.test(win.navigator.userAgent)) {
       openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
       openBtn.setAttribute("title", "Search: ⌘K");
     }
 
-    const closeBtn = this.root.querySelector<HTMLButtonElement>(
+    const closeBtn = this.querySelector<HTMLButtonElement>(
       "button[data-close-search]",
     );
-    const dialog = this.root.querySelector<HTMLDialogElement>("dialog");
-    const dialogFrame = this.root.querySelector<HTMLDivElement>(
+    const dialog = this.querySelector<HTMLDialogElement>("dialog");
+    const dialogFrame = this.querySelector<HTMLDivElement>(
       "div[data-dialog-frame]",
     );
 
     if (!closeBtn || !dialog || !dialogFrame) return;
 
     // Cache element refs — IDs prefixed with search-box- to avoid collisions
-    this.input =
-      this.root.querySelector<HTMLInputElement>("#search-box-input")!;
+    this.input = this.querySelector<HTMLInputElement>("#search-box-input")!;
     this.clearButton =
-      this.root.querySelector<HTMLButtonElement>("#search-box-clear")!;
-    this.resultsCounter = this.root.querySelector<HTMLElement>(
+      this.querySelector<HTMLButtonElement>("#search-box-clear")!;
+    this.resultsCounter = this.querySelector<HTMLElement>(
       "#search-box-counter",
     )!;
-    this.resultsContainer = this.root.querySelector<HTMLElement>(
+    this.resultsContainer = this.querySelector<HTMLElement>(
       "#search-box-results",
     )!;
-    this.loadMoreWrapper = this.root.querySelector<HTMLElement>(
+    this.loadMoreWrapper = this.querySelector<HTMLElement>(
       "#search-box-load-more-wrapper",
     )!;
-    this.loadMoreButton = this.root.querySelector<HTMLButtonElement>(
+    this.loadMoreButton = this.querySelector<HTMLButtonElement>(
       "#search-box-load-more",
     )!;
 
     // AIDEV-NOTE: Template refs hold dynamic content HTML. Tailwind 4.x scans
     // <template> tags in .astro source files — classes are included in CSS output.
-    this.resultTemplate = this.root.querySelector<HTMLTemplateElement>(
+    this.resultTemplate = this.querySelector<HTMLTemplateElement>(
       "template[data-result-item]",
     )!;
-    this.skeletonTemplate = this.root.querySelector<HTMLTemplateElement>(
+    this.skeletonTemplate = this.querySelector<HTMLTemplateElement>(
       "template[data-skeleton]",
     )!;
-    this.emptyTemplate = this.root.querySelector<HTMLTemplateElement>(
+    this.emptyTemplate = this.querySelector<HTMLTemplateElement>(
       "template[data-empty]",
     )!;
-    this.errorTemplate = this.root.querySelector<HTMLTemplateElement>(
+    this.errorTemplate = this.querySelector<HTMLTemplateElement>(
       "template[data-error]",
     )!;
 
@@ -161,7 +146,7 @@ export class SearchBoxController {
 
     // ios safari doesn't bubble click events unless a parent has a listener
     this.iosHandler = () => {};
-    this.win.document.body.addEventListener("click", this.iosHandler);
+    win.document.body.addEventListener("click", this.iosHandler);
 
     /** Close the modal if a user clicks on a link or outside of the modal. */
     const onClick = (event: MouseEvent) => {
@@ -175,7 +160,7 @@ export class SearchBoxController {
       }
 
       if (
-        this.win.document.body.contains(event.target as Node) &&
+        win.document.body.contains(event.target as Node) &&
         !dialogFrame.contains(event.target as Node)
       ) {
         closeModal();
@@ -189,13 +174,25 @@ export class SearchBoxController {
       // await so the opening click cannot bubble up to trigger onClick, and
       // onClick is registered before control returns to the caller.
       event?.stopPropagation();
-      this.win.addEventListener("click", onClick);
+      win.addEventListener("click", onClick);
 
-      // Lazy-initialize PagefindAPI on first open; flag prevents race condition
+      // Lazy-initialize Pagefind on first open; flag prevents race condition
       if (!this.pagefindInitialized && !this.pagefindLoading) {
         this.pagefindLoading = true;
         try {
-          await this.api.init(this.config.bundlePath);
+          const pagefindModule = (await import(
+            /* @vite-ignore */ `${this.config.bundlePath}pagefind.js`
+          )) as Pagefind;
+
+          pagefindModule.mergeIndex("/pagefind-movielog", {
+            baseUrl: "https://www.franksmovielog.com/",
+          });
+          pagefindModule.mergeIndex("/pagefind-booklog", {
+            baseUrl: "https://www.franksbooklog.com/",
+          });
+
+          this.pagefind = pagefindModule;
+          await this.pagefind.init();
           this.pagefindInitialized = true;
         } catch (error) {
           console.error("Failed to initialize search:", error);
@@ -217,7 +214,7 @@ export class SearchBoxController {
     closeBtn.addEventListener("click", closeModal);
 
     dialog.addEventListener("close", () => {
-      this.win.removeEventListener("click", onClick);
+      win.removeEventListener("click", onClick);
     });
 
     // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
@@ -229,16 +226,32 @@ export class SearchBoxController {
       }
     };
 
-    this.win.addEventListener("keydown", this.keydownHandler);
+    win.addEventListener("keydown", this.keydownHandler);
+  }
+
+  disconnectedCallback(): void {
+    const { win } = this;
+    if (this.keydownHandler) {
+      win.removeEventListener("keydown", this.keydownHandler);
+    }
+    if (this.clickHandler) {
+      win.removeEventListener("click", this.clickHandler);
+    }
+    if (this.iosHandler) {
+      win.document.body.removeEventListener("click", this.iosHandler);
+    }
+    // disconnectedCallback is synchronous so fire-and-forget is intentional here.
+    void this.pagefind?.destroy();
   }
 
   private announceToScreenReader(message: string): void {
-    const announcement = this.win.document.createElement("div");
+    const { win } = this;
+    const announcement = win.document.createElement("div");
     announcement.setAttribute("role", "status");
     announcement.setAttribute("aria-live", "polite");
     announcement.className = "sr-only";
     announcement.textContent = message;
-    this.win.document.body.append(announcement);
+    win.document.body.append(announcement);
     setTimeout(() => {
       announcement.remove();
     }, 1000);
@@ -297,7 +310,7 @@ export class SearchBoxController {
     this.render();
 
     try {
-      const searchResults = await this.api.search(trimmedQuery);
+      const searchResults = await this.pagefind!.search(trimmedQuery);
       if (gen !== this.searchGeneration) return;
 
       const resultData = await Promise.all(
@@ -444,11 +457,12 @@ export class SearchBoxController {
    */
   private renderResultList(): void {
     if (this.state.kind !== "results") return;
+    const { win } = this;
     const { allResults, query, results, total, visibleCount } = this.state;
 
     this.resultsCounter.textContent = formatCounter(total, query);
 
-    const ol = this.win.document.createElement("ol");
+    const ol = win.document.createElement("ol");
     for (const result of results) {
       ol.append(this.cloneResult(result));
     }
@@ -499,42 +513,12 @@ export class SearchBoxController {
   }
 }
 
-/**
- * Format the results counter text.
- * Pure function — exported for unit testing.
- */
-export function formatCounter(total: number, query: string): string {
+if (!customElements.get("pagefind-search")) {
+  customElements.define("pagefind-search", PagefindSearch);
+}
+
+function formatCounter(total: number, query: string): string {
   if (total === 0) return `No results for "${query}"`;
   if (total === 1) return `1 result for "${query}"`;
   return `${total} results for "${query}"`;
-}
-
-// AIDEV-NOTE: Guard prevents ReferenceError when the module is imported in Node
-// (e.g. tests). HTMLElement and customElements are browser-only globals. Tests
-// instantiate SearchBoxController directly and never need SearchBox.
-if (
-  typeof HTMLElement !== "undefined" &&
-  typeof customElements !== "undefined"
-) {
-  class SearchBox extends HTMLElement {
-    private controller: SearchBoxController | undefined = undefined;
-
-    connectedCallback(): void {
-      if (this.controller) return;
-      this.controller = new SearchBoxController(
-        this,
-        globalThis as unknown as Window,
-      );
-      this.controller.init();
-    }
-
-    disconnectedCallback(): void {
-      this.controller?.destroy();
-      this.controller = undefined;
-    }
-  }
-
-  if (!customElements.get("search-box")) {
-    customElements.define("search-box", SearchBox);
-  }
 }

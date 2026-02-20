@@ -1,9 +1,6 @@
 import { getImage } from "astro:assets";
-import fs from "node:fs";
 import path from "node:path";
 import sharp from "sharp";
-
-import { normalizeSources } from "./utils/normalizeSources";
 
 /**
  * Type representing optimized cover image properties for display.
@@ -54,26 +51,10 @@ export async function getFluidCoverImageProps(
 
   return {
     height,
-    src: normalizeSources(optimizedImage.src),
-    srcSet: normalizeSources(optimizedImage.srcSet.attribute),
+    src: optimizedImage.src,
+    srcSet: optimizedImage.srcSet.attribute,
     width,
   };
-}
-
-/**
- * Internal function to resolve the file system path for a cover image.
- * Checks if the cover file exists in the content/assets/covers directory.
- *
- * @param slug - The work's unique slug identifier
- * @returns Absolute file path if cover exists, undefined otherwise
- */
-function coverPath(slug: string) {
-  const coverPath = path.resolve(`./content/assets/covers/${slug}.png`);
-  if (fs.existsSync(coverPath)) {
-    return coverPath;
-  }
-
-  return;
 }
 
 /**
@@ -91,14 +72,9 @@ function coverPath(slug: string) {
  * ```
  */
 async function getCoverHeight(coverPath: string, targetWidth: number) {
-  try {
-    const { height, width } = await sharp(coverPath).metadata();
+  const { height, width } = await sharp(coverPath).metadata();
 
-    return (height / width) * targetWidth;
-  } catch (error) {
-    console.error("Error:", error);
-    return 0;
-  }
+  return (height / width) * targetWidth;
 }
 
 /**
@@ -111,22 +87,13 @@ async function getCoverHeight(coverPath: string, targetWidth: number) {
 async function getWorkCoverFile(slug: string) {
   const coverKey = Object.keys(images).find((image) => {
     return image.endsWith(`${slug}.png`);
-  });
-
-  if (coverKey) {
-    return await images[coverKey]();
-  }
-
-  const defaultWorkCoverKey = Object.keys(images).find((image) => {
-    return image.endsWith(`default.png`);
   })!;
 
-  return await images[defaultWorkCoverKey]();
+  return await images[coverKey]();
 }
 
 /**
  * Retrieves the file system path for a work's cover image.
- * Falls back to default cover if the specific work cover doesn't exist.
  *
  * @param work - Work object containing slug for cover identification
  * @returns File system path to cover image, or empty string if none exists
@@ -138,11 +105,5 @@ async function getWorkCoverFile(slug: string) {
  * ```
  */
 function getWorkCoverPath(slug: string) {
-  const workCover = coverPath(slug);
-
-  if (workCover) {
-    return workCover;
-  }
-
-  return coverPath("default") || "";
+  return path.resolve(`./content/assets/covers/${slug}.png`);
 }

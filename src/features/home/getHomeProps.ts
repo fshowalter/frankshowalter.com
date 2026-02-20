@@ -1,7 +1,7 @@
 import type { BooklogData, MovielogData } from "~/content.config";
 
-import { getFluidCoverImageProps } from "~/api/covers";
-import { getStillImageProps } from "~/api/stills";
+import { getFluidCoverImageProps } from "~/assets/covers";
+import { getStillImageProps } from "~/assets/stills";
 
 import type { HomeProps } from "./Home";
 
