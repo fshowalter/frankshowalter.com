@@ -136,19 +136,6 @@ export default defineConfig(
     },
     rules: {
       ...vitest.configs.recommended.rules,
-      "vitest/expect-expect": [
-        "error",
-        {
-          assertFunctionNames: [
-            "expect",
-            "filterDrawerTests.testOpenClose",
-            "filterDrawerTests.testEscapeKey",
-            "filterDrawerTests.testClickOutside",
-            "filterDrawerTests.testViewResultsButton",
-            "filterDrawerTests.testDesktopScroll",
-          ],
-        },
-      ],
     },
   },
 );

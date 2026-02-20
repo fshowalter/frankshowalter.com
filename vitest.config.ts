@@ -17,6 +17,14 @@ export default getViteConfig({
           name: "pages-node",
         },
       },
+      {
+        extends: true,
+        test: {
+          environment: "node",
+          include: ["src/astro/**/*.spec.ts"],
+          name: "layouts-node",
+        },
+      },
     ],
     // Vitest configuration options
     setupFiles: ["setupTests.ts"],

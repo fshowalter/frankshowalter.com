@@ -2,10 +2,6 @@
 import AstroPageShell from "~/astro/AstroPageShell.astro";
 import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
 import { Layout } from "~/components/layout/Layout";
-import { getRecentUpdatesProps } from "~/features/recent-updates/getRecentUpdatesProps";
-import { RecentUpdates } from "~/features/recent-updates/RecentUpdates";
-
-const recentUpdatesProps = await getRecentUpdatesProps();
 
 const title = "404 Not Found";
 const deck = `"It's hard for us here to be reporting this to you, but it does seem to be a fact."`;
@@ -28,7 +24,5 @@ const backdropImageProps = await getLayoutBackdropImageProps("not-found");
     }}
     className="flex flex-col bg-subtle"
     logo={true}
-  >
-    <RecentUpdates {...recentUpdatesProps} /></Layout
-  >
+  />
 </AstroPageShell>

@@ -3,19 +3,19 @@ import { getFluidCoverImageProps } from "~/api/covers";
 import { movielogUpdates } from "~/api/movielog";
 import { getStillImageProps } from "~/api/stills";
 
-import type { RecentUpdatesProps } from "./RecentUpdates";
+import type { HomeProps } from "./Home";
 
 import {
   CoverImageConfig,
   StillImageConfig,
   StillSplashImageConfig,
-} from "./RecentUpdates";
+} from "./Home";
 
 /**
- * Fetches and prepares data for the RecentUpdates component.
+ * Fetches and prepares data for the Home component.
  * Retrieves book and movie updates with formatted dates and optimized images.
  */
-export async function getRecentUpdatesProps(): Promise<RecentUpdatesProps> {
+export async function getHomeProps(): Promise<HomeProps> {
   const booklogItems = await booklogUpdates();
   const movielogItems = await movielogUpdates();
 

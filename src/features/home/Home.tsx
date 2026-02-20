@@ -6,9 +6,9 @@ import { MovielogUpdateCard } from "~/components/movielog-update-card/MovielogUp
 import { UpdateListHeading } from "~/components/update-list-heading/UpdateListHeading";
 
 /**
- * Props for the RecentUpdates component.
+ * Props for the Home component.
  */
-export type RecentUpdatesProps = {
+export type HomeProps = {
   booklogUpdates: BooklogUpdateCardValue[];
   movielogUpdates: MovielogUpdateCardValue[];
 };
@@ -41,10 +41,10 @@ export const StillSplashImageConfig = {
  * Displays recent book and movie review updates in separate sections.
  * Each section includes a heading and responsive grid of update entries.
  */
-export function RecentUpdates({
+export function Home({
   booklogUpdates,
   movielogUpdates,
-}: RecentUpdatesProps): React.JSX.Element {
+}: HomeProps): React.JSX.Element {
   return (
     <div className="w-full bg-subtle pb-16">
       <div
