@@ -21,7 +21,7 @@ export async function getHomeProps(
 ): Promise<HomeProps> {
   return {
     booklogUpdates: await Promise.all(
-      booklogEntries.map(async (item) => {
+      sorted(booklogEntries).map(async (item) => {
         return {
           ...item,
           coverImageProps: await getFluidCoverImageProps(
@@ -34,7 +34,7 @@ export async function getHomeProps(
       }),
     ),
     movielogUpdates: await Promise.all(
-      movielogEntries.map(async (item, index) => {
+      sorted(movielogEntries).map(async (item, index) => {
         return {
           ...item,
           displayDate: formatDate(item.date),
@@ -56,5 +56,11 @@ function formatDate(reviewDate: Date) {
     month: "short",
     timeZone: "UTC",
     year: "numeric",
+  });
+}
+
+function sorted<T extends { date: Date }>(items: T[]): T[] {
+  return items.toSorted((a, b) => {
+    return a.date < b.date ? 1 : a.date > b.date ? -1 : 0;
   });
 }

@@ -40,15 +40,8 @@ async function syncData(filePath: string, ctx: LoaderContext) {
   if (raw.length === 0) {
     ctx.logger.warn(`No items found in ${filePath}`);
   }
-  ctx.logger.debug(`Found ${raw.length} item array in ${filePath}`);
 
-  for (const rawItem of raw) {
-    const slug = rawItem.slug;
-    if (!slug) {
-      ctx.logger.error(`Item in ${filePath} is missing an id or slug field.`);
-      continue;
-    }
-  }
+  ctx.logger.debug(`Found ${raw.length} item array in ${filePath}`);
 
   const newIds = new Set(
     raw.map((item) => {
@@ -65,6 +58,9 @@ async function syncData(filePath: string, ctx: LoaderContext) {
   }
 
   for (const item of raw) {
+    if (!item.slug) {
+      continue;
+    }
     const data = await ctx.parseData({ data: item, id: item.slug });
     ctx.store.set({ data, digest: ctx.generateDigest(item), id: item.slug });
   }
@@ -81,7 +77,9 @@ function updateLoader(filename: string) {
       watcher?.on("change", (changedPath) => {
         if (changedPath === filePath) {
           ctx.logger.info(`Reloading data from ${filePath}`);
-          void syncData(filePath, ctx);
+          syncData(filePath, ctx).catch((error: unknown) => {
+            ctx.logger.error(`Failed to reload ${filePath}: ${String(error)}`);
+          });
         }
       });
     },
