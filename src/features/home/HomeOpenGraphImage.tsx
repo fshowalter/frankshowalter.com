@@ -50,7 +50,7 @@ export function HomeOpenGraphImage(): React.JSX.Element {
             display: "flex",
             fontFamily: "Assistant",
             fontSize: "20px",
-            fontWeight: 400,
+            fontWeight: 600,
             lineHeight: "1.25",
             marginTop: "8px",
           }}
