@@ -78,6 +78,8 @@ export class SearchBoxController {
     if (this.iosHandler) {
       this.win.document.body.removeEventListener("click", this.iosHandler);
     }
+    // disconnectedCallback is synchronous so fire-and-forget is intentional here.
+    void this.api.destroy();
   }
 
   init(): void {

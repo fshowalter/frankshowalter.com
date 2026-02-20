@@ -104,10 +104,6 @@ export class PagefindAPI {
         /* @vite-ignore */ `${bundlePath}pagefind.js`
       )) as Pagefind & {
         mergeIndex: (url: string, options: { baseUrl: string }) => void;
-        options: (config: {
-          baseUrl: string;
-          bundlePath: string;
-        }) => Promise<void>;
       };
 
       pagefindModule.mergeIndex("/pagefind-movielog", {
