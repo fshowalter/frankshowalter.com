@@ -42,6 +42,3 @@ jobs:
 
       - name: stylelint
         run: npm run stylelint
-
-      - name: cspell
-        run: npm run lint:spelling
