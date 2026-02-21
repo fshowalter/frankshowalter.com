@@ -1,9 +1,9 @@
 import type { LoaderContext } from "astro/loaders";
 
+import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { z } from "zod";
 
 function getDataFile(file: string) {
   return path.join(process.cwd(), "content", "data", file);

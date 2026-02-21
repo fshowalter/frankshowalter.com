@@ -19,6 +19,14 @@ export async function getHomeProps(
   booklogEntries: BooklogData[],
   movielogEntries: MovielogData[],
 ): Promise<HomeProps> {
+  if (booklogEntries.length === 0) {
+    throw new Error("Home: No booklog entries.");
+  }
+
+  if (movielogEntries.length === 0) {
+    throw new Error("Home: No movielog entries.");
+  }
+
   return {
     booklogUpdates: await Promise.all(
       sorted(booklogEntries).map(async (item) => {
