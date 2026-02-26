@@ -1,35 +1,24 @@
+import { z } from "astro/zod";
 import { constants } from "node:fs";
 import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { z } from "zod";
+
+import { MovielogSchema } from "./src/schemas.ts";
+import { BooklogSchema } from "./src/schemas.ts";
 
 type DownloadOptions = {
   overwrite?: boolean;
   skipExisting?: boolean;
 };
 
-const BaseUpdateSchema = z.object({
-  date: z.coerce.date(),
-  excerpt: z.string(),
-  image: z.string(),
-  slug: z.string(),
-  stars: z.number(),
-  title: z.string(),
-});
-
-const MovieUpdateSchema = BaseUpdateSchema.extend({
-  genres: z.array(z.string()),
-  year: z.string(),
-});
-
-const BookUpdateSchema = BaseUpdateSchema.extend({
-  authors: z.array(z.string()),
-  kind: z.string(),
-  workYear: z.string(),
-});
-
-const MovieUpdatesArraySchema = z.array(MovieUpdateSchema);
-const BookUpdatesArraySchema = z.array(BookUpdateSchema);
+const MovieUpdatesSchema = z.array(
+  MovielogSchema.extend({ image: z.string() }),
+);
+const BookUpdatesSchema = z.array(
+  BooklogSchema.extend({
+    image: z.string(),
+  }),
+);
 
 type MediaSource = {
   baseUrl: string; // Added baseUrl for resolving relative paths
@@ -207,8 +196,8 @@ async function processMediaUpdates(source: MediaSource): Promise<void> {
     // Use appropriate schema based on media type
     const updates =
       source.type === "movie"
-        ? MovieUpdatesArraySchema.parse(rawUpdates)
-        : BookUpdatesArraySchema.parse(rawUpdates);
+        ? MovieUpdatesSchema.parse(rawUpdates)
+        : BookUpdatesSchema.parse(rawUpdates);
 
     console.log(`Processing ${updates.length} ${source.type} updates`);
 

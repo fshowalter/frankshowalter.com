@@ -1,35 +1,14 @@
 import type { LoaderContext } from "astro/loaders";
 
-import { z } from "astro/zod";
 import { defineCollection } from "astro:content";
 import { promises as fs } from "node:fs";
 import path from "node:path";
 
+import { BooklogSchema, MovielogSchema } from "./schemas";
+
 function getDataFile(file: string) {
   return path.join(process.cwd(), "content", "data", file);
 }
-
-const UpdateSchema = z.object({
-  date: z.coerce.date(),
-  excerpt: z.string(),
-  slug: z.string(),
-  stars: z.number(),
-  title: z.string(),
-});
-
-export const BooklogSchema = UpdateSchema.extend({
-  authors: z.array(z.string()),
-  kind: z.string(),
-  workYear: z.string(),
-});
-
-export const MovielogSchema = UpdateSchema.extend({
-  genres: z.array(z.string()),
-  year: z.string(),
-});
-
-export type BooklogData = z.infer<typeof BooklogSchema>;
-export type MovielogData = z.infer<typeof MovielogSchema>;
 
 async function syncData(filePath: string, ctx: LoaderContext) {
   const raw = JSON.parse(await fs.readFile(filePath, "utf8")) as (Record<
