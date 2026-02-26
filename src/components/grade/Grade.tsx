@@ -1,4 +1,4 @@
-const gradeMap: Record<string, [string, string]> = {
+const gradeImageAttributesMap: Record<string, [string, string]> = {
   0.5: ["/svg/half-star.svg", "1/2 star (out of 5)"],
   1: ["/svg/1-star.svg", "1 star (out of 5)"],
   1.5: ["/svg/1-half-stars.svg", "1.5 stars (out of 5)"],
@@ -28,7 +28,13 @@ export function Grade({
     return <div>Abandoned</div>;
   }
 
-  const [src, alt] = gradeMap[value];
+  const gradeImageAttributes = gradeImageAttributesMap[value];
+
+  if (!gradeImageAttributes) {
+    throw new Error(`Unknown grade value: ${value}`);
+  }
+
+  const [src, alt] = gradeImageAttributes;
 
   const width = height * 5;
 

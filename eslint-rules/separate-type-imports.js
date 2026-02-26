@@ -65,7 +65,7 @@ function buildNamedSpecifier(spec) {
  * @returns {string} The formatted namespace import string
  */
 function buildNamespaceImportPart(namespaceImports, hasDefault) {
-  if (namespaceImports.length === 0) {
+  if (namespaceImports.length === 0 || !namespaceImports[0]?.local?.name) {
     return "";
   }
   const namespaceStr = `* as ${namespaceImports[0].local.name}`;
@@ -164,8 +164,11 @@ const rule = {
                 const importParts = [];
 
                 // Add default import
-                if (defaultImports.length > 0) {
-                  importParts.push(defaultImports[0].local.name);
+                if (
+                  defaultImports.length > 0 &&
+                  defaultImports[0]?.local?.name
+                ) {
+                  importParts.push(defaultImports[0]?.local?.name);
                 }
 
                 // Add namespace import with proper comma

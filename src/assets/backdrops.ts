@@ -48,5 +48,11 @@ async function getBackdropFile(slug: string) {
     return path.endsWith(`${slug}.png`);
   })!;
 
-  return await images[backdropFilePath]();
+  const backdropImagePromise = images[backdropFilePath];
+
+  if (!backdropImagePromise) {
+    throw new Error(`Unable to access backdrop for slug ${slug}`);
+  }
+
+  return await backdropImagePromise();
 }

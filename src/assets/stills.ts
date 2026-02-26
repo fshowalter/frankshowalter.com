@@ -34,13 +34,19 @@ export async function getStillImageProps(
     return path.endsWith(`/${slug}.png`);
   })!;
 
-  const stillFile = await images[stillFilePath]();
+  const stillImagePromise = images[stillFilePath];
+
+  if (!stillImagePromise) {
+    throw new Error(`Unable to access still for slug ${slug}`);
+  }
+
+  const stillImage = await stillImagePromise();
 
   const optimizedImage = await getImage({
     format: "avif",
     height: height,
     quality: 80,
-    src: stillFile.default,
+    src: stillImage.default,
     width: width,
     widths: [0.25, 0.5, 1, 2].map((w) => w * width),
   });

@@ -132,7 +132,7 @@ function Title({
   value,
 }: {
   center?: boolean;
-  className?: string;
+  className?: string | undefined;
   shadow?: boolean;
   value: string;
 }): React.JSX.Element {

@@ -89,7 +89,13 @@ async function getWorkCoverFile(slug: string) {
     return image.endsWith(`${slug}.png`);
   })!;
 
-  return await images[coverKey]();
+  const coverImagePromise = images[coverKey];
+
+  if (!coverImagePromise) {
+    throw new Error(`Unable to access cover for slug ${slug}`);
+  }
+
+  return await coverImagePromise();
 }
 
 /**
