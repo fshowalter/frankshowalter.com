@@ -2,6 +2,5 @@
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "entry": ["src/**/*.astro", "src/astro/pagefind-search.ts"],
   "project": ["**/*"],
-  "ignoreDependencies": ["babel-plugin-react-compiler", "@vitest/coverage-v8"],
   "ignore": ["updateData.ts"]
 }
