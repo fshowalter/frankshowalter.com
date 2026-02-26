@@ -22,7 +22,7 @@ function pagefind(): AstroIntegration {
           return;
         }
 
-        const { errors: createErrors, index } = await createIndex({});
+        const { errors: createErrors, index } = await createIndex();
 
         if (!index) {
           logger.error("Pagefind failed to create index");
@@ -79,13 +79,7 @@ export default defineConfig({
     },
   },
   integrations: [
-    react({
-      babel: {
-        plugins: process.env.TEST_COVERAGE
-          ? []
-          : [["babel-plugin-react-compiler"]],
-      },
-    }),
+    react(),
     sitemap({
       filter: (page) => page !== "https://www.frankshowalter.com/gone/",
     }),

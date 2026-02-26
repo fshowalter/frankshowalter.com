@@ -38,7 +38,7 @@ async function syncData(filePath: string, ctx: LoaderContext) {
   > & { slug: string })[];
 
   if (raw.length === 0) {
-    ctx.logger.warn(`No items found in ${filePath}`);
+    ctx.logger.error(`No items found in ${filePath}`);
   }
 
   ctx.logger.debug(`Found ${raw.length} items in ${filePath}`);

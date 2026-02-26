@@ -4,7 +4,6 @@ import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import perfectionist from "eslint-plugin-perfectionist";
 import react from "eslint-plugin-react";
-import reactHooks from "eslint-plugin-react-hooks";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
@@ -25,7 +24,6 @@ export default defineConfig(
   },
   eslint.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
-  reactHooks.configs.flat.recommended,
   perfectionist.configs["recommended-natural"],
   ...eslintPluginAstro.configs.recommended,
   {
