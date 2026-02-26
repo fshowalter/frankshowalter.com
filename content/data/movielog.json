@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-02-18T00:00:00.000Z",
+    "excerpt": "<p>College milquetoast Frank Sinatra discovers he must assume his late father’s secret identity as a womanizing outlaw known as “The Kissing Bandit.”</p>",
+    "genres": [
+      "Comedy",
+      "Musical",
+      "Western"
+    ],
+    "image": "/_astro/the-kissing-bandit-1948.B-n-vNaH_Z1tWRhS.png",
+    "slug": "the-kissing-bandit-1948",
+    "stars": 1,
+    "title": "The Kissing Bandit",
+    "year": "1948"
+  },
+  {
     "date": "2026-02-17T00:00:00.000Z",
     "excerpt": "<p>Tank commander Humphrey Bogart leads a hopelessly outnumbered group of Allied stragglers defending a remote well from a German battalion in the North African desert.</p>",
     "genres": [
@@ -52,19 +66,5 @@
     "stars": 1.5,
     "title": "Step Lively",
     "year": "1944"
-  },
-  {
-    "date": "2026-02-12T00:00:00.000Z",
-    "excerpt": "<p>Jason Voorhees gets a gritty makeover and hunts photogenic twenty-somethings around Crystal Lake.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/friday-the-13th-2009.GU5LIrd3_ZA9rlH.png",
-    "slug": "friday-the-13th-2009",
-    "stars": 2,
-    "title": "Friday the 13th",
-    "year": "2009"
   }
 ]

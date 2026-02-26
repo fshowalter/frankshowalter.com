@@ -1,5 +1,4 @@
 import eslint from "@eslint/js";
-import vitest from "@vitest/eslint-plugin";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import perfectionist from "eslint-plugin-perfectionist";
@@ -119,16 +118,6 @@ export default defineConfig(
       react: {
         version: "detect",
       },
-    },
-  },
-  {
-    files: ["src/**/?(*.)+(spec|test).[jt]s?(x)"],
-    plugins: {
-      vitest,
-    },
-    rules: {
-      ...vitest.configs.recommended.rules,
-      "vitest/no-conditional-expect": ["error", { expectAssertions: true }],
     },
   },
 );

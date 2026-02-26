@@ -1,4 +1,4 @@
-import type { BooklogData, MovielogData } from "~/content.config";
+import type { BooklogData, MovielogData } from "~/schemas";
 
 import { getFluidCoverImageProps } from "~/assets/covers";
 import { getStillImageProps } from "~/assets/stills";

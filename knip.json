@@ -1,6 +1,9 @@
 {
   "$schema": "https://unpkg.com/knip@5/schema.json",
-  "entry": ["src/**/*.astro", "src/astro/pagefind-search.ts"],
-  "project": ["**/*"],
-  "ignore": ["updateData.ts"]
+  "entry": [
+    "src/**/*.astro",
+    "src/astro/pagefind-search.ts",
+    "eslint-rules/**"
+  ],
+  "project": ["**/*"]
 }
