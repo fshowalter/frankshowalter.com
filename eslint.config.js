@@ -2,12 +2,11 @@ import eslint from "@eslint/js";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import perfectionist from "eslint-plugin-perfectionist";
+import eslintPluginSeparateTypeImports from "eslint-plugin-separate-type-imports";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-
-import separateTypeImports from "./eslint-rules/separate-type-imports.js";
 
 export default defineConfig(
   {
@@ -22,6 +21,7 @@ export default defineConfig(
   },
   eslint.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
+  eslintPluginSeparateTypeImports.configs.recommended,
   perfectionist.configs["recommended-natural"],
   ...eslintPluginAstro.configs.recommended,
   {
@@ -50,19 +50,11 @@ export default defineConfig(
         warnOnUnsupportedTypeScriptVersion: false,
       },
     },
-    plugins: {
-      local: {
-        rules: {
-          "separate-type-imports": separateTypeImports,
-        },
-      },
-    },
     rules: {
       "@typescript-eslint/array-type": "error",
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": "off", // Turned off in favor of our custom rule
       "@typescript-eslint/no-import-type-side-effects": "error",
-      "local/separate-type-imports": "error",
       "no-restricted-imports": [
         "error",
         {
