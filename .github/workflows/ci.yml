@@ -1,6 +1,5 @@
 name: ci
 
-runs-on: ubuntu-latest
 permissions:
   contents: read
 
@@ -10,6 +9,7 @@ on:
 
 jobs:
   knip:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
@@ -32,6 +32,7 @@ jobs:
         run: npm run knip
 
   format:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
@@ -54,6 +55,7 @@ jobs:
         run: npm run format
 
   check:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
@@ -76,6 +78,7 @@ jobs:
         run: npm run check
 
   lint:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
@@ -98,6 +101,7 @@ jobs:
         run: npm run lint
 
   stylelint:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
