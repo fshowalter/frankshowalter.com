@@ -4,18 +4,19 @@ import type { BackdropImageProps } from "~/assets/backdrops";
 import { BackdropImageConfig } from "./BackdropImageConfig";
 
 export type Props = {
-  backdropImageProps: BackdropImageProps | undefined;
+  backdropImageProps?: BackdropImageProps | undefined;
   centerText: boolean;
   children: any;
 };
 
-const { backdropImageProps, centerText, children } = Astro.props;
+const { backdropImageProps, centerText } = Astro.props;
 ---
 
 <header
   class={`
-    relative flex max-h-[1350px] min-h-[90vh] w-full flex-col content-start
-    items-center justify-end
+    relative flex
+    ${backdropImageProps && "max-h-[1350px] min-h-screen"}
+    w-full flex-col content-start items-center justify-center
     ${backdropImageProps ? "bg-[#2A2B2A] text-white" : "text-default"}
     pt-40 pb-20
     tablet:pt-40 tablet:pb-20
@@ -49,6 +50,6 @@ const { backdropImageProps, centerText, children } = Astro.props;
       }
     `}
   >
-    {children}
+    <slot />
   </div>
 </header>

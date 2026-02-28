@@ -2,38 +2,36 @@
 export type Props = Record<string, never>;
 ---
 
-<pagefind-search>
-  <div class={`w-full max-w-107.5`}>
-    <button
-      aria-keyshortcuts="Control+K"
-      aria-label="Search"
-      class={`
-        mt-1 flex h-10 w-full cursor-pointer items-center justify-end
-        overflow-hidden rounded-2xl border border-border bg-default px-2
-        text-sm/6 text-default/55 ring-default transition-all duration-500
-        hover:border-accent hover:text-accent
-      `}
-      data-open-search
-      disabled
-      title="Search: Control+K"
-      type="button"
+<pagefind-search class={`w-full max-w-107.5`}>
+  <button
+    aria-keyshortcuts="Control+K"
+    aria-label="Search"
+    class={`
+      mt-1 flex h-10 w-full cursor-pointer items-center justify-end
+      overflow-hidden rounded-2xl border border-border bg-default px-2 text-sm/6
+      text-default/55 ring-default transition-all duration-500
+      hover:border-accent hover:text-accent
+    `}
+    data-open-search
+    disabled
+    title="Search: Control+K"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="size-7"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.5"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
     >
-      <svg
-        aria-hidden="true"
-        class="size-7"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="1.5"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-          stroke-linecap="round"
-          stroke-linejoin="round"></path>
-      </svg>
-    </button>
-  </div>
+      <path
+        d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        stroke-linecap="round"
+        stroke-linejoin="round"></path>
+    </svg>
+  </button>
   <dialog
     aria-label="Search"
     class={`

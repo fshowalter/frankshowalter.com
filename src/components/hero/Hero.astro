@@ -8,7 +8,7 @@ import Deck from "./Deck.astro";
 import Title from "./Title.astro";
 
 export type Props = {
-  backdropImageProps: BackdropProps["backdropImageProps"];
+  backdropImageProps?: BackdropProps["backdropImageProps"];
   centerText: boolean;
   deckProps: ComponentProps<typeof Deck>;
   titleProps: ComponentProps<typeof Title>;

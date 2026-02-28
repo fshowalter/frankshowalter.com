@@ -10,12 +10,11 @@ const { center, shadow, value } = Astro.props;
 
 <p
   class={`
-    my-4 font-sans text-base font-normal
+    my-2 font-sans text-base font-normal
     ${shadow ? `text-white/75 [text-shadow:1px_1px_2px_black]` : "text-subtle"}
     tablet:text-lg
     laptop:text-xl
     ${center ? `text-center` : ""}
   `}
->
-  {value}
-</p>
+  set:html={value}
+/>

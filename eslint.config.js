@@ -2,7 +2,6 @@ import eslint from "@eslint/js";
 import eslintPluginAstro from "eslint-plugin-astro";
 import eslintPluginBetterTailwindcss from "eslint-plugin-better-tailwindcss";
 import perfectionist from "eslint-plugin-perfectionist";
-import react from "eslint-plugin-react";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
@@ -43,7 +42,7 @@ export default defineConfig(
   },
   {
     extends: [tseslint.configs.recommendedTypeChecked],
-    files: ["**/*.ts", "**/*.tsx"],
+    files: ["**/*.ts"],
     languageOptions: {
       parserOptions: {
         project: true,
@@ -89,34 +88,6 @@ export default defineConfig(
     settings: {
       "better-tailwindcss": {
         entryPoint: "src/css/tailwind.css",
-      },
-    },
-  },
-  {
-    files: ["**/*.tsx"],
-    plugins: {
-      "better-tailwindcss": eslintPluginBetterTailwindcss,
-      react,
-    },
-    rules: {
-      ...react.configs.recommended.rules,
-      "react/boolean-prop-naming": "error",
-      "react/button-has-type": "error",
-      "react/react-in-jsx-scope": "off",
-      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
-      "@typescript-eslint/explicit-function-return-type": "error",
-      "better-tailwindcss/no-conflicting-classes": "error",
-      "better-tailwindcss/no-unknown-classes": [
-        "error",
-        { detectComponentClasses: true },
-      ],
-    },
-    settings: {
-      "better-tailwindcss": {
-        entryPoint: "src/css/tailwind.css",
-      },
-      react: {
-        version: "detect",
       },
     },
   },
