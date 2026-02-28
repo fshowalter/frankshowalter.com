@@ -64,7 +64,7 @@ const Element = element;
         group-has-[a:hover]/card:scale-110
       `}
       decoding="async"
-      fetch-priority={variant === "splash" ? "high" : "auto"}
+      fetchpriority={variant === "splash" ? "high" : "auto"}
       loading={variant === "splash" ? "eager" : "lazy"}
     />
   </div>
