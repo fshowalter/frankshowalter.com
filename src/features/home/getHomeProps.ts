@@ -3,13 +3,11 @@ import type { BooklogData, MovielogData } from "~/schemas";
 import { getFluidCoverImageProps } from "~/assets/covers";
 import { getStillImageProps } from "~/assets/stills";
 
-import type { HomeProps } from "./Home";
+import type { Props as HomeProps } from "./Home.astro";
 
-import {
-  CoverImageConfig,
-  StillImageConfig,
-  StillSplashImageConfig,
-} from "./Home";
+import { CoverImageConfig } from "./CoverImageConfig";
+import { StillDefaultImageConfig } from "./StillDefaultImageConfig";
+import { StillSplashImageConfig } from "./StillSplashImageConfig";
 
 /**
  * Transforms pre-fetched booklog and movielog data into props for the Home component.
@@ -50,7 +48,7 @@ export async function getHomeProps(
           releaseYear: item.year,
           stillImageProps: await getStillImageProps(
             item.slug,
-            index === 0 ? StillSplashImageConfig : StillImageConfig,
+            index === 0 ? StillSplashImageConfig : StillDefaultImageConfig,
           ),
         };
       }),

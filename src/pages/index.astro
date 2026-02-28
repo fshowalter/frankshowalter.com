@@ -1,11 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import React from "react";
 
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { Layout } from "~/components/layout/Layout";
+import Layout from "~/components/layout/Layout.astro";
 import { getHomeProps } from "~/features/home/getHomeProps";
-import { Home } from "~/features/home/Home";
+import Home from "~/features/home/Home.astro";
 
 const booklogCollection = await getCollection("booklog");
 const movielogCollection = await getCollection("movielog");
@@ -23,25 +21,28 @@ const deck = `I write stuff. Mostly <a class="inline-block relative text-accent 
 const metaDescription = "Mostly movie reviews, sometimes book reviews.";
 ---
 
-<AstroPageShell
-  canonical={true}
-  meta={{
-    description: metaDescription,
+<Layout
+  headProps={{
+    canonical: true,
+    meta: {
+      description: metaDescription,
+    },
+    openGraph: { description: "Frank Showalter", type: "website" },
+    title: "Frank Showalter",
   }}
-  openGraph={{ description: "Frank Showalter", type: "website" }}
-  title="Frank Showalter"
+  heroProps={{
+    centerText: true,
+    deckProps: {
+      value: deck,
+    },
+    titleProps: {
+      value: "Frank Showalter",
+    },
+  }}
+  logo={false}
+  mainProps={{
+    classNames: "bg-subtle",
+  }}
 >
-  <Layout
-    backdrop={{
-      centerText: true,
-      deck: React.createElement("span", {
-        dangerouslySetInnerHTML: { __html: deck },
-      }),
-      size: "full",
-      title: "Frank Showalter",
-    }}
-    className="bg-subtle"
-  >
-    <Home {...homeProps} />
-  </Layout>
-</AstroPageShell>
+  <Home {...homeProps} />
+</Layout>

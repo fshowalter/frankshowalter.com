@@ -1,28 +1,32 @@
 ---
-import AstroPageShell from "~/astro/AstroPageShell.astro";
-import { getLayoutBackdropImageProps } from "~/components/layout/getLayoutBackdropImageProps";
-import { Layout } from "~/components/layout/Layout";
+import { getHeroBackdropImageProps } from "~/components/hero/getHeroBackdropImageProps";
+import Layout from "~/components/layout/Layout.astro";
 
 const title = "404 Not Found";
 const deck = `"It's hard for us here to be reporting this to you, but it does seem to be a fact."`;
-const backdropImageProps = await getLayoutBackdropImageProps("not-found");
+const backdropImageProps = await getHeroBackdropImageProps("not-found");
 ---
 
-<AstroPageShell
-  canonical={false}
-  meta={{ description: deck }}
-  openGraph={false}
-  title={title}
->
-  <Layout
-    backdrop={{
-      backdropImageProps,
-      centerText: true,
-      deck,
-      size: "full",
-      title,
-    }}
-    className="flex flex-col bg-subtle"
-    logo={true}
-  />
-</AstroPageShell>
+<Layout
+  headProps={{
+    canonical: false,
+    meta: { description: deck },
+    openGraph: false,
+    title: title,
+  }}
+  heroProps={{
+    backdropImageProps,
+    centerText: true,
+    deckProps: {
+      value: deck,
+    },
+    titleProps: {
+      shadow: true,
+      value: title,
+    },
+  }}
+  logo={true}
+  mainProps={{
+    classNames: "flex flex-col bg-footer",
+  }}
+/>

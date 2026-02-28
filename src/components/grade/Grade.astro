@@ -1,3 +1,4 @@
+---
 const gradeImageAttributesMap: Record<string, [string, string]> = {
   0.5: ["/svg/half-star.svg", "1/2 star (out of 5)"],
   1: ["/svg/1-star.svg", "1 star (out of 5)"],
@@ -11,46 +12,46 @@ const gradeImageAttributesMap: Record<string, [string, string]> = {
   5: ["/svg/5-stars.svg", "5 stars (out of 5)"],
 };
 
-/**
- * Displays a star rating visualization with support for half stars.
- * Shows appropriate star SVGs based on the numeric rating value.
- */
-export function Grade({
-  className,
-  height,
-  value,
-}: {
-  className?: string;
+export type Props = {
+  classNames?: string;
   height: 15 | 16 | 18 | 24 | 32;
   value?: number | string;
-}): React.JSX.Element {
-  if (!value || value == "Abandoned") {
-    return <div>Abandoned</div>;
-  }
+};
 
+const { classNames, height, value } = Astro.props;
+
+const abandoned = !value || value == "Abandoned";
+let alt, src;
+
+if (!abandoned) {
   const gradeImageAttributes = gradeImageAttributesMap[value];
 
   if (!gradeImageAttributes) {
     throw new Error(`Unknown grade value: ${value}`);
   }
 
-  const [src, alt] = gradeImageAttributes;
+  [src, alt] = gradeImageAttributes;
+}
 
-  const width = height * 5;
+const width = height * 5;
+---
 
-  return (
+{abandoned && <div>Abandoned</div>}
+
+{
+  !abandoned && src && alt && (
     <picture>
       <source
         media="(prefers-color-scheme: dark)"
-        srcSet={src.replace(".svg", "-dark.svg")}
+        src-set={src.replace(".svg", "-dark.svg")}
       />
       <img
         alt={alt}
-        className={className}
+        class={classNames}
         height={height}
         src={src}
         width={width}
       />
     </picture>
-  );
+  )
 }

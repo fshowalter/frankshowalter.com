@@ -1,0 +1,164 @@
+---
+import type { CoverImageProps } from "~/assets/covers";
+
+import Grade from "~/components/grade/Grade.astro";
+import { toSentenceArray } from "~/utils/toSentenceArray";
+
+export type BooklogUpdateCardValue = {
+  /** Array of authors for the reviewed work */
+  authors: string[];
+  /** Cover image properties for display */
+  coverImageProps: CoverImageProps;
+  displayDate: string;
+  /** Review excerpt text */
+  excerpt: string;
+  /** Grade given to the work */
+  gradeValue: number;
+  /** Type of work (e.g., "Novel", "Short Story") */
+  kind: string;
+  /** URL slug for the review */
+  slug: string;
+  /** Title of the reviewed work */
+  title: string;
+  /** Year the work was published */
+  workYear: string;
+};
+
+export type Props = {
+  element?: "div" | "li";
+  imageSizes: string;
+  value: BooklogUpdateCardValue;
+};
+
+const { element = "li", imageSizes, value } = Astro.props;
+
+const Element = element;
+---
+
+<Element
+  class={`
+    group/list-item @container/card relative row-span-2 grid transform-gpu
+    grid-rows-subgrid gap-y-0 bg-default py-6 pr-8 pl-4 transition-transform
+    duration-500
+    tablet-landscape:has-[a:hover]:-translate-y-2
+    tablet-landscape:has-[a:hover]:drop-shadow-2xl
+  `}
+>
+  <div
+    class={`
+      row-span-2 grid grid-cols-1 grid-rows-subgrid gap-x-[5%]
+      @min-[500px]/card:flex @min-[500px]/card:flex-row
+    `}
+  >
+    <div
+      class={`
+        relative row-start-1 flex shrink-0 justify-center self-end
+        @min-[500px]/card:w-1/4 @min-[500px]/card:self-start
+        @min-[500px]/card:drop-shadow-md
+      `}
+    >
+      <div
+        class={`
+          absolute top-[2.5%] bottom-[2.5%] left-0 w-full overflow-hidden
+          bg-default bg-cover bg-center clip-path-cover
+          after:absolute after:size-full after:backdrop-blur-sm
+          after:clip-path-cover
+          @min-[500px]/card:hidden
+        `}
+        style={{
+          backgroundColor: "var(--background-color-default)",
+          backgroundImage: `linear-gradient(90deg, rgba(var(--bg-default-rgb),1) 0%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 30%, rgba(var(--bg-default-rgb),0) 50%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 70%, rgba(var(--bg-default-rgb),1) 100%), url(${value.coverImageProps.src})`,
+        }}
+      >
+      </div>
+      <div
+        class={`
+          relative w-1/2 max-w-[200px] shrink-0 self-start overflow-hidden
+          rounded-sm shadow-all transition-transform
+          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          after:bg-default after:opacity-15 after:transition-opacity
+          group-has-[a:hover]/list-item:after:opacity-0
+          @min-[500px]/card:w-full
+        `}
+      >
+        <div
+          class={`
+            relative
+            after:absolute after:top-0 after:left-0 after:z-10 after:block
+            after:size-full after:rounded-[2.5px]
+            after:bg-[url(/assets/spine-dark.png)] after:bg-size-[100%_100%]
+            after:mix-blend-multiply
+          `}
+        >
+          <div
+            class={`
+              relative z-10
+              before:absolute before:top-0 before:left-0 before:z-10
+              before:block before:size-full before:rounded-[2.5px]
+              before:bg-[url(/assets/spine-light.png)]
+              before:bg-size-[100%_100%]
+              after:absolute after:top-0 after:left-0 after:block
+              after:size-full after:rounded-[2.5px]
+              after:bg-[url(/assets/spot.png)] after:bg-size-[100%_100%]
+              after:mix-blend-soft-light
+            `}
+          >
+            <img
+              {...value.coverImageProps}
+              alt=""
+              class={`
+                transform-gpu rounded-[2.5px] bg-default transition-transform
+                duration-500
+                group-has-[a:hover]/list-item:scale-110
+              `}
+              decoding="async"
+              loading="lazy"
+              sizes={imageSizes}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class={`
+        row-start-2 mt-4 flex flex-col gap-y-2 px-[8%]
+        @min-[500px]/card:mt-0 @min-[500px]/card:px-0
+      `}
+    >
+      <div
+        class={`
+          font-sans text-xs/4 font-normal tracking-wider text-subtle uppercase
+          laptop:tracking-wide
+        `}
+      >
+        {value.displayDate}
+      </div>
+      <a
+        class={`z-20 font-sans text-xs tracking-wide text-accent uppercase`}
+        href="https://www.franksbooklog.com/"
+      >
+        Book Reviews
+      </a>
+      <a
+        class={`
+          block text-2xl font-medium transition-colors duration-500
+          after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+          hover:text-accent
+          hover:before:opacity-0
+        `}
+        href={`https://www.franksbooklog.com/reviews/${value.slug}/`}
+      >
+        {value.title}
+      </a>
+      <div class="-mt-2">{toSentenceArray(value.authors)}</div>
+      <div class={`font-sans text-sm/4 font-normal tracking-prose text-subtle`}>
+        {value.workYear} | {value.kind}
+      </div>
+      <div>
+        <Grade classNames="mb-2 py-1" height={18} value={value.gradeValue} />
+      </div>
+      <div class="tracking-prose text-muted" set:html={value.excerpt} />
+    </div>
+  </div>
+</Element>

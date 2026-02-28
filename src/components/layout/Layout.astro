@@ -1,0 +1,59 @@
+---
+import "~/css/tailwind.css";
+import type { ComponentProps } from "astro/types";
+
+import Hero from "~/components/hero/Hero.astro";
+
+import Footer from "./Footer.astro";
+import Head from "./Head.astro";
+import Logo from "./Logo.astro";
+
+export type Props = {
+  headProps: ComponentProps<typeof Head>;
+  heroProps?: ComponentProps<typeof Hero> | undefined;
+  logo: boolean;
+  mainProps?:
+    | undefined
+    | {
+        classNames: string;
+      };
+};
+
+const { headProps, heroProps, logo = false, mainProps } = Astro.props;
+---
+
+<!doctype html>
+<html class="h-full scroll-smooth" lang="en">
+  <Head {...headProps} />
+  <body class="h-full">
+    <div class="h-full">
+      <a
+        class={`
+          absolute top-0.5 left-1/2 z-50 mx-auto
+          transform-[translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2
+          text-center text-accent
+          focus:transform-[translate(-50%,0%)]
+        `}
+        href="#content"
+      >
+        Skip to content
+      </a>
+      <div class="flex min-h-full w-full flex-col bg-default">
+        {
+          logo && (
+            <div
+              class={`absolute top-0 left-0 z-30 px-container py-6 text-white`}
+            >
+              <Logo />
+            </div>
+          )
+        }
+        <main class:list={[`z-10 grow`, mainProps?.classNames]} id="content">
+          {heroProps && <Hero {...heroProps} />}
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>

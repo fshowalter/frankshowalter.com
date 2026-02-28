@@ -1,0 +1,20 @@
+---
+export type Props = {
+  center?: boolean;
+  shadow?: boolean;
+  value: any;
+};
+
+const { center, shadow, value } = Astro.props;
+---
+
+<p
+  class={`
+    my-2 font-sans text-base font-normal
+    ${shadow ? `text-white/75 [text-shadow:1px_1px_2px_black]` : "text-subtle"}
+    tablet:text-lg
+    laptop:text-xl
+    ${center ? `text-center` : ""}
+  `}
+  set:html={value}
+/>
