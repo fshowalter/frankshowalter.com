@@ -6,4 +6,4 @@ dist/
 
 public/
 
-**/fixtures/**
+.claude/*.local.json
