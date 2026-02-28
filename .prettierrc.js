@@ -7,12 +7,6 @@ export default {
         parser: "astro",
       },
     },
-    {
-      files: ["**/__snapshots__/**/*.html"],
-      options: {
-        plugins: [],
-      },
-    },
   ],
   plugins: ["prettier-plugin-astro"],
 };
