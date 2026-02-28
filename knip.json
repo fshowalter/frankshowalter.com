@@ -2,8 +2,7 @@
   "$schema": "https://unpkg.com/knip@5/schema.json",
   "entry": [
     "src/**/*.astro",
-    "src/components/pagefind-search/pagefind-search.ts",
-    "eslint-rules/**"
+    "src/components/pagefind-search/pagefind-search.ts"
   ],
   "project": ["**/*"]
 }
