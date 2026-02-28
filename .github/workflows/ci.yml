@@ -1,0 +1,104 @@
+name: ci
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  knip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: setup node
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: setup npm
+        run: |
+          ./npm_use.sh &&
+          npm --version &&
+          npm list -g --depth 0
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: knip
+        run: npm run knip
+
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: setup node
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: setup npm
+        run: |
+          ./npm_use.sh &&
+          npm --version &&
+          npm list -g --depth 0
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: prettier
+        run: npm run format
+
+  check-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: setup node
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: setup npm
+        run: |
+          ./npm_use.sh &&
+          npm --version &&
+          npm list -g --depth 0
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: type-check
+        run: npm run check
+
+      - name: eslint
+        run: npm run lint
+
+  stylelint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
+      - name: setup node
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
+        with:
+          node-version-file: ".nvmrc"
+          cache: "npm"
+
+      - name: setup npm
+        run: |
+          ./npm_use.sh &&
+          npm --version &&
+          npm list -g --depth 0
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: stylelint
+        run: npm run stylelint
