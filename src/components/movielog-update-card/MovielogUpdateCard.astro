@@ -57,15 +57,15 @@ const Element = element;
     `}
   >
     <Still
-      imageProps={value.stillImageProps}
-      {...imageConfig}
       classNames={`
         h-auto w-full transform-gpu transition-transform duration-500
         group-has-[a:hover]/card:scale-110
       `}
       decoding="async"
       fetchpriority={variant === "splash" ? "high" : "auto"}
+      imageProps={value.stillImageProps}
       loading={variant === "splash" ? "eager" : "lazy"}
+      {...imageConfig}
     />
   </div>
   <div

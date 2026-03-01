@@ -13,14 +13,12 @@ export type Props = HTMLAttributes<"img"> & {
   width: number;
 };
 
-const { classNames, decoding, imageProps, loading, ...rest } = Astro.props;
+const { classNames, imageProps, ...rest } = Astro.props;
 ---
 
 <img
   {...imageProps}
   alt=""
-  decoding={decoding}
-  loading={loading}
-  {...rest}
   class:list={[`aspect-video`, classNames]}
+  {...rest}
 />
