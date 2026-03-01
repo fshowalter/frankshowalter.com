@@ -12,7 +12,10 @@
   "packageRules": [
     {
       "extends": ["packages:stylelint"],
-      "groupName": "Stylelint packages",
+      "groupName": "Stylelint packages"
+    },
+    {
+      "matchPackageNames": ["eslint-plugin-separate-type-imports"],
       "matchUpdateTypes": ["lockFileMaintenance"]
     }
   ],
