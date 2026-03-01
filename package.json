@@ -16,7 +16,7 @@
     "stylelint:fix": "stylelint \"src/**/*.css\" --fix",
     "preview": "astro preview",
     "start": "astro dev",
-    "update:data": "node updateData.ts"
+    "update:data": "node scripts/updateData.ts"
   },
   "dependencies": {
     "@astrojs/check": "0.9.6",
