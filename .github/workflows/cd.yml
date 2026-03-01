@@ -1,6 +1,7 @@
 name: cd
 permissions:
-  contents: write
+  contents: read
+  deployments: write
   pull-requests: write
 
 on:
