@@ -13,10 +13,6 @@
     {
       "extends": ["packages:stylelint"],
       "groupName": "Stylelint packages"
-    },
-    {
-      "matchPackageNames": ["eslint-plugin-separate-type-imports"],
-      "matchUpdateTypes": ["lockFileMaintenance"]
     }
   ],
   "postUpdateOptions": ["npmDedupe"],
