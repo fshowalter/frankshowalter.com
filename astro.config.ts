@@ -7,6 +7,7 @@ import { defineConfig } from "astro/config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createIndex } from "pagefind";
+import react from "@astrojs/react";
 
 function pagefind(): AstroIntegration {
   let outDir: string;
@@ -78,6 +79,7 @@ export default defineConfig({
     },
   },
   integrations: [
+    react(),
     sitemap({
       filter: (page) => page !== "https://www.frankshowalter.com/gone/",
     }),
@@ -88,7 +90,7 @@ export default defineConfig({
   trailingSlash: "always",
   vite: {
     optimizeDeps: {
-      exclude: ["fsevents"],
+      exclude: ["fsevents", "@takumi-rs/core"],
     },
     plugins: [tailwindcss()],
   },
