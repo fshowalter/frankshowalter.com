@@ -1,5 +1,6 @@
 import type { AstroIntegration } from "astro";
 
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import compressor from "astro-compressor";
@@ -7,7 +8,6 @@ import { defineConfig } from "astro/config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { createIndex } from "pagefind";
-import react from "@astrojs/react";
 
 function pagefind(): AstroIntegration {
   let outDir: string;
