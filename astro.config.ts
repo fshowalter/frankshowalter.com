@@ -1,5 +1,6 @@
 import type { AstroIntegration } from "astro";
 
+import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import compressor from "astro-compressor";
@@ -78,6 +79,7 @@ export default defineConfig({
     },
   },
   integrations: [
+    react(),
     sitemap({
       filter: (page) => page !== "https://www.frankshowalter.com/gone/",
     }),
@@ -88,7 +90,7 @@ export default defineConfig({
   trailingSlash: "always",
   vite: {
     optimizeDeps: {
-      exclude: ["fsevents"],
+      exclude: ["fsevents", "@takumi-rs/core"],
     },
     plugins: [tailwindcss()],
   },
