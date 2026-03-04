@@ -2,15 +2,14 @@
 import "~/css/tailwind.css";
 import type { ComponentProps } from "astro/types";
 
-import Hero from "~/components/hero/Hero.astro";
-
 import Footer from "./Footer.astro";
 import Head from "./Head.astro";
+import Hero from "./Hero.astro";
 import Logo from "./Logo.astro";
 
 export type Props = {
   headProps: ComponentProps<typeof Head>;
-  heroProps?: ComponentProps<typeof Hero> | undefined;
+  heroProps: ComponentProps<typeof Hero>;
   logo: boolean;
   mainProps?:
     | undefined
@@ -48,8 +47,11 @@ const { headProps, heroProps, logo = false, mainProps } = Astro.props;
             </div>
           )
         }
-        <main class:list={[`z-10 grow`, mainProps?.classNames]} id="content">
-          {heroProps && <Hero {...heroProps} />}
+        <main
+          class:list={[`z-10 grow bg-subtle`, mainProps?.classNames]}
+          id="content"
+        >
+          <Hero {...heroProps} centerText={true} />
           <slot />
         </main>
         <Footer />

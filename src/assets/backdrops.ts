@@ -3,7 +3,7 @@ import { getImage } from "astro:assets";
 /**
  * Properties for backdrop images used in page backgrounds.
  */
-export type BackdropImageProps = {
+type BackdropImageProps = {
   src: string;
   srcSet: string;
 };
