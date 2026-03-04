@@ -1,0 +1,103 @@
+---
+import { getBackdropImageProps } from "~/assets/backdrops";
+import PagefindSearch from "~/components/pagefind-search/PagefindSearch.astro";
+
+const BackdropImageConfig = {
+  height: 1350,
+  sizes: "100vw",
+  width: 2400,
+};
+
+export type Props = {
+  backdropSlug?: string | undefined;
+  centerText?: boolean | undefined;
+  deck: string;
+  title: string;
+  titleClassNames?: string;
+};
+
+const { backdropSlug, centerText, deck, title, titleClassNames } = Astro.props;
+
+let backdropImageProps;
+
+if (backdropSlug) {
+  backdropImageProps = await getBackdropImageProps(
+    backdropSlug,
+    BackdropImageConfig,
+  );
+}
+---
+
+<header
+  class:list={[
+    `
+      relative flex w-full flex-col content-start items-center justify-center
+      ${backdropImageProps ? "bg-[#2A2B2A] text-white" : "text-default"}
+      pt-40 pb-20
+      tablet:pt-40 tablet:pb-20
+      laptop:pt-60 laptop:pb-30
+    `,
+    backdropImageProps && `max-h-[1350px] min-h-screen`,
+  ]}
+>
+  {
+    backdropImageProps && (
+      <img
+        class="absolute inset-0 size-full object-cover object-bottom"
+        {...backdropImageProps}
+        {...BackdropImageConfig}
+        alt=""
+        fetch-priority="high"
+        loading="eager"
+      />
+    )
+  }
+  <div
+    class={`
+      ${centerText ? "items-center" : ""}
+      z-10 mx-auto flex w-full max-w-(--breakpoint-desktop) flex-col
+      px-container
+      ${
+        backdropImageProps
+          ? `
+            after:absolute after:top-0 after:left-0 after:-z-10 after:size-full
+            after:bg-(image:--hero-gradient)
+          `
+          : ""
+      }
+    `}
+  >
+    <h1
+      class:list={[
+        titleClassNames ||
+          `
+            text-[2rem]/10 font-extrabold
+            tablet:text-5xl
+            laptop:text-7xl
+          `,
+        { "[text-shadow:1px_1px_2px_rgba(0,0,0,.25)]": backdropImageProps },
+      ]}
+      data-pagefind-weight="10"
+    >
+      {title}
+    </h1>
+    <p
+      class:list={[
+        `
+          mt-2 mb-4 font-sans text-base font-normal
+          ${
+            backdropImageProps
+              ? `text-white/75 [text-shadow:1px_1px_2px_black]`
+              : `text-subtle`
+          }
+          tablet:text-lg
+          laptop:text-xl
+        `,
+        { "text-center": centerText },
+      ]}
+      set:html={deck}
+    />
+
+    <PagefindSearch />
+  </div>
+</header>

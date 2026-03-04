@@ -1,13 +1,11 @@
 ---
-import { getHeroBackdropImageProps } from "~/components/hero/getHeroBackdropImageProps";
-import Layout from "~/components/layout/Layout.astro";
+import HeroLayout from "~/components/layout/HeroLayout.astro";
 
 const title = "404 Not Found";
 const deck = `"It's hard for us here to be reporting this to you, but it does seem to be a fact."`;
-const backdropImageProps = await getHeroBackdropImageProps("not-found");
 ---
 
-<Layout
+<HeroLayout
   headProps={{
     canonical: false,
     meta: { description: deck },
@@ -15,18 +13,9 @@ const backdropImageProps = await getHeroBackdropImageProps("not-found");
     title: title,
   }}
   heroProps={{
-    backdropImageProps,
-    centerText: true,
-    deckProps: {
-      value: deck,
-    },
-    titleProps: {
-      shadow: true,
-      value: title,
-    },
+    backdropSlug: "not-found",
+    deck,
+    title,
   }}
   logo={true}
-  mainProps={{
-    classNames: "flex flex-col bg-footer",
-  }}
 />
