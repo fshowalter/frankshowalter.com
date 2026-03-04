@@ -1,22 +1,10 @@
 ---
-import type { StillImageProps } from "~/assets/stills";
+import type { MovielogData } from "~/schemas";
 
+import { getStillImageProps } from "~/assets/stills";
 import Grade from "~/components/grade/Grade.astro";
 import Still from "~/components/still/Still.astro";
-
-/**
- * Data structure for review card content.
- */
-export type MovielogUpdateCardValue = {
-  displayDate: string;
-  excerpt: string;
-  genres: string[];
-  gradeValue: number;
-  releaseYear: string;
-  slug: string;
-  stillImageProps: StillImageProps;
-  title: string;
-};
+import { displayDate } from "~/utils/displayDate";
 
 export type Props = {
   classNames?: string;
@@ -26,13 +14,15 @@ export type Props = {
     sizes: string;
     width: number;
   };
-  value: MovielogUpdateCardValue;
+  value: MovielogData;
   variant?: "default" | "splash";
 };
 
 const { classNames, element = "li", imageConfig, value, variant } = Astro.props;
 
 const Element = element;
+
+const stillImageProps = await getStillImageProps(value.slug, imageConfig);
 ---
 
 <Element
@@ -63,7 +53,7 @@ const Element = element;
       `}
       decoding="async"
       fetchpriority={variant === "splash" ? "high" : "auto"}
-      imageProps={value.stillImageProps}
+      imageProps={stillImageProps}
       loading={variant === "splash" ? "eager" : "lazy"}
       {...imageConfig}
     />
@@ -91,7 +81,7 @@ const Element = element;
         laptop:tracking-wide
       `}
     >
-      {value.displayDate}
+      {displayDate(value.date)}
     </div>
     <a
       class={`z-20 mb-2 font-sans text-xs tracking-wide text-accent uppercase`}
@@ -112,7 +102,7 @@ const Element = element;
       href={`https://www.franksmovielog.com/reviews/${value.slug}/`}
     >
       {value.title}<span class="text-sm leading-none font-normal text-muted">
-        &nbsp;{value.releaseYear}
+        &nbsp;{value.year}
       </span>
     </a>
 
@@ -122,7 +112,7 @@ const Element = element;
         ${variant === "splash" ? `tablet:mb-8` : `tablet:mb-6`}
       `}
       height={variant === "splash" ? 24 : 18}
-      value={value.gradeValue}
+      value={value.stars}
     />
 
     <div

@@ -1,38 +1,25 @@
 ---
-import type { CoverImageProps } from "~/assets/covers";
+import type { BooklogData } from "~/schemas";
 
+import { getFluidCoverImageProps } from "~/assets/covers";
 import Grade from "~/components/grade/Grade.astro";
+import { displayDate } from "~/utils/displayDate";
 import { toSentenceArray } from "~/utils/toSentenceArray";
-
-export type BooklogUpdateCardValue = {
-  /** Array of authors for the reviewed work */
-  authors: string[];
-  /** Cover image properties for display */
-  coverImageProps: CoverImageProps;
-  displayDate: string;
-  /** Review excerpt text */
-  excerpt: string;
-  /** Grade given to the work */
-  gradeValue: number;
-  /** Type of work (e.g., "Novel", "Short Story") */
-  kind: string;
-  /** URL slug for the review */
-  slug: string;
-  /** Title of the reviewed work */
-  title: string;
-  /** Year the work was published */
-  workYear: string;
-};
 
 export type Props = {
   element?: "div" | "li";
-  imageSizes: string;
-  value: BooklogUpdateCardValue;
+  imageConfig: {
+    sizes: string;
+    width: number;
+  };
+  value: BooklogData;
 };
 
-const { element = "li", imageSizes, value } = Astro.props;
+const { element = "li", imageConfig, value } = Astro.props;
 
 const Element = element;
+
+const coverImageProps = await getFluidCoverImageProps(value.slug, imageConfig);
 ---
 
 <Element
@@ -67,7 +54,7 @@ const Element = element;
         `}
         style={{
           backgroundColor: "var(--background-color-default)",
-          backgroundImage: `linear-gradient(90deg, rgba(var(--bg-default-rgb),1) 0%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 30%, rgba(var(--bg-default-rgb),0) 50%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 70%, rgba(var(--bg-default-rgb),1) 100%), url(${value.coverImageProps.src})`,
+          backgroundImage: `linear-gradient(90deg, rgba(var(--bg-default-rgb),1) 0%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 30%, rgba(var(--bg-default-rgb),0) 50%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 70%, rgba(var(--bg-default-rgb),1) 100%), url(${coverImageProps.src})`,
         }}
       >
       </div>
@@ -104,7 +91,7 @@ const Element = element;
             `}
           >
             <img
-              {...value.coverImageProps}
+              {...coverImageProps}
               alt=""
               class={`
                 transform-gpu rounded-[2.5px] bg-default transition-transform
@@ -113,7 +100,6 @@ const Element = element;
               `}
               decoding="async"
               loading="lazy"
-              sizes={imageSizes}
             />
           </div>
         </div>
@@ -132,7 +118,7 @@ const Element = element;
           laptop:tracking-wide
         `}
       >
-        {value.displayDate}
+        {displayDate(value.date)}
       </div>
       <a
         class={`z-20 font-sans text-xs tracking-wide text-accent uppercase`}
@@ -156,7 +142,7 @@ const Element = element;
         {value.workYear} | {value.kind}
       </div>
       <div>
-        <Grade classNames="mb-2 py-1" height={18} value={value.gradeValue} />
+        <Grade classNames="mb-2 py-1" height={18} value={value.stars} />
       </div>
       <div class="tracking-prose text-muted" set:html={value.excerpt} />
     </div>

@@ -3,7 +3,10 @@ import type { APIRoute } from "astro";
 import { Renderer } from "@takumi-rs/core";
 import fs from "node:fs/promises";
 
-import { node, stylesheets } from "~/features/home/og";
+import {
+  node,
+  stylesheets,
+} from "~/components/home-opengraph-image/HomeOpenGraphImage";
 
 const fonts = [
   {
