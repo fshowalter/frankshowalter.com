@@ -67,9 +67,7 @@ export default defineConfig(
   },
   {
     extends: [tsEslint.configs.disableTypeChecked],
+    ...tsEslint.configs.eslintRecommended,
     files: ["**/*.astro"],
-    rules: {
-      "no-var": "error",
-    },
   },
 );
