@@ -6,7 +6,7 @@ import sharp from "sharp";
  * Type representing optimized cover image properties for display.
  * Contains dimensions and responsive image sources.
  */
-export type CoverImageProps = {
+type CoverImageProps = {
   height: number;
   src: string;
   srcSet: string;
