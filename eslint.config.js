@@ -37,6 +37,7 @@ export default defineConfig(
           allowNumber: true,
         },
       ],
+      ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
       "better-tailwindcss/no-conflicting-classes": "error",
       "no-restricted-imports": [
         "error",
