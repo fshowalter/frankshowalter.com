@@ -31,12 +31,6 @@ export default defineConfig(
       "@typescript-eslint/consistent-type-definitions": ["error", "type"],
       "@typescript-eslint/consistent-type-imports": "off", // Turned off in favor of our custom rule
       "@typescript-eslint/no-import-type-side-effects": "error",
-      "@typescript-eslint/restrict-template-expressions": [
-        "error",
-        {
-          allowNumber: true,
-        },
-      ],
       ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
       "better-tailwindcss/no-conflicting-classes": "error",
       "no-restricted-imports": [
