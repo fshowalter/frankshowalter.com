@@ -51,7 +51,9 @@ const { headProps, heroProps, logo = false, mainProps } = Astro.props;
           class:list={[`z-10 grow bg-subtle`, mainProps?.classNames]}
           id="content"
         >
-          <Hero {...heroProps} centerText={true} />
+          <Hero {...heroProps} centerText={true}
+            ><slot name="deck" slot="deck" /></Hero
+          >
           <slot />
         </main>
         <Footer />
