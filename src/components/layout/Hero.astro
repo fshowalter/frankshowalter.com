@@ -11,7 +11,7 @@ const BackdropImageConfig = {
 export type Props = {
   backdropSlug?: string | undefined;
   centerText?: boolean | undefined;
-  deck: string;
+  deck?: string;
   title: string;
   titleClassNames?: string;
 };
@@ -95,9 +95,9 @@ if (backdropSlug) {
         `,
         { "text-center": centerText },
       ]}
-      set:html={deck}
-    />
-
+    >
+      <slot name="deck"><Fragment set:html={deck} /></slot>
+    </p>
     <PagefindSearch />
   </div>
 </header>
