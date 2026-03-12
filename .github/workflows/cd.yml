@@ -62,6 +62,7 @@ jobs:
           deploy-message: "Deploy from GitHub Actions"
           enable-pull-request-comment: true
           enable-commit-comment: false
+          enable-commit-status: false
           overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
