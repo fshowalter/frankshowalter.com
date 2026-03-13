@@ -19,9 +19,9 @@
     "update:data": "node scripts/updateData.ts"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.6",
+    "@astrojs/check": "0.9.7",
     "@astrojs/react": "4.4.2",
-    "@astrojs/sitemap": "3.7.0",
+    "@astrojs/sitemap": "3.7.1",
     "@tailwindcss/vite": "4.2.1",
     "@takumi-rs/core": "0.71.7",
     "@takumi-rs/helpers": "0.71.7",
