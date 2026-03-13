@@ -232,7 +232,7 @@ async function processMediaUpdates(source: MediaSource): Promise<void> {
   } catch (error: unknown) {
     if (error instanceof z.ZodError) {
       console.error(`Validation error in ${source.type} updates:`);
-      for (const err of error.errors) {
+      for (const err of error.issues) {
         console.error(`- ${err.path.join(".")}: ${err.message}`);
       }
     } else {
