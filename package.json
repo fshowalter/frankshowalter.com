@@ -40,7 +40,7 @@
     "eslint-plugin-perfectionist": "5.7.0",
     "eslint-plugin-separate-type-imports": "git://github.com/fshowalter/eslint-plugin-separate-type-imports.git",
     "eslint-plugin-unicorn": "63.0.0",
-    "knip": "5.87.0",
+    "knip": "5.88.0",
     "prettier": "3.8.1",
     "prettier-plugin-astro": "0.14.1",
     "stylelint": "17.4.0",
