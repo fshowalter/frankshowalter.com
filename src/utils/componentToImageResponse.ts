@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 import { Renderer } from "@takumi-rs/core";
 import { fromJsx } from "@takumi-rs/helpers/jsx";
 import fs from "node:fs/promises";
@@ -24,7 +22,7 @@ const renderer = new Renderer({
 });
 
 export async function componentToImageResponse(
-  component: ReactNode,
+  component: Parameters<typeof fromJsx>[0],
   fetchedResources: { data: ArrayBuffer; src: string }[],
 ): Promise<Response> {
   const { node, stylesheets } = await fromJsx(component);
