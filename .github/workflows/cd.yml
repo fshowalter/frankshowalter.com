@@ -29,6 +29,9 @@ jobs:
           npm --version &&
           npm list -g --depth 0
 
+      - name: install dependencies
+        run: npm ci
+
       - name: restore astro cache (PR)
         if: github.event_name == 'pull_request'
         uses: actions/cache/restore@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5
@@ -46,9 +49,6 @@ jobs:
           key: astro-cache-v1-${{ github.run_id }}
           restore-keys: |
             astro-cache-v1-
-
-      - name: install dependencies
-        run: npm ci
 
       - name: build
         run: npm run build
