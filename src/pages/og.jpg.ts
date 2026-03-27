@@ -1,7 +1,7 @@
 import type { APIRoute } from "astro";
 
-import { homeOpenGraphImageResponse } from "~/features/home/homeOpenGraphImageResponse";
+import { createHhomeOpenGraphImageResponse } from "~/features/home/createHomeOpenGraphImageResponse";
 
 export const GET: APIRoute = async function get() {
-  return homeOpenGraphImageResponse();
+  return createHhomeOpenGraphImageResponse();
 };

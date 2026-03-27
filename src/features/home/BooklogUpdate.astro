@@ -3,7 +3,7 @@ import type { BooklogData } from "~/schemas";
 
 import { getFluidCoverImageProps } from "~/assets/covers";
 import Grade from "~/components/grade/Grade.astro";
-import { displayDate } from "~/utils/displayDate";
+import { toDisplayDate } from "~/utils/toDisplayDate";
 import { toSentence } from "~/utils/toSentence";
 
 export type Props = {
@@ -118,7 +118,7 @@ const coverImageProps = await getFluidCoverImageProps(value.slug, imageConfig);
           laptop:tracking-wide
         `}
       >
-        {displayDate(value.date)}
+        {toDisplayDate(value.date)}
       </div>
       <a
         class={`z-20 font-sans text-xs tracking-wide text-accent uppercase`}

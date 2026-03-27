@@ -1,4 +1,4 @@
-export function displayDate(jsDate: Date) {
+export function toDisplayDate(jsDate: Date) {
   return jsDate.toLocaleString("en-GB", {
     day: "2-digit",
     month: "short",
