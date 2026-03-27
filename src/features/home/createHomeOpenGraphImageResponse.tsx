@@ -1,6 +1,6 @@
 import { componentToImageResponse } from "~/utils/componentToImageResponse";
 
-export async function homeOpenGraphImageResponse(): Promise<Response> {
+export async function createHhomeOpenGraphImageResponse(): Promise<Response> {
   return await componentToImageResponse(<HomeOpenGraphImage />, []);
 }
 

@@ -4,7 +4,7 @@ import type { MovielogData } from "~/schemas";
 import { getStillImageProps } from "~/assets/stills";
 import Grade from "~/components/grade/Grade.astro";
 import Still from "~/components/still/Still.astro";
-import { displayDate } from "~/utils/displayDate";
+import { toDisplayDate } from "~/utils/toDisplayDate";
 
 export type Props = {
   classNames?: string;
@@ -81,7 +81,7 @@ const stillImageProps = await getStillImageProps(value.slug, imageConfig);
         laptop:tracking-wide
       `}
     >
-      {displayDate(value.date)}
+      {toDisplayDate(value.date)}
     </div>
     <a
       class={`z-20 mb-2 font-sans text-xs tracking-wide text-accent uppercase`}
