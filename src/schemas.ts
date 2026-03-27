@@ -11,7 +11,7 @@ const UpdateSchema = z.object({
 export const BooklogSchema = UpdateSchema.extend({
   authors: z.array(z.string()),
   kind: z.string(),
-  workYear: z.string(),
+  titleYear: z.string(),
 });
 
 export const MovielogSchema = UpdateSchema.extend({

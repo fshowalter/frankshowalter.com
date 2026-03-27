@@ -3,8 +3,8 @@ import { constants } from "node:fs";
 import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import { MovielogSchema } from "~/schemas.ts";
-import { BooklogSchema } from "~/schemas.ts";
+import { MovielogSchema } from "../src/schemas.ts";
+import { BooklogSchema } from "../src/schemas.ts";
 
 type DownloadOptions = {
   overwrite?: boolean;

@@ -51,6 +51,12 @@ export default defineConfig(
     },
   },
   {
+    patterns: ["./scripts/*.ts"],
+    rules: {
+      "no-restricted-imports": "off",
+    },
+  },
+  {
     languageOptions: {
       parserOptions: {
         extraFileExtensions: [".astro"],
