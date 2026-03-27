@@ -51,7 +51,7 @@ export default defineConfig(
     },
   },
   {
-    patterns: ["./scripts/*.ts"],
+    files: ["./scripts/*.ts"],
     rules: {
       "no-restricted-imports": "off",
     },
