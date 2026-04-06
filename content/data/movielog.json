@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-05T00:00:00.000Z",
+    "excerpt": "<p>Cabman Boris Karloff delights in tormenting the prominent doctor whose medical school he supplies with cadavers.</p>",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/the-body-snatcher-1945.Dps_jvdl_Z8pUKp.png",
+    "slug": "the-body-snatcher-1945",
+    "stars": 2.5,
+    "title": "The Body Snatcher",
+    "year": "1945"
+  },
+  {
     "date": "2026-02-18T00:00:00.000Z",
     "excerpt": "<p>College milquetoast Frank Sinatra discovers he must assume his late father’s secret identity as a womanizing outlaw known as “The Kissing Bandit.”</p>",
     "genres": [
@@ -52,19 +65,5 @@
     "stars": 2,
     "title": "Walk Don't Run",
     "year": "1966"
-  },
-  {
-    "date": "2026-02-14T00:00:00.000Z",
-    "excerpt": "<p>Penniless producer George Murphy schemes to avoid eviction from his posh hotel penthouse and conscript playwright Frank Sinatra into his new show.</p>",
-    "genres": [
-      "Comedy",
-      "Music",
-      "Romance"
-    ],
-    "image": "/_astro/step-lively-1944.BuPOfboD_Z1eLWpa.png",
-    "slug": "step-lively-1944",
-    "stars": 1.5,
-    "title": "Step Lively",
-    "year": "1944"
   }
 ]
