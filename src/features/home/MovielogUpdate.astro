@@ -84,7 +84,10 @@ const stillImageProps = await getStillImageProps(value.slug, imageConfig);
       {toDisplayDate(value.date)}
     </div>
     <a
-      class={`z-20 mb-2 font-sans text-xs tracking-wide text-accent uppercase`}
+      class={`
+        z-[calc(var(--z-index-above)+1)] mb-2 font-sans text-xs tracking-wide
+        text-accent uppercase
+      `}
       href="https://www.franksmovielog.com/"
     >
       Movie Reviews
@@ -93,7 +96,7 @@ const stillImageProps = await getStillImageProps(value.slug, imageConfig);
       class={`
         mb-3 block text-2xl/7 font-medium text-default transition-all
         duration-500
-        after:absolute after:top-0 after:left-0 after:z-10 after:size-full
+        after:absolute after:top-0 after:left-0 after:z-above after:size-full
         tablet:text-2.5xl
         ${variant === "splash" ? "laptop:text-3xl" : "laptop:text-2.5xl"}
         hover:text-accent
