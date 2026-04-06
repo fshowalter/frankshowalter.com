@@ -14,6 +14,7 @@
   --background-color-inverse: light-dark(rgb(0 0 0 / 75%), #322f2f);
 
   --border-color-*: initial;
+  --border-color-default: var(--color-border);
 
   --breakpoint-*: initial;
   --breakpoint-tablet: 768px;
