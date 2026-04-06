@@ -1,6 +1,6 @@
-import { debounce } from "~/components/utils/debounce";
+import { debounce } from "~/utils/debounce";
 
-// AIDEV-NOTE: Minimal browser-side Pagefind types — only fields the production code reads.
+// Minimal browser-side Pagefind types — only fields the production code reads.
 // The `pagefind` npm package only ships types for its Node.js build/indexing API;
 // browser search API types are not in the published package, so we define our own.
 type Pagefind = {
@@ -20,7 +20,7 @@ type PagefindResult = {
   data(): Promise<PagefindDocument>;
 };
 
-// AIDEV-NOTE: Discriminated union makes invalid states unrepresentable.
+// Discriminated union makes invalid states unrepresentable.
 // render() dispatches to one focused method per variant — no cross-branch conditionals.
 type SearchState =
   | {
@@ -37,7 +37,6 @@ type SearchState =
   | { kind: "loading"; query: string };
 
 class PagefindSearch extends HTMLElement {
-  private clearButton!: HTMLButtonElement;
   private clickHandler: ((e: MouseEvent) => void) | undefined;
   private readonly config = {
     bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
@@ -48,7 +47,6 @@ class PagefindSearch extends HTMLElement {
   private emptyTemplate!: HTMLTemplateElement;
   private errorTemplate!: HTMLTemplateElement;
   private input!: HTMLInputElement;
-  private iosHandler: (() => void) | undefined;
   private keydownHandler: ((e: KeyboardEvent) => void) | undefined;
   private loadMoreButton!: HTMLButtonElement;
   private loadMoreWrapper!: HTMLElement;
@@ -58,7 +56,7 @@ class PagefindSearch extends HTMLElement {
   private resultsContainer!: HTMLElement;
   private resultsCounter!: HTMLElement;
   private resultTemplate!: HTMLTemplateElement;
-  // AIDEV-NOTE: Generation counter replaces AbortController. Each search increments the
+  // Generation counter replaces AbortController. Each search increments the
   // counter; stale results (from an older search that resolved late) are discarded by
   // comparing gen against the current counter after every await point.
   private searchGeneration = 0;
@@ -67,16 +65,15 @@ class PagefindSearch extends HTMLElement {
   private readonly win = globalThis as unknown as Window;
 
   connectedCallback(): void {
+    const isGlobal = "global" in this.dataset;
     const { win } = this;
 
-    // AIDEV-NOTE: The open button is in Backdrop.tsx, outside <pagefind-search>,
-    // so it must be found with win.document.querySelector().
-    const openBtn = win.document.querySelector<HTMLButtonElement>(
+    const openBtn = this.querySelector<HTMLButtonElement>(
       "button[data-open-search]",
     );
     if (!openBtn) return;
 
-    if (/(Mac|iPhone|iPod|iPad)/i.test(win.navigator.userAgent)) {
+    if (isGlobal && /(Mac|iPhone|iPod|iPad)/i.test(win.navigator.userAgent)) {
       openBtn.setAttribute("aria-keyshortcuts", "Meta+K");
       openBtn.setAttribute("title", "Search: ⌘K");
     }
@@ -93,8 +90,6 @@ class PagefindSearch extends HTMLElement {
 
     // Cache element refs — IDs prefixed with search-box- to avoid collisions
     this.input = this.querySelector<HTMLInputElement>("#search-box-input")!;
-    this.clearButton =
-      this.querySelector<HTMLButtonElement>("#search-box-clear")!;
     this.resultsCounter = this.querySelector<HTMLElement>(
       "#search-box-counter",
     )!;
@@ -108,7 +103,7 @@ class PagefindSearch extends HTMLElement {
       "#search-box-load-more",
     )!;
 
-    // AIDEV-NOTE: Template refs hold dynamic content HTML. Tailwind 4.x scans
+    // Template refs hold dynamic content HTML. Tailwind 4.x scans
     // <template> tags in .astro source files — classes are included in CSS output.
     this.resultTemplate = this.querySelector<HTMLTemplateElement>(
       "template[data-result-item]",
@@ -125,7 +120,6 @@ class PagefindSearch extends HTMLElement {
 
     if (
       !this.input ||
-      !this.clearButton ||
       !this.resultsCounter ||
       !this.resultsContainer ||
       !this.loadMoreWrapper ||
@@ -144,9 +138,10 @@ class PagefindSearch extends HTMLElement {
 
     this.setupEventListeners();
 
-    // ios safari doesn't bubble click events unless a parent has a listener
-    this.iosHandler = () => {};
-    win.document.body.addEventListener("click", this.iosHandler);
+    const closeModal = () => {
+      this.clearSearch();
+      dialog.close();
+    };
 
     /** Close the modal if a user clicks on a link or outside of the modal. */
     const onClick = (event: MouseEvent) => {
@@ -155,7 +150,9 @@ class PagefindSearch extends HTMLElement {
 
       if (link?.href) {
         // For links, only close modal after a small delay to allow navigation
-        setTimeout(() => closeModal(), 100);
+        setTimeout(() => {
+          dialog.close();
+        }, 100);
         return;
       }
 
@@ -207,8 +204,6 @@ class PagefindSearch extends HTMLElement {
       }
     };
 
-    const closeModal = () => dialog.close();
-
     openBtn.addEventListener("click", (e) => void openModal(e));
     openBtn.disabled = false;
     closeBtn.addEventListener("click", closeModal);
@@ -217,16 +212,23 @@ class PagefindSearch extends HTMLElement {
       win.removeEventListener("click", onClick);
     });
 
-    // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
-    this.keydownHandler = (e: KeyboardEvent) => {
-      if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
-        if (dialog.open) closeModal();
-        else void openModal();
-        e.preventDefault();
-      }
-    };
+    if (isGlobal) {
+      // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
+      this.keydownHandler = (e: KeyboardEvent) => {
+        if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
+          if (dialog.open) closeModal();
+          else void openModal();
+          e.preventDefault();
+        }
 
-    win.addEventListener("keydown", this.keydownHandler);
+        // Safari dialog modals don't close on escape if a text input has focus.
+        if (e.key === "Escape" && dialog.open) {
+          closeModal();
+        }
+      };
+
+      win.addEventListener("keydown", this.keydownHandler);
+    }
   }
 
   disconnectedCallback(): void {
@@ -236,9 +238,6 @@ class PagefindSearch extends HTMLElement {
     }
     if (this.clickHandler) {
       win.removeEventListener("click", this.clickHandler);
-    }
-    if (this.iosHandler) {
-      win.document.body.removeEventListener("click", this.iosHandler);
     }
     // disconnectedCallback is synchronous so fire-and-forget is intentional here.
     void this.pagefind?.destroy();
@@ -259,12 +258,11 @@ class PagefindSearch extends HTMLElement {
 
   private clearSearch(): void {
     this.input.value = "";
-    this.clearButton.classList.add("hidden");
     this.state = { kind: "idle" };
     this.render();
   }
 
-  // AIDEV-NOTE: Clones the result-item template and fills data-field slots.
+  // Clones the result-item template and fills data-field slots.
   // Removes the image-wrapper if no image is present in the result metadata.
   private cloneResult(doc: PagefindDocument): DocumentFragment {
     const clone = this.resultTemplate.content.cloneNode(
@@ -298,6 +296,8 @@ class PagefindSearch extends HTMLElement {
   }
 
   private async handleSearch(query: string): Promise<void> {
+    if (!this.pagefindInitialized) return;
+
     const trimmedQuery = query.trim();
 
     if (!trimmedQuery) {
@@ -351,7 +351,6 @@ class PagefindSearch extends HTMLElement {
     if (remaining.length === 0) return;
 
     const nextBatch = remaining.slice(0, this.config.pageSize);
-    const scrollPosition = this.resultsContainer.scrollTop;
     const gen = this.searchGeneration;
 
     try {
@@ -372,9 +371,6 @@ class PagefindSearch extends HTMLElement {
         visibleCount: visibleCount + resultData.length,
       };
       this.render();
-
-      // Restore scroll position
-      this.resultsContainer.scrollTop = scrollPosition;
 
       // Announce to screen readers that new results were loaded
       this.announceToScreenReader(`${resultData.length} more results loaded`);
@@ -485,9 +481,6 @@ class PagefindSearch extends HTMLElement {
     this.input.addEventListener("input", (e) => {
       const target = e.target as HTMLInputElement;
 
-      // Show/hide clear button based on input content
-      this.clearButton.classList.toggle("hidden", !target.value);
-
       this.debouncedSearch(target.value);
     });
 
@@ -496,14 +489,6 @@ class PagefindSearch extends HTMLElement {
       if (e.key === "Enter") {
         this.input.blur();
       }
-    });
-
-    // Clear button — stopPropagation prevents the click from reaching the modal's
-    // global onClick handler, which would otherwise attempt to close the modal.
-    this.clearButton.addEventListener("click", (e) => {
-      e.stopPropagation();
-      this.clearSearch();
-      this.input.focus();
     });
 
     // Load more button

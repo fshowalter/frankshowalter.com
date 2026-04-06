@@ -26,34 +26,21 @@ const { headProps, heroProps, logo = false, mainProps } = Astro.props;
   <Head {...headProps} />
   <body class="h-full">
     <div class="h-full">
-      <a
-        class={`
-          absolute top-0.5 left-1/2 z-50 mx-auto
-          transform-[translate(-50%,calc(-100%-2px))] bg-subtle px-6 py-2
-          text-center text-accent
-          focus:transform-[translate(-50%,0%)]
-        `}
-        href="#content"
-      >
-        Skip to content
-      </a>
       <div class="flex min-h-full w-full flex-col bg-default">
         {
           logo && (
             <div
-              class={`absolute top-0 left-0 z-30 px-container py-6 text-white`}
+              class={`absolute top-0 left-0 z-nav px-container py-6 text-white`}
             >
               <Logo />
             </div>
           )
         }
         <main
-          class:list={[`z-10 grow bg-subtle`, mainProps?.classNames]}
+          class:list={[`z-above grow bg-subtle`, mainProps?.classNames]}
           id="content"
         >
-          <Hero {...heroProps} centerText={true}
-            ><slot name="deck" slot="deck" /></Hero
-          >
+          <Hero {...heroProps} centerText={true}>{heroProps.deck}</Hero>
           <slot />
         </main>
         <Footer />

@@ -1,6 +1,19 @@
 [
   {
     "authors": [
+      "Adam L.G. Nevill"
+    ],
+    "date": "2026-03-26T00:00:00.000Z",
+    "excerpt": "<p>A young working-class couple mortgaged to their ears on a rural semi-detached house discover their old, hostile neighbors wield otherworldly powers.</p>",
+    "image": "/_astro/cunning-folk-by-adam-l-g-nevill.SxPheJct_Z2hhasR.png",
+    "kind": "Novel",
+    "slug": "cunning-folk-by-adam-l-g-nevill",
+    "stars": 2,
+    "title": "Cunning Folk",
+    "titleYear": "2021"
+  },
+  {
+    "authors": [
       "Mark Andrews"
     ],
     "date": "2025-12-20T00:00:00.000Z",
@@ -49,19 +62,6 @@
     "slug": "king-mob-by-philip-fracassi",
     "stars": 3,
     "title": "King Mob",
-    "titleYear": "2017"
-  },
-  {
-    "authors": [
-      "Philip Fracassi"
-    ],
-    "date": "2025-07-11T00:00:00.000Z",
-    "excerpt": "<p>During the brutal Civil War battle, as artillery shreds trees and flesh alike and soldiers become scavengers among the corpses, a Confederate veteran encounters something supernatural stalking the battlefield.</p>",
-    "image": "/_astro/shiloh-by-philip-fracassi.D4NtraLi_28DWNW.png",
-    "kind": "Novella",
-    "slug": "shiloh-by-philip-fracassi",
-    "stars": 4,
-    "title": "Shiloh",
     "titleYear": "2017"
   }
 ]

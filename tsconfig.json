@@ -2,9 +2,8 @@
   "extends": "astro/tsconfigs/strictest",
   "exclude": ["dist/**", "coverage/**", "content/**"],
   "compilerOptions": {
-    "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["./src/*"]
     },
     "types": ["node"]
   }
