@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-04-06T00:00:00.000Z",
+    "excerpt": "<p>Captain Christopher Lee and his gang of pirates invade a secret Huguenot colony searching for treasure.</p>",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Drama",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/the-pirates-of-blood-river-1962.BSSNgTLJ_ZVWGo2.png",
+    "slug": "the-pirates-of-blood-river-1962",
+    "stars": 3,
+    "title": "The Pirates of Blood River",
+    "year": "1962"
+  },
+  {
     "date": "2026-04-05T00:00:00.000Z",
     "excerpt": "<p>Cabman Boris Karloff delights in tormenting the prominent doctor whose medical school he supplies with cadavers.</p>",
     "genres": [
@@ -52,18 +68,5 @@
     "stars": 2,
     "title": "4 for Texas",
     "year": "1963"
-  },
-  {
-    "date": "2026-02-15T00:00:00.000Z",
-    "excerpt": "<p>Cary Grant plays matchmaker when a housing shortage forces him, an American athlete, and a young woman to share a Tokyo apartment during the 1964 Olympics.</p>",
-    "genres": [
-      "Comedy",
-      "Romance"
-    ],
-    "image": "/_astro/walk-dont-run-1966.Ca5eO2VQ_Z1e2xXQ.png",
-    "slug": "walk-dont-run-1966",
-    "stars": 2,
-    "title": "Walk Don't Run",
-    "year": "1966"
   }
 ]
