@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-07T00:00:00.000Z",
+    "excerpt": "<p>A hippie commune’s pacifist ideology is tested when a violent biker gang arrives looking for a girl.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "image": "/_astro/the-peace-killers-1971.LcYzYgWn_1S7dKd.png",
+    "slug": "the-peace-killers-1971",
+    "stars": 2,
+    "title": "The Peace Killers",
+    "year": "1971"
+  },
+  {
     "date": "2026-04-06T00:00:00.000Z",
     "excerpt": "<p>Captain Christopher Lee and his gang of pirates invade a secret Huguenot colony searching for treasure.</p>",
     "genres": [
@@ -55,18 +69,5 @@
     "stars": 3,
     "title": "Sahara",
     "year": "1943"
-  },
-  {
-    "date": "2026-02-16T00:00:00.000Z",
-    "excerpt": "<p>Frank Sinatra and Dean Martin fight over a chunk of stolen money and a riverboat casino in 1870s Galveston.</p>",
-    "genres": [
-      "Comedy",
-      "Western"
-    ],
-    "image": "/_astro/4-for-texas-1963.DQYv7Cgd_2hJmDf.png",
-    "slug": "4-for-texas-1963",
-    "stars": 2,
-    "title": "4 for Texas",
-    "year": "1963"
   }
 ]
