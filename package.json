@@ -27,7 +27,7 @@
     "@takumi-rs/helpers": "0.73.1",
     "astro": "6.1.3",
     "astro-compressor": "1.3.0",
-    "pagefind": "1.4.0",
+    "pagefind": "1.5.0",
     "sharp": "0.34.5",
     "tailwindcss": "4.2.2"
   },
