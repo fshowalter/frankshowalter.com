@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-04-09T00:00:00.000Z",
+    "excerpt": "<p>Cat burglar Bruce Willis finds himself embroiled in a plot involving the Vatican, the CIA, and a pair of eccentric billionaires pursuing a machine made by Leonardo da Vinci that turns lead into gold.</p>",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy"
+    ],
+    "image": "/_astro/hudson-hawk-1991.Chfr0PBJ_CxtiQ.png",
+    "slug": "hudson-hawk-1991",
+    "stars": 4,
+    "title": "Hudson Hawk",
+    "year": "1991"
+  },
+  {
+    "date": "2026-04-09T00:00:00.000Z",
     "excerpt": "<p>A New York cop is conscripted into a shadowy government agency and handed to a Korean martial arts master who teaches him to dodge bullets and walk on water.</p>",
     "genres": [
       "Action",
@@ -58,19 +72,5 @@
     "stars": 2.5,
     "title": "The Body Snatcher",
     "year": "1945"
-  },
-  {
-    "date": "2026-02-18T00:00:00.000Z",
-    "excerpt": "<p>College milquetoast Frank Sinatra discovers he must assume his late father’s secret identity as a womanizing outlaw known as “The Kissing Bandit.”</p>",
-    "genres": [
-      "Comedy",
-      "Musical",
-      "Western"
-    ],
-    "image": "/_astro/the-kissing-bandit-1948.B-n-vNaH_Z1tWRhS.png",
-    "slug": "the-kissing-bandit-1948",
-    "stars": 1,
-    "title": "The Kissing Bandit",
-    "year": "1948"
   }
 ]
