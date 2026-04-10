@@ -1,5 +1,22 @@
 [
   {
+    "date": "2026-04-09T00:00:00.000Z",
+    "excerpt": "<p>A New York cop is conscripted into a shadowy government agency and handed to a Korean martial arts master who teaches him to dodge bullets and walk on water.</p>",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Comedy",
+      "Crime",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/remo-williams-the-adventure-begins-1985.B7Fu50UW_wHfrR.png",
+    "slug": "remo-williams-the-adventure-begins-1985",
+    "stars": 4,
+    "title": "Remo Williams: The Adventure Begins",
+    "year": "1985"
+  },
+  {
     "date": "2026-04-07T00:00:00.000Z",
     "excerpt": "<p>A hippie commune’s pacifist ideology is tested when a violent biker gang arrives looking for a girl.</p>",
     "genres": [
@@ -55,19 +72,5 @@
     "stars": 1,
     "title": "The Kissing Bandit",
     "year": "1948"
-  },
-  {
-    "date": "2026-02-17T00:00:00.000Z",
-    "excerpt": "<p>Tank commander Humphrey Bogart leads a hopelessly outnumbered group of Allied stragglers defending a remote well from a German battalion in the North African desert.</p>",
-    "genres": [
-      "Action",
-      "Drama",
-      "War"
-    ],
-    "image": "/_astro/sahara-1943.DVthUMBd_Z1gc4GG.png",
-    "slug": "sahara-1943",
-    "stars": 3,
-    "title": "Sahara",
-    "year": "1943"
   }
 ]
