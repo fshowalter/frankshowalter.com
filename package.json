@@ -35,7 +35,7 @@
     "@eslint/js": "10.0.1",
     "@types/node": "24.12.2",
     "eslint": "10.2.0",
-    "eslint-plugin-astro": "1.6.0",
+    "eslint-plugin-astro": "1.7.0",
     "eslint-plugin-better-tailwindcss": "4.3.2",
     "eslint-plugin-perfectionist": "5.8.0",
     "eslint-plugin-separate-type-imports": "git://github.com/fshowalter/eslint-plugin-separate-type-imports.git",
