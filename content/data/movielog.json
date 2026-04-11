@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-04-10T00:00:00.000Z",
+    "excerpt": "<p>A vengeful mummy stalks the British archeologists and American showman who desecrated its tomb.</p>",
+    "genres": [
+      "Drama",
+      "Fantasy",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-curse-of-the-mummys-tomb-1964.BKE1-juj_5NvmC.png",
+    "slug": "the-curse-of-the-mummys-tomb-1964",
+    "stars": 2,
+    "title": "The Curse of the Mummy's Tomb",
+    "year": "1964"
+  },
+  {
     "date": "2026-04-09T00:00:00.000Z",
     "excerpt": "<p>Cat burglar Bruce Willis finds himself embroiled in a plot involving the Vatican, the CIA, and a pair of eccentric billionaires pursuing a machine made by Leonardo da Vinci that turns lead into gold.</p>",
     "genres": [
@@ -59,18 +75,5 @@
     "stars": 3,
     "title": "The Pirates of Blood River",
     "year": "1962"
-  },
-  {
-    "date": "2026-04-05T00:00:00.000Z",
-    "excerpt": "<p>Cabman Boris Karloff delights in tormenting the prominent doctor whose medical school he supplies with cadavers.</p>",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/the-body-snatcher-1945.Dps_jvdl_Z8pUKp.png",
-    "slug": "the-body-snatcher-1945",
-    "stars": 2.5,
-    "title": "The Body Snatcher",
-    "year": "1945"
   }
 ]
