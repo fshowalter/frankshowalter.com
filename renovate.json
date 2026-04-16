@@ -13,6 +13,10 @@
     {
       "extends": ["packages:stylelint"],
       "groupName": "Stylelint packages"
+    },
+    {
+      "extends": ["packages:@takumi-rs"],
+      "groupName": "Takumi packages"
     }
   ],
   "postUpdateOptions": ["npmDedupe"],
