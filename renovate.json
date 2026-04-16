@@ -15,8 +15,8 @@
       "groupName": "Stylelint packages"
     },
     {
-      "matchPackagePrefixes": ["@takumi-rs/"],
-      "groupName": "Takumi packages"
+      "groupName": "Takumi packages",
+      "matchPackageNames": ["@takumi-rs/{/,}**"]
     }
   ],
   "postUpdateOptions": ["npmDedupe"],
