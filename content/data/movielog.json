@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-11T00:00:00.000Z",
+    "excerpt": "<p>Following a nuclear holocaust, the world’s remaining superpowers engage in gladiatorial combat with giant robots manned by pilots nicknamed “Robot Jox.”</p>",
+    "genres": [
+      "Action",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/robot-jox-1989.BscoaQRF_ZJuLcc.png",
+    "slug": "robot-jox-1989",
+    "stars": 3,
+    "title": "Robot Jox",
+    "year": "1989"
+  },
+  {
     "date": "2026-04-10T00:00:00.000Z",
     "excerpt": "<p>A vengeful mummy stalks the British archeologists and American showman who desecrated its tomb.</p>",
     "genres": [
@@ -59,21 +73,5 @@
     "stars": 2,
     "title": "The Peace Killers",
     "year": "1971"
-  },
-  {
-    "date": "2026-04-06T00:00:00.000Z",
-    "excerpt": "<p>Captain Christopher Lee and his gang of pirates invade a secret Huguenot colony searching for treasure.</p>",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Drama",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/the-pirates-of-blood-river-1962.BSSNgTLJ_ZVWGo2.png",
-    "slug": "the-pirates-of-blood-river-1962",
-    "stars": 3,
-    "title": "The Pirates of Blood River",
-    "year": "1962"
   }
 ]
