@@ -15,7 +15,7 @@
       "groupName": "Stylelint packages"
     },
     {
-      "extends": ["packages:@takumi-rs"],
+      "matchPackagePrefixes": ["@takumi-rs/"],
       "groupName": "Takumi packages"
     }
   ],
