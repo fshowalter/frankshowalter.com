@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-17T00:00:00.000Z",
+    "excerpt": "<p>While visiting his Venetian hometown, a young professor struggles to expose the killer behind a rash of murders that may be connected to a killing years prior.</p>",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-bloodstained-shadow-1978.Jky7H9Jb_Z1sgJtG.png",
+    "slug": "the-bloodstained-shadow-1978",
+    "stars": 2,
+    "title": "The Bloodstained Shadow",
+    "year": "1978"
+  },
+  {
     "date": "2026-04-11T00:00:00.000Z",
     "excerpt": "<p>Following a nuclear holocaust, the world’s remaining superpowers engage in gladiatorial combat with giant robots manned by pilots nicknamed “Robot Jox.”</p>",
     "genres": [
@@ -59,19 +73,5 @@
     "stars": 4,
     "title": "Remo Williams: The Adventure Begins",
     "year": "1985"
-  },
-  {
-    "date": "2026-04-07T00:00:00.000Z",
-    "excerpt": "<p>A hippie commune’s pacifist ideology is tested when a violent biker gang arrives looking for a girl.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Drama"
-    ],
-    "image": "/_astro/the-peace-killers-1971.LcYzYgWn_1S7dKd.png",
-    "slug": "the-peace-killers-1971",
-    "stars": 2,
-    "title": "The Peace Killers",
-    "year": "1971"
   }
 ]
