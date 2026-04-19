@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-04-18T00:00:00.000Z",
+    "excerpt": "<p>A man, his daughter, and his girlfriend find themselves trapped in a small town gripped by a Satanic cabal.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/the-brotherhood-of-satan-1971.DCIQdFcH_ZmIIeY.png",
+    "slug": "the-brotherhood-of-satan-1971",
+    "stars": 3,
+    "title": "The Brotherhood of Satan",
+    "year": "1971"
+  },
+  {
     "date": "2026-04-17T00:00:00.000Z",
     "excerpt": "<p>While visiting his Venetian hometown, a young professor struggles to expose the killer behind a rash of murders that may be connected to a killing years prior.</p>",
     "genres": [
@@ -56,22 +68,5 @@
     "stars": 4,
     "title": "Hudson Hawk",
     "year": "1991"
-  },
-  {
-    "date": "2026-04-09T00:00:00.000Z",
-    "excerpt": "<p>A New York cop is conscripted into a shadowy government agency and handed to a Korean martial arts master who teaches him to dodge bullets and walk on water.</p>",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Comedy",
-      "Crime",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/remo-williams-the-adventure-begins-1985.B7Fu50UW_wHfrR.png",
-    "slug": "remo-williams-the-adventure-begins-1985",
-    "stars": 4,
-    "title": "Remo Williams: The Adventure Begins",
-    "year": "1985"
   }
 ]
