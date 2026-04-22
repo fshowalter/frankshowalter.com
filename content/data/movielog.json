@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-04-20T00:00:00.000Z",
+    "excerpt": "<p>In gold-rush-era San Francisco, ruthless casino boss Edward G. Robinson covets new arrival Miriam Hopkins, who falls for poetry-spouting prospector Joel McCrea.</p>",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Romance",
+      "Western"
+    ],
+    "image": "/_astro/barbary-coast-1935.D1874g8G_ZmOESG.png",
+    "slug": "barbary-coast-1935",
+    "stars": 2,
+    "title": "Barbary Coast",
+    "year": "1935"
+  },
+  {
     "date": "2026-04-19T00:00:00.000Z",
     "excerpt": "<p>A disastrous second honeymoon in Mexico with wife Deborah Kerr sees committed family man Frank Sinatra swap roles with his bachelor buddy, Dean Martin.</p>",
     "genres": [
@@ -51,21 +66,5 @@
     "stars": 3,
     "title": "Robot Jox",
     "year": "1989"
-  },
-  {
-    "date": "2026-04-10T00:00:00.000Z",
-    "excerpt": "<p>A vengeful mummy stalks the British archeologists and American showman who desecrated its tomb.</p>",
-    "genres": [
-      "Drama",
-      "Fantasy",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-curse-of-the-mummys-tomb-1964.BKE1-juj_5NvmC.png",
-    "slug": "the-curse-of-the-mummys-tomb-1964",
-    "stars": 2,
-    "title": "The Curse of the Mummy's Tomb",
-    "year": "1964"
   }
 ]
