@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-21T00:00:00.000Z",
+    "excerpt": "<p>Nightclub singer Barbara Stanwyck hides out with a houseful of encyclopedia-writing professors and falls for the youngest of the bunch, Gary Cooper.</p>",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "image": "/_astro/ball-of-fire-1941.DNDhzj_i_2apwoI.png",
+    "slug": "ball-of-fire-1941",
+    "stars": 3.5,
+    "title": "Ball of Fire",
+    "year": "1941"
+  },
+  {
     "date": "2026-04-20T00:00:00.000Z",
     "excerpt": "<p>In gold-rush-era San Francisco, ruthless casino boss Edward G. Robinson covets new arrival Miriam Hopkins, who falls for poetry-spouting prospector Joel McCrea.</p>",
     "genres": [
@@ -52,19 +65,5 @@
     "stars": 2,
     "title": "The Bloodstained Shadow",
     "year": "1978"
-  },
-  {
-    "date": "2026-04-11T00:00:00.000Z",
-    "excerpt": "<p>Following a nuclear holocaust, the world’s remaining superpowers engage in gladiatorial combat with giant robots manned by pilots nicknamed “Robot Jox.”</p>",
-    "genres": [
-      "Action",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/robot-jox-1989.BscoaQRF_ZJuLcc.png",
-    "slug": "robot-jox-1989",
-    "stars": 3,
-    "title": "Robot Jox",
-    "year": "1989"
   }
 ]
