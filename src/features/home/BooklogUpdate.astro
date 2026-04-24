@@ -46,8 +46,8 @@ const coverImageProps = await getFluidCoverImageProps(value.slug, imageConfig);
     >
       <div
         class={`
-          absolute top-[2.5%] bottom-[2.5%] left-0 w-full overflow-hidden
-          bg-default bg-cover bg-center clip-path-cover
+          absolute inset-y-[2.5%] left-0 w-full overflow-hidden bg-default
+          bg-cover bg-center clip-path-cover
           after:absolute after:size-full after:backdrop-blur-sm
           after:clip-path-cover
           @min-[500px]/card:hidden
