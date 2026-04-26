@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-23T00:00:00.000Z",
+    "excerpt": "<p>Fearless cop Chow Yun-Fat closes in on gun-runner Anthony Wong who’s moving in on another boss’s turf, while assassin Tony Leung Chiu-wai is caught in the middle.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "image": "/_astro/hard-boiled-1992.DyNngYTt_md9D.png",
+    "slug": "hard-boiled-1992",
+    "stars": 4,
+    "title": "Hard Boiled",
+    "year": "1992"
+  },
+  {
     "date": "2026-04-21T00:00:00.000Z",
     "excerpt": "<p>Nightclub singer Barbara Stanwyck hides out with a houseful of encyclopedia-writing professors and falls for the youngest of the bunch, Gary Cooper.</p>",
     "genres": [
@@ -51,19 +65,5 @@
     "stars": 3,
     "title": "The Brotherhood of Satan",
     "year": "1971"
-  },
-  {
-    "date": "2026-04-17T00:00:00.000Z",
-    "excerpt": "<p>While visiting his Venetian hometown, a young professor struggles to expose the killer behind a rash of murders that may be connected to a killing years prior.</p>",
-    "genres": [
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-bloodstained-shadow-1978.Jky7H9Jb_Z1sgJtG.png",
-    "slug": "the-bloodstained-shadow-1978",
-    "stars": 2,
-    "title": "The Bloodstained Shadow",
-    "year": "1978"
   }
 ]
