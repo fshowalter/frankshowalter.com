@@ -3,6 +3,7 @@ import { z } from "astro/zod";
 const UpdateSchema = z.object({
   date: z.coerce.date(),
   excerpt: z.string(),
+  sequence: z.number(),
   slug: z.string(),
   stars: z.number(),
   title: z.string(),

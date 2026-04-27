@@ -36,8 +36,11 @@ async function syncData(filePath: string, ctx: LoaderContext) {
     if (!newIds.has(id)) ctx.store.delete(id);
   }
 
-  for (const item of raw) {
-    const data = await ctx.parseData({ data: item, id: item.slug });
+  for (const [index, item] of raw.entries()) {
+    const data = await ctx.parseData({
+      data: { ...item, sequence: index },
+      id: item.slug,
+    });
     ctx.store.set({ data, digest: ctx.generateDigest(item), id: item.slug });
   }
 }
