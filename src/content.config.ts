@@ -37,11 +37,16 @@ async function syncData(filePath: string, ctx: LoaderContext) {
   }
 
   for (const [index, item] of raw.entries()) {
+    const itemWithSequence = { ...item, sequence: index };
     const data = await ctx.parseData({
-      data: { ...item, sequence: index },
+      data: itemWithSequence,
       id: item.slug,
     });
-    ctx.store.set({ data, digest: ctx.generateDigest(item), id: item.slug });
+    ctx.store.set({
+      data,
+      digest: ctx.generateDigest(itemWithSequence),
+      id: item.slug,
+    });
   }
 }
 
