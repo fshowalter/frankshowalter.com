@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-25T00:00:00.000Z",
+    "excerpt": "<p>When the government blocks a research team’s work, one of its scientists seeks alternative avenues and finds himself entangled with shadowy figures.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/the-risk-1960.B8DFB47K_Z1ORKsf.png",
+    "slug": "the-risk-1960",
+    "stars": 3,
+    "title": "The Risk",
+    "year": "1960"
+  },
+  {
     "date": "2026-04-23T00:00:00.000Z",
     "excerpt": "<p>A novelist helps an alien girl and her alien cat retrieve weapon parts needed to defeat an alien monster possessing humans.</p>",
     "genres": [
@@ -54,18 +68,5 @@
     "stars": 2,
     "title": "Barbary Coast",
     "year": "1935"
-  },
-  {
-    "date": "2026-04-19T00:00:00.000Z",
-    "excerpt": "<p>A disastrous second honeymoon in Mexico with wife Deborah Kerr sees committed family man Frank Sinatra swap roles with his bachelor buddy, Dean Martin.</p>",
-    "genres": [
-      "Comedy",
-      "Romance"
-    ],
-    "image": "/_astro/marriage-on-the-rocks-1965.dt61Ox9E_Z14ED2E.png",
-    "slug": "marriage-on-the-rocks-1965",
-    "stars": 2.5,
-    "title": "Marriage on the Rocks",
-    "year": "1965"
   }
 ]

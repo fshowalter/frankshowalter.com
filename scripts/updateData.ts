@@ -12,10 +12,10 @@ type DownloadOptions = {
 };
 
 const MovieUpdatesSchema = z.array(
-  MovielogSchema.extend({ image: z.string() }),
+  MovielogSchema.omit({ sequence: true }).extend({ image: z.string() }),
 );
 const BookUpdatesSchema = z.array(
-  BooklogSchema.extend({
+  BooklogSchema.omit({ sequence: true }).extend({
     image: z.string(),
   }),
 );
