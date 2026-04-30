@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-04-29T00:00:00.000Z",
+    "excerpt": "<p>A visiting anthropologist falls under the spell of a witch who transforms her into a bloodthirsty floating head with dangling entrails.</p>",
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/mystics-in-bali-1981.DwX7JPTJ_1BJv48.png",
+    "slug": "mystics-in-bali-1981",
+    "stars": 1,
+    "title": "Mystics in Bali",
+    "year": "1981"
+  },
+  {
     "date": "2026-04-25T00:00:00.000Z",
     "excerpt": "<p>When the government blocks a research team’s work, one of its scientists seeks alternative avenues and finds himself entangled with shadowy figures.</p>",
     "genres": [
@@ -53,20 +67,5 @@
     "stars": 3.5,
     "title": "Ball of Fire",
     "year": "1941"
-  },
-  {
-    "date": "2026-04-20T00:00:00.000Z",
-    "excerpt": "<p>In gold-rush-era San Francisco, ruthless casino boss Edward G. Robinson covets new arrival Miriam Hopkins, who falls for poetry-spouting prospector Joel McCrea.</p>",
-    "genres": [
-      "Adventure",
-      "Drama",
-      "Romance",
-      "Western"
-    ],
-    "image": "/_astro/barbary-coast-1935.D1874g8G_ZmOESG.png",
-    "slug": "barbary-coast-1935",
-    "stars": 2,
-    "title": "Barbary Coast",
-    "year": "1935"
   }
 ]
