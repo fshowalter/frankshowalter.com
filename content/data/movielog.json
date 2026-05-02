@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-01T00:00:00.000Z",
+    "excerpt": "<p>A shy teen moonlights as a popular pirate radio DJ, alarming the local high school’s corrupt administration.</p>",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Music"
+    ],
+    "image": "/_astro/pump-up-the-volume-1990.Yj-fuKw7_2ry60t.png",
+    "slug": "pump-up-the-volume-1990",
+    "stars": 4,
+    "title": "Pump Up the Volume",
+    "year": "1990"
+  },
+  {
     "date": "2026-04-30T00:00:00.000Z",
     "excerpt": "<p>Skirt-chasing dandy Cary Grant pursues a foreign beauty unaware she’s part of a plot to swindle him out of a mining concession, while telephone operator Frances Drake tries to warn him.</p>",
     "genres": [
@@ -53,19 +67,5 @@
     "stars": 2.5,
     "title": "The Cat",
     "year": "1991"
-  },
-  {
-    "date": "2026-04-23T00:00:00.000Z",
-    "excerpt": "<p>Fearless cop Chow Yun-Fat closes in on gun-runner Anthony Wong who’s moving in on another boss’s turf, while assassin Tony Leung Chiu-wai is caught in the middle.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller"
-    ],
-    "image": "/_astro/hard-boiled-1992.DyNngYTt_md9D.png",
-    "slug": "hard-boiled-1992",
-    "stars": 4,
-    "title": "Hard Boiled",
-    "year": "1992"
   }
 ]
