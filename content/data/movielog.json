@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-04-30T00:00:00.000Z",
+    "excerpt": "<p>Skirt-chasing dandy Cary Grant pursues a foreign beauty unaware she’s part of a plot to swindle him out of a mining concession, while telephone operator Frances Drake tries to warn him.</p>",
+    "genres": [
+      "Comedy",
+      "Romance"
+    ],
+    "image": "/_astro/ladies-should-listen-1934.Cxtnn-RW_Jk0fc.png",
+    "slug": "ladies-should-listen-1934",
+    "stars": 1.5,
+    "title": "Ladies Should Listen",
+    "year": "1934"
+  },
+  {
     "date": "2026-04-29T00:00:00.000Z",
     "excerpt": "<p>A visiting anthropologist falls under the spell of a witch who transforms her into a bloodthirsty floating head with dangling entrails.</p>",
     "genres": [
@@ -54,18 +67,5 @@
     "stars": 4,
     "title": "Hard Boiled",
     "year": "1992"
-  },
-  {
-    "date": "2026-04-21T00:00:00.000Z",
-    "excerpt": "<p>Nightclub singer Barbara Stanwyck hides out with a houseful of encyclopedia-writing professors and falls for the youngest of the bunch, Gary Cooper.</p>",
-    "genres": [
-      "Comedy",
-      "Romance"
-    ],
-    "image": "/_astro/ball-of-fire-1941.DNDhzj_i_2apwoI.png",
-    "slug": "ball-of-fire-1941",
-    "stars": 3.5,
-    "title": "Ball of Fire",
-    "year": "1941"
   }
 ]
