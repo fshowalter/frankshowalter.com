@@ -1,7 +1,20 @@
 [
   {
     "date": "2026-05-02T00:00:00.000Z",
-    "excerpt": "<p>Tragedies pile up when scientist Boris Karloff becomes obsessed with the idea of communicating with his dead wife.</p>",
+    "excerpt": "<p>A ruthless gang of thieves waylays a couple driving cross-country only to learn ruthless is a relative term.</p>",
+    "genres": [
+      "Action",
+      "Horror"
+    ],
+    "image": "/_astro/no-one-lives-2012.CTZrUX0n_Z1DAVjp.png",
+    "slug": "no-one-lives-2012",
+    "stars": 4,
+    "title": "No One Lives",
+    "year": "2012"
+  },
+  {
+    "date": "2026-05-02T00:00:00.000Z",
+    "excerpt": "<p>Tragedies pile up when scientist Boris Karloff becomes obsessed with communicating with his dead wife.</p>",
     "genres": [
       "Horror",
       "Sci-Fi"
@@ -52,19 +65,5 @@
     "stars": 1,
     "title": "Mystics in Bali",
     "year": "1981"
-  },
-  {
-    "date": "2026-04-25T00:00:00.000Z",
-    "excerpt": "<p>When the government blocks a research team’s work, one of its scientists seeks alternative avenues and finds himself entangled with shadowy figures.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/the-risk-1960.B8DFB47K_Z1ORKsf.png",
-    "slug": "the-risk-1960",
-    "stars": 3,
-    "title": "The Risk",
-    "year": "1960"
   }
 ]
