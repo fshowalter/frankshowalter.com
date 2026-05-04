@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-03T00:00:00.000Z",
+    "excerpt": "<p>Inmates in a women’s prison endure hardship and humiliation at the hands of the wheelchair-bound, sexually-repressed warden and a doctor with a penchant for lobotomies and sexual assault.</p>",
+    "genres": [
+      "Action",
+      "Comedy",
+      "Drama"
+    ],
+    "image": "/_astro/caged-heat-1974.BslO0KRu_Z1HJNDf.png",
+    "slug": "caged-heat-1974",
+    "stars": 2,
+    "title": "Caged Heat",
+    "year": "1974"
+  },
+  {
     "date": "2026-05-02T00:00:00.000Z",
     "excerpt": "<p>A ruthless gang of thieves waylays a couple driving cross-country only to learn ruthless is a relative term.</p>",
     "genres": [
@@ -51,19 +65,5 @@
     "stars": 1.5,
     "title": "Ladies Should Listen",
     "year": "1934"
-  },
-  {
-    "date": "2026-04-29T00:00:00.000Z",
-    "excerpt": "<p>A visiting anthropologist falls under the spell of a witch who transforms her into a bloodthirsty floating head with dangling entrails.</p>",
-    "genres": [
-      "Fantasy",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/mystics-in-bali-1981.DwX7JPTJ_1BJv48.png",
-    "slug": "mystics-in-bali-1981",
-    "stars": 1,
-    "title": "Mystics in Bali",
-    "year": "1981"
   }
 ]
