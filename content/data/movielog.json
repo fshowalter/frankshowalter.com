@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-05-04T00:00:00.000Z",
+    "excerpt": "<p>Two teens realize a cursed television in their new home has released a group of zombies terrorizing their suburban neighborhood.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/the-video-dead-1987.BprZymci_Z1VIEUz.png",
+    "slug": "the-video-dead-1987",
+    "stars": 1.5,
+    "title": "The Video Dead",
+    "year": "1987"
+  },
+  {
     "date": "2026-05-03T00:00:00.000Z",
     "excerpt": "<p>Inmates in a women’s prison endure hardship and humiliation at the hands of the wheelchair-bound, sexually-repressed warden and a doctor with a penchant for lobotomies and sexual assault.</p>",
     "genres": [
@@ -52,18 +64,5 @@
     "stars": 4,
     "title": "Pump Up the Volume",
     "year": "1990"
-  },
-  {
-    "date": "2026-04-30T00:00:00.000Z",
-    "excerpt": "<p>Skirt-chasing dandy Cary Grant pursues a foreign beauty unaware she’s part of a plot to swindle him out of a mining concession, while telephone operator Frances Drake tries to warn him.</p>",
-    "genres": [
-      "Comedy",
-      "Romance"
-    ],
-    "image": "/_astro/ladies-should-listen-1934.Cxtnn-RW_Jk0fc.png",
-    "slug": "ladies-should-listen-1934",
-    "stars": 1.5,
-    "title": "Ladies Should Listen",
-    "year": "1934"
   }
 ]
