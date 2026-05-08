@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-05-05T00:00:00.000Z",
+    "excerpt": "<p>After a cruel prank goes wrong, a comatose boarding school student possesses a new classmate to exact revenge on the perpetrators.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/aenigma-1987.w2aucNQK_Z1869uV.png",
+    "slug": "aenigma-1987",
+    "stars": 2.5,
+    "title": "Aenigma",
+    "year": "1987"
+  },
+  {
     "date": "2026-05-04T00:00:00.000Z",
     "excerpt": "<p>Two teens realize a cursed television in their new home has released a group of zombies terrorizing their suburban neighborhood.</p>",
     "genres": [
@@ -50,19 +65,5 @@
     "stars": 2,
     "title": "The Devil Commands",
     "year": "1941"
-  },
-  {
-    "date": "2026-05-01T00:00:00.000Z",
-    "excerpt": "<p>A shy teen moonlights as a popular pirate radio DJ, alarming the local high school’s corrupt administration.</p>",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Music"
-    ],
-    "image": "/_astro/pump-up-the-volume-1990.Yj-fuKw7_2ry60t.png",
-    "slug": "pump-up-the-volume-1990",
-    "stars": 4,
-    "title": "Pump Up the Volume",
-    "year": "1990"
   }
 ]
