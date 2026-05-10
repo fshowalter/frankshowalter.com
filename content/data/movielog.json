@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-05-07T00:00:00.000Z",
+    "excerpt": "<p>A man drives out to a remote cabin with his girlfriend, where he unwittingly unleashes an evil entity capable of possessing the living and the dead.</p>",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "image": "/_astro/evil-dead-ii-1987.jK8g3N8i_1o69WX.png",
+    "slug": "evil-dead-ii-1987",
+    "stars": 4,
+    "title": "Evil Dead II",
+    "year": "1987"
+  },
+  {
+    "date": "2026-05-07T00:00:00.000Z",
     "excerpt": "<p>In 1957 New Zealand, a shy young man struggles to juggle a burgeoning romance, his domineering mother, and a zombie outbreak.</p>",
     "genres": [
       "Comedy",
@@ -54,19 +67,5 @@
     "stars": 1.5,
     "title": "The Video Dead",
     "year": "1987"
-  },
-  {
-    "date": "2026-05-03T00:00:00.000Z",
-    "excerpt": "<p>Inmates in a women’s prison endure hardship and humiliation at the hands of the wheelchair-bound, sexually-repressed warden and a doctor with a penchant for lobotomies and sexual assault.</p>",
-    "genres": [
-      "Action",
-      "Comedy",
-      "Drama"
-    ],
-    "image": "/_astro/caged-heat-1974.BslO0KRu_Z1HJNDf.png",
-    "slug": "caged-heat-1974",
-    "stars": 2,
-    "title": "Caged Heat",
-    "year": "1974"
   }
 ]
