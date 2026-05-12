@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-05-09T00:00:00.000Z",
+    "excerpt": "<p>Travelers stranded at a remote sanatorium fall prey to a reincarnated Count Dracula seeking a virgin to fall in love with him to fulfill a prophecy and resurrect his daughter.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/count-draculas-great-love-1973.NO0lNEFb_ZgK0sc.png",
+    "slug": "count-draculas-great-love-1973",
+    "stars": 2,
+    "title": "Count Dracula's Great Love",
+    "year": "1973"
+  },
+  {
     "date": "2026-05-08T00:00:00.000Z",
     "excerpt": "<p>A renowned artist encounters his dead wife’s doppelgänger and finds he can only create by painting with the blood of murder victims.</p>",
     "genres": [
@@ -53,20 +65,5 @@
     "stars": 1,
     "title": "Alice in Wonderland",
     "year": "1933"
-  },
-  {
-    "date": "2026-05-05T00:00:00.000Z",
-    "excerpt": "<p>After a cruel prank goes wrong, a comatose boarding school student possesses a new classmate to exact revenge on the perpetrators.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/aenigma-1987.w2aucNQK_Z1869uV.png",
-    "slug": "aenigma-1987",
-    "stars": 2.5,
-    "title": "Aenigma",
-    "year": "1987"
   }
 ]
