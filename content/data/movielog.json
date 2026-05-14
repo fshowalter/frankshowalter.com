@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-05-13T00:00:00.000Z",
+    "excerpt": "<p>An assassin hired to kill a beloved clan leader discovers loyalty is both fleeting and eternal.</p>",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "image": "/_astro/killer-clans-1976.MrZsbwrK_ZHozIg.png",
+    "slug": "killer-clans-1976",
+    "stars": 3.5,
+    "title": "Killer Clans",
+    "year": "1976"
+  },
+  {
     "date": "2026-05-10T00:00:00.000Z",
     "excerpt": "<p>A young policewoman becomes possessed by a malevolent spirit and dispatches anyone who crosses her.</p>",
     "genres": [
@@ -50,20 +63,5 @@
     "stars": 4,
     "title": "Evil Dead II",
     "year": "1987"
-  },
-  {
-    "date": "2026-05-07T00:00:00.000Z",
-    "excerpt": "<p>In 1957 New Zealand, a shy young man struggles to juggle a burgeoning romance, his domineering mother, and a zombie outbreak.</p>",
-    "genres": [
-      "Comedy",
-      "Fantasy",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/braindead-1992.QwKqdIJi_1HtpMj.png",
-    "slug": "braindead-1992",
-    "stars": 4,
-    "title": "Braindead",
-    "year": "1992"
   }
 ]
