@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-15T00:00:00.000Z",
+    "excerpt": "<p>A shaolin monk fights to escape a labyrinthine underground prison ruled by a monstrous former general with near-supernatural powers.</p>",
+    "genres": [
+      "Adventure",
+      "Action",
+      "Fantasy"
+    ],
+    "image": "/_astro/burning-paradise-1994.SUcUSUMJ_1gjRzl.png",
+    "slug": "burning-paradise-1994",
+    "stars": 2,
+    "title": "Burning Paradise",
+    "year": "1994"
+  },
+  {
     "date": "2026-05-13T00:00:00.000Z",
     "excerpt": "<p>An assassin hired to kill a beloved clan leader discovers loyalty is both fleeting and eternal.</p>",
     "genres": [
@@ -50,18 +64,5 @@
     "stars": 2,
     "title": "Blood Delirium",
     "year": "1988"
-  },
-  {
-    "date": "2026-05-07T00:00:00.000Z",
-    "excerpt": "<p>A man drives out to a remote cabin with his girlfriend, where he unwittingly unleashes an evil entity capable of possessing the living and the dead.</p>",
-    "genres": [
-      "Comedy",
-      "Horror"
-    ],
-    "image": "/_astro/evil-dead-ii-1987.jK8g3N8i_1o69WX.png",
-    "slug": "evil-dead-ii-1987",
-    "stars": 4,
-    "title": "Evil Dead II",
-    "year": "1987"
   }
 ]
