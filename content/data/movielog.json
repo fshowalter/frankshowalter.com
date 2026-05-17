@@ -1,6 +1,22 @@
 [
   {
     "date": "2026-05-15T00:00:00.000Z",
+    "excerpt": "<p>Corey Haim falls for an attractive young blonde who wants him to help her kill her father.</p>",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/blown-away-1993.DOBOK9rK_1ey0mD.png",
+    "slug": "blown-away-1993",
+    "stars": 2.5,
+    "title": "Blown Away",
+    "year": "1993"
+  },
+  {
+    "date": "2026-05-15T00:00:00.000Z",
     "excerpt": "<p>A shaolin monk fights to escape a labyrinthine underground prison ruled by a monstrous former general with near-supernatural powers.</p>",
     "genres": [
       "Adventure",
@@ -51,18 +67,5 @@
     "stars": 2,
     "title": "Count Dracula's Great Love",
     "year": "1973"
-  },
-  {
-    "date": "2026-05-08T00:00:00.000Z",
-    "excerpt": "<p>A renowned artist encounters his dead wife’s doppelgänger and finds he can only create by painting with the blood of murder victims.</p>",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/blood-delirium-1988.BvXypBxy_1coMnG.png",
-    "slug": "blood-delirium-1988",
-    "stars": 2,
-    "title": "Blood Delirium",
-    "year": "1988"
   }
 ]
