@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-05-15T00:00:00.000Z",
+    "excerpt": "<p>A pair of New York cops hunt a killer stalking Manhattan massage parlors.</p>",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/massage-parlor-murders-1973.4wHjGUOt_Z2lGJYH.png",
+    "slug": "massage-parlor-murders-1973",
+    "stars": 2,
+    "title": "Massage Parlor Murders!",
+    "year": "1973"
+  },
+  {
+    "date": "2026-05-15T00:00:00.000Z",
     "excerpt": "<p>Corey Haim falls for an attractive young blonde who wants him to help her kill her father.</p>",
     "genres": [
       "Action",
@@ -55,17 +69,5 @@
     "stars": 3.5,
     "title": "Hell Has No Boundary",
     "year": "1982"
-  },
-  {
-    "date": "2026-05-09T00:00:00.000Z",
-    "excerpt": "<p>Travelers stranded at a remote sanatorium fall prey to a reincarnated Count Dracula seeking a virgin to fall in love with him to fulfill a prophecy and resurrect his daughter.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/count-draculas-great-love-1973.NO0lNEFb_ZgK0sc.png",
-    "slug": "count-draculas-great-love-1973",
-    "stars": 2,
-    "title": "Count Dracula's Great Love",
-    "year": "1973"
   }
 ]
