@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-18T00:00:00.000Z",
+    "excerpt": "<p>Christopher Lee plays the notorious holy man who worms his way into the Tsarina’s court before being cut down by assassins.</p>",
+    "genres": [
+      "Biography",
+      "Drama",
+      "Horror"
+    ],
+    "image": "/_astro/rasputin-the-mad-monk-1966.CY-zttTn_ZX9tqR.png",
+    "slug": "rasputin-the-mad-monk-1966",
+    "stars": 2,
+    "title": "Rasputin: The Mad Monk",
+    "year": "1966"
+  },
+  {
     "date": "2026-05-16T00:00:00.000Z",
     "excerpt": "<p>Visitors and intruders at a remote lakeside estate suffer graphic, over-the-top fates at the hands of otherworldly forces.</p>",
     "genres": [
@@ -54,21 +68,5 @@
     "stars": 2,
     "title": "Massage Parlor Murders!",
     "year": "1973"
-  },
-  {
-    "date": "2026-05-15T00:00:00.000Z",
-    "excerpt": "<p>Corey Haim falls for an attractive young blonde who wants him to help her kill her father.</p>",
-    "genres": [
-      "Action",
-      "Drama",
-      "Mystery",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/blown-away-1993.DOBOK9rK_1ey0mD.png",
-    "slug": "blown-away-1993",
-    "stars": 2.5,
-    "title": "Blown Away",
-    "year": "1993"
   }
 ]
