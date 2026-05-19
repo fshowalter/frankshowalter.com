@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-05-16T00:00:00.000Z",
+    "excerpt": "<p>Cynical reporter William Holden finds the leak plaguing his childhood friend’s attempt to build a case against a crime syndicate, but grapples with the implications of revealing it.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Thriller"
+    ],
+    "image": "/_astro/the-turning-point-1952.DCB0_f2u_Z19b8Pc.png",
+    "slug": "the-turning-point-1952",
+    "stars": 3,
+    "title": "The Turning Point",
+    "year": "1952"
+  },
+  {
     "date": "2026-05-15T00:00:00.000Z",
     "excerpt": "<p>A pair of New York cops hunt a killer stalking Manhattan massage parlors.</p>",
     "genres": [
@@ -55,19 +70,5 @@
     "stars": 3.5,
     "title": "Killer Clans",
     "year": "1976"
-  },
-  {
-    "date": "2026-05-10T00:00:00.000Z",
-    "excerpt": "<p>A young policewoman becomes possessed by a malevolent spirit and dispatches anyone who crosses her.</p>",
-    "genres": [
-      "Crime",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/hell-has-no-boundary-1982.CQItN0lU_1eD0kf.png",
-    "slug": "hell-has-no-boundary-1982",
-    "stars": 3.5,
-    "title": "Hell Has No Boundary",
-    "year": "1982"
   }
 ]
