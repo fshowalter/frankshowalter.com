@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-05-16T00:00:00.000Z",
+    "excerpt": "<p>A psychiatrist insinuates himself into the life of a race car driver struggling with murderous urges toward his wife.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/stop-me-before-i-kill-1960.BqqQayLv_1wEw8k.png",
+    "slug": "stop-me-before-i-kill-1960",
+    "stars": 3,
+    "title": "Stop Me Before I Kill!",
+    "year": "1960"
+  },
+  {
+    "date": "2026-05-16T00:00:00.000Z",
     "excerpt": "<p>Cynical reporter William Holden finds the leak plaguing his childhood friend’s attempt to build a case against a crime syndicate, but grapples with the implications of revealing it.</p>",
     "genres": [
       "Crime",
@@ -57,18 +72,5 @@
     "stars": 2,
     "title": "Burning Paradise",
     "year": "1994"
-  },
-  {
-    "date": "2026-05-13T00:00:00.000Z",
-    "excerpt": "<p>An assassin hired to kill a beloved clan leader discovers loyalty is both fleeting and eternal.</p>",
-    "genres": [
-      "Action",
-      "Drama"
-    ],
-    "image": "/_astro/killer-clans-1976.MrZsbwrK_ZHozIg.png",
-    "slug": "killer-clans-1976",
-    "stars": 3.5,
-    "title": "Killer Clans",
-    "year": "1976"
   }
 ]
