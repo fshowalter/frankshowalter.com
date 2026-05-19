@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-05-16T00:00:00.000Z",
+    "excerpt": "<p>Visitors and intruders at a remote lakeside estate suffer graphic, over-the-top fates at the hands of otherworldly forces.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/red-spirit-lake-1993.n4KryNRv_2ig9Np.png",
+    "slug": "red-spirit-lake-1993",
+    "stars": 2,
+    "title": "Red Spirit Lake",
+    "year": "1993"
+  },
+  {
+    "date": "2026-05-16T00:00:00.000Z",
     "excerpt": "<p>A psychiatrist insinuates himself into the life of a race car driver struggling with murderous urges toward his wife.</p>",
     "genres": [
       "Crime",
@@ -58,19 +70,5 @@
     "stars": 2.5,
     "title": "Blown Away",
     "year": "1993"
-  },
-  {
-    "date": "2026-05-15T00:00:00.000Z",
-    "excerpt": "<p>A shaolin monk fights to escape a labyrinthine underground prison ruled by a monstrous former general with near-supernatural powers.</p>",
-    "genres": [
-      "Adventure",
-      "Action",
-      "Fantasy"
-    ],
-    "image": "/_astro/burning-paradise-1994.SUcUSUMJ_1gjRzl.png",
-    "slug": "burning-paradise-1994",
-    "stars": 2,
-    "title": "Burning Paradise",
-    "year": "1994"
   }
 ]
