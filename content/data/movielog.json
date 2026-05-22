@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-21T00:00:00.000Z",
+    "excerpt": "<p>British Intelligence recruits Shaolin martial-artist Bruce Lee to enter a tournament held on an international criminal’s remote island compound.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Thriller"
+    ],
+    "image": "/_astro/enter-the-dragon-1973.DsWmn8ez_Z1Py8hf.png",
+    "slug": "enter-the-dragon-1973",
+    "stars": 4,
+    "title": "Enter the Dragon",
+    "year": "1973"
+  },
+  {
     "date": "2026-05-18T00:00:00.000Z",
     "excerpt": "<p>Christopher Lee plays the notorious holy man who worms his way into the Tsarina’s court before being cut down by assassins.</p>",
     "genres": [
@@ -54,19 +68,5 @@
     "stars": 3,
     "title": "The Turning Point",
     "year": "1952"
-  },
-  {
-    "date": "2026-05-15T00:00:00.000Z",
-    "excerpt": "<p>A pair of New York cops hunt a killer stalking Manhattan massage parlors.</p>",
-    "genres": [
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/massage-parlor-murders-1973.4wHjGUOt_Z2lGJYH.png",
-    "slug": "massage-parlor-murders-1973",
-    "stars": 2,
-    "title": "Massage Parlor Murders!",
-    "year": "1973"
   }
 ]
