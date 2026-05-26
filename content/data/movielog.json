@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-22T00:00:00.000Z",
+    "excerpt": "<p>Eccentric grandfather Peter Cushing builds a time-travelling space ship that whisks him and his granddaughters to a planet caught in a war between the peaceful Thals and the merciless Daleks.</p>",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/dr-who-and-the-daleks-1965.BgppyFSB_1F6Yj7.png",
+    "slug": "dr-who-and-the-daleks-1965",
+    "stars": 2,
+    "title": "Dr. Who and the Daleks",
+    "year": "1965"
+  },
+  {
     "date": "2026-05-21T00:00:00.000Z",
     "excerpt": "<p>A series of loosely connected skits surround an extended parody of Bruce Lee’s <em>Enter the Dragon</em>.</p>",
     "genres": [
@@ -50,20 +64,5 @@
     "stars": 2,
     "title": "Red Spirit Lake",
     "year": "1993"
-  },
-  {
-    "date": "2026-05-16T00:00:00.000Z",
-    "excerpt": "<p>A psychiatrist insinuates himself into the life of a race car driver struggling with murderous urges toward his wife.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/stop-me-before-i-kill-1960.BqqQayLv_1wEw8k.png",
-    "slug": "stop-me-before-i-kill-1960",
-    "stars": 3,
-    "title": "Stop Me Before I Kill!",
-    "year": "1960"
   }
 ]
