@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-23T00:00:00.000Z",
+    "excerpt": "<p>As the Old West fades, newly appointed sheriff Pat Garrett hunts down his old friend, Billy the Kid.</p>",
+    "genres": [
+      "Biography",
+      "Drama",
+      "Western"
+    ],
+    "image": "/_astro/pat-garrett-and-billy-the-kid-1973.CmRYIqLh_OKkgI.png",
+    "slug": "pat-garrett-and-billy-the-kid-1973",
+    "stars": 3.5,
+    "title": "Pat Garrett & Billy the Kid",
+    "year": "1973"
+  },
+  {
     "date": "2026-05-22T00:00:00.000Z",
     "excerpt": "<p>Eccentric grandfather Peter Cushing builds a time-travelling space ship that whisks him and his granddaughters to a planet caught in a war between the peaceful Thals and the merciless Daleks.</p>",
     "genres": [
@@ -52,17 +66,5 @@
     "stars": 2,
     "title": "Rasputin: The Mad Monk",
     "year": "1966"
-  },
-  {
-    "date": "2026-05-16T00:00:00.000Z",
-    "excerpt": "<p>Visitors and intruders at a remote lakeside estate suffer graphic, over-the-top fates at the hands of otherworldly forces.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/red-spirit-lake-1993.n4KryNRv_2ig9Np.png",
-    "slug": "red-spirit-lake-1993",
-    "stars": 2,
-    "title": "Red Spirit Lake",
-    "year": "1993"
   }
 ]
