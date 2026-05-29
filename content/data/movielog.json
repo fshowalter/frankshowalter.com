@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-05-24T00:00:00.000Z",
+    "excerpt": "<p>A cyborg from the future protects a young boy crucial to humanity’s survival from a merciless robot made of liquid metal that can assume the form of anything it touches.</p>",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/terminator-2-judgment-day-1991.Bip4tynr_Z1ulrsT.png",
+    "slug": "terminator-2-judgment-day-1991",
+    "stars": 4.5,
+    "title": "Terminator 2: Judgment Day",
+    "year": "1991"
+  },
+  {
     "date": "2026-05-23T00:00:00.000Z",
     "excerpt": "<p>As the Old West fades, newly appointed sheriff Pat Garrett hunts down his old friend, Billy the Kid.</p>",
     "genres": [
@@ -52,19 +66,5 @@
     "stars": 4,
     "title": "Enter the Dragon",
     "year": "1973"
-  },
-  {
-    "date": "2026-05-18T00:00:00.000Z",
-    "excerpt": "<p>Christopher Lee plays the notorious holy man who worms his way into the Tsarina’s court before being cut down by assassins.</p>",
-    "genres": [
-      "Biography",
-      "Drama",
-      "Horror"
-    ],
-    "image": "/_astro/rasputin-the-mad-monk-1966.CY-zttTn_ZX9tqR.png",
-    "slug": "rasputin-the-mad-monk-1966",
-    "stars": 2,
-    "title": "Rasputin: The Mad Monk",
-    "year": "1966"
   }
 ]
