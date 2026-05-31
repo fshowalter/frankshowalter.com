@@ -1,5 +1,48 @@
 [
   {
+    "date": "2026-05-29T00:00:00.000Z",
+    "excerpt": "<p>A mutant killer snowman terrorizes people on a tropical resort.</p>",
+    "genres": [
+      "Comedy",
+      "Fantasy",
+      "Horror"
+    ],
+    "image": "/_astro/jack-frost-2-revenge-of-the-mutant-killer-snowman-2000.CC3ZsXtw_Z1uI37E.png",
+    "slug": "jack-frost-2-revenge-of-the-mutant-killer-snowman-2000",
+    "stars": 1,
+    "title": "Jack Frost 2: Revenge of the Mutant Killer Snowman",
+    "year": "2000"
+  },
+  {
+    "date": "2026-05-26T00:00:00.000Z",
+    "excerpt": "<p>A young model’s obsession with a dark-web murder trial threatens her sanity.</p>",
+    "genres": [
+      "Crime",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/red-rooms-2023.BJMmswFr_Z1qDthP.png",
+    "slug": "red-rooms-2023",
+    "stars": 2.5,
+    "title": "Red Rooms",
+    "year": "2023"
+  },
+  {
+    "date": "2026-05-24T00:00:00.000Z",
+    "excerpt": "<p>A repressed middle-aged piano teacher at an elite Vienna conservatory enters into a destructive affair with a wealthy and talented young student.</p>",
+    "genres": [
+      "Drama",
+      "Music",
+      "Romance"
+    ],
+    "image": "/_astro/the-piano-teacher-2001.Dyia8icB_Z3fpGV.png",
+    "slug": "the-piano-teacher-2001",
+    "stars": 4,
+    "title": "The Piano Teacher",
+    "year": "2001"
+  },
+  {
     "date": "2026-05-24T00:00:00.000Z",
     "excerpt": "<p>A cyborg from the future protects a young boy crucial to humanity’s survival from a merciless robot made of liquid metal that can assume the form of anything it touches.</p>",
     "genres": [
@@ -25,46 +68,6 @@
     "slug": "pat-garrett-and-billy-the-kid-1973",
     "stars": 3.5,
     "title": "Pat Garrett & Billy the Kid",
-    "year": "1973"
-  },
-  {
-    "date": "2026-05-22T00:00:00.000Z",
-    "excerpt": "<p>Eccentric grandfather Peter Cushing builds a time-travelling space ship that whisks him and his granddaughters to a planet caught in a war between the peaceful Thals and the merciless Daleks.</p>",
-    "genres": [
-      "Adventure",
-      "Drama",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/dr-who-and-the-daleks-1965.BgppyFSB_1F6Yj7.png",
-    "slug": "dr-who-and-the-daleks-1965",
-    "stars": 2,
-    "title": "Dr. Who and the Daleks",
-    "year": "1965"
-  },
-  {
-    "date": "2026-05-21T00:00:00.000Z",
-    "excerpt": "<p>A series of loosely connected skits surround an extended parody of Bruce Lee’s <em>Enter the Dragon</em>.</p>",
-    "genres": [
-      "Comedy"
-    ],
-    "image": "/_astro/the-kentucky-fried-movie-1977.Yh6wMqh5_uuOGH.png",
-    "slug": "the-kentucky-fried-movie-1977",
-    "stars": 4,
-    "title": "The Kentucky Fried Movie",
-    "year": "1977"
-  },
-  {
-    "date": "2026-05-21T00:00:00.000Z",
-    "excerpt": "<p>British Intelligence recruits Shaolin martial-artist Bruce Lee to enter a tournament held on an international criminal’s remote island compound.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Thriller"
-    ],
-    "image": "/_astro/enter-the-dragon-1973.DsWmn8ez_Z1Py8hf.png",
-    "slug": "enter-the-dragon-1973",
-    "stars": 4,
-    "title": "Enter the Dragon",
     "year": "1973"
   }
 ]
