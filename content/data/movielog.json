@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-05-30T00:00:00.000Z",
+    "excerpt": "<p>After their last male general falls in battle, the surviving women of a family devoted to defending the Song Empire raise an army and set out to battle the invading forces.</p>",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "History",
+      "War"
+    ],
+    "image": "/_astro/the-14-amazons-1972.CrBKDngp_2ecFhr.png",
+    "slug": "the-14-amazons-1972",
+    "stars": 3.5,
+    "title": "The 14 Amazons",
+    "year": "1972"
+  },
+  {
     "date": "2026-05-29T00:00:00.000Z",
     "excerpt": "<p>A mutant killer snowman terrorizes people on a tropical resort.</p>",
     "genres": [
@@ -55,19 +70,5 @@
     "stars": 4.5,
     "title": "Terminator 2: Judgment Day",
     "year": "1991"
-  },
-  {
-    "date": "2026-05-23T00:00:00.000Z",
-    "excerpt": "<p>As the Old West fades, newly appointed sheriff Pat Garrett hunts down his old friend, Billy the Kid.</p>",
-    "genres": [
-      "Biography",
-      "Drama",
-      "Western"
-    ],
-    "image": "/_astro/pat-garrett-and-billy-the-kid-1973.CmRYIqLh_OKkgI.png",
-    "slug": "pat-garrett-and-billy-the-kid-1973",
-    "stars": 3.5,
-    "title": "Pat Garrett & Billy the Kid",
-    "year": "1973"
   }
 ]
