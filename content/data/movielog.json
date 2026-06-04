@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-06-03T00:00:00.000Z",
+    "excerpt": "<p>A smooth-talking parasite hooks a young man on a hallucinogenic secretion but demands fresh human brains as sustenance.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/brain-damage-1988.BI1Elknx_Z1To4VT.png",
+    "slug": "brain-damage-1988",
+    "stars": 4,
+    "title": "Brain Damage",
+    "year": "1988"
+  },
+  {
     "date": "2026-06-01T00:00:00.000Z",
     "excerpt": "<p>After a compromised teleportation experiment, a scientist’s body and humanity putrefy as he slowly mutates into a humanoid-fly hybrid.</p>",
     "genres": [
@@ -55,20 +69,5 @@
     "stars": 1,
     "title": "Jack Frost 2: Revenge of the Mutant Killer Snowman",
     "year": "2000"
-  },
-  {
-    "date": "2026-05-26T00:00:00.000Z",
-    "excerpt": "<p>A young model’s obsession with a dark-web murder trial threatens her sanity.</p>",
-    "genres": [
-      "Crime",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/red-rooms-2023.BJMmswFr_Z1qDthP.png",
-    "slug": "red-rooms-2023",
-    "stars": 2.5,
-    "title": "Red Rooms",
-    "year": "2023"
   }
 ]
