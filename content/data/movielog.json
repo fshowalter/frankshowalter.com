@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-06-04T00:00:00.000Z",
+    "excerpt": "<p>A frustrated cop pursues a maniacal hunchback, a one-handed bank robber and others in his quest to take down a crime kingpin in Rome.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/the-tough-ones-1976.gicblDKr_Z1O1qfd.png",
+    "slug": "the-tough-ones-1976",
+    "stars": 2.5,
+    "title": "The Tough Ones",
+    "year": "1976"
+  },
+  {
     "date": "2026-06-03T00:00:00.000Z",
     "excerpt": "<p>A smooth-talking parasite hooks a young man on a hallucinogenic secretion but demands fresh human brains as sustenance.</p>",
     "genres": [
@@ -55,19 +70,5 @@
     "stars": 3.5,
     "title": "The 14 Amazons",
     "year": "1972"
-  },
-  {
-    "date": "2026-05-29T00:00:00.000Z",
-    "excerpt": "<p>A mutant killer snowman terrorizes people on a tropical resort.</p>",
-    "genres": [
-      "Comedy",
-      "Fantasy",
-      "Horror"
-    ],
-    "image": "/_astro/jack-frost-2-revenge-of-the-mutant-killer-snowman-2000.CC3ZsXtw_Z1uI37E.png",
-    "slug": "jack-frost-2-revenge-of-the-mutant-killer-snowman-2000",
-    "stars": 1,
-    "title": "Jack Frost 2: Revenge of the Mutant Killer Snowman",
-    "year": "2000"
   }
 ]
