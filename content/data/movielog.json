@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-06T00:00:00.000Z",
+    "excerpt": "<p>An American drifter’s affair with a Frenchwoman draws him into a scheme to free her blowtorch-happy husband from an asylum.</p>",
+    "genres": [
+      "Crime",
+      "Horror",
+      "Mystery",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/maniac-1963.WDLTQb0r_Z2kvnHn.png",
+    "slug": "maniac-1963",
+    "stars": 2,
+    "title": "Maniac",
+    "year": "1963"
+  },
+  {
     "date": "2026-06-05T00:00:00.000Z",
     "excerpt": "<p>A Harlem cocaine kingpin schemes to exit the lifestyle but encounters resistance from all sides.</p>",
     "genres": [
@@ -56,19 +72,5 @@
     "stars": 4,
     "title": "Brain Damage",
     "year": "1988"
-  },
-  {
-    "date": "2026-06-01T00:00:00.000Z",
-    "excerpt": "<p>After a compromised teleportation experiment, a scientist’s body and humanity putrefy as he slowly mutates into a humanoid-fly hybrid.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/the-fly-1986.kq_kYVBh_ZfPcjf.png",
-    "slug": "the-fly-1986",
-    "stars": 4,
-    "title": "The Fly",
-    "year": "1986"
   }
 ]
