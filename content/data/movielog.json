@@ -1,5 +1,34 @@
 [
   {
+    "date": "2026-06-05T00:00:00.000Z",
+    "excerpt": "<p>A Harlem cocaine kingpin schemes to exit the lifestyle but encounters resistance from all sides.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Music",
+      "Thriller"
+    ],
+    "image": "/_astro/super-fly-1972.d0BHHCVw_Z1riUNL.png",
+    "slug": "super-fly-1972",
+    "stars": 2.5,
+    "title": "Super Fly",
+    "year": "1972"
+  },
+  {
+    "date": "2026-06-05T00:00:00.000Z",
+    "excerpt": "<p>A once-promising boxer’s downward spiral plays out against a younger boxer’s rise toward the same fate.</p>",
+    "genres": [
+      "Drama",
+      "Sport"
+    ],
+    "image": "/_astro/fat-city-1972.BrBioxWg_2ph7xC.png",
+    "slug": "fat-city-1972",
+    "stars": 3,
+    "title": "Fat City",
+    "year": "1972"
+  },
+  {
     "date": "2026-06-04T00:00:00.000Z",
     "excerpt": "<p>A frustrated cop pursues a maniacal hunchback, a one-handed bank robber and others in his quest to take down a crime kingpin in Rome.</p>",
     "genres": [
@@ -41,34 +70,5 @@
     "stars": 4,
     "title": "The Fly",
     "year": "1986"
-  },
-  {
-    "date": "2026-05-31T00:00:00.000Z",
-    "excerpt": "<p>A ronin plays both sides of a town’s gang war.</p>",
-    "genres": [
-      "Action",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/yojimbo-1961.CKA31Wcj_Z2o100c.png",
-    "slug": "yojimbo-1961",
-    "stars": 4,
-    "title": "Yojimbo",
-    "year": "1961"
-  },
-  {
-    "date": "2026-05-30T00:00:00.000Z",
-    "excerpt": "<p>After their last male general falls in battle, the surviving women of a family devoted to defending the Song Empire raise an army and set out to battle the invading forces.</p>",
-    "genres": [
-      "Adventure",
-      "Drama",
-      "History",
-      "War"
-    ],
-    "image": "/_astro/the-14-amazons-1972.CrBKDngp_2ecFhr.png",
-    "slug": "the-14-amazons-1972",
-    "stars": 3.5,
-    "title": "The 14 Amazons",
-    "year": "1972"
   }
 ]
