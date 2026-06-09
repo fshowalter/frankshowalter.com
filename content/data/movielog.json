@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-06-06T00:00:00.000Z",
+    "excerpt": "<p>A composer staying at a villa to score a horror film suspects a killer when visitors begin disappearing.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/a-blade-in-the-dark-1983.DO26nBoi_1Soxep.png",
+    "slug": "a-blade-in-the-dark-1983",
+    "stars": 1.5,
+    "title": "A Blade in the Dark",
+    "year": "1983"
+  },
+  {
+    "date": "2026-06-06T00:00:00.000Z",
     "excerpt": "<p>An American drifter’s affair with a Frenchwoman draws him into a scheme to free her blowtorch-happy husband from an asylum.</p>",
     "genres": [
       "Crime",
@@ -58,19 +72,5 @@
     "stars": 2.5,
     "title": "The Tough Ones",
     "year": "1976"
-  },
-  {
-    "date": "2026-06-03T00:00:00.000Z",
-    "excerpt": "<p>A smooth-talking parasite hooks a young man on a hallucinogenic secretion but demands fresh human brains as sustenance.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/brain-damage-1988.BI1Elknx_Z1To4VT.png",
-    "slug": "brain-damage-1988",
-    "stars": 4,
-    "title": "Brain Damage",
-    "year": "1988"
   }
 ]
