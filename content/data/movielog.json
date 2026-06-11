@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-06-07T00:00:00.000Z",
+    "excerpt": "<p>After the death of their imposing president, a company’s executives clash over who will assume control.</p>",
+    "genres": [
+      "Drama",
+      "Romance"
+    ],
+    "image": "/_astro/executive-suite-1954.ZE9WYIT6_hh1hj.png",
+    "slug": "executive-suite-1954",
+    "stars": 3.5,
+    "title": "Executive Suite",
+    "year": "1954"
+  },
+  {
     "date": "2026-06-06T00:00:00.000Z",
     "excerpt": "<p>A composer staying at a villa to score a horror film suspects a killer when visitors begin disappearing.</p>",
     "genres": [
@@ -57,20 +70,5 @@
     "stars": 3,
     "title": "Fat City",
     "year": "1972"
-  },
-  {
-    "date": "2026-06-04T00:00:00.000Z",
-    "excerpt": "<p>A frustrated cop pursues a maniacal hunchback, a one-handed bank robber and others in his quest to take down a crime kingpin in Rome.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/the-tough-ones-1976.gicblDKr_Z1O1qfd.png",
-    "slug": "the-tough-ones-1976",
-    "stars": 2.5,
-    "title": "The Tough Ones",
-    "year": "1976"
   }
 ]
