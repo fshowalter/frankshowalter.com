@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-06-09T00:00:00.000Z",
+    "excerpt": "<p>A merciless Qing dynasty constable leads a dwindling squad to recover stolen gold and discovers, too late, that he has been descending into hell.</p>",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "image": "/_astro/killer-constable-1980.oaLTCSCT_ZomM7f.png",
+    "slug": "killer-constable-1980",
+    "stars": 4,
+    "title": "Killer Constable",
+    "year": "1980"
+  },
+  {
     "date": "2026-06-07T00:00:00.000Z",
     "excerpt": "<p>After the death of their imposing president, a company’s executives clash over who will assume control.</p>",
     "genres": [
@@ -56,19 +69,6 @@
     "slug": "super-fly-1972",
     "stars": 2.5,
     "title": "Super Fly",
-    "year": "1972"
-  },
-  {
-    "date": "2026-06-05T00:00:00.000Z",
-    "excerpt": "<p>A once-promising boxer’s downward spiral plays out against a younger boxer’s rise toward the same fate.</p>",
-    "genres": [
-      "Drama",
-      "Sport"
-    ],
-    "image": "/_astro/fat-city-1972.BrBioxWg_2ph7xC.png",
-    "slug": "fat-city-1972",
-    "stars": 3,
-    "title": "Fat City",
     "year": "1972"
   }
 ]
