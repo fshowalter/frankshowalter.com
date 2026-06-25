@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/no-null */
 /** @type {import('stylelint').Config} */
 export default {
   extends: ["stylelint-config-standard"],
