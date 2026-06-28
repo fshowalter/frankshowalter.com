@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-06-26T00:00:00.000Z",
+    "excerpt": "<p>A London constable finds himself transported to a ravaged future where the merciless Daleks have enslaved humanity.</p>",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/daleks-invasion-earth-2150-a-d-1966.BJ9BOBK6_ZSr51r.png",
+    "slug": "daleks-invasion-earth-2150-a-d-1966",
+    "stars": 2,
+    "title": "Daleks' Invasion Earth 2150 A.D.",
+    "year": "1966"
+  },
+  {
     "date": "2026-06-20T00:00:00.000Z",
     "excerpt": "<p>Angela poses as an inner-city teen to return to the rebranded camp from the prior film where she resumes killing.</p>",
     "genres": [
@@ -53,18 +67,5 @@
     "stars": 1.5,
     "title": "Racket Busters",
     "year": "1938"
-  },
-  {
-    "date": "2026-06-13T00:00:00.000Z",
-    "excerpt": "<p>After arriving in town to find his new boss murdered, hard-boiled ranch hand John Wayne starts asking questions and gets bullets for answers.</p>",
-    "genres": [
-      "Drama",
-      "Western"
-    ],
-    "image": "/_astro/tall-in-the-saddle-1944.Cqf0FAq8_GGCuN.png",
-    "slug": "tall-in-the-saddle-1944",
-    "stars": 3.5,
-    "title": "Tall in the Saddle",
-    "year": "1944"
   }
 ]
