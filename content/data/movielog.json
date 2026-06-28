@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-27T00:00:00.000Z",
+    "excerpt": "<p>Lawman Sean Connery arrives on a mining rig on one of Jupiter’s moons and uncovers a conspiracy.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Sci-Fi",
+      "Thriller",
+      "Western"
+    ],
+    "image": "/_astro/outland-1981.D5NNayNn_Z2sp2qA.png",
+    "slug": "outland-1981",
+    "stars": 3,
+    "title": "Outland",
+    "year": "1981"
+  },
+  {
     "date": "2026-06-26T00:00:00.000Z",
     "excerpt": "<p>A London constable finds himself transported to a ravaged future where the merciless Daleks have enslaved humanity.</p>",
     "genres": [
@@ -52,20 +68,5 @@
     "stars": 4,
     "title": "In a Violent Nature",
     "year": "2024"
-  },
-  {
-    "date": "2026-06-14T00:00:00.000Z",
-    "excerpt": "<p>A special prosecutor tries to break gangster Humphrey Bogart’s hold on the trucking business, with driver George Brent caught in the middle.</p>",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Crime",
-      "Drama"
-    ],
-    "image": "/_astro/racket-busters-1938.DkpSpRVb_Z1kK8YR.png",
-    "slug": "racket-busters-1938",
-    "stars": 1.5,
-    "title": "Racket Busters",
-    "year": "1938"
   }
 ]
