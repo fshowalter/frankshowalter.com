@@ -59,10 +59,11 @@ function updateLoader(filename: string) {
       await syncData(filePath, ctx);
       watcher?.add(filePath);
       watcher?.on("change", (changedPath) => {
-        if (changedPath === filePath) {
-          ctx.logger.info(`Reloading data from ${filePath}`);
-          void syncData(filePath, ctx);
+        if (changedPath != filePath) {
+          return;
         }
+        ctx.logger.info(`Reloading data from ${filePath}`);
+        void syncData(filePath, ctx);
       });
     },
     name: `${filename.replace(".json", "")}-loader`,

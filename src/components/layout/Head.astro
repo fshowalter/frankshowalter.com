@@ -55,7 +55,7 @@ const canonicalUrl = `${import.meta.env.SITE}${new URL(Astro.request.url).pathna
     openGraph && (
       <>
         <meta content={`${canonicalUrl}og.jpg`} property="og:image" />
-        <meta content={`${canonicalUrl}`} property="og:url" />
+        <meta content={canonicalUrl} property="og:url" />
         <meta content={title} property="og:title" />
         <meta content={openGraph.description} property="og:description" />
         <meta content={openGraph.type} property="og:type" />
