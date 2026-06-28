@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-06-20T00:00:00.000Z",
+    "excerpt": "<p>Angela poses as an inner-city teen to return to the rebranded camp from the prior film where she resumes killing.</p>",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "image": "/_astro/sleepaway-camp-iii-teenage-wasteland-1989.DcCgGNJR_wpNsC.png",
+    "slug": "sleepaway-camp-iii-teenage-wasteland-1989",
+    "stars": 2,
+    "title": "Sleepaway Camp III: Teenage Wasteland",
+    "year": "1989"
+  },
+  {
+    "date": "2026-06-20T00:00:00.000Z",
     "excerpt": "<p>Angela, a gleefully homicidal camp counselor, punishes misbehaving campers in increasingly over-the-top fashions.</p>",
     "genres": [
       "Comedy",
@@ -53,19 +66,5 @@
     "stars": 3.5,
     "title": "Tall in the Saddle",
     "year": "1944"
-  },
-  {
-    "date": "2026-06-12T00:00:00.000Z",
-    "excerpt": "<p>Facing failing grades and her ex-boyfriend moving on, a high-school senior goes from call girl to blackmailer to assassin.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/malibu-high-1979.GrazzR04_1FoRrX.png",
-    "slug": "malibu-high-1979",
-    "stars": 2,
-    "title": "Malibu High",
-    "year": "1979"
   }
 ]
