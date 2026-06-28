@@ -32,6 +32,7 @@ export default defineConfig(
       "@typescript-eslint/consistent-type-imports": "off", // Turned off in favor of our custom rule
       "@typescript-eslint/no-import-type-side-effects": "error",
       ...eslintPluginBetterTailwindcss.configs["recommended-error"].rules,
+      "astro/no-omitted-end-tags": "off",
       "better-tailwindcss/no-conflicting-classes": "error",
       "no-restricted-imports": [
         "error",
