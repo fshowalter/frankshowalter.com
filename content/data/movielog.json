@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-06-28T00:00:00.000Z",
+    "excerpt": "<p>In a remote country house, a religious zealot confines her dead son’s fiancée to an attic prison.</p>",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/die-die-my-darling-1965.BEq3gJaF_ZtJ6fd.png",
+    "slug": "die-die-my-darling-1965",
+    "stars": 1.5,
+    "title": "Die! Die! My Darling!",
+    "year": "1965"
+  },
+  {
     "date": "2026-06-27T00:00:00.000Z",
     "excerpt": "<p>Lawman Sean Connery arrives on a mining rig on one of Jupiter’s moons and uncovers a conspiracy.</p>",
     "genres": [
@@ -54,19 +67,5 @@
     "stars": 3.5,
     "title": "Sleepaway Camp II: Unhappy Campers",
     "year": "1988"
-  },
-  {
-    "date": "2026-06-20T00:00:00.000Z",
-    "excerpt": "<p>A slasher film told entirely from the killer’s perspective, as an undead man stalks the Canadian wilderness to reclaim a stolen locket.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/in-a-violent-nature-2024.VhUW3bl1_2meKoB.png",
-    "slug": "in-a-violent-nature-2024",
-    "stars": 4,
-    "title": "In a Violent Nature",
-    "year": "2024"
   }
 ]
