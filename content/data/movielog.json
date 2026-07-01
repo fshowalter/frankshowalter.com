@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-06-29T00:00:00.000Z",
+    "excerpt": "<p>A man suffering from amnesia tries to piece together his identity while questioning his sanity and investigating a possible murder.</p>",
+    "genres": [
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/hysteria-1965.it-VZwL__15vHEG.png",
+    "slug": "hysteria-1965",
+    "stars": 2.5,
+    "title": "Hysteria",
+    "year": "1965"
+  },
+  {
     "date": "2026-06-28T00:00:00.000Z",
     "excerpt": "<p>In a remote country house, a religious zealot confines her dead son’s fiancée to an attic prison.</p>",
     "genres": [
@@ -54,18 +68,5 @@
     "stars": 2,
     "title": "Sleepaway Camp III: Teenage Wasteland",
     "year": "1989"
-  },
-  {
-    "date": "2026-06-20T00:00:00.000Z",
-    "excerpt": "<p>Angela, a gleefully homicidal camp counselor, punishes misbehaving campers in increasingly over-the-top fashions.</p>",
-    "genres": [
-      "Comedy",
-      "Horror"
-    ],
-    "image": "/_astro/sleepaway-camp-ii-unhappy-campers-1988.DaJmjeH7_1AsVo.png",
-    "slug": "sleepaway-camp-ii-unhappy-campers-1988",
-    "stars": 3.5,
-    "title": "Sleepaway Camp II: Unhappy Campers",
-    "year": "1988"
   }
 ]
