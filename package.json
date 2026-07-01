@@ -41,7 +41,7 @@
     "eslint-plugin-separate-type-imports": "git://github.com/fshowalter/eslint-plugin-separate-type-imports.git",
     "eslint-plugin-unicorn": "69.0.0",
     "knip": "6.22.0",
-    "prettier": "3.9.0",
+    "prettier": "3.9.1",
     "prettier-plugin-astro": "0.14.1",
     "stylelint": "17.14.0",
     "stylelint-config-standard": "40.0.0",
