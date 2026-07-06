@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-07-01T00:00:00.000Z",
+    "excerpt": "<p>A send-up of 1970s disaster pictures that sees a traumatized ex-fighter pilot struggle to land a jetliner full of critically ill passengers.</p>",
+    "genres": [
+      "Comedy"
+    ],
+    "image": "/_astro/airplane-1980.D9ZMKN-s_Zihzbs.png",
+    "slug": "airplane-1980",
+    "stars": 4,
+    "title": "Airplane!",
+    "year": "1980"
+  },
+  {
+    "date": "2026-07-01T00:00:00.000Z",
+    "excerpt": "<p>An insurance salesman conspires with a married woman to kill her husband and collect on an accident policy.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/double-indemnity-1944.CvUJmhAi_vFY0.png",
+    "slug": "double-indemnity-1944",
+    "stars": 5,
+    "title": "Double Indemnity",
+    "year": "1944"
+  },
+  {
+    "date": "2026-06-30T00:00:00.000Z",
+    "excerpt": "<p>In old Arizona, former lawman Randolph Scott hunts the seven men responsible for his wife’s death and crosses paths with a couple heading to California.</p>",
+    "genres": [
+      "Western"
+    ],
+    "image": "/_astro/7-men-from-now-1956.Ci4J5JbD_ZdTKic.png",
+    "slug": "7-men-from-now-1956",
+    "stars": 4,
+    "title": "7 Men from Now",
+    "year": "1956"
+  },
+  {
     "date": "2026-06-29T00:00:00.000Z",
     "excerpt": "<p>A man suffering from amnesia tries to piece together his identity while questioning his sanity and investigating a possible murder.</p>",
     "genres": [
@@ -25,48 +65,5 @@
     "stars": 1.5,
     "title": "Die! Die! My Darling!",
     "year": "1965"
-  },
-  {
-    "date": "2026-06-27T00:00:00.000Z",
-    "excerpt": "<p>Lawman Sean Connery arrives on a mining rig on one of Jupiter’s moons and uncovers a conspiracy.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Sci-Fi",
-      "Thriller",
-      "Western"
-    ],
-    "image": "/_astro/outland-1981.D5NNayNn_Z2sp2qA.png",
-    "slug": "outland-1981",
-    "stars": 3,
-    "title": "Outland",
-    "year": "1981"
-  },
-  {
-    "date": "2026-06-26T00:00:00.000Z",
-    "excerpt": "<p>A London constable finds himself transported to a ravaged future where the merciless Daleks have enslaved humanity.</p>",
-    "genres": [
-      "Adventure",
-      "Drama",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/daleks-invasion-earth-2150-a-d-1966.BJ9BOBK6_ZSr51r.png",
-    "slug": "daleks-invasion-earth-2150-a-d-1966",
-    "stars": 2,
-    "title": "Daleks' Invasion Earth 2150 A.D.",
-    "year": "1966"
-  },
-  {
-    "date": "2026-06-20T00:00:00.000Z",
-    "excerpt": "<p>Angela poses as an inner-city teen to return to the rebranded camp from the prior film where she resumes killing.</p>",
-    "genres": [
-      "Comedy",
-      "Horror"
-    ],
-    "image": "/_astro/sleepaway-camp-iii-teenage-wasteland-1989.DcCgGNJR_wpNsC.png",
-    "slug": "sleepaway-camp-iii-teenage-wasteland-1989",
-    "stars": 2,
-    "title": "Sleepaway Camp III: Teenage Wasteland",
-    "year": "1989"
   }
 ]
