@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-07-08T00:00:00.000Z",
+    "excerpt": "<p>An unassuming man tumbles into madness after renting a Paris apartment whose previous tenant committed suicide.</p>",
+    "genres": [
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/the-tenant-1976.Cf3Xwc1__108z1o.png",
+    "slug": "the-tenant-1976",
+    "stars": 2,
+    "title": "The Tenant",
+    "year": "1976"
+  },
+  {
     "date": "2026-07-01T00:00:00.000Z",
     "excerpt": "<p>A send-up of 1970s disaster pictures that sees a traumatized ex-fighter pilot struggle to land a jetliner full of critically ill passengers.</p>",
     "genres": [
@@ -51,19 +64,6 @@
     "slug": "hysteria-1965",
     "stars": 2.5,
     "title": "Hysteria",
-    "year": "1965"
-  },
-  {
-    "date": "2026-06-28T00:00:00.000Z",
-    "excerpt": "<p>In a remote country house, a religious zealot confines her dead son’s fiancée to an attic prison.</p>",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/die-die-my-darling-1965.BEq3gJaF_ZtJ6fd.png",
-    "slug": "die-die-my-darling-1965",
-    "stars": 1.5,
-    "title": "Die! Die! My Darling!",
     "year": "1965"
   }
 ]
