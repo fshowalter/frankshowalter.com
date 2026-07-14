@@ -17,20 +17,19 @@ const fonts = [
   },
 ];
 
-const renderer = new Renderer({
-  fonts,
-});
+const renderer = new Renderer();
 
 export async function componentToImageResponse(
   component: Parameters<typeof fromJsx>[0],
-  fetchedResources: { data: ArrayBuffer; src: string }[],
+  images: { data: ArrayBuffer; src: string }[],
 ): Promise<Response> {
   const { node, stylesheets } = await fromJsx(component);
 
   const image = await renderer.render(node, {
-    fetchedResources,
+    fonts,
     format: "jpeg",
     height: 630,
+    images,
     quality: 80,
     stylesheets,
     width: 1200,
