@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-07-10T00:00:00.000Z",
+    "excerpt": "<p>A nun at a rural convent unravels after encountering Satan.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/satanic-pandemonium-1975.DpfMA3mC_1P8CRf.png",
+    "slug": "satanic-pandemonium-1975",
+    "stars": 2,
+    "title": "Satanic Pandemonium",
+    "year": "1975"
+  },
+  {
     "date": "2026-07-08T00:00:00.000Z",
     "excerpt": "<p>An unassuming man tumbles into madness after renting a Paris apartment whose previous tenant committed suicide.</p>",
     "genres": [
@@ -51,19 +65,5 @@
     "stars": 4,
     "title": "7 Men from Now",
     "year": "1956"
-  },
-  {
-    "date": "2026-06-29T00:00:00.000Z",
-    "excerpt": "<p>A man suffering from amnesia tries to piece together his identity while questioning his sanity and investigating a possible murder.</p>",
-    "genres": [
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/hysteria-1965.it-VZwL__15vHEG.png",
-    "slug": "hysteria-1965",
-    "stars": 2.5,
-    "title": "Hysteria",
-    "year": "1965"
   }
 ]
