@@ -46,7 +46,7 @@
     "stylelint": "17.14.1",
     "stylelint-config-standard": "40.0.0",
     "stylelint-order": "8.1.1",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "typescript-eslint": "8.65.0"
   },
   "engines": {
