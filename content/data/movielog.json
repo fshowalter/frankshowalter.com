@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-07-11T00:00:00.000Z",
+    "excerpt": "<p>A globe-trotting archaeologist races the Nazis to find the Ark of the Covenant.</p>",
+    "genres": [
+      "Action",
+      "Adventure"
+    ],
+    "image": "/_astro/raiders-of-the-lost-ark-1981.DsLDAfUh_Z196je5.png",
+    "slug": "raiders-of-the-lost-ark-1981",
+    "stars": 5,
+    "title": "Raiders of the Lost Ark",
+    "year": "1981"
+  },
+  {
     "date": "2026-07-10T00:00:00.000Z",
     "excerpt": "<p>A nun at a rural convent unravels after encountering Satan.</p>",
     "genres": [
@@ -53,17 +66,5 @@
     "stars": 5,
     "title": "Double Indemnity",
     "year": "1944"
-  },
-  {
-    "date": "2026-06-30T00:00:00.000Z",
-    "excerpt": "<p>In old Arizona, former lawman Randolph Scott hunts the seven men responsible for his wife’s death and crosses paths with a couple heading to California.</p>",
-    "genres": [
-      "Western"
-    ],
-    "image": "/_astro/7-men-from-now-1956.Ci4J5JbD_ZdTKic.png",
-    "slug": "7-men-from-now-1956",
-    "stars": 4,
-    "title": "7 Men from Now",
-    "year": "1956"
   }
 ]
