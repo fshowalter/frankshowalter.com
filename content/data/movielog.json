@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-07-14T00:00:00.000Z",
+    "excerpt": "<p>Small-time crook Walter Matthau knocks over a podunk New Mexico bank for what should be a few thousand dollars, comes away with three-quarters of a million, and knows exactly whose money he’s taken.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/charley-varrick-1973.DOlVyCMo_Zdwzwy.png",
+    "slug": "charley-varrick-1973",
+    "stars": 4,
+    "title": "Charley Varrick",
+    "year": "1973"
+  },
+  {
     "date": "2026-07-13T00:00:00.000Z",
     "excerpt": "<p>A government program drops an Army pilot into a dead man’s last eight minutes aboard a Chicago commuter train, over and over, until he can find the bomber.</p>",
     "genres": [
@@ -54,17 +68,5 @@
     "stars": 2,
     "title": "The Tenant",
     "year": "1976"
-  },
-  {
-    "date": "2026-07-01T00:00:00.000Z",
-    "excerpt": "<p>A send-up of 1970s disaster pictures that sees a traumatized ex-fighter pilot struggle to land a jetliner full of critically ill passengers.</p>",
-    "genres": [
-      "Comedy"
-    ],
-    "image": "/_astro/airplane-1980.D9ZMKN-s_Zihzbs.png",
-    "slug": "airplane-1980",
-    "stars": 4,
-    "title": "Airplane!",
-    "year": "1980"
   }
 ]
