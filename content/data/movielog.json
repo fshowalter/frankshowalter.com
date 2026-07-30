@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-07-13T00:00:00.000Z",
+    "excerpt": "<p>A government program drops an Army pilot into a dead man’s last eight minutes aboard a Chicago commuter train, over and over, until he can find the bomber.</p>",
+    "genres": [
+      "Action",
+      "Drama",
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/source-code-2011.Vq_UsgOf_1YBVGA.png",
+    "slug": "source-code-2011",
+    "stars": 2.5,
+    "title": "Source Code",
+    "year": "2011"
+  },
+  {
     "date": "2026-07-11T00:00:00.000Z",
     "excerpt": "<p>A globe-trotting archaeologist races the Nazis to find the Ark of the Covenant.</p>",
     "genres": [
@@ -50,21 +66,5 @@
     "stars": 4,
     "title": "Airplane!",
     "year": "1980"
-  },
-  {
-    "date": "2026-07-01T00:00:00.000Z",
-    "excerpt": "<p>An insurance salesman conspires with a married woman to kill her husband and collect on an accident policy.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Film-Noir",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/double-indemnity-1944.CvUJmhAi_vFY0.png",
-    "slug": "double-indemnity-1944",
-    "stars": 5,
-    "title": "Double Indemnity",
-    "year": "1944"
   }
 ]
