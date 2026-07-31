@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-07-16T00:00:00.000Z",
+    "excerpt": "<p>Sent to a school for disturbed children after the accident that killed his baby sister, ten-year-old Joey returns home and insists his nanny, played by Bette Davis, means to kill him next.</p>",
+    "genres": [
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-nanny-1965.DBiCwT34_Z5UeBn.png",
+    "slug": "the-nanny-1965",
+    "stars": 3,
+    "title": "The Nanny",
+    "year": "1965"
+  },
+  {
     "date": "2026-07-14T00:00:00.000Z",
     "excerpt": "<p>Small-time crook Walter Matthau knocks over a podunk New Mexico bank for what should be a few thousand dollars, comes away with three-quarters of a million, and knows exactly whose money he’s taken.</p>",
     "genres": [
@@ -55,18 +68,5 @@
     "stars": 2,
     "title": "Satanic Pandemonium",
     "year": "1975"
-  },
-  {
-    "date": "2026-07-08T00:00:00.000Z",
-    "excerpt": "<p>An unassuming man tumbles into madness after renting a Paris apartment whose previous tenant committed suicide.</p>",
-    "genres": [
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/the-tenant-1976.Cf3Xwc1__108z1o.png",
-    "slug": "the-tenant-1976",
-    "stars": 2,
-    "title": "The Tenant",
-    "year": "1976"
   }
 ]
