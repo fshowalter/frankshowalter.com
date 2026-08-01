@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-07-20T00:00:00.000Z",
+    "excerpt": "<p>A lineman, a single mother, and a French scientist are drawn toward the same Wyoming butte after separate encounters with visitors from the sky.</p>",
+    "genres": [
+      "Drama",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/close-encounters-of-the-third-kind-1977.DKe5LV7g_ZgBFdA.png",
+    "slug": "close-encounters-of-the-third-kind-1977",
+    "stars": 2.5,
+    "title": "Close Encounters of the Third Kind",
+    "year": "1977"
+  },
+  {
     "date": "2026-07-16T00:00:00.000Z",
     "excerpt": "<p>Sent to a school for disturbed children after the accident that killed his baby sister, ten-year-old Joey returns home and insists his nanny, played by Bette Davis, means to kill him next.</p>",
     "genres": [
@@ -54,19 +67,5 @@
     "stars": 5,
     "title": "Raiders of the Lost Ark",
     "year": "1981"
-  },
-  {
-    "date": "2026-07-10T00:00:00.000Z",
-    "excerpt": "<p>A nun at a rural convent unravels after encountering Satan.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/satanic-pandemonium-1975.DpfMA3mC_1P8CRf.png",
-    "slug": "satanic-pandemonium-1975",
-    "stars": 2,
-    "title": "Satanic Pandemonium",
-    "year": "1975"
   }
 ]
