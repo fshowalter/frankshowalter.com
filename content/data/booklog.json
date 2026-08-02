@@ -1,6 +1,19 @@
 [
   {
     "authors": [
+      "Quentin Tarantino"
+    ],
+    "date": "2026-07-29T00:00:00.000Z",
+    "excerpt": "<p>A fading TV cowboy and his stunt double drift through the summer of 1969, while the Manson family circles the Hollywood power couple next door.</p>",
+    "image": "/_astro/once-upon-a-time-in-hollywood-by-quentin-tarantino.BZ1Ea4lf_1usq8v.png",
+    "kind": "Novel",
+    "slug": "once-upon-a-time-in-hollywood-by-quentin-tarantino",
+    "stars": 4,
+    "title": "Once Upon a Time in Hollywood",
+    "titleYear": "2021"
+  },
+  {
+    "authors": [
       "Adam L.G. Nevill"
     ],
     "date": "2026-03-26T00:00:00.000Z",
@@ -50,18 +63,5 @@
     "stars": 3,
     "title": "In the Pines",
     "titleYear": "1973"
-  },
-  {
-    "authors": [
-      "Philip Fracassi"
-    ],
-    "date": "2025-07-12T00:00:00.000Z",
-    "excerpt": "<p>In 1780 London, William Blake finds himself swept into the Gordon Riots, only to discover the rioters’ enigmatic leader harbors a dark secret.</p>",
-    "image": "/_astro/shiloh-by-philip-fracassi.D4NtraLi_28DWNW.png",
-    "kind": "Short Story",
-    "slug": "king-mob-by-philip-fracassi",
-    "stars": 3,
-    "title": "King Mob",
-    "titleYear": "2017"
   }
 ]
