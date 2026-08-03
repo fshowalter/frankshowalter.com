@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-08-01T00:00:00.000Z",
+    "excerpt": "<p>An alien arrives in rural New Mexico intent on ferrying water back to his drought-stricken homeworld, and is undone by betrayal and gin.</p>",
+    "genres": [
+      "Drama",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/the-man-who-fell-to-earth-1976.CKe_cLKz_Z2uNSdF.png",
+    "slug": "the-man-who-fell-to-earth-1976",
+    "stars": 3,
+    "title": "The Man Who Fell to Earth",
+    "year": "1976"
+  },
+  {
     "date": "2026-07-20T00:00:00.000Z",
     "excerpt": "<p>A lineman, a single mother, and a French scientist are drawn toward the same Wyoming butte after separate encounters with visitors from the sky.</p>",
     "genres": [
@@ -54,18 +67,5 @@
     "stars": 2.5,
     "title": "Source Code",
     "year": "2011"
-  },
-  {
-    "date": "2026-07-11T00:00:00.000Z",
-    "excerpt": "<p>A globe-trotting archaeologist races the Nazis to find the Ark of the Covenant.</p>",
-    "genres": [
-      "Action",
-      "Adventure"
-    ],
-    "image": "/_astro/raiders-of-the-lost-ark-1981.DsLDAfUh_Z196je5.png",
-    "slug": "raiders-of-the-lost-ark-1981",
-    "stars": 5,
-    "title": "Raiders of the Lost Ark",
-    "year": "1981"
   }
 ]
