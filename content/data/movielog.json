@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-03T00:00:00.000Z",
+    "excerpt": "<p>An elderly Victorian inventor and his square-jawed American financier drill into a prehistoric world ruled by telepathic flying lizards.</p>",
+    "genres": [
+      "Adventure",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/at-the-earths-core-1976.DvJ7LRL1_Z2tVrzY.png",
+    "slug": "at-the-earths-core-1976",
+    "stars": 2,
+    "title": "At the Earth's Core",
+    "year": "1976"
+  },
+  {
     "date": "2026-08-01T00:00:00.000Z",
     "excerpt": "<p>An alien arrives in rural New Mexico intent on ferrying water back to his drought-stricken homeworld, and is undone by betrayal and gin.</p>",
     "genres": [
@@ -51,21 +65,5 @@
     "stars": 4,
     "title": "Charley Varrick",
     "year": "1973"
-  },
-  {
-    "date": "2026-07-13T00:00:00.000Z",
-    "excerpt": "<p>A government program drops an Army pilot into a dead man’s last eight minutes aboard a Chicago commuter train, over and over, until he can find the bomber.</p>",
-    "genres": [
-      "Action",
-      "Drama",
-      "Mystery",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/source-code-2011.Vq_UsgOf_1YBVGA.png",
-    "slug": "source-code-2011",
-    "stars": 2.5,
-    "title": "Source Code",
-    "year": "2011"
   }
 ]
