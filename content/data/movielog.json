@@ -1,5 +1,49 @@
 [
   {
+    "date": "2026-08-13T00:00:00.000Z",
+    "excerpt": "<p>With a tournament looming, the Earthrealm defenders recruit washed-up martial arts star Johnny Cage, while Edenian princess Kitana plots revenge against her adopted father, the tyrannical Shao Kahn.</p>",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/mortal-kombat-ii-2026.BmTfVW0X_1VQB4A.png",
+    "slug": "mortal-kombat-ii-2026",
+    "stars": 3,
+    "title": "Mortal Kombat II",
+    "year": "2026"
+  },
+  {
+    "date": "2026-08-13T00:00:00.000Z",
+    "excerpt": "<p>A milquetoast young man wishes the girl of his dreams would love him more than anyone else on earth, and gets precisely what he asked for.</p>",
+    "genres": [
+      "Horror",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/obsession-2025.D2ciD2hp_2m36x8.png",
+    "slug": "obsession-2025",
+    "stars": 3,
+    "title": "Obsession",
+    "year": "2025"
+  },
+  {
+    "date": "2026-08-12T00:00:00.000Z",
+    "excerpt": "<p>A young warrior with a magic bow falls in with a bone-nunchuck-wielding outlaw to battle a naked sorceress in a gold mask and her army of dog-men.</p>",
+    "genres": [
+      "Action",
+      "Adventure",
+      "Fantasy",
+      "Horror"
+    ],
+    "image": "/_astro/conquest-1983.CGDBAasB_ZRiasz.png",
+    "slug": "conquest-1983",
+    "stars": 2.5,
+    "title": "Conquest",
+    "year": "1983"
+  },
+  {
     "date": "2026-08-10T00:00:00.000Z",
     "excerpt": "<p>Five years after a summer camp prank leaves him horrifically burned, a drunken groundskeeper returns with a pair of garden shears to stalk the campers across the lake.</p>",
     "genres": [
@@ -24,45 +68,5 @@
     "stars": 2,
     "title": "Brazil",
     "year": "1985"
-  },
-  {
-    "date": "2026-08-05T00:00:00.000Z",
-    "excerpt": "<p>As the end of the sixties looms, two alcoholic, unemployed actors talk their way into a Lake District cottage for a disastrous holiday.</p>",
-    "genres": [
-      "Comedy",
-      "Drama"
-    ],
-    "image": "/_astro/withnail-and-i-1987.DqvsWAPi_Z2aRwh8.png",
-    "slug": "withnail-and-i-1987",
-    "stars": 3,
-    "title": "Withnail and I",
-    "year": "1987"
-  },
-  {
-    "date": "2026-08-03T00:00:00.000Z",
-    "excerpt": "<p>An elderly Victorian inventor and his square-jawed American financier drill into a prehistoric world ruled by telepathic flying lizards.</p>",
-    "genres": [
-      "Adventure",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/at-the-earths-core-1976.DvJ7LRL1_Z2tVrzY.png",
-    "slug": "at-the-earths-core-1976",
-    "stars": 2,
-    "title": "At the Earth's Core",
-    "year": "1976"
-  },
-  {
-    "date": "2026-08-01T00:00:00.000Z",
-    "excerpt": "<p>An alien arrives in rural New Mexico intent on ferrying water back to his drought-stricken homeworld, and is undone by betrayal and gin.</p>",
-    "genres": [
-      "Drama",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/the-man-who-fell-to-earth-1976.CKe_cLKz_Z2uNSdF.png",
-    "slug": "the-man-who-fell-to-earth-1976",
-    "stars": 3,
-    "title": "The Man Who Fell to Earth",
-    "year": "1976"
   }
 ]
