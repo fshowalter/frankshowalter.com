@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-14T00:00:00.000Z",
+    "excerpt": "<p>A serial killer recounts five incidents from a twelve-year span in 1970s Washington state to an unseen listener.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Horror"
+    ],
+    "image": "/_astro/the-house-that-jack-built-2018.DSg23o2P_k4L7g.png",
+    "slug": "the-house-that-jack-built-2018",
+    "stars": 4,
+    "title": "The House That Jack Built",
+    "year": "2018"
+  },
+  {
     "date": "2026-08-13T00:00:00.000Z",
     "excerpt": "<p>With a tournament looming, the Earthrealm defenders recruit washed-up martial arts star Johnny Cage, while Edenian princess Kitana plots revenge against her adopted father, the tyrannical Shao Kahn.</p>",
     "genres": [
@@ -54,19 +68,5 @@
     "stars": 3,
     "title": "The Burning",
     "year": "1981"
-  },
-  {
-    "date": "2026-08-08T00:00:00.000Z",
-    "excerpt": "<p>A low-level government clerk abuses the Orwellian bureaucracy he serves in pursuit of a woman he has never met.</p>",
-    "genres": [
-      "Drama",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/brazil-1985.BBzNOwPC_Z20eILN.png",
-    "slug": "brazil-1985",
-    "stars": 2,
-    "title": "Brazil",
-    "year": "1985"
   }
 ]
