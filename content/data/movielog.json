@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-15T00:00:00.000Z",
+    "excerpt": "<p>In World War II France, an American platoon ventures across enemy lines to rob a bank holding 14,000 bars of Nazi gold.</p>",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "War"
+    ],
+    "image": "/_astro/kellys-heroes-1970.DM_cgBXY_1n4HVt.png",
+    "slug": "kellys-heroes-1970",
+    "stars": 3,
+    "title": "Kelly's Heroes",
+    "year": "1970"
+  },
+  {
     "date": "2026-08-14T00:00:00.000Z",
     "excerpt": "<p>A serial killer recounts five incidents from a twelve-year span in 1970s Washington state to an unseen listener.</p>",
     "genres": [
@@ -56,17 +70,5 @@
     "stars": 2.5,
     "title": "Conquest",
     "year": "1983"
-  },
-  {
-    "date": "2026-08-10T00:00:00.000Z",
-    "excerpt": "<p>Five years after a summer camp prank leaves him horrifically burned, a drunken groundskeeper returns with a pair of garden shears to stalk the campers across the lake.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/the-burning-1981.emXAZEOK_ZxYPd7.png",
-    "slug": "the-burning-1981",
-    "stars": 3,
-    "title": "The Burning",
-    "year": "1981"
   }
 ]
