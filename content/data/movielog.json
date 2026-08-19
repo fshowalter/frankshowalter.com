@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-18T00:00:00.000Z",
+    "excerpt": "<p>An outcast detective investigates a Jigsaw copycat targeting dirty cops.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/spiral-2021.BFnELQSU_ZL6fLV.png",
+    "slug": "spiral-2021",
+    "stars": 2,
+    "title": "Spiral",
+    "year": "2021"
+  },
+  {
     "date": "2026-08-17T00:00:00.000Z",
     "excerpt": "<p>An American car salesman in London visits his flatmate’s ancestral pile, where the bodies start piling up and one of the eccentric relatives is doing the piling.</p>",
     "genres": [
@@ -56,19 +70,5 @@
     "stars": 3,
     "title": "Mortal Kombat II",
     "year": "2026"
-  },
-  {
-    "date": "2026-08-13T00:00:00.000Z",
-    "excerpt": "<p>A milquetoast young man wishes the girl of his dreams would love him more than anyone else on earth, and gets precisely what he asked for.</p>",
-    "genres": [
-      "Horror",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/obsession-2025.D2ciD2hp_2m36x8.png",
-    "slug": "obsession-2025",
-    "stars": 3,
-    "title": "Obsession",
-    "year": "2025"
   }
 ]
