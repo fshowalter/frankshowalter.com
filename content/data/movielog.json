@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-20T00:00:00.000Z",
+    "excerpt": "<p>The murder of a young girl by her father sends a Hong Kong detective to Thailand to investigate a black magic curse, only to find himself the next target.</p>",
+    "genres": [
+      "Crime",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/bewitched-1981.B8fNHMuN_Z1egIkt.png",
+    "slug": "bewitched-1981",
+    "stars": 3.5,
+    "title": "Bewitched",
+    "year": "1981"
+  },
+  {
     "date": "2026-08-19T00:00:00.000Z",
     "excerpt": "<p>Outcast caveman Tumak crosses a volcanic wasteland, dodges dinosaurs, and meets Raquel Welch’s Loana, who leaves her more evolved tribe for him.</p>",
     "genres": [
@@ -55,19 +69,5 @@
     "stars": 3,
     "title": "Kelly's Heroes",
     "year": "1970"
-  },
-  {
-    "date": "2026-08-14T00:00:00.000Z",
-    "excerpt": "<p>A serial killer recounts five incidents from a twelve-year span in 1970s Washington state to an unseen listener.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Horror"
-    ],
-    "image": "/_astro/the-house-that-jack-built-2018.DSg23o2P_k4L7g.png",
-    "slug": "the-house-that-jack-built-2018",
-    "stars": 4,
-    "title": "The House That Jack Built",
-    "year": "2018"
   }
 ]
