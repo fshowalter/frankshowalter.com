@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-08-19T00:00:00.000Z",
+    "excerpt": "<p>Outcast caveman Tumak crosses a volcanic wasteland, dodges dinosaurs, and meets Raquel Welch’s Loana, who leaves her more evolved tribe for him.</p>",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy"
+    ],
+    "image": "/_astro/one-million-years-b-c-1966.DzZwQGuL_29aHCv.png",
+    "slug": "one-million-years-b-c-1966",
+    "stars": 2.5,
+    "title": "One Million Years B.C.",
+    "year": "1966"
+  },
+  {
     "date": "2026-08-18T00:00:00.000Z",
     "excerpt": "<p>An outcast detective investigates a Jigsaw copycat targeting dirty cops.</p>",
     "genres": [
@@ -55,20 +69,5 @@
     "stars": 4,
     "title": "The House That Jack Built",
     "year": "2018"
-  },
-  {
-    "date": "2026-08-13T00:00:00.000Z",
-    "excerpt": "<p>With a tournament looming, the Earthrealm defenders recruit washed-up martial arts star Johnny Cage, while Edenian princess Kitana plots revenge against her adopted father, the tyrannical Shao Kahn.</p>",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/mortal-kombat-ii-2026.BmTfVW0X_1VQB4A.png",
-    "slug": "mortal-kombat-ii-2026",
-    "stars": 3,
-    "title": "Mortal Kombat II",
-    "year": "2026"
   }
 ]
