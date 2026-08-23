@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-08-22T00:00:00.000Z",
+    "excerpt": "<p>Masked killers invade a wealthy family’s remote vacation home but don’t count on one guest’s unusual upbringing.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/youre-next-2011.DO2lE2jE_Z10YsrP.png",
+    "slug": "youre-next-2011",
+    "stars": 5,
+    "title": "You're Next",
+    "year": "2011"
+  },
+  {
     "date": "2026-08-20T00:00:00.000Z",
     "excerpt": "<p>On prom night, two teenage couples get into a fender-bender on a narrow dirt road, go for help, and find the wrong family.</p>",
     "genres": [
@@ -54,20 +69,5 @@
     "stars": 2,
     "title": "Spiral",
     "year": "2021"
-  },
-  {
-    "date": "2026-08-17T00:00:00.000Z",
-    "excerpt": "<p>An American car salesman in London visits his flatmate’s ancestral pile, where the bodies start piling up and one of the eccentric relatives is doing the piling.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-old-dark-house-1963.YNjBXfEs_1sn6XS.png",
-    "slug": "the-old-dark-house-1963",
-    "stars": 1,
-    "title": "The Old Dark House",
-    "year": "1963"
   }
 ]
