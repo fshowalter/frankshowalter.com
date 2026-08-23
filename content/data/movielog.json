@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-08-20T00:00:00.000Z",
+    "excerpt": "<p>On prom night, two teenage couples get into a fender-bender on a narrow dirt road, go for help, and find the wrong family.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/texas-chainsaw-massacre-the-next-generation-1994.EL-zde1P_BNusK.png",
+    "slug": "texas-chainsaw-massacre-the-next-generation-1994",
+    "stars": 2,
+    "title": "Texas Chainsaw Massacre: The Next Generation",
+    "year": "1994"
+  },
+  {
+    "date": "2026-08-20T00:00:00.000Z",
     "excerpt": "<p>The murder of a young girl by her father sends a Hong Kong detective to Thailand to investigate a black magic curse, only to find himself the next target.</p>",
     "genres": [
       "Crime",
@@ -55,19 +69,5 @@
     "stars": 1,
     "title": "The Old Dark House",
     "year": "1963"
-  },
-  {
-    "date": "2026-08-15T00:00:00.000Z",
-    "excerpt": "<p>In World War II France, an American platoon ventures across enemy lines to rob a bank holding 14,000 bars of Nazi gold.</p>",
-    "genres": [
-      "Adventure",
-      "Comedy",
-      "War"
-    ],
-    "image": "/_astro/kellys-heroes-1970.DM_cgBXY_1n4HVt.png",
-    "slug": "kellys-heroes-1970",
-    "stars": 3,
-    "title": "Kelly's Heroes",
-    "year": "1970"
   }
 ]
