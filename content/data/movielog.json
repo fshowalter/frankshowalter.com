@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-08-24T00:00:00.000Z",
+    "excerpt": "<p>A young boy falls in with six dwarves who have stolen a map of the holes in time from the Supreme Being, and who plan to rob their way through history.</p>",
+    "genres": [
+      "Adventure",
+      "Comedy",
+      "Fantasy",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/time-bandits-1981.BWfxBjRd_Z1Kxe8D.png",
+    "slug": "time-bandits-1981",
+    "stars": 4,
+    "title": "Time Bandits",
+    "year": "1981"
+  },
+  {
     "date": "2026-08-22T00:00:00.000Z",
     "excerpt": "<p>Masked killers invade a wealthy family’s remote vacation home but don’t count on one guest’s unusual upbringing.</p>",
     "genres": [
@@ -55,19 +70,5 @@
     "stars": 2.5,
     "title": "One Million Years B.C.",
     "year": "1966"
-  },
-  {
-    "date": "2026-08-18T00:00:00.000Z",
-    "excerpt": "<p>An outcast detective investigates a Jigsaw copycat targeting dirty cops.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/spiral-2021.BFnELQSU_ZL6fLV.png",
-    "slug": "spiral-2021",
-    "stars": 2,
-    "title": "Spiral",
-    "year": "2021"
   }
 ]
