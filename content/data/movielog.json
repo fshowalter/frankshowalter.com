@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-08-25T00:00:00.000Z",
+    "excerpt": "<p>During an unnamed pandemic, a scientist and his guide venture deep into the forest searching for a colleague who’s gone dark, and find a stranger obsessed with a woodland spirit called Parnag Fegg.</p>",
+    "genres": [
+      "Drama",
+      "Horror",
+      "Mystery",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/in-the-earth-2021.B5sJKZK3_Z1ie2RI.png",
+    "slug": "in-the-earth-2021",
+    "stars": 3,
+    "title": "In the Earth",
+    "year": "2021"
+  },
+  {
     "date": "2026-08-24T00:00:00.000Z",
     "excerpt": "<p>A young boy falls in with six dwarves who have stolen a map of the holes in time from the Supreme Being, and who plan to rob their way through history.</p>",
     "genres": [
@@ -56,19 +72,5 @@
     "stars": 3.5,
     "title": "Bewitched",
     "year": "1981"
-  },
-  {
-    "date": "2026-08-19T00:00:00.000Z",
-    "excerpt": "<p>Outcast caveman Tumak crosses a volcanic wasteland, dodges dinosaurs, and meets Raquel Welch’s Loana, who leaves her more evolved tribe for him.</p>",
-    "genres": [
-      "Adventure",
-      "Comedy",
-      "Fantasy"
-    ],
-    "image": "/_astro/one-million-years-b-c-1966.DzZwQGuL_29aHCv.png",
-    "slug": "one-million-years-b-c-1966",
-    "stars": 2.5,
-    "title": "One Million Years B.C.",
-    "year": "1966"
   }
 ]
