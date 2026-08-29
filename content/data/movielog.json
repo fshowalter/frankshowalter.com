@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-08-27T00:00:00.000Z",
+    "excerpt": "<p>Twentysomethings ride out a hurricane in a remote mansion, playing a party game about a secret killer until one of them turns up with a slit throat.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/bodies-bodies-bodies-2022.CcpTUtN__3bNdQ.png",
+    "slug": "bodies-bodies-bodies-2022",
+    "stars": 3.5,
+    "title": "Bodies Bodies Bodies",
+    "year": "2022"
+  },
+  {
     "date": "2026-08-25T00:00:00.000Z",
     "excerpt": "<p>During an unnamed pandemic, a scientist and his guide venture deep into the forest searching for a colleague who’s gone dark, and find a stranger obsessed with a woodland spirit called Parnag Fegg.</p>",
     "genres": [
@@ -58,19 +73,5 @@
     "stars": 2,
     "title": "Texas Chainsaw Massacre: The Next Generation",
     "year": "1994"
-  },
-  {
-    "date": "2026-08-20T00:00:00.000Z",
-    "excerpt": "<p>The murder of a young girl by her father sends a Hong Kong detective to Thailand to investigate a black magic curse, only to find himself the next target.</p>",
-    "genres": [
-      "Crime",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/bewitched-1981.B8fNHMuN_Z1egIkt.png",
-    "slug": "bewitched-1981",
-    "stars": 3.5,
-    "title": "Bewitched",
-    "year": "1981"
   }
 ]
