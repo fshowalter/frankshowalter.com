@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-08-27T00:00:00.000Z",
+    "excerpt": "<p>Six strangers summoned to a remote New England mansion for dinner discover they are all being blackmailed by their host, who is dead before dessert.</p>",
+    "genres": [
+      "Comedy",
+      "Crime",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/clue-1985.DE3L9fS5_Z2u2uk3.png",
+    "slug": "clue-1985",
+    "stars": 3.5,
+    "title": "Clue",
+    "year": "1985"
+  },
+  {
+    "date": "2026-08-27T00:00:00.000Z",
     "excerpt": "<p>Twentysomethings ride out a hurricane in a remote mansion, playing a party game about a secret killer until one of them turns up with a slit throat.</p>",
     "genres": [
       "Comedy",
@@ -59,19 +74,5 @@
     "stars": 5,
     "title": "You're Next",
     "year": "2011"
-  },
-  {
-    "date": "2026-08-20T00:00:00.000Z",
-    "excerpt": "<p>On prom night, two teenage couples get into a fender-bender on a narrow dirt road, go for help, and find the wrong family.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/texas-chainsaw-massacre-the-next-generation-1994.EL-zde1P_BNusK.png",
-    "slug": "texas-chainsaw-massacre-the-next-generation-1994",
-    "stars": 2,
-    "title": "Texas Chainsaw Massacre: The Next Generation",
-    "year": "1994"
   }
 ]
