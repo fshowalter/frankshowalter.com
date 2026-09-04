@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-09-01T00:00:00.000Z",
+    "excerpt": "<p>In Roman Britain, an Iceni queen and a Roman general fall in love while merchants, druids, and ambitious officers on both sides engineer the war that everyone but the lovers seems to want.</p>",
+    "genres": [
+      "Adventure"
+    ],
+    "image": "/_astro/the-viking-queen-1967.BvGNR4Jk_ZsYizN.png",
+    "slug": "the-viking-queen-1967",
+    "stars": 2,
+    "title": "The Viking Queen",
+    "year": "1967"
+  },
+  {
+    "date": "2026-08-30T00:00:00.000Z",
+    "excerpt": "<p>In rural Texas, five young people chance upon the home of a deranged family, one of whom is a beefy man-child in a mask of stitched skin.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/the-texas-chain-saw-massacre-1974.CWXkbtCL_Z1Lxc7U.png",
+    "slug": "the-texas-chain-saw-massacre-1974",
+    "stars": 5,
+    "title": "The Texas Chain Saw Massacre",
+    "year": "1974"
+  },
+  {
+    "date": "2026-08-29T00:00:00.000Z",
+    "excerpt": "<p>A concentration camp survivor chances upon her former Nazi tormentor in a Vienna hotel and the two resume the sado-masochistic affair that will destroy them both.</p>",
+    "genres": [
+      "Drama"
+    ],
+    "image": "/_astro/the-night-porter-1974.B2KYhBqK_ZSX3Jl.png",
+    "slug": "the-night-porter-1974",
+    "stars": 3,
+    "title": "The Night Porter",
+    "year": "1974"
+  },
+  {
     "date": "2026-08-27T00:00:00.000Z",
     "excerpt": "<p>Six strangers summoned to a remote New England mansion for dinner discover they are all being blackmailed by their host, who is dead before dessert.</p>",
     "genres": [
@@ -28,51 +64,5 @@
     "stars": 3.5,
     "title": "Bodies Bodies Bodies",
     "year": "2022"
-  },
-  {
-    "date": "2026-08-25T00:00:00.000Z",
-    "excerpt": "<p>During an unnamed pandemic, a scientist and his guide venture deep into the forest searching for a colleague who’s gone dark, and find a stranger obsessed with a woodland spirit called Parnag Fegg.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Mystery",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/in-the-earth-2021.B5sJKZK3_Z1ie2RI.png",
-    "slug": "in-the-earth-2021",
-    "stars": 3,
-    "title": "In the Earth",
-    "year": "2021"
-  },
-  {
-    "date": "2026-08-24T00:00:00.000Z",
-    "excerpt": "<p>A young boy falls in with six dwarves who have stolen a map of the holes in time from the Supreme Being, and who plan to rob their way through history.</p>",
-    "genres": [
-      "Adventure",
-      "Comedy",
-      "Fantasy",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/time-bandits-1981.BWfxBjRd_Z1Kxe8D.png",
-    "slug": "time-bandits-1981",
-    "stars": 4,
-    "title": "Time Bandits",
-    "year": "1981"
-  },
-  {
-    "date": "2026-08-22T00:00:00.000Z",
-    "excerpt": "<p>Masked killers invade a wealthy family’s remote vacation home but don’t count on one guest’s unusual upbringing.</p>",
-    "genres": [
-      "Drama",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/youre-next-2011.DO2lE2jE_Z10YsrP.png",
-    "slug": "youre-next-2011",
-    "stars": 5,
-    "title": "You're Next",
-    "year": "2011"
   }
 ]
