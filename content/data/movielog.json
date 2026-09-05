@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-02T00:00:00.000Z",
+    "excerpt": "<p>Duane’s monstrous former conjoined twin Belial becomes a father, but when two greedy deputies steal the babies, he sets out on a bloody revenge spree with Duane along for the ride.</p>",
+    "genres": [
+      "Comedy",
+      "Horror"
+    ],
+    "image": "/_astro/basket-case-3-1991.D2ZXreVu_Z1a3Lgo.png",
+    "slug": "basket-case-3-1991",
+    "stars": 2.5,
+    "title": "Basket Case 3",
+    "year": "1991"
+  },
+  {
     "date": "2026-09-01T00:00:00.000Z",
     "excerpt": "<p>In Roman Britain, an Iceni queen and a Roman general fall in love while merchants, druids, and ambitious officers on both sides engineer the war that everyone but the lovers seems to want.</p>",
     "genres": [
@@ -49,20 +62,5 @@
     "stars": 3.5,
     "title": "Clue",
     "year": "1985"
-  },
-  {
-    "date": "2026-08-27T00:00:00.000Z",
-    "excerpt": "<p>Twentysomethings ride out a hurricane in a remote mansion, playing a party game about a secret killer until one of them turns up with a slit throat.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/bodies-bodies-bodies-2022.CcpTUtN__3bNdQ.png",
-    "slug": "bodies-bodies-bodies-2022",
-    "stars": 3.5,
-    "title": "Bodies Bodies Bodies",
-    "year": "2022"
   }
 ]
