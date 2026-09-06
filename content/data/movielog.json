@@ -1,5 +1,22 @@
 [
   {
+    "date": "2026-09-03T00:00:00.000Z",
+    "excerpt": "<p>A parasitic alien in the form of a beautiful woman turns London into a zombie apocalypse as the astronaut who brought her home and an SAS colonel race to stop her.</p>",
+    "genres": [
+      "Action",
+      "Horror",
+      "Mystery",
+      "Romance",
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/lifeforce-1985.DfyjgDeC_1Cp0S0.png",
+    "slug": "lifeforce-1985",
+    "stars": 3,
+    "title": "Lifeforce",
+    "year": "1985"
+  },
+  {
     "date": "2026-09-02T00:00:00.000Z",
     "excerpt": "<p>Duane’s monstrous former conjoined twin Belial becomes a father, but when two greedy deputies steal the babies, he sets out on a bloody revenge spree with Duane along for the ride.</p>",
     "genres": [
@@ -47,20 +64,5 @@
     "stars": 3,
     "title": "The Night Porter",
     "year": "1974"
-  },
-  {
-    "date": "2026-08-27T00:00:00.000Z",
-    "excerpt": "<p>Six strangers summoned to a remote New England mansion for dinner discover they are all being blackmailed by their host, who is dead before dessert.</p>",
-    "genres": [
-      "Comedy",
-      "Crime",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/clue-1985.DE3L9fS5_Z2u2uk3.png",
-    "slug": "clue-1985",
-    "stars": 3.5,
-    "title": "Clue",
-    "year": "1985"
   }
 ]
