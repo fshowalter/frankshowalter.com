@@ -1,5 +1,17 @@
 [
   {
+    "date": "2026-09-04T00:00:00.000Z",
+    "excerpt": "<p>Two young women leave a Halloween party, stop for pizza, and draw the attention of a homicidal clown with a garbage bag full of tools he means to use on a human body.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/terrifier-2016.DO58XyFl_2vrrMV.png",
+    "slug": "terrifier-2016",
+    "stars": 2.5,
+    "title": "Terrifier",
+    "year": "2016"
+  },
+  {
     "date": "2026-09-03T00:00:00.000Z",
     "excerpt": "<p>A parasitic alien in the form of a beautiful woman turns London into a zombie apocalypse as the astronaut who brought her home and an SAS colonel race to stop her.</p>",
     "genres": [
@@ -51,18 +63,6 @@
     "slug": "the-texas-chain-saw-massacre-1974",
     "stars": 5,
     "title": "The Texas Chain Saw Massacre",
-    "year": "1974"
-  },
-  {
-    "date": "2026-08-29T00:00:00.000Z",
-    "excerpt": "<p>A concentration camp survivor chances upon her former Nazi tormentor in a Vienna hotel and the two resume the sado-masochistic affair that will destroy them both.</p>",
-    "genres": [
-      "Drama"
-    ],
-    "image": "/_astro/the-night-porter-1974.B2KYhBqK_ZSX3Jl.png",
-    "slug": "the-night-porter-1974",
-    "stars": 3,
-    "title": "The Night Porter",
     "year": "1974"
   }
 ]
