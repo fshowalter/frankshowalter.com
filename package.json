@@ -42,7 +42,7 @@
     "eslint-plugin-unicorn": "74.0.0",
     "knip": "6.35.1",
     "prettier": "3.9.6",
-    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-astro": "1.0.0",
     "stylelint": "17.15.0",
     "stylelint-config-standard": "40.0.0",
     "stylelint-order": "8.1.1",

@@ -38,20 +38,12 @@ const width = height * 5;
 
 {abandoned && <div>Abandoned</div>}
 
-{
-  !abandoned && src && alt && (
-    <picture>
-      <source
-        media="(prefers-color-scheme: dark)"
-        src-set={src.replace(".svg", "-dark.svg")}
-      />
-      <img
-        alt={alt}
-        class={classNames}
-        height={height}
-        src={src}
-        width={width}
-      />
-    </picture>
-  )
-}
+{!abandoned && src && alt && (
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      src-set={src.replace(".svg", "-dark.svg")}
+    />
+    <img alt={alt} class={classNames} height={height} src={src} width={width} />
+  </picture>
+)}
