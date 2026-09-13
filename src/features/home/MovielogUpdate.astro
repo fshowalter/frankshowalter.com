@@ -104,7 +104,8 @@ const stillImageProps = await getStillImageProps(value.slug, imageConfig);
       `}
       href={`https://www.franksmovielog.com/reviews/${value.slug}/`}
     >
-      {value.title}<span class="text-sm leading-none font-normal text-muted">
+      {value.title}
+      <span class="text-sm leading-none font-normal text-muted">
         &nbsp;{value.year}
       </span>
     </a>
@@ -131,15 +132,13 @@ const stillImageProps = await getStillImageProps(value.slug, imageConfig);
         laptop:tracking-wide
       `}
     >
-      {
-        value.genres.map((genre, index) => {
-          if (index === 0) {
-            return genre;
-          }
+      {value.genres.map((genre, index) => {
+        if (index === 0) {
+          return genre;
+        }
 
-          return `, ${genre}`;
-        })
-      }
+        return `, ${genre}`;
+      })}
     </div>
   </div>
 </Element>

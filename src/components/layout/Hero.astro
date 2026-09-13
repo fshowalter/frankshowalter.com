@@ -40,18 +40,16 @@ if (backdropSlug) {
     backdropImageProps && `max-h-[1350px] min-h-screen`,
   ]}
 >
-  {
-    backdropImageProps && (
-      <img
-        class="absolute inset-0 size-full object-cover object-bottom"
-        {...backdropImageProps}
-        {...BackdropImageConfig}
-        alt=""
-        fetch-priority="high"
-        loading="eager"
-      />
-    )
-  }
+  {backdropImageProps && (
+    <img
+      class="absolute inset-0 size-full object-cover object-bottom"
+      {...backdropImageProps}
+      {...BackdropImageConfig}
+      alt=""
+      fetch-priority="high"
+      loading="eager"
+    />
+  )}
   <div
     class={`
       ${centerText ? "items-center" : ""}
@@ -96,7 +94,9 @@ if (backdropSlug) {
         { "text-center": centerText },
       ]}
     >
-      <slot name="deck"><Fragment set:html={deck} /></slot>
+      <slot name="deck">
+        <Fragment set:html={deck} />
+      </slot>
     </p>
     <PagefindSearch class="w-full max-w-107.5" isGlobal={true} />
   </div>

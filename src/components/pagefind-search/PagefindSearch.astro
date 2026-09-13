@@ -36,7 +36,8 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
       <path
         d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
         stroke-linecap="round"
-        stroke-linejoin="round"></path>
+        stroke-linejoin="round"
+      ></path>
     </svg>
   </button>
   <dialog
@@ -70,8 +71,10 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
           tablet:right-6
           laptop:right-8
         `}
-        data-close-search>ESC</button
+        data-close-search
       >
+        ESC
+      </button>
       {/* Fixed Search Input Section */}
       <div class="flex flex-none flex-col">
         {/* Search Form with magnifying glass icon */}
@@ -92,7 +95,8 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
             >
               <path
                 d="M12.7549 11.255H11.9649L11.6849 10.985C12.6649 9.845 13.2549 8.365 13.2549 6.755C13.2549 3.165 10.3449 0.255005 6.75488 0.255005C3.16488 0.255005 0.254883 3.165 0.254883 6.755C0.254883 10.345 3.16488 13.255 6.75488 13.255C8.36488 13.255 9.84488 12.665 10.9849 11.685L11.2549 11.965V12.755L16.2549 17.745L17.7449 16.255L12.7549 11.255ZM6.75488 11.255C4.26488 11.255 2.25488 9.245 2.25488 6.755C2.25488 4.26501 4.26488 2.255 6.75488 2.255C9.24488 2.255 11.2549 4.26501 11.2549 6.755C11.2549 9.245 9.24488 11.255 6.75488 11.255Z"
-                fill="currentColor"></path>
+                fill="currentColor"
+              ></path>
             </svg>
 
             {/* Search input */}
@@ -132,8 +136,7 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
           `}
           id="search-box-counter"
           role="status"
-        >
-        </div>
+        ></div>
       </div>
       <div class={`flex flex-auto flex-col overflow-auto`}>
         {/* Scrollable Results Area */}
@@ -181,26 +184,25 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
           laptop:block laptop:px-8
         `}
       >
-        <kbd class={`rounded-md bg-default p-2 font-mono text-xs text-subtle`}
-          >Tab</kbd
-        > to navigate
+        <kbd class={`rounded-md bg-default p-2 font-mono text-xs text-subtle`}>
+          Tab
+        </kbd>{" "}
+        to navigate
         <kbd
           class={`ml-4 rounded-md bg-default p-2 font-mono text-xs text-subtle`}
-          >ESC</kbd
-        > to close
+        >
+          ESC
+        </kbd>{" "}
+        to close
       </div>
     </div>
   </dialog>
 
-  {
-    /* <template> content is inert until cloned by search-box.ts.
+  {/* <template> content is inert until cloned by search-box.ts.
          Tailwind 4.x scans .astro source files — classes inside <template> tags
-         are found and included in the CSS output. */
-  }
+         are found and included in the CSS output. */}
 
-  {
-    /* Single search result item; data-field attributes filled by cloneResult() */
-  }
+  {/* Single search result item; data-field attributes filled by cloneResult() */}
   <template data-result-item>
     <li
       class={`
@@ -247,7 +249,8 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
               hover:text-accent
             `}
             data-field="link"
-            href=""></a>
+            href=""
+          ></a>
         </h3>
         <p class="text-base text-default" data-field="excerpt"></p>
       </div>
@@ -286,8 +289,7 @@ const dataProperties = isGlobal ? { "data-global": true } : {};
     <div
       class="px-4 py-8 text-center font-sans text-sm text-subtle"
       data-field="message"
-    >
-    </div>
+    ></div>
   </template>
 </pagefind-search>
 <script src="./pagefind-search.ts"></script>

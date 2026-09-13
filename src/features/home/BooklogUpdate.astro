@@ -56,8 +56,7 @@ const coverImageProps = await getFluidCoverImageProps(value.slug, imageConfig);
           backgroundColor: "var(--background-color-default)",
           backgroundImage: `linear-gradient(90deg, rgba(var(--bg-default-rgb),1) 0%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 30%, rgba(var(--bg-default-rgb),0) 50%, rgba(var(--bg-default-rgb),var(--bg-default-alpha)) 70%, rgba(var(--bg-default-rgb),1) 100%), url(${coverImageProps.src})`,
         }}
-      >
-      </div>
+      ></div>
       <div
         class={`
           relative w-1/2 max-w-[200px] shrink-0 self-start overflow-hidden
