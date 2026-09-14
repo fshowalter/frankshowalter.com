@@ -1,5 +1,33 @@
 [
   {
+    "date": "2026-09-06T00:00:00.000Z",
+    "excerpt": "<p>A logger takes up an axe against the hippie cult and demon bikers who murdered his girlfriend.</p>",
+    "genres": [
+      "Action",
+      "Fantasy",
+      "Horror"
+    ],
+    "image": "/_astro/mandy-2018.DC_4ZqRh_2oxNat.png",
+    "slug": "mandy-2018",
+    "stars": 5,
+    "title": "Mandy",
+    "year": "2018"
+  },
+  {
+    "date": "2026-09-05T00:00:00.000Z",
+    "excerpt": "<p>A thief running an elite crew through the biggest scores in Los Angeles and the LAPD lieutenant hunting him discover they are the same man in different jobs.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "image": "/_astro/heat-1995.DyFO_lkB_1GyJ3D.png",
+    "slug": "heat-1995",
+    "stars": 5,
+    "title": "Heat",
+    "year": "1995"
+  },
+  {
     "date": "2026-09-04T00:00:00.000Z",
     "excerpt": "<p>Two young women leave a Halloween party, stop for pizza, and draw the attention of a homicidal clown with a garbage bag full of tools he means to use on a human body.</p>",
     "genres": [
@@ -40,29 +68,5 @@
     "stars": 2.5,
     "title": "Basket Case 3",
     "year": "1991"
-  },
-  {
-    "date": "2026-09-01T00:00:00.000Z",
-    "excerpt": "<p>In Roman Britain, an Iceni queen and a Roman general fall in love while merchants, druids, and ambitious officers on both sides engineer the war that everyone but the lovers seems to want.</p>",
-    "genres": [
-      "Adventure"
-    ],
-    "image": "/_astro/the-viking-queen-1967.BvGNR4Jk_ZsYizN.png",
-    "slug": "the-viking-queen-1967",
-    "stars": 2,
-    "title": "The Viking Queen",
-    "year": "1967"
-  },
-  {
-    "date": "2026-08-30T00:00:00.000Z",
-    "excerpt": "<p>In rural Texas, five young people chance upon the home of a deranged family, one of whom is a beefy man-child in a mask of stitched skin.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/the-texas-chain-saw-massacre-1974.CWXkbtCL_Z1Lxc7U.png",
-    "slug": "the-texas-chain-saw-massacre-1974",
-    "stars": 5,
-    "title": "The Texas Chain Saw Massacre",
-    "year": "1974"
   }
 ]
