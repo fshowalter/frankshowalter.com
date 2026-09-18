@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-09-06T00:00:00.000Z",
+    "excerpt": "<p>A break-in awakens the dormant skills of a mild-mannered suburban dad, who soon finds himself at war with the Russian mob.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/nobody-2021.DnfLURAd_Z5SzWw.png",
+    "slug": "nobody-2021",
+    "stars": 4,
+    "title": "Nobody",
+    "year": "2021"
+  },
+  {
+    "date": "2026-09-06T00:00:00.000Z",
     "excerpt": "<p>A logger takes up an axe against the hippie cult and demon bikers who murdered his girlfriend.</p>",
     "genres": [
       "Action",
@@ -55,18 +70,5 @@
     "stars": 3,
     "title": "Lifeforce",
     "year": "1985"
-  },
-  {
-    "date": "2026-09-02T00:00:00.000Z",
-    "excerpt": "<p>Duane’s monstrous former conjoined twin Belial becomes a father, but when two greedy deputies steal the babies, he sets out on a bloody revenge spree with Duane along for the ride.</p>",
-    "genres": [
-      "Comedy",
-      "Horror"
-    ],
-    "image": "/_astro/basket-case-3-1991.D2ZXreVu_Z1a3Lgo.png",
-    "slug": "basket-case-3-1991",
-    "stars": 2.5,
-    "title": "Basket Case 3",
-    "year": "1991"
   }
 ]
