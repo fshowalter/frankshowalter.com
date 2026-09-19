@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-09-10T00:00:00.000Z",
+    "excerpt": "<p>A space freighter crew falls prey to a deadly alien lifeform they unwittingly bring aboard.</p>",
+    "genres": [
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/alien-1979.Korq5KbV_Z2lpDRE.png",
+    "slug": "alien-1979",
+    "stars": 4,
+    "title": "Alien",
+    "year": "1979"
+  },
+  {
     "date": "2026-09-06T00:00:00.000Z",
     "excerpt": "<p>A break-in awakens the dormant skills of a mild-mannered suburban dad, who soon finds himself at war with the Russian mob.</p>",
     "genres": [
@@ -53,22 +66,5 @@
     "stars": 2.5,
     "title": "Terrifier",
     "year": "2016"
-  },
-  {
-    "date": "2026-09-03T00:00:00.000Z",
-    "excerpt": "<p>A parasitic alien in the form of a beautiful woman turns London into a zombie apocalypse as the astronaut who brought her home and an SAS colonel race to stop her.</p>",
-    "genres": [
-      "Action",
-      "Horror",
-      "Mystery",
-      "Romance",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/lifeforce-1985.DfyjgDeC_1Cp0S0.png",
-    "slug": "lifeforce-1985",
-    "stars": 3,
-    "title": "Lifeforce",
-    "year": "1985"
   }
 ]
