@@ -133,11 +133,7 @@ const stillImageProps = await getStillImageProps(value.slug, imageConfig);
       `}
     >
       {value.genres.map((genre, index) => {
-        if (index === 0) {
-          return genre;
-        }
-
-        return `, ${genre}`;
+        return index === 0 ? genre : `, ${genre}`;
       })}
     </div>
   </div>
