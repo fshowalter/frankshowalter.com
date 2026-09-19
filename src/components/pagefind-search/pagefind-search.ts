@@ -174,33 +174,35 @@ class PagefindSearch extends HTMLElement {
       win.addEventListener("click", onClick);
 
       // Lazy-initialize Pagefind on first open; flag prevents race condition
-      if (!this.pagefindInitialized && !this.pagefindLoading) {
-        this.pagefindLoading = true;
-        try {
-          const pagefindModule = (await import(
-            /* @vite-ignore */ `${this.config.bundlePath}pagefind.js`
-          )) as Pagefind;
+      if (this.pagefindInitialized || this.pagefindLoading) {
+        return;
+      }
 
-          pagefindModule.mergeIndex("/pagefind-movielog", {
-            baseUrl: "https://www.franksmovielog.com/",
-          });
-          pagefindModule.mergeIndex("/pagefind-booklog", {
-            baseUrl: "https://www.franksbooklog.com/",
-          });
+      this.pagefindLoading = true;
+      try {
+        const pagefindModule = (await import(
+          /* @vite-ignore */ `${this.config.bundlePath}pagefind.js`
+        )) as Pagefind;
 
-          this.pagefind = pagefindModule;
-          await this.pagefind.init();
-          this.pagefindInitialized = true;
-        } catch (error) {
-          console.error("Failed to initialize search:", error);
-          this.state = {
-            kind: "error",
-            message: "Search functionality could not be loaded.",
-          };
-          this.render();
-        } finally {
-          this.pagefindLoading = false;
-        }
+        pagefindModule.mergeIndex("/pagefind-movielog", {
+          baseUrl: "https://www.franksmovielog.com/",
+        });
+        pagefindModule.mergeIndex("/pagefind-booklog", {
+          baseUrl: "https://www.franksbooklog.com/",
+        });
+
+        this.pagefind = pagefindModule;
+        await this.pagefind.init();
+        this.pagefindInitialized = true;
+      } catch (error) {
+        console.error("Failed to initialize search:", error);
+        this.state = {
+          kind: "error",
+          message: "Search functionality could not be loaded.",
+        };
+        this.render();
+      } finally {
+        this.pagefindLoading = false;
       }
     };
 
@@ -212,23 +214,25 @@ class PagefindSearch extends HTMLElement {
       win.removeEventListener("click", onClick);
     });
 
-    if (isGlobal) {
-      // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
-      this.keydownHandler = (e: KeyboardEvent) => {
-        if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
-          if (dialog.open) closeModal();
-          else void openModal();
-          e.preventDefault();
-        }
-
-        // Safari dialog modals don't close on escape if a text input has focus.
-        if (e.key === "Escape" && dialog.open) {
-          closeModal();
-        }
-      };
-
-      win.addEventListener("keydown", this.keydownHandler);
+    if (!isGlobal) {
+      return;
     }
+
+    // Listen for `ctrl + k` and `cmd + k` keyboard shortcuts.
+    this.keydownHandler = (e: KeyboardEvent) => {
+      if ((e.metaKey === true || e.ctrlKey === true) && e.key === "k") {
+        if (dialog.open) closeModal();
+        else void openModal();
+        e.preventDefault();
+      }
+
+      // Safari dialog modals don't close on escape if a text input has focus.
+      if (e.key === "Escape" && dialog.open) {
+        closeModal();
+      }
+    };
+
+    win.addEventListener("keydown", this.keydownHandler);
   }
 
   disconnectedCallback(): void {
@@ -412,8 +416,9 @@ class PagefindSearch extends HTMLElement {
   private renderEmpty(): void {
     if (this.state.kind !== "empty") return;
     this.resultsCounter.textContent = formatCounter(0, this.state.query);
-    this.resultsContainer.replaceChildren();
-    this.resultsContainer.append(this.emptyTemplate.content.cloneNode(true));
+    this.resultsContainer.replaceChildren(
+      this.emptyTemplate.content.cloneNode(true),
+    );
     this.loadMoreWrapper.classList.add("hidden");
   }
 
@@ -462,8 +467,7 @@ class PagefindSearch extends HTMLElement {
     for (const result of results) {
       ol.append(this.cloneResult(result));
     }
-    this.resultsContainer.replaceChildren();
-    this.resultsContainer.append(ol);
+    this.resultsContainer.replaceChildren(ol);
 
     const remaining = allResults.length - visibleCount;
     if (remaining > 0) {
@@ -504,6 +508,7 @@ if (!customElements.get("pagefind-search")) {
 
 function formatCounter(total: number, query: string): string {
   if (total === 0) return `No results for "${query}"`;
-  if (total === 1) return `1 result for "${query}"`;
-  return `${total} results for "${query}"`;
+  return total === 1
+    ? `1 result for "${query}"`
+    : `${total} results for "${query}"`;
 }
