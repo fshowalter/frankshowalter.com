@@ -34,7 +34,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@types/node": "24.13.5",
-    "eslint": "10.10.0",
+    "eslint": "10.11.0",
     "eslint-plugin-astro": "3.2.1",
     "eslint-plugin-better-tailwindcss": "4.7.0",
     "eslint-plugin-perfectionist": "5.11.1",
