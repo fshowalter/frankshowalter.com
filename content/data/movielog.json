@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-09-14T00:00:00.000Z",
+    "excerpt": "<p>Vacationing wife Barbara Stanwyck races the tide to keep her husband from drowning, and the only man she finds is escaped convict Ralph Meeker, who sees something he wants.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Film-Noir",
+      "Thriller"
+    ],
+    "image": "/_astro/jeopardy-1953.FF7dY5Q7_1Qys0Q.png",
+    "slug": "jeopardy-1953",
+    "stars": 2.5,
+    "title": "Jeopardy",
+    "year": "1953"
+  },
+  {
     "date": "2026-09-12T00:00:00.000Z",
     "excerpt": "<p>Mobster Jack Nicholson falls into a chemical vat and emerges with white skin, green hair, a rictus grin, and a plan to remake Gotham City in his image.</p>",
     "genres": [
@@ -55,19 +70,5 @@
     "stars": 4,
     "title": "Nobody",
     "year": "2021"
-  },
-  {
-    "date": "2026-09-06T00:00:00.000Z",
-    "excerpt": "<p>A logger takes up an axe against the hippie cult and demon bikers who murdered his girlfriend.</p>",
-    "genres": [
-      "Action",
-      "Fantasy",
-      "Horror"
-    ],
-    "image": "/_astro/mandy-2018.BLJXdn88_Z1wAzUO.png",
-    "slug": "mandy-2018",
-    "stars": 5,
-    "title": "Mandy",
-    "year": "2018"
   }
 ]
