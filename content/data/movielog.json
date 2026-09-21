@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-15T00:00:00.000Z",
+    "excerpt": "<p>Trapped inside a 1990s children’s show, a group of kids plot their escape from Buddy, a cheerful magical unicorn who will kill anyone who spoils the fun.</p>",
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/buddy-2026.BwAR3u7t_Z28rB3m.png",
+    "slug": "buddy-2026",
+    "stars": 3.5,
+    "title": "Buddy",
+    "year": "2026"
+  },
+  {
     "date": "2026-09-14T00:00:00.000Z",
     "excerpt": "<p>Vacationing wife Barbara Stanwyck races the tide to keep her husband from drowning, and the only man she finds is escaped convict Ralph Meeker, who sees something he wants.</p>",
     "genres": [
@@ -55,20 +69,5 @@
     "stars": 4,
     "title": "Alien",
     "year": "1979"
-  },
-  {
-    "date": "2026-09-06T00:00:00.000Z",
-    "excerpt": "<p>A break-in awakens the dormant skills of a mild-mannered suburban dad, who soon finds himself at war with the Russian mob.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/nobody-2021.DnfLURAd_Z5SzWw.png",
-    "slug": "nobody-2021",
-    "stars": 4,
-    "title": "Nobody",
-    "year": "2021"
   }
 ]
