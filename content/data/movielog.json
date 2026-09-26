@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-09-20T00:00:00.000Z",
+    "excerpt": "<p>In colonial Pennsylvania, frontiersman John Wayne leads his fellow colonists against crooked merchants, Indian raiders, and an arrogant British captain.</p>",
+    "genres": [
+      "Adventure",
+      "Drama",
+      "History",
+      "War",
+      "Western"
+    ],
+    "image": "/_astro/allegheny-uprising-1939.DnpSW_4N_2qOpyV.png",
+    "slug": "allegheny-uprising-1939",
+    "stars": 2.5,
+    "title": "Allegheny Uprising",
+    "year": "1939"
+  },
+  {
     "date": "2026-09-15T00:00:00.000Z",
     "excerpt": "<p>Trapped inside a 1990s children’s show, a group of kids plot their escape from Buddy, a cheerful magical unicorn who will kill anyone who spoils the fun.</p>",
     "genres": [
@@ -56,18 +72,5 @@
     "stars": 4.5,
     "title": "Aliens",
     "year": "1986"
-  },
-  {
-    "date": "2026-09-10T00:00:00.000Z",
-    "excerpt": "<p>A space freighter crew falls prey to a deadly alien lifeform they unwittingly bring aboard.</p>",
-    "genres": [
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/alien-1979.Korq5KbV_Z2lpDRE.png",
-    "slug": "alien-1979",
-    "stars": 4,
-    "title": "Alien",
-    "year": "1979"
   }
 ]
