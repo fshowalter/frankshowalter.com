@@ -37,7 +37,7 @@
     "eslint": "10.11.0",
     "eslint-plugin-astro": "3.2.1",
     "eslint-plugin-better-tailwindcss": "4.7.0",
-    "eslint-plugin-perfectionist": "5.11.1",
+    "eslint-plugin-perfectionist": "5.12.0",
     "eslint-plugin-separate-type-imports": "git+https://github.com/fshowalter/eslint-plugin-separate-type-imports.git",
     "eslint-plugin-unicorn": "76.0.0",
     "knip": "6.37.0",
