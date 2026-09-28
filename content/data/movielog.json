@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-21T00:00:00.000Z",
+    "excerpt": "<p>A one-eyed Bette Davis celebrates her wedding anniversary, ten years after her husband’s death, by tormenting her three grown sons and the women who love them.</p>",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/the-anniversary-1968.D1mURlT9_T0onK.png",
+    "slug": "the-anniversary-1968",
+    "stars": 1,
+    "title": "The Anniversary",
+    "year": "1968"
+  },
+  {
     "date": "2026-09-20T00:00:00.000Z",
     "excerpt": "<p>In colonial Pennsylvania, frontiersman John Wayne leads his fellow colonists against crooked merchants, Indian raiders, and an arrogant British captain.</p>",
     "genres": [
@@ -56,21 +70,5 @@
     "stars": 4.5,
     "title": "Batman",
     "year": "1989"
-  },
-  {
-    "date": "2026-09-12T00:00:00.000Z",
-    "excerpt": "<p>When the company loses contact with a terraforming colony on the planet that cost Ripley her crew, she returns with a squad of Colonial Marines who are nowhere near prepared for what they find.</p>",
-    "genres": [
-      "Action",
-      "Adventure",
-      "Horror",
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/aliens-1986.5ynMqKnF_Z1IeIt1.png",
-    "slug": "aliens-1986",
-    "stars": 4.5,
-    "title": "Aliens",
-    "year": "1986"
   }
 ]
