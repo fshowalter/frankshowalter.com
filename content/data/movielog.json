@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-09-22T00:00:00.000Z",
+    "excerpt": "<p>A retired swordsman turned sculptor goes on the run after a clan leader blames a string of murders on his crystal statue, which has gone missing.</p>",
+    "genres": [
+      "Action",
+      "Horror",
+      "Mystery"
+    ],
+    "image": "/_astro/portrait-in-crystal-1983.DOfVETcM_11w7aS.png",
+    "slug": "portrait-in-crystal-1983",
+    "stars": 3.5,
+    "title": "Portrait in Crystal",
+    "year": "1983"
+  },
+  {
     "date": "2026-09-21T00:00:00.000Z",
     "excerpt": "<p>A one-eyed Bette Davis celebrates her wedding anniversary, ten years after her husband’s death, by tormenting her three grown sons and the women who love them.</p>",
     "genres": [
@@ -57,18 +71,5 @@
     "stars": 2.5,
     "title": "Jeopardy",
     "year": "1953"
-  },
-  {
-    "date": "2026-09-12T00:00:00.000Z",
-    "excerpt": "<p>Mobster Jack Nicholson falls into a chemical vat and emerges with white skin, green hair, a rictus grin, and a plan to remake Gotham City in his image.</p>",
-    "genres": [
-      "Action",
-      "Adventure"
-    ],
-    "image": "/_astro/batman-1989.CiyE1D3F_UDAjc.png",
-    "slug": "batman-1989",
-    "stars": 4.5,
-    "title": "Batman",
-    "year": "1989"
   }
 ]
