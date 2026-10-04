@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-09-29T00:00:00.000Z",
+    "excerpt": "<p>Assassin Chow Yun-Fat takes one last job to save the sight of the nightclub singer he half-blinded, while the detective hunting him finds himself taking the killer’s side.</p>",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/the-killer-1989.CVmWjs77_TNDTI.png",
+    "slug": "the-killer-1989",
+    "stars": 3.5,
+    "title": "The Killer",
+    "year": "1989"
+  },
+  {
+    "date": "2026-09-29T00:00:00.000Z",
     "excerpt": "<p>An enigmatic gunslinger plays both sides of a border-town feud for profit.</p>",
     "genres": [
       "Drama",
@@ -55,19 +70,5 @@
     "stars": 2.5,
     "title": "Allegheny Uprising",
     "year": "1939"
-  },
-  {
-    "date": "2026-09-15T00:00:00.000Z",
-    "excerpt": "<p>Trapped inside a 1990s children’s show, a group of kids plot their escape from Buddy, a cheerful magical unicorn who will kill anyone who spoils the fun.</p>",
-    "genres": [
-      "Fantasy",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/buddy-2026.BwAR3u7t_Z28rB3m.png",
-    "slug": "buddy-2026",
-    "stars": 3.5,
-    "title": "Buddy",
-    "year": "2026"
   }
 ]
