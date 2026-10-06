@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-05T00:00:00.000Z",
+    "excerpt": "<p>A young woman suspects a dying virtuoso pianist used a Satanic ritual to steal her husband’s body.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/the-mephisto-waltz-1971.C9DS3Jq-_ZNM3PG.png",
+    "slug": "the-mephisto-waltz-1971",
+    "stars": 2,
+    "title": "The Mephisto Waltz",
+    "year": "1971"
+  },
+  {
     "date": "2026-10-04T00:00:00.000Z",
     "excerpt": "<p>Ripley crash-lands on a desolate prison planet for violent men and discovers she has brought along something far worse.</p>",
     "genres": [
@@ -54,19 +68,5 @@
     "stars": 3.5,
     "title": "Portrait in Crystal",
     "year": "1983"
-  },
-  {
-    "date": "2026-09-21T00:00:00.000Z",
-    "excerpt": "<p>A one-eyed Bette Davis celebrates her wedding anniversary, ten years after her husband’s death, by tormenting her three grown sons and the women who love them.</p>",
-    "genres": [
-      "Comedy",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/the-anniversary-1968.D1mURlT9_T0onK.png",
-    "slug": "the-anniversary-1968",
-    "stars": 1,
-    "title": "The Anniversary",
-    "year": "1968"
   }
 ]
