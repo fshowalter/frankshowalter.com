@@ -63,6 +63,7 @@ function pagefind(): AstroIntegration {
 }
 
 // https://astro.build/config
+// eslint-disable-next-line unicorn/no-top-level-side-effects
 export default defineConfig({
   build: {
     inlineStylesheets: "always",
