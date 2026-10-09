@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-06T00:00:00.000Z",
+    "excerpt": "<p>A middle-aged banker pays a sinister company to fake his death and remake him as a younger, handsomer man, only to find his new life as empty as the old one.</p>",
+    "genres": [
+      "Sci-Fi",
+      "Thriller"
+    ],
+    "image": "/_astro/seconds-1966.CzfmksY__1PVoCM.png",
+    "slug": "seconds-1966",
+    "stars": 4,
+    "title": "Seconds",
+    "year": "1966"
+  },
+  {
     "date": "2026-10-05T00:00:00.000Z",
     "excerpt": "<p>A young woman suspects a dying virtuoso pianist used a Satanic ritual to steal her husband’s body.</p>",
     "genres": [
@@ -54,19 +67,5 @@
     "stars": 5,
     "title": "A Fistful of Dollars",
     "year": "1964"
-  },
-  {
-    "date": "2026-09-22T00:00:00.000Z",
-    "excerpt": "<p>A retired swordsman turned sculptor goes on the run after a clan leader blames a string of murders on his crystal statue, which has gone missing.</p>",
-    "genres": [
-      "Action",
-      "Horror",
-      "Mystery"
-    ],
-    "image": "/_astro/portrait-in-crystal-1983.DOfVETcM_11w7aS.png",
-    "slug": "portrait-in-crystal-1983",
-    "stars": 3.5,
-    "title": "Portrait in Crystal",
-    "year": "1983"
   }
 ]
