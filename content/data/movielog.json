@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-08T00:00:00.000Z",
+    "excerpt": "<p>A black-gloved killer thins the ranks of a New York dance troupe competing for three spots in a new show, dispatching the best first.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/murder-rock-dancing-death-1984.CrnBa2kh_Z9HqSK.png",
+    "slug": "murder-rock-dancing-death-1984",
+    "stars": 2,
+    "title": "Murder-Rock: Dancing Death",
+    "year": "1984"
+  },
+  {
     "date": "2026-10-06T00:00:00.000Z",
     "excerpt": "<p>A middle-aged banker pays a sinister company to fake his death and remake him as a younger, handsomer man, only to find his new life as empty as the old one.</p>",
     "genres": [
@@ -54,18 +68,5 @@
     "stars": 3.5,
     "title": "The Killer",
     "year": "1989"
-  },
-  {
-    "date": "2026-09-29T00:00:00.000Z",
-    "excerpt": "<p>An enigmatic gunslinger plays both sides of a border-town feud for profit.</p>",
-    "genres": [
-      "Drama",
-      "Western"
-    ],
-    "image": "/_astro/a-fistful-of-dollars-1964.CdlzJYcL_ZXVYUw.png",
-    "slug": "a-fistful-of-dollars-1964",
-    "stars": 5,
-    "title": "A Fistful of Dollars",
-    "year": "1964"
   }
 ]
