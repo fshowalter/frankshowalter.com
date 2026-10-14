@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-09T00:00:00.000Z",
+    "excerpt": "<p>A woman kills to feed her lover, her husband’s half-resurrected brother, while the creatures he escaped from close in.</p>",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/hellraiser-1987.D1GeY5Ty_1VdaKn.png",
+    "slug": "hellraiser-1987",
+    "stars": 5,
+    "title": "Hellraiser",
+    "year": "1987"
+  },
+  {
     "date": "2026-10-08T00:00:00.000Z",
     "excerpt": "<p>A black-gloved killer thins the ranks of a New York dance troupe competing for three spots in a new show, dispatching the best first.</p>",
     "genres": [
@@ -53,20 +66,5 @@
     "stars": 1.5,
     "title": "Alien³",
     "year": "1992"
-  },
-  {
-    "date": "2026-09-29T00:00:00.000Z",
-    "excerpt": "<p>Assassin Chow Yun-Fat takes one last job to save the sight of the nightclub singer he half-blinded, while the detective hunting him finds himself taking the killer’s side.</p>",
-    "genres": [
-      "Action",
-      "Crime",
-      "Drama",
-      "Thriller"
-    ],
-    "image": "/_astro/the-killer-1989.CVmWjs77_TNDTI.png",
-    "slug": "the-killer-1989",
-    "stars": 3.5,
-    "title": "The Killer",
-    "year": "1989"
   }
 ]
