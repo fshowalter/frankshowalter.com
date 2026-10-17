@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-11T00:00:00.000Z",
+    "excerpt": "<p>On a South Pacific island, Martin and Lewis knockoffs Duke Mitchell and Sammy Petrillo run afoul of mad scientist Bela Lugosi and his devolution serum.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/bela-lugosi-meets-a-brooklyn-gorilla-1952.CZ4W0uG5_Z1JwBNn.png",
+    "slug": "bela-lugosi-meets-a-brooklyn-gorilla-1952",
+    "stars": 1,
+    "title": "Bela Lugosi Meets a Brooklyn Gorilla",
+    "year": "1952"
+  },
+  {
     "date": "2026-10-09T00:00:00.000Z",
     "excerpt": "<p>A teen travels into an absurdist hell to rescue his fiancée after she’s abducted by a demonic cop with scripture verses carved into his face.</p>",
     "genres": [
@@ -53,19 +67,5 @@
     "stars": 4,
     "title": "Seconds",
     "year": "1966"
-  },
-  {
-    "date": "2026-10-05T00:00:00.000Z",
-    "excerpt": "<p>A young woman suspects a dying virtuoso pianist used a Satanic ritual to steal her husband’s body.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/the-mephisto-waltz-1971.C9DS3Jq-_ZNM3PG.png",
-    "slug": "the-mephisto-waltz-1971",
-    "stars": 2,
-    "title": "The Mephisto Waltz",
-    "year": "1971"
   }
 ]
