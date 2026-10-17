@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-10-11T00:00:00.000Z",
+    "excerpt": "<p>An American music student researching a late composer falls for his son at the family’s French estate, learns she is the image of the girl he lost, and begins to suspect she was invited for sinister reasons.</p>",
+    "genres": [
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/crescendo-1970.Dq5mHzfQ_qE6To.png",
+    "slug": "crescendo-1970",
+    "stars": 2,
+    "title": "Crescendo",
+    "year": "1970"
+  },
+  {
+    "date": "2026-10-11T00:00:00.000Z",
     "excerpt": "<p>On a South Pacific island, Martin and Lewis knockoffs Duke Mitchell and Sammy Petrillo run afoul of mad scientist Bela Lugosi and his devolution serum.</p>",
     "genres": [
       "Comedy",
@@ -54,18 +67,5 @@
     "stars": 2,
     "title": "Murder-Rock: Dancing Death",
     "year": "1984"
-  },
-  {
-    "date": "2026-10-06T00:00:00.000Z",
-    "excerpt": "<p>A middle-aged banker pays a sinister company to fake his death and remake him as a younger, handsomer man, only to find his new life as empty as the old one.</p>",
-    "genres": [
-      "Sci-Fi",
-      "Thriller"
-    ],
-    "image": "/_astro/seconds-1966.CzfmksY__1PVoCM.png",
-    "slug": "seconds-1966",
-    "stars": 4,
-    "title": "Seconds",
-    "year": "1966"
   }
 ]
