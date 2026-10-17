@@ -7,7 +7,6 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import { defineConfig } from "eslint/config";
 import tsEslint from "typescript-eslint";
 
-// eslint-disable-next-line unicorn/no-top-level-side-effects
 export default defineConfig(
   {
     ignores: ["dist/", ".astro/", "coverage/", "content/", "public/"],
@@ -48,6 +47,8 @@ export default defineConfig(
       ],
       "unicorn/no-array-reverse": "off",
       "unicorn/prefer-default-parameters": "off",
+      "unicorn/prefer-ternary": "off",
+      "unicorn/relative-url-style": "off",
     },
   },
   {
