@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-17T00:00:00.000Z",
+    "excerpt": "<p>Military scientists clone Ellen Ripley from a blood sample to harvest the alien queen she was carrying, but the new Ripley isn’t entirely human, which comes in handy when the aliens break loose.</p>",
+    "genres": [
+      "Action",
+      "Horror",
+      "Sci-Fi"
+    ],
+    "image": "/_astro/alien-resurrection-1997.gPslc0c-_1UNSyc.png",
+    "slug": "alien-resurrection-1997",
+    "stars": 3,
+    "title": "Alien: Resurrection",
+    "year": "1997"
+  },
+  {
     "date": "2026-10-11T00:00:00.000Z",
     "excerpt": "<p>An American music student researching a late composer falls for his son at the family’s French estate, learns she is the image of the girl he lost, and begins to suspect she was invited for sinister reasons.</p>",
     "genres": [
@@ -53,19 +67,5 @@
     "stars": 5,
     "title": "Hellraiser",
     "year": "1987"
-  },
-  {
-    "date": "2026-10-08T00:00:00.000Z",
-    "excerpt": "<p>A black-gloved killer thins the ranks of a New York dance troupe competing for three spots in a new show, dispatching the best first.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/murder-rock-dancing-death-1984.CrnBa2kh_Z9HqSK.png",
-    "slug": "murder-rock-dancing-death-1984",
-    "stars": 2,
-    "title": "Murder-Rock: Dancing Death",
-    "year": "1984"
   }
 ]
