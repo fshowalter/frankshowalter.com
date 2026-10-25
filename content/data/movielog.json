@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-18T00:00:00.000Z",
+    "excerpt": "<p>Cardinal Richelieu’s agents conspire with sexually repressed abbess Vanessa Redgrave to brand popular but womanizing priest Oliver Reed as in league with the devil.</p>",
+    "genres": [
+      "Biography",
+      "Drama",
+      "History"
+    ],
+    "image": "/_astro/the-devils-1971.BnKjJuTH_ZCk0t6.png",
+    "slug": "the-devils-1971",
+    "stars": 4,
+    "title": "The Devils",
+    "year": "1971"
+  },
+  {
     "date": "2026-10-17T00:00:00.000Z",
     "excerpt": "<p>Military scientists clone Ellen Ripley from a blood sample to harvest the alien queen she was carrying, but the new Ripley isn’t entirely human, which comes in handy when the aliens break loose.</p>",
     "genres": [
@@ -54,18 +68,5 @@
     "stars": 2,
     "title": "Highway to Hell",
     "year": "1991"
-  },
-  {
-    "date": "2026-10-09T00:00:00.000Z",
-    "excerpt": "<p>A woman kills to feed her lover, her husband’s half-resurrected brother, while the creatures he escaped from close in.</p>",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/hellraiser-1987.D1GeY5Ty_1VdaKn.png",
-    "slug": "hellraiser-1987",
-    "stars": 5,
-    "title": "Hellraiser",
-    "year": "1987"
   }
 ]
