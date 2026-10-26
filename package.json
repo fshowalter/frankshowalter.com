@@ -39,7 +39,7 @@
     "eslint-plugin-better-tailwindcss": "4.10.0",
     "eslint-plugin-perfectionist": "5.13.0",
     "eslint-plugin-separate-type-imports": "git+https://github.com/fshowalter/eslint-plugin-separate-type-imports.git",
-    "eslint-plugin-unicorn": "78.0.0",
+    "eslint-plugin-unicorn": "79.0.0",
     "knip": "6.42.1",
     "prettier": "3.9.10",
     "prettier-plugin-astro": "1.1.2",
