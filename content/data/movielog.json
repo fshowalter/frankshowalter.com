@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-10-24T00:00:00.000Z",
+    "excerpt": "<p>In this horror anthology, three young drug dealers visit an eccentric funeral director to collect a lost stash, but first he wants to introduce four of his clients and explain how each one arrived.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/tales-from-the-hood-1995.C76VoCYT_203KNo.png",
+    "slug": "tales-from-the-hood-1995",
+    "stars": 3.5,
+    "title": "Tales from the Hood",
+    "year": "1995"
+  },
+  {
+    "date": "2026-10-24T00:00:00.000Z",
     "excerpt": "<p>A bullied metalhead plays his dead idol’s final album backward, and the voice on the record offers to help him get even.</p>",
     "genres": [
       "Comedy",
@@ -53,19 +68,5 @@
     "stars": 2,
     "title": "Crescendo",
     "year": "1970"
-  },
-  {
-    "date": "2026-10-11T00:00:00.000Z",
-    "excerpt": "<p>On a South Pacific island, Martin and Lewis knockoffs Duke Mitchell and Sammy Petrillo run afoul of mad scientist Bela Lugosi and his devolution serum.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/bela-lugosi-meets-a-brooklyn-gorilla-1952.CZ4W0uG5_Z1JwBNn.png",
-    "slug": "bela-lugosi-meets-a-brooklyn-gorilla-1952",
-    "stars": 1,
-    "title": "Bela Lugosi Meets a Brooklyn Gorilla",
-    "year": "1952"
   }
 ]
