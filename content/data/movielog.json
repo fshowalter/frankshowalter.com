@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-24T00:00:00.000Z",
+    "excerpt": "<p>A bullied metalhead plays his dead idol’s final album backward, and the voice on the record offers to help him get even.</p>",
+    "genres": [
+      "Comedy",
+      "Horror",
+      "Music"
+    ],
+    "image": "/_astro/trick-or-treat-1986.0NopvXDE_14dz9K.png",
+    "slug": "trick-or-treat-1986",
+    "stars": 2.5,
+    "title": "Trick or Treat",
+    "year": "1986"
+  },
+  {
     "date": "2026-10-18T00:00:00.000Z",
     "excerpt": "<p>Cardinal Richelieu’s agents conspire with sexually repressed abbess Vanessa Redgrave to brand popular but womanizing priest Oliver Reed as in league with the devil.</p>",
     "genres": [
@@ -53,20 +67,5 @@
     "stars": 1,
     "title": "Bela Lugosi Meets a Brooklyn Gorilla",
     "year": "1952"
-  },
-  {
-    "date": "2026-10-09T00:00:00.000Z",
-    "excerpt": "<p>A teen travels into an absurdist hell to rescue his fiancée after she’s abducted by a demonic cop with scripture verses carved into his face.</p>",
-    "genres": [
-      "Adventure",
-      "Comedy",
-      "Fantasy",
-      "Horror"
-    ],
-    "image": "/_astro/highway-to-hell-1991.Dkshxu0z_ZmDUsL.png",
-    "slug": "highway-to-hell-1991",
-    "stars": 2,
-    "title": "Highway to Hell",
-    "year": "1991"
   }
 ]
