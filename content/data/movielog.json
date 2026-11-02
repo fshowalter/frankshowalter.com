@@ -1,6 +1,19 @@
 [
   {
     "date": "2026-10-24T00:00:00.000Z",
+    "excerpt": "<p>A ruthless gang of thieves waylays a couple driving cross-country only to learn ruthless is a relative term.</p>",
+    "genres": [
+      "Action",
+      "Horror"
+    ],
+    "image": "/_astro/no-one-lives-2012.CTZrUX0n_Z1DAVjp.png",
+    "slug": "no-one-lives-2012",
+    "stars": 4,
+    "title": "No One Lives",
+    "year": "2012"
+  },
+  {
+    "date": "2026-10-24T00:00:00.000Z",
     "excerpt": "<p>Shipwrecked off the coast of Spain, a young American seeks help in a fishing village that worships something living deep beneath the sea.</p>",
     "genres": [
       "Fantasy",
@@ -55,19 +68,5 @@
     "stars": 4,
     "title": "The Devils",
     "year": "1971"
-  },
-  {
-    "date": "2026-10-17T00:00:00.000Z",
-    "excerpt": "<p>Military scientists clone Ellen Ripley from a blood sample to harvest the alien queen she was carrying, but the new Ripley isn’t entirely human, which comes in handy when the aliens break loose.</p>",
-    "genres": [
-      "Action",
-      "Horror",
-      "Sci-Fi"
-    ],
-    "image": "/_astro/alien-resurrection-1997.gPslc0c-_1UNSyc.png",
-    "slug": "alien-resurrection-1997",
-    "stars": 3,
-    "title": "Alien: Resurrection",
-    "year": "1997"
   }
 ]
