@@ -1,6 +1,20 @@
 [
   {
     "date": "2026-10-24T00:00:00.000Z",
+    "excerpt": "<p>Shipwrecked off the coast of Spain, a young American seeks help in a fishing village that worships something living deep beneath the sea.</p>",
+    "genres": [
+      "Fantasy",
+      "Horror",
+      "Mystery"
+    ],
+    "image": "/_astro/dagon-2001.kKtC5_af_2caR6X.png",
+    "slug": "dagon-2001",
+    "stars": 4,
+    "title": "Dagon",
+    "year": "2001"
+  },
+  {
+    "date": "2026-10-24T00:00:00.000Z",
     "excerpt": "<p>In this horror anthology, three young drug dealers visit an eccentric funeral director to collect a lost stash, but first he wants to introduce four of his clients and explain how each one arrived.</p>",
     "genres": [
       "Crime",
@@ -55,18 +69,5 @@
     "stars": 3,
     "title": "Alien: Resurrection",
     "year": "1997"
-  },
-  {
-    "date": "2026-10-11T00:00:00.000Z",
-    "excerpt": "<p>An American music student researching a late composer falls for his son at the family’s French estate, learns she is the image of the girl he lost, and begins to suspect she was invited for sinister reasons.</p>",
-    "genres": [
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/crescendo-1970.Dq5mHzfQ_qE6To.png",
-    "slug": "crescendo-1970",
-    "stars": 2,
-    "title": "Crescendo",
-    "year": "1970"
   }
 ]
