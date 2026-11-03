@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-30T00:00:00.000Z",
+    "excerpt": "<p>After ten years in a coma, Michael Myers wakes up and heads to Haddonfield to stalk his orphaned niece, with Dr. Loomis in pursuit.</p>",
+    "genres": [
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/halloween-4-the-return-of-michael-myers-1988.D50Foa0n_ZuvrsT.png",
+    "slug": "halloween-4-the-return-of-michael-myers-1988",
+    "stars": 2,
+    "title": "Halloween 4: The Return of Michael Myers",
+    "year": "1988"
+  },
+  {
     "date": "2026-10-24T00:00:00.000Z",
     "excerpt": "<p>A ruthless gang of thieves waylays a couple driving cross-country only to learn ruthless is a relative term.</p>",
     "genres": [
@@ -54,19 +67,5 @@
     "stars": 2.5,
     "title": "Trick or Treat",
     "year": "1986"
-  },
-  {
-    "date": "2026-10-18T00:00:00.000Z",
-    "excerpt": "<p>Cardinal Richelieu’s agents conspire with sexually repressed abbess Vanessa Redgrave to brand popular but womanizing priest Oliver Reed as in league with the devil.</p>",
-    "genres": [
-      "Biography",
-      "Drama",
-      "History"
-    ],
-    "image": "/_astro/the-devils-1971.BnKjJuTH_ZCk0t6.png",
-    "slug": "the-devils-1971",
-    "stars": 4,
-    "title": "The Devils",
-    "year": "1971"
   }
 ]
