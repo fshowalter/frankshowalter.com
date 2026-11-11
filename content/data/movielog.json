@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-10-30T00:00:00.000Z",
+    "excerpt": "<p>As Halloween nears, a young man’s mother and cop brother try to keep him out of his grandfather’s satanic cult while a devil-masked killer picks off the people around him.</p>",
+    "genres": [
+      "Horror"
+    ],
+    "image": "/_astro/hack-o-lantern-1988.YPVL899a_Zp4zeS.png",
+    "slug": "hack-o-lantern-1988",
+    "stars": 2.5,
+    "title": "Hack-O-Lantern",
+    "year": "1988"
+  },
+  {
+    "date": "2026-10-30T00:00:00.000Z",
     "excerpt": "<p>After ten years in a coma, Michael Myers wakes up and heads to Haddonfield to stalk his orphaned niece, with Dr. Loomis in pursuit.</p>",
     "genres": [
       "Horror",
@@ -53,19 +65,5 @@
     "stars": 3.5,
     "title": "Tales from the Hood",
     "year": "1995"
-  },
-  {
-    "date": "2026-10-24T00:00:00.000Z",
-    "excerpt": "<p>A bullied metalhead plays his dead idol’s final album backward, and the voice on the record offers to help him get even.</p>",
-    "genres": [
-      "Comedy",
-      "Horror",
-      "Music"
-    ],
-    "image": "/_astro/trick-or-treat-1986.0NopvXDE_14dz9K.png",
-    "slug": "trick-or-treat-1986",
-    "stars": 2.5,
-    "title": "Trick or Treat",
-    "year": "1986"
   }
 ]
