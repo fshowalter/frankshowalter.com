@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-05T00:00:00.000Z",
+    "excerpt": "<p>Small-time crook Walter Matthau knocks over a podunk New Mexico bank for what should be a few thousand dollars, comes away with three-quarters of a million, and knows exactly whose money he’s taken.</p>",
+    "genres": [
+      "Crime",
+      "Drama",
+      "Thriller"
+    ],
+    "image": "/_astro/charley-varrick-1973.DOlVyCMo_Zdwzwy.png",
+    "slug": "charley-varrick-1973",
+    "stars": 4,
+    "title": "Charley Varrick",
+    "year": "1973"
+  },
+  {
     "date": "2026-10-31T00:00:00.000Z",
     "excerpt": "<p>In colonial New England, a witch burned alive returns to possess her teenage daughter, with secret help from the girl’s buxom governess.</p>",
     "genres": [
@@ -50,19 +64,5 @@
     "stars": 4,
     "title": "No One Lives",
     "year": "2012"
-  },
-  {
-    "date": "2026-10-24T00:00:00.000Z",
-    "excerpt": "<p>Shipwrecked off the coast of Spain, a young American seeks help in a fishing village that worships something living deep beneath the sea.</p>",
-    "genres": [
-      "Fantasy",
-      "Horror",
-      "Mystery"
-    ],
-    "image": "/_astro/dagon-2001.kKtC5_af_2caR6X.png",
-    "slug": "dagon-2001",
-    "stars": 4,
-    "title": "Dagon",
-    "year": "2001"
   }
 ]
