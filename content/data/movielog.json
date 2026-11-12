@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-10-31T00:00:00.000Z",
+    "excerpt": "<p>In colonial New England, a witch burned alive returns to possess her teenage daughter, with secret help from the girl’s buxom governess.</p>",
+    "genres": [
+      "Horror",
+      "Romance",
+      "Thriller"
+    ],
+    "image": "/_astro/the-haunting-of-morella-1990.BDi_Id3v_ZtiLyM.png",
+    "slug": "the-haunting-of-morella-1990",
+    "stars": 2.5,
+    "title": "The Haunting of Morella",
+    "year": "1990"
+  },
+  {
     "date": "2026-10-30T00:00:00.000Z",
     "excerpt": "<p>As Halloween nears, a young man’s mother and cop brother try to keep him out of his grandfather’s satanic cult while a devil-masked killer picks off the people around him.</p>",
     "genres": [
@@ -50,20 +64,5 @@
     "stars": 4,
     "title": "Dagon",
     "year": "2001"
-  },
-  {
-    "date": "2026-10-24T00:00:00.000Z",
-    "excerpt": "<p>In this horror anthology, three young drug dealers visit an eccentric funeral director to collect a lost stash, but first he wants to introduce four of his clients and explain how each one arrived.</p>",
-    "genres": [
-      "Crime",
-      "Drama",
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/tales-from-the-hood-1995.C76VoCYT_203KNo.png",
-    "slug": "tales-from-the-hood-1995",
-    "stars": 3.5,
-    "title": "Tales from the Hood",
-    "year": "1995"
   }
 ]
