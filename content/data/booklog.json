@@ -1,6 +1,19 @@
 [
   {
     "authors": [
+      "Stephen King"
+    ],
+    "date": "2026-10-31T00:00:00.000Z",
+    "excerpt": "<p>King’s brisk memoir and practical guide to the craft, finished after the accident that nearly killed him.</p>",
+    "image": "/_astro/on-writing-by-stephen-king.CvknPNox_1RM62i.png",
+    "kind": "Nonfiction",
+    "slug": "on-writing-by-stephen-king",
+    "stars": 4.5,
+    "title": "On Writing",
+    "titleYear": "2000"
+  },
+  {
+    "authors": [
       "David L. Craddock"
     ],
     "date": "2026-10-16T00:00:00.000Z",
@@ -50,18 +63,5 @@
     "stars": 3,
     "title": "Paint My Name in Black and Gold",
     "titleYear": "2021"
-  },
-  {
-    "authors": [
-      "Karl Edward Wagner"
-    ],
-    "date": "2025-11-09T00:00:00.000Z",
-    "excerpt": "<p>A college student visits the last man on an abandoned, kudzu-choked street and learns what lurks beneath the vines.</p>",
-    "image": "/_astro/in-the-pines-by-karl-edward-wagner.BYxhynvj_22iegu.png",
-    "kind": "Short Story",
-    "slug": "where-the-summer-ends-by-karl-edward-wagner",
-    "stars": 2,
-    "title": "Where the Summer Ends",
-    "titleYear": "1980"
   }
 ]
