@@ -1,5 +1,19 @@
 [
   {
+    "date": "2026-11-13T00:00:00.000Z",
+    "excerpt": "<p>Twenty-two years after a double murder at Camp Crystal Lake, an unseen killer stalks the counselors trying to reopen it.</p>",
+    "genres": [
+      "Horror",
+      "Mystery",
+      "Thriller"
+    ],
+    "image": "/_astro/friday-the-13th-1980.C09Vr_qW_Z1cGmCU.png",
+    "slug": "friday-the-13th-1980",
+    "stars": 3,
+    "title": "Friday the 13th",
+    "year": "1980"
+  },
+  {
     "date": "2026-11-05T00:00:00.000Z",
     "excerpt": "<p>Small-time crook Walter Matthau knocks over a podunk New Mexico bank for what should be a few thousand dollars, comes away with three-quarters of a million, and knows exactly whose money he’s taken.</p>",
     "genres": [
@@ -51,18 +65,5 @@
     "stars": 2,
     "title": "Halloween 4: The Return of Michael Myers",
     "year": "1988"
-  },
-  {
-    "date": "2026-10-24T00:00:00.000Z",
-    "excerpt": "<p>A ruthless gang of thieves waylays a couple driving cross-country only to learn ruthless is a relative term.</p>",
-    "genres": [
-      "Action",
-      "Horror"
-    ],
-    "image": "/_astro/no-one-lives-2012.CTZrUX0n_Z1DAVjp.png",
-    "slug": "no-one-lives-2012",
-    "stars": 4,
-    "title": "No One Lives",
-    "year": "2012"
   }
 ]
