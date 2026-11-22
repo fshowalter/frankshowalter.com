@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-11-13T00:00:00.000Z",
+    "excerpt": "<p>A stranger uses rocks to the head and bodily fluids to reshape a dysfunctional Japanese family.</p>",
+    "genres": [
+      "Comedy",
+      "Drama",
+      "Horror",
+      "Thriller"
+    ],
+    "image": "/_astro/visitor-q-2001.B5UcXJ1W_203fwG.png",
+    "slug": "visitor-q-2001",
+    "stars": 3.5,
+    "title": "Visitor Q",
+    "year": "2001"
+  },
+  {
+    "date": "2026-11-13T00:00:00.000Z",
     "excerpt": "<p>Twenty-two years after a double murder at Camp Crystal Lake, an unseen killer stalks the counselors trying to reopen it.</p>",
     "genres": [
       "Horror",
@@ -51,19 +66,6 @@
     "slug": "hack-o-lantern-1988",
     "stars": 2.5,
     "title": "Hack-O-Lantern",
-    "year": "1988"
-  },
-  {
-    "date": "2026-10-30T00:00:00.000Z",
-    "excerpt": "<p>After ten years in a coma, Michael Myers wakes up and heads to Haddonfield to stalk his orphaned niece, with Dr. Loomis in pursuit.</p>",
-    "genres": [
-      "Horror",
-      "Thriller"
-    ],
-    "image": "/_astro/halloween-4-the-return-of-michael-myers-1988.D50Foa0n_ZuvrsT.png",
-    "slug": "halloween-4-the-return-of-michael-myers-1988",
-    "stars": 2,
-    "title": "Halloween 4: The Return of Michael Myers",
     "year": "1988"
   }
 ]
