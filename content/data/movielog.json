@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-11-19T00:00:00.000Z",
+    "excerpt": "<p>A merciless Qing dynasty constable leads a dwindling squad to recover stolen gold and discovers, too late, that he has been descending into hell.</p>",
+    "genres": [
+      "Action",
+      "Drama"
+    ],
+    "image": "/_astro/killer-constable-1980.oaLTCSCT_ZomM7f.png",
+    "slug": "killer-constable-1980",
+    "stars": 4,
+    "title": "Killer Constable",
+    "year": "1980"
+  },
+  {
+    "date": "2026-11-19T00:00:00.000Z",
+    "excerpt": "<p>In old Arizona, former lawman Randolph Scott hunts the seven men responsible for his wife’s death and crosses paths with a couple heading to California.</p>",
+    "genres": [
+      "Western"
+    ],
+    "image": "/_astro/7-men-from-now-1956.Ci4J5JbD_ZdTKic.png",
+    "slug": "7-men-from-now-1956",
+    "stars": 4.5,
+    "title": "7 Men from Now",
+    "year": "1956"
+  },
+  {
     "date": "2026-11-13T00:00:00.000Z",
     "excerpt": "<p>A stranger uses rocks to the head and bodily fluids to reshape a dysfunctional Japanese family.</p>",
     "genres": [
@@ -41,31 +66,5 @@
     "stars": 4,
     "title": "Charley Varrick",
     "year": "1973"
-  },
-  {
-    "date": "2026-10-31T00:00:00.000Z",
-    "excerpt": "<p>In colonial New England, a witch burned alive returns to possess her teenage daughter, with secret help from the girl’s buxom governess.</p>",
-    "genres": [
-      "Horror",
-      "Romance",
-      "Thriller"
-    ],
-    "image": "/_astro/the-haunting-of-morella-1990.BDi_Id3v_ZtiLyM.png",
-    "slug": "the-haunting-of-morella-1990",
-    "stars": 2.5,
-    "title": "The Haunting of Morella",
-    "year": "1990"
-  },
-  {
-    "date": "2026-10-30T00:00:00.000Z",
-    "excerpt": "<p>As Halloween nears, a young man’s mother and cop brother try to keep him out of his grandfather’s satanic cult while a devil-masked killer picks off the people around him.</p>",
-    "genres": [
-      "Horror"
-    ],
-    "image": "/_astro/hack-o-lantern-1988.YPVL899a_Zp4zeS.png",
-    "slug": "hack-o-lantern-1988",
-    "stars": 2.5,
-    "title": "Hack-O-Lantern",
-    "year": "1988"
   }
 ]
