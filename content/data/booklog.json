@@ -1,6 +1,19 @@
 [
   {
     "authors": [
+      "Bruce Campbell"
+    ],
+    "date": "2026-11-15T00:00:00.000Z",
+    "excerpt": "<p>Bruce Campbell tells how a kid from suburban Detroit made home movies with his friends, starred in <em>The Evil Dead</em>, and spent the next two decades as a working B-movie actor.</p>",
+    "image": "/_astro/if-chins-could-kill-by-bruce-campbell.CxvsoVDn_Z6Xejv.png",
+    "kind": "Nonfiction",
+    "slug": "if-chins-could-kill-by-bruce-campbell",
+    "stars": 3,
+    "title": "If Chins Could Kill",
+    "titleYear": "2001"
+  },
+  {
+    "authors": [
       "Stephen King"
     ],
     "date": "2026-10-31T00:00:00.000Z",
@@ -49,19 +62,6 @@
     "slug": "cunning-folk-by-adam-l-g-nevill",
     "stars": 2,
     "title": "Cunning Folk",
-    "titleYear": "2021"
-  },
-  {
-    "authors": [
-      "Mark Andrews"
-    ],
-    "date": "2025-12-20T00:00:00.000Z",
-    "excerpt": "<p>An oral history of the Sisters of Mercy’s rise from Leeds clubs through their debut album and subsequent implosion.</p>",
-    "image": "/_astro/paint-my-name-in-black-and-gold-by-mark-andrews.BdzV2l6b_1hnBpT.png",
-    "kind": "Nonfiction",
-    "slug": "paint-my-name-in-black-and-gold-by-mark-andrews",
-    "stars": 3,
-    "title": "Paint My Name in Black and Gold",
     "titleYear": "2021"
   }
 ]
