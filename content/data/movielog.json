@@ -1,6 +1,18 @@
 [
   {
     "date": "2026-11-23T00:00:00.000Z",
+    "excerpt": "<p>In post-Civil War Arizona, Randolph Scott works both sides of a stage-line robbery planned by a crooked businessman and his gang, which includes Lee Marvin and Ernest Borgnine.</p>",
+    "genres": [
+      "Western"
+    ],
+    "image": "/_astro/the-stranger-wore-a-gun-1953.CnbJn8ZQ_2b1pJn.png",
+    "slug": "the-stranger-wore-a-gun-1953",
+    "stars": 2,
+    "title": "The Stranger Wore a Gun",
+    "year": "1953"
+  },
+  {
+    "date": "2026-11-23T00:00:00.000Z",
     "excerpt": "<p>A striking worker, her hoodlum kid brother, an unemployed architect, and a wanted killer cross paths over one day and night on a dead-end block of Manhattan’s East Side.</p>",
     "genres": [
       "Crime",
@@ -53,19 +65,5 @@
     "stars": 3.5,
     "title": "Visitor Q",
     "year": "2001"
-  },
-  {
-    "date": "2026-11-13T00:00:00.000Z",
-    "excerpt": "<p>Twenty-two years after a double murder at Camp Crystal Lake, an unseen killer stalks the counselors trying to reopen it.</p>",
-    "genres": [
-      "Horror",
-      "Mystery",
-      "Thriller"
-    ],
-    "image": "/_astro/friday-the-13th-1980.C09Vr_qW_Z1cGmCU.png",
-    "slug": "friday-the-13th-1980",
-    "stars": 3,
-    "title": "Friday the 13th",
-    "year": "1980"
   }
 ]
